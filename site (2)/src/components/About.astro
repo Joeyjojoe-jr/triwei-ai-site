@@ -1,0 +1,18 @@
+---
+const logos = [
+  "/assets/logo_blue.png",
+  "/assets/logo_wood.png",
+  "/assets/logo_glass.png",
+  "/assets/logo_orb.png",
+  "/assets/logo_starry.png",
+  "/assets/cotton_candy.png",
+  "/assets/logo_frog.png"
+];
+---
+<div class="card">
+  <p>Founded to help people slow down and go deeper. TriWeiAI pairs daily Catholic readings with short reflections, questions, a prayer, and a concrete act of service—generated locally on hardware you own.</p>
+  <p><strong>Local-first:</strong> pipeline runs offline using open models. Sources include Vatican documents and classic theology with citations.</p>
+  <div class="gallery">
+    {logos.map(src => (<img src={src} alt="brand variant" />))}
+  </div>
+</div>

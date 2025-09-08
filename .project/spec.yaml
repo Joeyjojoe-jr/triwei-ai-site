@@ -1,0 +1,50 @@
+specVersion: v2
+specMinorVersion: 1
+meta:
+  name: triwei
+  description: Local RAG + static site for daily Catholic reflections
+  defaultBranch: main
+layout:
+  - path: app/
+    type: code
+    storage: git
+  - path: models/
+    type: models
+    storage: gitignore
+  - path: data/
+    type: data
+    storage: gitignore
+  - path: site/
+    type: code
+    storage: git
+environment:
+  base:
+    registry: nvcr.io
+    image: nvidia/ai-workbench/pytorch:1.0.3
+    name: PyTorch CUDA 12.2
+    os: linux
+    os_distro: ubuntu
+    os_distro_release: "22.04"
+  package_managers:
+    - name: apt
+      installed_packages: [git, git-lfs, curl, vim]
+    - name: pip
+      installed_packages:
+        - fastapi==0.115.2
+        - uvicorn==0.30.6
+        - pydantic==2.9.2
+        - numpy==2.1.1
+        - sentence-transformers==3.1.1
+        - faiss-cpu==1.8.0.post1
+        - pypandoc==1.13
+        - python-frontmatter==1.1.0
+        - markdown==3.7
+        - beautifulsoup4==4.12.3
+        - requests==2.32.3
+        - toml==0.10.2
+        - tqdm==4.66.5
+execution:
+  resources:
+    gpu:
+      requested: 1
+apps: []

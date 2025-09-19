@@ -1,0 +1,51 @@
+name: Weekly Blog
+
+# This workflow runs weekly on Mondays to generate a new blog post
+# and rebuild the static site.  You can also trigger it manually
+# via the Actions tab in GitHub using the `workflow_dispatch` event.
+
+on:
+  schedule:
+    # At 09:00 on Monday (UTC) each week.  Adjust as needed.
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # Only YAML is required; no external Markdown library needed
+          python -m pip install pyyaml
+
+      - name: Generate new post
+        run: |
+          python scripts/generate_post.py
+
+      - name: Build static site
+        run: |
+          python scripts/build_site.py
+
+      - name: Commit and push changes
+        env:
+          # Provide a default author name and email for automated commits
+          GIT_AUTHOR_NAME: auto-blog-bot
+          GIT_AUTHOR_EMAIL: bot@users.noreply.github.com
+          GIT_COMMITTER_NAME: auto-blog-bot
+          GIT_COMMITTER_EMAIL: bot@users.noreply.github.com
+        run: |
+          git config --global --add safe.directory "$(pwd)"
+          git add posts docs
+          git diff --cached --quiet || git commit -m "chore: weekly AI blog update" || true
+          git push

@@ -2,5 +2,4 @@
 layout: home
 title: TriWei AI
 ---
-
-[Play the hidden game](/egg/)
+Welcome to TriWei AI! We explore the latest developments in artificial intelligence—including tools, news, research breakthroughs, and ethical insights. New posts are added every week.

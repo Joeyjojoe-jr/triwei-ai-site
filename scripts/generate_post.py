@@ -41,7 +41,7 @@ def slugify(value: str) -> str:
 
 def main() -> None:
     # Ensure the posts directory exists
-    posts_dir = pathlib.Path(__file__).resolve().parent.parent / "posts"
+    posts_dir = pathlib.Path(__file__).resolve().parent.parent / "_posts"
     posts_dir.mkdir(parents=True, exist_ok=True)
 
     # Pick a topic at random

@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<main class="blog-index">
+  <h1>{{ page.title }}</h1>
+  {% if page.description %}<p class="page-description">{{ page.description }}</p>{% endif %}
+  {% for post in site.posts %}
+    <article class="post-teaser">
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+      <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+      <a class="read-more" href="{{ post.url | relative_url }}">Read more →</a>
+    </article>
+    <hr/>
+  {% endfor %}
+</main>

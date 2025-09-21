@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<main class="home">
+  <!-- Hero section -->
+  <section class="hero">
+    <img class="hero-logo" src="{{ site.logo | relative_url }}" alt="{{ site.title }} logo" />
+    <h1 class="hero-title">{{ site.title }}</h1>
+    <p class="hero-tagline">{{ site.description }}</p>
+  </section>
+
+  <!-- About snippet -->
+  <section class="about-snippet">
+    <h2>About TriWei AI</h2>
+    <p>TriWei AI curates practical AI tools, short explainers and a weekly roundup of news and research. Our mission is to translate complex breakthroughs into actionable insights that empower you.</p>
+  </section>
+
+  <!-- Latest posts grid -->
+  <section class="posts-grid">
+    <h2>Latest Posts</h2>
+    <div class="post-grid">
+      {% assign latest_posts = site.posts | slice: 0, 6 %}
+      {% if latest_posts.size > 0 %}
+        {% for post in latest_posts %}
+          <article class="post-card">
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p class="post-meta">{{ post.date | date: '%B %-d, %Y' }}</p>
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+            <a class="read-more" href="{{ post.url | relative_url }}">Read more →</a>
+          </article>
+        {% endfor %}
+      {% else %}
+        <p>There are no posts yet. Check back soon for our first weekly update!</p>
+      {% endif %}
+    </div>
+  </section>
+</main>

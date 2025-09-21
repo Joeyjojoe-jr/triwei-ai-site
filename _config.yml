@@ -27,3 +27,8 @@ defaults:
     values:
       layout: post
       image: /assets/images/logo.png
+
+# Exclude directories that should not be processed by Jekyll
+exclude:
+  - "site (2)"
+  - "triwei_scaffold"

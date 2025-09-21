@@ -1,4 +1,29 @@
 title: TriWei AI
 description: Weekly AI tools and news
 theme: minima
-logo: /logo.png
+logo: /assets/images/logo.png
+
+# Site basics
+url: https://www.triwei.ai
+permalink: /:categories/:year/:month/:day/:title/
+timezone: America/Chicago
+
+# Build
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Plugins allowed on GitHub Pages
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      image: /assets/images/logo.png

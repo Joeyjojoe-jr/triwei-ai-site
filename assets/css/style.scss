@@ -2,5 +2,249 @@
 ---
 @import "minima";
 
-.site-header .wrapper { display:flex; align-items:center; gap:12px; }
-.site-header .site-logo img { height:56px; width:auto; vertical-align:middle; }
+/*
+ * Retro theme for TriWei AI
+ *
+ * This stylesheet extends the minima theme and applies a dark synthwave‑inspired
+ * colour palette, custom fonts, and a card‑based layout for posts. Colour
+ * variables and fonts live at the top of the file so they can be easily
+ * adjusted. When editing, remember that Jekyll processes this SASS file and
+ * produces a CSS asset served by GitHub Pages.
+ */
+
+/* Import Google Fonts for headings and body text */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=IBM+Plex+Sans:wght@400;500;700&display=swap');
+
+/* CSS variables for colours and fonts */
+:root {
+  --bg-color: #0d0f23;        /* overall dark background */
+  --card-bg: #13164c;         /* card surface with subtle blue tint */
+  --primary-color: #d499ff;   /* neon purple accent */
+  --secondary-color: #1ea8ff; /* neon blue accent */
+  --text-color: #e0e0e0;      /* high contrast light text */
+  --heading-font: 'Press Start 2P', monospace;
+  --body-font: 'IBM Plex Sans', sans-serif;
+}
+
+/* Base styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.site-logo img {
+  height: 48px;
+  width: auto;
+}
+
+.site-title-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5rem;
+}
+
+.site-title {
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.site-tagline {
+  font-size: 0.75rem;
+  color: var(--secondary-color);
+  margin-top: 0.25rem;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s ease-in-out;
+}
+
+.site-nav a.active,
+.site-nav a:hover {
+  color: var(--primary-color);
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+}
+
+.hero-logo {
+  height: 96px;
+  width: auto;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 6px var(--primary-color));
+}
+
+.hero-title {
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin: 0.5rem 0;
+}
+
+.hero-tagline {
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+/* About snippet */
+.about-snippet {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.about-snippet h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.about-snippet p {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+/* Posts grid on homepage */
+.posts-grid {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.post-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.post-card h3 {
+  font-family: var(--heading-font);
+  font-size: 1.1rem;
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.post-card .post-meta {
+  font-size: 0.75rem;
+  color: var(--secondary-color);
+  margin: 0.5rem 0;
+}
+
+.post-card .post-excerpt {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.post-card .read-more {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.post-card .read-more:hover {
+  text-decoration: underline;
+}
+
+/* Blog index page */
+.blog-index {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.post-teaser {
+  padding: 1rem 0;
+}
+
+.post-teaser h2 {
+  font-family: var(--heading-font);
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin: 0 0 0.25rem;
+}
+
+.post-teaser .post-meta {
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.post-teaser .post-excerpt {
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.post-teaser .read-more {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.post-teaser .read-more:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer-wrapper {
+  border-top: 1px solid var(--secondary-color);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+}
+
+.footer-text a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+}
+
+/* Utility */
+hr {
+  border: none;
+  border-top: 1px solid var(--card-bg);
+  margin: 1rem 0;
+}

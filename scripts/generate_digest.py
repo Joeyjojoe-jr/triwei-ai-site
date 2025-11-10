@@ -11,7 +11,7 @@ for url in FEEDS:
         entries += d.entries[:10]
     except Exception as e:
         print(f'ERR feed {url}: {e}', file=sys.stderr)
-entries.sort(key=lambda x: x.get('published_parsed') or x.get('updated_parsed') or (), reverse=True)
+entries.sort(key=lambda x: x.get('published_parsed') or x.get('updated_parsed') or datetime.datetime.min.timetuple(), reverse=True)
 date = datetime.date.today().isoformat()
 out = pathlib.Path('src/content/posts')/f'ai-digest-{date}.md'
 out.parent.mkdir(parents=True, exist_ok=True)

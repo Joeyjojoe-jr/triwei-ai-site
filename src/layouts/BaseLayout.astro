@@ -1,16 +1,22 @@
 ---
+import '../styles/base.css';
 const { title = 'TriWei AI', description = 'Bi-monthly AI news and tools' } = Astro.props;
 ---
-<!DOCTYPE html><html lang="en" class="bg-paper text-ink">
+<!DOCTYPE html>
+<html lang="en" class="bg-paper text-ink">
   <head>
-    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content={description} /><link rel="manifest" href="/site.webmanifest" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="manifest" href="/site.webmanifest" />
     <title>{title}</title>
   </head>
   <body class="min-h-screen flex flex-col">
     <header class="px-4 py-6 border-b border-black/5 bg-white/60 backdrop-blur">
       <div class="max-w-5xl mx-auto flex items-center justify-between">
-        <a href="/" class="text-xl font-semibold">TriWei <span class="text-primary">AI</span></a>
+        <a href="/" class="text-xl font-semibold">
+          TriWei <span class="text-primary">AI</span>
+        </a>
         <nav class="flex gap-4 text-sm">
           <a href="/about" class="hover:text-primary">About</a>
           <a href="/tags" class="hover:text-primary">Tags</a>
@@ -18,9 +24,13 @@ const { title = 'TriWei AI', description = 'Bi-monthly AI news and tools' } = As
         </nav>
       </div>
     </header>
-    <main class="flex-1"><slot /></main>
+    <main class="flex-1">
+      <slot />
+    </main>
     <footer class="px-4 py-10 border-t border-black/5 text-sm bg-white/60">
-      <div class="max-w-5xl mx-auto">© {new Date().getFullYear()} TriWei AI • Astro • GitHub Pages</div>
+      <div class="max-w-5xl mx-auto">
+        © {new Date().getFullYear()} TriWei AI • Astro • GitHub Pages
+      </div>
     </footer>
   </body>
 </html>

@@ -1,10 +1,18 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getEntryBySlug } from 'astro:content';
-const { slug } = Astro.params;
-const entry = await getEntryBySlug('posts', slug!);
-if (!entry) throw new Error('Post not found');
-const { Content, data } = await entry.render();
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry }
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const { data } = entry;
 ---
 <BaseLayout title={data.title} description={data.description}>
   <article class="prose max-w-3xl mx-auto px-4 py-8">

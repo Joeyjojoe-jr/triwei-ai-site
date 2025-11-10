@@ -19,7 +19,8 @@ lines = ['---', f'title: AI Digest {date}', f'date: {date}', 'tags: [digest]', '
 for e in entries[:40]:
     title = (e.get('title') or 'Untitled').strip()
     link  = (e.get('link') or '').strip()
-    summary = textwrap.shorten((e.get('summary') or '').replace('\n',' '), width=260)
+    summary_text = re.sub('<[^<]+?>', '', (e.get('summary') or '')).replace('\n', ' ')
+    summary = textwrap.shorten(summary_text, width=260)
     lines.append(f'- [{title}]({link}) — {summary}')
 out.write_text('\n'.join(lines), encoding='utf-8')
 print(f'Wrote {out}')

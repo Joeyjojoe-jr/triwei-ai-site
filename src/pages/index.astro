@@ -9,7 +9,7 @@ const posts = (await getCollection('posts')).sort((a,b)=> (a.data.date < b.data.
     <ul class="grid gap-4">
       {posts.map(p => (
         <li class="p-4 rounded-xl border border-black/5 bg-white/60">
-          <a href={/posts//} class="block">
+          <a href={`/posts/${p.slug}`} class="block">
             <div class="text-lg font-semibold">{p.data.title}</div>
             <div class="text-sm opacity-70">{p.data.date}</div>
             {p.data.description && <p class="mt-2 text-sm">{p.data.description}</p>}

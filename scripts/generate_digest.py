@@ -1,4 +1,4 @@
-import feedparser, datetime, pathlib, textwrap, sys
+import feedparser, datetime, pathlib, textwrap, sys, re
 FEEDS = [
   'https://ai.googleblog.com/atom.xml',
   'https://openai.com/blog/rss.xml',

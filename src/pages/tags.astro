@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+const posts = await getCollection('posts');
+const tags = new Map();
+for (const p of posts) (p.data.tags||[]).forEach(t => tags.set(t, (tags.get(t)||0)+1));
+const sorted = [...tags.entries()].sort((a,b)=> b[1]-a[1]);
+---
+<BaseLayout title="Tags">
+  <section class="max-w-5xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold mb-6">Tags</h1>
+    <ul class="flex flex-wrap gap-2">
+      {sorted.map(([t,n]) => <li class="px-3 py-1 rounded-full bg-primary/10">{t} <span class="opacity-70">({n})</span></li>)}
+    </ul>
+  </section>
+</BaseLayout>

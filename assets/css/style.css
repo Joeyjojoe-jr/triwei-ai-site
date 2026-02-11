@@ -421,6 +421,100 @@ textarea:focus-visible,
   color: var(--muted);
 }
 
+main .game-page {
+  display: grid;
+  gap: 1rem;
+}
+
+main .game-page > p {
+  margin: 0;
+  max-width: 64ch;
+  color: var(--muted);
+}
+
+main .game-shell {
+  display: grid;
+  gap: 0.85rem;
+}
+
+main .game-hud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+main .game-shell .hud-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+main .game-canvas-wrap {
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  overflow: hidden;
+  background: #07111d;
+  box-shadow: var(--shadow);
+}
+
+main #orbit-canvas,
+main #circuit-canvas {
+  display: block;
+  width: 100%;
+  height: clamp(360px, 56vh, 640px);
+  touch-action: manipulation;
+}
+
+main .game-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+main .game-button {
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #ffffff;
+  border-radius: 0.6rem;
+  padding: 0.5rem 0.8rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+main .game-button.ghost {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+main .game-controls {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+main .game-controls .control-card {
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  background: var(--surface);
+  padding: 0.75rem 0.85rem;
+}
+
+main .game-controls .control-card h4 {
+  margin: 0 0 0.35rem;
+}
+
+main .game-controls .control-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .site-footer {
   border-top: 1px solid var(--border);
   background: color-mix(in srgb, var(--surface) 92%, transparent);
@@ -542,9 +636,11 @@ textarea:focus-visible,
     #vector-canvas,
     #flux-canvas,
     #pulse-canvas,
-    #tempo-canvas
+    #tempo-canvas,
+    #orbit-canvas,
+    #circuit-canvas
   ) {
-    height: clamp(220px, 58vw, 320px);
+    height: clamp(260px, 68vw, 420px);
   }
 }
 

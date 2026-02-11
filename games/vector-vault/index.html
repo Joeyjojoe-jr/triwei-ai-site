@@ -50,7 +50,7 @@ description: Precision movement challenge with narrow timing windows.
   #vector-canvas {
     display: block;
     width: 100%;
-    height: clamp(240px, 46vw, 360px);
+    height: clamp(360px, 56vh, 620px);
     touch-action: manipulation;
   }
 
@@ -108,7 +108,7 @@ description: Precision movement challenge with narrow timing windows.
     <div class="vector-hud" aria-live="polite">
       <span class="hud-pill" id="vector-score">Score: 0</span>
       <span class="hud-pill" id="vector-best">Best: 0</span>
-      <span class="hud-pill" id="vector-speed">Speed: 170</span>
+      <span class="hud-pill" id="vector-speed">Speed: 155</span>
       <span class="hud-pill" id="vector-state">Status: Ready</span>
     </div>
     <div class="vector-canvas-wrap">
@@ -155,13 +155,13 @@ description: Precision movement challenge with narrow timing windows.
     gameOver: false,
     score: 0,
     best: 0,
-    speed: 170,
-    gravity: 780,
-    impulse: -300,
-    speedRamp: 2.5,
-    gapHeight: 122,
-    gateSpacing: 230,
-    gateWidth: 44,
+    speed: 155,
+    gravity: 700,
+    impulse: -285,
+    speedRamp: 1.9,
+    gapHeight: 148,
+    gateSpacing: 250,
+    gateWidth: 42,
     time: 0,
     stars: [],
     nextGateX: 0,
@@ -263,8 +263,8 @@ description: Precision movement challenge with narrow timing windows.
     state.running = true;
     state.gameOver = false;
     state.score = 0;
-    state.speed = 170;
-    state.gapHeight = 122;
+    state.speed = 155;
+    state.gapHeight = 148;
     state.time = 0;
     player.x = Math.max(100, canvas.clientWidth * 0.2);
     player.y = canvas.clientHeight * 0.5;
@@ -308,11 +308,11 @@ description: Precision movement challenge with narrow timing windows.
     if (!state.running) return;
 
     state.time += dt;
-    state.speed = Math.min(420, state.speed + state.speedRamp * dt * 22);
-    state.gapHeight = Math.max(58, state.gapHeight - dt * 1.8);
+    state.speed = Math.min(340, state.speed + state.speedRamp * dt * 16);
+    state.gapHeight = Math.max(78, state.gapHeight - dt * 1.0);
 
     player.vy += state.gravity * dt;
-    player.vy = clamp(player.vy, -420, 460);
+    player.vy = clamp(player.vy, -380, 380);
     player.y += player.vy * dt;
 
     for (const gate of gates) {
@@ -330,11 +330,12 @@ description: Precision movement challenge with narrow timing windows.
       const gapCenter = currentGapCenter(gate);
       const gapTop = gapCenter - state.gapHeight * 0.5;
       const gapBottom = gapCenter + state.gapHeight * 0.5;
+      const clearance = 4;
       const inGateX =
         player.x + player.r > gate.x - state.gateWidth * 0.5 &&
         player.x - player.r < gate.x + state.gateWidth * 0.5;
 
-      if (inGateX && (player.y - player.r < gapTop || player.y + player.r > gapBottom)) {
+      if (inGateX && (player.y - player.r < gapTop - clearance || player.y + player.r > gapBottom + clearance)) {
         failRun();
         return;
       }
@@ -446,7 +447,7 @@ description: Precision movement challenge with narrow timing windows.
     requestAnimationFrame(loop);
   }
 
-  btnStart.addEventListener('click', handleAction);
+  btnStart.addEventListener('click', startRun);
   btnRestart.addEventListener('click', startRun);
   canvas.addEventListener('pointerdown', (event) => {
     event.preventDefault();

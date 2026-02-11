@@ -50,7 +50,7 @@ description: Single-button timing challenge with escalating tempo.
   #signal-canvas {
     display: block;
     width: 100%;
-    height: clamp(230px, 46vw, 340px);
+    height: clamp(340px, 56vh, 620px);
     touch-action: manipulation;
   }
 
@@ -108,7 +108,9 @@ description: Single-button timing challenge with escalating tempo.
     <div class="signal-hud" aria-live="polite">
       <span class="hud-pill" id="signal-score">Score: 0</span>
       <span class="hud-pill" id="signal-best">Best: 0</span>
-      <span class="hud-pill" id="signal-tempo">Tempo: 220</span>
+      <span class="hud-pill" id="signal-tempo">Tempo: 200</span>
+      <span class="hud-pill" id="signal-lives">Lives: 3</span>
+      <span class="hud-pill" id="signal-error">Error: --</span>
       <span class="hud-pill" id="signal-state">Status: Ready</span>
     </div>
     <div class="signal-canvas-wrap">
@@ -129,7 +131,7 @@ description: Single-button timing challenge with escalating tempo.
       </div>
       <div class="control-card">
         <h4>Fail State</h4>
-        <p>Missing the target zone ends the run immediately.</p>
+        <p>Each miss costs one life. The run ends after 3 misses.</p>
       </div>
     </div>
   </div>
@@ -144,6 +146,8 @@ description: Single-button timing challenge with escalating tempo.
   const hudScore = document.getElementById('signal-score');
   const hudBest = document.getElementById('signal-best');
   const hudTempo = document.getElementById('signal-tempo');
+  const hudLives = document.getElementById('signal-lives');
+  const hudError = document.getElementById('signal-error');
   const hudState = document.getElementById('signal-state');
   const btnRestart = document.getElementById('signal-restart');
   const btnStart = document.getElementById('signal-start');
@@ -154,12 +158,14 @@ description: Single-button timing challenge with escalating tempo.
     gameOver: false,
     score: 0,
     best: 0,
-    speed: 220,
+    speed: 200,
     level: 1,
+    lives: 3,
+    lastError: null,
     markerX: 80,
     markerDir: 1,
     targetX: 260,
-    targetWidth: 130,
+    targetWidth: 150,
     flash: 0,
     lastTick: 0
   };
@@ -204,6 +210,10 @@ description: Single-button timing challenge with escalating tempo.
     const half = state.targetWidth / 2;
     const min = margin + half;
     const max = canvas.clientWidth - margin - half;
+    if (max <= min) {
+      state.targetX = canvas.clientWidth * 0.5;
+      return;
+    }
     state.targetX = rand(min, max);
   }
 
@@ -211,6 +221,8 @@ description: Single-button timing challenge with escalating tempo.
     hudScore.textContent = `Score: ${state.score}`;
     hudBest.textContent = `Best: ${state.best}`;
     hudTempo.textContent = `Tempo: ${Math.round(state.speed)}`;
+    hudLives.textContent = `Lives: ${state.lives}`;
+    hudError.textContent = state.lastError === null ? 'Error: --' : `Error: ${Math.round(state.lastError)}px`;
     if (statusText) {
       hudState.textContent = statusText;
       return;
@@ -231,8 +243,10 @@ description: Single-button timing challenge with escalating tempo.
     state.gameOver = false;
     state.score = 0;
     state.level = 1;
-    state.speed = 220;
-    state.targetWidth = 130;
+    state.speed = 200;
+    state.lives = 3;
+    state.lastError = null;
+    state.targetWidth = 150;
     state.markerDir = 1;
     state.markerX = canvas.clientWidth * 0.2;
     state.flash = 0;
@@ -250,8 +264,9 @@ description: Single-button timing challenge with escalating tempo.
   function registerHit() {
     state.score += 1;
     state.level += 1;
-    state.speed = Math.min(640, state.speed * 1.09 + 8);
-    state.targetWidth = Math.max(34, state.targetWidth * 0.93);
+    state.speed = Math.min(560, state.speed * 1.06 + 6);
+    state.targetWidth = Math.max(52, state.targetWidth * 0.95);
+    state.lastError = 0;
     state.flash = 1;
     randomizeTarget();
     updateHud('Status: Hit');
@@ -264,12 +279,19 @@ description: Single-button timing challenge with escalating tempo.
     }
 
     const delta = Math.abs(state.markerX - state.targetX);
+    state.lastError = delta;
     if (delta <= state.targetWidth / 2) {
       registerHit();
       return;
     }
-
-    failRun();
+    state.lives -= 1;
+    state.flash = 0.75;
+    if (state.lives <= 0) {
+      failRun();
+      return;
+    }
+    randomizeTarget();
+    updateHud('Status: Missed - keep going');
   }
 
   function step(dt) {

@@ -50,7 +50,7 @@ description: Multi-lane timing challenge with escalating tempo.
   #tempo-canvas {
     display: block;
     width: 100%;
-    height: clamp(260px, 48vw, 390px);
+    height: clamp(360px, 56vh, 620px);
     touch-action: manipulation;
   }
 
@@ -109,7 +109,7 @@ description: Multi-lane timing challenge with escalating tempo.
     <div class="tempo-hud" aria-live="polite">
       <span class="hud-pill" id="tempo-round">Round: 1</span>
       <span class="hud-pill" id="tempo-score">Score: 0</span>
-      <span class="hud-pill" id="tempo-lives">Lives: 3</span>
+      <span class="hud-pill" id="tempo-lives">Lives: 4</span>
       <span class="hud-pill" id="tempo-best">Best: 0</span>
       <span class="hud-pill" id="tempo-state">Status: Ready</span>
     </div>
@@ -162,10 +162,10 @@ description: Multi-lane timing challenge with escalating tempo.
     gameOver: false,
     round: 1,
     score: 0,
-    lives: 3,
+    lives: 4,
     best: 0,
     selectedLane: 0,
-    targetWindow: 0.16,
+    targetWindow: 0.2,
     flash: 0,
     lanes: [],
     laneFlash: Array.from({ length: LANE_COUNT }, () => 0),
@@ -203,7 +203,7 @@ description: Multi-lane timing challenge with escalating tempo.
   function initLanes() {
     state.lanes = Array.from({ length: LANE_COUNT }, (_, index) => ({
       phase: rand(0, 1),
-      speed: 0.44 + index * 0.07,
+      speed: 0.38 + index * 0.06,
       locked: false
     }));
   }
@@ -229,9 +229,9 @@ description: Multi-lane timing challenge with escalating tempo.
     state.gameOver = false;
     state.round = 1;
     state.score = 0;
-    state.lives = 3;
+    state.lives = 4;
     state.selectedLane = 0;
-    state.targetWindow = 0.16;
+    state.targetWindow = 0.2;
     state.flash = 0;
     state.laneFlash.fill(0);
     initLanes();
@@ -252,7 +252,7 @@ description: Multi-lane timing challenge with escalating tempo.
 
   function advanceRound() {
     state.round += 1;
-    state.targetWindow = clamp(0.16 - (state.round - 1) * 0.01, 0.055, 0.16);
+    state.targetWindow = clamp(0.2 - (state.round - 1) * 0.008, 0.075, 0.2);
     state.selectedLane = 0;
     state.laneFlash.fill(0);
     initLanes();

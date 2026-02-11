@@ -50,7 +50,7 @@ description: Rhythm-based stacking game tuned for short replayable rounds.
   #pulse-canvas {
     display: block;
     width: 100%;
-    height: clamp(250px, 48vw, 390px);
+    height: clamp(360px, 56vh, 620px);
     touch-action: manipulation;
   }
 
@@ -162,8 +162,8 @@ description: Rhythm-based stacking game tuned for short replayable rounds.
     bestHeight: 0,
     cameraY: 0,
     beat: 0,
-    baseSpeed: 140,
-    levelSpeed: 140,
+    baseSpeed: 115,
+    levelSpeed: 115,
     flash: 0,
     lastTick: 0
   };
@@ -240,8 +240,8 @@ description: Rhythm-based stacking game tuned for short replayable rounds.
     state.score = 0;
     state.streak = 0;
     state.beat = 0;
-    state.baseSpeed = 140;
-    state.levelSpeed = 140;
+    state.baseSpeed = 115;
+    state.levelSpeed = 115;
     state.flash = 0;
     buildBaseStack();
     updateHud('Status: Active');
@@ -304,7 +304,7 @@ description: Rhythm-based stacking game tuned for short replayable rounds.
     }
 
     state.score += gain;
-    state.levelSpeed = clamp(state.baseSpeed + stack.length * 7.5, 140, 360);
+    state.levelSpeed = clamp(state.baseSpeed + stack.length * 5.6, 115, 300);
     spawnActiveFromTop();
     updateHud(isPerfect ? 'Status: Perfect drop' : 'Status: Active');
   }

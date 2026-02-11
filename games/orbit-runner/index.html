@@ -7,7 +7,7 @@ permalink: /games/orbit-runner/
 <section class="game-page">
   <h1>Orbit Runner</h1>
   <p><a class="text-link" href="{{ '/games/' | relative_url }}">Back to Games</a></p>
-  <p>Slingshot around gravity wells. Hold Space or press and hold on the canvas to fire thrusters away from the nearest well. Survive and build distance.</p>
+  <p>Slingshot around gravity wells. Press Start, then hold Space or hold on the canvas to fire thrusters away from the nearest well. Survive and build distance.</p>
   <div class="game-shell">
     <div class="game-hud" aria-live="polite">
       <span class="hud-pill" id="orbit-distance">Distance: 0</span>
@@ -18,10 +18,14 @@ permalink: /games/orbit-runner/
     <div class="game-canvas-wrap">
       <canvas id="orbit-canvas" aria-label="Orbit Runner game canvas" role="img"></canvas>
     </div>
+    <div class="game-actions">
+      <button class="game-button" id="orbit-start" type="button">Start Run</button>
+      <button class="game-button ghost" id="orbit-restart" type="button">Restart</button>
+    </div>
     <div class="game-controls">
       <div class="control-card">
         <h4>Controls</h4>
-        <p>Hold Space, mouse, or touch to fire thrusters away from the nearest gravity well.</p>
+        <p>Press Start Run, then hold Space, mouse, or touch to fire thrusters away from the nearest gravity well.</p>
       </div>
       <div class="control-card">
         <h4>Goal</h4>
@@ -46,28 +50,31 @@ permalink: /games/orbit-runner/
   const hudSlings = document.getElementById('orbit-slings');
   const hudBest = document.getElementById('orbit-best');
   const hudState = document.getElementById('orbit-state');
+  const btnStart = document.getElementById('orbit-start');
+  const btnRestart = document.getElementById('orbit-restart');
 
   const state = {
     running: false,
     gameOver: false,
     distance: 0,
     slings: 0,
-    speed: 2.4,
+    speed: 0,
     time: 0,
     best: 0,
   };
 
   const config = {
-    baseSpeed: 2.4,
-    speedRamp: 0.0008,
-    gravity: 480,
-    thrust: 0.35,
-    shipRadius: 7,
-    wellMinRadius: 26,
-    wellMaxRadius: 46,
-    wellSpacing: [340, 520],
-    slingshotRing: 70,
-    slingshotBonus: 18,
+    baseSpeed: 165,
+    speedRamp: 3.4,
+    gravity: 68000,
+    thrust: 440,
+    dragPerFrame: 0.992,
+    shipRadius: 8,
+    wellMinRadius: 28,
+    wellMaxRadius: 52,
+    wellSpacing: [420, 640],
+    slingshotRing: 88,
+    slingshotBonus: 26,
   };
 
   const ship = { x: 180, y: 240, vx: 0, vy: 0 };
@@ -107,7 +114,7 @@ permalink: /games/orbit-runner/
   function spawnWell(x) {
     const r = rand(config.wellMinRadius, config.wellMaxRadius);
     const y = rand(r + 40, canvas.clientHeight - r - 40);
-    const strength = rand(420, 780);
+    const strength = rand(0.88, 1.36);
     wells.push({
       x,
       y,
@@ -119,7 +126,7 @@ permalink: /games/orbit-runner/
 
   function setupWells() {
     wells = [];
-    nextWellX = canvas.clientWidth + 200;
+    nextWellX = canvas.clientWidth + 260;
     while (nextWellX < canvas.clientWidth + 1200) {
       spawnWell(nextWellX);
       nextWellX += rand(...config.wellSpacing);
@@ -138,13 +145,13 @@ permalink: /games/orbit-runner/
     ship.x = Math.max(160, canvas.clientWidth * 0.22);
     ship.y = canvas.clientHeight * 0.5;
     setupWells();
-    hudState.textContent = 'Status: Running';
+    hudState.textContent = 'Status: Active';
   }
 
   function endGame() {
     state.running = false;
     state.gameOver = true;
-    hudState.textContent = 'Status: Crashed - press Space or tap to restart';
+    hudState.textContent = 'Status: Crashed - press Restart';
     state.best = Math.max(state.best, Math.floor(state.distance));
     localStorage.setItem('triwei_orbit_best', String(state.best));
   }
@@ -174,10 +181,10 @@ permalink: /games/orbit-runner/
     if (!state.running) return;
     state.time += dt;
     state.speed = config.baseSpeed + state.time * config.speedRamp;
-    state.distance += state.speed * dt * 0.06;
+    state.distance += state.speed * dt * 0.1;
 
     for (const star of stars) {
-      star.x -= state.speed * star.speed;
+      star.x -= state.speed * star.speed * dt;
       if (star.x < -5) {
         star.x = canvas.clientWidth + rand(10, 120);
         star.y = rand(0, canvas.clientHeight);
@@ -185,9 +192,9 @@ permalink: /games/orbit-runner/
     }
 
     for (const well of wells) {
-      well.x -= state.speed;
+      well.x -= state.speed * dt;
     }
-    nextWellX -= state.speed;
+    nextWellX -= state.speed * dt;
     wells = wells.filter(well => well.x + well.r > -120);
 
     while (nextWellX < canvas.clientWidth + 1200) {
@@ -196,18 +203,19 @@ permalink: /games/orbit-runner/
     }
 
     const targetX = canvas.clientWidth * 0.22;
-    ship.vx += (targetX - ship.x) * 0.002;
-    ship.vx *= 0.985;
-    ship.vy *= 0.99;
+    ship.vx += (targetX - ship.x) * dt * 0.9;
+    const drag = Math.pow(config.dragPerFrame, dt * 60);
+    ship.vx *= drag;
+    ship.vy *= drag;
 
     for (const well of wells) {
       const dx = well.x - ship.x;
       const dy = well.y - ship.y;
-      const distSq = dx * dx + dy * dy + 120;
+      const distSq = dx * dx + dy * dy + 160;
       const dist = Math.sqrt(distSq);
-      const pull = (well.strength / distSq) * (config.gravity / 520);
-      ship.vx += (dx / dist) * pull;
-      ship.vy += (dy / dist) * pull;
+      const pull = (config.gravity * well.strength) / distSq;
+      ship.vx += (dx / dist) * pull * dt;
+      ship.vy += (dy / dist) * pull * dt;
 
       if (!well.scored && dist < well.r + config.slingshotRing && dist > well.r + config.shipRadius + 6) {
         state.slings += 1;
@@ -226,13 +234,13 @@ permalink: /games/orbit-runner/
         const dx = ship.x - focus.x;
         const dy = ship.y - focus.y;
         const dist = Math.hypot(dx, dy) || 1;
-        ship.vx += (dx / dist) * config.thrust;
-        ship.vy += (dy / dist) * config.thrust;
+        ship.vx += (dx / dist) * config.thrust * dt;
+        ship.vy += (dy / dist) * config.thrust * dt;
       }
     }
 
-    ship.x += ship.vx;
-    ship.y += ship.vy;
+    ship.x += ship.vx * dt;
+    ship.y += ship.vy * dt;
 
     if (ship.y < -40 || ship.y > canvas.clientHeight + 40) {
       endGame();
@@ -326,7 +334,10 @@ permalink: /games/orbit-runner/
   }
 
   function loop(timestamp) {
-    const dt = Math.min(32, timestamp - lastTime) / 16.67;
+    if (!lastTime) {
+      lastTime = timestamp;
+    }
+    const dt = Math.min(0.05, (timestamp - lastTime) / 1000);
     lastTime = timestamp;
     step(dt);
     render();
@@ -341,16 +352,19 @@ permalink: /games/orbit-runner/
 
   window.addEventListener('keydown', (event) => {
     if (event.code === 'Space') {
+      event.preventDefault();
       inputActive = true;
       handleStart();
     }
     if (event.code === 'KeyR' && state.gameOver) {
+      event.preventDefault();
       startGame();
     }
   });
 
   window.addEventListener('keyup', (event) => {
     if (event.code === 'Space') {
+      event.preventDefault();
       inputActive = false;
     }
   });
@@ -364,10 +378,20 @@ permalink: /games/orbit-runner/
   window.addEventListener('pointerup', () => {
     inputActive = false;
   });
+  window.addEventListener('pointercancel', () => {
+    inputActive = false;
+  });
+  btnStart.addEventListener('click', () => {
+    startGame();
+  });
+  btnRestart.addEventListener('click', () => {
+    startGame();
+  });
 
   window.addEventListener('resize', resizeCanvas);
 
-  state.best = parseInt(localStorage.getItem('triwei_orbit_best') || '0', 10);
+  const parsedBest = parseInt(localStorage.getItem('triwei_orbit_best') || '0', 10);
+  state.best = Number.isFinite(parsedBest) ? Math.max(0, parsedBest) : 0;
   hudState.textContent = 'Status: Ready';
   resizeCanvas();
   setupWells();

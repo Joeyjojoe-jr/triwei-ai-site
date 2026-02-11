@@ -2,4 +2,4 @@
 layout: home
 title: TriWei AI
 ---
-Welcome to TriWei AI! We explore the latest developments in artificial intelligence—including tools, news, research breakthroughs, and ethical insights. New posts are added every week.
+Welcome to TriWei AI! Expect short reads on AI tools and ideas plus playful experiments worth revisiting.

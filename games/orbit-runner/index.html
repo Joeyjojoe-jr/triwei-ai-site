@@ -1,0 +1,373 @@
+---
+layout: default
+title: Orbit Runner
+permalink: /games/orbit-runner/
+---
+
+<section class="game-page">
+  <h1>Orbit Runner</h1>
+  <p>Slingshot around gravity wells. Hold Space or press and hold on the canvas to fire thrusters away from the nearest well. Survive and build distance.</p>
+  <div class="game-shell">
+    <div class="game-hud">
+      <span class="hud-pill" id="orbit-distance">Distance: 0</span>
+      <span class="hud-pill" id="orbit-slings">Slings: 0</span>
+      <span class="hud-pill" id="orbit-best">Best: 0</span>
+      <span class="hud-pill" id="orbit-state">Status: Ready</span>
+    </div>
+    <div class="game-canvas-wrap">
+      <canvas id="orbit-canvas" aria-label="Orbit Runner game canvas" role="img"></canvas>
+    </div>
+    <div class="game-controls">
+      <div class="control-card">
+        <h4>Controls</h4>
+        <p>Hold Space, mouse, or touch to fire thrusters away from the nearest gravity well.</p>
+      </div>
+      <div class="control-card">
+        <h4>Goal</h4>
+        <p>Stay in orbit, avoid crashing, and chain slings for bonus distance.</p>
+      </div>
+      <div class="control-card">
+        <h4>Tip</h4>
+        <p>Short bursts keep you stable. Long holds are risky when speed ramps up.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(() => {
+  const canvas = document.getElementById('orbit-canvas');
+  const ctx = canvas.getContext('2d');
+  const hudDistance = document.getElementById('orbit-distance');
+  const hudSlings = document.getElementById('orbit-slings');
+  const hudBest = document.getElementById('orbit-best');
+  const hudState = document.getElementById('orbit-state');
+
+  const state = {
+    running: false,
+    gameOver: false,
+    distance: 0,
+    slings: 0,
+    speed: 2.4,
+    time: 0,
+    best: 0,
+  };
+
+  const config = {
+    baseSpeed: 2.4,
+    speedRamp: 0.0008,
+    gravity: 480,
+    thrust: 0.35,
+    shipRadius: 7,
+    wellMinRadius: 26,
+    wellMaxRadius: 46,
+    wellSpacing: [340, 520],
+    slingshotRing: 70,
+    slingshotBonus: 18,
+  };
+
+  const ship = { x: 180, y: 240, vx: 0, vy: 0 };
+  let wells = [];
+  let stars = [];
+  let inputActive = false;
+  let lastTime = 0;
+  let nextWellX = 0;
+
+  function rand(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  function resizeCanvas() {
+    const dpr = window.devicePixelRatio || 1;
+    const { clientWidth, clientHeight } = canvas;
+    canvas.width = Math.max(1, Math.floor(clientWidth * dpr));
+    canvas.height = Math.max(1, Math.floor(clientHeight * dpr));
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    if (!state.running) {
+      ship.x = Math.max(160, canvas.clientWidth * 0.22);
+      ship.y = canvas.clientHeight * 0.5;
+    }
+    buildStars();
+  }
+
+  function buildStars() {
+    const count = Math.floor(canvas.clientWidth / 6);
+    stars = Array.from({ length: count }, () => ({
+      x: Math.random() * canvas.clientWidth,
+      y: Math.random() * canvas.clientHeight,
+      r: rand(0.6, 1.8),
+      speed: rand(0.2, 0.6),
+    }));
+  }
+
+  function spawnWell(x) {
+    const r = rand(config.wellMinRadius, config.wellMaxRadius);
+    const y = rand(r + 40, canvas.clientHeight - r - 40);
+    const strength = rand(420, 780);
+    wells.push({
+      x,
+      y,
+      r,
+      strength,
+      scored: false,
+    });
+  }
+
+  function setupWells() {
+    wells = [];
+    nextWellX = canvas.clientWidth + 200;
+    while (nextWellX < canvas.clientWidth + 1200) {
+      spawnWell(nextWellX);
+      nextWellX += rand(...config.wellSpacing);
+    }
+  }
+
+  function startGame() {
+    state.running = true;
+    state.gameOver = false;
+    state.distance = 0;
+    state.slings = 0;
+    state.speed = config.baseSpeed;
+    state.time = 0;
+    ship.vx = 0;
+    ship.vy = 0;
+    ship.x = Math.max(160, canvas.clientWidth * 0.22);
+    ship.y = canvas.clientHeight * 0.5;
+    setupWells();
+    hudState.textContent = 'Status: Running';
+  }
+
+  function endGame() {
+    state.running = false;
+    state.gameOver = true;
+    hudState.textContent = 'Status: Crashed - press Space or tap to restart';
+    state.best = Math.max(state.best, Math.floor(state.distance));
+    localStorage.setItem('triwei_orbit_best', String(state.best));
+  }
+
+  function updateHud() {
+    hudDistance.textContent = `Distance: ${Math.floor(state.distance)}`;
+    hudSlings.textContent = `Slings: ${state.slings}`;
+    hudBest.textContent = `Best: ${state.best}`;
+  }
+
+  function nearestWell() {
+    let best = null;
+    let bestDist = Infinity;
+    for (const well of wells) {
+      const dx = well.x - ship.x;
+      const dy = well.y - ship.y;
+      const dist = Math.hypot(dx, dy);
+      if (dist < bestDist) {
+        bestDist = dist;
+        best = well;
+      }
+    }
+    return best;
+  }
+
+  function step(dt) {
+    if (!state.running) return;
+    state.time += dt;
+    state.speed = config.baseSpeed + state.time * config.speedRamp;
+    state.distance += state.speed * dt * 0.06;
+
+    for (const star of stars) {
+      star.x -= state.speed * star.speed;
+      if (star.x < -5) {
+        star.x = canvas.clientWidth + rand(10, 120);
+        star.y = rand(0, canvas.clientHeight);
+      }
+    }
+
+    for (const well of wells) {
+      well.x -= state.speed;
+    }
+    nextWellX -= state.speed;
+    wells = wells.filter(well => well.x + well.r > -120);
+
+    while (nextWellX < canvas.clientWidth + 1200) {
+      spawnWell(nextWellX);
+      nextWellX += rand(...config.wellSpacing);
+    }
+
+    const targetX = canvas.clientWidth * 0.22;
+    ship.vx += (targetX - ship.x) * 0.002;
+    ship.vx *= 0.985;
+    ship.vy *= 0.99;
+
+    for (const well of wells) {
+      const dx = well.x - ship.x;
+      const dy = well.y - ship.y;
+      const distSq = dx * dx + dy * dy + 120;
+      const dist = Math.sqrt(distSq);
+      const pull = (well.strength / distSq) * (config.gravity / 520);
+      ship.vx += (dx / dist) * pull;
+      ship.vy += (dy / dist) * pull;
+
+      if (!well.scored && dist < well.r + config.slingshotRing && dist > well.r + config.shipRadius + 6) {
+        state.slings += 1;
+        state.distance += config.slingshotBonus;
+        well.scored = true;
+      }
+
+      if (dist < well.r + config.shipRadius) {
+        endGame();
+      }
+    }
+
+    if (inputActive) {
+      const focus = nearestWell();
+      if (focus) {
+        const dx = ship.x - focus.x;
+        const dy = ship.y - focus.y;
+        const dist = Math.hypot(dx, dy) || 1;
+        ship.vx += (dx / dist) * config.thrust;
+        ship.vy += (dy / dist) * config.thrust;
+      }
+    }
+
+    ship.x += ship.vx;
+    ship.y += ship.vy;
+
+    if (ship.y < -40 || ship.y > canvas.clientHeight + 40) {
+      endGame();
+    }
+
+    updateHud();
+  }
+
+  function drawWell(well) {
+    const glow = ctx.createRadialGradient(well.x, well.y, well.r * 0.2, well.x, well.y, well.r * 1.3);
+    glow.addColorStop(0, 'rgba(124, 123, 255, 0.7)');
+    glow.addColorStop(0.6, 'rgba(124, 123, 255, 0.2)');
+    glow.addColorStop(1, 'rgba(0, 0, 0, 0)');
+    ctx.fillStyle = glow;
+    ctx.beginPath();
+    ctx.arc(well.x, well.y, well.r * 1.3, 0, Math.PI * 2);
+    ctx.fill();
+
+    const core = ctx.createRadialGradient(well.x, well.y, 0, well.x, well.y, well.r);
+    core.addColorStop(0, '#f6f2ff');
+    core.addColorStop(0.5, '#7c7bff');
+    core.addColorStop(1, '#1b1f44');
+    ctx.fillStyle = core;
+    ctx.beginPath();
+    ctx.arc(well.x, well.y, well.r, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  function drawShip() {
+    const angle = Math.atan2(ship.vy, 1.5);
+    ctx.save();
+    ctx.translate(ship.x, ship.y);
+    ctx.rotate(angle);
+    ctx.beginPath();
+    ctx.moveTo(12, 0);
+    ctx.lineTo(-10, -6);
+    ctx.lineTo(-6, 0);
+    ctx.lineTo(-10, 6);
+    ctx.closePath();
+    ctx.fillStyle = '#ff8a5c';
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
+    ctx.stroke();
+
+    if (inputActive && state.running && !state.gameOver) {
+      ctx.beginPath();
+      ctx.moveTo(-10, 0);
+      ctx.lineTo(-18, rand(-4, 4));
+      ctx.lineTo(-8, rand(-2, 2));
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(52, 245, 197, 0.8)';
+      ctx.fill();
+    }
+    ctx.restore();
+  }
+
+  function drawStars() {
+    for (const star of stars) {
+      ctx.fillStyle = `rgba(255, 255, 255, ${0.4 + star.r * 0.2})`;
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  function drawOverlay() {
+    if (state.running) return;
+    ctx.save();
+    ctx.fillStyle = 'rgba(4, 6, 14, 0.65)';
+    ctx.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+
+    ctx.fillStyle = '#e8eef5';
+    ctx.textAlign = 'center';
+    ctx.font = '600 20px \"IBM Plex Sans\", sans-serif';
+    const message = state.gameOver ? 'Crash detected' : 'Orbit Runner';
+    ctx.fillText(message, canvas.clientWidth / 2, canvas.clientHeight / 2 - 20);
+    ctx.font = '400 14px \"IBM Plex Sans\", sans-serif';
+    const sub = state.gameOver
+      ? 'Press Space or tap to restart'
+      : 'Hold Space or touch to fire thrusters';
+    ctx.fillText(sub, canvas.clientWidth / 2, canvas.clientHeight / 2 + 10);
+    ctx.restore();
+  }
+
+  function render() {
+    ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+    drawStars();
+    for (const well of wells) drawWell(well);
+    drawShip();
+    drawOverlay();
+  }
+
+  function loop(timestamp) {
+    const dt = Math.min(32, timestamp - lastTime) / 16.67;
+    lastTime = timestamp;
+    step(dt);
+    render();
+    requestAnimationFrame(loop);
+  }
+
+  function handleStart() {
+    if (!state.running) {
+      startGame();
+    }
+  }
+
+  window.addEventListener('keydown', (event) => {
+    if (event.code === 'Space') {
+      inputActive = true;
+      handleStart();
+    }
+    if (event.code === 'KeyR' && state.gameOver) {
+      startGame();
+    }
+  });
+
+  window.addEventListener('keyup', (event) => {
+    if (event.code === 'Space') {
+      inputActive = false;
+    }
+  });
+
+  canvas.addEventListener('pointerdown', (event) => {
+    event.preventDefault();
+    inputActive = true;
+    handleStart();
+  });
+
+  window.addEventListener('pointerup', () => {
+    inputActive = false;
+  });
+
+  window.addEventListener('resize', resizeCanvas);
+
+  state.best = parseInt(localStorage.getItem('triwei_orbit_best') || '0', 10);
+  hudState.textContent = 'Status: Ready';
+  resizeCanvas();
+  setupWells();
+  updateHud();
+  requestAnimationFrame(loop);
+})();
+</script>

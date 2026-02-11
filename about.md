@@ -6,4 +6,4 @@ permalink: /about/
 
 ## About
 
-TriWei AI curates practical AI tools, short explainers, and a weekly roundup of news and research. Our mission is to provide accessible insights into the world of artificial intelligence.
+TriWei AI curates practical AI tools, short explainers, and lightweight experiments. The goal is to provide accessible insights into the world of artificial intelligence while keeping things playful and easy to explore.

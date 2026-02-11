@@ -13,6 +13,7 @@
       <ul>
         <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>Home</a></li>
         <li><a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog/' %} class="active"{% endif %}>Blog</a></li>
+        <li><a href="{{ '/games/' | relative_url }}"{% if page.url contains '/games/' %} class="active"{% endif %}>Games</a></li>
         <li><a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about/' %} class="active"{% endif %}>About</a></li>
         <li><a href="{{ '/contact/' | relative_url }}"{% if page.url contains '/contact/' %} class="active"{% endif %}>Contact</a></li>
       </ul>

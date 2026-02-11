@@ -1,5 +1,5 @@
 title: TriWei AI
-description: Weekly AI tools and news
+description: Short AI notes, tools, and playable experiments
 theme: minima
 logo: /assets/images/logo.png
 
@@ -30,5 +30,4 @@ defaults:
 
 # Exclude directories that should not be processed by Jekyll
 exclude:
-  - "site (2)"
-  - "triwei_scaffold"
+  - "_archive_*"

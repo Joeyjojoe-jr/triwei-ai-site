@@ -1,0 +1,439 @@
+---
+layout: default
+title: Circuit Flip
+permalink: /games/circuit-flip/
+---
+
+<section class="game-page">
+  <h1>Circuit Flip</h1>
+  <p>Rotate tiles to route power from the Source to the Core. Click or tap a tile to turn it. Solve with the fewest moves.</p>
+  <div class="game-shell">
+    <div class="game-hud">
+      <span class="hud-pill" id="circuit-moves">Moves: 0</span>
+      <span class="hud-pill" id="circuit-time">Time: 0:00</span>
+      <span class="hud-pill" id="circuit-best">Best: --</span>
+      <span class="hud-pill" id="circuit-state">Status: Ready</span>
+    </div>
+    <div class="game-canvas-wrap">
+      <canvas id="circuit-canvas" aria-label="Circuit Flip puzzle board" role="img"></canvas>
+    </div>
+    <div class="game-actions">
+      <button class="game-button" id="circuit-new">New Puzzle</button>
+      <button class="game-button ghost" id="circuit-reset">Reset</button>
+    </div>
+    <div class="game-controls">
+      <div class="control-card">
+        <h4>Controls</h4>
+        <p>Click or tap a tile to rotate it clockwise.</p>
+      </div>
+      <div class="control-card">
+        <h4>Goal</h4>
+        <p>Connect the glowing Source to the Core target by aligning the circuit.</p>
+      </div>
+      <div class="control-card">
+        <h4>Tip</h4>
+        <p>Work outward from the Source and watch for straight runs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(() => {
+  const canvas = document.getElementById('circuit-canvas');
+  const ctx = canvas.getContext('2d');
+  const hudMoves = document.getElementById('circuit-moves');
+  const hudTime = document.getElementById('circuit-time');
+  const hudBest = document.getElementById('circuit-best');
+  const hudState = document.getElementById('circuit-state');
+  const btnNew = document.getElementById('circuit-new');
+  const btnReset = document.getElementById('circuit-reset');
+
+  const DIRS = [
+    { x: 0, y: -1 }, // N
+    { x: 1, y: 0 },  // E
+    { x: 0, y: 1 },  // S
+    { x: -1, y: 0 }  // W
+  ];
+  const OPP = [2, 3, 0, 1];
+
+  const state = {
+    size: 6,
+    tiles: [],
+    powered: [],
+    moves: 0,
+    time: 0,
+    running: false,
+    solved: false,
+    bestMoves: null,
+    bestTime: null,
+    lastTick: 0,
+  };
+
+  function rand(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function clamp(val, min, max) {
+    return Math.max(min, Math.min(max, val));
+  }
+
+  function resizeCanvas() {
+    const dpr = window.devicePixelRatio || 1;
+    const { clientWidth, clientHeight } = canvas;
+    canvas.width = Math.max(1, Math.floor(clientWidth * dpr));
+    canvas.height = Math.max(1, Math.floor(clientHeight * dpr));
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function initGrid() {
+    state.tiles = Array.from({ length: state.size }, () =>
+      Array.from({ length: state.size }, () => ({
+        baseDirs: [],
+        rotation: 0,
+        scrambleRotation: 0,
+        locked: false,
+        kind: 'empty'
+      }))
+    );
+  }
+
+  function addEdge(connections, x1, y1, x2, y2) {
+    const dx = x2 - x1;
+    const dy = y2 - y1;
+    const dir = DIRS.findIndex(d => d.x === dx && d.y === dy);
+    if (dir === -1) return;
+    connections[y1][x1][dir] = true;
+    connections[y2][x2][OPP[dir]] = true;
+  }
+
+  function buildPath(connections) {
+    const startY = rand(1, state.size - 2);
+    let x = 0;
+    let y = startY;
+    const path = [{ x, y }];
+    for (let col = 0; col < state.size - 1; col++) {
+      const drift = rand(-2, 2);
+      const targetY = clamp(y + drift, 1, state.size - 2);
+      while (y !== targetY) {
+        y += Math.sign(targetY - y);
+        path.push({ x, y });
+      }
+      const nx = x + 1;
+      addEdge(connections, x, y, nx, y);
+      x = nx;
+      path.push({ x, y });
+    }
+    return path;
+  }
+
+  function buildBranches(connections, path) {
+    const occupied = new Set(path.map(p => `${p.x},${p.y}`));
+    const branchChance = 0.35;
+    for (const cell of path) {
+      if (Math.random() > branchChance) continue;
+      const dirs = DIRS.map((_, idx) => idx).sort(() => Math.random() - 0.5);
+      for (const dir of dirs) {
+        const nx = cell.x + DIRS[dir].x;
+        const ny = cell.y + DIRS[dir].y;
+        if (nx < 0 || ny < 0 || nx >= state.size || ny >= state.size) continue;
+        if (occupied.has(`${nx},${ny}`)) continue;
+        const length = rand(1, 2);
+        let bx = cell.x;
+        let by = cell.y;
+        for (let i = 0; i < length; i++) {
+          const tx = bx + DIRS[dir].x;
+          const ty = by + DIRS[dir].y;
+          if (tx < 0 || ty < 0 || tx >= state.size || ty >= state.size) break;
+          if (occupied.has(`${tx},${ty}`)) break;
+          addEdge(connections, bx, by, tx, ty);
+          occupied.add(`${tx},${ty}`);
+          bx = tx;
+          by = ty;
+        }
+        break;
+      }
+    }
+  }
+
+  function bakeTiles(connections, start, end) {
+    for (let y = 0; y < state.size; y++) {
+      for (let x = 0; x < state.size; x++) {
+        const tile = state.tiles[y][x];
+        const dirs = connections[y][x].map((val, idx) => (val ? idx : null)).filter(v => v !== null);
+        tile.baseDirs = dirs;
+        tile.rotation = 0;
+        tile.scrambleRotation = 0;
+        tile.locked = false;
+        tile.kind = dirs.length ? 'node' : 'empty';
+      }
+    }
+    const source = state.tiles[start.y][start.x];
+    const target = state.tiles[end.y][end.x];
+    source.kind = 'source';
+    source.locked = true;
+    target.kind = 'target';
+    target.locked = true;
+  }
+
+  function scrambleTiles() {
+    for (let y = 0; y < state.size; y++) {
+      for (let x = 0; x < state.size; x++) {
+        const tile = state.tiles[y][x];
+        if (tile.kind === 'empty') continue;
+        tile.rotation = tile.locked ? 0 : rand(0, 3);
+        tile.scrambleRotation = tile.rotation;
+      }
+    }
+  }
+
+  function rotateTile(tile) {
+    if (tile.locked || tile.kind === 'empty') return;
+    tile.rotation = (tile.rotation + 1) % 4;
+    state.moves += 1;
+  }
+
+  function rotatedDirs(tile) {
+    return tile.baseDirs.map(dir => (dir + tile.rotation) % 4);
+  }
+
+  function computePowered() {
+    const powered = Array.from({ length: state.size }, () => Array.from({ length: state.size }, () => false));
+    const source = findKind('source');
+    const queue = [source];
+    powered[source.y][source.x] = true;
+    while (queue.length) {
+      const { x, y } = queue.shift();
+      const tile = state.tiles[y][x];
+      const dirs = rotatedDirs(tile);
+      for (const dir of dirs) {
+        const nx = x + DIRS[dir].x;
+        const ny = y + DIRS[dir].y;
+        if (nx < 0 || ny < 0 || nx >= state.size || ny >= state.size) continue;
+        const neighbor = state.tiles[ny][nx];
+        if (neighbor.kind === 'empty') continue;
+        const neighborDirs = rotatedDirs(neighbor);
+        if (!neighborDirs.includes(OPP[dir])) continue;
+        if (!powered[ny][nx]) {
+          powered[ny][nx] = true;
+          queue.push({ x: nx, y: ny });
+        }
+      }
+    }
+    state.powered = powered;
+    const target = findKind('target');
+    state.solved = powered[target.y][target.x];
+  }
+
+  function findKind(kind) {
+    for (let y = 0; y < state.size; y++) {
+      for (let x = 0; x < state.size; x++) {
+        if (state.tiles[y][x].kind === kind) return { x, y };
+      }
+    }
+    return { x: 0, y: 0 };
+  }
+
+  function updateHud() {
+    hudMoves.textContent = `Moves: ${state.moves}`;
+    const minutes = Math.floor(state.time / 60);
+    const seconds = Math.floor(state.time % 60).toString().padStart(2, '0');
+    hudTime.textContent = `Time: ${minutes}:${seconds}`;
+    if (state.bestMoves !== null) {
+      const bestMinutes = Math.floor(state.bestTime / 60);
+      const bestSeconds = Math.floor(state.bestTime % 60).toString().padStart(2, '0');
+      hudBest.textContent = `Best: ${state.bestMoves} moves in ${bestMinutes}:${bestSeconds}`;
+    } else {
+      hudBest.textContent = 'Best: --';
+    }
+    hudState.textContent = state.solved ? 'Status: Circuit online' : 'Status: Active';
+  }
+
+  function resetTimer() {
+    state.time = 0;
+    state.running = true;
+  }
+
+  function saveBest() {
+    if (state.bestMoves === null || state.moves < state.bestMoves || (state.moves === state.bestMoves && state.time < state.bestTime)) {
+      state.bestMoves = state.moves;
+      state.bestTime = state.time;
+      localStorage.setItem('triwei_circuit_best_moves', String(state.bestMoves));
+      localStorage.setItem('triwei_circuit_best_time', String(state.bestTime));
+    }
+  }
+
+  function loadBest() {
+    const moves = parseInt(localStorage.getItem('triwei_circuit_best_moves') || '', 10);
+    const time = parseInt(localStorage.getItem('triwei_circuit_best_time') || '', 10);
+    state.bestMoves = Number.isFinite(moves) ? moves : null;
+    state.bestTime = Number.isFinite(time) ? time : null;
+  }
+
+  function newPuzzle() {
+    initGrid();
+    const connections = Array.from({ length: state.size }, () =>
+      Array.from({ length: state.size }, () => Array.from({ length: 4 }, () => false))
+    );
+    const path = buildPath(connections);
+    buildBranches(connections, path);
+    const start = path[0];
+    const end = path[path.length - 1];
+    bakeTiles(connections, start, end);
+    scrambleTiles();
+    state.moves = 0;
+    state.solved = false;
+    resetTimer();
+    computePowered();
+    updateHud();
+  }
+
+  function resetPuzzle() {
+    for (let y = 0; y < state.size; y++) {
+      for (let x = 0; x < state.size; x++) {
+        const tile = state.tiles[y][x];
+        tile.rotation = tile.scrambleRotation;
+      }
+    }
+    state.moves = 0;
+    state.solved = false;
+    resetTimer();
+    computePowered();
+    updateHud();
+  }
+
+  function handleClick(evt) {
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.clientWidth / rect.width;
+    const scaleY = canvas.clientHeight / rect.height;
+    const px = (evt.clientX - rect.left) * scaleX;
+    const py = (evt.clientY - rect.top) * scaleY;
+    const size = Math.min(canvas.clientWidth, canvas.clientHeight);
+    const tileSize = size / state.size;
+    const offsetX = (canvas.clientWidth - size) / 2;
+    const offsetY = (canvas.clientHeight - size) / 2;
+    const x = Math.floor((px - offsetX) / tileSize);
+    const y = Math.floor((py - offsetY) / tileSize);
+    if (x < 0 || y < 0 || x >= state.size || y >= state.size) return;
+    const tile = state.tiles[y][x];
+    rotateTile(tile);
+    computePowered();
+    if (state.solved) {
+      saveBest();
+    }
+    updateHud();
+  }
+
+  function drawTile(tile, gx, gy, x, y, tileSize) {
+    if (tile.kind === 'empty') return;
+    const cx = x + tileSize / 2;
+    const cy = y + tileSize / 2;
+    const powered = state.powered[gy][gx];
+
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+    ctx.lineWidth = 1;
+    ctx.strokeRect(x + 2, y + 2, tileSize - 4, tileSize - 4);
+
+    const baseColor = powered ? '#34f5c5' : '#7c7bff';
+    const dimColor = powered ? 'rgba(52, 245, 197, 0.4)' : 'rgba(124, 123, 255, 0.35)';
+    ctx.lineCap = 'round';
+    ctx.lineWidth = tileSize * 0.14;
+
+    const dirs = rotatedDirs(tile);
+    for (const dir of dirs) {
+      const nx = x + tileSize / 2 + DIRS[dir].x * (tileSize * 0.44);
+      const ny = y + tileSize / 2 + DIRS[dir].y * (tileSize * 0.44);
+      ctx.strokeStyle = baseColor;
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.lineTo(nx, ny);
+      ctx.stroke();
+
+      ctx.strokeStyle = dimColor;
+      ctx.lineWidth = tileSize * 0.06;
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.lineTo(nx, ny);
+      ctx.stroke();
+    }
+
+    ctx.lineWidth = tileSize * 0.12;
+    ctx.strokeStyle = powered ? '#ff8a5c' : '#3a456f';
+    ctx.beginPath();
+    ctx.arc(cx, cy, tileSize * 0.16, 0, Math.PI * 2);
+    ctx.stroke();
+
+    if (tile.kind === 'source' || tile.kind === 'target') {
+      const ringColor = tile.kind === 'source' ? '#ff8a5c' : '#34f5c5';
+      ctx.strokeStyle = ringColor;
+      ctx.lineWidth = tileSize * 0.08;
+      ctx.beginPath();
+      ctx.arc(cx, cy, tileSize * 0.28, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+  }
+
+  function render() {
+    ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+    const size = Math.min(canvas.clientWidth, canvas.clientHeight);
+    const tileSize = size / state.size;
+    const offsetX = (canvas.clientWidth - size) / 2;
+    const offsetY = (canvas.clientHeight - size) / 2;
+
+    ctx.fillStyle = 'rgba(8, 12, 26, 0.95)';
+    ctx.fillRect(offsetX, offsetY, size, size);
+
+    for (let y = 0; y < state.size; y++) {
+      for (let x = 0; x < state.size; x++) {
+        drawTile(state.tiles[y][x], x, y, offsetX + x * tileSize, offsetY + y * tileSize, tileSize);
+      }
+    }
+
+    if (state.solved) {
+      ctx.fillStyle = 'rgba(4, 6, 14, 0.5)';
+      ctx.fillRect(offsetX, offsetY, size, size);
+      ctx.fillStyle = '#e8eef5';
+      ctx.textAlign = 'center';
+      ctx.font = '600 20px \"IBM Plex Sans\", sans-serif';
+      ctx.fillText('Circuit Online', canvas.clientWidth / 2, canvas.clientHeight / 2 - 8);
+      ctx.font = '400 14px \"IBM Plex Sans\", sans-serif';
+      ctx.fillText('Click New Puzzle to play again', canvas.clientWidth / 2, canvas.clientHeight / 2 + 16);
+    }
+  }
+
+  function loop(timestamp) {
+    const dt = Math.min(0.1, (timestamp - state.lastTick) / 1000);
+    state.lastTick = timestamp;
+    if (state.running && !state.solved) {
+      state.time += dt;
+    }
+    updateHud();
+    render();
+    requestAnimationFrame(loop);
+  }
+
+  btnNew.addEventListener('click', newPuzzle);
+  btnReset.addEventListener('click', resetPuzzle);
+  canvas.addEventListener('pointerdown', (event) => {
+    event.preventDefault();
+    handleClick(event);
+  });
+  window.addEventListener('resize', resizeCanvas);
+  window.addEventListener('keydown', (event) => {
+    if (event.code === 'KeyR') {
+      resetPuzzle();
+    }
+    if (event.code === 'KeyN') {
+      newPuzzle();
+    }
+  });
+
+  resizeCanvas();
+  loadBest();
+  newPuzzle();
+  requestAnimationFrame((t) => {
+    state.lastTick = t;
+    loop(t);
+  });
+})();
+</script>

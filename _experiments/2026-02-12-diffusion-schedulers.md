@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Diffusion Schedulers: A Quick Comparison"
-date: 2026-02-12
+date: 2026-02-10
 permalink: /experiments/diffusion-schedulers/
 tags:
   - diffusion

@@ -4,15 +4,14 @@ title: About
 permalink: /about/
 description: Why this Explorer Hub exists and how to use it.
 ---
-<!-- Edit this page to keep your mission statement current. -->
 TriWei AI is a personal Explorer Hub for studying AI systems through focused reading, practical experiments, and reusable guides.
 
 ## How to use this hub
 
-1. Start with the Knowledge Map for core concepts.
-2. Follow Guides when you need a repeatable setup.
-3. Review Experiments for implementation details and lessons learned.
-4. Capture reflections in Blog notes as your understanding deepens.
+1. Start with the Knowledge Map from `_knowledge/` for core concepts.
+2. Follow Guides from `_guides/` for repeatable setup and workflows.
+3. Review experiments in `_experiments/` for implementation notes.
+4. Capture reflections in `_blog/` as your understanding evolves.
 
 ## Update rhythm
 

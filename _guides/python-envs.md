@@ -1,10 +1,8 @@
 ---
 layout: page
 title: "Python Environments"
-permalink: /guides/python-envs/
 description: Simple, repeatable environment management for AI projects.
 ---
-<!-- Update this guide with your preferred package manager and conventions. -->
 Consistent Python environments prevent silent dependency drift and reduce debug time.
 
 ## Naming Convention

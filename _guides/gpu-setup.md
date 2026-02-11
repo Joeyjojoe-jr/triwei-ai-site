@@ -1,10 +1,8 @@
 ---
 layout: page
 title: "GPU Setup"
-permalink: /guides/gpu-setup/
 description: Baseline checklist for local GPU readiness.
 ---
-<!-- Replace commands below with your own machine-specific setup steps. -->
 This guide tracks a stable local GPU setup process for AI experimentation.
 
 ## Driver and Runtime

@@ -1,15 +1,13 @@
 ---
 layout: page
 title: "Embeddings"
-permalink: /knowledge/embeddings/
 description: Vector representations used for semantic search and retrieval.
 ---
-<!-- Keep practical examples here so this page stays implementation-friendly. -->
 Embeddings map text, images, or other data into vectors so semantic similarity can be measured numerically.
 
 ## Practical Uses
 
-- Retrieval-augmented generation (RAG)
+- Retrieval-augmented generation
 - Semantic search
 - Clustering and recommendation
 

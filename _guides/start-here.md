@@ -1,10 +1,8 @@
 ---
 layout: page
 title: "Start Here"
-permalink: /guides/start-here/
 description: A practical onboarding checklist for this hub.
 ---
-<!-- This is a guide page: keep steps short and actionable. -->
 Use this page as your default re-entry checklist whenever you return to the hub.
 
 ## 1. Pick a Focus
@@ -17,7 +15,7 @@ Open the Experiments section, copy an existing setup, and change only one variab
 
 ## 3. Capture One Note
 
-Write a short blog note in `/blog/` with what changed and what is still unclear.
+Write a short blog note in `_blog/` with what changed and what is still unclear.
 
 ## 4. Link Related Pages
 

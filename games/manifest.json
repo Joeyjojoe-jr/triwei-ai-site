@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "updated": "2026-02-11",
+  "games": [
+    {
+      "slug": "orbit-runner",
+      "title": "Orbit Runner",
+      "route": "/games/orbit-runner/",
+      "genre": "Arcade",
+      "description": "Slingshot around gravity wells and survive as speed ramps."
+    },
+    {
+      "slug": "circuit-flip",
+      "title": "Circuit Flip",
+      "route": "/games/circuit-flip/",
+      "genre": "Puzzle",
+      "description": "Rotate tiles to connect the Source to the Core."
+    },
+    {
+      "slug": "signal-drift",
+      "title": "Signal Drift",
+      "route": "/games/signal-drift/",
+      "genre": "Timing",
+      "description": "Single-button timing challenge with escalating tempo."
+    },
+    {
+      "slug": "vector-vault",
+      "title": "Vector Vault",
+      "route": "/games/vector-vault/",
+      "genre": "Arcade",
+      "description": "Precision movement through shifting gate gaps."
+    },
+    {
+      "slug": "logic-lattice",
+      "title": "Logic Lattice",
+      "route": "/games/logic-lattice/",
+      "genre": "Logic",
+      "description": "Constraint puzzle with plus-neighborhood toggles."
+    },
+    {
+      "slug": "flux-line",
+      "title": "Flux Line",
+      "route": "/games/flux-line/",
+      "genre": "Reflex",
+      "description": "Keep a beam centered in a drifting corridor."
+    },
+    {
+      "slug": "pulse-stack",
+      "title": "Pulse Stack",
+      "route": "/games/pulse-stack/",
+      "genre": "Rhythm",
+      "description": "Time block drops to maintain overlap and build height."
+    },
+    {
+      "slug": "grid-hopper",
+      "title": "Grid Hopper",
+      "route": "/games/grid-hopper/",
+      "genre": "Puzzle",
+      "description": "Exact-step path planning on a collapsing grid."
+    },
+    {
+      "slug": "echo-trace",
+      "title": "Echo Trace",
+      "route": "/games/echo-trace/",
+      "genre": "Memory",
+      "description": "Replay delayed directional sequences from memory."
+    },
+    {
+      "slug": "pattern-relay",
+      "title": "Pattern Relay",
+      "route": "/games/pattern-relay/",
+      "genre": "Logic",
+      "description": "Apply matrix transforms and submit the target pattern."
+    },
+    {
+      "slug": "tempo-matrix",
+      "title": "Tempo Matrix",
+      "route": "/games/tempo-matrix/",
+      "genre": "Timing",
+      "description": "Lock moving lane markers inside shrinking timing windows."
+    },
+    {
+      "slug": "quantum-swap",
+      "title": "Quantum Swap",
+      "route": "/games/quantum-swap/",
+      "genre": "Puzzle",
+      "description": "Rotate rows and columns to match a target matrix."
+    }
+  ]
+}

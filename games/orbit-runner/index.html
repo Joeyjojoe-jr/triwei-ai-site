@@ -6,9 +6,10 @@ permalink: /games/orbit-runner/
 
 <section class="game-page">
   <h1>Orbit Runner</h1>
+  <p><a class="text-link" href="{{ '/games/' | relative_url }}">Back to Games</a></p>
   <p>Slingshot around gravity wells. Hold Space or press and hold on the canvas to fire thrusters away from the nearest well. Survive and build distance.</p>
   <div class="game-shell">
-    <div class="game-hud">
+    <div class="game-hud" aria-live="polite">
       <span class="hud-pill" id="orbit-distance">Distance: 0</span>
       <span class="hud-pill" id="orbit-slings">Slings: 0</span>
       <span class="hud-pill" id="orbit-best">Best: 0</span>
@@ -36,6 +37,9 @@ permalink: /games/orbit-runner/
 
 <script>
 (() => {
+  // Math model: each well applies inverse-square gravity (F ~ 1/r^2),
+  // velocity integrates that acceleration per frame, and thrust applies a
+  // normalized vector away from the nearest well.
   const canvas = document.getElementById('orbit-canvas');
   const ctx = canvas.getContext('2d');
   const hudDistance = document.getElementById('orbit-distance');

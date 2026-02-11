@@ -10,10 +10,16 @@
   <!-- Favicon placeholder: replace assets/images/favicon.svg whenever you are ready. -->
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
   <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+  <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#0f7acc">
 
   <!-- GitHub Pages-safe SEO plugin. -->
   {% seo %}
+
+  <!-- Performance hints for shared assets. -->
+  <link rel="preload" href="{{ '/assets/fonts/ibm-plex-sans.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/press-start-2p.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/css/style.css' | relative_url }}" as="style">
 
   <!-- Global stylesheet for the Explorer Hub. -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
@@ -21,14 +27,20 @@
   <script>
     // Early theme hydration to reduce flash before CSS fully paints.
     (function () {
+      var theme = 'light';
       try {
         var saved = localStorage.getItem('triwei-theme');
         if (saved === 'light' || saved === 'dark') {
-          document.documentElement.setAttribute('data-theme', saved);
+          theme = saved;
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
         }
       } catch (error) {
-        // If storage is unavailable, keep default light theme.
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        }
       }
+      document.documentElement.setAttribute('data-theme', theme);
     })();
   </script>
 </head>

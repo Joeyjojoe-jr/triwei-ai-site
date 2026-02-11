@@ -1,0 +1,475 @@
+---
+layout: default
+title: Grid Hopper
+permalink: /games/grid-hopper/
+description: Step-planning puzzle where each move changes future options.
+---
+
+<style>
+  .hopper-page {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .hopper-page > p {
+    margin: 0;
+    max-width: 64ch;
+    color: var(--muted);
+  }
+
+  .hopper-shell {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .hopper-hud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .hud-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.65rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.9rem;
+  }
+
+  .hopper-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(44px, 1fr));
+    gap: 0.45rem;
+  }
+
+  .hopper-cell {
+    border: 1px solid var(--border);
+    border-radius: 0.7rem;
+    min-height: 48px;
+    background: color-mix(in srgb, var(--surface) 92%, #09111f);
+    color: var(--text);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .hopper-cell:hover {
+    border-color: var(--accent);
+  }
+
+  .hopper-cell.start {
+    border-color: #ff8a5c;
+    color: #ff8a5c;
+  }
+
+  .hopper-cell.goal {
+    border-color: #34f5c5;
+    color: #34f5c5;
+  }
+
+  .hopper-cell.player {
+    background: color-mix(in srgb, var(--accent-soft) 78%, #ffffff);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .hopper-cell.visited {
+    opacity: 0.65;
+  }
+
+  .hopper-cell.blocked {
+    background: color-mix(in srgb, var(--surface-soft) 70%, #000000 18%);
+    color: var(--muted);
+    cursor: not-allowed;
+  }
+
+  .hopper-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .hopper-button {
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: #ffffff;
+    border-radius: 0.6rem;
+    padding: 0.5rem 0.8rem;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .hopper-button.ghost {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+  }
+
+  .hopper-cards {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .control-card {
+    border: 1px solid var(--border);
+    border-radius: 0.8rem;
+    background: var(--surface);
+    padding: 0.75rem 0.85rem;
+  }
+
+  .control-card h4 {
+    margin: 0 0 0.35rem;
+  }
+
+  .control-card p,
+  .control-card ul {
+    margin: 0;
+    color: var(--muted);
+  }
+
+  .control-card ul {
+    padding-left: 1rem;
+    display: grid;
+    gap: 0.25rem;
+  }
+</style>
+
+<section class="hopper-page">
+  <h1>Grid Hopper</h1>
+  <p><a class="text-link" href="{{ '/games/' | relative_url }}">Back to Games</a></p>
+  <p>Reach the goal by hopping exactly the distance shown on your current tile. Once you leave a tile, it collapses and cannot be used again.</p>
+
+  <div class="hopper-shell">
+    <div class="hopper-hud" aria-live="polite">
+      <span class="hud-pill" id="hopper-moves">Moves: 0</span>
+      <span class="hud-pill" id="hopper-best">Best: --</span>
+      <span class="hud-pill" id="hopper-options">Options: 0</span>
+      <span class="hud-pill" id="hopper-state">Status: Ready</span>
+    </div>
+
+    <div id="hopper-grid" class="hopper-grid" aria-label="Grid Hopper board"></div>
+
+    <div class="hopper-actions">
+      <button class="hopper-button" id="hopper-new" type="button">New Puzzle</button>
+      <button class="hopper-button ghost" id="hopper-reset" type="button">Reset</button>
+      <button class="hopper-button ghost" id="hopper-hint" type="button">Show Options</button>
+    </div>
+
+    <div class="hopper-cards">
+      <div class="control-card">
+        <h4>Movement Rule</h4>
+        <p>You must move in straight lines (up/down/left/right) exactly N cells, where N is the number on your current tile.</p>
+      </div>
+      <div class="control-card">
+        <h4>Board State</h4>
+        <ul>
+          <li>Start tile is orange.</li>
+          <li>Goal tile is green.</li>
+          <li>Visited tiles collapse and become blocked.</li>
+        </ul>
+      </div>
+      <div class="control-card">
+        <h4>Win / Loss</h4>
+        <p>Reach the goal to win. If no legal moves remain before reaching goal, the run is blocked.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(() => {
+  // Graph model: each tile value defines exact-step edges in cardinal
+  // directions; reachability uses BFS over legal hops while visited nodes
+  // become blocked after movement.
+  const SIZE = 6;
+  const BEST_KEY = 'triwei_grid_hopper_best';
+  const gridEl = document.getElementById('hopper-grid');
+  const hudMoves = document.getElementById('hopper-moves');
+  const hudBest = document.getElementById('hopper-best');
+  const hudOptions = document.getElementById('hopper-options');
+  const hudState = document.getElementById('hopper-state');
+  const btnNew = document.getElementById('hopper-new');
+  const btnReset = document.getElementById('hopper-reset');
+  const btnHint = document.getElementById('hopper-hint');
+
+  const state = {
+    tiles: [],
+    seedTiles: [],
+    blocked: new Set(),
+    seedBlocked: new Set(),
+    player: { x: 0, y: 0 },
+    seedPlayer: { x: 0, y: 0 },
+    start: { x: 0, y: 0 },
+    goal: { x: 0, y: 0 },
+    moves: 0,
+    best: null,
+    solved: false,
+    message: ''
+  };
+
+  function key(x, y) {
+    return `${x},${y}`;
+  }
+
+  function inBounds(x, y) {
+    return x >= 0 && y >= 0 && x < SIZE && y < SIZE;
+  }
+
+  function indexOf(x, y) {
+    return y * SIZE + x;
+  }
+
+  function randInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function cloneSet(source) {
+    return new Set(Array.from(source));
+  }
+
+  function clonePos(pos) {
+    return { x: pos.x, y: pos.y };
+  }
+
+  function randomBoard() {
+    const values = Array.from({ length: SIZE * SIZE }, () => randInt(1, 3));
+    const start = { x: randInt(0, SIZE - 1), y: randInt(0, SIZE - 1) };
+    let goal = { x: randInt(0, SIZE - 1), y: randInt(0, SIZE - 1) };
+    while (goal.x === start.x && goal.y === start.y) {
+      goal = { x: randInt(0, SIZE - 1), y: randInt(0, SIZE - 1) };
+    }
+    values[indexOf(goal.x, goal.y)] = 0;
+    return { values, start, goal };
+  }
+
+  function legalMovesFrom(pos) {
+    const options = [];
+    const hop = state.tiles[indexOf(pos.x, pos.y)];
+    if (hop <= 0) return options;
+    const dirs = [
+      { x: 1, y: 0 },
+      { x: -1, y: 0 },
+      { x: 0, y: 1 },
+      { x: 0, y: -1 }
+    ];
+    for (const d of dirs) {
+      const nx = pos.x + d.x * hop;
+      const ny = pos.y + d.y * hop;
+      if (!inBounds(nx, ny)) continue;
+      if (state.blocked.has(key(nx, ny))) continue;
+      options.push({ x: nx, y: ny });
+    }
+    return options;
+  }
+
+  function isGoal(pos) {
+    return pos.x === state.goal.x && pos.y === state.goal.y;
+  }
+
+  function evaluateState() {
+    if (isGoal(state.player)) return { solved: true, blocked: false, options: [] };
+    const options = legalMovesFrom(state.player);
+    return { solved: false, blocked: options.length === 0, options };
+  }
+
+  function bfsReachable(startPos, blockedSet, tiles, goalPos) {
+    const queue = [startPos];
+    const seen = new Set([key(startPos.x, startPos.y)]);
+
+    while (queue.length) {
+      const cur = queue.shift();
+      if (cur.x === goalPos.x && cur.y === goalPos.y) return true;
+      const hop = tiles[indexOf(cur.x, cur.y)];
+      if (hop <= 0) continue;
+
+      const dirs = [
+        { x: 1, y: 0 },
+        { x: -1, y: 0 },
+        { x: 0, y: 1 },
+        { x: 0, y: -1 }
+      ];
+      for (const d of dirs) {
+        const nx = cur.x + d.x * hop;
+        const ny = cur.y + d.y * hop;
+        if (!inBounds(nx, ny)) continue;
+        const k = key(nx, ny);
+        if (blockedSet.has(k)) continue;
+        if (seen.has(k)) continue;
+        seen.add(k);
+        queue.push({ x: nx, y: ny });
+      }
+    }
+    return false;
+  }
+
+  function generatePuzzle() {
+    for (let attempts = 0; attempts < 140; attempts++) {
+      const board = randomBoard();
+      state.tiles = board.values;
+      state.start = board.start;
+      state.goal = board.goal;
+      state.player = clonePos(board.start);
+      state.blocked = new Set();
+      const reachable = bfsReachable(state.player, state.blocked, state.tiles, state.goal);
+      if (!reachable) continue;
+      const firstOptions = legalMovesFrom(state.player);
+      if (firstOptions.length < 2) continue;
+      return true;
+    }
+    return false;
+  }
+
+  function readBest() {
+    const parsed = parseInt(localStorage.getItem(BEST_KEY) || '', 10);
+    state.best = Number.isFinite(parsed) ? parsed : null;
+  }
+
+  function saveBest() {
+    if (state.best === null || state.moves < state.best) {
+      state.best = state.moves;
+      localStorage.setItem(BEST_KEY, String(state.best));
+    }
+  }
+
+  function updateHud(text) {
+    const ev = evaluateState();
+    hudMoves.textContent = `Moves: ${state.moves}`;
+    hudBest.textContent = state.best === null ? 'Best: --' : `Best: ${state.best}`;
+    hudOptions.textContent = `Options: ${ev.options.length}`;
+    if (text) {
+      hudState.textContent = text;
+      return;
+    }
+    if (state.solved) {
+      hudState.textContent = 'Status: Goal reached';
+      return;
+    }
+    if (ev.blocked) {
+      hudState.textContent = 'Status: No legal moves';
+      return;
+    }
+    hudState.textContent = 'Status: Active';
+  }
+
+  function moveTo(next) {
+    if (state.solved) return;
+    const options = legalMovesFrom(state.player);
+    if (!options.some((opt) => opt.x === next.x && opt.y === next.y)) return;
+
+    const prevKey = key(state.player.x, state.player.y);
+    if (!(state.player.x === state.start.x && state.player.y === state.start.y)) {
+      state.blocked.add(prevKey);
+    } else {
+      state.blocked.add(prevKey);
+    }
+
+    state.player = clonePos(next);
+    state.moves += 1;
+
+    if (isGoal(state.player)) {
+      state.solved = true;
+      saveBest();
+      updateHud('Status: Goal reached');
+    } else {
+      const ev = evaluateState();
+      if (ev.blocked) {
+        updateHud('Status: Blocked - reset or new puzzle');
+      } else {
+        updateHud();
+      }
+    }
+    renderBoard();
+  }
+
+  function cellClass(x, y) {
+    const classes = ['hopper-cell'];
+    const k = key(x, y);
+    if (state.blocked.has(k)) classes.push('blocked');
+    if (x === state.start.x && y === state.start.y) classes.push('start');
+    if (x === state.goal.x && y === state.goal.y) classes.push('goal');
+    if (x === state.player.x && y === state.player.y) classes.push('player');
+    if (state.blocked.has(k)) classes.push('visited');
+    return classes.join(' ');
+  }
+
+  function labelForCell(x, y) {
+    if (x === state.goal.x && y === state.goal.y) return 'Goal';
+    const val = state.tiles[indexOf(x, y)];
+    return String(val);
+  }
+
+  function renderBoard() {
+    gridEl.innerHTML = '';
+    for (let y = 0; y < SIZE; y++) {
+      for (let x = 0; x < SIZE; x++) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = cellClass(x, y);
+        btn.textContent = labelForCell(x, y);
+        btn.setAttribute('aria-label', `Cell ${y + 1}-${x + 1} ${btn.textContent}`);
+        if (state.blocked.has(key(x, y)) || state.solved) {
+          btn.disabled = true;
+        }
+        btn.addEventListener('click', () => moveTo({ x, y }));
+        gridEl.appendChild(btn);
+      }
+    }
+  }
+
+  function newPuzzle() {
+    const ok = generatePuzzle();
+    if (!ok) {
+      state.message = 'Status: Generation retry needed';
+      updateHud(state.message);
+      return;
+    }
+    state.seedTiles = state.tiles.map((v) => v);
+    state.seedBlocked = cloneSet(state.blocked);
+    state.seedPlayer = clonePos(state.player);
+    state.moves = 0;
+    state.solved = false;
+    state.message = '';
+    updateHud('Status: Active');
+    renderBoard();
+  }
+
+  function resetPuzzle() {
+    state.tiles = state.seedTiles.map((v) => v);
+    state.blocked = cloneSet(state.seedBlocked);
+    state.player = clonePos(state.seedPlayer);
+    state.moves = 0;
+    state.solved = false;
+    state.message = '';
+    updateHud('Status: Reset');
+    renderBoard();
+  }
+
+  function showOptions() {
+    const options = legalMovesFrom(state.player);
+    if (options.length === 0) {
+      updateHud('Status: No legal moves');
+      return;
+    }
+    const text = options.map((o) => `(${o.x + 1},${o.y + 1})`).join(' ');
+    updateHud(`Status: Options ${text}`);
+  }
+
+  btnNew.addEventListener('click', newPuzzle);
+  btnReset.addEventListener('click', resetPuzzle);
+  btnHint.addEventListener('click', showOptions);
+
+  window.addEventListener('keydown', (event) => {
+    if (event.code === 'KeyN') newPuzzle();
+    if (event.code === 'KeyR') resetPuzzle();
+    if (event.code === 'KeyH') showOptions();
+  });
+
+  readBest();
+  newPuzzle();
+})();
+</script>

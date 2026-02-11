@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build && node scripts/check_dist_size.mjs",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "check:games": "node scripts/sanity_check_games.mjs",
+    "check:links": "node scripts/broken_link_detector.mjs",
+    "check:site": "npm run check:games && npm run check:links"
   },
   "dependencies": {
     "astro": "^4.15.0",

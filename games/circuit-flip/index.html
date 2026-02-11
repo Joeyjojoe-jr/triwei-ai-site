@@ -6,9 +6,10 @@ permalink: /games/circuit-flip/
 
 <section class="game-page">
   <h1>Circuit Flip</h1>
+  <p><a class="text-link" href="{{ '/games/' | relative_url }}">Back to Games</a></p>
   <p>Rotate tiles to route power from the Source to the Core. Click or tap a tile to turn it. Solve with the fewest moves.</p>
   <div class="game-shell">
-    <div class="game-hud">
+    <div class="game-hud" aria-live="polite">
       <span class="hud-pill" id="circuit-moves">Moves: 0</span>
       <span class="hud-pill" id="circuit-time">Time: 0:00</span>
       <span class="hud-pill" id="circuit-best">Best: --</span>
@@ -40,6 +41,8 @@ permalink: /games/circuit-flip/
 
 <script>
 (() => {
+  // Logic model: tile rotations are modulo 4, and power propagation is a
+  // graph reachability problem solved with BFS over connected directions.
   const canvas = document.getElementById('circuit-canvas');
   const ctx = canvas.getContext('2d');
   const hudMoves = document.getElementById('circuit-moves');

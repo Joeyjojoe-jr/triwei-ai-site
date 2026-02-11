@@ -18,12 +18,21 @@
       (function () {
         var root = document.documentElement;
         var toggleButton = document.getElementById('theme-toggle');
+        var themeColorMeta = document.querySelector('meta[name=\"theme-color\"]');
+        var systemPrefersDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
         var storageKey = 'triwei-theme';
 
         function applyTheme(theme) {
+          var isDark = theme === 'dark';
           root.setAttribute('data-theme', theme);
+          if (themeColorMeta) {
+            themeColorMeta.setAttribute('content', isDark ? '#0f1722' : '#0f7acc');
+          }
           if (toggleButton) {
-            toggleButton.textContent = theme === 'dark' ? 'Light' : 'Dark';
+            toggleButton.textContent = isDark ? 'Light' : 'Dark';
+            toggleButton.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+            toggleButton.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+            toggleButton.title = isDark ? 'Switch to light theme' : 'Switch to dark theme';
           }
         }
 
@@ -34,11 +43,23 @@
           savedTheme = null;
         }
 
-        if (savedTheme !== 'light' && savedTheme !== 'dark') {
-          savedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        var hasExplicitPreference = savedTheme === 'light' || savedTheme === 'dark';
+        if (!hasExplicitPreference) {
+          savedTheme = systemPrefersDark && systemPrefersDark.matches ? 'dark' : 'light';
         }
 
         applyTheme(savedTheme);
+
+        if (!hasExplicitPreference && systemPrefersDark) {
+          var handleSystemThemeChange = function (event) {
+            applyTheme(event.matches ? 'dark' : 'light');
+          };
+          if (systemPrefersDark.addEventListener) {
+            systemPrefersDark.addEventListener('change', handleSystemThemeChange);
+          } else if (systemPrefersDark.addListener) {
+            systemPrefersDark.addListener(handleSystemThemeChange);
+          }
+        }
 
         if (toggleButton) {
           toggleButton.addEventListener('click', function () {
@@ -51,6 +72,113 @@
             }
           });
         }
+      })();
+    </script>
+    <script>
+      // Lightweight client-side analytics hooks (no backend transport).
+      (function () {
+        var storageKey = 'triwei-analytics-events';
+        var maxEvents = 200;
+        var events = [];
+
+        function readEvents() {
+          try {
+            var raw = localStorage.getItem(storageKey);
+            if (!raw) return [];
+            var parsed = JSON.parse(raw);
+            return Array.isArray(parsed) ? parsed : [];
+          } catch (error) {
+            return [];
+          }
+        }
+
+        function writeEvents(nextEvents) {
+          try {
+            localStorage.setItem(storageKey, JSON.stringify(nextEvents.slice(-maxEvents)));
+          } catch (error) {
+            // Ignore storage failures and keep in-memory events only.
+          }
+        }
+
+        function safeText(value) {
+          return String(value || '')
+            .replace(/\s+/g, ' ')
+            .trim()
+            .slice(0, 120);
+        }
+
+        function track(eventName, payload) {
+          if (!eventName) return;
+          var entry = {
+            event: eventName,
+            path: window.location.pathname,
+            title: document.title,
+            ts: new Date().toISOString(),
+            payload: payload || {}
+          };
+          events.push(entry);
+          if (events.length > maxEvents) {
+            events = events.slice(-maxEvents);
+          }
+          writeEvents(events);
+          if (window.CustomEvent) {
+            window.dispatchEvent(new CustomEvent('triwei:analytics', { detail: entry }));
+          }
+        }
+
+        events = readEvents();
+        window.triweiAnalytics = {
+          track: track,
+          getEvents: function () {
+            return events.slice();
+          },
+          clear: function () {
+            events = [];
+            writeEvents(events);
+          }
+        };
+
+        track('page_view', { referrer: document.referrer || '' });
+
+        document.addEventListener(
+          'click',
+          function (event) {
+            var target = event.target;
+            if (!target || !target.closest) return;
+
+            var link = target.closest('a[href]');
+            if (link) {
+              var href = link.getAttribute('href') || '';
+              var text = safeText(link.textContent);
+              if (link.closest('.site-nav')) {
+                track('nav_click', { href: href, text: text });
+              } else if (link.closest('.footer-inner nav')) {
+                track('footer_click', { href: href, text: text });
+              }
+              if (/^\/games\/[^/]+\/?$/.test(href)) {
+                track('game_launch_click', { href: href, text: text });
+              } else if (href === '/games/' || href === '/games') {
+                track('games_hub_click', { href: href, text: text });
+              }
+            }
+
+            var button = target.closest('button');
+            if (!button) return;
+
+            if (button.id === 'theme-toggle') {
+              track('theme_toggle', { theme: document.documentElement.getAttribute('data-theme') || 'light' });
+              return;
+            }
+
+            if (window.location.pathname.indexOf('/games/') === 0 && button.id) {
+              track('game_button_click', {
+                id: button.id,
+                label: safeText(button.textContent)
+              });
+            }
+          },
+          true
+        );
       })();
     </script>
   </body>

@@ -1,0 +1,468 @@
+---
+layout: default
+title: Tempo Matrix
+permalink: /games/tempo-matrix/
+description: Multi-lane timing challenge with escalating tempo.
+---
+
+<style>
+  .tempo-page {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .tempo-page > p {
+    margin: 0;
+    max-width: 64ch;
+    color: var(--muted);
+  }
+
+  .tempo-shell {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .tempo-hud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .hud-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.65rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.9rem;
+  }
+
+  .tempo-canvas-wrap {
+    border: 1px solid var(--border);
+    border-radius: 0.9rem;
+    overflow: hidden;
+    background: #07111d;
+    box-shadow: var(--shadow);
+  }
+
+  #tempo-canvas {
+    display: block;
+    width: 100%;
+    height: clamp(260px, 48vw, 390px);
+    touch-action: manipulation;
+  }
+
+  .tempo-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .tempo-button {
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: #ffffff;
+    border-radius: 0.6rem;
+    padding: 0.5rem 0.8rem;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .tempo-button.ghost {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+  }
+
+  .tempo-cards {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .control-card {
+    border: 1px solid var(--border);
+    border-radius: 0.8rem;
+    background: var(--surface);
+    padding: 0.75rem 0.85rem;
+  }
+
+  .control-card h4 {
+    margin: 0 0 0.35rem;
+  }
+
+  .control-card p {
+    margin: 0;
+    color: var(--muted);
+  }
+</style>
+
+<section class="tempo-page">
+  <h1>Tempo Matrix</h1>
+  <p><a class="text-link" href="{{ '/games/' | relative_url }}">Back to Games</a></p>
+  <p>Select a lane and lock it when its marker passes through the center target window. Lock all lanes to clear the round. Misses cost lives, and tempo increases every round.</p>
+
+  <div class="tempo-shell">
+    <div class="tempo-hud" aria-live="polite">
+      <span class="hud-pill" id="tempo-round">Round: 1</span>
+      <span class="hud-pill" id="tempo-score">Score: 0</span>
+      <span class="hud-pill" id="tempo-lives">Lives: 3</span>
+      <span class="hud-pill" id="tempo-best">Best: 0</span>
+      <span class="hud-pill" id="tempo-state">Status: Ready</span>
+    </div>
+
+    <div class="tempo-canvas-wrap">
+      <canvas id="tempo-canvas" aria-label="Tempo Matrix lane timing board" role="img"></canvas>
+    </div>
+
+    <div class="tempo-actions">
+      <button class="tempo-button" id="tempo-start" type="button">Start Run</button>
+      <button class="tempo-button ghost" id="tempo-restart" type="button">Restart</button>
+    </div>
+
+    <div class="tempo-cards">
+      <div class="control-card">
+        <h4>Controls</h4>
+        <p>Arrow Up/Down selects lane. Space, Enter, click, or tap to lock the selected lane.</p>
+      </div>
+      <div class="control-card">
+        <h4>Scoring</h4>
+        <p>Center hits score more points. Perfect timing gives a bonus.</p>
+      </div>
+      <div class="control-card">
+        <h4>Run End</h4>
+        <p>Misses reduce lives. Run ends at zero lives.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(() => {
+  // Timing math: each lane evolves as phase in [0,1), and lock success is
+  // based on distance from phase center relative to the current window
+  // width; window shrinks with round progression.
+  const LANE_COUNT = 4;
+  const BEST_KEY = 'triwei_tempo_matrix_best';
+  const canvas = document.getElementById('tempo-canvas');
+  const ctx = canvas.getContext('2d');
+  const hudRound = document.getElementById('tempo-round');
+  const hudScore = document.getElementById('tempo-score');
+  const hudLives = document.getElementById('tempo-lives');
+  const hudBest = document.getElementById('tempo-best');
+  const hudState = document.getElementById('tempo-state');
+  const btnStart = document.getElementById('tempo-start');
+  const btnRestart = document.getElementById('tempo-restart');
+
+  const state = {
+    running: false,
+    gameOver: false,
+    round: 1,
+    score: 0,
+    lives: 3,
+    best: 0,
+    selectedLane: 0,
+    targetWindow: 0.16,
+    flash: 0,
+    lanes: [],
+    laneFlash: Array.from({ length: LANE_COUNT }, () => 0),
+    lastTick: 0
+  };
+
+  function clamp(value, min, max) {
+    return Math.max(min, Math.min(max, value));
+  }
+
+  function rand(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  function readBest() {
+    const parsed = parseInt(localStorage.getItem(BEST_KEY) || '0', 10);
+    state.best = Number.isFinite(parsed) ? Math.max(0, parsed) : 0;
+  }
+
+  function saveBest() {
+    if (state.score > state.best) {
+      state.best = state.score;
+      localStorage.setItem(BEST_KEY, String(state.best));
+    }
+  }
+
+  function resizeCanvas() {
+    const dpr = window.devicePixelRatio || 1;
+    const { clientWidth, clientHeight } = canvas;
+    canvas.width = Math.max(1, Math.floor(clientWidth * dpr));
+    canvas.height = Math.max(1, Math.floor(clientHeight * dpr));
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function initLanes() {
+    state.lanes = Array.from({ length: LANE_COUNT }, (_, index) => ({
+      phase: rand(0, 1),
+      speed: 0.44 + index * 0.07,
+      locked: false
+    }));
+  }
+
+  function updateHud(text) {
+    hudRound.textContent = `Round: ${state.round}`;
+    hudScore.textContent = `Score: ${state.score}`;
+    hudLives.textContent = `Lives: ${state.lives}`;
+    hudBest.textContent = `Best: ${state.best}`;
+    if (text) {
+      hudState.textContent = text;
+      return;
+    }
+    if (!state.running) {
+      hudState.textContent = state.gameOver ? 'Status: Run ended' : 'Status: Ready';
+      return;
+    }
+    hudState.textContent = 'Status: Active';
+  }
+
+  function startRun() {
+    state.running = true;
+    state.gameOver = false;
+    state.round = 1;
+    state.score = 0;
+    state.lives = 3;
+    state.selectedLane = 0;
+    state.targetWindow = 0.16;
+    state.flash = 0;
+    state.laneFlash.fill(0);
+    initLanes();
+    updateHud('Status: Active');
+  }
+
+  function failRun() {
+    state.running = false;
+    state.gameOver = true;
+    saveBest();
+    state.flash = 1;
+    updateHud('Status: Out of lives - restart');
+  }
+
+  function allLocked() {
+    return state.lanes.every((lane) => lane.locked);
+  }
+
+  function advanceRound() {
+    state.round += 1;
+    state.targetWindow = clamp(0.16 - (state.round - 1) * 0.01, 0.055, 0.16);
+    state.selectedLane = 0;
+    state.laneFlash.fill(0);
+    initLanes();
+    updateHud('Status: Round clear');
+  }
+
+  function laneDistToCenter(phase) {
+    return Math.abs(phase - 0.5);
+  }
+
+  function lockSelectedLane() {
+    if (!state.running) {
+      startRun();
+      return;
+    }
+
+    const lane = state.lanes[state.selectedLane];
+    if (!lane || lane.locked) return;
+
+    const dist = laneDistToCenter(lane.phase);
+    const allowed = state.targetWindow * 0.5;
+    if (dist <= allowed) {
+      lane.locked = true;
+      state.laneFlash[state.selectedLane] = 1;
+      const precision = 1 - clamp(dist / allowed, 0, 1);
+      const gain = 12 + Math.round(precision * 14) + state.round * 2;
+      state.score += gain;
+      if (precision > 0.88) {
+        state.score += 8;
+        updateHud('Status: Perfect lock');
+      } else {
+        updateHud('Status: Locked');
+      }
+      if (allLocked()) {
+        advanceRound();
+      }
+      return;
+    }
+
+    state.lives -= 1;
+    state.laneFlash[state.selectedLane] = -1;
+    if (state.lives <= 0) {
+      failRun();
+      return;
+    }
+    updateHud('Status: Missed timing');
+  }
+
+  function step(dt) {
+    state.flash = Math.max(0, state.flash - dt * 2.4);
+
+    for (let i = 0; i < LANE_COUNT; i++) {
+      if (state.laneFlash[i] > 0) {
+        state.laneFlash[i] = Math.max(0, state.laneFlash[i] - dt * 2.8);
+      } else if (state.laneFlash[i] < 0) {
+        state.laneFlash[i] = Math.min(0, state.laneFlash[i] + dt * 2.6);
+      }
+    }
+
+    if (!state.running) return;
+
+    const roundFactor = 1 + (state.round - 1) * 0.08;
+    for (const lane of state.lanes) {
+      if (lane.locked) continue;
+      lane.phase = (lane.phase + dt * lane.speed * roundFactor) % 1;
+    }
+  }
+
+  function drawBackground() {
+    const g = ctx.createLinearGradient(0, 0, 0, canvas.clientHeight);
+    g.addColorStop(0, '#06101e');
+    g.addColorStop(1, '#0a223c');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+  }
+
+  function drawLane(index, lane) {
+    const marginX = 28;
+    const laneGap = 14;
+    const totalHeight = canvas.clientHeight - 2 * 20 - (LANE_COUNT - 1) * laneGap;
+    const laneHeight = totalHeight / LANE_COUNT;
+    const y = 20 + index * (laneHeight + laneGap);
+    const x = marginX;
+    const width = canvas.clientWidth - marginX * 2;
+
+    const selected = state.selectedLane === index;
+    const flash = state.laneFlash[index];
+    const baseColor = selected ? 'rgba(76, 167, 240, 0.22)' : 'rgba(76, 167, 240, 0.1)';
+
+    ctx.fillStyle = baseColor;
+    ctx.fillRect(x, y, width, laneHeight);
+    ctx.strokeStyle = selected ? '#4ca7f0' : 'rgba(159, 181, 208, 0.45)';
+    ctx.lineWidth = selected ? 2.2 : 1.3;
+    ctx.strokeRect(x, y, width, laneHeight);
+
+    const centerX = x + width * 0.5;
+    const windowWidth = width * state.targetWindow;
+    ctx.fillStyle = 'rgba(52, 245, 197, 0.2)';
+    ctx.fillRect(centerX - windowWidth * 0.5, y, windowWidth, laneHeight);
+    ctx.strokeStyle = 'rgba(52, 245, 197, 0.9)';
+    ctx.strokeRect(centerX - windowWidth * 0.5, y, windowWidth, laneHeight);
+
+    if (lane.locked) {
+      ctx.fillStyle = 'rgba(52, 245, 197, 0.32)';
+      ctx.fillRect(x, y, width, laneHeight);
+      ctx.fillStyle = '#34f5c5';
+      ctx.font = '600 13px "IBM Plex Sans", sans-serif';
+      ctx.fillText('LOCKED', x + 8, y + laneHeight * 0.62);
+      return;
+    }
+
+    const markerX = x + lane.phase * width;
+    const markerY = y + laneHeight * 0.5;
+    const glow = ctx.createRadialGradient(markerX, markerY, 1, markerX, markerY, 16);
+    glow.addColorStop(0, 'rgba(255, 138, 92, 1)');
+    glow.addColorStop(1, 'rgba(255, 138, 92, 0.08)');
+    ctx.fillStyle = glow;
+    ctx.beginPath();
+    ctx.arc(markerX, markerY, 16, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.fillStyle = '#ff8a5c';
+    ctx.beginPath();
+    ctx.arc(markerX, markerY, 6.8, 0, Math.PI * 2);
+    ctx.fill();
+
+    if (flash > 0) {
+      ctx.fillStyle = `rgba(52, 245, 197, ${flash * 0.35})`;
+      ctx.fillRect(x, y, width, laneHeight);
+    } else if (flash < 0) {
+      ctx.fillStyle = `rgba(255, 100, 100, ${Math.abs(flash) * 0.32})`;
+      ctx.fillRect(x, y, width, laneHeight);
+    }
+  }
+
+  function drawOverlay() {
+    if (state.running) return;
+    ctx.fillStyle = `rgba(3, 7, 12, ${0.5 + state.flash * 0.2})`;
+    ctx.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+
+    ctx.fillStyle = '#e8eef5';
+    ctx.textAlign = 'center';
+    ctx.font = '600 22px "IBM Plex Sans", sans-serif';
+    const title = state.gameOver ? 'Signal Lost' : 'Tempo Matrix';
+    ctx.fillText(title, canvas.clientWidth / 2, canvas.clientHeight / 2 - 16);
+    ctx.font = '400 14px "IBM Plex Sans", sans-serif';
+    const msg = state.gameOver
+      ? 'Press Restart or Space to retry'
+      : 'Select lane with arrows, then lock with Space';
+    ctx.fillText(msg, canvas.clientWidth / 2, canvas.clientHeight / 2 + 12);
+  }
+
+  function render() {
+    drawBackground();
+    for (let i = 0; i < LANE_COUNT; i++) {
+      drawLane(i, state.lanes[i]);
+    }
+    drawOverlay();
+  }
+
+  function loop(timestamp) {
+    if (!state.lastTick) state.lastTick = timestamp;
+    const dt = Math.min(0.05, (timestamp - state.lastTick) / 1000);
+    state.lastTick = timestamp;
+    step(dt);
+    render();
+    requestAnimationFrame(loop);
+  }
+
+  function pointerToLane(event) {
+    const rect = canvas.getBoundingClientRect();
+    const y = event.clientY - rect.top;
+    const laneGap = 14;
+    const totalHeight = canvas.clientHeight - 2 * 20 - (LANE_COUNT - 1) * laneGap;
+    const laneHeight = totalHeight / LANE_COUNT;
+    const localY = y - 20;
+    const block = laneHeight + laneGap;
+    const idx = Math.floor(localY / block);
+    return clamp(idx, 0, LANE_COUNT - 1);
+  }
+
+  btnStart.addEventListener('click', startRun);
+  btnRestart.addEventListener('click', startRun);
+  canvas.addEventListener('pointerdown', (event) => {
+    event.preventDefault();
+    state.selectedLane = pointerToLane(event);
+    lockSelectedLane();
+  });
+
+  window.addEventListener('keydown', (event) => {
+    if (event.code === 'ArrowUp') {
+      event.preventDefault();
+      state.selectedLane = (state.selectedLane - 1 + LANE_COUNT) % LANE_COUNT;
+    } else if (event.code === 'ArrowDown') {
+      event.preventDefault();
+      state.selectedLane = (state.selectedLane + 1) % LANE_COUNT;
+    } else if (event.code === 'Space' || event.code === 'Enter' || event.code === 'NumpadEnter') {
+      event.preventDefault();
+      lockSelectedLane();
+    } else if (event.code === 'KeyR') {
+      startRun();
+    }
+  });
+
+  window.addEventListener('resize', resizeCanvas);
+
+  readBest();
+  resizeCanvas();
+  initLanes();
+  updateHud('Status: Ready');
+  requestAnimationFrame(loop);
+})();
+</script>

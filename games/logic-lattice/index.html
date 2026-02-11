@@ -1,0 +1,402 @@
+---
+layout: default
+title: Logic Lattice
+permalink: /games/logic-lattice/
+description: Rule-based puzzle board focused on chaining constraints.
+---
+
+<style>
+  .lattice-page {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .lattice-page > p {
+    margin: 0;
+    max-width: 64ch;
+    color: var(--muted);
+  }
+
+  .lattice-shell {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .lattice-hud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .hud-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.65rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.9rem;
+  }
+
+  .lattice-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(58px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .lattice-cell {
+    border: 1px solid var(--border);
+    border-radius: 0.8rem;
+    background: color-mix(in srgb, var(--surface) 88%, #09111f);
+    color: var(--text);
+    min-height: 58px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 120ms ease;
+  }
+
+  .lattice-cell:hover {
+    transform: translateY(-1px);
+  }
+
+  .lattice-cell.is-on {
+    background: color-mix(in srgb, var(--accent-soft) 78%, #ffffff);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .lattice-cell.is-lock {
+    border-style: dashed;
+  }
+
+  .lattice-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .lattice-button {
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: #ffffff;
+    border-radius: 0.6rem;
+    padding: 0.5rem 0.8rem;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .lattice-button.ghost {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+  }
+
+  .lattice-rules {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .rule-card {
+    border: 1px solid var(--border);
+    border-radius: 0.8rem;
+    background: var(--surface);
+    padding: 0.75rem 0.85rem;
+  }
+
+  .rule-card h4 {
+    margin: 0 0 0.35rem;
+  }
+
+  .rule-card p,
+  .rule-card ul {
+    margin: 0;
+    color: var(--muted);
+  }
+
+  .rule-card ul {
+    padding-left: 1rem;
+    display: grid;
+    gap: 0.3rem;
+  }
+</style>
+
+<section class="lattice-page">
+  <h1>Logic Lattice</h1>
+  <p><a class="text-link" href="{{ '/games/' | relative_url }}">Back to Games</a></p>
+  <p>Turn cells on and off to satisfy layered rules. Clicking a cell flips itself and its direct neighbors. Reach a valid board state in as few moves as possible.</p>
+
+  <div class="lattice-shell">
+    <div class="lattice-hud" aria-live="polite">
+      <span class="hud-pill" id="lattice-moves">Moves: 0</span>
+      <span class="hud-pill" id="lattice-best">Best: --</span>
+      <span class="hud-pill" id="lattice-rule">Rule: --</span>
+      <span class="hud-pill" id="lattice-state">Status: Ready</span>
+    </div>
+
+    <div class="lattice-grid" id="lattice-grid" aria-label="Logic Lattice board"></div>
+
+    <div class="lattice-actions">
+      <button class="lattice-button" id="lattice-new" type="button">New Puzzle</button>
+      <button class="lattice-button ghost" id="lattice-reset" type="button">Reset</button>
+      <button class="lattice-button ghost" id="lattice-hint" type="button">Hint Check</button>
+    </div>
+
+    <div class="lattice-rules">
+      <article class="rule-card">
+        <h4>Board Rules</h4>
+        <ul>
+          <li>Exactly one cell must be ON in each row.</li>
+          <li>Exactly one cell must be ON in each column.</li>
+          <li>The diagonal parity rule must match the puzzle target.</li>
+        </ul>
+      </article>
+      <article class="rule-card">
+        <h4>Interaction</h4>
+        <p>Each click flips a plus-pattern: center, up, down, left, right. Plan chain reactions instead of solving one cell at a time.</p>
+      </article>
+      <article class="rule-card">
+        <h4>Finish</h4>
+        <p>When all rules are satisfied at once, the puzzle locks and your move count is recorded.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<script>
+(() => {
+  // Logic model: each move toggles a plus-neighborhood in a binary grid;
+  // solved state requires row/column cardinality constraints and diagonal
+  // parity to match the puzzle target.
+  const SIZE = 4;
+  const BEST_KEY = 'triwei_logic_lattice_best';
+  const gridEl = document.getElementById('lattice-grid');
+  const hudMoves = document.getElementById('lattice-moves');
+  const hudBest = document.getElementById('lattice-best');
+  const hudRule = document.getElementById('lattice-rule');
+  const hudState = document.getElementById('lattice-state');
+  const btnNew = document.getElementById('lattice-new');
+  const btnReset = document.getElementById('lattice-reset');
+  const btnHint = document.getElementById('lattice-hint');
+
+  const state = {
+    cells: [],
+    seedCells: [],
+    moves: 0,
+    best: null,
+    solved: false,
+    diagTarget: 0,
+    lastHint: ''
+  };
+
+  function indexOf(x, y) {
+    return y * SIZE + x;
+  }
+
+  function inBounds(x, y) {
+    return x >= 0 && y >= 0 && x < SIZE && y < SIZE;
+  }
+
+  function randInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function cloneCells(src) {
+    return src.map((value) => value);
+  }
+
+  function toggleAt(cells, x, y) {
+    if (!inBounds(x, y)) return;
+    const idx = indexOf(x, y);
+    cells[idx] = cells[idx] ? 0 : 1;
+  }
+
+  function applyPlus(cells, x, y) {
+    toggleAt(cells, x, y);
+    toggleAt(cells, x - 1, y);
+    toggleAt(cells, x + 1, y);
+    toggleAt(cells, x, y - 1);
+    toggleAt(cells, x, y + 1);
+  }
+
+  function rowCount(cells, row) {
+    let count = 0;
+    for (let x = 0; x < SIZE; x++) {
+      count += cells[indexOf(x, row)];
+    }
+    return count;
+  }
+
+  function colCount(cells, col) {
+    let count = 0;
+    for (let y = 0; y < SIZE; y++) {
+      count += cells[indexOf(col, y)];
+    }
+    return count;
+  }
+
+  function diagParity(cells) {
+    let sum = 0;
+    for (let i = 0; i < SIZE; i++) {
+      sum += cells[indexOf(i, i)];
+    }
+    return sum % 2;
+  }
+
+  function evaluate(cells) {
+    const rowsOk = Array.from({ length: SIZE }, (_, r) => rowCount(cells, r) === 1).every(Boolean);
+    const colsOk = Array.from({ length: SIZE }, (_, c) => colCount(cells, c) === 1).every(Boolean);
+    const diagOk = diagParity(cells) === state.diagTarget;
+    return { rowsOk, colsOk, diagOk, solved: rowsOk && colsOk && diagOk };
+  }
+
+  function randomSolvedBoard() {
+    const cols = [0, 1, 2, 3];
+    for (let i = cols.length - 1; i > 0; i--) {
+      const j = randInt(0, i);
+      const tmp = cols[i];
+      cols[i] = cols[j];
+      cols[j] = tmp;
+    }
+    const cells = Array.from({ length: SIZE * SIZE }, () => 0);
+    for (let y = 0; y < SIZE; y++) {
+      cells[indexOf(cols[y], y)] = 1;
+    }
+    return cells;
+  }
+
+  function scrambleFromSolved() {
+    const solved = randomSolvedBoard();
+    state.diagTarget = diagParity(solved);
+    let cells = cloneCells(solved);
+
+    const steps = randInt(6, 11);
+    for (let i = 0; i < steps; i++) {
+      const x = randInt(0, SIZE - 1);
+      const y = randInt(0, SIZE - 1);
+      applyPlus(cells, x, y);
+    }
+
+    // Avoid starting already solved after scramble.
+    if (evaluate(cells).solved) {
+      applyPlus(cells, randInt(0, SIZE - 1), randInt(0, SIZE - 1));
+    }
+
+    return cells;
+  }
+
+  function readBest() {
+    const parsed = parseInt(localStorage.getItem(BEST_KEY) || '', 10);
+    state.best = Number.isFinite(parsed) ? parsed : null;
+  }
+
+  function saveBest() {
+    if (state.best === null || state.moves < state.best) {
+      state.best = state.moves;
+      localStorage.setItem(BEST_KEY, String(state.best));
+    }
+  }
+
+  function updateHud(message) {
+    hudMoves.textContent = `Moves: ${state.moves}`;
+    hudBest.textContent = state.best === null ? 'Best: --' : `Best: ${state.best}`;
+    hudRule.textContent = `Rule: diag parity = ${state.diagTarget}`;
+    if (message) {
+      hudState.textContent = message;
+      return;
+    }
+    hudState.textContent = state.solved ? 'Status: Solved' : 'Status: Active';
+  }
+
+  function renderGrid() {
+    gridEl.innerHTML = '';
+    const evaluation = evaluate(state.cells);
+    for (let y = 0; y < SIZE; y++) {
+      for (let x = 0; x < SIZE; x++) {
+        const idx = indexOf(x, y);
+        const on = state.cells[idx] === 1;
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = `lattice-cell${on ? ' is-on' : ''}${state.solved ? ' is-lock' : ''}`;
+        btn.textContent = on ? 'ON' : 'OFF';
+        btn.setAttribute('aria-label', `Cell ${y + 1}-${x + 1} ${on ? 'on' : 'off'}`);
+        btn.disabled = state.solved;
+        btn.addEventListener('click', () => {
+          if (state.solved) return;
+          applyPlus(state.cells, x, y);
+          state.moves += 1;
+          state.lastHint = '';
+          const now = evaluate(state.cells);
+          if (now.solved) {
+            state.solved = true;
+            saveBest();
+            updateHud('Status: Solved - lattice locked');
+          } else {
+            updateHud();
+          }
+          renderGrid();
+        });
+        gridEl.appendChild(btn);
+      }
+    }
+
+    if (!state.solved) {
+      state.solved = evaluation.solved;
+    }
+  }
+
+  function newPuzzle() {
+    state.cells = scrambleFromSolved();
+    state.seedCells = cloneCells(state.cells);
+    state.moves = 0;
+    state.solved = false;
+    state.lastHint = '';
+    updateHud('Status: Active');
+    renderGrid();
+  }
+
+  function resetPuzzle() {
+    state.cells = cloneCells(state.seedCells);
+    state.moves = 0;
+    state.solved = false;
+    state.lastHint = '';
+    updateHud('Status: Reset');
+    renderGrid();
+  }
+
+  function hintCheck() {
+    const ev = evaluate(state.cells);
+    const rowMiss = [];
+    const colMiss = [];
+    for (let i = 0; i < SIZE; i++) {
+      if (rowCount(state.cells, i) !== 1) rowMiss.push(i + 1);
+      if (colCount(state.cells, i) !== 1) colMiss.push(i + 1);
+    }
+
+    if (ev.solved) {
+      state.lastHint = 'Solved state confirmed.';
+    } else {
+      const rowText = rowMiss.length ? `rows ${rowMiss.join(', ')}` : 'rows ok';
+      const colText = colMiss.length ? `cols ${colMiss.join(', ')}` : 'cols ok';
+      const diagText = ev.diagOk ? 'diag ok' : 'diag mismatch';
+      state.lastHint = `${rowText}; ${colText}; ${diagText}`;
+    }
+    updateHud(`Status: ${state.lastHint}`);
+  }
+
+  btnNew.addEventListener('click', newPuzzle);
+  btnReset.addEventListener('click', resetPuzzle);
+  btnHint.addEventListener('click', hintCheck);
+  window.addEventListener('keydown', (event) => {
+    if (event.code === 'KeyN') newPuzzle();
+    if (event.code === 'KeyR') resetPuzzle();
+    if (event.code === 'KeyH') hintCheck();
+  });
+
+  readBest();
+  newPuzzle();
+})();
+</script>

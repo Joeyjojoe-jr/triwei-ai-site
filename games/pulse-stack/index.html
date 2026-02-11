@@ -1,0 +1,444 @@
+---
+layout: default
+title: Pulse Stack
+permalink: /games/pulse-stack/
+description: Rhythm-based stacking game tuned for short replayable rounds.
+---
+
+<style>
+  .pulse-page {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .pulse-page > p {
+    margin: 0;
+    max-width: 64ch;
+    color: var(--muted);
+  }
+
+  .pulse-shell {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .pulse-hud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .hud-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.65rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.9rem;
+  }
+
+  .pulse-canvas-wrap {
+    border: 1px solid var(--border);
+    border-radius: 0.9rem;
+    overflow: hidden;
+    background: #07111d;
+    box-shadow: var(--shadow);
+  }
+
+  #pulse-canvas {
+    display: block;
+    width: 100%;
+    height: clamp(250px, 48vw, 390px);
+    touch-action: manipulation;
+  }
+
+  .pulse-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .pulse-button {
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: #ffffff;
+    border-radius: 0.6rem;
+    padding: 0.5rem 0.8rem;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .pulse-button.ghost {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+  }
+
+  .pulse-cards {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .control-card {
+    border: 1px solid var(--border);
+    border-radius: 0.8rem;
+    background: var(--surface);
+    padding: 0.75rem 0.85rem;
+  }
+
+  .control-card h4 {
+    margin: 0 0 0.35rem;
+  }
+
+  .control-card p {
+    margin: 0;
+    color: var(--muted);
+  }
+</style>
+
+<section class="pulse-page">
+  <h1>Pulse Stack</h1>
+  <p><a class="text-link" href="{{ '/games/' | relative_url }}">Back to Games</a></p>
+  <p>Time each drop to stack moving blocks as precisely as possible. Press Space, Enter, click, or tap to release the active pulse block.</p>
+
+  <div class="pulse-shell">
+    <div class="pulse-hud" aria-live="polite">
+      <span class="hud-pill" id="pulse-score">Score: 0</span>
+      <span class="hud-pill" id="pulse-streak">Streak: 0</span>
+      <span class="hud-pill" id="pulse-best">Best Height: 0</span>
+      <span class="hud-pill" id="pulse-state">Status: Ready</span>
+    </div>
+
+    <div class="pulse-canvas-wrap">
+      <canvas id="pulse-canvas" aria-label="Pulse Stack playfield" role="img"></canvas>
+    </div>
+
+    <div class="pulse-actions">
+      <button class="pulse-button" id="pulse-start" type="button">Start Run</button>
+      <button class="pulse-button ghost" id="pulse-restart" type="button">Restart</button>
+    </div>
+
+    <div class="pulse-cards">
+      <div class="control-card">
+        <h4>Controls</h4>
+        <p>Space, Enter, click, or tap to drop the active block onto the stack.</p>
+      </div>
+      <div class="control-card">
+        <h4>Goal</h4>
+        <p>Keep overlap high while stacking upward. Better alignment yields more points.</p>
+      </div>
+      <div class="control-card">
+        <h4>Fail State</h4>
+        <p>No horizontal overlap with the top block ends the run instantly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(() => {
+  // Stack math: each placement keeps interval overlap between active and
+  // top block; zero overlap ends the run, and score scales with overlap
+  // ratio plus streak bonuses for near-perfect alignment.
+  const canvas = document.getElementById('pulse-canvas');
+  const ctx = canvas.getContext('2d');
+  const hudScore = document.getElementById('pulse-score');
+  const hudStreak = document.getElementById('pulse-streak');
+  const hudBest = document.getElementById('pulse-best');
+  const hudState = document.getElementById('pulse-state');
+  const btnStart = document.getElementById('pulse-start');
+  const btnRestart = document.getElementById('pulse-restart');
+  const BEST_KEY = 'triwei_pulse_stack_best';
+
+  const state = {
+    running: false,
+    gameOver: false,
+    score: 0,
+    streak: 0,
+    bestHeight: 0,
+    cameraY: 0,
+    beat: 0,
+    baseSpeed: 140,
+    levelSpeed: 140,
+    flash: 0,
+    lastTick: 0
+  };
+
+  const stack = [];
+  const active = {
+    x: 0,
+    y: 0,
+    w: 0,
+    h: 16,
+    dir: 1
+  };
+
+  function clamp(v, min, max) {
+    return Math.max(min, Math.min(max, v));
+  }
+
+  function rand(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  function readBest() {
+    const parsed = parseInt(localStorage.getItem(BEST_KEY) || '0', 10);
+    state.bestHeight = Number.isFinite(parsed) ? Math.max(0, parsed) : 0;
+  }
+
+  function saveBest() {
+    const height = stack.length - 1;
+    if (height > state.bestHeight) {
+      state.bestHeight = height;
+      localStorage.setItem(BEST_KEY, String(state.bestHeight));
+    }
+  }
+
+  function resizeCanvas() {
+    const dpr = window.devicePixelRatio || 1;
+    const { clientWidth, clientHeight } = canvas;
+    canvas.width = Math.max(1, Math.floor(clientWidth * dpr));
+    canvas.height = Math.max(1, Math.floor(clientHeight * dpr));
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    if (!state.running) {
+      buildBaseStack();
+    }
+  }
+
+  function buildBaseStack() {
+    stack.length = 0;
+    const baseWidth = clamp(canvas.clientWidth * 0.44, 120, 230);
+    const baseY = canvas.clientHeight - 26;
+    stack.push({
+      x: canvas.clientWidth * 0.5 - baseWidth * 0.5,
+      y: baseY,
+      w: baseWidth,
+      h: 16,
+      color: '#5f7fa8'
+    });
+    spawnActiveFromTop();
+    state.cameraY = 0;
+  }
+
+  function spawnActiveFromTop() {
+    const top = stack[stack.length - 1];
+    active.w = top.w;
+    active.h = 16;
+    active.y = top.y - active.h;
+    active.x = rand(10, canvas.clientWidth - active.w - 10);
+    active.dir = Math.random() > 0.5 ? 1 : -1;
+  }
+
+  function resetRun() {
+    state.running = true;
+    state.gameOver = false;
+    state.score = 0;
+    state.streak = 0;
+    state.beat = 0;
+    state.baseSpeed = 140;
+    state.levelSpeed = 140;
+    state.flash = 0;
+    buildBaseStack();
+    updateHud('Status: Active');
+  }
+
+  function failRun() {
+    state.running = false;
+    state.gameOver = true;
+    saveBest();
+    state.flash = 1;
+    updateHud('Status: Missed - restart');
+  }
+
+  function overlap(a, b) {
+    const left = Math.max(a.x, b.x);
+    const right = Math.min(a.x + a.w, b.x + b.w);
+    return Math.max(0, right - left);
+  }
+
+  function colorForLevel(level) {
+    const hue = (205 + level * 14) % 360;
+    return `hsl(${hue} 72% 58%)`;
+  }
+
+  function dropBlock() {
+    if (!state.running) {
+      resetRun();
+      return;
+    }
+
+    const top = stack[stack.length - 1];
+    const ov = overlap(active, top);
+    if (ov <= 0) {
+      failRun();
+      return;
+    }
+
+    const aligned = ov / top.w;
+    const offsetAbs = Math.abs((active.x + active.w * 0.5) - (top.x + top.w * 0.5));
+    const perfectWindow = Math.max(3, top.w * 0.08);
+    const isPerfect = offsetAbs <= perfectWindow;
+
+    const placed = {
+      x: Math.max(active.x, top.x),
+      y: active.y,
+      w: ov,
+      h: active.h,
+      color: colorForLevel(stack.length)
+    };
+    stack.push(placed);
+
+    let gain = 9 + Math.floor(aligned * 18);
+    if (isPerfect) {
+      state.streak += 1;
+      gain += 8 + state.streak * 2;
+      // Snap toward perfect center to reward precise rhythm.
+      placed.x = top.x + (top.w - placed.w) * 0.5;
+    } else {
+      state.streak = 0;
+    }
+
+    state.score += gain;
+    state.levelSpeed = clamp(state.baseSpeed + stack.length * 7.5, 140, 360);
+    spawnActiveFromTop();
+    updateHud(isPerfect ? 'Status: Perfect drop' : 'Status: Active');
+  }
+
+  function updateHud(message) {
+    hudScore.textContent = `Score: ${state.score}`;
+    hudStreak.textContent = `Streak: ${state.streak}`;
+    hudBest.textContent = `Best Height: ${state.bestHeight}`;
+    if (message) {
+      hudState.textContent = message;
+      return;
+    }
+    if (state.gameOver) {
+      hudState.textContent = 'Status: Missed - restart';
+      return;
+    }
+    hudState.textContent = state.running ? 'Status: Active' : 'Status: Ready';
+  }
+
+  function updateCamera() {
+    const top = stack[stack.length - 1];
+    const target = Math.max(0, (canvas.clientHeight * 0.62) - top.y);
+    state.cameraY += (target - state.cameraY) * 0.08;
+  }
+
+  function step(dt) {
+    state.beat += dt * 2.4;
+    state.flash = Math.max(0, state.flash - dt * 2.2);
+
+    if (!state.running) return;
+
+    active.x += active.dir * state.levelSpeed * dt;
+    if (active.x <= 8) {
+      active.x = 8;
+      active.dir = 1;
+    }
+    const maxX = canvas.clientWidth - active.w - 8;
+    if (active.x >= maxX) {
+      active.x = maxX;
+      active.dir = -1;
+    }
+
+    updateCamera();
+    updateHud();
+  }
+
+  function drawBackground() {
+    const g = ctx.createLinearGradient(0, 0, 0, canvas.clientHeight);
+    g.addColorStop(0, '#051120');
+    g.addColorStop(1, '#0a2240');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+
+    const pulse = 0.08 + Math.sin(state.beat) * 0.035 + state.flash * 0.1;
+    ctx.fillStyle = `rgba(52, 245, 197, ${pulse})`;
+    for (let i = 0; i < 5; i++) {
+      const y = canvas.clientHeight - i * 56 + Math.sin(state.beat + i * 0.6) * 8;
+      ctx.fillRect(0, y, canvas.clientWidth, 2);
+    }
+  }
+
+  function drawStack() {
+    ctx.save();
+    ctx.translate(0, state.cameraY);
+    for (const block of stack) {
+      ctx.fillStyle = block.color;
+      ctx.fillRect(block.x, block.y, block.w, block.h);
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.24)';
+      ctx.strokeRect(block.x, block.y, block.w, block.h);
+    }
+
+    if (state.running) {
+      ctx.fillStyle = '#ff8a5c';
+      ctx.fillRect(active.x, active.y, active.w, active.h);
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.35)';
+      ctx.strokeRect(active.x, active.y, active.w, active.h);
+    }
+    ctx.restore();
+  }
+
+  function drawOverlay() {
+    if (state.running) return;
+    ctx.fillStyle = `rgba(3, 7, 12, ${0.5 + state.flash * 0.2})`;
+    ctx.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+
+    ctx.fillStyle = '#e8eef5';
+    ctx.textAlign = 'center';
+    ctx.font = '600 22px "IBM Plex Sans", sans-serif';
+    const title = state.gameOver ? 'Stack Break' : 'Pulse Stack';
+    ctx.fillText(title, canvas.clientWidth * 0.5, canvas.clientHeight * 0.5 - 18);
+    ctx.font = '400 14px "IBM Plex Sans", sans-serif';
+    const msg = state.gameOver
+      ? 'Press Restart or Space to retry'
+      : 'Press Start or Space to begin';
+    ctx.fillText(msg, canvas.clientWidth * 0.5, canvas.clientHeight * 0.5 + 10);
+  }
+
+  function render() {
+    drawBackground();
+    drawStack();
+    drawOverlay();
+  }
+
+  function loop(timestamp) {
+    if (!state.lastTick) state.lastTick = timestamp;
+    const dt = Math.min(0.05, (timestamp - state.lastTick) / 1000);
+    state.lastTick = timestamp;
+    step(dt);
+    render();
+    requestAnimationFrame(loop);
+  }
+
+  btnStart.addEventListener('click', resetRun);
+  btnRestart.addEventListener('click', resetRun);
+  canvas.addEventListener('pointerdown', (event) => {
+    event.preventDefault();
+    dropBlock();
+  });
+
+  window.addEventListener('keydown', (event) => {
+    if (event.code === 'Space' || event.code === 'Enter' || event.code === 'NumpadEnter') {
+      event.preventDefault();
+      dropBlock();
+    }
+    if (event.code === 'KeyR') {
+      resetRun();
+    }
+  });
+
+  window.addEventListener('resize', resizeCanvas);
+
+  readBest();
+  resizeCanvas();
+  updateHud('Status: Ready');
+  requestAnimationFrame(loop);
+})();
+</script>

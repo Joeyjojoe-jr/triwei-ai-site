@@ -1,0 +1,452 @@
+---
+layout: default
+title: Quantum Swap
+permalink: /games/quantum-swap/
+description: Rotate rows and columns to match the target matrix.
+---
+
+<style>
+  .swap-page {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .swap-page > p {
+    margin: 0;
+    max-width: 64ch;
+    color: var(--muted);
+  }
+
+  .swap-shell {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .swap-hud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .hud-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.65rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.9rem;
+  }
+
+  .swap-panels {
+    display: grid;
+    gap: 0.85rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .swap-panel {
+    border: 1px solid var(--border);
+    border-radius: 0.9rem;
+    background: color-mix(in srgb, var(--surface) 90%, #081320);
+    padding: 0.9rem;
+    box-shadow: var(--shadow);
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .swap-panel h3 {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(48px, 1fr));
+    gap: 0.42rem;
+  }
+
+  .matrix-cell {
+    min-height: 48px;
+    border: 1px solid var(--border);
+    border-radius: 0.62rem;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    background: color-mix(in srgb, var(--surface) 92%, #081320);
+    color: var(--muted);
+  }
+
+  .matrix-cell.on {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent-soft) 84%, #ffffff);
+    color: var(--accent);
+  }
+
+  .matrix-cell.mismatch {
+    box-shadow: inset 0 0 0 1px rgba(255, 138, 92, 0.22);
+  }
+
+  .axis-controls {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .axis-controls .control-row {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(4, minmax(48px, 1fr));
+  }
+
+  .swap-axis-btn {
+    border: 1px solid var(--border);
+    border-radius: 0.62rem;
+    min-height: 42px;
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .swap-axis-btn:hover {
+    border-color: var(--accent);
+  }
+
+  .swap-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .swap-button {
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: #ffffff;
+    border-radius: 0.6rem;
+    padding: 0.5rem 0.8rem;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .swap-button.ghost {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+  }
+
+  .swap-cards {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .control-card {
+    border: 1px solid var(--border);
+    border-radius: 0.8rem;
+    background: var(--surface);
+    padding: 0.75rem 0.85rem;
+  }
+
+  .control-card h4 {
+    margin: 0 0 0.35rem;
+  }
+
+  .control-card p,
+  .control-card ul {
+    margin: 0;
+    color: var(--muted);
+  }
+
+  .control-card ul {
+    padding-left: 1rem;
+    display: grid;
+    gap: 0.25rem;
+  }
+</style>
+
+<section class="swap-page">
+  <h1>Quantum Swap</h1>
+  <p><a class="text-link" href="{{ '/games/' | relative_url }}">Back to Games</a></p>
+  <p>Match the target 4x4 matrix by rotating rows right and columns down. Every move shifts an entire line with wrap-around, so local changes ripple through the board.</p>
+
+  <div class="swap-shell">
+    <div class="swap-hud" aria-live="polite">
+      <span class="hud-pill" id="swap-moves">Moves: 0</span>
+      <span class="hud-pill" id="swap-best">Best: --</span>
+      <span class="hud-pill" id="swap-diff">Mismatches: 0</span>
+      <span class="hud-pill" id="swap-state">Status: Ready</span>
+    </div>
+
+    <div class="swap-panels">
+      <article class="swap-panel">
+        <h3>Target Matrix</h3>
+        <div id="swap-target-grid" class="matrix-grid" aria-label="Target matrix"></div>
+      </article>
+      <article class="swap-panel">
+        <h3>Current Matrix</h3>
+        <div class="axis-controls">
+          <div class="control-row" id="swap-col-controls" aria-label="Column rotate controls"></div>
+          <div class="control-row" id="swap-row-controls" aria-label="Row rotate controls"></div>
+        </div>
+        <div id="swap-current-grid" class="matrix-grid" aria-label="Current matrix"></div>
+      </article>
+    </div>
+
+    <div class="swap-actions">
+      <button class="swap-button" id="swap-new" type="button">New Puzzle</button>
+      <button class="swap-button ghost" id="swap-reset" type="button">Reset</button>
+    </div>
+
+    <div class="swap-cards">
+      <article class="control-card">
+        <h4>Operations</h4>
+        <ul>
+          <li><strong>C1-C4</strong>: rotate selected column down by one.</li>
+          <li><strong>R1-R4</strong>: rotate selected row right by one.</li>
+        </ul>
+      </article>
+      <article class="control-card">
+        <h4>Goal</h4>
+        <p>Eliminate all mismatches so the current matrix exactly equals the target matrix.</p>
+      </article>
+      <article class="control-card">
+        <h4>Hint</h4>
+        <p>Columns move pieces between rows; rows fix horizontal placement. Alternate both for faster solves.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<script>
+(() => {
+  // Permutation model: moves are cyclic row/column shifts on a binary 4x4
+  // matrix; solve condition is zero Hamming distance to the target matrix.
+  const SIZE = 4;
+  const CELL_COUNT = SIZE * SIZE;
+  const BEST_KEY = 'triwei_quantum_swap_best';
+
+  const targetGridEl = document.getElementById('swap-target-grid');
+  const currentGridEl = document.getElementById('swap-current-grid');
+  const colControlsEl = document.getElementById('swap-col-controls');
+  const rowControlsEl = document.getElementById('swap-row-controls');
+
+  const hudMoves = document.getElementById('swap-moves');
+  const hudBest = document.getElementById('swap-best');
+  const hudDiff = document.getElementById('swap-diff');
+  const hudState = document.getElementById('swap-state');
+
+  const btnNew = document.getElementById('swap-new');
+  const btnReset = document.getElementById('swap-reset');
+
+  const state = {
+    target: Array.from({ length: CELL_COUNT }, () => 0),
+    current: Array.from({ length: CELL_COUNT }, () => 0),
+    seed: Array.from({ length: CELL_COUNT }, () => 0),
+    moves: 0,
+    best: null,
+    solved: false
+  };
+
+  function indexOf(x, y) {
+    return y * SIZE + x;
+  }
+
+  function randInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function cloneGrid(grid) {
+    return grid.map((value) => value);
+  }
+
+  function randomTarget() {
+    let grid = Array.from({ length: CELL_COUNT }, () => (Math.random() < 0.5 ? 1 : 0));
+    let onCount = grid.reduce((sum, value) => sum + value, 0);
+    while (onCount < 5 || onCount > 11) {
+      grid = Array.from({ length: CELL_COUNT }, () => (Math.random() < 0.5 ? 1 : 0));
+      onCount = grid.reduce((sum, value) => sum + value, 0);
+    }
+    return grid;
+  }
+
+  function rotateRowRight(grid, row) {
+    const last = grid[indexOf(SIZE - 1, row)];
+    for (let x = SIZE - 1; x > 0; x--) {
+      grid[indexOf(x, row)] = grid[indexOf(x - 1, row)];
+    }
+    grid[indexOf(0, row)] = last;
+  }
+
+  function rotateColDown(grid, col) {
+    const last = grid[indexOf(col, SIZE - 1)];
+    for (let y = SIZE - 1; y > 0; y--) {
+      grid[indexOf(col, y)] = grid[indexOf(col, y - 1)];
+    }
+    grid[indexOf(col, 0)] = last;
+  }
+
+  function mismatchCount() {
+    let count = 0;
+    for (let i = 0; i < CELL_COUNT; i++) {
+      if (state.current[i] !== state.target[i]) count += 1;
+    }
+    return count;
+  }
+
+  function readBest() {
+    const parsed = parseInt(localStorage.getItem(BEST_KEY) || '', 10);
+    state.best = Number.isFinite(parsed) ? parsed : null;
+  }
+
+  function saveBest() {
+    if (state.best === null || state.moves < state.best) {
+      state.best = state.moves;
+      localStorage.setItem(BEST_KEY, String(state.best));
+    }
+  }
+
+  function updateHud(text) {
+    const mismatches = mismatchCount();
+    hudMoves.textContent = `Moves: ${state.moves}`;
+    hudBest.textContent = state.best === null ? 'Best: --' : `Best: ${state.best}`;
+    hudDiff.textContent = `Mismatches: ${mismatches}`;
+    if (text) {
+      hudState.textContent = text;
+      return;
+    }
+    if (state.solved) {
+      hudState.textContent = 'Status: Matrix aligned';
+      return;
+    }
+    hudState.textContent = 'Status: Active';
+  }
+
+  function buildControls() {
+    colControlsEl.innerHTML = '';
+    rowControlsEl.innerHTML = '';
+
+    for (let i = 0; i < SIZE; i++) {
+      const colBtn = document.createElement('button');
+      colBtn.type = 'button';
+      colBtn.className = 'swap-axis-btn';
+      colBtn.textContent = `C${i + 1}`;
+      colBtn.setAttribute('aria-label', `Rotate column ${i + 1} down`);
+      colBtn.disabled = state.solved;
+      colBtn.addEventListener('click', () => {
+        if (state.solved) return;
+        rotateColDown(state.current, i);
+        state.moves += 1;
+        evaluateAfterMove();
+      });
+      colControlsEl.appendChild(colBtn);
+
+      const rowBtn = document.createElement('button');
+      rowBtn.type = 'button';
+      rowBtn.className = 'swap-axis-btn';
+      rowBtn.textContent = `R${i + 1}`;
+      rowBtn.setAttribute('aria-label', `Rotate row ${i + 1} right`);
+      rowBtn.disabled = state.solved;
+      rowBtn.addEventListener('click', () => {
+        if (state.solved) return;
+        rotateRowRight(state.current, i);
+        state.moves += 1;
+        evaluateAfterMove();
+      });
+      rowControlsEl.appendChild(rowBtn);
+    }
+  }
+
+  function renderTarget() {
+    targetGridEl.innerHTML = '';
+    for (let i = 0; i < CELL_COUNT; i++) {
+      const on = state.target[i] === 1;
+      const cell = document.createElement('div');
+      cell.className = `matrix-cell${on ? ' on' : ''}`;
+      cell.textContent = on ? '1' : '0';
+      targetGridEl.appendChild(cell);
+    }
+  }
+
+  function renderCurrent() {
+    currentGridEl.innerHTML = '';
+    for (let i = 0; i < CELL_COUNT; i++) {
+      const on = state.current[i] === 1;
+      const mismatch = state.current[i] !== state.target[i];
+      const cell = document.createElement('div');
+      cell.className = `matrix-cell${on ? ' on' : ''}${mismatch ? ' mismatch' : ''}`;
+      cell.textContent = on ? '1' : '0';
+      currentGridEl.appendChild(cell);
+    }
+  }
+
+  function renderAll() {
+    renderTarget();
+    renderCurrent();
+    buildControls();
+  }
+
+  function evaluateAfterMove() {
+    state.solved = mismatchCount() === 0;
+    if (state.solved) {
+      saveBest();
+      updateHud('Status: Matrix aligned');
+    } else {
+      updateHud();
+    }
+    renderCurrent();
+    buildControls();
+  }
+
+  function generatePuzzle() {
+    state.target = randomTarget();
+    state.current = cloneGrid(state.target);
+
+    const scrambleMoves = randInt(9, 16);
+    for (let i = 0; i < scrambleMoves; i++) {
+      if (Math.random() < 0.5) {
+        rotateRowRight(state.current, randInt(0, SIZE - 1));
+      } else {
+        rotateColDown(state.current, randInt(0, SIZE - 1));
+      }
+    }
+
+    if (mismatchCount() === 0) {
+      rotateRowRight(state.current, randInt(0, SIZE - 1));
+    }
+
+    state.seed = cloneGrid(state.current);
+    state.moves = 0;
+    state.solved = false;
+  }
+
+  function newPuzzle() {
+    generatePuzzle();
+    updateHud('Status: Active');
+    renderAll();
+  }
+
+  function resetPuzzle() {
+    state.current = cloneGrid(state.seed);
+    state.moves = 0;
+    state.solved = false;
+    updateHud('Status: Reset');
+    renderAll();
+  }
+
+  btnNew.addEventListener('click', newPuzzle);
+  btnReset.addEventListener('click', resetPuzzle);
+
+  window.addEventListener('keydown', (event) => {
+    if (event.code === 'KeyN') {
+      newPuzzle();
+    } else if (event.code === 'KeyR') {
+      resetPuzzle();
+    }
+  });
+
+  readBest();
+  newPuzzle();
+})();
+</script>

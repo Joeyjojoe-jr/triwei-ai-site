@@ -1,0 +1,468 @@
+---
+layout: default
+title: Vector Vault
+permalink: /games/vector-vault/
+description: Precision movement challenge with narrow timing windows.
+---
+
+<style>
+  .vector-page {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .vector-page > p {
+    margin: 0;
+    max-width: 62ch;
+    color: var(--muted);
+  }
+
+  .vector-shell {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .vector-hud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .hud-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.65rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.9rem;
+  }
+
+  .vector-canvas-wrap {
+    border: 1px solid var(--border);
+    border-radius: 0.9rem;
+    overflow: hidden;
+    background: #07111e;
+    box-shadow: var(--shadow);
+  }
+
+  #vector-canvas {
+    display: block;
+    width: 100%;
+    height: clamp(240px, 46vw, 360px);
+    touch-action: manipulation;
+  }
+
+  .vector-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .vector-button {
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: #ffffff;
+    border-radius: 0.6rem;
+    padding: 0.5rem 0.8rem;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .vector-button.ghost {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+  }
+
+  .vector-controls {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  }
+
+  .control-card {
+    border: 1px solid var(--border);
+    border-radius: 0.8rem;
+    background: var(--surface);
+    padding: 0.75rem 0.85rem;
+  }
+
+  .control-card h4 {
+    margin: 0 0 0.35rem;
+  }
+
+  .control-card p {
+    margin: 0;
+    color: var(--muted);
+  }
+</style>
+
+<section class="vector-page">
+  <h1>Vector Vault</h1>
+  <p><a class="text-link" href="{{ '/games/' | relative_url }}">Back to Games</a></p>
+  <p>Guide your orb through shifting gate openings. Press Space, Arrow Up, click, or tap to vault upward. Miss the gap once and the run ends.</p>
+  <div class="vector-shell">
+    <div class="vector-hud" aria-live="polite">
+      <span class="hud-pill" id="vector-score">Score: 0</span>
+      <span class="hud-pill" id="vector-best">Best: 0</span>
+      <span class="hud-pill" id="vector-speed">Speed: 170</span>
+      <span class="hud-pill" id="vector-state">Status: Ready</span>
+    </div>
+    <div class="vector-canvas-wrap">
+      <canvas id="vector-canvas" aria-label="Vector Vault game field" role="img"></canvas>
+    </div>
+    <div class="vector-actions">
+      <button class="vector-button" id="vector-start" type="button">Start Run</button>
+      <button class="vector-button ghost" id="vector-restart" type="button">Restart</button>
+    </div>
+    <div class="vector-controls">
+      <div class="control-card">
+        <h4>Controls</h4>
+        <p>Press Space or Arrow Up, click, or tap to apply an upward vault impulse.</p>
+      </div>
+      <div class="control-card">
+        <h4>Goal</h4>
+        <p>Pass through as many moving gate gaps as possible in one run.</p>
+      </div>
+      <div class="control-card">
+        <h4>Tip</h4>
+        <p>Short bursts keep altitude stable. Over-correcting costs precision at high speed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(() => {
+  // Motion model: vertical state uses velocity integration (vy += g*dt,
+  // y += vy*dt) with impulse jumps; collisions compare player bounds to
+  // moving gate gaps.
+  const canvas = document.getElementById('vector-canvas');
+  const ctx = canvas.getContext('2d');
+  const hudScore = document.getElementById('vector-score');
+  const hudBest = document.getElementById('vector-best');
+  const hudSpeed = document.getElementById('vector-speed');
+  const hudState = document.getElementById('vector-state');
+  const btnStart = document.getElementById('vector-start');
+  const btnRestart = document.getElementById('vector-restart');
+  const BEST_KEY = 'triwei_vector_vault_best';
+
+  const state = {
+    running: false,
+    gameOver: false,
+    score: 0,
+    best: 0,
+    speed: 170,
+    gravity: 780,
+    impulse: -300,
+    speedRamp: 2.5,
+    gapHeight: 122,
+    gateSpacing: 230,
+    gateWidth: 44,
+    time: 0,
+    stars: [],
+    nextGateX: 0,
+    lastTick: 0
+  };
+
+  const player = {
+    x: 130,
+    y: 120,
+    vy: 0,
+    r: 10
+  };
+
+  let gates = [];
+
+  function rand(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  function clamp(value, min, max) {
+    return Math.max(min, Math.min(max, value));
+  }
+
+  function resizeCanvas() {
+    const dpr = window.devicePixelRatio || 1;
+    const { clientWidth, clientHeight } = canvas;
+    canvas.width = Math.max(1, Math.floor(clientWidth * dpr));
+    canvas.height = Math.max(1, Math.floor(clientHeight * dpr));
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    if (!state.running) {
+      player.y = canvas.clientHeight * 0.5;
+    }
+    buildStars();
+  }
+
+  function buildStars() {
+    const count = Math.max(60, Math.floor(canvas.clientWidth / 7));
+    state.stars = Array.from({ length: count }, () => ({
+      x: Math.random() * canvas.clientWidth,
+      y: Math.random() * canvas.clientHeight,
+      r: rand(0.7, 1.7),
+      speed: rand(0.15, 0.7)
+    }));
+  }
+
+  function updateHud(text) {
+    hudScore.textContent = `Score: ${state.score}`;
+    hudBest.textContent = `Best: ${state.best}`;
+    hudSpeed.textContent = `Speed: ${Math.round(state.speed)}`;
+    if (text) {
+      hudState.textContent = text;
+      return;
+    }
+    if (state.gameOver) {
+      hudState.textContent = 'Status: Crashed - restart';
+      return;
+    }
+    hudState.textContent = state.running ? 'Status: Active' : 'Status: Ready';
+  }
+
+  function readBest() {
+    const parsed = parseInt(localStorage.getItem(BEST_KEY) || '0', 10);
+    state.best = Number.isFinite(parsed) ? Math.max(0, parsed) : 0;
+  }
+
+  function saveBest() {
+    if (state.score > state.best) {
+      state.best = state.score;
+      localStorage.setItem(BEST_KEY, String(state.best));
+    }
+  }
+
+  function spawnGate(x) {
+    const margin = 56;
+    const centerY = rand(margin + state.gapHeight * 0.5, canvas.clientHeight - margin - state.gapHeight * 0.5);
+    const amp = rand(20, 54);
+    const freq = rand(0.95, 1.75);
+    const phase = rand(0, Math.PI * 2);
+    gates.push({
+      x,
+      centerY,
+      amp,
+      freq,
+      phase,
+      scored: false
+    });
+  }
+
+  function setupGates() {
+    gates = [];
+    state.nextGateX = canvas.clientWidth + 180;
+    while (state.nextGateX < canvas.clientWidth + 1200) {
+      spawnGate(state.nextGateX);
+      state.nextGateX += state.gateSpacing;
+    }
+  }
+
+  function startRun() {
+    state.running = true;
+    state.gameOver = false;
+    state.score = 0;
+    state.speed = 170;
+    state.gapHeight = 122;
+    state.time = 0;
+    player.x = Math.max(100, canvas.clientWidth * 0.2);
+    player.y = canvas.clientHeight * 0.5;
+    player.vy = 0;
+    setupGates();
+    updateHud('Status: Active');
+  }
+
+  function failRun() {
+    state.running = false;
+    state.gameOver = true;
+    saveBest();
+    updateHud('Status: Crashed - press Start');
+  }
+
+  function applyVaultImpulse() {
+    player.vy = state.impulse;
+  }
+
+  function handleAction() {
+    if (!state.running) {
+      startRun();
+      return;
+    }
+    applyVaultImpulse();
+  }
+
+  function currentGapCenter(gate) {
+    return gate.centerY + Math.sin(state.time * gate.freq + gate.phase) * gate.amp;
+  }
+
+  function step(dt) {
+    for (const star of state.stars) {
+      star.x -= state.speed * star.speed * dt;
+      if (star.x < -4) {
+        star.x = canvas.clientWidth + rand(4, 40);
+        star.y = rand(0, canvas.clientHeight);
+      }
+    }
+
+    if (!state.running) return;
+
+    state.time += dt;
+    state.speed = Math.min(420, state.speed + state.speedRamp * dt * 22);
+    state.gapHeight = Math.max(58, state.gapHeight - dt * 1.8);
+
+    player.vy += state.gravity * dt;
+    player.vy = clamp(player.vy, -420, 460);
+    player.y += player.vy * dt;
+
+    for (const gate of gates) {
+      gate.x -= state.speed * dt;
+    }
+    state.nextGateX -= state.speed * dt;
+
+    gates = gates.filter((gate) => gate.x + state.gateWidth > -80);
+    while (state.nextGateX < canvas.clientWidth + 1000) {
+      spawnGate(state.nextGateX);
+      state.nextGateX += state.gateSpacing;
+    }
+
+    for (const gate of gates) {
+      const gapCenter = currentGapCenter(gate);
+      const gapTop = gapCenter - state.gapHeight * 0.5;
+      const gapBottom = gapCenter + state.gapHeight * 0.5;
+      const inGateX =
+        player.x + player.r > gate.x - state.gateWidth * 0.5 &&
+        player.x - player.r < gate.x + state.gateWidth * 0.5;
+
+      if (inGateX && (player.y - player.r < gapTop || player.y + player.r > gapBottom)) {
+        failRun();
+        return;
+      }
+
+      if (!gate.scored && gate.x + state.gateWidth * 0.5 < player.x - player.r) {
+        gate.scored = true;
+        state.score += 1;
+      }
+    }
+
+    if (player.y - player.r <= 0 || player.y + player.r >= canvas.clientHeight) {
+      failRun();
+      return;
+    }
+
+    updateHud();
+  }
+
+  function drawBackground() {
+    const gradient = ctx.createLinearGradient(0, 0, 0, canvas.clientHeight);
+    gradient.addColorStop(0, '#061121');
+    gradient.addColorStop(1, '#09203a');
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+
+    for (const star of state.stars) {
+      ctx.fillStyle = `rgba(232, 238, 245, ${0.35 + star.r * 0.15})`;
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  function drawGates() {
+    const laneColor = 'rgba(124, 123, 255, 0.95)';
+    const glowColor = 'rgba(124, 123, 255, 0.22)';
+    for (const gate of gates) {
+      const gapCenter = currentGapCenter(gate);
+      const gapTop = gapCenter - state.gapHeight * 0.5;
+      const gapBottom = gapCenter + state.gapHeight * 0.5;
+      const left = gate.x - state.gateWidth * 0.5;
+
+      ctx.fillStyle = glowColor;
+      ctx.fillRect(left - 6, 0, state.gateWidth + 12, gapTop);
+      ctx.fillRect(left - 6, gapBottom, state.gateWidth + 12, canvas.clientHeight - gapBottom);
+
+      ctx.fillStyle = laneColor;
+      ctx.fillRect(left, 0, state.gateWidth, gapTop);
+      ctx.fillRect(left, gapBottom, state.gateWidth, canvas.clientHeight - gapBottom);
+    }
+  }
+
+  function drawPlayer() {
+    const vxHint = clamp(player.vy / 400, -1, 1);
+    const trailX = player.x - 11;
+    const trailY = player.y + vxHint * 8;
+
+    const glow = ctx.createRadialGradient(player.x, player.y, 1, player.x, player.y, 21);
+    glow.addColorStop(0, 'rgba(255, 138, 92, 0.92)');
+    glow.addColorStop(1, 'rgba(255, 138, 92, 0.08)');
+    ctx.fillStyle = glow;
+    ctx.beginPath();
+    ctx.arc(player.x, player.y, 21, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.strokeStyle = 'rgba(255, 192, 168, 0.7)';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(player.x, player.y);
+    ctx.lineTo(trailX, trailY);
+    ctx.stroke();
+
+    ctx.fillStyle = '#ff8a5c';
+    ctx.beginPath();
+    ctx.arc(player.x, player.y, player.r, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  function drawOverlay() {
+    if (state.running) return;
+    ctx.fillStyle = 'rgba(3, 7, 12, 0.55)';
+    ctx.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+
+    ctx.fillStyle = '#e8eef5';
+    ctx.textAlign = 'center';
+    ctx.font = '600 22px "IBM Plex Sans", sans-serif';
+    const title = state.gameOver ? 'Vector Breach' : 'Vector Vault';
+    ctx.fillText(title, canvas.clientWidth / 2, canvas.clientHeight / 2 - 18);
+    ctx.font = '400 14px "IBM Plex Sans", sans-serif';
+    const message = state.gameOver
+      ? 'Press Start or Space to retry'
+      : 'Press Start or Space to begin';
+    ctx.fillText(message, canvas.clientWidth / 2, canvas.clientHeight / 2 + 10);
+  }
+
+  function render() {
+    drawBackground();
+    drawGates();
+    drawPlayer();
+    drawOverlay();
+  }
+
+  function loop(timestamp) {
+    if (!state.lastTick) state.lastTick = timestamp;
+    const dt = Math.min(0.04, (timestamp - state.lastTick) / 1000);
+    state.lastTick = timestamp;
+    step(dt);
+    render();
+    requestAnimationFrame(loop);
+  }
+
+  btnStart.addEventListener('click', handleAction);
+  btnRestart.addEventListener('click', startRun);
+  canvas.addEventListener('pointerdown', (event) => {
+    event.preventDefault();
+    handleAction();
+  });
+  window.addEventListener('keydown', (event) => {
+    if (event.code !== 'Space' && event.code !== 'ArrowUp') return;
+    event.preventDefault();
+    handleAction();
+  });
+  window.addEventListener('resize', resizeCanvas);
+
+  readBest();
+  resizeCanvas();
+  setupGates();
+  updateHud();
+  requestAnimationFrame(loop);
+})();
+</script>

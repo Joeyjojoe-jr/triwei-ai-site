@@ -11,12 +11,13 @@
 
     <nav class="site-nav" aria-label="Primary">
       <ul>
-        <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="is-active"{% endif %}>Home</a></li>
-        <li><a href="{{ '/knowledge/' | relative_url }}"{% if page.url contains '/knowledge/' %} class="is-active"{% endif %}>Knowledge Map</a></li>
-        <li><a href="{{ '/experiments/' | relative_url }}"{% if page.url contains '/experiments/' %} class="is-active"{% endif %}>Experiments</a></li>
-        <li><a href="{{ '/guides/' | relative_url }}"{% if page.url contains '/guides/' %} class="is-active"{% endif %}>Guides</a></li>
-        <li><a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog/' %} class="is-active"{% endif %}>Blog</a></li>
-        <li><a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about/' %} class="is-active"{% endif %}>About</a></li>
+        <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="is-active" aria-current="page"{% endif %}>Home</a></li>
+        <li><a href="{{ '/knowledge/' | relative_url }}"{% if page.url contains '/knowledge/' %} class="is-active" aria-current="page"{% endif %}>Knowledge Map</a></li>
+        <li><a href="{{ '/experiments/' | relative_url }}"{% if page.url contains '/experiments/' %} class="is-active" aria-current="page"{% endif %}>Experiments</a></li>
+        <li><a href="{{ '/games/' | relative_url }}"{% if page.url contains '/games/' %} class="is-active" aria-current="page"{% endif %}>Games</a></li>
+        <li><a href="{{ '/guides/' | relative_url }}"{% if page.url contains '/guides/' %} class="is-active" aria-current="page"{% endif %}>Guides</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog/' %} class="is-active" aria-current="page"{% endif %}>Blog</a></li>
+        <li><a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about/' %} class="is-active" aria-current="page"{% endif %}>About</a></li>
       </ul>
     </nav>
 

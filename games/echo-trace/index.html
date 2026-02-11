@@ -1,0 +1,430 @@
+---
+layout: default
+title: Echo Trace
+permalink: /games/echo-trace/
+description: Memory-and-pattern challenge based on delayed visual cues.
+---
+
+<style>
+  .echo-page {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .echo-page > p {
+    margin: 0;
+    max-width: 64ch;
+    color: var(--muted);
+  }
+
+  .echo-shell {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .echo-hud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .hud-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.65rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.9rem;
+  }
+
+  .echo-pad-wrap {
+    border: 1px solid var(--border);
+    border-radius: 0.9rem;
+    padding: 1rem;
+    background: color-mix(in srgb, var(--surface) 88%, #081320);
+    box-shadow: var(--shadow);
+  }
+
+  .echo-pad-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    gap: 0.7rem;
+  }
+
+  .echo-pad {
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    background: color-mix(in srgb, var(--surface) 92%, #081320);
+    min-height: 94px;
+    font: inherit;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    cursor: pointer;
+    transition: transform 120ms ease, border-color 120ms ease, filter 120ms ease;
+  }
+
+  .echo-pad:hover {
+    transform: translateY(-1px);
+    border-color: var(--accent);
+  }
+
+  .echo-pad:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+  }
+
+  .echo-pad.up {
+    box-shadow: inset 0 0 0 1px rgba(255, 138, 92, 0.18);
+  }
+
+  .echo-pad.right {
+    box-shadow: inset 0 0 0 1px rgba(52, 245, 197, 0.18);
+  }
+
+  .echo-pad.down {
+    box-shadow: inset 0 0 0 1px rgba(76, 167, 240, 0.18);
+  }
+
+  .echo-pad.left {
+    box-shadow: inset 0 0 0 1px rgba(124, 123, 255, 0.18);
+  }
+
+  .echo-pad.active {
+    border-color: var(--accent);
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+  }
+
+  .echo-pad.fail {
+    border-color: #ff6a6a;
+    filter: brightness(1.04);
+  }
+
+  .echo-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .echo-button {
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: #ffffff;
+    border-radius: 0.6rem;
+    padding: 0.5rem 0.8rem;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .echo-button.ghost {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+  }
+
+  .echo-cards {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .control-card {
+    border: 1px solid var(--border);
+    border-radius: 0.8rem;
+    background: var(--surface);
+    padding: 0.75rem 0.85rem;
+  }
+
+  .control-card h4 {
+    margin: 0 0 0.35rem;
+  }
+
+  .control-card p {
+    margin: 0;
+    color: var(--muted);
+  }
+
+  @media (max-width: 520px) {
+    .echo-pad-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<section class="echo-page">
+  <h1>Echo Trace</h1>
+  <p><a class="text-link" href="{{ '/games/' | relative_url }}">Back to Games</a></p>
+  <p>Watch a delayed sequence of directional pulses, then repeat it from memory. Each successful round adds one more pulse and shortens the timing window.</p>
+
+  <div class="echo-shell">
+    <div class="echo-hud" aria-live="polite">
+      <span class="hud-pill" id="echo-round">Round: 0</span>
+      <span class="hud-pill" id="echo-progress">Progress: 0/0</span>
+      <span class="hud-pill" id="echo-best">Best: 0</span>
+      <span class="hud-pill" id="echo-state">Status: Ready</span>
+    </div>
+
+    <div class="echo-pad-wrap">
+      <div class="echo-pad-grid" id="echo-pad-grid" aria-label="Echo Trace directional pads">
+        <button class="echo-pad up" data-pad="0" type="button" aria-label="Up pad">UP</button>
+        <button class="echo-pad right" data-pad="1" type="button" aria-label="Right pad">RIGHT</button>
+        <button class="echo-pad down" data-pad="2" type="button" aria-label="Down pad">DOWN</button>
+        <button class="echo-pad left" data-pad="3" type="button" aria-label="Left pad">LEFT</button>
+      </div>
+    </div>
+
+    <div class="echo-actions">
+      <button class="echo-button" id="echo-start" type="button">Start Run</button>
+      <button class="echo-button ghost" id="echo-restart" type="button">Restart</button>
+    </div>
+
+    <div class="echo-cards">
+      <div class="control-card">
+        <h4>Controls</h4>
+        <p>Use arrow keys or click/tap pads. Optional keys: W, D, S, A.</p>
+      </div>
+      <div class="control-card">
+        <h4>Flow</h4>
+        <p>Observe -> wait for input phase -> replay sequence in order. Any mismatch ends the run.</p>
+      </div>
+      <div class="control-card">
+        <h4>Scoring</h4>
+        <p>Your best score is the highest completed round in one session run.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(() => {
+  // Sequence model: player input index must match generated sequence order
+  // exactly; each cleared round appends one symbol and reduces cue timing.
+  const BEST_KEY = 'triwei_echo_trace_best';
+  const roundEl = document.getElementById('echo-round');
+  const progressEl = document.getElementById('echo-progress');
+  const bestEl = document.getElementById('echo-best');
+  const stateEl = document.getElementById('echo-state');
+  const btnStart = document.getElementById('echo-start');
+  const btnRestart = document.getElementById('echo-restart');
+  const padButtons = Array.from(document.querySelectorAll('.echo-pad'));
+
+  const state = {
+    running: false,
+    showing: false,
+    accepting: false,
+    failed: false,
+    round: 0,
+    best: 0,
+    sequence: [],
+    inputIndex: 0,
+    timers: [],
+    tempo: 520
+  };
+
+  function randInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function clearTimers() {
+    while (state.timers.length) {
+      clearTimeout(state.timers.pop());
+    }
+  }
+
+  function readBest() {
+    const parsed = parseInt(localStorage.getItem(BEST_KEY) || '0', 10);
+    state.best = Number.isFinite(parsed) ? Math.max(0, parsed) : 0;
+  }
+
+  function saveBest() {
+    const completed = Math.max(0, state.round - 1);
+    if (completed > state.best) {
+      state.best = completed;
+      localStorage.setItem(BEST_KEY, String(state.best));
+    }
+  }
+
+  function setPadsDisabled(disabled) {
+    for (const pad of padButtons) {
+      pad.disabled = disabled;
+    }
+  }
+
+  function clearPadClasses() {
+    for (const pad of padButtons) {
+      pad.classList.remove('active');
+      pad.classList.remove('fail');
+    }
+  }
+
+  function pulsePad(index, duration, fail) {
+    const pad = padButtons[index];
+    if (!pad) return;
+    pad.classList.add(fail ? 'fail' : 'active');
+    const t = setTimeout(() => {
+      pad.classList.remove('active');
+      pad.classList.remove('fail');
+    }, duration);
+    state.timers.push(t);
+  }
+
+  function updateHud(message) {
+    roundEl.textContent = `Round: ${state.round}`;
+    progressEl.textContent = `Progress: ${state.inputIndex}/${state.sequence.length}`;
+    bestEl.textContent = `Best: ${state.best}`;
+    if (message) {
+      stateEl.textContent = message;
+      return;
+    }
+    if (state.failed) {
+      stateEl.textContent = 'Status: Mismatch';
+      return;
+    }
+    if (!state.running) {
+      stateEl.textContent = 'Status: Ready';
+      return;
+    }
+    if (state.showing) {
+      stateEl.textContent = 'Status: Watch sequence';
+      return;
+    }
+    if (state.accepting) {
+      stateEl.textContent = 'Status: Repeat now';
+      return;
+    }
+    stateEl.textContent = 'Status: Active';
+  }
+
+  function beginInputPhase() {
+    state.showing = false;
+    state.accepting = true;
+    setPadsDisabled(false);
+    updateHud('Status: Repeat now');
+  }
+
+  function playSequence() {
+    state.showing = true;
+    state.accepting = false;
+    state.inputIndex = 0;
+    setPadsDisabled(true);
+    updateHud('Status: Watch sequence');
+
+    const beat = Math.max(210, 520 - state.round * 16);
+    state.tempo = beat;
+    let delay = 180;
+    for (let i = 0; i < state.sequence.length; i++) {
+      const index = state.sequence[i];
+      const on = setTimeout(() => {
+        pulsePad(index, Math.max(120, beat - 150), false);
+      }, delay);
+      state.timers.push(on);
+      delay += beat;
+    }
+    const done = setTimeout(beginInputPhase, delay + 120);
+    state.timers.push(done);
+  }
+
+  function failRun(index) {
+    state.running = false;
+    state.accepting = false;
+    state.showing = false;
+    state.failed = true;
+    setPadsDisabled(true);
+    pulsePad(index, 260, true);
+    saveBest();
+    updateHud('Status: Mismatch - restart');
+  }
+
+  function completeRound() {
+    state.accepting = false;
+    setPadsDisabled(true);
+    updateHud('Status: Sequence cleared');
+
+    const t = setTimeout(() => {
+      if (!state.running) return;
+      state.round += 1;
+      state.sequence.push(randInt(0, 3));
+      playSequence();
+      updateHud();
+    }, 620);
+    state.timers.push(t);
+  }
+
+  function handlePadInput(index) {
+    if (!state.accepting || !state.running) return;
+
+    pulsePad(index, 120, false);
+
+    const expected = state.sequence[state.inputIndex];
+    if (index !== expected) {
+      failRun(index);
+      return;
+    }
+
+    state.inputIndex += 1;
+    updateHud();
+
+    if (state.inputIndex >= state.sequence.length) {
+      completeRound();
+    }
+  }
+
+  function startRun() {
+    clearTimers();
+    clearPadClasses();
+    state.running = true;
+    state.showing = false;
+    state.accepting = false;
+    state.failed = false;
+    state.round = 1;
+    state.sequence = [randInt(0, 3)];
+    state.inputIndex = 0;
+    setPadsDisabled(true);
+    playSequence();
+    updateHud('Status: Watch sequence');
+  }
+
+  const keyToPad = {
+    ArrowUp: 0,
+    KeyW: 0,
+    ArrowRight: 1,
+    KeyD: 1,
+    ArrowDown: 2,
+    KeyS: 2,
+    ArrowLeft: 3,
+    KeyA: 3
+  };
+
+  btnStart.addEventListener('click', startRun);
+  btnRestart.addEventListener('click', startRun);
+
+  for (const pad of padButtons) {
+    pad.addEventListener('click', () => {
+      const index = parseInt(pad.dataset.pad || '', 10);
+      if (!Number.isFinite(index)) return;
+      handlePadInput(index);
+    });
+  }
+
+  window.addEventListener('keydown', (event) => {
+    const mapped = keyToPad[event.code];
+    if (!Number.isFinite(mapped)) {
+      if (event.code === 'Space' && !state.running) {
+        event.preventDefault();
+        startRun();
+      }
+      return;
+    }
+    event.preventDefault();
+    handlePadInput(mapped);
+  });
+
+  readBest();
+  setPadsDisabled(true);
+  updateHud('Status: Ready');
+})();
+</script>

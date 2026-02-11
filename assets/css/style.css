@@ -89,6 +89,16 @@ a:hover {
   text-decoration: underline;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 60%, #ffffff);
+  outline-offset: 2px;
+}
+
 .container {
   width: min(1100px, calc(100% - 2.2rem));
   margin: 0 auto;
@@ -457,6 +467,84 @@ a:hover {
 
   .footer-inner {
     flex-direction: column;
+  }
+
+  main .games-index {
+    gap: 0.8rem;
+  }
+
+  main .game-grid {
+    grid-template-columns: 1fr;
+  }
+
+  main .hud-pill {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.55rem;
+  }
+
+  main :is(.game-tile, .control-card, .rule-card, .swap-panel, .relay-panel) {
+    padding: 0.75rem;
+  }
+
+  main :is(
+    .game-actions,
+    .signal-actions,
+    .vector-actions,
+    .lattice-actions,
+    .flux-actions,
+    .pulse-actions,
+    .hopper-actions,
+    .echo-actions,
+    .relay-actions,
+    .tempo-actions,
+    .swap-actions
+  ) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  main :is(
+    .game-button,
+    .signal-button,
+    .vector-button,
+    .lattice-button,
+    .flux-button,
+    .pulse-button,
+    .hopper-button,
+    .echo-button,
+    .relay-button,
+    .tempo-button,
+    .swap-button,
+    .primary-button
+  ) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  main :is(
+    .game-controls,
+    .signal-controls,
+    .vector-controls,
+    .lattice-rules,
+    .flux-cards,
+    .pulse-cards,
+    .hopper-cards,
+    .echo-cards,
+    .relay-cards,
+    .tempo-cards,
+    .swap-cards
+  ) {
+    grid-template-columns: 1fr;
+  }
+
+  main :is(
+    #signal-canvas,
+    #vector-canvas,
+    #flux-canvas,
+    #pulse-canvas,
+    #tempo-canvas
+  ) {
+    height: clamp(220px, 58vw, 320px);
   }
 }
 

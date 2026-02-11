@@ -1,0 +1,498 @@
+---
+layout: default
+title: Pattern Relay
+permalink: /games/pattern-relay/
+description: Quick logic rounds with procedurally generated sequence goals.
+---
+
+<style>
+  .relay-page {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .relay-page > p {
+    margin: 0;
+    max-width: 64ch;
+    color: var(--muted);
+  }
+
+  .relay-shell {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .relay-hud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .hud-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.65rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.9rem;
+  }
+
+  .relay-stage {
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  }
+
+  .relay-panel {
+    border: 1px solid var(--border);
+    border-radius: 0.9rem;
+    background: color-mix(in srgb, var(--surface) 90%, #081320);
+    padding: 0.9rem;
+    box-shadow: var(--shadow);
+  }
+
+  .relay-panel h3 {
+    margin: 0 0 0.55rem;
+    font-size: 1rem;
+  }
+
+  .relay-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(52px, 1fr));
+    gap: 0.45rem;
+  }
+
+  .relay-cell {
+    min-height: 52px;
+    border: 1px solid var(--border);
+    border-radius: 0.7rem;
+    background: color-mix(in srgb, var(--surface) 92%, #081320);
+    color: var(--text);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .relay-cell.source {
+    cursor: default;
+  }
+
+  .relay-cell.on {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent-soft) 82%, #ffffff);
+    color: var(--accent);
+  }
+
+  .relay-cell.target {
+    box-shadow: inset 0 0 0 1px rgba(52, 245, 197, 0.12);
+  }
+
+  .relay-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .relay-button {
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: #ffffff;
+    border-radius: 0.6rem;
+    padding: 0.5rem 0.8rem;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .relay-button.ghost {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+  }
+
+  .relay-cards {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .control-card {
+    border: 1px solid var(--border);
+    border-radius: 0.8rem;
+    background: var(--surface);
+    padding: 0.75rem 0.85rem;
+  }
+
+  .control-card h4 {
+    margin: 0 0 0.35rem;
+  }
+
+  .control-card p,
+  .control-card ul {
+    margin: 0;
+    color: var(--muted);
+  }
+
+  .control-card ul {
+    padding-left: 1rem;
+    display: grid;
+    gap: 0.25rem;
+  }
+</style>
+
+<section class="relay-page">
+  <h1>Pattern Relay</h1>
+  <p><a class="text-link" href="{{ '/games/' | relative_url }}">Back to Games</a></p>
+  <p>Each round shows a source 3x3 pattern and a transformation rule. Build the transformed result in the target grid, then submit before lives run out.</p>
+
+  <div class="relay-shell">
+    <div class="relay-hud" aria-live="polite">
+      <span class="hud-pill" id="relay-round">Round: 0</span>
+      <span class="hud-pill" id="relay-score">Score: 0</span>
+      <span class="hud-pill" id="relay-lives">Lives: 3</span>
+      <span class="hud-pill" id="relay-best">Best: 0</span>
+      <span class="hud-pill" id="relay-rule">Rule: --</span>
+      <span class="hud-pill" id="relay-state">Status: Ready</span>
+    </div>
+
+    <div class="relay-stage">
+      <article class="relay-panel">
+        <h3>Source Pattern</h3>
+        <div id="relay-source-grid" class="relay-grid" aria-label="Source pattern grid"></div>
+      </article>
+      <article class="relay-panel">
+        <h3>Your Relay Pattern</h3>
+        <div id="relay-target-grid" class="relay-grid" aria-label="Target pattern grid"></div>
+      </article>
+    </div>
+
+    <div class="relay-actions">
+      <button class="relay-button" id="relay-start" type="button">Start Run</button>
+      <button class="relay-button" id="relay-submit" type="button">Submit Pattern</button>
+      <button class="relay-button ghost" id="relay-clear" type="button">Clear Target</button>
+      <button class="relay-button ghost" id="relay-restart" type="button">Restart</button>
+    </div>
+
+    <div class="relay-cards">
+      <article class="control-card">
+        <h4>Rules</h4>
+        <ul>
+          <li>Rotate Right 90°</li>
+          <li>Mirror Horizontally</li>
+          <li>Invert Cells</li>
+          <li>Shift Right (wrap each row)</li>
+        </ul>
+      </article>
+      <article class="control-card">
+        <h4>Controls</h4>
+        <p>Click or tap cells in the target grid to toggle ON/OFF before submitting.</p>
+      </article>
+      <article class="control-card">
+        <h4>Run End</h4>
+        <p>Wrong submissions cost one life. Run ends at zero lives. Best score is saved locally.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<script>
+(() => {
+  // Matrix model: each round applies a deterministic transform (rotate,
+  // mirror, invert, or row shift) to a 3x3 binary pattern, then compares
+  // target and player matrices cell-by-cell.
+  const SIZE = 3;
+  const CELL_COUNT = SIZE * SIZE;
+  const BEST_KEY = 'triwei_pattern_relay_best';
+  const sourceGridEl = document.getElementById('relay-source-grid');
+  const targetGridEl = document.getElementById('relay-target-grid');
+  const hudRound = document.getElementById('relay-round');
+  const hudScore = document.getElementById('relay-score');
+  const hudLives = document.getElementById('relay-lives');
+  const hudBest = document.getElementById('relay-best');
+  const hudRule = document.getElementById('relay-rule');
+  const hudState = document.getElementById('relay-state');
+  const btnStart = document.getElementById('relay-start');
+  const btnSubmit = document.getElementById('relay-submit');
+  const btnClear = document.getElementById('relay-clear');
+  const btnRestart = document.getElementById('relay-restart');
+
+  const rules = [
+    {
+      id: 'rotate90',
+      label: 'Rotate Right 90°',
+      apply(pattern) {
+        const out = Array.from({ length: CELL_COUNT }, () => 0);
+        for (let y = 0; y < SIZE; y++) {
+          for (let x = 0; x < SIZE; x++) {
+            const from = y * SIZE + x;
+            const nx = SIZE - 1 - y;
+            const ny = x;
+            const to = ny * SIZE + nx;
+            out[to] = pattern[from];
+          }
+        }
+        return out;
+      }
+    },
+    {
+      id: 'mirrorH',
+      label: 'Mirror Horizontally',
+      apply(pattern) {
+        const out = Array.from({ length: CELL_COUNT }, () => 0);
+        for (let y = 0; y < SIZE; y++) {
+          for (let x = 0; x < SIZE; x++) {
+            const from = y * SIZE + x;
+            const nx = SIZE - 1 - x;
+            const to = y * SIZE + nx;
+            out[to] = pattern[from];
+          }
+        }
+        return out;
+      }
+    },
+    {
+      id: 'invert',
+      label: 'Invert Cells',
+      apply(pattern) {
+        return pattern.map((value) => (value ? 0 : 1));
+      }
+    },
+    {
+      id: 'shiftRight',
+      label: 'Shift Right (wrap rows)',
+      apply(pattern) {
+        const out = Array.from({ length: CELL_COUNT }, () => 0);
+        for (let y = 0; y < SIZE; y++) {
+          for (let x = 0; x < SIZE; x++) {
+            const from = y * SIZE + x;
+            const nx = (x + 1) % SIZE;
+            const to = y * SIZE + nx;
+            out[to] = pattern[from];
+          }
+        }
+        return out;
+      }
+    }
+  ];
+
+  const state = {
+    running: false,
+    gameOver: false,
+    round: 0,
+    score: 0,
+    lives: 3,
+    best: 0,
+    source: Array.from({ length: CELL_COUNT }, () => 0),
+    target: Array.from({ length: CELL_COUNT }, () => 0),
+    answer: Array.from({ length: CELL_COUNT }, () => 0),
+    currentRule: null,
+    previousRuleId: ''
+  };
+
+  function randInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function readBest() {
+    const parsed = parseInt(localStorage.getItem(BEST_KEY) || '0', 10);
+    state.best = Number.isFinite(parsed) ? Math.max(0, parsed) : 0;
+  }
+
+  function saveBest() {
+    if (state.score > state.best) {
+      state.best = state.score;
+      localStorage.setItem(BEST_KEY, String(state.best));
+    }
+  }
+
+  function clearTarget() {
+    state.target = Array.from({ length: CELL_COUNT }, () => 0);
+  }
+
+  function randomSource(round) {
+    const density = Math.min(0.64, 0.3 + round * 0.03);
+    let pattern = Array.from({ length: CELL_COUNT }, () => (Math.random() < density ? 1 : 0));
+    let onCount = pattern.reduce((acc, v) => acc + v, 0);
+    while (onCount < 2 || onCount > 7) {
+      pattern = Array.from({ length: CELL_COUNT }, () => (Math.random() < density ? 1 : 0));
+      onCount = pattern.reduce((acc, v) => acc + v, 0);
+    }
+    return pattern;
+  }
+
+  function pickRule() {
+    const candidates = rules.filter((rule) => rule.id !== state.previousRuleId);
+    const rule = candidates[randInt(0, candidates.length - 1)];
+    state.previousRuleId = rule.id;
+    return rule;
+  }
+
+  function generateRound() {
+    state.currentRule = pickRule();
+    state.source = randomSource(state.round);
+    state.answer = state.currentRule.apply(state.source);
+    clearTarget();
+  }
+
+  function arraysEqual(a, b) {
+    if (a.length !== b.length) return false;
+    for (let i = 0; i < a.length; i++) {
+      if (a[i] !== b[i]) return false;
+    }
+    return true;
+  }
+
+  function updateHud(text) {
+    hudRound.textContent = `Round: ${state.round}`;
+    hudScore.textContent = `Score: ${state.score}`;
+    hudLives.textContent = `Lives: ${state.lives}`;
+    hudBest.textContent = `Best: ${state.best}`;
+    hudRule.textContent = `Rule: ${state.currentRule ? state.currentRule.label : '--'}`;
+    if (text) {
+      hudState.textContent = text;
+      return;
+    }
+    if (!state.running) {
+      hudState.textContent = state.gameOver ? 'Status: Run ended' : 'Status: Ready';
+      return;
+    }
+    hudState.textContent = 'Status: Build and submit';
+  }
+
+  function setControlsEnabled(enabled) {
+    btnSubmit.disabled = !enabled;
+    btnClear.disabled = !enabled;
+  }
+
+  function toggleTargetCell(index) {
+    if (!state.running) return;
+    state.target[index] = state.target[index] ? 0 : 1;
+    renderTargetGrid();
+  }
+
+  function cellLabel(value) {
+    return value ? 'ON' : 'OFF';
+  }
+
+  function renderSourceGrid() {
+    sourceGridEl.innerHTML = '';
+    for (let i = 0; i < CELL_COUNT; i++) {
+      const value = state.source[i];
+      const cell = document.createElement('div');
+      cell.className = `relay-cell source${value ? ' on' : ''}`;
+      cell.textContent = cellLabel(value);
+      cell.setAttribute('aria-hidden', 'true');
+      sourceGridEl.appendChild(cell);
+    }
+  }
+
+  function renderTargetGrid() {
+    targetGridEl.innerHTML = '';
+    for (let i = 0; i < CELL_COUNT; i++) {
+      const value = state.target[i];
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = `relay-cell target${value ? ' on' : ''}`;
+      btn.textContent = cellLabel(value);
+      btn.disabled = !state.running;
+      btn.setAttribute('aria-label', `Target cell ${i + 1} ${value ? 'on' : 'off'}`);
+      btn.addEventListener('click', () => toggleTargetCell(i));
+      targetGridEl.appendChild(btn);
+    }
+  }
+
+  function renderAll() {
+    renderSourceGrid();
+    renderTargetGrid();
+  }
+
+  function startRun() {
+    state.running = true;
+    state.gameOver = false;
+    state.round = 1;
+    state.score = 0;
+    state.lives = 3;
+    state.previousRuleId = '';
+    generateRound();
+    setControlsEnabled(true);
+    updateHud('Status: Build and submit');
+    renderAll();
+  }
+
+  function endRun(message) {
+    state.running = false;
+    state.gameOver = true;
+    saveBest();
+    setControlsEnabled(false);
+    updateHud(message);
+    renderTargetGrid();
+  }
+
+  function advanceRound(success) {
+    if (success) {
+      state.score += 12 + state.round * 3;
+      state.round += 1;
+      generateRound();
+      updateHud('Status: Correct - next round');
+      renderAll();
+      return;
+    }
+
+    state.lives -= 1;
+    if (state.lives <= 0) {
+      endRun('Status: Out of lives - restart');
+      return;
+    }
+
+    state.round += 1;
+    generateRound();
+    updateHud('Status: Incorrect - life lost');
+    renderAll();
+  }
+
+  function submitPattern() {
+    if (!state.running) return;
+    const ok = arraysEqual(state.target, state.answer);
+    advanceRound(ok);
+  }
+
+  btnStart.addEventListener('click', startRun);
+  btnRestart.addEventListener('click', startRun);
+  btnSubmit.addEventListener('click', submitPattern);
+  btnClear.addEventListener('click', () => {
+    if (!state.running) return;
+    clearTarget();
+    updateHud('Status: Target cleared');
+    renderTargetGrid();
+  });
+
+  window.addEventListener('keydown', (event) => {
+    if (event.code === 'Space' && !state.running) {
+      event.preventDefault();
+      startRun();
+      return;
+    }
+    if (event.code === 'Enter' && state.running) {
+      event.preventDefault();
+      submitPattern();
+      return;
+    }
+    if (event.code === 'KeyC' && state.running) {
+      clearTarget();
+      updateHud('Status: Target cleared');
+      renderTargetGrid();
+      return;
+    }
+    if (event.code === 'KeyR') {
+      startRun();
+    }
+  });
+
+  readBest();
+  setControlsEnabled(false);
+  updateHud('Status: Ready');
+  renderAll();
+})();
+</script>

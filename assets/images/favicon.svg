@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <!-- Replace this placeholder favicon with your brand icon when ready. -->
+  <title id="title">TriWei AI Favicon</title>
+  <desc id="desc">A simple node-and-connection mark for the Explorer Hub.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f7acc"/>
+      <stop offset="100%" stop-color="#1da88f"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#g)"/>
+  <circle cx="20" cy="20" r="5" fill="#ffffff"/>
+  <circle cx="44" cy="20" r="5" fill="#ffffff"/>
+  <circle cx="32" cy="42" r="6" fill="#ffffff"/>
+  <path d="M24 22 L40 22 L32 36 Z" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

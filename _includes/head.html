@@ -1,25 +1,34 @@
 <head>
+  <!-- Edit this file to control global metadata, SEO tags, and shared assets. -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>
-    {% if page.title %}
-      {{ page.title }} | {{ site.title }}
-    {% else %}
-      {{ site.title }}
-    {% endif %}
-  </title>
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
 
-  <!-- Icons and manifest -->
-  <link rel="icon" href="{{ '/assets/images/logo.png' | relative_url }}" sizes="any">
-  <link rel="apple-touch-icon" href="{{ '/assets/images/logo.png' | relative_url }}">
+  <!-- Favicon placeholder: replace assets/images/favicon.svg whenever you are ready. -->
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
   <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
-  <meta name="theme-color" content="#0b0f1f">
+  <meta name="theme-color" content="#0f7acc">
 
-  <!-- SEO tags from jekyll-seo-tag plugin -->
+  <!-- GitHub Pages-safe SEO plugin. -->
   {% seo %}
 
-  <!-- Main stylesheet compiled from style.scss -->
+  <!-- Global stylesheet for the Explorer Hub. -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  <script>
+    // Early theme hydration to reduce flash before CSS fully paints.
+    (function () {
+      try {
+        var saved = localStorage.getItem('triwei-theme');
+        if (saved === 'light' || saved === 'dark') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (error) {
+        // If storage is unavailable, keep default light theme.
+      }
+    })();
+  </script>
 </head>

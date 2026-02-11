@@ -1,5 +1,6 @@
 ---
 layout: home
-title: TriWei AI
+title: Home
+permalink: /
 ---
-Welcome to TriWei AI! Expect short reads on AI tools and ideas plus playful experiments worth revisiting.
+<!-- Homepage content lives in _layouts/home.html. -->

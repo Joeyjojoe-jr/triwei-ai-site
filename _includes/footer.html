@@ -1,12 +1,13 @@
 <footer class="site-footer" role="contentinfo">
-  <div class="wrapper footer-wrapper">
-    <p class="footer-text">
-      © {{ "now" | date: "%Y" }} {{ site.title }} ·
-      <a href="{{ '/feed.xml' | relative_url }}">RSS</a> ·
-      <a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a> ·
-      <a href="{{ '/games/' | relative_url }}">Games</a> ·
-      <a href="{{ '/about/' | relative_url }}">About</a> ·
-      <a href="{{ '/contact/' | relative_url }}">Contact</a>
-    </p>
+  <!-- Update footer links here if you add or remove sections. -->
+  <div class="container footer-inner">
+    <p>© {{ "now" | date: "%Y" }} {{ site.title }}. Built with Jekyll on GitHub Pages.</p>
+    <nav aria-label="Footer">
+      <a href="{{ '/experiments/' | relative_url }}">Experiments</a>
+      <a href="{{ '/guides/' | relative_url }}">Guides</a>
+      <a href="{{ '/knowledge/' | relative_url }}">Knowledge Map</a>
+      <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    </nav>
   </div>
 </footer>

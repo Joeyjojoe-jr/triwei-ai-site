@@ -1,33 +1,66 @@
+# TriWei AI Explorer Hub configuration.
+# Update the values below to change global site metadata.
 title: TriWei AI
-description: Short AI notes, tools, and playable experiments
+description: A modern hub for learning AI at your own pace.
+url: "https://triwei.ai"
+baseurl: ""
+timezone: America/Chicago
 theme: minima
 logo: /assets/images/logo.png
 
-# Site basics
-url: https://www.triwei.ai
-permalink: /:categories/:year/:month/:day/:title/
-timezone: America/Chicago
-
-# Build
+# Markdown and URL settings.
 markdown: kramdown
 kramdown:
   input: GFM
+permalink: pretty
 
-# Plugins allowed on GitHub Pages
+# Keep future-dated sample content visible.
+# Set this to false if you only want past-dated content published.
+future: true
+
+# Only GitHub Pages-supported plugins are used.
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Defaults
+# Custom collections.
+collections:
+  experiments:
+    output: true
+    permalink: /experiments/:name/
+
+# Default layouts by content location/type.
 defaults:
   - scope:
       path: ""
-      type: "posts"
+      type: "experiments"
     values:
       layout: post
-      image: /assets/images/logo.png
+  - scope:
+      path: "blog"
+      type: "pages"
+    values:
+      layout: post
+  - scope:
+      path: "guides"
+      type: "pages"
+    values:
+      layout: page
+  - scope:
+      path: "knowledge"
+      type: "pages"
+    values:
+      layout: page
 
-# Exclude directories that should not be processed by Jekyll
+# Files and folders not needed by Jekyll build.
 exclude:
-  - "_archive_*"
+  - node_modules
+  - src
+  - scripts
+  - public
+  - package.json
+  - package-lock.json
+  - postcss.config.cjs
+  - tailwind.config.mjs
+  - astro.config.mjs

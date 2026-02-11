@@ -1,22 +1,25 @@
 <header class="site-header" role="banner">
-  <div class="wrapper header-wrapper">
-    <!-- Logo and site title -->
-    <a class="site-logo" href="{{ '/' | relative_url }}">
-      <img src="{{ site.logo | relative_url }}" alt="{{ site.title }} logo" />
+  <!-- Update this nav list to add/remove top-level sections. -->
+  <div class="container header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
+      <span class="brand-mark">TW</span>
+      <span class="brand-text">
+        <strong>{{ site.title }}</strong>
+        <small>Explorer Hub</small>
+      </span>
     </a>
-    <div class="site-title-container">
-      <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-      <p class="site-tagline">{{ site.description }}</p>
-    </div>
-    <!-- Navigation links -->
-    <nav class="site-nav">
+
+    <nav class="site-nav" aria-label="Primary">
       <ul>
-        <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>Home</a></li>
-        <li><a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog/' %} class="active"{% endif %}>Blog</a></li>
-        <li><a href="{{ '/games/' | relative_url }}"{% if page.url contains '/games/' %} class="active"{% endif %}>Games</a></li>
-        <li><a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about/' %} class="active"{% endif %}>About</a></li>
-        <li><a href="{{ '/contact/' | relative_url }}"{% if page.url contains '/contact/' %} class="active"{% endif %}>Contact</a></li>
+        <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="is-active"{% endif %}>Home</a></li>
+        <li><a href="{{ '/knowledge/' | relative_url }}"{% if page.url contains '/knowledge/' %} class="is-active"{% endif %}>Knowledge Map</a></li>
+        <li><a href="{{ '/experiments/' | relative_url }}"{% if page.url contains '/experiments/' %} class="is-active"{% endif %}>Experiments</a></li>
+        <li><a href="{{ '/guides/' | relative_url }}"{% if page.url contains '/guides/' %} class="is-active"{% endif %}>Guides</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog/' %} class="is-active"{% endif %}>Blog</a></li>
+        <li><a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about/' %} class="is-active"{% endif %}>About</a></li>
       </ul>
     </nav>
+
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme">Dark</button>
   </div>
 </header>

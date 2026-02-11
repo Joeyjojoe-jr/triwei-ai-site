@@ -2,10 +2,56 @@
 <html lang="en">
   {% include head.html %}
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     {% include header.html %}
-    <div class="page-content">
-      {{ content }}
-    </div>
+
+    <main id="main-content" class="page-shell">
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
+
     {% include footer.html %}
+
+    <script>
+      // Theme toggle logic with localStorage persistence.
+      (function () {
+        var root = document.documentElement;
+        var toggleButton = document.getElementById('theme-toggle');
+        var storageKey = 'triwei-theme';
+
+        function applyTheme(theme) {
+          root.setAttribute('data-theme', theme);
+          if (toggleButton) {
+            toggleButton.textContent = theme === 'dark' ? 'Light' : 'Dark';
+          }
+        }
+
+        var savedTheme = null;
+        try {
+          savedTheme = localStorage.getItem(storageKey);
+        } catch (error) {
+          savedTheme = null;
+        }
+
+        if (savedTheme !== 'light' && savedTheme !== 'dark') {
+          savedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        applyTheme(savedTheme);
+
+        if (toggleButton) {
+          toggleButton.addEventListener('click', function () {
+            var nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            applyTheme(nextTheme);
+            try {
+              localStorage.setItem(storageKey, nextTheme);
+            } catch (error) {
+              // Ignore storage failures and keep theme for current session.
+            }
+          });
+        }
+      })();
+    </script>
   </body>
 </html>

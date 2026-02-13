@@ -42,12 +42,15 @@ Recommended structure inside the file:
 3. Implement self-contained HTML/CSS/JS for the game.
 4. Include a back link:
    - `<a class="text-link" href="{{ '/games/' | relative_url }}">Back to Games</a>`
-5. Add tile to `games/index.md`:
-   - title link to `/games/<slug>/`
-   - play button link to `/games/<slug>/`
-6. Add/verify manifest record in `games/manifest.json`.
-7. Verify route resolves to a real directory and page.
-8. Verify script parses without syntax errors.
+5. Add/verify manifest record in `games/manifest.json`.
+   - Recommended: include `added: YYYY-MM-DD` so the hub can show "New" badges.
+6. Do not hand-edit the game tile list in `games/index.md`:
+   - The hub auto-renders cards from `_data/games_manifest.json`.
+   - Genre filters and card previews are generated from `_data/games_card_overrides.json`.
+7. Sync canonical JSON into `_data/`:
+   - `npm run sync:games-data`
+8. Verify route resolves to a real directory and page.
+9. Verify script parses without syntax errors.
 
 ## Integrating with Site Navigation
 
@@ -58,7 +61,7 @@ Primary integration points:
 - Games hub: `games/index.md`
 
 When adding a new section-level route, update header/footer only if needed.
-For game additions, update only `games/index.md` tiles.
+For game additions, update canonical JSON under `games/`, then run `npm run sync:games-data`.
 
 ## Accessibility Baseline
 
@@ -96,11 +99,11 @@ Before finishing changes, run these checks:
 
 1. Route/path checks
    - Header/footer links resolve.
-   - `games/index.md` links resolve to existing folders.
+   - `games/manifest.json` routes resolve to existing folders.
    - `permalink` matches folder name (`/games/<slug>/`).
 2. Script syntax checks
    - Extract each `<script>` from game pages and parse with Node.
-   - `npm run check:games` runs manifest + folder + script checks.
+   - `npm run check:games` runs data sync + manifest + folder + script checks.
 3. Broken link checks
    - `npm run check:links` validates internal href/src targets.
 4. Full local checks
@@ -114,7 +117,7 @@ Before finishing changes, run these checks:
 
 ## Common Pitfalls
 
-- Adding a tile link in `games/index.md` before creating the folder/page.
+- Forgetting to add a new game entry to `games/manifest.json`.
 - Using absolute non-Liquid links instead of `relative_url`.
 - Breaking permalink/folder alignment.
 - Touching global styling when a local game style is sufficient.
@@ -124,6 +127,9 @@ Before finishing changes, run these checks:
 
 - Games hub: `games/index.md`
 - Game manifest: `games/manifest.json`
+- Card overrides: `games/card_overrides.json`
+- Synced data manifest: `_data/games_manifest.json`
+- Synced data overrides: `_data/games_card_overrides.json`
 - Existing game pages: `games/*/index.html`
 - Shared head/theme/perf hints: `_includes/head.html`
 - Shared layout scripts (theme + analytics): `_layouts/default.html`

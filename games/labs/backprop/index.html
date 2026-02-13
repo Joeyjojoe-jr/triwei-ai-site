@@ -1,0 +1,506 @@
+---
+layout: page
+title: Backpropagation Chain Rule Visualiser
+permalink: /games/labs/backprop/
+description: Visualise forward/backward passes of a tiny neural network, compute analytic gradients, and run a finite-difference gradient check.
+---
+
+<div class="lab-wrap">
+  <section class="lab-hero lab-hero--backprop">
+    <div class="lab-hero-copy">
+      <p class="lab-kicker">
+        <img src="{{ '/assets/ui/experimental-tag.svg' | relative_url }}" alt="" aria-hidden="true" />
+        TriWei AI Lab
+      </p>
+      <h2>Backpropagation Chain Rule Visualiser</h2>
+      <p>Trace forward activations, inspect gradients at each node, and validate updates against finite differences.</p>
+      <div class="lab-chip-row">
+        <span class="lab-chip">
+          <img src="{{ '/assets/icons/backprop-graph.svg' | relative_url }}" alt="" aria-hidden="true" />
+          Computational graph
+        </span>
+        <span class="lab-chip">
+          <img src="{{ '/assets/icons/sigmoid-curve.svg' | relative_url }}" alt="" aria-hidden="true" />
+          Chain rule flow
+        </span>
+      </div>
+    </div>
+    <figure class="lab-hero-art">
+      <img src="{{ '/assets/illustrations/neural-network-2-2-1.svg' | relative_url }}" alt="Illustration of a small two-layer neural network." />
+    </figure>
+  </section>
+<details class="help">
+      <summary>How to play + what to look for</summary>
+      <div class="helpBody">
+        <ul>
+  <li><b>Goal:</b> watch the chain rule compute gradients for a tiny 2→2→1 network.</li>
+  <li>Change inputs <code>x₁</code>, <code>x₂</code> and target <code>y</code>. Inspect forward activations and backward partials.</li>
+  <li>Click <b>Step</b> to apply one SGD update using the displayed gradients.</li>
+  <li><b>Keyboard:</b> <kbd>S</kbd>=Step, <kbd>R</kbd>=Reset, <kbd>G</kbd>=Gradient check.</li>
+</ul>
+<p class="note">Real nets have vectorized ops, batching, and careful numerical stability tricks.</p>
+
+<h3>Learning objectives</h3>
+<ul>
+  <li><strong>Concept focus:</strong> understand how the chain rule propagates gradients through a simple neural network.</li>
+  <li><strong>Core definition:</strong> the derivative of a composite function is the product of derivatives along the computational graph.</li>
+  <li><strong>Common mistake:</strong> forgetting to multiply by the activation derivative or mixing up the order of matrix dimensions.</li>
+  <li><strong>Why it matters:</strong> backpropagation is the backbone of training deep neural networks and relies on these same principles.</li>
+  <li><strong>Toy disclaimer:</strong> this two-layer network is for illustration only; real models use batches, vectorized operations and more complex architectures.</li>
+</ul>
+      </div>
+    </details>
+
+  <p>
+    This lab shows backprop “in the small”: a 2→2→1 network. You can step through forward pass values,
+    see the computational graph, then run the backward pass to compute partial derivatives. A finite-difference
+    gradient check verifies one parameter.
+  </p>
+
+  <div class="controls" role="region" aria-label="Controls">
+    <div class="row">
+      <button id="randomize">Randomize sample + weights</button>
+      <button id="reset">Reset baseline weights</button>
+      <button id="forward">Forward</button>
+      <button id="backward">Backward</button>
+      <button id="step">One training step</button>
+      <button id="gradcheck">Gradient check</button>
+
+      <label>Learning rate (η):
+        <input id="lr" type="range" min="0.01" max="1.0" step="0.01" value="0.20"/>
+        <span id="lrVal">0.20</span>
+      </label>
+
+      <!-- Inputs for x₁, x₂ and target y (added for interactivity and gradient checks) -->
+      <label>x₁:
+        <input id="x1" type="number" step="0.1" value="0.5" />
+      </label>
+      <label>x₂:
+        <input id="x2" type="number" step="0.1" value="0.5" />
+      </label>
+      <label>y:
+        <input id="y" type="number" step="0.1" value="0.8" />
+      </label>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>Computational graph</h2>
+      <svg id="graphSvg" viewBox="0 0 520 240" role="img" aria-label="Computational graph diagram"></svg>
+      <p class="small">
+        Backprop is the chain rule applied along this graph. See CS231n:
+        <a href="https://cs231n.github.io/optimization-2/" target="_blank" rel="noopener">optimization-2</a>.
+      </p>
+    </div>
+
+    <div class="panel">
+      <h2>Numbers</h2>
+      <div class="cols">
+        <div>
+          <h3>Inputs / target</h3>
+          <pre id="io"></pre>
+          <h3>Forward values</h3>
+          <pre id="fw"></pre>
+        </div>
+        <div>
+          <h3>Parameters</h3>
+          <pre id="params"></pre>
+          <h3>Gradients</h3>
+          <pre id="grads"></pre>
+          <h3>Grad check</h3>
+          <pre id="gradCheckOut"></pre>
+        </div>
+      </div>
+  <div class="metrics">
+        <div><strong>Loss:</strong> <span id="loss">—</span></div>
+        <!-- Warning area for divergence or numerical errors -->
+        <div id="warn" style="color:red;font-weight:bold"></div>
+      </div>
+    </div>
+  </div>
+
+  <details class="notes">
+    <summary>Math + Sources</summary>
+    <p>
+      Hidden pre-activation: \(z^{(1)} = W^{(1)}x + b^{(1)}\), activation \(a^{(1)}=\sigma(z^{(1)})\).
+      Output: \(\hat y = W^{(2)} a^{(1)} + b^{(2)}\) (linear).
+      Loss: \(L=\frac{1}{2}(\hat y - y)^2\).
+    </p>
+    <p>
+      Backprop gradients follow from the chain rule; for a two-layer network, the standard vectorised formulas
+      are summarized in many course notes, e.g. Stanford CS231n lecture slides and notes:
+      <a href="https://cs231n.github.io/optimization-2/" target="_blank" rel="noopener">CS231n Lecture 4 (PDF)</a>.
+    </p>
+  </details>
+
+  {% include games/common/attribution.html %}
+</div>
+
+<style>
+
+button:focus-visible, input:focus-visible, select:focus-visible{outline:3px solid #111;outline-offset:2px}
+details.help{margin:10px 0 16px;padding:10px 12px;border:1px solid #e5e5e5;border-radius:12px;background:#fff}
+details.help summary{cursor:pointer;font-weight:700}
+details.help .helpBody{margin-top:8px;line-height:1.35}
+details.help kbd{border:1px solid #ccc;border-bottom-width:2px;border-radius:6px;padding:1px 6px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:0.9em;background:#f7f7f7}
+.lab-wrap{max-width:1100px;margin:0 auto;padding:16px}
+.controls{border:1px solid #ddd;border-radius:12px;padding:12px;margin:12px 0}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:8px 0}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:900px){.grid{grid-template-columns:0.95fr 1.05fr}}
+.panel{border:1px solid #eee;border-radius:12px;padding:12px}
+.small{font-size:0.92rem;color:#444}
+.cols{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:700px){.cols{grid-template-columns:1fr 1fr}}
+pre{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:10px;overflow:auto}
+#graphSvg{width:100%;height:auto;display:block}
+.metrics{margin-top:10px}
+</style>
+<link rel="stylesheet" href="{{ '/assets/css/labs-theme.css' | relative_url }}">
+
+<script>
+(function(){
+  const el=id=>document.getElementById(id);
+
+  // Numerically stable sigmoid implementation to avoid overflow for large |z|
+  function sigmoid(z){
+    // For positive z, compute 1/(1+exp(-z)); for negative z use exp(z)/(1+exp(z))
+    if(z >= 0){
+      const ez = Math.exp(-z);
+      return 1/(1 + ez);
+    }else{
+      const ez = Math.exp(z);
+      return ez/(1 + ez);
+    }
+  }
+  function dsigmoid(a){ return a*(1-a); } // derivative wrt z, given a=sigmoid(z)
+
+  // Toy network: x ∈ R^2 -> hidden (2 neurons, sigmoid) -> output (linear), scalar yhat
+  let W1=[[0.6,-0.4],[0.2,0.9]];  // 2x2
+  let b1=[0.0,0.0];
+  let W2=[0.7,-0.3];              // 1x2
+  let b2=0.0;
+
+  // Gradient clipping threshold. Gradients larger in absolute value than this will be scaled down.
+  const CLIP_THRESH = 5.0;
+
+  function forward(x){
+    const z1=[
+      W1[0][0]*x[0] + W1[0][1]*x[1] + b1[0],
+      W1[1][0]*x[0] + W1[1][1]*x[1] + b1[1]
+    ];
+    const a1=[sigmoid(z1[0]), sigmoid(z1[1])];
+    const yhat = W2[0]*a1[0] + W2[1]*a1[1] + b2;
+    return {z1,a1,yhat};
+  }
+
+  function loss(yhat, y){
+    const e=yhat-y;
+    return 0.5*e*e; // MSE for single sample (nice derivatives)
+  }
+
+  function backward(x, y){
+    const f=forward(x);
+    const e = f.yhat - y;
+
+    // dL/dyhat = e
+    const d_yhat = e;
+
+    // Output layer grads
+    const dW2=[d_yhat*f.a1[0], d_yhat*f.a1[1]];
+    const db2=d_yhat;
+
+    // Backprop into hidden activations: dL/da1 = W2^T * d_yhat
+    const da1=[W2[0]*d_yhat, W2[1]*d_yhat];
+
+    // Backprop through sigmoid: dL/dz1 = dL/da1 ⊙ sigmoid'(z1)
+    const dz1=[da1[0]*dsigmoid(f.a1[0]), da1[1]*dsigmoid(f.a1[1])];
+
+    // Hidden layer grads
+    const dW1=[
+      [dz1[0]*x[0], dz1[0]*x[1]],
+      [dz1[1]*x[0], dz1[1]*x[1]]
+    ];
+    const db1=[dz1[0], dz1[1]];
+
+    return {f, e, d_yhat, dW2, db2, da1, dz1, dW1, db1};
+  }
+
+  // ===== Numerical gradient check for one parameter =====
+  function gradCheckOne(){
+    const x=[parseFloat(el("x1").value), parseFloat(el("x2").value)];
+    const y=parseFloat(el("y").value);
+    const eps=1e-4;
+
+    // Compute analytic gradients via backprop
+    const g=backward(x,y);
+    // Helper to compute numeric gradient for a given parameter perturbation
+    function numericGrad(param, idxRow, idxCol){
+      let base;
+      if(param === 'W2'){
+        base = W2[idxCol];
+        W2[idxCol] = base + eps;
+        const lp = loss(forward(x).yhat, y);
+        W2[idxCol] = base - eps;
+        const lm = loss(forward(x).yhat, y);
+        W2[idxCol] = base;
+        return (lp - lm) / (2 * eps);
+      }else if(param === 'b2'){
+        base = b2;
+        b2 = base + eps;
+        const lp = loss(forward(x).yhat, y);
+        b2 = base - eps;
+        const lm = loss(forward(x).yhat, y);
+        b2 = base;
+        return (lp - lm) / (2 * eps);
+      }else if(param === 'W1'){
+        base = W1[idxRow][idxCol];
+        W1[idxRow][idxCol] = base + eps;
+        const lp = loss(forward(x).yhat, y);
+        W1[idxRow][idxCol] = base - eps;
+        const lm = loss(forward(x).yhat, y);
+        W1[idxRow][idxCol] = base;
+        return (lp - lm) / (2 * eps);
+      }else if(param === 'b1'){
+        base = b1[idxRow];
+        b1[idxRow] = base + eps;
+        const lp = loss(forward(x).yhat, y);
+        b1[idxRow] = base - eps;
+        const lm = loss(forward(x).yhat, y);
+        b1[idxRow] = base;
+        return (lp - lm) / (2 * eps);
+      }
+    }
+    // Compare analytic vs numeric for several parameters
+    let out = '';
+    out += 'Param\tAnalytic\tNumeric\t|diff|\n';
+    // W2[0] and W2[1]
+    ['0','1'].forEach((i)=>{
+      const anal = g.dW2[parseInt(i)];
+      const num  = numericGrad('W2', null, parseInt(i));
+      out += `W2[${i}]\t${anal.toFixed(6)}\t${num.toFixed(6)}\t${Math.abs(anal-num).toExponential(2)}\n`;
+    });
+    // b2
+    const analb2 = g.db2;
+    const numb2  = numericGrad('b2');
+    out += `b2\t${analb2.toFixed(6)}\t${numb2.toFixed(6)}\t${Math.abs(analb2-numb2).toExponential(2)}\n`;
+    // W1[0][0], W1[0][1]
+    const analW100 = g.dW1[0][0];
+    const numW100  = numericGrad('W1', 0, 0);
+    out += `W1[0][0]\t${analW100.toFixed(6)}\t${numW100.toFixed(6)}\t${Math.abs(analW100-numW100).toExponential(2)}\n`;
+    const analW101 = g.dW1[0][1];
+    const numW101  = numericGrad('W1', 0, 1);
+    out += `W1[0][1]\t${analW101.toFixed(6)}\t${numW101.toFixed(6)}\t${Math.abs(analW101-numW101).toExponential(2)}\n`;
+    // b1[0]
+    const analb10 = g.db1[0];
+    const numb10  = numericGrad('b1', 0);
+    out += `b1[0]\t${analb10.toFixed(6)}\t${numb10.toFixed(6)}\t${Math.abs(analb10-numb10).toExponential(2)}\n`;
+    el("gradCheckOut").textContent = out;
+  }
+
+  // ===== SVG Computational Graph (vanilla) =====
+  function svg(tag, attrs){
+    const n=document.createElementNS("http://www.w3.org/2000/svg", tag);
+    for(const k in attrs) n.setAttribute(k, attrs[k]);
+    return n;
+  }
+
+  function renderGraph(){
+    const S=el("graphSvg");
+    while(S.firstChild) S.removeChild(S.firstChild);
+
+    const nodes=[
+      {id:"x1", label:"x₁", x:50, y:60},
+      {id:"x2", label:"x₂", x:50, y:160},
+      {id:"z1", label:"z₁", x:210, y:60},
+      {id:"z2", label:"z₂", x:210, y:160},
+      {id:"a1", label:"a₁=σ(z₁)", x:330, y:60},
+      {id:"a2", label:"a₂=σ(z₂)", x:330, y:160},
+      {id:"yhat", label:"ŷ", x:470, y:110},
+    ];
+    const edges=[
+      ["x1","z1"],["x2","z1"],["x1","z2"],["x2","z2"],
+      ["z1","a1"],["z2","a2"],
+      ["a1","yhat"],["a2","yhat"]
+    ];
+
+    // defs for arrow
+    const defs=svg("defs",{});
+    const marker=svg("marker",{id:"arrow", viewBox:"0 0 10 10", refX:"10", refY:"5", markerWidth:"7", markerHeight:"7", orient:"auto-start-reverse"});
+    marker.appendChild(svg("path",{d:"M 0 0 L 10 5 L 0 10 z", fill:"#000"}));
+    defs.appendChild(marker);
+    S.appendChild(defs);
+
+    const byId=Object.fromEntries(nodes.map(n=>[n.id,n]));
+    for(const [a,b] of edges){
+      const A=byId[a], B=byId[b];
+      const line=svg("line",{x1:A.x+26,y1:A.y,x2:B.x-26,y2:B.y,stroke:"#000","stroke-width":"1.5","marker-end":"url(#arrow)"});
+      S.appendChild(line);
+    }
+
+    for(const n of nodes){
+      const g=svg("g",{});
+      const r=svg("rect",{x:n.x-28,y:n.y-18,width:56,height:36,rx:8,ry:8,fill:"#fff",stroke:"#000","stroke-width":"1.5"});
+      const t=svg("text",{x:n.x,y:n.y+5,"text-anchor":"middle","font-size":"14","font-family":"system-ui, -apple-system, Segoe UI, Roboto, sans-serif",fill:"#000"});
+      t.textContent=n.label;
+      g.appendChild(r); g.appendChild(t);
+      S.appendChild(g);
+    }
+  }
+
+  function renderReadout(showBackward){
+    const x=[parseFloat(el("x1").value), parseFloat(el("x2").value)];
+    const y=parseFloat(el("y").value);
+    const g=backward(x,y);
+
+    el("io").textContent =
+      `x = [${x.map(v=>v.toFixed(3)).join(", ")}]
+y = ${y.toFixed(3)}`;
+
+    el("fw").textContent =
+      `z1 = [${g.f.z1.map(v=>v.toFixed(4)).join(", ")}]
+a1 = [${g.f.a1.map(v=>v.toFixed(4)).join(", ")}]
+yhat = ${g.f.yhat.toFixed(6)}
+L = 0.5 * (yhat - y)^2 = ${loss(g.f.yhat,y).toFixed(6)}`;
+
+    el("params").textContent =
+      `W1 = [[${W1[0].map(v=>v.toFixed(4)).join(", ")}], [${W1[1].map(v=>v.toFixed(4)).join(", ")}]]
+b1 = [${b1.map(v=>v.toFixed(4)).join(", ")}]
+W2 = [${W2.map(v=>v.toFixed(4)).join(", ")}]
+b2 = ${b2.toFixed(4)}`;
+
+    if(showBackward){
+      el("grads").textContent =
+        `dL/dyhat = ${g.d_yhat.toFixed(6)}
+dW2 = [${g.dW2.map(v=>v.toFixed(6)).join(", ")}]
+db2 = ${g.db2.toFixed(6)}
+dz1 = [${g.dz1.map(v=>v.toFixed(6)).join(", ")}]
+dW1 = [[${g.dW1[0].map(v=>v.toFixed(6)).join(", ")}], [${g.dW1[1].map(v=>v.toFixed(6)).join(", ")}]]
+db1 = [${g.db1.map(v=>v.toFixed(6)).join(", ")}]`;
+    } else {
+      el("grads").textContent = "Run Backward to inspect gradient values.";
+    }
+
+    // Update displayed loss
+    const currentLoss = loss(g.f.yhat, y);
+    el("loss").textContent = Number.isFinite(currentLoss) ? currentLoss.toFixed(6) : 'NaN';
+
+    el("lrVal").textContent = parseFloat(el("lr").value).toFixed(3);
+
+    // Clear any previous warnings when re-rendering
+    el("warn").textContent = "";
+  }
+
+  function randomizeState(){
+    function rand(min,max){ return min + Math.random()*(max-min); }
+
+    W1=[
+      [rand(-1.2,1.2), rand(-1.2,1.2)],
+      [rand(-1.2,1.2), rand(-1.2,1.2)]
+    ];
+    b1=[rand(-0.4,0.4), rand(-0.4,0.4)];
+    W2=[rand(-1.2,1.2), rand(-1.2,1.2)];
+    b2=rand(-0.4,0.4);
+
+    el("x1").value = rand(-1,1).toFixed(2);
+    el("x2").value = rand(-1,1).toFixed(2);
+    el("y").value = rand(-1,1).toFixed(2);
+    el("gradCheckOut").textContent = "";
+    renderReadout(true);
+  }
+
+  function trainStep(){
+    const lr=parseFloat(el("lr").value);
+    const x=[parseFloat(el("x1").value), parseFloat(el("x2").value)];
+    const y=parseFloat(el("y").value);
+    // Compute current loss before update
+    const fBefore = forward(x);
+    const oldLoss = loss(fBefore.yhat, y);
+
+    const g=backward(x,y);
+
+    // Gradient clipping: scale gradients if any component exceeds threshold
+    // Flatten gradient components and find max absolute value
+    const gradValues = [
+      Math.abs(g.dW2[0]), Math.abs(g.dW2[1]), Math.abs(g.db2),
+      Math.abs(g.dW1[0][0]), Math.abs(g.dW1[0][1]),
+      Math.abs(g.dW1[1][0]), Math.abs(g.dW1[1][1]),
+      Math.abs(g.db1[0]), Math.abs(g.db1[1])
+    ];
+    let maxAbs = 0;
+    for(const val of gradValues) if(val > maxAbs) maxAbs = val;
+    let scale=1;
+    if(maxAbs > CLIP_THRESH && maxAbs > 0){
+      scale = CLIP_THRESH / maxAbs;
+    }
+
+    // Apply scaled gradients
+    W2[0] -= lr * g.dW2[0] * scale;
+    W2[1] -= lr * g.dW2[1] * scale;
+    b2    -= lr * g.db2    * scale;
+    W1[0][0] -= lr * g.dW1[0][0] * scale;
+    W1[0][1] -= lr * g.dW1[0][1] * scale;
+    W1[1][0] -= lr * g.dW1[1][0] * scale;
+    W1[1][1] -= lr * g.dW1[1][1] * scale;
+    b1[0]    -= lr * g.db1[0]    * scale;
+    b1[1]    -= lr * g.db1[1]    * scale;
+
+    // Compute new loss after update
+    const fAfter = forward(x);
+    const newLoss = loss(fAfter.yhat, y);
+
+    // Update displayed loss
+    if(Number.isFinite(newLoss)){
+      el("loss").textContent = newLoss.toFixed(6);
+    }else{
+      el("loss").textContent = 'NaN';
+    }
+
+    // Divergence detection: warn if loss increased significantly or became non-finite
+    let warnMsg = '';
+    if(!Number.isFinite(newLoss)){
+      warnMsg = 'NaN detected: check your learning rate or input values.';
+    } else if(newLoss > oldLoss * 1.01){
+      warnMsg = 'Warning: loss increased; consider lowering the learning rate.';
+    }
+    el('warn').textContent = warnMsg;
+
+    renderReadout(true);
+  }
+
+  function reset(){
+    W1=[[0.6,-0.4],[0.2,0.9]];
+    b1=[0.0,0.0];
+    W2=[0.7,-0.3];
+    b2=0.0;
+    renderReadout(true);
+    el("gradCheckOut").textContent="";
+  }
+
+  // UI wiring
+  ["x1","x2","y"].forEach(id=>el(id).addEventListener("input", ()=>renderReadout(true)));
+  el("lr").addEventListener("input", ()=>{ el("lrVal").textContent=parseFloat(el("lr").value).toFixed(3); });
+  el("randomize").addEventListener("click", randomizeState);
+  el("forward").addEventListener("click", ()=>renderReadout(false));
+  el("backward").addEventListener("click", ()=>renderReadout(true));
+  el("step").addEventListener("click", trainStep);
+  el("reset").addEventListener("click", reset);
+  el("gradcheck").addEventListener("click", gradCheckOne);
+
+  // Keyboard shortcuts: S step, R reset, G gradcheck, F forward, B backward
+  window.addEventListener("keydown", (e)=>{
+    if(e.target && (e.target.tagName==="INPUT" || e.target.tagName==="SELECT" || e.target.tagName==="TEXTAREA")) return;
+    const k=e.key.toLowerCase();
+    if(k==='s') el("step").click();
+    if(k==='r') el("reset").click();
+    if(k==='g') el("gradcheck").click();
+    if(k==='f') el("forward").click();
+    if(k==='b') el("backward").click();
+  });
+
+  // init
+  renderGraph();
+  reset();
+})();
+</script>

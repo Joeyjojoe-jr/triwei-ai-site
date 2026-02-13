@@ -1,0 +1,435 @@
+---
+layout: page
+title: Q-Learning Maze Runner
+permalink: /games/labs/qlearning-grid/
+description: Train an agent in a gridworld via epsilon-greedy Q-learning and visualize Q-values and policy arrows.
+---
+
+<div class="lab-wrap">
+  <section class="lab-hero lab-hero--qlearning">
+    <div class="lab-hero-copy">
+      <p class="lab-kicker">
+        <img src="{{ '/assets/ui/lab-badge.svg' | relative_url }}" alt="" aria-hidden="true" />
+        TriWei AI Lab
+      </p>
+      <h2>Q-Learning Maze Runner</h2>
+      <p>Train an agent with epsilon-greedy exploration and watch value estimates shape an emergent policy.</p>
+      <div class="lab-chip-row">
+        <span class="lab-chip">
+          <img src="{{ '/assets/icons/q-learning-grid.svg' | relative_url }}" alt="" aria-hidden="true" />
+          Q-value updates
+        </span>
+        <span class="lab-chip">
+          <img src="{{ '/assets/icons/heatmap-legend.svg' | relative_url }}" alt="" aria-hidden="true" />
+          Policy heatmaps
+        </span>
+      </div>
+    </div>
+    <figure class="lab-hero-art">
+      <img src="{{ '/assets/illustrations/gridworld.svg' | relative_url }}" alt="Gridworld layout with policy arrows and rewards." />
+    </figure>
+  </section>
+<details class="help">
+      <summary>How to play + what to look for</summary>
+      <div class="helpBody">
+        <ul>
+  <li><b>Goal:</b> learn a policy by trial and error using <b>Q‑learning</b> with ε‑greedy exploration.</li>
+  <li><b>Step</b> = one action update. <b>Episode</b> = run until terminal or max steps.</li>
+  <li>Watch arrows converge as Q values stabilize.</li>
+  <li><b>Keyboard:</b> <kbd>S</kbd>=Step, <kbd>E</kbd>=Episode, <kbd>R</kbd>=Reset.</li>
+</ul>
+
+<h3>Learning objectives</h3>
+<ul>
+  <li><strong>Concept focus:</strong> understand how Q‑learning iteratively updates state–action values using reward signals and discounting.</li>
+  <li><strong>Core definition:</strong> the Q‑update \(Q(s,a) ← (1−α)Q(s,a) + α[r + γ\max_{a'}Q(s',a')]\) blends old estimates with new sampled returns.</li>
+  <li><strong>Common mistake:</strong> setting the discount factor too high or learning rate too large can cause divergence in Q values.</li>
+  <li><strong>Why it matters:</strong> Q‑learning underpins many reinforcement learning algorithms and illustrates how agents can learn optimal policies without a model.</li>
+  <li><strong>Toy disclaimer:</strong> this 8×8 gridworld is a small environment; real RL problems use larger state spaces and function approximators.</li>
+</ul>
+      </div>
+    </details>
+
+  <p>
+    Watch a tiny agent learn to reach a goal in a gridworld using <strong>ε‑greedy Q‑learning</strong>.
+    This is a classic RL toy problem—excellent for intuition, not a substitute for real-world training.
+  </p>
+
+  <div class="controls" role="region" aria-label="Controls">
+    <div class="row">
+      <button id="reset">Reset Q</button>
+      <button id="step">Step</button>
+      <button id="episode">Run 1 episode</button>
+      <button id="train100">Train 100 episodes</button>
+
+      <label>α (learning rate):
+        <input id="alpha" type="range" min="0.01" max="1.0" step="0.01" value="0.30"/>
+        <span id="alphaVal">0.30</span>
+      </label>
+
+      <label>γ (discount):
+        <input id="gamma" type="range" min="0.0" max="0.99" step="0.01" value="0.95"/>
+        <span id="gammaVal">0.95</span>
+      </label>
+
+      <label>ε (exploration):
+        <input id="eps" type="range" min="0.0" max="0.8" step="0.01" value="0.15"/>
+        <span id="epsVal">0.15</span>
+      </label>
+
+      <!-- Learning rate/epsilon decay toggles -->
+      <label>
+        <input id="alphaDecay" type="checkbox" />
+        α decay
+      </label>
+      <label>
+        <input id="epsDecay" type="checkbox" />
+        ε decay
+      </label>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>Gridworld</h2>
+      <canvas id="cv" width="520" height="520" aria-label="Gridworld"></canvas>
+      <div class="metrics" aria-live="polite">
+        <div><strong>Episode:</strong> <span id="ep">0</span></div>
+        <div><strong>Steps:</strong> <span id="steps">0</span></div>
+        <div><strong>Return:</strong> <span id="ret">0</span></div>
+        <!-- Warning area for divergence or numerical errors -->
+        <div id="warn" style="color:red;font-weight:bold"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>What you are seeing</h2>
+      <ul>
+        <li>Each state has 4 Q-values (up/right/down/left). Arrows show the greedy action.</li>
+        <li>ε controls random exploration; α controls how fast Q updates; γ controls future reward weight.</li>
+        <li>Step cost encourages shorter paths; traps end the episode with negative reward.</li>
+      </ul>
+      <p class="small">
+        Q-learning update (Sutton &amp; Barto, RL: An Introduction):
+        <a href="https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf" target="_blank" rel="noopener">SuttonBartoIPRLBook2ndEd.pdf</a>.
+      </p>
+    </div>
+  </div>
+
+  {% include games/common/attribution.html %}
+</div>
+
+<style>
+
+button:focus-visible, input:focus-visible, select:focus-visible{outline:3px solid #111;outline-offset:2px}
+details.help{margin:10px 0 16px;padding:10px 12px;border:1px solid #e5e5e5;border-radius:12px;background:#fff}
+details.help summary{cursor:pointer;font-weight:700}
+details.help .helpBody{margin-top:8px;line-height:1.35}
+details.help kbd{border:1px solid #ccc;border-bottom-width:2px;border-radius:6px;padding:1px 6px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:0.9em;background:#f7f7f7}
+.lab-wrap{max-width:1100px;margin:0 auto;padding:16px}
+.controls{border:1px solid #ddd;border-radius:12px;padding:12px;margin:12px 0}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:8px 0}
+.row label{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:900px){.grid{grid-template-columns:1fr 0.9fr}}
+.panel{border:1px solid #eee;border-radius:12px;padding:12px}
+canvas{border:1px solid #eee;border-radius:12px;max-width:100%;height:auto}
+.metrics{display:flex;gap:18px;flex-wrap:wrap;margin-top:8px}
+.small{font-size:0.92rem;color:#444}
+</style>
+<link rel="stylesheet" href="{{ '/assets/css/labs-theme.css' | relative_url }}">
+
+<script>
+(function(){
+  const cv=document.getElementById("cv");
+  const ctx=cv.getContext("2d");
+  const N=8; // grid size
+  const cell=cv.width/N;
+
+  // Actions: 0 up,1 right,2 down,3 left
+  const A=4;
+
+  // Layout: 0 empty, 1 wall, 2 trap, 3 goal, 4 start
+  // Hand-crafted small maze
+  const grid=[
+    [4,0,0,0,0,0,0,0],
+    [1,1,0,1,1,0,1,0],
+    [0,0,0,0,1,0,1,0],
+    [0,1,1,0,0,0,1,0],
+    [0,0,0,0,1,0,0,0],
+    [0,1,0,1,1,0,1,0],
+    [0,1,0,0,0,0,1,2],
+    [0,0,0,1,0,0,0,3],
+  ];
+  let start={r:0,c:0};
+  let goal={r:7,c:7};
+
+  // Choose a random starting cell that is not a wall, trap, or goal. Helps exploration.
+  function randomStart(){
+    const candidates = [];
+    for(let r=0; r<N; r++){
+      for(let c=0; c<N; c++){
+        const code = grid[r][c];
+        if(code !== 1 && code !== 2 && code !== 3){
+          candidates.push({r, c});
+        }
+      }
+    }
+    if(candidates.length === 0) return {r:start.r, c:start.c};
+    return candidates[Math.floor(Math.random() * candidates.length)];
+  }
+
+  // Q table: Q[s][a]
+  const S=N*N;
+  let Q = Array.from({length:S}, ()=> Array(A).fill(0));
+
+  // Warning message for divergence or numerical issues in Q-learning. Displayed in HUD.
+  let warnMsg = '';
+  // Threshold for absolute Q-value magnitude; beyond this we flag potential divergence.
+  const Q_THRESH = 1e3;
+
+  let agent={r:start.r,c:start.c};
+  let episode=0;
+  let steps=0;
+  let ret=0;
+
+  function sIndex(r,c){ return r*N+c; }
+  function clamp(v,a,b){ return Math.max(a, Math.min(b,v)); }
+
+  function isWall(r,c){
+    if(r<0||r>=N||c<0||c>=N) return true;
+    return grid[r][c]===1;
+  }
+  function isTerminal(r,c){
+    return grid[r][c]===2 || grid[r][c]===3;
+  }
+
+  function stepEnv(action){
+    const dr=[-1,0,1,0];
+    const dc=[0,1,0,-1];
+    let nr=agent.r+dr[action];
+    let nc=agent.c+dc[action];
+    if(isWall(nr,nc)){ nr=agent.r; nc=agent.c; }
+
+    agent.r=nr; agent.c=nc;
+
+    // rewards
+    let r=-0.01; // step cost
+    if(grid[nr][nc]===3) r=+1.0;
+    if(grid[nr][nc]===2) r=-1.0;
+
+    return {r, done:isTerminal(nr,nc)};
+  }
+
+  function argmax(arr){
+    let bi=0,bv=arr[0];
+    for(let i=1;i<arr.length;i++) if(arr[i]>bv){bv=arr[i]; bi=i;}
+    return bi;
+  }
+  function max(arr){
+    let bv=arr[0];
+    for(let i=1;i<arr.length;i++) if(arr[i]>bv) bv=arr[i];
+    return bv;
+  }
+
+  function chooseAction(eps){
+    if(Math.random()<eps) return Math.floor(Math.random()*A);
+    return argmax(Q[sIndex(agent.r,agent.c)]);
+  }
+
+  function qUpdate(alpha,gamma,eps){
+    const s = sIndex(agent.r,agent.c);
+    const a = chooseAction(eps);
+    const {r,done} = stepEnv(a);
+    const s2 = sIndex(agent.r,agent.c);
+
+    const target = done ? r : (r + gamma * max(Q[s2]));
+    // Q-value update using weighted average
+    Q[s][a] = (1 - alpha) * Q[s][a] + alpha * target;
+
+    // If we reached a terminal state, set all Q-values for that terminal state to the immediate reward.
+    if(done){
+      for(let aa = 0; aa < A; aa++){
+        Q[s2][aa] = r;
+      }
+    }
+
+    // Check for numerical issues
+    warnMsg = '';
+    if(!Number.isFinite(Q[s][a])){
+      warnMsg = 'NaN detected in Q-values. Try reducing α or γ.';
+    } else if(Math.abs(Q[s][a]) > Q_THRESH){
+      warnMsg = 'Q-value exploded; lower α or γ.';
+    }
+
+    steps += 1;
+    ret += r;
+
+    return done;
+  }
+
+  function resetEpisode(){
+    // Start each episode from a random non-wall, non-terminal state to encourage exploration
+    agent = randomStart();
+    steps = 0;
+    ret = 0;
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,cv.width,cv.height);
+
+    // Determine the minimum and maximum state values (max Q over actions) for shading.
+    let vMin = Infinity, vMax = -Infinity;
+    for(let r=0;r<N;r++){
+      for(let c=0;c<N;c++){
+        const code = grid[r][c];
+        if(code === 1) continue; // walls are not shaded
+        const s = sIndex(r,c);
+        const val = max(Q[s]);
+        if(Number.isFinite(val)){
+          if(val < vMin) vMin = val;
+          if(val > vMax) vMax = val;
+        }
+      }
+    }
+    // Helper to map a value to a pastel colour based on its sign and magnitude.
+    function valueColor(val){
+      // If no variation, return white
+      if(!Number.isFinite(val) || vMax === vMin){ return "#fff"; }
+      if(val >= 0){
+        const posMax = vMax > 0 ? vMax : 1;
+        const ratio = Math.min(1, Math.max(0, val / posMax));
+        const r = Math.round(255 - ratio * (255 - 195));
+        const g = Math.round(255 - ratio * (255 - 230));
+        const b = Math.round(255 - ratio * (255 - 195));
+        return `rgb(${r},${g},${b})`;
+      } else {
+        const negMin = vMin < 0 ? vMin : -1;
+        const ratio = Math.min(1, Math.max(0, val / negMin));
+        const r = Math.round(255 - ratio * (255 - 248));
+        const g = Math.round(255 - ratio * (255 - 215));
+        const b = Math.round(255 - ratio * (255 - 218));
+        return `rgb(${r},${g},${b})`;
+      }
+    }
+
+    // cells
+    for(let r=0;r<N;r++){
+      for(let c=0;c<N;c++){
+        const code=grid[r][c];
+        // Determine base colour: walls, traps and goals have fixed colours; others get shaded by value.
+        let fill="#fff";
+        if(code===1) fill="#222";
+        else if(code===2) fill="#999";
+        else if(code===3) fill="#ddd";
+        else {
+          const s=sIndex(r,c);
+          const val = max(Q[s]);
+          fill = valueColor(val);
+        }
+        ctx.fillStyle = fill;
+        ctx.fillRect(c*cell, r*cell, cell, cell);
+        ctx.strokeStyle="#ccc";
+        ctx.strokeRect(c*cell, r*cell, cell, cell);
+
+        // policy arrow (greedy) for non-terminal, non-wall
+        if(code!==1 && code!==2 && code!==3){
+          const s=sIndex(r,c);
+          const a=argmax(Q[s]);
+          const cx=c*cell+cell/2, cy=r*cell+cell/2;
+          const len=cell*0.25;
+          const dx=[0,1,0,-1], dy=[-1,0,1,0];
+          ctx.strokeStyle="#000";
+          ctx.beginPath();
+          ctx.moveTo(cx,cy);
+          ctx.lineTo(cx+dx[a]*len, cy+dy[a]*len);
+          ctx.stroke();
+        }
+      }
+    }
+
+    // agent
+    ctx.fillStyle="#ff0000";
+    ctx.beginPath();
+    ctx.arc(agent.c*cell+cell/2, agent.r*cell+cell/2, cell*0.18, 0, 2*Math.PI);
+    ctx.fill();
+  }
+
+  function updateHUD(){
+    document.getElementById("ep").textContent=episode.toString();
+    document.getElementById("steps").textContent=steps.toString();
+    document.getElementById("ret").textContent=ret.toFixed(2);
+    // Display any Q-learning warnings
+    const warnEl=document.getElementById('warn');
+    if(warnEl) warnEl.textContent = warnMsg || '';
+  }
+
+  // UI
+  const el=id=>document.getElementById(id);
+  function syncVals(){
+    el("alphaVal").textContent=parseFloat(el("alpha").value).toFixed(2);
+    el("gammaVal").textContent=parseFloat(el("gamma").value).toFixed(2);
+    el("epsVal").textContent=parseFloat(el("eps").value).toFixed(2);
+  }
+  ["alpha","gamma","eps"].forEach(id=> el(id).addEventListener("input", ()=>{syncVals();}));
+
+  el("reset").addEventListener("click", ()=>{
+    Q = Array.from({length:S}, ()=> Array(A).fill(0));
+    episode=0;
+    resetEpisode();
+    draw(); updateHUD();
+  });
+
+  el("step").addEventListener("click", ()=>{
+    // Compute dynamic learning rate and exploration based on decay toggles
+    const baseAlpha = parseFloat(el("alpha").value);
+    const baseEps   = parseFloat(el("eps").value);
+    const gamma     = parseFloat(el("gamma").value);
+    const useAlphaDecay = el("alphaDecay").checked;
+    const useEpsDecay   = el("epsDecay").checked;
+    const alphaVal = useAlphaDecay ? baseAlpha / (1 + episode / 20) : baseAlpha;
+    const epsVal   = useEpsDecay ? baseEps * Math.exp(-episode / 40) : baseEps;
+    const done = qUpdate(alphaVal, gamma, epsVal);
+    draw(); updateHUD();
+    if(done){
+      episode++;
+      resetEpisode();
+      draw(); updateHUD();
+    }
+  });
+
+  function runEpisode(){
+    // Compute dynamic learning rate and exploration for this episode
+    const baseAlpha = parseFloat(el("alpha").value);
+    const baseEps   = parseFloat(el("eps").value);
+    const gamma     = parseFloat(el("gamma").value);
+    const useAlphaDecay = el("alphaDecay").checked;
+    const useEpsDecay   = el("epsDecay").checked;
+    const alphaVal = useAlphaDecay ? baseAlpha / (1 + episode / 20) : baseAlpha;
+    const epsVal   = useEpsDecay ? baseEps * Math.exp(-episode / 40) : baseEps;
+
+    let done = false;
+    let guard = 0;
+    while(!done && guard < 200){
+      done = qUpdate(alphaVal, gamma, epsVal);
+      guard++;
+    }
+    episode++;
+    resetEpisode();
+  }
+
+  el("episode").addEventListener("click", ()=>{
+    runEpisode();
+    draw(); updateHUD();
+  });
+
+  el("train100").addEventListener("click", ()=>{
+    for(let i=0;i<100;i++) runEpisode();
+    draw(); updateHUD();
+  });
+
+  syncVals();
+  resetEpisode();
+  draw(); updateHUD();
+})();
+</script>

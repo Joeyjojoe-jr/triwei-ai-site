@@ -11,6 +11,7 @@ This document describes the current repository layout for `triwei.ai`.
 |-- _guides/
 |-- _knowledge/
 |-- _posts/
+|-- _data/
 |-- _includes/
 |-- _layouts/
 |-- assets/
@@ -47,6 +48,9 @@ This document describes the current repository layout for `triwei.ai`.
   - `home.html`
   - `page.html`
   - `post.html`
+- `_data/`: build-time JSON used by Liquid templates.
+  - `_data/games_manifest.json`
+  - `_data/games_card_overrides.json`
 - `assets/`: shared static assets.
   - `assets/css/style.css`
   - `assets/fonts/*`
@@ -74,7 +78,10 @@ This document describes the current repository layout for `triwei.ai`.
 Hub:
 
 - `games/index.md` -> `/games/`
-- `games/manifest.json` -> canonical game list for local test tooling
+- `games/manifest.json` -> canonical game list for tooling and sync source
+- `games/card_overrides.json` -> canonical per-slug card override source
+- `_data/games_manifest.json` -> synced build-time source for `/games/` rendering
+- `_data/games_card_overrides.json` -> synced build-time override source for `/games/`
 
 Game directories (each contains `index.html` with permalink `/games/<slug>/`):
 

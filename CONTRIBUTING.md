@@ -47,7 +47,13 @@ This repository publishes `triwei.ai` as a GitHub Pages-compatible Jekyll site.
 4. Add a back link to the games hub:
    - `{{ '/games/' | relative_url }}`
 5. Add or update the game entry in `games/manifest.json`.
-6. Add or update the tile in `games/index.md` with a playable link.
+   - Optional but recommended: set `added: YYYY-MM-DD` to power `/games/` "New" badges.
+6. Do not hand-edit tiles in `games/index.md`:
+   - The hub auto-renders from `_data/games_manifest.json`.
+   - New manifest entries appear automatically on `/games/`.
+7. For card copy/art overrides, edit `games/card_overrides.json` keyed by slug.
+8. Validation auto-sync:
+   - `npm run check:games` now runs `sync:games-data` automatically first.
 
 ## Validation Checklist (Before PR)
 

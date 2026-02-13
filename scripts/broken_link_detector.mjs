@@ -124,6 +124,7 @@ function extractLinks(content) {
   for (const m of hrefSrc) {
     const value = m[1];
     if (value.startsWith('{{')) continue;
+    if (value.includes('${')) continue;
     results.push(value);
   }
 

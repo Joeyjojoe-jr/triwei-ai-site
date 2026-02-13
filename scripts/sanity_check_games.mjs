@@ -7,6 +7,9 @@ const warnings = [];
 const infos = [];
 
 const manifestPath = path.join(root, 'games', 'manifest.json');
+const cardOverridesPath = path.join(root, 'games', 'card_overrides.json');
+const dataManifestPath = path.join(root, '_data', 'games_manifest.json');
+const dataOverridesPath = path.join(root, '_data', 'games_card_overrides.json');
 
 function exists(p) {
   try {
@@ -40,6 +43,13 @@ function readText(filePath) {
     errors.push(`Unable to read file: ${filePath} (${err.message})`);
     return '';
   }
+}
+
+function normalizeSlug(raw) {
+  return String(raw || '')
+    .trim()
+    .replace(/\\/g, '/')
+    .replace(/^\/+|\/+$/g, '');
 }
 
 function parseJs(source, label) {
@@ -78,9 +88,10 @@ function loadManifest() {
       errors.push('Manifest entry is not an object.');
       continue;
     }
-    const slug = String(item.slug || '').trim();
+    const slug = normalizeSlug(item.slug);
     const route = String(item.route || '').trim();
     const title = String(item.title || '').trim();
+    const added = String(item.added || '').trim();
     if (!slug) errors.push('Manifest entry missing slug.');
     if (!title) errors.push(`Manifest entry missing title for slug "${slug || '<unknown>'}".`);
     if (!route) errors.push(`Manifest entry missing route for slug "${slug || '<unknown>'}".`);
@@ -92,6 +103,10 @@ function loadManifest() {
     const expectedRoute = slug ? `/games/${slug}/` : '';
     if (slug && route && route !== expectedRoute) {
       errors.push(`Manifest route mismatch for slug "${slug}". Expected ${expectedRoute}, found ${route}`);
+    }
+
+    if (added && !/^\d{4}-\d{2}-\d{2}$/.test(added)) {
+      errors.push(`Invalid "added" date in manifest for slug "${slug}". Expected YYYY-MM-DD.`);
     }
   }
 
@@ -151,6 +166,7 @@ function collectRoutesFromFile(content) {
   for (const m of hrefSrcMatches) {
     const route = m[1];
     if (route.startsWith('{{')) continue;
+    if (route.includes('${')) continue;
     routes.push(route);
   }
 
@@ -158,7 +174,7 @@ function collectRoutesFromFile(content) {
 }
 
 function checkGameFoldersAndPages(manifest) {
-  const expectedGameDirs = manifest.games.map((g) => g.slug).filter(Boolean);
+  const expectedGameDirs = manifest.games.map((g) => normalizeSlug(g.slug)).filter(Boolean);
   const expectedSet = new Set(expectedGameDirs);
   const gamesDir = path.join(root, 'games');
   if (!isDir(gamesDir)) {
@@ -167,7 +183,7 @@ function checkGameFoldersAndPages(manifest) {
   }
 
   for (const dirName of expectedGameDirs) {
-    const dirPath = path.join(gamesDir, dirName);
+    const dirPath = path.join(gamesDir, ...dirName.split('/'));
     if (!isDir(dirPath)) {
       errors.push(`Expected game folder missing: games/${dirName}`);
       continue;
@@ -178,16 +194,25 @@ function checkGameFoldersAndPages(manifest) {
     }
   }
 
-  const gameDirs = fs
-    .readdirSync(gamesDir, { withFileTypes: true })
-    .filter((d) => d.isDirectory())
-    .map((d) => d.name)
-    .sort();
+  const gamePages = [];
+  function collectGamePages(dirPath) {
+    const entries = fs.readdirSync(dirPath, { withFileTypes: true });
+    for (const entry of entries) {
+      if (!entry.isDirectory()) continue;
+      const subdir = path.join(dirPath, entry.name);
+      const indexPath = path.join(subdir, 'index.html');
+      if (isFile(indexPath)) {
+        gamePages.push(indexPath);
+      }
+      collectGamePages(subdir);
+    }
+  }
+  collectGamePages(gamesDir);
+  gamePages.sort();
 
-  const gamePages = gameDirs
-    .map((d) => path.join(gamesDir, d, 'index.html'))
-    .filter((p) => isFile(p));
-
+  const gameDirs = gamePages.map((p) =>
+    path.relative(gamesDir, path.dirname(p)).replace(/\\/g, '/')
+  );
   const discoveredSet = new Set(gameDirs);
   for (const expected of expectedSet) {
     if (!discoveredSet.has(expected)) {
@@ -208,13 +233,14 @@ function checkGameFoldersAndPages(manifest) {
 }
 
 function checkGamePageLoadAndPermalinks(gamePages) {
+  const gamesDir = path.join(root, 'games');
   for (const pagePath of gamePages) {
     const content = readText(pagePath);
     if (!content) continue;
 
-    const folder = path.basename(path.dirname(pagePath));
+    const relFolder = path.relative(gamesDir, path.dirname(pagePath)).replace(/\\/g, '/');
     const permalink = parseFrontMatterRoute(content, pagePath);
-    const expected = `/games/${folder}/`;
+    const expected = `/games/${relFolder}/`;
     if (permalink && permalink !== expected) {
       errors.push(`Permalink mismatch in ${pagePath}. Expected ${expected}, found ${permalink}`);
     }
@@ -267,9 +293,136 @@ function checkRelativePaths(gamePages) {
   }
 }
 
+function checkGamesHubManifestRendering() {
+  const hubPath = path.join(root, 'games', 'index.md');
+  if (!isFile(hubPath)) {
+    errors.push('Missing games hub page: games/index.md');
+    return;
+  }
+
+  const content = readText(hubPath);
+  if (!content) return;
+
+  if (!content.includes('site.data.games_manifest.games')) {
+    errors.push('games/index.md should render from site.data.games_manifest.games.');
+  }
+  if (!content.includes('site.data.games_card_overrides')) {
+    warnings.push('games/index.md should use site.data.games_card_overrides for card metadata.');
+  }
+
+  if (!/id="game-grid"/.test(content)) {
+    warnings.push('games/index.md is missing #game-grid container.');
+  }
+
+  if (!/id="game-filter-bar"/.test(content)) {
+    warnings.push('games/index.md is missing #game-filter-bar container.');
+  }
+}
+
+function checkCardOverrides(manifest) {
+  if (!isFile(cardOverridesPath)) {
+    warnings.push('Optional card overrides file missing: games/card_overrides.json');
+    return;
+  }
+
+  let data;
+  try {
+    data = JSON.parse(fs.readFileSync(cardOverridesPath, 'utf8'));
+  } catch (err) {
+    errors.push(`Invalid JSON in games/card_overrides.json: ${err.message}`);
+    return;
+  }
+
+  if (!data || typeof data !== 'object') {
+    errors.push('games/card_overrides.json must be a JSON object.');
+    return;
+  }
+
+  const map = data.games && typeof data.games === 'object' && !Array.isArray(data.games)
+    ? data.games
+    : data;
+  if (!map || typeof map !== 'object' || Array.isArray(map)) {
+    errors.push('games/card_overrides.json must be an object map keyed by slug.');
+    return;
+  }
+
+  const manifestSlugs = new Set(manifest.games.map((g) => normalizeSlug(g.slug)).filter(Boolean));
+  for (const [rawSlug, value] of Object.entries(map)) {
+    const slug = normalizeSlug(rawSlug);
+    if (!slug) {
+      warnings.push('Found empty slug key in games/card_overrides.json.');
+      continue;
+    }
+    if (!manifestSlugs.has(slug)) {
+      warnings.push(`Card override slug not found in manifest: ${slug}`);
+    }
+    if (value && typeof value === 'object') {
+      if ('meta' in value && typeof value.meta !== 'string') {
+        errors.push(`Card override "meta" must be a string for slug: ${slug}`);
+      }
+      if ('summary' in value && typeof value.summary !== 'string') {
+        errors.push(`Card override "summary" must be a string for slug: ${slug}`);
+      }
+      if ('icon' in value && typeof value.icon !== 'string') {
+        errors.push(`Card override "icon" must be a string for slug: ${slug}`);
+      }
+      if ('thumb' in value && typeof value.thumb !== 'string') {
+        errors.push(`Card override "thumb" must be a string for slug: ${slug}`);
+      }
+      if ('button' in value && typeof value.button !== 'string') {
+        errors.push(`Card override "button" must be a string for slug: ${slug}`);
+      }
+      if ('new_label' in value && typeof value.new_label !== 'string') {
+        errors.push(`Card override "new_label" must be a string for slug: ${slug}`);
+      }
+    } else if (value !== null && value !== undefined) {
+      errors.push(`Card override entry must be an object for slug: ${slug}`);
+    }
+  }
+}
+
+function checkDataSync() {
+  if (!isFile(dataManifestPath)) {
+    errors.push('Missing synced data file: _data/games_manifest.json');
+  }
+  if (!isFile(dataOverridesPath)) {
+    errors.push('Missing synced data file: _data/games_card_overrides.json');
+  }
+  if (errors.length > 0) return;
+
+  const sourceManifest = readText(manifestPath);
+  const sourceOverrides = readText(cardOverridesPath);
+  const dataManifest = readText(dataManifestPath);
+  const dataOverrides = readText(dataOverridesPath);
+  if (!sourceManifest || !sourceOverrides || !dataManifest || !dataOverrides) return;
+
+  try {
+    const a = JSON.stringify(JSON.parse(sourceManifest));
+    const b = JSON.stringify(JSON.parse(dataManifest));
+    if (a !== b) {
+      errors.push('games/manifest.json and _data/games_manifest.json are out of sync. Run npm run sync:games-data.');
+    }
+  } catch (err) {
+    errors.push(`Unable to compare manifest sync state: ${err.message}`);
+  }
+
+  try {
+    const a = JSON.stringify(JSON.parse(sourceOverrides));
+    const b = JSON.stringify(JSON.parse(dataOverrides));
+    if (a !== b) {
+      errors.push('games/card_overrides.json and _data/games_card_overrides.json are out of sync. Run npm run sync:games-data.');
+    }
+  } catch (err) {
+    errors.push(`Unable to compare card override sync state: ${err.message}`);
+  }
+}
+
 function run() {
   const manifest = loadManifest();
   const { gameDirs, gamePages } = checkGameFoldersAndPages(manifest);
+  checkGamesHubManifestRendering();
+  checkCardOverrides(manifest);
+  checkDataSync();
   checkGamePageLoadAndPermalinks(gamePages);
   checkScripts(gamePages);
   checkRelativePaths(gamePages);

@@ -1,0 +1,92 @@
+{
+  "games": {
+    "orbit-runner": {
+      "meta": "Arcade - 2-3 min runs",
+      "summary": "Slingshot around gravity wells and survive longer each run."
+    },
+    "circuit-flip": {
+      "meta": "Puzzle - 5-8 min",
+      "summary": "Rotate tiles to route power from Source to Core efficiently."
+    },
+    "signal-drift": {
+      "meta": "Timing - 1-2 min rounds",
+      "summary": "One-button timing challenge with escalating tempo."
+    },
+    "vector-vault": {
+      "meta": "Arcade - Precision flight",
+      "summary": "Precision flight through narrowing gate windows."
+    },
+    "logic-lattice": {
+      "meta": "Logic - Constraint puzzle",
+      "summary": "Chain constraints to solve each logic board."
+    },
+    "flux-line": {
+      "meta": "Reflex - Pointer control",
+      "summary": "Keep a drifting beam centered through shifting lanes."
+    },
+    "pulse-stack": {
+      "meta": "Rhythm - Stacking",
+      "summary": "Time each drop to build a stable rhythm tower."
+    },
+    "grid-hopper": {
+      "meta": "Puzzle - Move planning",
+      "summary": "Plan exact steps as each move reshapes the board."
+    },
+    "echo-trace": {
+      "meta": "Memory - Sequence replay",
+      "summary": "Replay delayed directional sequences from memory."
+    },
+    "pattern-relay": {
+      "meta": "Logic - Pattern transforms",
+      "summary": "Transform matrix patterns to match the target state."
+    },
+    "tempo-matrix": {
+      "meta": "Timing - Multi-lane lock",
+      "summary": "Lock moving markers inside shrinking timing windows."
+    },
+    "quantum-swap": {
+      "meta": "Puzzle - Row/column shifts",
+      "summary": "Rotate rows and columns to match the target matrix."
+    },
+    "labs/linreg": {
+      "meta": "AI/ML Lab - Linear models",
+      "summary": "Fit a line, run gradient descent, and verify derivatives.",
+      "icon": "/assets/icons/gradient-descent-arrow.svg",
+      "thumb": "/assets/illustrations/loss-surface.svg",
+      "button": "Open Lab",
+      "new_label": "New"
+    },
+    "labs/overfitting": {
+      "meta": "AI/ML Lab - Generalization",
+      "summary": "Compare train/test error as model complexity increases.",
+      "icon": "/assets/icons/bias-variance-scale.svg",
+      "thumb": "/assets/illustrations/decision-boundary.svg",
+      "button": "Open Lab",
+      "new_label": "New"
+    },
+    "labs/backprop": {
+      "meta": "AI/ML Lab - Neural nets",
+      "summary": "Trace forward/backward passes and validate gradients.",
+      "icon": "/assets/icons/backprop-graph.svg",
+      "thumb": "/assets/illustrations/neural-network-2-2-1.svg",
+      "button": "Open Lab",
+      "new_label": "New"
+    },
+    "labs/knn-vs-logreg": {
+      "meta": "AI/ML Lab - Classification",
+      "summary": "Draw points and compare local k-NN vs linear logistic boundaries.",
+      "icon": "/assets/icons/knn-clusters.svg",
+      "thumb": "/assets/illustrations/decision-boundary.svg",
+      "button": "Open Lab",
+      "new_label": "New"
+    },
+    "labs/qlearning-grid": {
+      "meta": "AI/ML Lab - Reinforcement learning",
+      "summary": "Train a gridworld agent and watch policy arrows converge.",
+      "icon": "/assets/icons/q-learning-grid.svg",
+      "thumb": "/assets/illustrations/gridworld.svg",
+      "button": "Open Lab",
+      "new_label": "New"
+    }
+  }
+}

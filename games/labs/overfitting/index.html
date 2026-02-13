@@ -1,0 +1,566 @@
+---
+layout: page
+title: Overfitting vs Underfitting Explorer
+permalink: /games/labs/overfitting/
+description: Fit polynomial models (degree 1–12) to noisy data, compare train vs test loss, and explore L2 regularization.
+---
+
+<div class="lab-wrap">
+  <section class="lab-hero lab-hero--overfitting">
+    <div class="lab-hero-copy">
+      <p class="lab-kicker">
+        <img src="{{ '/assets/ui/educational-badge.svg' | relative_url }}" alt="" aria-hidden="true" />
+        TriWei AI Lab
+      </p>
+      <h2>Overfitting vs Underfitting Explorer</h2>
+      <p>Stress-test polynomial models, compare train and test behavior, then control complexity with regularization.</p>
+      <div class="lab-chip-row">
+        <span class="lab-chip">
+          <img src="{{ '/assets/icons/bias-variance-scale.svg' | relative_url }}" alt="" aria-hidden="true" />
+          Bias-variance tradeoff
+        </span>
+        <span class="lab-chip">
+          <img src="{{ '/assets/icons/polynomial-curve.svg' | relative_url }}" alt="" aria-hidden="true" />
+          Model capacity
+        </span>
+      </div>
+    </div>
+    <figure class="lab-hero-art">
+      <img src="{{ '/assets/illustrations/decision-boundary.svg' | relative_url }}" alt="Illustration of decision and model boundary regions." />
+    </figure>
+  </section>
+<details class="help">
+      <summary>How to play + what to look for</summary>
+      <div class="helpBody">
+        <ul>
+  <li><b>Goal:</b> see how polynomial degree controls <b>underfitting</b> (too simple) vs <b>overfitting</b> (too wiggly).</li>
+  <li>Use <b>Degree</b> (1–12). Compare <b>train loss</b> (dashed) vs <b>test loss</b> (solid) across degrees.</li>
+  <li>Increase <b>L2 λ</b> to penalize large weights and reduce overfitting.</li>
+  <li><b>Keyboard:</b> <kbd>F</kbd>=Fit, <kbd>X</kbd>=Regenerate, <kbd>G</kbd>=Gradient check.</li>
+</ul>
+<p class="note">This demo uses gradient descent, not a closed-form solver. Real workflows tune λ via validation.</p>
+
+<h3>Learning objectives</h3>
+<ul>
+  <li><strong>Concept focus:</strong> explore how model complexity and regularization affect underfitting and overfitting.</li>
+  <li><strong>Core definition:</strong> polynomial regression approximates functions with basis functions \(\phi_j(x)=x^j/j!\) and is trained using gradient descent on MSE plus L2 penalty.</li>
+  <li><strong>Common mistake:</strong> increasing the degree without enough data leads to wildly oscillating curves that do not generalize.</li>
+  <li><strong>Why it matters:</strong> understanding the bias–variance tradeoff and regularization is crucial for building generalizable models.</li>
+  <li><strong>Toy disclaimer:</strong> the factorial scaling and small sample sizes are for stability and visualization; real models use feature scaling and cross-validation.</li>
+</ul>
+      </div>
+    </details>
+
+  <p>
+    Generate a noisy dataset, fit a polynomial, and watch what happens to <em>train</em> vs <em>test</em> loss as you change model complexity.
+    This is a toy setting. Use it to build intuition, not to predict the universe.
+  </p>
+
+  <div class="controls" role="region" aria-label="Controls">
+    <div class="row">
+      <button id="regen">Regenerate data</button>
+
+      <label>Degree (d):
+        <input id="degree" type="range" min="1" max="12" step="1" value="3"/>
+        <span id="degreeVal">3</span>
+      </label>
+
+      <label>L2 λ:
+        <input id="lambda" type="range" min="0" max="1" step="0.01" value="0.00"/>
+        <span id="lambdaVal">0.00</span>
+      </label>
+
+      <!-- Penalty type: L2 or L1 -->
+      <label>Penalty:
+        <select id="penalty">
+          <option value="l2">L2 (Ridge)</option>
+          <option value="l1">L1 (Lasso)</option>
+        </select>
+      </label>
+
+      <label>Train/Test split:
+        <input id="split" type="range" min="0.5" max="0.9" step="0.05" value="0.8"/>
+        <span id="splitVal">0.80</span>
+      </label>
+    </div>
+
+    <div class="row">
+      <label>Learning rate (η):
+        <input id="lr" type="range" min="0.001" max="0.5" step="0.001" value="0.05"/>
+        <span id="lrVal">0.050</span>
+      </label>
+
+      <label>Steps:
+        <input id="steps" type="number" min="10" max="5000" value="800"/>
+      </label>
+
+      <button id="fit">Fit polynomial</button>
+      <button id="gradcheck">Gradient check</button>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>Fit</h2>
+      <canvas id="curveCanvas" width="640" height="360" aria-label="Points and fitted polynomial"></canvas>
+      <div class="metrics" aria-live="polite">
+        <div><strong>Train MSE:</strong> <span id="trainMSE">—</span></div>
+        <div><strong>Test MSE:</strong> <span id="testMSE">—</span></div>
+        <!-- Warning area for divergence or numerical errors -->
+        <div id="warn" style="color:red;font-weight:bold"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Train vs Test loss across degree</h2>
+      <p class="small">
+        This curve often shows the classic “overfitting” pattern: training error drops with more capacity,
+        but test error can rise after a point.
+      </p>
+      <canvas id="lossCanvas" width="520" height="360" aria-label="Train and test loss versus degree"></canvas>
+    </div>
+  </div>
+
+  <details class="notes">
+    <summary>Math + Sources</summary>
+    <p>
+      We model \(\hat y(x)=\sum_{j=0}^{d} w_j \, \phi_j(x)\) with \(\phi_j(x)=x^j/j!\) for stability.
+      Loss: \(L=\frac{1}{n}\sum_i(\hat y_i-y_i)^2 + \lambda\sum_j w_j^2\).
+      Gradient: \(\partial L/\partial w_j = \frac{2}{n}\sum_i(\hat y_i-y_i)\phi_j(x_i) + 2\lambda w_j\).
+    </p>
+    <p>
+      Under/overfitting intuition and polynomial example:
+      <a href="https://classic.d2l.ai/chapter_multilayer-perceptrons/underfit-overfit.html" target="_blank" rel="noopener">Dive into Deep Learning – underfit/overfit</a>.
+      D2L also notes scaling monomials by \(1/j!\) to avoid huge values for large degrees.
+    </p>
+  </details>
+
+  {% include games/common/attribution.html %}
+</div>
+
+<style>
+
+button:focus-visible, input:focus-visible, select:focus-visible{outline:3px solid #111;outline-offset:2px}
+details.help{margin:10px 0 16px;padding:10px 12px;border:1px solid #e5e5e5;border-radius:12px;background:#fff}
+details.help summary{cursor:pointer;font-weight:700}
+details.help .helpBody{margin-top:8px;line-height:1.35}
+details.help kbd{border:1px solid #ccc;border-bottom-width:2px;border-radius:6px;padding:1px 6px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:0.9em;background:#f7f7f7}
+.lab-wrap{max-width:1100px;margin:0 auto;padding:16px}
+.controls{border:1px solid #ddd;border-radius:12px;padding:12px;margin:12px 0}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:8px 0}
+.row label{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:900px){.grid{grid-template-columns:1.2fr 0.8fr}}
+.panel{border:1px solid #eee;border-radius:12px;padding:12px}
+.small{font-size:0.92rem;color:#444}
+.metrics{display:flex;gap:18px;flex-wrap:wrap;margin-top:8px}
+#curveCanvas,#lossCanvas{width:100%;height:auto;display:block}
+</style>
+<link rel="stylesheet" href="{{ '/assets/css/labs-theme.css' | relative_url }}">
+
+<!-- shared math utilities (stable sigmoid, sign, gradient clipping) -->
+<script src="{{ '/games/common/math.js' | relative_url }}"></script>
+
+<script>
+(function(){
+  // ===== helpers =====
+  function randn(){
+    let u=0,v=0; while(u===0) u=Math.random(); while(v===0) v=Math.random();
+    return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);
+  }
+  const el=id=>document.getElementById(id);
+
+  function setupHiDPICanvas(canvas){
+    const dpr = window.devicePixelRatio || 1;
+    const rect = canvas.getBoundingClientRect();
+    const cssW = rect.width || canvas.width;
+    const cssH = rect.height || canvas.height;
+    canvas.width = Math.round(cssW * dpr);
+    canvas.height = Math.round(cssH * dpr);
+    const ctx = canvas.getContext("2d");
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    return ctx;
+  }
+
+  // Gradient clipping threshold. If any gradient component exceeds this in magnitude,
+  // all gradients will be scaled down. Helps avoid exploding values when lr is high or degree large.
+  const CLIP_THRESH = 5.0;
+
+  // Penalty type: 'l2' (Ridge) or 'l1' (Lasso). Default to L2.
+  let penType = 'l2';
+
+  // ===== polynomial basis =====
+  const maxD=12;
+  const fact=[1]; for(let i=1;i<=maxD;i++) fact[i]=fact[i-1]*i;
+  function phi(x,j){ return Math.pow(x,j)/fact[j]; } // stability trick for demo
+
+  // ===== data =====
+  let data=[], train=[], test=[];
+  function genData(){
+    const pts=[];
+    for(let i=0;i<90;i++){
+      const x = -1 + 2*Math.random();
+      const y = 5 + 1.2*x - 3.4*phi(x,2) + 5.6*phi(x,3) + 0.25*randn();
+      pts.push({x,y});
+    }
+    return pts;
+  }
+  function split(frac){
+    const s=data.slice().sort(()=>Math.random()-0.5);
+    const cut=Math.floor(frac*s.length);
+    train=s.slice(0,cut);
+    test=s.slice(cut);
+  }
+
+  // ===== model / loss / gradient =====
+  function predict(x,w,d){
+    let y=0;
+    for(let j=0;j<=d;j++) y += w[j]*phi(x,j);
+    return y;
+  }
+
+  function loss(ds, w, d, lambda, pen){
+    // Compute mean squared error plus regularization term depending on pen ('l2' or 'l1').
+    let sumSq = 0;
+    for(const p of ds){
+      const e = predict(p.x, w, d) - p.y;
+      sumSq += e * e;
+    }
+    const mse = sumSq / ds.length;
+    let reg = 0;
+    if(pen === 'l1'){
+      for(let j = 0; j <= d; j++) reg += Math.abs(w[j]);
+      return mse + lambda * reg;
+    } else { // default L2
+      for(let j = 0; j <= d; j++) reg += w[j] * w[j];
+      return mse + lambda * reg;
+    }
+  }
+
+  function grad(ds, w, d, lambda, pen){
+    // Compute gradient of MSE + penalty
+    const n = ds.length;
+    const g = new Array(d + 1).fill(0);
+    for(const p of ds){
+      const yhat = predict(p.x, w, d);
+      const e = yhat - p.y;
+      for(let j = 0; j <= d; j++){
+        g[j] += (2 / n) * e * phi(p.x, j);
+      }
+    }
+    // Add regularisation gradient
+    if(pen === 'l1'){
+      for(let j = 0; j <= d; j++){
+        g[j] += lambda * MLab.sign(w[j]);
+      }
+    } else { // L2
+      for(let j = 0; j <= d; j++){
+        g[j] += 2 * lambda * w[j];
+      }
+    }
+    return g;
+  }
+
+  function fit(d, lr, steps, lambda, pen){
+    let w = new Array(d + 1).fill(0);
+    for(let t = 0; t < steps; t++){
+      const g = grad(train, w, d, lambda, pen);
+      // Gradient clipping: scale if any component is too large
+      let maxAbs = 0;
+      for(let j = 0; j <= d; j++){
+        const absVal = Math.abs(g[j]);
+        if(absVal > maxAbs) maxAbs = absVal;
+      }
+      let scale = 1;
+      if(maxAbs > CLIP_THRESH && maxAbs > 0){
+        scale = CLIP_THRESH / maxAbs;
+      }
+      for(let j = 0; j <= d; j++){
+        w[j] -= lr * g[j] * scale;
+      }
+    }
+    return w;
+  }
+
+  // ===== gradient check =====
+  function gradCheck(d,lambda){
+    if(train.length===0){ alert("No data."); return; }
+    let w=new Array(d+1).fill(0).map(()=> (Math.random()-0.5));
+    const g=grad(train,w,d,lambda, penType);
+    const k=Math.min(2,d); // choose a small index for stability
+    const eps=1e-4;
+    const base=w[k];
+    w[k]=base+eps; const lp=loss(train,w,d,lambda, penType);
+    w[k]=base-eps; const lm=loss(train,w,d,lambda, penType);
+    const num=(lp-lm)/(2*eps);
+    w[k]=base;
+    alert(
+      `Gradient check (parameter w_${k}):
+`+
+      `analytic=${g[k].toFixed(6)}, numeric=${num.toFixed(6)}, |diff|=${Math.abs(g[k]-num).toExponential(2)}
+
+`+
+      `Rule of thumb: diffs ~1e-4 or smaller are usually fine for this toy.`
+    );
+  }
+
+  // ===== plotting (Canvas) =====
+  const curveCanvas=el("curveCanvas");
+  const lossCanvas=el("lossCanvas");
+
+  const xMin=-1, xMax=1;
+  const yMin=-2, yMax=8;
+  const pad={l:45,r:15,t:10,b:35};
+
+  function xToPx(x,W){ return pad.l + (x-xMin)/(xMax-xMin)*(W-pad.l-pad.r); }
+  function yToPy(y,H){ return (H-pad.b) - (y-yMin)/(yMax-yMin)*(H-pad.t-pad.b); }
+
+  function drawAxes(ctx,W,H){
+    ctx.save();
+    ctx.strokeStyle="#000"; ctx.fillStyle="#000"; ctx.lineWidth=1;
+    ctx.beginPath(); ctx.moveTo(pad.l,H-pad.b); ctx.lineTo(W-pad.r,H-pad.b); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(pad.l,pad.t); ctx.lineTo(pad.l,H-pad.b); ctx.stroke();
+    ctx.font="12px system-ui, -apple-system, Segoe UI, Roboto, sans-serif";
+
+    for(let t=-1;t<=1+1e-9;t+=0.5){
+      const px=xToPx(t,W);
+      ctx.beginPath(); ctx.moveTo(px,H-pad.b); ctx.lineTo(px,H-pad.b+5); ctx.stroke();
+      ctx.fillText(t.toFixed(1), px-10, H-10);
+    }
+    for(let t=-2;t<=8;t+=2){
+      const py=yToPy(t,H);
+      ctx.beginPath(); ctx.moveTo(pad.l-5,py); ctx.lineTo(pad.l,py); ctx.stroke();
+      ctx.fillText(t.toFixed(0), 8, py+4);
+    }
+    ctx.restore();
+  }
+
+  function drawCurve(w,d){
+    const ctx=setupHiDPICanvas(curveCanvas);
+    const rect=curveCanvas.getBoundingClientRect();
+    const W=rect.width||640, H=rect.height||360;
+
+    ctx.clearRect(0,0,W,H);
+    drawAxes(ctx,W,H);
+
+    // points
+    ctx.fillStyle="#111"; ctx.globalAlpha=0.9;
+    for(const p of data){
+      const px=xToPx(p.x,W), py=yToPy(p.y,H);
+      ctx.beginPath(); ctx.arc(px,py,3,0,2*Math.PI); ctx.fill();
+    }
+    ctx.globalAlpha=1.0;
+
+    // fitted curve
+    ctx.beginPath();
+    for(let i=0;i<=220;i++){
+      const x = xMin + (xMax-xMin)*i/220;
+      const y = predict(x,w,d);
+      const px=xToPx(x,W), py=yToPy(y,H);
+      if(i===0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
+    }
+    ctx.strokeStyle="#000"; ctx.lineWidth=2; ctx.stroke();
+    ctx.lineWidth=1;
+  }
+
+  function drawLoss(points){
+    const ctx=setupHiDPICanvas(lossCanvas);
+    const rect=lossCanvas.getBoundingClientRect();
+    const W=rect.width||520, H=rect.height||360;
+
+    // y autoscale (cap to keep readable)
+    const ymax = Math.max(1, ...points.map(p=>Math.max(p.train,p.test)));
+    const y0=0, y1=Math.min(10, Math.max(2, ymax*1.1));
+
+    function xPx(d){ return pad.l + (d-1)/(maxD-1)*(W-pad.l-pad.r); }
+    function yPy(v){ return (H-pad.b) - (v-y0)/(y1-y0)*(H-pad.t-pad.b); }
+
+    ctx.clearRect(0,0,W,H);
+
+    // axes
+    ctx.save();
+    ctx.strokeStyle="#000"; ctx.fillStyle="#000";
+    ctx.beginPath(); ctx.moveTo(pad.l,H-pad.b); ctx.lineTo(W-pad.r,H-pad.b); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(pad.l,pad.t); ctx.lineTo(pad.l,H-pad.b); ctx.stroke();
+    ctx.font="12px system-ui, -apple-system, Segoe UI, Roboto, sans-serif";
+    for(let d=1; d<=maxD; d++){
+      const px=xPx(d);
+      ctx.beginPath(); ctx.moveTo(px,H-pad.b); ctx.lineTo(px,H-pad.b+5); ctx.stroke();
+      if(d%2===0) ctx.fillText(String(d), px-4, H-10);
+    }
+    for(let v=0; v<=y1+1e-9; v+=2){
+      const py=yPy(v);
+      ctx.beginPath(); ctx.moveTo(pad.l-5,py); ctx.lineTo(pad.l,py); ctx.stroke();
+      ctx.fillText(v.toFixed(0), 8, py+4);
+    }
+    ctx.restore();
+
+    // test (solid)
+    ctx.beginPath();
+    for(let i=0;i<points.length;i++){
+      const p=points[i];
+      const px=xPx(p.d), py=yPy(p.test);
+      if(i===0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
+    }
+    ctx.strokeStyle="#000"; ctx.lineWidth=2; ctx.stroke();
+
+    // train (dashed)
+    ctx.setLineDash([5,4]);
+    ctx.beginPath();
+    for(let i=0;i<points.length;i++){
+      const p=points[i];
+      const px=xPx(p.d), py=yPy(p.train);
+      if(i===0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
+    }
+    ctx.strokeStyle="#333"; ctx.lineWidth=2; ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.lineWidth=1;
+
+    // --- Visual enhancement: shade the area between train and test curves ---
+    // To help learners see the bias–variance gap, fill the region between the test
+    // (solid) and train (dashed) loss curves with a light colour.  We build a
+    // closed path that first traces the test curve across increasing degree
+    // and then traces back along the train curve in reverse order.  The fill
+    // colour is semi‑transparent to avoid obscuring the curves themselves.
+    if(points.length > 1){
+      ctx.save();
+      ctx.beginPath();
+      // trace the test loss curve
+      for(let i=0;i<points.length;i++){
+        const p=points[i];
+        const px=xPx(p.d), py=yPy(p.test);
+        if(i===0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
+      }
+      // trace back along the train loss curve
+      for(let i=points.length-1;i>=0;i--){
+        const p=points[i];
+        const px=xPx(p.d), py=yPy(p.train);
+        ctx.lineTo(px,py);
+      }
+      ctx.closePath();
+      // choose a gentle yellow/orange tint for the gap
+      ctx.fillStyle = "rgba(255, 200, 64, 0.18)";
+      ctx.fill();
+      ctx.restore();
+    }
+
+    // legend
+    ctx.fillStyle="#000";
+    ctx.fillText("Test loss (solid)", pad.l+6, pad.t+16);
+    ctx.fillStyle="#333";
+    ctx.fillText("Train loss (dashed)", pad.l+6, pad.t+32);
+  }
+
+  // ===== caching sweep =====
+  let sweepCache = null; // {key, points}
+  function sweepKey(lambda, frac){
+    // dataset changes are handled by resetting cache on regen
+    return `${lambda.toFixed(3)}|${frac.toFixed(2)}|${penType}|${train.length}|${test.length}`;
+  }
+
+  function computeSweep(lambda, frac){
+    const key = sweepKey(lambda, frac);
+    if(sweepCache && sweepCache.key === key) return sweepCache.points;
+
+    const points=[];
+    // quick fit for sweep; lower steps for mobile
+    const sweepLR=0.03, sweepSteps=450;
+    for(let d=1; d<=maxD; d++){
+      const w = fit(d, sweepLR, sweepSteps, lambda, penType);
+      points.push({d, train:loss(train,w,d,lambda, penType), test:loss(test,w,d,lambda, penType)});
+    }
+    sweepCache = {key, points};
+    return points;
+  }
+
+  // ===== UI / render =====
+  function refresh(){
+    const d=parseInt(el("degree").value,10);
+    const lambda=parseFloat(el("lambda").value);
+    const lr=parseFloat(el("lr").value);
+    const steps=parseInt(el("steps").value,10);
+    const frac=parseFloat(el("split").value);
+
+    el("degreeVal").textContent=d;
+    el("lambdaVal").textContent=lambda.toFixed(2);
+    el("lrVal").textContent=lr.toFixed(3);
+    el("splitVal").textContent=frac.toFixed(2);
+
+    // Fit model and compute metrics
+    const w = fit(d, lr, steps, lambda, penType);
+    const trainLoss = loss(train, w, d, lambda, penType);
+    const testLoss  = loss(test , w, d, lambda, penType);
+    el("trainMSE").textContent = Number.isFinite(trainLoss) ? trainLoss.toFixed(4) : 'NaN';
+    el("testMSE").textContent  = Number.isFinite(testLoss)  ? testLoss.toFixed(4)  : 'NaN';
+
+    // Divergence or instability detection
+    let warnMsg='';
+    const maxWeight = Math.max(...w.map(v=>Math.abs(v)));
+    if(!Number.isFinite(trainLoss) || !Number.isFinite(testLoss)){
+      warnMsg='NaN detected: try reducing learning rate or increasing λ.';
+    } else if(maxWeight > 1e3){
+      warnMsg='Weights are extremely large; consider lowering the learning rate or raising λ.';
+    }
+    el('warn').textContent = warnMsg;
+
+    drawCurve(w,d);
+
+    // only recompute sweep when lambda/split/data changes (cache)
+    const sweepPoints = computeSweep(lambda, frac);
+    drawLoss(sweepPoints);
+  }
+
+  function onLambdaOrSplitChanged(){
+    // cache key includes lambda/split lengths, so refresh is enough
+    refresh();
+  }
+
+  // Events
+  el("regen").addEventListener("click", ()=>{
+    data=genData();
+    split(parseFloat(el("split").value));
+    sweepCache=null; // dataset changed
+    refresh();
+  });
+
+  el("degree").addEventListener("input", refresh);
+  el("lr").addEventListener("input", refresh);
+  el("fit").addEventListener("click", refresh);
+
+  el("lambda").addEventListener("input", onLambdaOrSplitChanged);
+  el("split").addEventListener("input", ()=>{
+    split(parseFloat(el("split").value));
+    onLambdaOrSplitChanged();
+  });
+
+  // Penalty type selector: update penType and recompute sweep/cache
+  el("penalty").addEventListener("change", ()=>{
+    penType = el("penalty").value;
+    // Reset sweep cache because penalty changed
+    sweepCache = null;
+    refresh();
+  });
+
+  el("gradcheck").addEventListener("click", ()=>{
+    const d=parseInt(el("degree").value,10);
+    const lambda=parseFloat(el("lambda").value);
+    gradCheck(d,lambda);
+  });
+
+  window.addEventListener("resize", refresh);
+
+  // Keyboard shortcuts: F fit, X regenerate, G gradcheck
+  window.addEventListener("keydown", (e)=>{
+    if(e.target && (e.target.tagName==="INPUT" || e.target.tagName==="SELECT" || e.target.tagName==="TEXTAREA")) return;
+    const k=e.key.toLowerCase();
+    if(k==='f') el("fit").click();
+    if(k==='x') el("regen").click();
+    if(k==='g') el("gradcheck").click();
+  });
+
+  // init
+  data=genData();
+  split(parseFloat(el("split").value));
+  refresh();
+})();
+</script>

@@ -1,0 +1,501 @@
+---
+layout: page
+title: KNN vs Logistic Regression Boundary Brawl
+permalink: /games/labs/knn-vs-logreg/
+description: Draw 2D points and compare nonparametric k-NN boundaries with logistic regression trained by gradient descent.
+---
+
+<div class="lab-wrap">
+  <section class="lab-hero lab-hero--knn">
+    <div class="lab-hero-copy">
+      <p class="lab-kicker">
+        <img src="{{ '/assets/ui/experimental-tag.svg' | relative_url }}" alt="" aria-hidden="true" />
+        TriWei AI Lab
+      </p>
+      <h2>KNN vs Logistic Regression: Boundary Brawl</h2>
+      <p>Draw your own classification problem and compare local k-NN behavior with a global logistic boundary.</p>
+      <div class="lab-chip-row">
+        <span class="lab-chip">
+          <img src="{{ '/assets/icons/knn-clusters.svg' | relative_url }}" alt="" aria-hidden="true" />
+          Non-parametric k-NN
+        </span>
+        <span class="lab-chip">
+          <img src="{{ '/assets/icons/sigmoid-curve.svg' | relative_url }}" alt="" aria-hidden="true" />
+          Logistic classifier
+        </span>
+      </div>
+    </div>
+    <figure class="lab-hero-art">
+      <img src="{{ '/assets/illustrations/decision-boundary.svg' | relative_url }}" alt="Illustration of class clusters and separating boundaries." />
+    </figure>
+  </section>
+<details class="help">
+      <summary>How to play + what to look for</summary>
+      <div class="helpBody">
+        <ul>
+  <li><b>Goal:</b> draw points and compare <b>kNN</b> (non‑parametric) vs <b>logistic regression</b> (parametric).</li>
+  <li>Tap/click the canvas to add points for the current class. Toggle mode to switch labels.</li>
+  <li>Train logistic regression and watch the decision boundary change.</li>
+  <li><b>Keyboard:</b> <kbd>C</kbd>=Clear, <kbd>T</kbd>=Train logistic, <kbd>G</kbd>=Gradient check.</li>
+</ul>
+
+<h3>Learning objectives</h3>
+<ul>
+  <li><strong>Concept focus:</strong> contrast instance-based methods (k‑NN) with parametric classifiers (logistic regression).</li>
+  <li><strong>Core definition:</strong> k‑NN predicts by majority vote among neighbours, while logistic regression fits a linear decision boundary using cross-entropy loss.</li>
+  <li><strong>Common mistake:</strong> choosing too small a k leads to noisy boundaries; forgetting to normalize coordinates when computing probabilities.</li>
+  <li><strong>Why it matters:</strong> seeing these models side by side helps learners appreciate the trade-offs between flexibility and interpretability.</li>
+  <li><strong>Toy disclaimer:</strong> this demo is limited to two dimensions and a linear logistic classifier; real datasets may require higher dimensions and regularization.</li>
+</ul>
+      </div>
+    </details>
+
+  <p>
+    Click/tap to place points for two classes. Then compare:
+    <strong>k‑Nearest Neighbors</strong> (local, flexible) vs
+    <strong>Logistic Regression</strong> (global linear separator trained by gradient descent).
+  </p>
+
+  <div class="controls" role="region" aria-label="Controls">
+    <div class="row">
+      <label>Class to place:
+        <select id="cls">
+          <option value="0">Class 0</option>
+          <option value="1">Class 1</option>
+        </select>
+      </label>
+
+      <button id="clear">Clear points</button>
+
+      <label>Model:
+        <select id="model">
+          <option value="knn">k‑NN</option>
+          <option value="logreg">Logistic regression</option>
+        </select>
+      </label>
+
+      <label>k (for k‑NN):
+        <input id="k" type="range" min="1" max="25" step="1" value="5"/>
+        <span id="kVal">5</span>
+      </label>
+
+      <label>LR steps:
+        <input id="steps" type="number" min="10" max="5000" value="800"/>
+      </label>
+
+      <label>η:
+        <input id="lr" type="range" min="0.001" max="1" step="0.001" value="0.1"/>
+        <span id="lrVal">0.100</span>
+      </label>
+
+      <!-- Train/test split for logistic regression -->
+      <label>Train/Test split:
+        <input id="split" type="range" min="0.5" max="0.9" step="0.05" value="0.8" />
+        <span id="splitVal">0.80</span>
+      </label>
+
+      <button id="train">Train logistic</button>
+      <button id="gradcheck">LR grad check</button>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>Playfield</h2>
+      <canvas id="canvas" width="640" height="420" aria-label="2D plane for drawing points"></canvas>
+      <div class="metrics" aria-live="polite">
+        <div><strong># points:</strong> <span id="n">0</span></div>
+        <div><strong>Train accuracy:</strong> <span id="trainAcc">—</span></div>
+        <div><strong>Test accuracy:</strong> <span id="testAcc">—</span></div>
+        <!-- Warning area for divergence or numerical errors -->
+        <div id="warn" style="color:red;font-weight:bold"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Notes</h2>
+      <ul>
+        <li><strong>k‑NN</strong> predicts based on the labels of the k nearest stored points (no “training”, just searching).</li>
+        <li><strong>Logistic regression</strong> fits a linear decision boundary and minimizes cross‑entropy via gradient descent.</li>
+        <li>Try k=1 (very wiggly) vs larger k (smoother). Logistic regression can’t represent non‑linear boundaries.</li>
+      </ul>
+      <p class="small">
+        Logistic regression and gradient descent are covered in many ML courses (e.g., Stanford CS229 notes). A common reference:
+        <a href="https://see.stanford.edu/materials/aimlcs229/cs229-notes1.pdf" target="_blank" rel="noopener">cs229-notes1.pdf</a>.
+      </p>
+    </div>
+  </div>
+
+  {% include games/common/attribution.html %}
+</div>
+
+<style>
+
+button:focus-visible, input:focus-visible, select:focus-visible{outline:3px solid #111;outline-offset:2px}
+details.help{margin:10px 0 16px;padding:10px 12px;border:1px solid #e5e5e5;border-radius:12px;background:#fff}
+details.help summary{cursor:pointer;font-weight:700}
+details.help .helpBody{margin-top:8px;line-height:1.35}
+details.help kbd{border:1px solid #ccc;border-bottom-width:2px;border-radius:6px;padding:1px 6px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:0.9em;background:#f7f7f7}
+.lab-wrap{max-width:1100px;margin:0 auto;padding:16px}
+.controls{border:1px solid #ddd;border-radius:12px;padding:12px;margin:12px 0}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:8px 0}
+.row label{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:900px){.grid{grid-template-columns:1.1fr 0.9fr}}
+.panel{border:1px solid #eee;border-radius:12px;padding:12px}
+canvas{border:1px solid #eee;border-radius:12px;max-width:100%;height:auto;touch-action:manipulation}
+.small{font-size:0.92rem;color:#444}
+.metrics{display:flex;gap:18px;flex-wrap:wrap;margin-top:8px}
+</style>
+<link rel="stylesheet" href="{{ '/assets/css/labs-theme.css' | relative_url }}">
+
+<!-- shared math helpers (stable sigmoid, gradient clipping) -->
+<script src="{{ '/games/common/math.js' | relative_url }}"></script>
+
+<script>
+(function(){
+  const canvas=document.getElementById("canvas");
+  const ctx=canvas.getContext("2d");
+  const W=canvas.width, H=canvas.height;
+
+  let points=[]; // {x,y,label} in normalized coords [-1,1]
+  let model="knn";
+  let k=5;
+
+  // Logistic regression params: w = [wx, wy], b
+  let wx=0, wy=0, b=0;
+
+  // Warning message for displaying training issues. Will be set by train() and read by render().
+  let warnMsg = '';
+
+  // Gradient clipping threshold for logistic regression gradients.
+  const CLIP_THRESH = 5.0;
+
+  // Train/test split fraction.  Points are shuffled and split
+  // according to this fraction each time the dataset changes.
+  let splitFrac = 0.8;
+  let trainPts = [];
+  let testPts  = [];
+
+  // Shuffle and split the points into train/test according to splitFrac.
+  function splitData(){
+    const s = points.slice().sort(()=>Math.random()-0.5);
+    const cut = Math.floor(splitFrac * s.length);
+    trainPts = s.slice(0, cut);
+    testPts  = s.slice(cut);
+  }
+
+  // Compute classification accuracy on a set of points using current model.
+  function accOn(ds){
+    if(ds.length === 0) return NaN;
+    let c=0;
+    for(const p of ds){
+      const pr = (model === "knn") ? knnProb(p.x,p.y) : logregProb(p.x,p.y);
+      const pred = pr >= 0.5 ? 1 : 0;
+      if(pred === p.label) c++;
+    }
+    return c/ds.length;
+  }
+
+  // Update the accuracy display fields.
+  function updateAccDisplay(){
+    const tacc = accOn(trainPts);
+    const vacc = accOn(testPts);
+    const trainEl = document.getElementById('trainAcc');
+    const testEl  = document.getElementById('testAcc');
+    trainEl.textContent = Number.isFinite(tacc) ? tacc.toFixed(2) : '—';
+    testEl.textContent  = Number.isFinite(vacc) ? vacc.toFixed(2)  : '—';
+  }
+
+  function toNorm(px,py){
+    // map pixels -> [-1,1]
+    const x = (px/W)*2 - 1;
+    const y = -((py/H)*2 - 1);
+    return {x,y};
+  }
+  function toPix(x,y){
+    return {px: (x+1)*0.5*W, py: (1-(y+1)*0.5)*H};
+  }
+
+  // Use a numerically stable sigmoid from shared MLab utilities
+  function sigmoid(z){
+    return MLab.stableSigmoid(z);
+  }
+
+  // ----- kNN -----
+  function knnProb(x,y){
+    if(points.length===0) return 0.5;
+    const dists = points.map(p=>{
+      const dx=p.x-x, dy=p.y-y;
+      return {p, d: dx*dx+dy*dy};
+    }).sort((a,b)=>a.d-b.d);
+    const kk = Math.min(k, dists.length);
+    let s=0;
+    for(let i=0;i<kk;i++) s += dists[i].p.label;
+    return s/kk;
+  }
+
+  // ----- Logistic -----
+  function logregProb(x,y){
+    return sigmoid(wx*x + wy*y + b);
+  }
+
+  // Cross-entropy loss computed over a dataset ds (defaults to the training set).
+  function crossEntropy(ds){
+    const data = ds || trainPts;
+    if(data.length === 0) return NaN;
+    let sum = 0;
+    for(const p of data){
+      const pr = logregProb(p.x, p.y);
+      // Clamp probabilities to avoid log(0)
+      const q = Math.min(1 - 1e-9, Math.max(1e-9, pr));
+      sum += -(p.label * Math.log(q) + (1 - p.label) * Math.log(1 - q));
+    }
+    return sum / data.length;
+  }
+
+  function gradCE(){
+    // Compute gradient of cross-entropy with respect to wx, wy, b on the training set
+    const n = trainPts.length;
+    let gwx = 0, gwy = 0, gb = 0;
+    for(const p of trainPts){
+      const pr = logregProb(p.x, p.y);
+      const err = pr - p.label;
+      gwx += err * p.x;
+      gwy += err * p.y;
+      gb  += err;
+    }
+    if(n > 0){
+      gwx /= n;
+      gwy /= n;
+      gb  /= n;
+    }
+    return {gwx, gwy, gb};
+  }
+
+  function train(steps, lr){
+    // Compute initial cross-entropy on the training set
+    const oldLoss = crossEntropy(trainPts);
+    for(let t = 0; t < steps; t++){
+      const g = gradCE();
+      // Gradient clipping
+      const maxAbs = Math.max(Math.abs(g.gwx), Math.abs(g.gwy), Math.abs(g.gb));
+      let scale = 1;
+      if(maxAbs > CLIP_THRESH && maxAbs > 0){
+        scale = CLIP_THRESH / maxAbs;
+      }
+      wx -= lr * g.gwx * scale;
+      wy -= lr * g.gwy * scale;
+      b  -= lr * g.gb  * scale;
+    }
+    // Compute new loss and update warning message
+    const newLoss = crossEntropy(trainPts);
+    warnMsg = '';
+    if(!Number.isFinite(newLoss)){
+      warnMsg = 'NaN detected: try reducing learning rate.';
+    } else if(oldLoss && newLoss > oldLoss * 1.01){
+      warnMsg = 'Warning: cross-entropy increased; consider lowering learning rate.';
+    }
+  }
+
+  function gradCheck(){
+    // Perform gradient check on multiple parameters (wx, wy, b)
+    if(points.length < 2){ alert("Add at least 2 points before gradient check."); return; }
+    const eps = 1e-4;
+    const g = gradCE();
+    let out = '';
+    // Save original parameters
+    const origWx = wx, origWy = wy, origB = b;
+    // Helper to compute numeric gradient for one parameter
+    function numericGrad(param){
+      // paramName: 'wx','wy' or 'b'
+      // compute derivative by perturbing param by ±eps
+      if(param === 'wx'){
+        wx = origWx + eps;
+        const lp = crossEntropy(trainPts);
+        wx = origWx - eps;
+        const lm = crossEntropy(trainPts);
+        wx = origWx;
+        return (lp - lm) / (2 * eps);
+      } else if(param === 'wy'){
+        wy = origWy + eps;
+        const lp = crossEntropy(trainPts);
+        wy = origWy - eps;
+        const lm = crossEntropy(trainPts);
+        wy = origWy;
+        return (lp - lm) / (2 * eps);
+      } else if(param === 'b'){
+        b = origB + eps;
+        const lp = crossEntropy(trainPts);
+        b = origB - eps;
+        const lm = crossEntropy(trainPts);
+        b = origB;
+        return (lp - lm) / (2 * eps);
+      }
+    }
+    const nWx = numericGrad('wx');
+    const nWy = numericGrad('wy');
+    const nB  = numericGrad('b');
+    // Build result string
+    out += 'Param\tAnalytic\tNumeric\t|diff|\n';
+    out += `wx\t${g.gwx.toFixed(6)}\t${nWx.toFixed(6)}\t${Math.abs(g.gwx - nWx).toExponential(2)}\n`;
+    out += `wy\t${g.gwy.toFixed(6)}\t${nWy.toFixed(6)}\t${Math.abs(g.gwy - nWy).toExponential(2)}\n`;
+    out += `b\t${g.gb.toFixed(6)}\t${nB.toFixed(6)}\t${Math.abs(g.gb - nB).toExponential(2)}\n`;
+    alert('Gradient check (cross-entropy)\n' + out);
+  }
+
+  // ----- Render heatmap -----
+  function render(){
+    // heatmap grid
+    const step=6; // pixel step for speed
+    for(let py=0; py<H; py+=step){
+      for(let px=0; px<W; px+=step){
+        const {x,y}=toNorm(px,py);
+        const pr = (model==="knn") ? knnProb(x,y) : logregProb(x,y);
+        // map probability to grayscale (0->white, 1->black) for simplicity
+        const v = Math.round(255*(1-pr));
+        ctx.fillStyle = `rgb(${v},${v},${v})`;
+        ctx.fillRect(px,py,step,step);
+      }
+    }
+
+    // points
+    for(const p of points){
+      const {px,py}=toPix(p.x,p.y);
+      ctx.beginPath();
+      ctx.arc(px,py,6,0,2*Math.PI);
+      ctx.fillStyle = p.label===1 ? "#000" : "#fff";
+      ctx.fill();
+      ctx.strokeStyle="#000";
+      ctx.stroke();
+    }
+
+    // boundary line for logistic: wx*x + wy*y + b = 0
+    if(model==="logreg" && Math.abs(wy) > 1e-6){
+      // Main decision boundary at p=0.5 (wx*x + wy*y + b = 0)
+      ctx.save();
+      ctx.strokeStyle="#ff0000";
+      ctx.lineWidth=2;
+      ctx.beginPath();
+      const x1=-1; const y1=-(wx*x1 + b)/wy;
+      const x2=1;  const y2=-(wx*x2 + b)/wy;
+      const p1=toPix(x1,y1), p2=toPix(x2,y2);
+      ctx.moveTo(p1.px,p1.py);
+      ctx.lineTo(p2.px,p2.py);
+      ctx.stroke();
+      ctx.restore();
+
+      // Additional margin lines for logistic probabilities 0.2 and 0.8
+      // They help visualise confidence bands around the decision boundary.  The
+      // logit values log(p/(1-p)) for p=0.2 and p=0.8 are ±ln(4).
+      ctx.save();
+      ctx.strokeStyle = "rgba(70, 100, 220, 0.6)";
+      ctx.lineWidth = 1;
+      ctx.setLineDash([4,3]);
+      const logit02 = Math.log(0.2 / 0.8); // ≈ -1.386
+      const logit08 = -logit02;            // ≈ +1.386
+      // helper to draw iso‑probability line wx*x + wy*y + b = c
+      function drawIso(c){
+        const xx1=-1;
+        const yy1=-(wx*xx1 + b - c)/wy;
+        const xx2=1;
+        const yy2=-(wx*xx2 + b - c)/wy;
+        const pp1=toPix(xx1,yy1); const pp2=toPix(xx2,yy2);
+        ctx.beginPath();
+        ctx.moveTo(pp1.px, pp1.py);
+        ctx.lineTo(pp2.px, pp2.py);
+        ctx.stroke();
+      }
+      drawIso(logit02);
+      drawIso(logit08);
+      ctx.restore();
+    }
+
+    // stats
+    document.getElementById("n").textContent = points.length.toString();
+    // Update train/test accuracy displays based on current split and model
+    updateAccDisplay();
+    // Display any warning message set by training
+    const warnEl = document.getElementById('warn');
+    if(warnEl){ warnEl.textContent = warnMsg || ''; }
+  }
+
+  function accuracy(){
+    let c=0;
+    for(const p of points){
+      const pr = (model==="knn")? knnProb(p.x,p.y) : logregProb(p.x,p.y);
+      const pred = pr>=0.5 ? 1 : 0;
+      if(pred===p.label) c++;
+    }
+    return c/points.length;
+  }
+
+  // ----- Input handling -----
+  function addPoint(evt){
+    const rect=canvas.getBoundingClientRect();
+    const px = (evt.clientX - rect.left) * (W/rect.width);
+    const py = (evt.clientY - rect.top)  * (H/rect.height);
+    const {x,y}=toNorm(px,py);
+    const label=parseInt(document.getElementById("cls").value,10);
+    points.push({x,y,label});
+    // Re-split dataset and update accuracy after new point
+    splitData();
+    updateAccDisplay();
+    render();
+  }
+
+  canvas.addEventListener("pointerdown", addPoint);
+
+  // ----- UI -----
+  const el=id=>document.getElementById(id);
+
+  el("model").addEventListener("change", ()=>{
+    model = el("model").value;
+    render();
+  });
+
+  el("k").addEventListener("input", ()=>{
+    k=parseInt(el("k").value,10);
+    el("kVal").textContent = k;
+    render();
+  });
+
+  // Train/test split slider event
+  el("split").addEventListener("input", ()=>{
+    splitFrac = parseFloat(el("split").value);
+    el("splitVal").textContent = splitFrac.toFixed(2);
+    // Shuffle and split dataset whenever split fraction changes
+    splitData();
+    updateAccDisplay();
+    render();
+  });
+
+  el("lr").addEventListener("input", ()=> el("lrVal").textContent = parseFloat(el("lr").value).toFixed(3));
+
+  el("train").addEventListener("click", ()=>{
+    if(points.length<2){ alert("Add points first."); return; }
+    model="logreg"; el("model").value="logreg";
+    // Ensure train/test sets reflect current split fraction before training
+    splitData();
+    train(parseInt(el("steps").value,10), parseFloat(el("lr").value));
+    updateAccDisplay();
+    render();
+  });
+
+  el("gradcheck").addEventListener("click", gradCheck);
+
+  el("clear").addEventListener("click", ()=>{
+    points=[]; wx=0; wy=0; b=0;
+    // Clear splits and update metrics
+    trainPts = [];
+    testPts  = [];
+    updateAccDisplay();
+    render();
+  });
+
+  // Initialise train/test split and accuracy on load
+  splitData();
+  updateAccDisplay();
+  render();
+})();
+</script>

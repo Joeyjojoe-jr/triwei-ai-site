@@ -1,0 +1,674 @@
+---
+layout: page
+title: Linear Regression Target Practice
+permalink: /games/labs/linreg/
+description: Fit a line to data via gradient descent (batch/SGD), compare with the normal equation, and verify gradients numerically.
+---
+
+<div class="lab-wrap">
+  <section class="lab-hero lab-hero--linreg">
+    <div class="lab-hero-copy">
+      <p class="lab-kicker">
+        <img src="{{ '/assets/ui/lab-badge.svg' | relative_url }}" alt="" aria-hidden="true" />
+        TriWei AI Lab
+      </p>
+      <h2>Linear Regression Target Practice</h2>
+      <p>Fit a line with gradient descent, inspect the loss surface, and verify gradients numerically.</p>
+      <div class="lab-chip-row">
+        <span class="lab-chip">
+          <img src="{{ '/assets/icons/gradient-descent-arrow.svg' | relative_url }}" alt="" aria-hidden="true" />
+          Gradient descent
+        </span>
+        <span class="lab-chip">
+          <img src="{{ '/assets/icons/polynomial-curve.svg' | relative_url }}" alt="" aria-hidden="true" />
+          Loss geometry
+        </span>
+      </div>
+    </div>
+    <figure class="lab-hero-art">
+      <img src="{{ '/assets/illustrations/loss-surface.svg' | relative_url }}" alt="Illustration of a regression loss surface." />
+    </figure>
+  </section>
+<details class="help">
+      <summary>How to play + what to look for</summary>
+      <div class="helpBody">
+        <ul>
+  <li><b>Goal:</b> match the hidden line by learning <code>w</code> (slope) and <code>b</code> (intercept).</li>
+  <li>Click <b>Train</b> to run gradient descent; watch <b>train vs test MSE</b> diverge if you overfit noisy data.</li>
+  <li>The right plot is a <b>loss landscape</b> over (w,b). The red dot is your current parameters.</li>
+  <li><b>Keyboard:</b> <kbd>T</kbd>=Train, <kbd>R</kbd>=Reset, <kbd>G</kbd>=Gradient check, <kbd>N</kbd>=Normal equation.</li>
+</ul>
+<p class="note">This is a toy. Real models have many parameters, non-convex loss, and regularization.</p>
+
+<h3>Learning objectives</h3>
+<ul>
+  <li><strong>Concept focus:</strong> understand linear regression as fitting a line using mean squared error.</li>
+  <li><strong>Core definition:</strong> the gradient of the MSE with respect to parameters is proportional to prediction error times input.</li>
+  <li><strong>Common mistake:</strong> using too large a learning rate which causes divergence or interpreting test error as training error.</li>
+  <li><strong>Why it matters:</strong> linear regression underpins many ML models and is the simplest case of convex optimization.</li>
+  <li><strong>Toy disclaimer:</strong> this demo uses a single feature and noise; real datasets may require multiple variables and regularization.</li>
+</ul>
+      </div>
+    </details>
+
+  <p>
+    You’re trying to “hit the target” by fitting a line to data. You can drag parameters manually, or
+    let gradient descent do the work (batch or SGD). This is deliberately small and visual: real ML
+    stacks have many more moving parts.
+  </p>
+
+  <div class="controls" role="region" aria-label="Controls">
+    <div class="row">
+      <label>Dataset:
+        <select id="dataset">
+          <option value="line">Noisy line</option>
+          <option value="tilt">Tilted line + offset</option>
+          <option value="outliers">Line + outliers</option>
+        </select>
+      </label>
+
+      <button id="regen">Regenerate</button>
+      <label>Train/Test split:
+        <input id="split" type="range" min="0.5" max="0.9" step="0.05" value="0.8" />
+        <span id="splitVal">0.80</span>
+      </label>
+    </div>
+
+    <div class="row">
+      <label>Mode:
+        <select id="mode">
+          <option value="batch">Batch GD</option>
+          <option value="sgd">SGD (1 sample/step)</option>
+          <option value="minibatch">Mini-batch (8)</option>
+        </select>
+      </label>
+
+      <label>Learning rate (η):
+        <input id="lr" type="range" min="0.001" max="0.5" step="0.001" value="0.05" />
+        <span id="lrVal">0.050</span>
+      </label>
+
+      <label>Steps per click:
+        <input id="steps" type="number" min="1" max="2000" value="50" />
+      </label>
+    </div>
+
+    <div class="row">
+      <label>w (slope):
+        <input id="w" type="range" min="-5" max="5" step="0.01" value="0.0" />
+        <span id="wVal">0.00</span>
+      </label>
+
+      <label>b (intercept):
+        <input id="b" type="range" min="-5" max="5" step="0.01" value="0.0" />
+        <span id="bVal">0.00</span>
+      </label>
+
+      <button id="train">Train</button>
+      <button id="reset">Reset θ</button>
+      <button id="normalEq">Normal equation</button>
+      <button id="gradCheck">Gradient check</button>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>Data + Fit</h2>
+      <canvas id="plotCanvas" width="640" height="360" aria-label="Scatterplot with fitted line"></canvas>
+      <div class="metrics" aria-label="Metrics" aria-live="polite">
+        <div><strong>Train MSE:</strong> <span id="trainMSE">—</span></div>
+        <div><strong>Test MSE:</strong> <span id="testMSE">—</span></div>
+        <!-- Warning area for divergence or numerical errors -->
+        <div id="warn" style="color:red;font-weight:bold"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Loss Landscape (w,b)</h2>
+      <p class="small">
+        Contours show MSE over a grid in parameter space. The dot is your current (w,b).
+      </p>
+      <canvas id="surfaceCanvas" width="520" height="360" aria-label="Loss heatmap in parameter space"></canvas>
+    </div>
+  </div>
+
+  <details class="notes">
+    <summary>Math + Sources</summary>
+    <p>
+      Model: \(\hat y = wx + b\). MSE loss: \(L = \frac{1}{n}\sum_i(\hat y_i - y_i)^2\).
+      Gradients: \(\partial L/\partial w = \frac{2}{n}\sum_i(\hat y_i-y_i)x_i\),
+      \(\partial L/\partial b = \frac{2}{n}\sum_i(\hat y_i-y_i)\).
+    </p>
+    <p>
+      The normal equation for linear regression (in matrix form) is
+      \(\theta=(X^TX)^{-1}X^Ty\) for \(\theta=[w,b]^T\). See Stanford CS229 notes:
+      <a href="https://cs229.stanford.edu/main_notes.pdf" target="_blank" rel="noopener">cs229.stanford.edu/main_notes.pdf</a>.
+    </p>
+    <p>
+      For intuition on computational graphs / chain rule (used in later labs), see CS231n:
+      <a href="https://cs231n.github.io/optimization-2/" target="_blank" rel="noopener">cs231n.github.io/optimization-2/</a>.
+    </p>
+  </details>
+
+  {% include games/common/attribution.html %}
+</div>
+
+<style>
+
+button:focus-visible, input:focus-visible, select:focus-visible{outline:3px solid #111;outline-offset:2px}
+details.help{margin:10px 0 16px;padding:10px 12px;border:1px solid #e5e5e5;border-radius:12px;background:#fff}
+details.help summary{cursor:pointer;font-weight:700}
+details.help .helpBody{margin-top:8px;line-height:1.35}
+details.help kbd{border:1px solid #ccc;border-bottom-width:2px;border-radius:6px;padding:1px 6px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:0.9em;background:#f7f7f7}
+.lab-wrap{max-width:1100px;margin:0 auto;padding:16px}
+.controls{border:1px solid #ddd;border-radius:12px;padding:12px;margin:12px 0}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:8px 0}
+.row label{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:900px){.grid{grid-template-columns:1.2fr 0.8fr}}
+.panel{border:1px solid #eee;border-radius:12px;padding:12px}
+.small{font-size:0.92rem;color:#444}
+.metrics{display:flex;gap:18px;flex-wrap:wrap;margin-top:8px}
+#plotCanvas,#surfaceCanvas{width:100%;height:auto;display:block}
+.notes{margin-top:12px}
+</style>
+<link rel="stylesheet" href="{{ '/assets/css/labs-theme.css' | relative_url }}">
+
+<script>
+(function(){
+  // ======== Utilities ========
+  function randn(){
+    // Box–Muller
+    let u=0,v=0;
+    while(u===0) u=Math.random();
+    while(v===0) v=Math.random();
+    return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);
+  }
+  const el = id => document.getElementById(id);
+
+  function setupHiDPICanvas(canvas){
+    const dpr = window.devicePixelRatio || 1;
+    const rect = canvas.getBoundingClientRect();
+    const cssW = rect.width || canvas.width;
+    const cssH = rect.height || canvas.height;
+    canvas.width = Math.round(cssW * dpr);
+    canvas.height = Math.round(cssH * dpr);
+    const ctx = canvas.getContext("2d");
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    return ctx;
+  }
+
+  // ======== Data ========
+  let data=[], train=[], test=[];
+  const N=70;
+  let theta={w:0,b:0};
+
+  // Gradient clipping threshold for linear regression. Gradients larger than this will be scaled down.
+  const CLIP_THRESH = 5.0;
+
+  function makeData(kind){
+    const pts=[];
+    let trueW=1.6, trueB=-0.4, noise=0.35;
+    if(kind==='tilt'){ trueW=-2.2; trueB=1.2; noise=0.25; }
+    for(let i=0;i<N;i++){
+      const x = -1.5 + 3*Math.random();
+      let y = trueW*x + trueB + noise*randn();
+      pts.push({x,y});
+    }
+    if(kind==='outliers'){
+      for(let k=0;k<6;k++){
+        const x = -1.5 + 3*Math.random();
+        const y = (trueW*x + trueB) + 3.0*randn();
+        pts.push({x,y,outlier:true});
+      }
+    }
+    return pts;
+  }
+
+  function splitData(frac){
+    const shuffled = data.slice().sort(()=>Math.random()-0.5);
+    const cut = Math.floor(frac*shuffled.length);
+    train = shuffled.slice(0,cut);
+    test = shuffled.slice(cut);
+  }
+
+  // ======== Model / Loss ========
+  function predict(x){ return theta.w*x + theta.b; }
+
+  function mse(ds){
+    if(ds.length===0) return NaN;
+    let s=0;
+    for(const p of ds){
+      const e=predict(p.x)-p.y;
+      s += e*e;
+    }
+    return s/ds.length;
+  }
+
+  function grad(ds){
+    const n=ds.length;
+    let gw=0, gb=0;
+    for(const p of ds){
+      const e=predict(p.x)-p.y;
+      gw += (2/n)*e*p.x;
+      gb += (2/n)*e;
+    }
+    return {gw,gb};
+  }
+
+  // ======== Training ========
+  function step(mode, lr){
+    if(train.length===0) return;
+    let batch=train;
+    if(mode==='sgd'){
+      batch=[train[Math.floor(Math.random()*train.length)]];
+    } else if(mode==='minibatch'){
+      batch=[];
+      for(let i=0;i<8;i++) batch.push(train[Math.floor(Math.random()*train.length)]);
+    }
+    const g=grad(batch);
+    // Gradient clipping: scale down gradients if magnitude exceeds threshold
+    let maxAbs = Math.max(Math.abs(g.gw), Math.abs(g.gb));
+    let scale = 1;
+    if(maxAbs > CLIP_THRESH && maxAbs > 0){
+      scale = CLIP_THRESH / maxAbs;
+    }
+    theta.w -= lr * g.gw * scale;
+    theta.b -= lr * g.gb * scale;
+  }
+
+  // ======== Gradient Check ========
+  function gradCheck(){
+    const eps=1e-4;
+    const baseW=theta.w, baseB=theta.b;
+    const g=grad(train);
+
+    theta.w = baseW + eps; const lp = mse(train);
+    theta.w = baseW - eps; const lm = mse(train);
+    const numW = (lp-lm)/(2*eps);
+
+    theta.w = baseW;
+    theta.b = baseB + eps; const lp2 = mse(train);
+    theta.b = baseB - eps; const lm2 = mse(train);
+    const numB = (lp2-lm2)/(2*eps);
+
+    theta.w=baseW; theta.b=baseB;
+
+    alert(
+      "Gradient check (train MSE):\n" +
+      `analytic gw=${g.gw.toFixed(6)}, numeric gw=${numW.toFixed(6)}, |diff|=${Math.abs(numW-g.gw).toExponential(2)}\n` +
+      `analytic gb=${g.gb.toFixed(6)}, numeric gb=${numB.toFixed(6)}, |diff|=${Math.abs(numB-g.gb).toExponential(2)}\n\n` +
+      "Rule of thumb: diffs ~1e-4 or smaller are usually fine for this toy."
+    );
+  }
+
+  // ======== Normal Equation (2×2) ========
+  function normalEquation(){
+    let sxx=0,sx1=0,s11=0,sxy=0,s1y=0;
+    for(const p of train){
+      const x=p.x, y=p.y;
+      sxx += x*x;
+      sx1 += x;
+      s11 += 1;
+      sxy += x*y;
+      s1y += y;
+    }
+    const det = sxx*s11 - sx1*sx1;
+    if(Math.abs(det) < 1e-10){
+      alert("Normal equation failed: X^T X is near-singular (det≈0). Try regenerating data.");
+      return;
+    }
+    const inv00 =  s11/det, inv01 = -sx1/det, inv10 = -sx1/det, inv11 = sxx/det;
+    theta.w = inv00*sxy + inv01*s1y;
+    theta.b = inv10*sxy + inv11*s1y;
+  }
+
+  // ======== Canvas Drawing ========
+  const plotCanvas = document.getElementById("plotCanvas");
+  const surfCanvas = document.getElementById("surfaceCanvas");
+
+  // Coordinate transforms
+  const xMin=-1.6, xMax=1.6, yMin=-4, yMax=4;
+  const plotPad={l:45,r:15,t:10,b:35};
+
+  function xToPx(x, W){ return plotPad.l + (x-xMin)/(xMax-xMin) * (W-plotPad.l-plotPad.r); }
+  function yToPy(y, H){ return (H-plotPad.b) - (y-yMin)/(yMax-yMin) * (H-plotPad.t-plotPad.b); }
+
+  function drawAxes(ctx, W, H){
+    ctx.save();
+    ctx.strokeStyle="#000";
+    ctx.fillStyle="#000";
+    ctx.lineWidth=1;
+
+    // x axis
+    ctx.beginPath();
+    ctx.moveTo(plotPad.l, H-plotPad.b);
+    ctx.lineTo(W-plotPad.r, H-plotPad.b);
+    ctx.stroke();
+
+    // y axis
+    ctx.beginPath();
+    ctx.moveTo(plotPad.l, plotPad.t);
+    ctx.lineTo(plotPad.l, H-plotPad.b);
+    ctx.stroke();
+
+    ctx.font="12px system-ui, -apple-system, Segoe UI, Roboto, sans-serif";
+
+    // x ticks
+    for(let t=-1.5; t<=1.5+1e-9; t+=0.5){
+      const px = xToPx(t,W);
+      ctx.beginPath();
+      ctx.moveTo(px, H-plotPad.b);
+      ctx.lineTo(px, H-plotPad.b+5);
+      ctx.stroke();
+      ctx.fillText(t.toFixed(1), px-10, H-10);
+    }
+
+    // y ticks
+    for(let t=-4; t<=4; t+=2){
+      const py = yToPy(t,H);
+      ctx.beginPath();
+      ctx.moveTo(plotPad.l-5, py);
+      ctx.lineTo(plotPad.l, py);
+      ctx.stroke();
+      ctx.fillText(t.toFixed(0), 8, py+4);
+    }
+
+    ctx.restore();
+  }
+
+  function renderPlot(){
+    const ctx = setupHiDPICanvas(plotCanvas);
+    const rect = plotCanvas.getBoundingClientRect();
+    const W = rect.width || 640;
+    const H = rect.height || 360;
+
+    ctx.clearRect(0,0,W,H);
+    drawAxes(ctx,W,H);
+
+    // points
+    for(const p of data){
+      const px = xToPx(p.x,W), py=yToPy(p.y,H);
+      ctx.beginPath();
+      ctx.arc(px,py,p.outlier?4:3,0,2*Math.PI);
+      ctx.fillStyle="#111";
+      ctx.globalAlpha=0.9;
+      ctx.fill();
+    }
+    ctx.globalAlpha=1.0;
+
+    // fitted line
+    const xA=xMin, xB=xMax;
+    const yA=predict(xA), yB=predict(xB);
+    ctx.beginPath();
+    ctx.moveTo(xToPx(xA,W), yToPy(yA,H));
+    ctx.lineTo(xToPx(xB,W), yToPy(yB,H));
+    ctx.strokeStyle="#000";
+    ctx.lineWidth=2;
+    ctx.stroke();
+    ctx.lineWidth=1;
+  }
+
+  // ======== Loss Heatmap (cached) ========
+  let heatmapCache=null; // {imgData, nx, ny, wMin,wMax,bMin,bMax, rectW, rectH}
+  const wMin=-5,wMax=5,bMin=-5,bMax=5;
+
+  function lossAt(w,b){
+    const oldW=theta.w, oldB=theta.b;
+    theta.w=w; theta.b=b;
+    const L=mse(train);
+    theta.w=oldW; theta.b=oldB;
+    return L;
+  }
+
+  function computeHeatmap(){
+    const ctx = setupHiDPICanvas(surfCanvas);
+    const rect = surfCanvas.getBoundingClientRect();
+    const W = rect.width || 520;
+    const H = rect.height || 360;
+
+    const nx=140, ny=95; // resolution vs speed
+    const img = ctx.createImageData(nx, ny);
+
+    // Compute loss range (for scaling)
+    let minL=Infinity, maxL=-Infinity;
+    const values = new Float32Array(nx*ny);
+    for(let j=0;j<ny;j++){
+      for(let i=0;i<nx;i++){
+        const w = wMin + (wMax-wMin)*i/(nx-1);
+        const b = bMin + (bMax-bMin)*j/(ny-1);
+        const L = lossAt(w,b);
+        values[j*nx+i]=L;
+        if(L<minL) minL=L;
+        if(L>maxL) maxL=L;
+      }
+    }
+    // Robust cap so outliers don't crush contrast
+    const span = Math.max(1e-9, maxL-minL);
+    const cap = minL + span*0.85;
+
+    for(let j=0;j<ny;j++){
+      for(let i=0;i<nx;i++){
+        const idx=(j*nx+i);
+        let v=values[idx];
+        v = Math.min(cap, v);
+        const t = (v-minL)/(cap-minL+1e-9); // 0..1
+        // grayscale: darker = lower loss
+        const g = Math.round(255*(0.15 + 0.85*t));
+        img.data[4*idx+0]=g;
+        img.data[4*idx+1]=g;
+        img.data[4*idx+2]=g;
+        img.data[4*idx+3]=255;
+      }
+    }
+
+    heatmapCache = {img, nx, ny, W, H};
+  }
+
+  function wToPx(w,W){ return 45 + (w-wMin)/(wMax-wMin)*(W-60); }
+  function bToPy(b,H){ return (H-35) - (b-bMin)/(bMax-bMin)*(H-45); }
+
+  function drawSurface(){
+    const ctx = setupHiDPICanvas(surfCanvas);
+    const rect = surfCanvas.getBoundingClientRect();
+    const W = rect.width || 520;
+    const H = rect.height || 360;
+
+    ctx.clearRect(0,0,W,H);
+
+    // axes box and labels
+    ctx.save();
+    ctx.strokeStyle="#000";
+    ctx.lineWidth=1;
+    ctx.strokeRect(45,10,W-60,H-45);
+    ctx.font="12px system-ui, -apple-system, Segoe UI, Roboto, sans-serif";
+    ctx.fillStyle="#000";
+    ctx.fillText("w", W-18, H-14);
+    ctx.fillText("b", 20, 18);
+    ctx.restore();
+
+    // heatmap
+    if(!heatmapCache || heatmapCache.W !== W || heatmapCache.H !== H){
+      computeHeatmap();
+    }
+    // draw scaled heatmap into the axis box
+    const boxW = W-60, boxH = H-45;
+    // putImageData doesn't scale; use offscreen canvas
+    const off = document.createElement("canvas");
+    off.width = heatmapCache.nx;
+    off.height = heatmapCache.ny;
+    off.getContext("2d").putImageData(heatmapCache.img,0,0);
+    ctx.drawImage(off, 45, 10, boxW, boxH);
+
+    // tick labels (simple)
+    ctx.save();
+    ctx.fillStyle="#000";
+    ctx.font="12px system-ui, -apple-system, Segoe UI, Roboto, sans-serif";
+    for(let t=-5;t<=5;t+=2.5){
+      const px = wToPx(t,W);
+      ctx.fillText(t.toFixed(1), px-10, H-12);
+    }
+    for(let t=-5;t<=5;t+=2.5){
+      const py = bToPy(t,H);
+      ctx.fillText(t.toFixed(1), 2, py+4);
+    }
+    ctx.restore();
+
+    // dot at current theta
+    ctx.beginPath();
+    ctx.arc(wToPx(theta.w,W), bToPy(theta.b,H), 5, 0, 2*Math.PI);
+    ctx.fillStyle="#ff0000";
+    ctx.fill();
+    ctx.strokeStyle="#000";
+    ctx.stroke();
+
+    // Draw gradient arrow to indicate steepest descent direction on the loss surface
+    try {
+      // Gradient of train MSE with respect to (w,b) at current theta
+      const g = grad(train);
+      const dw = g.gw;
+      const db = g.gb;
+      const norm = Math.hypot(dw, db);
+      if (norm > 0) {
+        // Arrow length in parameter space (approx 0.5 units)
+        const arrowLen = 0.5;
+        const endW = theta.w - (dw / norm) * arrowLen;
+        const endB = theta.b - (db / norm) * arrowLen;
+        const x0 = wToPx(theta.w, W);
+        const y0 = bToPy(theta.b, H);
+        const x1p = wToPx(endW, W);
+        const y1p = bToPy(endB, H);
+        // Draw line
+        ctx.strokeStyle = "#007acc";
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.moveTo(x0, y0);
+        ctx.lineTo(x1p, y1p);
+        ctx.stroke();
+        // Arrowhead
+        const angle = Math.atan2(y1p - y0, x1p - x0);
+        const headLen = 6;
+        ctx.beginPath();
+        ctx.moveTo(x1p, y1p);
+        ctx.lineTo(x1p - headLen * Math.cos(angle - Math.PI / 6), y1p - headLen * Math.sin(angle - Math.PI / 6));
+        ctx.lineTo(x1p - headLen * Math.cos(angle + Math.PI / 6), y1p - headLen * Math.sin(angle + Math.PI / 6));
+        ctx.closePath();
+        ctx.fillStyle = "#007acc";
+        ctx.fill();
+        ctx.lineWidth = 1;
+      }
+    } catch (err) {
+      // Guard against any runtime errors when computing gradient for arrow
+    }
+  }
+
+  // ======== Render Control ========
+  function renderMetrics(){
+    const tr = mse(train);
+    const te = mse(test);
+    el("trainMSE").textContent = Number.isFinite(tr) ? tr.toFixed(4) : 'NaN';
+    el("testMSE").textContent = Number.isFinite(te) ? te.toFixed(4) : 'NaN';
+    // Clear warning when rendering metrics outside of training
+    el('warn').textContent='';
+  }
+
+  function syncSliders(){
+    el("w").value = theta.w;
+    el("b").value = theta.b;
+    el("wVal").textContent = theta.w.toFixed(2);
+    el("bVal").textContent = theta.b.toFixed(2);
+  }
+
+  function renderAll(fullSurface=false){
+    renderMetrics();
+    renderPlot();
+    if(fullSurface){
+      heatmapCache=null; // recompute on next drawSurface
+      drawSurface();
+    } else {
+      // no recompute; just redraw surface with cached image and new dot
+      drawSurface();
+    }
+    syncSliders();
+  }
+
+  // ======== UI wiring ========
+  el("split").addEventListener("input", ()=>{
+    el("splitVal").textContent = parseFloat(el("split").value).toFixed(2);
+    splitData(parseFloat(el("split").value));
+    renderAll(true); // data changed -> recompute heatmap
+  });
+
+  el("lr").addEventListener("input", ()=>{
+    el("lrVal").textContent = parseFloat(el("lr").value).toFixed(3);
+  });
+
+  el("w").addEventListener("input", ()=>{
+    theta.w = parseFloat(el("w").value);
+    el("wVal").textContent = theta.w.toFixed(2);
+    renderAll(false);
+  });
+
+  el("b").addEventListener("input", ()=>{
+    theta.b = parseFloat(el("b").value);
+    el("bVal").textContent = theta.b.toFixed(2);
+    renderAll(false);
+  });
+
+  el("regen").addEventListener("click", ()=>{
+    data = makeData(el("dataset").value);
+    splitData(parseFloat(el("split").value));
+    renderAll(true);
+  });
+
+  el("reset").addEventListener("click", ()=>{
+    theta.w=0; theta.b=0;
+    renderAll(false);
+  });
+
+  el("train").addEventListener("click", ()=>{
+    const lr=parseFloat(el("lr").value);
+    const mode=el("mode").value;
+    const steps=parseInt(el("steps").value,10);
+    // Compute initial training loss before stepping
+    const oldLoss = mse(train);
+    for(let k=0;k<steps;k++) step(mode, lr);
+    const newLoss = mse(train);
+
+    // Divergence detection
+    let warnMsg='';
+    if(!Number.isFinite(newLoss)){
+      warnMsg='NaN detected: check your learning rate.';
+    } else if(oldLoss && newLoss > oldLoss * 1.01){
+      warnMsg='Warning: train MSE increased; consider lowering the learning rate.';
+    }
+    el('warn').textContent = warnMsg;
+
+    renderAll(false);
+  });
+
+  el("normalEq").addEventListener("click", ()=>{
+    normalEquation();
+    renderAll(false);
+  });
+
+  el("gradCheck").addEventListener("click", gradCheck);
+
+  window.addEventListener("resize", ()=>renderAll(false));
+
+  // Keyboard shortcuts: T train, R reset, G gradcheck, N normal equation
+  window.addEventListener("keydown", (e)=>{
+    if(e.target && (e.target.tagName==="INPUT" || e.target.tagName==="SELECT" || e.target.tagName==="TEXTAREA")) return;
+    const k = e.key.toLowerCase();
+    if(k==='t') el("train").click();
+    if(k==='r') el("reset").click();
+    if(k==='g') el("gradCheck").click();
+    if(k==='n') el("normalEq").click();
+  });
+
+  // init
+  data = makeData(el("dataset").value);
+  splitData(parseFloat(el("split").value));
+  renderAll(true);
+})();
+</script>

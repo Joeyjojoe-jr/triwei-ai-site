@@ -14,9 +14,7 @@ description: Replayable browser games and interactive experiments from TriWei AI
     --accent-reflex: #ffd166;
     --accent-rhythm: #f06595;
     --accent-memory: #9bde6d;
-  }
-
-  .games-index {
+    --accent-aiml: #2e9f9c;
     display: grid;
     gap: 1rem;
   }
@@ -33,22 +31,53 @@ description: Replayable browser games and interactive experiments from TriWei AI
     color: var(--muted);
   }
 
+  .game-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .genre-chip {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    border-radius: 999px;
+    padding: 0.3rem 0.7rem;
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+  }
+
+  .genre-chip:hover {
+    border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+    background: color-mix(in srgb, var(--surface) 84%, var(--accent-soft));
+  }
+
+  .genre-chip.is-active {
+    border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+
   .game-grid {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   }
 
   .game-tile {
     position: relative;
     isolation: isolate;
     display: grid;
+    grid-template-rows: auto auto auto 1fr auto;
     gap: 0.6rem;
-    padding: 1rem 1.1rem;
+    padding: 0.9rem;
     border: 1px solid var(--border);
     border-radius: 0.9rem;
     background:
-      linear-gradient(150deg, color-mix(in srgb, var(--surface) 92%, #ffffff) 0%, var(--surface) 65%);
+      linear-gradient(150deg, color-mix(in srgb, var(--surface) 93%, #ffffff) 0%, var(--surface) 65%);
     box-shadow: var(--shadow);
     overflow: hidden;
     transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
@@ -59,7 +88,7 @@ description: Replayable browser games and interactive experiments from TriWei AI
     position: absolute;
     inset: auto -20% -65% -20%;
     height: 55%;
-    background: radial-gradient(ellipse at center, color-mix(in srgb, var(--tile-accent, var(--accent)) 24%, transparent), transparent 70%);
+    background: radial-gradient(ellipse at center, color-mix(in srgb, var(--tile-accent, var(--accent)) 23%, transparent), transparent 70%);
     z-index: -1;
     pointer-events: none;
   }
@@ -70,32 +99,86 @@ description: Replayable browser games and interactive experiments from TriWei AI
     box-shadow: 0 18px 38px rgba(12, 36, 64, 0.14);
   }
 
+  .game-thumb-wrap {
+    margin: 0;
+    border-radius: 0.72rem;
+    border: 1px solid color-mix(in srgb, var(--tile-accent, var(--accent)) 32%, var(--border));
+    background: color-mix(in srgb, var(--surface-soft, var(--surface)) 86%, #ffffff);
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+  }
+
+  .game-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .game-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.45rem;
+  }
+
+  .game-meta {
+    margin: 0;
+    color: var(--tile-accent, var(--accent-2));
+    font-size: 0.79rem;
+    font-weight: 650;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .game-badge {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid color-mix(in srgb, var(--tile-accent, var(--accent)) 40%, var(--border));
+    background: color-mix(in srgb, var(--tile-accent, var(--accent)) 15%, #ffffff);
+    color: var(--tile-accent, var(--accent));
+    border-radius: 999px;
+    padding: 0.14rem 0.5rem;
+    font-size: 0.69rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
   .game-tile h3 {
     margin: 0;
-    font-size: 1.18rem;
+    font-size: 1.12rem;
     line-height: 1.2;
   }
 
-  .game-tile h3 a {
+  .game-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     color: var(--text);
   }
 
-  .game-tile h3 a:hover {
+  .game-title:hover {
     color: var(--tile-accent, var(--accent));
     text-decoration: none;
   }
 
-  .game-tile p {
-    margin: 0;
-    color: var(--muted);
+  .game-icon {
+    width: 1.05rem;
+    height: 1.05rem;
+    flex: 0 0 auto;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--tile-accent, var(--accent)) 42%, var(--border));
+    background: color-mix(in srgb, var(--tile-accent, var(--accent)) 14%, #ffffff);
+    padding: 0.08rem;
   }
 
-  .game-meta {
-    color: var(--tile-accent, var(--accent-2));
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+  .game-summary {
+    margin: 0;
+    color: var(--muted);
+    max-width: 36ch;
+    line-height: 1.45;
   }
 
   .primary-button {
@@ -103,11 +186,12 @@ description: Replayable browser games and interactive experiments from TriWei AI
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    margin-top: auto;
     padding: 0.45rem 0.75rem;
     border-radius: 0.55rem;
     background: var(--tile-accent, var(--accent));
     color: #ffffff;
-    font-weight: 600;
+    font-weight: 650;
     text-decoration: none;
   }
 
@@ -116,13 +200,27 @@ description: Replayable browser games and interactive experiments from TriWei AI
     filter: brightness(1.05);
   }
 
-  .game-tile.arcade { --tile-accent: var(--accent-arcade); }
-  .game-tile.puzzle { --tile-accent: var(--accent-puzzle); }
-  .game-tile.logic { --tile-accent: var(--accent-logic); }
-  .game-tile.timing { --tile-accent: var(--accent-timing); }
-  .game-tile.reflex { --tile-accent: var(--accent-reflex); }
-  .game-tile.rhythm { --tile-accent: var(--accent-rhythm); }
-  .game-tile.memory { --tile-accent: var(--accent-memory); }
+  .game-empty {
+    margin: 0;
+    padding: 0.95rem 1rem;
+    border: 1px dashed var(--border);
+    border-radius: 0.75rem;
+    color: var(--muted);
+    background: color-mix(in srgb, var(--surface) 90%, transparent);
+  }
+
+  .is-hidden {
+    display: none !important;
+  }
+
+  .game-tile.genre-arcade { --tile-accent: var(--accent-arcade); }
+  .game-tile.genre-puzzle { --tile-accent: var(--accent-puzzle); }
+  .game-tile.genre-logic { --tile-accent: var(--accent-logic); }
+  .game-tile.genre-timing { --tile-accent: var(--accent-timing); }
+  .game-tile.genre-reflex { --tile-accent: var(--accent-reflex); }
+  .game-tile.genre-rhythm { --tile-accent: var(--accent-rhythm); }
+  .game-tile.genre-memory { --tile-accent: var(--accent-memory); }
+  .game-tile.genre-ai-ml { --tile-accent: var(--accent-aiml); }
 
   @media (prefers-reduced-motion: no-preference) {
     .game-tile {
@@ -151,81 +249,156 @@ description: Replayable browser games and interactive experiments from TriWei AI
   }
 </style>
 
+{% assign games = site.data.games_manifest.games %}
+{% assign overrides_map = site.data.games_card_overrides.games %}
+{% assign total_count = games | size %}
+{% assign known_genres = "Arcade|Puzzle|Logic|Timing|Reflex|Rhythm|Memory|AI/ML" | split: "|" %}
+{% assign grouped_genres = games | group_by: "genre" %}
+
 <section class="games-index">
   <h1>Games</h1>
   <p>Short, replayable experiments you can jump into anytime. New games land here as soon as they're ready.</p>
-  <div class="game-grid">
-    <article class="game-tile arcade">
-      <p class="game-meta">Arcade - 2-3 min runs</p>
-      <h3><a href="{{ '/games/orbit-runner/' | relative_url }}">Orbit Runner</a></h3>
-      <p>Slingshot around gravity wells, dodge debris, and push your best distance.</p>
-      <a class="primary-button" href="{{ '/games/orbit-runner/' | relative_url }}">Play Orbit Runner</a>
-    </article>
-    <article class="game-tile puzzle">
-      <p class="game-meta">Puzzle · 5-8 min</p>
-      <h3><a href="{{ '/games/circuit-flip/' | relative_url }}">Circuit Flip</a></h3>
-      <p>Rotate tiles to route power from the Source to the Core. Solve in the fewest moves.</p>
-      <a class="primary-button" href="{{ '/games/circuit-flip/' | relative_url }}">Play Circuit Flip</a>
-    </article>
-    <article class="game-tile timing">
-      <p class="game-meta">Timing · 1-2 min rounds</p>
-      <h3><a href="{{ '/games/signal-drift/' | relative_url }}">Signal Drift</a></h3>
-      <p>A single-button timing challenge with escalating tempo.</p>
-      <a class="primary-button" href="{{ '/games/signal-drift/' | relative_url }}">Play Signal Drift</a>
-    </article>
-    <article class="game-tile arcade">
-      <p class="game-meta">Arcade · Precision flight</p>
-      <h3><a href="{{ '/games/vector-vault/' | relative_url }}">Vector Vault</a></h3>
-      <p>Precision movement challenge with narrow timing windows.</p>
-      <a class="primary-button" href="{{ '/games/vector-vault/' | relative_url }}">Play Vector Vault</a>
-    </article>
-    <article class="game-tile logic">
-      <p class="game-meta">Logic · Constraint puzzle</p>
-      <h3><a href="{{ '/games/logic-lattice/' | relative_url }}">Logic Lattice</a></h3>
-      <p>Rule-based puzzle board focused on chaining constraints.</p>
-      <a class="primary-button" href="{{ '/games/logic-lattice/' | relative_url }}">Play Logic Lattice</a>
-    </article>
-    <article class="game-tile reflex">
-      <p class="game-meta">Reflex · Pointer control</p>
-      <h3><a href="{{ '/games/flux-line/' | relative_url }}">Flux Line</a></h3>
-      <p>Path-tracing reflex game with escalating speed and obstacles.</p>
-      <a class="primary-button" href="{{ '/games/flux-line/' | relative_url }}">Play Flux Line</a>
-    </article>
-    <article class="game-tile rhythm">
-      <p class="game-meta">Rhythm · Stacking</p>
-      <h3><a href="{{ '/games/pulse-stack/' | relative_url }}">Pulse Stack</a></h3>
-      <p>Rhythm-based stacking game tuned for short replayable rounds.</p>
-      <a class="primary-button" href="{{ '/games/pulse-stack/' | relative_url }}">Play Pulse Stack</a>
-    </article>
-    <article class="game-tile puzzle">
-      <p class="game-meta">Puzzle · Move planning</p>
-      <h3><a href="{{ '/games/grid-hopper/' | relative_url }}">Grid Hopper</a></h3>
-      <p>Step-planning puzzle where each move changes future options.</p>
-      <a class="primary-button" href="{{ '/games/grid-hopper/' | relative_url }}">Play Grid Hopper</a>
-    </article>
-    <article class="game-tile memory">
-      <p class="game-meta">Memory · Sequence replay</p>
-      <h3><a href="{{ '/games/echo-trace/' | relative_url }}">Echo Trace</a></h3>
-      <p>Memory-and-pattern challenge based on delayed visual cues.</p>
-      <a class="primary-button" href="{{ '/games/echo-trace/' | relative_url }}">Play Echo Trace</a>
-    </article>
-    <article class="game-tile logic">
-      <p class="game-meta">Logic · Pattern transforms</p>
-      <h3><a href="{{ '/games/pattern-relay/' | relative_url }}">Pattern Relay</a></h3>
-      <p>Quick logic rounds with procedurally generated sequence goals.</p>
-      <a class="primary-button" href="{{ '/games/pattern-relay/' | relative_url }}">Play Pattern Relay</a>
-    </article>
-    <article class="game-tile timing">
-      <p class="game-meta">Timing · Multi-lane lock</p>
-      <h3><a href="{{ '/games/tempo-matrix/' | relative_url }}">Tempo Matrix</a></h3>
-      <p>Multi-lane timing challenge with escalating tempo.</p>
-      <a class="primary-button" href="{{ '/games/tempo-matrix/' | relative_url }}">Play Tempo Matrix</a>
-    </article>
-    <article class="game-tile puzzle">
-      <p class="game-meta">Puzzle · Row/column shifts</p>
-      <h3><a href="{{ '/games/quantum-swap/' | relative_url }}">Quantum Swap</a></h3>
-      <p>Rotate rows and columns to match the target matrix.</p>
-      <a class="primary-button" href="{{ '/games/quantum-swap/' | relative_url }}">Play Quantum Swap</a>
-    </article>
+
+  <div id="game-filter-bar" class="game-filter-bar" role="toolbar" aria-label="Filter games by genre">
+    <button type="button" class="genre-chip is-active" data-genre="All" aria-pressed="true">All ({{ total_count }})</button>
+    {% for genre_name in known_genres %}
+      {% assign genre_count = games | where: "genre", genre_name | size %}
+      {% if genre_count > 0 %}
+        <button type="button" class="genre-chip" data-genre="{{ genre_name | escape }}" aria-pressed="false">{{ genre_name }} ({{ genre_count }})</button>
+      {% endif %}
+    {% endfor %}
+    {% for group in grouped_genres %}
+      {% unless known_genres contains group.name %}
+        <button type="button" class="genre-chip" data-genre="{{ group.name | escape }}" aria-pressed="false">{{ group.name }} ({{ group.items | size }})</button>
+      {% endunless %}
+    {% endfor %}
   </div>
+
+  <div id="game-grid" class="game-grid" aria-live="polite">
+    {% for game in games %}
+      {% assign slug = game.slug %}
+      {% assign genre = game.genre | default: "Other" %}
+      {% assign genre_slug = genre | downcase | replace: "/", "-" | replace: " ", "-" %}
+      {% assign override = overrides_map[slug] %}
+
+      {% case genre %}
+        {% when "Arcade" %}
+          {% assign genre_icon = "/assets/icons/gradient-descent-arrow.svg" %}
+          {% assign genre_thumb = "/assets/illustrations/loss-surface.svg" %}
+        {% when "Puzzle" %}
+          {% assign genre_icon = "/assets/icons/polynomial-curve.svg" %}
+          {% assign genre_thumb = "/assets/illustrations/decision-boundary.svg" %}
+        {% when "Logic" %}
+          {% assign genre_icon = "/assets/icons/backprop-graph.svg" %}
+          {% assign genre_thumb = "/assets/illustrations/neural-network-2-2-1.svg" %}
+        {% when "Timing" %}
+          {% assign genre_icon = "/assets/icons/sigmoid-curve.svg" %}
+          {% assign genre_thumb = "/assets/icons/heatmap-legend.svg" %}
+        {% when "Reflex" %}
+          {% assign genre_icon = "/assets/icons/warning.svg" %}
+          {% assign genre_thumb = "/assets/animations/flow-arrow-pulse.svg" %}
+        {% when "Rhythm" %}
+          {% assign genre_icon = "/assets/icons/success.svg" %}
+          {% assign genre_thumb = "/assets/animations/backprop-highlight-sweep.svg" %}
+        {% when "Memory" %}
+          {% assign genre_icon = "/assets/icons/heatmap-legend.svg" %}
+          {% assign genre_thumb = "/assets/animations/heatmap-shimmer.svg" %}
+        {% when "AI/ML" %}
+          {% assign genre_icon = "/assets/ui/lab-badge.svg" %}
+          {% assign genre_thumb = "/assets/illustrations/loss-surface.svg" %}
+        {% else %}
+          {% assign genre_icon = "/assets/icons/sigmoid-curve.svg" %}
+          {% assign genre_thumb = "/assets/backgrounds/soft-gradient-tile.svg" %}
+      {% endcase %}
+
+      {% assign meta = override.meta | default: genre | append: " - Browser experience" %}
+      {% assign summary = override.summary | default: game.description | truncate: 96 %}
+      {% assign icon = override.icon | default: genre_icon %}
+      {% assign thumb = override.thumb | default: genre_thumb %}
+
+      {% if override.button %}
+        {% assign button_text = override.button %}
+      {% elsif genre == "AI/ML" %}
+        {% assign button_text = "Open Lab" %}
+      {% else %}
+        {% assign button_text = "Play " | append: game.title %}
+      {% endif %}
+
+      {% assign show_new = false %}
+      {% if game.added and game.added != "" %}
+        {% assign now_epoch = "now" | date: "%s" %}
+        {% assign added_epoch = game.added | date: "%s" %}
+        {% assign age_seconds = now_epoch | minus: added_epoch %}
+        {% assign age_days = age_seconds | divided_by: 86400 %}
+        {% if age_days >= 0 and age_days <= 30 %}
+          {% assign show_new = true %}
+        {% endif %}
+      {% endif %}
+
+      {% assign badge_text = override.new_label | default: "New" %}
+
+      <article class="game-tile genre-{{ genre_slug }}" data-genre="{{ genre | escape }}">
+        <figure class="game-thumb-wrap">
+          <img class="game-thumb" src="{{ thumb | relative_url }}" alt="" loading="lazy" decoding="async" aria-hidden="true" />
+        </figure>
+        <div class="game-topline">
+          <p class="game-meta">{{ meta | escape }}</p>
+          {% if show_new %}
+            <span class="game-badge">{{ badge_text | escape }}</span>
+          {% endif %}
+        </div>
+        <h3>
+          <a class="game-title" href="{{ game.route | relative_url }}">
+            <img class="game-icon" src="{{ icon | relative_url }}" alt="" aria-hidden="true" />
+            {{ game.title }}
+          </a>
+        </h3>
+        <p class="game-summary">{{ summary | escape }}</p>
+        <a class="primary-button" href="{{ game.route | relative_url }}">{{ button_text | escape }}</a>
+      </article>
+    {% endfor %}
+  </div>
+
+  <p id="game-empty" class="game-empty is-hidden">No games currently match this genre filter.</p>
 </section>
+
+<script>
+  (function () {
+    var filterBar = document.getElementById('game-filter-bar');
+    var gameGrid = document.getElementById('game-grid');
+    var emptyState = document.getElementById('game-empty');
+    if (!filterBar || !gameGrid) return;
+
+    var chips = Array.prototype.slice.call(filterBar.querySelectorAll('.genre-chip'));
+    var cards = Array.prototype.slice.call(gameGrid.querySelectorAll('.game-tile'));
+    if (chips.length === 0 || cards.length === 0) return;
+
+    function setActiveChip(next) {
+      chips.forEach(function (chip) {
+        var isActive = chip === next;
+        chip.classList.toggle('is-active', isActive);
+        chip.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+    }
+
+    function applyFilter(genre) {
+      var visibleCount = 0;
+      cards.forEach(function (card) {
+        var cardGenre = card.getAttribute('data-genre') || '';
+        var shouldShow = genre === 'All' || cardGenre === genre;
+        card.classList.toggle('is-hidden', !shouldShow);
+        if (shouldShow) visibleCount += 1;
+      });
+      if (emptyState) {
+        emptyState.classList.toggle('is-hidden', visibleCount > 0);
+      }
+    }
+
+    filterBar.addEventListener('click', function (event) {
+      var chip = event.target.closest('.genre-chip');
+      if (!chip) return;
+      setActiveChip(chip);
+      applyFilter(chip.getAttribute('data-genre') || 'All');
+    });
+  })();
+</script>

@@ -300,7 +300,12 @@ canvas{border:1px solid #eee;border-radius:12px;max-width:100%;height:auto;touch
 
   function gradCheck(){
     // Perform gradient check on multiple parameters (wx, wy, b)
-    if(points.length < 2){ alert("Add at least 2 points before gradient check."); return; }
+    if(points.length < 2){
+      if (typeof window.notify === "function") {
+        window.notify("Add at least 2 points before gradient check.", { type: "warn", timeoutMs: 2400 });
+      }
+      return;
+    }
     const eps = 1e-4;
     const g = gradCE();
     let out = '';
@@ -341,7 +346,9 @@ canvas{border:1px solid #eee;border-radius:12px;max-width:100%;height:auto;touch
     out += `wx\t${g.gwx.toFixed(6)}\t${nWx.toFixed(6)}\t${Math.abs(g.gwx - nWx).toExponential(2)}\n`;
     out += `wy\t${g.gwy.toFixed(6)}\t${nWy.toFixed(6)}\t${Math.abs(g.gwy - nWy).toExponential(2)}\n`;
     out += `b\t${g.gb.toFixed(6)}\t${nB.toFixed(6)}\t${Math.abs(g.gb - nB).toExponential(2)}\n`;
-    alert('Gradient check (cross-entropy)\n' + out);
+    if (typeof window.notify === "function") {
+      window.notify(`Gradient check (cross-entropy)\n${out}`, { type: "info", timeoutMs: 9000 });
+    }
   }
 
   // ----- Render heatmap -----
@@ -473,7 +480,12 @@ canvas{border:1px solid #eee;border-radius:12px;max-width:100%;height:auto;touch
   el("lr").addEventListener("input", ()=> el("lrVal").textContent = parseFloat(el("lr").value).toFixed(3));
 
   el("train").addEventListener("click", ()=>{
-    if(points.length<2){ alert("Add points first."); return; }
+    if(points.length<2){
+      if (typeof window.notify === "function") {
+        window.notify("Add points first.", { type: "warn", timeoutMs: 2200 });
+      }
+      return;
+    }
     model="logreg"; el("model").value="logreg";
     // Ensure train/test sets reflect current split fraction before training
     splitData();
@@ -484,16 +496,34 @@ canvas{border:1px solid #eee;border-radius:12px;max-width:100%;height:auto;touch
 
   el("gradcheck").addEventListener("click", gradCheck);
 
-  el("clear").addEventListener("click", ()=>{
+  function clearState(){
     points=[]; wx=0; wy=0; b=0;
     // Clear splits and update metrics
     trainPts = [];
     testPts  = [];
     updateAccDisplay();
     render();
-  });
+  }
+
+  el("clear").addEventListener("click", clearState);
+
+  function wireInspector(){
+    if (!window.TWGame) return;
+    window.TWGame.reset = clearState;
+    if (typeof window.TWGame.setInspector === "function") {
+      window.TWGame.setInspector(() => ({
+        model,
+        k,
+        n_points: points.length,
+        train_acc: Number(document.getElementById("trainAcc").textContent) || null,
+        test_acc: Number(document.getElementById("testAcc").textContent) || null,
+        lr: Number(parseFloat(el("lr").value).toFixed(4))
+      }));
+    }
+  }
 
   // Initialise train/test split and accuracy on load
+  wireInspector();
   splitData();
   updateAccDisplay();
   render();

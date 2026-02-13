@@ -284,7 +284,12 @@ details.help kbd{border:1px solid #ccc;border-bottom-width:2px;border-radius:6px
 
   // ===== gradient check =====
   function gradCheck(d,lambda){
-    if(train.length===0){ alert("No data."); return; }
+    if(train.length===0){
+      if (typeof window.notify === "function") {
+        window.notify("No data available for gradient check.", { type: "warn", timeoutMs: 2400 });
+      }
+      return;
+    }
     let w=new Array(d+1).fill(0).map(()=> (Math.random()-0.5));
     const g=grad(train,w,d,lambda, penType);
     const k=Math.min(2,d); // choose a small index for stability
@@ -294,14 +299,13 @@ details.help kbd{border:1px solid #ccc;border-bottom-width:2px;border-radius:6px
     w[k]=base-eps; const lm=loss(train,w,d,lambda, penType);
     const num=(lp-lm)/(2*eps);
     w[k]=base;
-    alert(
-      `Gradient check (parameter w_${k}):
-`+
-      `analytic=${g[k].toFixed(6)}, numeric=${num.toFixed(6)}, |diff|=${Math.abs(g[k]-num).toExponential(2)}
+    const message = `Gradient check (parameter w_${k}):
+analytic=${g[k].toFixed(6)}, numeric=${num.toFixed(6)}, |diff|=${Math.abs(g[k]-num).toExponential(2)}
 
-`+
-      `Rule of thumb: diffs ~1e-4 or smaller are usually fine for this toy.`
-    );
+Rule of thumb: diffs ~1e-4 or smaller are usually fine for this toy.`;
+    if (typeof window.notify === "function") {
+      window.notify(message, { type: "info", timeoutMs: 9000 });
+    }
   }
 
   // ===== plotting (Canvas) =====
@@ -558,9 +562,30 @@ details.help kbd{border:1px solid #ccc;border-bottom-width:2px;border-radius:6px
     if(k==='g') el("gradcheck").click();
   });
 
+  function resetLab(){
+    data=genData();
+    split(parseFloat(el("split").value));
+    sweepCache=null;
+    refresh();
+  }
+
+  function wireInspector(){
+    if (!window.TWGame) return;
+    window.TWGame.reset = resetLab;
+    if (typeof window.TWGame.setInspector === "function") {
+      window.TWGame.setInspector(() => ({
+        degree: parseInt(el("degree").value, 10),
+        lambda: Number(parseFloat(el("lambda").value).toFixed(4)),
+        penalty: penType,
+        train_mse: Number(el("trainMSE").textContent) || null,
+        test_mse: Number(el("testMSE").textContent) || null,
+        points: data.length
+      }));
+    }
+  }
+
   // init
-  data=genData();
-  split(parseFloat(el("split").value));
-  refresh();
+  wireInspector();
+  resetLab();
 })();
 </script>

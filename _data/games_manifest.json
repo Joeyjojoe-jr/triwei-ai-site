@@ -7,84 +7,288 @@
       "title": "Orbit Runner",
       "route": "/games/orbit-runner/",
       "genre": "Arcade",
-      "description": "Slingshot around gravity wells and survive as speed ramps."
+      "description": "Slingshot around gravity wells and survive as speed ramps.",
+      "spec_url": "/games/specs/orbit-runner/",
+      "kind": "game",
+      "tags": [
+        "physics",
+        "control",
+        "arcade"
+      ],
+      "difficulty": "medium",
+      "session_length": "2-4 min",
+      "uses_canvas": true,
+      "uses_randomness": true,
+      "asset_packs": [
+        "core-ui"
+      ],
+      "unique_assets": [
+        "games/orbit-runner/index.html"
+      ]
     },
     {
       "slug": "circuit-flip",
       "title": "Circuit Flip",
       "route": "/games/circuit-flip/",
       "genre": "Puzzle",
-      "description": "Rotate tiles to connect the Source to the Core."
+      "description": "Rotate tiles to connect the Source to the Core.",
+      "spec_url": "/games/specs/circuit-flip/",
+      "kind": "game",
+      "tags": [
+        "graph",
+        "routing",
+        "puzzle"
+      ],
+      "difficulty": "easy",
+      "session_length": "3-6 min",
+      "uses_canvas": true,
+      "uses_randomness": true,
+      "asset_packs": [
+        "core-ui"
+      ],
+      "unique_assets": [
+        "games/circuit-flip/index.html"
+      ]
     },
     {
       "slug": "signal-drift",
       "title": "Signal Drift",
       "route": "/games/signal-drift/",
       "genre": "Timing",
-      "description": "Single-button timing challenge with escalating tempo."
+      "description": "Single-button timing challenge with escalating tempo.",
+      "spec_url": "/games/specs/signal-drift/",
+      "kind": "game",
+      "tags": [
+        "timing",
+        "rhythm",
+        "reaction"
+      ],
+      "difficulty": "medium",
+      "session_length": "2-5 min",
+      "uses_canvas": true,
+      "uses_randomness": true,
+      "asset_packs": [
+        "core-ui"
+      ],
+      "unique_assets": [
+        "games/signal-drift/index.html"
+      ]
     },
     {
       "slug": "vector-vault",
       "title": "Vector Vault",
       "route": "/games/vector-vault/",
       "genre": "Arcade",
-      "description": "Precision movement through shifting gate gaps."
+      "description": "Precision movement through shifting gate gaps.",
+      "spec_url": "/games/specs/vector-vault/",
+      "kind": "game",
+      "tags": [
+        "impulse",
+        "prediction",
+        "arcade"
+      ],
+      "difficulty": "medium",
+      "session_length": "2-5 min",
+      "uses_canvas": true,
+      "uses_randomness": true,
+      "asset_packs": [
+        "core-ui"
+      ],
+      "unique_assets": [
+        "games/vector-vault/index.html"
+      ]
     },
     {
       "slug": "logic-lattice",
       "title": "Logic Lattice",
       "route": "/games/logic-lattice/",
       "genre": "Logic",
-      "description": "Constraint puzzle with plus-neighborhood toggles."
+      "description": "Constraint puzzle with plus-neighborhood toggles.",
+      "spec_url": "/games/specs/logic-lattice/",
+      "kind": "game",
+      "tags": [
+        "constraints",
+        "parity",
+        "logic"
+      ],
+      "difficulty": "hard",
+      "session_length": "4-8 min",
+      "uses_canvas": true,
+      "uses_randomness": true,
+      "asset_packs": [
+        "core-ui"
+      ],
+      "unique_assets": [
+        "games/logic-lattice/index.html"
+      ]
     },
     {
       "slug": "flux-line",
       "title": "Flux Line",
       "route": "/games/flux-line/",
       "genre": "Reflex",
-      "description": "Keep a beam centered in a drifting corridor."
+      "description": "Keep a beam centered in a drifting corridor.",
+      "spec_url": "/games/specs/flux-line/",
+      "kind": "game",
+      "tags": [
+        "tracking",
+        "control",
+        "reflex"
+      ],
+      "difficulty": "medium",
+      "session_length": "2-5 min",
+      "uses_canvas": true,
+      "uses_randomness": true,
+      "asset_packs": [
+        "core-ui"
+      ],
+      "unique_assets": [
+        "games/flux-line/index.html"
+      ]
     },
     {
       "slug": "pulse-stack",
       "title": "Pulse Stack",
       "route": "/games/pulse-stack/",
       "genre": "Rhythm",
-      "description": "Time block drops to maintain overlap and build height."
+      "description": "Time block drops to maintain overlap and build height.",
+      "spec_url": "/games/specs/pulse-stack/",
+      "kind": "game",
+      "tags": [
+        "timing",
+        "precision",
+        "stacking"
+      ],
+      "difficulty": "medium",
+      "session_length": "2-6 min",
+      "uses_canvas": true,
+      "uses_randomness": true,
+      "asset_packs": [
+        "core-ui"
+      ],
+      "unique_assets": [
+        "games/pulse-stack/index.html"
+      ]
     },
     {
       "slug": "grid-hopper",
       "title": "Grid Hopper",
       "route": "/games/grid-hopper/",
       "genre": "Puzzle",
-      "description": "Exact-step path planning on a collapsing grid."
+      "description": "Exact-step path planning on a collapsing grid.",
+      "spec_url": "/games/specs/grid-hopper/",
+      "kind": "game",
+      "tags": [
+        "path-planning",
+        "state-space",
+        "puzzle"
+      ],
+      "difficulty": "medium",
+      "session_length": "3-7 min",
+      "uses_canvas": true,
+      "uses_randomness": true,
+      "asset_packs": [
+        "core-ui"
+      ],
+      "unique_assets": [
+        "games/grid-hopper/index.html"
+      ]
     },
     {
       "slug": "echo-trace",
       "title": "Echo Trace",
       "route": "/games/echo-trace/",
       "genre": "Memory",
-      "description": "Replay delayed directional sequences from memory."
+      "description": "Replay delayed directional sequences from memory.",
+      "spec_url": "/games/specs/echo-trace/",
+      "kind": "game",
+      "tags": [
+        "memory",
+        "sequence",
+        "attention"
+      ],
+      "difficulty": "medium",
+      "session_length": "2-6 min",
+      "uses_canvas": true,
+      "uses_randomness": true,
+      "asset_packs": [
+        "core-ui"
+      ],
+      "unique_assets": [
+        "games/echo-trace/index.html"
+      ]
     },
     {
       "slug": "pattern-relay",
       "title": "Pattern Relay",
       "route": "/games/pattern-relay/",
       "genre": "Logic",
-      "description": "Apply matrix transforms and submit the target pattern."
+      "description": "Apply matrix transforms and submit the target pattern.",
+      "spec_url": "/games/specs/pattern-relay/",
+      "kind": "game",
+      "tags": [
+        "transforms",
+        "invariance",
+        "logic"
+      ],
+      "difficulty": "hard",
+      "session_length": "3-7 min",
+      "uses_canvas": true,
+      "uses_randomness": true,
+      "asset_packs": [
+        "core-ui"
+      ],
+      "unique_assets": [
+        "games/pattern-relay/index.html"
+      ]
     },
     {
       "slug": "tempo-matrix",
       "title": "Tempo Matrix",
       "route": "/games/tempo-matrix/",
       "genre": "Timing",
-      "description": "Lock moving lane markers inside shrinking timing windows."
+      "description": "Lock moving lane markers inside shrinking timing windows.",
+      "spec_url": "/games/specs/tempo-matrix/",
+      "kind": "game",
+      "tags": [
+        "multi-channel",
+        "timing",
+        "focus"
+      ],
+      "difficulty": "hard",
+      "session_length": "2-6 min",
+      "uses_canvas": true,
+      "uses_randomness": true,
+      "asset_packs": [
+        "core-ui"
+      ],
+      "unique_assets": [
+        "games/tempo-matrix/index.html"
+      ]
     },
     {
       "slug": "quantum-swap",
       "title": "Quantum Swap",
       "route": "/games/quantum-swap/",
       "genre": "Puzzle",
-      "description": "Rotate rows and columns to match a target matrix."
+      "description": "Rotate rows and columns to match a target matrix.",
+      "spec_url": "/games/specs/quantum-swap/",
+      "kind": "game",
+      "tags": [
+        "matrix",
+        "permutation",
+        "puzzle"
+      ],
+      "difficulty": "medium",
+      "session_length": "3-7 min",
+      "uses_canvas": true,
+      "uses_randomness": true,
+      "asset_packs": [
+        "core-ui"
+      ],
+      "unique_assets": [
+        "games/quantum-swap/index.html"
+      ]
     },
     {
       "slug": "labs/linreg",
@@ -92,7 +296,25 @@
       "route": "/games/labs/linreg/",
       "genre": "AI/ML",
       "added": "2026-02-13",
-      "description": "Fit a line to data via gradient descent, compare batch vs SGD, and verify gradients numerically."
+      "description": "Fit a line to data via gradient descent, compare batch vs SGD, and verify gradients numerically.",
+      "spec_url": "/games/specs/labs/linreg/",
+      "kind": "lab",
+      "tags": [
+        "regression",
+        "gradient-descent",
+        "mse"
+      ],
+      "difficulty": "easy",
+      "session_length": "6-10 min",
+      "uses_canvas": true,
+      "uses_randomness": true,
+      "asset_packs": [
+        "core-ui",
+        "labs-ui"
+      ],
+      "unique_assets": [
+        "games/labs/linreg/index.html"
+      ]
     },
     {
       "slug": "labs/overfitting",
@@ -100,7 +322,25 @@
       "route": "/games/labs/overfitting/",
       "genre": "AI/ML",
       "added": "2026-02-13",
-      "description": "Fit polynomial models (degree 1-12) to noisy data, compare train vs test loss, and explore L2 regularization."
+      "description": "Fit polynomial models (degree 1-12) to noisy data, compare train vs test loss, and explore L2 regularization.",
+      "spec_url": "/games/specs/labs/overfitting/",
+      "kind": "lab",
+      "tags": [
+        "bias-variance",
+        "regularization",
+        "polynomial"
+      ],
+      "difficulty": "medium",
+      "session_length": "7-12 min",
+      "uses_canvas": true,
+      "uses_randomness": true,
+      "asset_packs": [
+        "core-ui",
+        "labs-ui"
+      ],
+      "unique_assets": [
+        "games/labs/overfitting/index.html"
+      ]
     },
     {
       "slug": "labs/backprop",
@@ -108,7 +348,25 @@
       "route": "/games/labs/backprop/",
       "genre": "AI/ML",
       "added": "2026-02-13",
-      "description": "Visualise forward/backward passes of a tiny neural network, compute analytic gradients, and run a finite-difference gradient check."
+      "description": "Visualise forward/backward passes of a tiny neural network, compute analytic gradients, and run a finite-difference gradient check.",
+      "spec_url": "/games/specs/labs/backprop/",
+      "kind": "lab",
+      "tags": [
+        "backprop",
+        "chain-rule",
+        "neural-networks"
+      ],
+      "difficulty": "medium",
+      "session_length": "7-12 min",
+      "uses_canvas": true,
+      "uses_randomness": true,
+      "asset_packs": [
+        "core-ui",
+        "labs-ui"
+      ],
+      "unique_assets": [
+        "games/labs/backprop/index.html"
+      ]
     },
     {
       "slug": "labs/knn-vs-logreg",
@@ -116,7 +374,25 @@
       "route": "/games/labs/knn-vs-logreg/",
       "genre": "AI/ML",
       "added": "2026-02-13",
-      "description": "Draw 2D points and compare nonparametric k-NN decision boundaries with logistic regression trained by gradient descent."
+      "description": "Draw 2D points and compare nonparametric k-NN decision boundaries with logistic regression trained by gradient descent.",
+      "spec_url": "/games/specs/labs/knn-vs-logreg/",
+      "kind": "lab",
+      "tags": [
+        "classification",
+        "knn",
+        "logistic-regression"
+      ],
+      "difficulty": "medium",
+      "session_length": "6-10 min",
+      "uses_canvas": true,
+      "uses_randomness": true,
+      "asset_packs": [
+        "core-ui",
+        "labs-ui"
+      ],
+      "unique_assets": [
+        "games/labs/knn-vs-logreg/index.html"
+      ]
     },
     {
       "slug": "labs/qlearning-grid",
@@ -124,7 +400,25 @@
       "route": "/games/labs/qlearning-grid/",
       "genre": "AI/ML",
       "added": "2026-02-13",
-      "description": "Train an agent in a gridworld using epsilon-greedy Q-learning; watch Q-values and policy arrows evolve."
+      "description": "Train an agent in a gridworld using epsilon-greedy Q-learning; watch Q-values and policy arrows evolve.",
+      "spec_url": "/games/specs/labs/qlearning-grid/",
+      "kind": "lab",
+      "tags": [
+        "reinforcement-learning",
+        "q-learning",
+        "policy"
+      ],
+      "difficulty": "hard",
+      "session_length": "8-14 min",
+      "uses_canvas": true,
+      "uses_randomness": true,
+      "asset_packs": [
+        "core-ui",
+        "labs-ui"
+      ],
+      "unique_assets": [
+        "games/labs/qlearning-grid/index.html"
+      ]
     }
   ]
 }

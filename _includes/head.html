@@ -24,6 +24,12 @@
   <!-- Global stylesheet for the Explorer Hub. -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
+  {% if page.permalink and page.permalink contains '/games/' %}
+    <script src="{{ '/games/common/notify.js' | relative_url }}"></script>
+    <script src="{{ '/games/common/seeded_rng.js' | relative_url }}"></script>
+    <script src="{{ '/games/common/inspector.js' | relative_url }}"></script>
+  {% endif %}
+
   <script>
     // Early theme hydration to reduce flash before CSS fully paints.
     (function () {

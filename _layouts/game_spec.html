@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<article class="content-page animate-in game-spec-page">
+  <header class="content-header">
+    <p class="content-meta">
+      <a class="text-link" href="{{ '/games/specs/' | relative_url }}">All Specs</a>
+      <span aria-hidden="true"> | </span>
+      <a class="text-link" href="{{ page.game_url | relative_url }}">Open Game/Lab</a>
+    </p>
+    <h1>{{ page.title }}</h1>
+    <p class="content-meta">
+      Kind: <strong>{{ page.kind }}</strong>
+      <span aria-hidden="true"> | </span>
+      Difficulty: <strong>{{ page.difficulty }}</strong>
+      <span aria-hidden="true"> | </span>
+      Session: <strong>{{ page.session_length }}</strong>
+      <span aria-hidden="true"> | </span>
+      Last reviewed: <strong>{{ page.last_reviewed }}</strong>
+    </p>
+    {% if page.tags %}
+      <ul class="tag-list">
+        {% for tag in page.tags %}
+          <li>{{ tag }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </header>
+
+  <section class="content-body prose">
+    <h2>Asset Budget</h2>
+    <ul>
+      <li>Initial transfer target: {{ page.asset_budget.initial_transfer_kb }} KB</li>
+      <li>Interactive transfer target: {{ page.asset_budget.interactive_transfer_kb }} KB</li>
+      <li>Runtime RAM target: {{ page.asset_budget.max_runtime_ram_mb }} MB</li>
+      <li>GPU texture target: {{ page.asset_budget.max_gpu_tex_mb }} MB</li>
+    </ul>
+
+    {{ content }}
+  </section>
+</article>

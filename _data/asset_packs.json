@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "core-ui",
+    "purpose": "Shared shell affordances, game runtime helpers, and global game styling.",
+    "globs": [
+      "games/common/*.js",
+      "assets/css/style.css"
+    ],
+    "budgets": {
+      "max_transfer_kb": 200,
+      "max_single_file_kb": 80
+    },
+    "preload_policy": "after_start",
+    "cache_hint": "revalidate"
+  },
+  {
+    "slug": "labs-ui",
+    "purpose": "Reusable lab theme and shared iconography for AI/ML lab pages.",
+    "globs": [
+      "assets/css/labs-theme.css",
+      "assets/icons/*.svg",
+      "assets/ui/*.svg",
+      "assets/illustrations/*.svg"
+    ],
+    "budgets": {
+      "max_transfer_kb": 220,
+      "max_single_file_kb": 40
+    },
+    "preload_policy": "on_demand",
+    "cache_hint": "revalidate"
+  }
+]

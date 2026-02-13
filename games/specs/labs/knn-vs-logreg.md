@@ -1,0 +1,68 @@
+---
+layout: game_spec
+title: "KNN vs Logistic Regression Boundary Brawl - Mini Spec"
+slug: labs/knn-vs-logreg
+kind: lab
+game_url: /games/labs/knn-vs-logreg/
+permalink: /games/specs/labs/knn-vs-logreg/
+tags: ['classification', 'knn', 'logistic-regression']
+difficulty: medium
+session_length: "6-10 min"
+last_reviewed: 2026-02-13
+asset_budget:
+  initial_transfer_kb: 360
+  interactive_transfer_kb: 1350
+  max_runtime_ram_mb: 180
+  max_gpu_tex_mb: 72
+---
+
+## Overview
+Draw 2D points and compare nonparametric k-NN decision boundaries with logistic regression trained by gradient descent.
+
+## Learning Lens
+Focus on classification, knn, logistic-regression and how local actions shape global behavior.
+
+## Controls
+Controls are provided by page-level buttons/inputs and support keyboard + pointer/touch where implemented.
+
+## Core Loop
+Initialize state, process user input, update simulation/model state, and render metrics for immediate feedback.
+
+## Scoring and Metrics
+Primary score/loss metrics are shown in each page HUD or metrics panel and should remain stable across resets.
+
+## Failure States
+Failure is either explicit run termination (arcade style) or numerical/logic divergence in labs. Recovery is via reset.
+
+## Determinism and Randomness
+Manifest flag: uses_randomness=true. Pages with randomness should expose seeded reset behavior via TWGame hooks.
+
+## Instrumentation Contract
+Expose compact JSON-safe metrics through `TWGame.setInspector(() => ({ ... }))` and keep payload lightweight.
+
+## Accessibility Notes
+- Keep focus-visible styles enabled for all interactive controls.
+- Keep status text in polite live regions where metrics update rapidly.
+- Preserve keyboard parity for core interactions.
+- Validate controls on narrow mobile widths (~390px).
+
+## Asset Packs
+### Required Packs
+- `core-ui`
+- `labs-ui`
+
+### Optional Packs (after_start)
+- Cosmetic and non-critical assets should remain deferred until after first playable moment.
+
+### Largest Single Asset
+- Declared unique asset: `games/labs/knn-vs-logreg/index.html`
+
+## Test Checklist
+- [ ] Load page and verify no console errors.
+- [ ] Run one full interaction cycle (play/train/solve).
+- [ ] Verify reset works without page reload.
+- [ ] Verify keyboard-only interaction for primary controls.
+- [ ] Toggle inspector with I and confirm payload updates.
+- [ ] Check mobile viewport (~390px width).
+- [ ] Validate reduced-motion behavior if animations are present.
+- [ ] Validate Back to Games and Specs navigation links.

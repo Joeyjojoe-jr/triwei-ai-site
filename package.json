@@ -9,8 +9,10 @@
     "preview": "astro preview",
     "sync:games-data": "node scripts/sync_games_data.mjs",
     "check:games": "npm run sync:games-data && node scripts/sanity_check_games.mjs",
+    "specs:check": "node scripts/check_game_specs.mjs",
+    "assets:check": "node scripts/check_asset_budgets.mjs",
     "check:links": "node scripts/broken_link_detector.mjs",
-    "check:site": "npm run check:games && npm run check:links"
+    "check:site": "npm run check:games && npm run specs:check && npm run assets:check && npm run check:links"
   },
   "dependencies": {
     "astro": "^4.15.0",

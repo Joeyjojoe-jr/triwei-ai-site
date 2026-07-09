@@ -1,8 +1,8 @@
 specVersion: v2
 specMinorVersion: 1
 meta:
-  name: triwei
-  description: Local RAG + static site for daily Catholic reflections
+  name: triwei-ai-site
+  description: Self-updating AI news and trends tracker with an ethics lens
   defaultBranch: main
 layout:
   - path: app/

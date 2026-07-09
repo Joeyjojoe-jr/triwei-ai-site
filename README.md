@@ -30,6 +30,7 @@ The script uses only the Python standard library, so no extra installs are neede
 ## Running locally
 
 ```bash
+bundle install
 python scripts/fetch_news.py        # refresh _data/news.json
 bundle exec jekyll serve            # preview the site
 ```

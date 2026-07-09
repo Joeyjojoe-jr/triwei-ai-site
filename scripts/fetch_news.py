@@ -324,13 +324,30 @@ def compute_ethics(items):
     return themes, watch
 
 
+def format_date(d):
+    return d.strftime("%b ") + str(d.day) + d.strftime(", %Y")
+
+
+def format_datetime(d):
+    hour = d.hour % 12 or 12
+    return "%s %d, %d at %d:%02d %s %s" % (
+        d.strftime("%B"),
+        d.day,
+        d.year,
+        hour,
+        d.minute,
+        d.strftime("%p"),
+        d.tzname() or "",
+    )
+
+
 def display_item(i):
     iso = i["published_iso"]
     disp = ""
     if iso:
         try:
             d = dt.datetime.fromisoformat(iso.replace("Z", "+00:00"))
-            disp = d.strftime("%b %-d, %Y")
+            disp = format_date(d)
         except ValueError:
             disp = ""
     return {
@@ -363,7 +380,7 @@ def main():
         ct = now
     payload = {
         "generated_utc": now.isoformat().replace("+00:00", "Z"),
-        "generated_display": ct.strftime("%B %-d, %Y at %-I:%M %p %Z"),
+        "generated_display": format_datetime(ct),
         "item_count": len(all_items),
         "category_order": CATEGORY_ORDER,
         "categories": {c: {"label": categories[c]["label"],

@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-07-08T12:00:00Z",
-  "generated_display": "July 8, 2026 (seed data — refreshes automatically every 6 hours)",
-  "item_count": 25,
+  "generated_utc": "2026-07-09T00:38:10.015576Z",
+  "generated_display": "July 9, 2026 at 12:38 AM UTC",
+  "item_count": 976,
   "category_order": [
     "labs",
     "research",
@@ -14,74 +14,161 @@
       "label": "Labs & Industry",
       "items": [
         {
-          "title": "Anthropic unveils Claude Science Workbench, connecting Opus 4.8 to 60+ scientific databases",
-          "link": "https://thursdai.news/releases/2026-07",
-          "source": "ThursdAI",
+          "title": "Lovable reportedly in talks to double its valuation to $13.2B",
+          "link": "https://techcrunch.com/2026/07/08/lovable-reportedly-in-talks-to-double-its-valuation-to-13-2b/",
+          "source": "TechCrunch",
           "category": "labs",
           "category_label": "Labs & Industry",
-          "published_display": "Jul 3, 2026",
-          "published_iso": "2026-07-03T16:00:00Z",
-          "summary": "The workbench links Claude to genomics, proteomics, cheminformatics, and clinical-trial databases, pushing AI deeper into scientific research workflows.",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T22:41:33Z",
+          "summary": "The $300 million round is expected to be led by Menlo Ventures, Sifted reported.",
           "ethics_tags": []
         },
         {
-          "title": "Anthropic overtakes OpenAI on self-reported revenue, targeting $47B and profitability by 2029",
-          "link": "https://fortune.com/2026/07/02/sam-altman-new-world-order-ai-openai-google-anthropic/",
-          "source": "Fortune",
+          "title": "OpenAI to release its most powerful model after weekslong hold",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNaktIbTk2MklTUGhwZnA0RWxLalc2X1NpQWN6bzR1bGFIYjFCelhqOG9hbm42OGlSMDd3MWw3S2R3ZzlrVDd3OXFRdVZBQjZ5SG1oYlBOOUxKWWg1LVA2MmRCNXdNMVR1aVI0T3l1SlNVcFY0NUppTzBsZVBQcG5QZ0Zn?oc=5",
+          "source": "Politico",
           "category": "labs",
           "category_label": "Labs & Industry",
-          "published_display": "Jul 2, 2026",
-          "published_iso": "2026-07-02T12:30:00Z",
-          "summary": "Anthropic says it is on course to reach $47 billion in revenue and profitability a year ahead of OpenAI, reshaping the competitive landscape among leading labs.",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T21:03:00Z",
+          "summary": "OpenAI to release its most powerful model after weekslong hold Politico",
           "ethics_tags": []
         },
         {
-          "title": "Google DeepMind delays Gemini 3.5 Pro to July 17 for a full architectural rebuild",
-          "link": "https://finance.biggo.com/news/6f0c6bb2-795f-4c57-9d09-6db691d7638a",
-          "source": "BigGo Finance",
+          "title": "Google’s deepfake detector system used to debunk McConnell hoax pic",
+          "link": "https://techcrunch.com/2026/07/08/googles-deepfake-detector-system-used-to-debunk-mcconnell-hoax-pic/",
+          "source": "TechCrunch",
           "category": "labs",
           "category_label": "Labs & Industry",
-          "published_display": "Jul 2, 2026",
-          "published_iso": "2026-07-02T10:00:00Z",
-          "summary": "DeepMind scraps the Gemini 2.5 Pro architecture for a ground-up redesign adding a 2M-token context window, a Deep Think reasoning layer, and autonomous workflow capabilities.",
-          "ethics_tags": []
-        },
-        {
-          "title": "Sam Altman seeks a 'new world order' for AI as OpenAI loses ground to Google and Anthropic",
-          "link": "https://fortune.com/2026/07/02/sam-altman-new-world-order-ai-openai-google-anthropic/",
-          "source": "Fortune",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Jul 2, 2026",
-          "published_iso": "2026-07-02T09:15:00Z",
-          "summary": "With rivals gaining, OpenAI floats giving Washington a 5% equity stake, raising governance and oversight questions about the state's role in frontier AI.",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T20:37:03Z",
+          "summary": "Earlier this week, a picture seemed to show Kentucky Senator Mitch McConnell covered in tubes in a hospital bed in a state of extreme distress. It turned out to be an AI-generated fake.",
           "ethics_tags": [
-            "Bias & Fairness",
-            "Regulation & Governance"
+            "Misinformation & Deepfakes"
           ]
         },
         {
-          "title": "Commerce Department lifts export controls; Anthropic restores Fable 5 and Mythos 5 globally with new safeguards",
-          "link": "https://thursdai.news/releases/2026-07",
-          "source": "ThursdAI",
+          "title": "Separating signal from noise in coding evaluations",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1SMjlJYmwzTU5MRHRGR2EtRlBHeTh2c1ZYWExjZklWbXNXZ01XSjFxbmRPMUJOYnJmMFlRYU4wdnlwcDl0cUNIanotbGxaTHF0UEg0TlZLd1V3UVdRRkdMU1pjdkhBby0xTnlnZXkyWUt2SGVEOFUxUS1DQ2p4QQ?oc=5",
+          "source": "OpenAI",
           "category": "labs",
           "category_label": "Labs & Industry",
-          "published_display": "Jul 1, 2026",
-          "published_iso": "2026-07-01T18:00:00Z",
-          "summary": "After US export controls were lifted, Anthropic brought the models back online globally, adding cybersecurity classifiers as a safety guardrail.",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T20:06:02Z",
+          "summary": "Separating signal from noise in coding evaluations OpenAI",
+          "ethics_tags": []
+        },
+        {
+          "title": "SpaceXAI releases Grok 4.5, which Elon describes as an ‘Opus-class model’",
+          "link": "https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/",
+          "source": "TechCrunch",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T19:30:16Z",
+          "summary": "Elon Musk's tech company released the newest version of Grok on Wednesday, promising a cheaper, more efficient alternative to other powerful AI models.",
+          "ethics_tags": []
+        },
+        {
+          "title": "This startup thinks robotics is about to have its ChatGPT moment",
+          "link": "https://techcrunch.com/2026/07/08/this-startup-thinks-robotics-is-about-to-have-its-chatgpt-moment/",
+          "source": "TechCrunch",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T19:19:15Z",
+          "summary": "General Intuition is betting millions of hours of video game data can train the foundation models for physical AI, making it easier to build smarter robots with minimal real-world data.",
+          "ethics_tags": []
+        },
+        {
+          "title": "Nvidia's $1 trillion rout: Do you buy or sell the stock here?",
+          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOYWhJcFBFT0tlWV8zbnhyQk5GVGpjaTE3ZDJDdXlRX2FwR0hBTGV1MnRYLU55Tlh4VXRXaDJHTmxvNFhGS1NPSnJGTUhvZzdwUXJyTWl4YTJxemtsMkhjclRWRVY5eEVVY0JjcGEzV2NWS3F2b0s2cWFTeDVkd0dWaEdVdmVBRlFidklUZG00VUtlQXZ1Vi1ieURXd2otaWNMc2xEeEc3M0FXOW9VbDFQR3RmaUM?oc=5",
+          "source": "Yahoo Finance",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T19:00:00Z",
+          "summary": "Nvidia's $1 trillion rout: Do you buy or sell the stock here? Yahoo Finance",
+          "ethics_tags": []
+        },
+        {
+          "title": "China plans to let top AI firms buy limited Nvidia H200 chips, the Information reports",
+          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQOWpMRm9OdWtFYkF0N1gyUUJyZi1iRzJUcHRJV25fbDNXTmpxWWFlSFNNckpOVjhNcFlSYmVuelJiVDg4V1dBRHZlRnFjNDlRS0JWQlFVeW5obUw2RVU2RFBEc2V1SVFXUEVmMXlVUkJSM0NQNFN1eDk3RTFtM3g2eGstQktpQmRESEJLRlF6SWNrbVZQamFjUV9zdGVySkVaSnUzNllYTmJIU1FTWnZ6VGV1ZW1WQjF0RHljX0MzdVRlNUE?oc=5",
+          "source": "Reuters",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T18:50:43Z",
+          "summary": "China plans to let top AI firms buy limited Nvidia H200 chips, the Information reports Reuters",
+          "ethics_tags": []
+        },
+        {
+          "title": "In San Francisco, Some Home Sellers Now Ask for OpenAI or Anthropic Stock",
+          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOWVlaSTZoTXpkSzNxQVZzeGk4NTlqTS1hY2dLMlJ1SkNoQ0VqSXE0SFVOVWh3eGgwXzJpeDF4OHhoU3hpMUFkUnRQT0N6Q3Q1OEdHdmJNQ1NvQ3BLd2dhZzBuNHZmTWlsWnpSNmhqVzRZWnBsUTZHNVlXaXJSdGtWYjVlbGFSNkJiNTNrOTZjalhhSHM2ZTJKX2I5bS0?oc=5",
+          "source": "The New York Times",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T18:36:58Z",
+          "summary": "In San Francisco, Some Home Sellers Now Ask for OpenAI or Anthropic Stock The New York Times",
+          "ethics_tags": []
+        },
+        {
+          "title": "Google Photos adds a new AI ‘Video Remix’ tool",
+          "link": "https://techcrunch.com/2026/07/08/google-photos-adds-a-new-ai-video-remix-tool/",
+          "source": "TechCrunch",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T18:30:08Z",
+          "summary": "The feature can do things like apply cinematic relighting to brighten up a dark clip, swap out a plain background for something fun, or add artistic styles to videos.",
+          "ethics_tags": []
+        },
+        {
+          "title": "OpenAI launches GPT-Live voice models that listen and speak simultaneously",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPUEx6Y21CZ0l1NDduWVB4dFcyX2pjdm9jY0RhU3Nna1N4V1VnZTB2Wjh4X01PLTRubDgtRGtjOTZCTWRPQy1DTllJQl94TVF6QmxFQWJfbkMta0xXNzJ4ekIyazBRNkxLVHZqVElSZDJoRGVYbFIzYlBXWnFGeXJ2VFJQRjBQQjlUQURUbVdCaU90SC1LanNaVVRWZjBiR0pJMXdjZE9Dczc3YVMzQzl0VHktT0FiZw?oc=5",
+          "source": "Reuters",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T17:53:43Z",
+          "summary": "OpenAI launches GPT-Live voice models that listen and speak simultaneously Reuters",
+          "ethics_tags": []
+        },
+        {
+          "title": "Why this CEO thinks video games make better training data than the internet",
+          "link": "https://techcrunch.com/video/why-this-ceo-thinks-video-games-make-better-training-data-than-the-internet/",
+          "source": "TechCrunch",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T17:47:55Z",
+          "summary": "When it comes to achieving artificial general intelligence (AGI), large language models just don’t have what it takes. Models like ChatGPT and Claude are great at text, but they’re less skilled at understanding how things actually move…",
           "ethics_tags": [
-            "Safety & Alignment"
+            "Copyright & IP"
           ]
         },
         {
-          "title": "Anthropic launches Claude Sonnet 5 with near-Opus performance at $2/$10 introductory pricing",
-          "link": "https://thursdai.news/releases/2026-07",
-          "source": "ThursdAI",
+          "title": "ChatGPT’s upgraded voice mode is better at shutting up",
+          "link": "https://www.theverge.com/ai-artificial-intelligence/962856/chatgpt-upgraded-voice-mode-gpt-live",
+          "source": "The Verge",
           "category": "labs",
           "category_label": "Labs & Industry",
-          "published_display": "Jul 1, 2026",
-          "published_iso": "2026-07-01T14:00:00Z",
-          "summary": "Sonnet 5 lands close to Opus 4.8 quality at aggressive introductory pricing through August 31, intensifying the price-performance race among frontier labs.",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T17:21:35Z",
+          "summary": "OpenAI is overhauling ChatGPT's voice mode with a new model that it says is more like \"talking to another person.\" The new GPT-Live-1 is designed to interrupt you less and will also wait for you to continue speaking if you pause…",
+          "ethics_tags": []
+        },
+        {
+          "title": "Meta wants its AI glasses to seem less creepy. Its AI strategy says otherwise.",
+          "link": "https://techcrunch.com/2026/07/08/meta-wants-its-ai-glasses-to-seem-less-creepy-its-ai-strategy-says-otherwise/",
+          "source": "TechCrunch",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T17:11:18Z",
+          "summary": "Meta is adding a new safeguard to stop people from secretly recording others with its AI glasses. But the update comes as the company continues to expand how much personal data its AI products collect and use.",
           "ethics_tags": []
         }
       ]
@@ -90,70 +177,162 @@
       "label": "Research & Papers",
       "items": [
         {
-          "title": "Unisound U2: a 266B-parameter MoE built for agents hits 72.2% on SWE-bench Verified",
-          "link": "https://llm-stats.com/ai-news",
-          "source": "llm-stats",
+          "title": "Japan benchmark bond yield hits 30-year high on inflation, fiscal health concerns",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNQ2VaM2wyWXJ2MHBHdzl4YmhTTW5mRGo3QkxPRVhnbWxaN0xGOUMzTjJ5czRhQ1lJUjJ5aU05MUVfdkQ5Sjd2bjhBVzgtTUFXSnktbmR4N1JFWmpWSXYwODVic2s2OVctUzlSR0d3SDF0QzhHMUdaZ296WFl4R0NseER4endVVENsV1Y5SzdicEVEbEdYeHpWdkZzdmU4SDFRaDY3cmxadmxfRW5aZXREMFhrWVJkdFFDZW5reG9PMUxHaXlIZXNzQ2lPUjQ?oc=5",
+          "source": "Reuters",
           "category": "research",
           "category_label": "Research & Papers",
-          "published_display": "Jul 4, 2026",
-          "published_iso": "2026-07-04T00:00:00Z",
-          "summary": "The mixture-of-experts model (266B total / 10B active) posts strong reasoning and coding scores, underscoring the shift toward agent-optimized architectures.",
+          "published_display": "Jul 9, 2026",
+          "published_iso": "2026-07-09T00:32:00Z",
+          "summary": "Japan benchmark bond yield hits 30-year high on inflation, fiscal health concerns Reuters",
           "ethics_tags": []
         },
         {
-          "title": "OpenThoughts-Agent: data recipes for agentic models",
-          "link": "https://arxiv.org/pdf/2606.24855",
-          "source": "arXiv",
+          "title": "Former executive accuses Mayo of cutting corners on AI research",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOQ1piSlZKc3djeDRBVTRRSTFhbWNaRFcweW8tMnJhRHQwdmRyZVlIOTdsb29HbU1OZGx6YV9CdUd3alphcUpET09vWmx2SVo0UHAyeDJ3N3N3aXdNRzhubHduU0pLMEhnOGlmb2xnVVBWWEZuSHQ2aGZETGo2enlqMmJ5MU90SW40alVTLXFia3BESXdHQ1FRTVFSRFZoZWZEUEtN?oc=5",
+          "source": "Star Tribune",
           "category": "research",
           "category_label": "Research & Papers",
-          "published_display": "Jun 30, 2026",
-          "published_iso": "2026-06-30T00:00:00Z",
-          "summary": "The paper details reproducible data recipes for training agentic models, part of a fast-growing body of work on tool use and long-horizon reasoning.",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T21:40:28Z",
+          "summary": "Former executive accuses Mayo of cutting corners on AI research Star Tribune",
           "ethics_tags": []
         },
         {
-          "title": "The Hitchhiker's Guide to Agentic AI: from foundations to systems",
-          "link": "https://arxiv.org/pdf/2606.24937",
-          "source": "arXiv",
+          "title": "OpenAI retracts SWE-Bench Pro coding benchmark recommendation",
+          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOcVFiVHpJdm1DUko2c2xETzVaWnFRY3hIeUpVaURQVmRSYmQtby1ramVFNk9xbWFnNHg0S3NyejA5cGJmaUd6QWxxSFJvajhRWFFzM3BGZXQtR2d3aTVlV25rUWlVY3J5UERJSEtOcXZEdEpoN3NaWGdqTUxNdkNXTVNmYVZQZVdGREtMenpqZU5WbkhDMmctMHJYSVNNUGZwWWJ3ZHU1TGhieEVmQWE0NVZPWTJieEFWTjBSRE5ndw?oc=5",
+          "source": "Investing.com",
           "category": "research",
           "category_label": "Research & Papers",
-          "published_display": "Jun 30, 2026",
-          "published_iso": "2026-06-30T00:00:00Z",
-          "summary": "A broad survey of agentic AI covering foundations, memory, evaluation, and multi-agent system design as autonomy becomes a dominant research theme.",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T20:56:51Z",
+          "summary": "OpenAI retracts SWE-Bench Pro coding benchmark recommendation Investing.com",
           "ethics_tags": []
         },
         {
-          "title": "DeepResearch Bench: a comprehensive benchmark for deep research agents",
-          "link": "https://arxiv.org/pdf/2506.11763",
-          "source": "arXiv",
+          "title": "SVP Sells 20,000 of Benchmark Electronics Shares Worth $1.7 Million",
+          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOeGFRa2h4aW9pbkNrTURubnFXVHJ4T2lkSmE3d2VrYUUycUJ3NlNocTVpNER5cmxGNXhwN3ZVN1hOcWNnNUJmNDhFSl96TmpGTllCY2VoUDk1X2lTZUFpNUg5SUltM3liUkNGUDNNZW1ua2VOMHhFejNBSnIzbU5VM1YxaFBFVUQ4MVh1bDByRU9nR3R1WUxKb1A2YVIzQlRXQ1NwbjYwUnhxblRYSVU5cmFMMTY2R0EwcF9Z?oc=5",
+          "source": "The Motley Fool",
           "category": "research",
           "category_label": "Research & Papers",
-          "published_display": "Jun 28, 2026",
-          "published_iso": "2026-06-28T00:00:00Z",
-          "summary": "A new benchmark evaluates autonomous research agents on multi-step tasks such as web browsing, tool use, and synthesis, sharpening how the field measures agentic reasoning.",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T20:11:49Z",
+          "summary": "SVP Sells 20,000 of Benchmark Electronics Shares Worth $1.7 Million The Motley Fool",
           "ethics_tags": []
         },
         {
-          "title": "Topical phase transitions in AI research: an early-warning signature for emerging topics",
-          "link": "https://arxiv.org/pdf/2606.12828",
-          "source": "arXiv",
+          "title": "Grok 4.5 is so cheap compared to Fable 5 and GPT 5.5 that benchmark gaps may not matter much",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNX0d3WDdHQzNlY2t2czY1dWJPM1VlNXZWY1U1dlZUaEV0cUdmbkdFdEJNaXJ6ZlY4YnV1b3NLVHZBMmNiRFAydGVDR1l2WXZVNTFYTmlWUjlFbDJBbDItcHU2ZlRzaXEyUWpub0sweGNoRWk5YWxiMTVxMW85bHZ2NDctV3NXenZBMVFkMm1XVXlsMWpGYk9YMHhjSV8yM2NscHpLMXV1Q1VvS1dlNEFjekRYYTZYWGtq?oc=5",
+          "source": "the-decoder.com",
           "category": "research",
           "category_label": "Research & Papers",
-          "published_display": "Jun 27, 2026",
-          "published_iso": "2026-06-27T00:00:00Z",
-          "summary": "Large-scale analysis finds 'reasoning' grew 4.6x in 2025 and identifies an early-warning signature for emerging AI research topics before they surge.",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T19:32:38Z",
+          "summary": "Grok 4.5 is so cheap compared to Fable 5 and GPT 5.5 that benchmark gaps may not matter much the-decoder.com",
           "ethics_tags": []
         },
         {
-          "title": "Verified Critical Step Optimization for LLM agents",
-          "link": "https://arxiv.org/pdf/2602.03412",
-          "source": "arXiv",
+          "title": "Benchmarking Coding Agents on Databricks’ Multi-Million Line Codebase",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPYlk4RktXSHFjZDZTUjQ0U05MODVoY1FxMGhjZUdhN3RETWJuTEZNcTA5cS1iRnFiVWZ5aDJNelhkWk1fRjExaTVvVXlEWmh3OUdPcEdSWEp2V3BsU3plajhnYXVJWE9xRmpQNnVtdXF3Y1ZoLTV6RDdVWElQUTlUUEdGTlBoMmJ4bk5qNHpJWGF3ZWpGQlRlQ2RCRVFWZw?oc=5",
+          "source": "Databricks",
           "category": "research",
           "category_label": "Research & Papers",
-          "published_display": "Jun 25, 2026",
-          "published_iso": "2026-06-25T00:00:00Z",
-          "summary": "A method that targets the highest-impact steps in an agent's trajectory, improving reliability on complex multi-step tasks.",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T19:03:21Z",
+          "summary": "Benchmarking Coding Agents on Databricks’ Multi-Million Line Codebase Databricks",
           "ethics_tags": []
+        },
+        {
+          "title": "Introducing Grok 4.5",
+          "link": "https://news.google.com/rss/articles/CBMiP0FVX3lxTE1ocVZvX1U2SU4zazFwWW5SbTZiaEhlX3FVcGh0Y2lSMXRhc1FyYnBpamVEOWtnLWctYlZjUlByOA?oc=5",
+          "source": "x.ai",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T17:59:10Z",
+          "summary": "Introducing Grok 4.5 x.ai",
+          "ethics_tags": []
+        },
+        {
+          "title": "Tom Gardner's Five Stocks for the Long Term: Big Diversification, AI Research, and Caution",
+          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQNkp2Ty1UcGZfTzM1OHNpWHlCV21lYmpSM1pGTG55ZjZ5cS1sQTNoV0pGUGRaczAxbFFkRzhneHhyU2MwVU85dExWOVdlVXd3NW5CMXlWc3JZeHNfT0didjl0RUVmc19CMlVaWnFIYmFVc1hxcENjZ1htam9PU2lfRC1CSWhFXzVRLXFBR2lHVGVjVjl1SXVVWA?oc=5",
+          "source": "The Motley Fool",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T16:57:00Z",
+          "summary": "Tom Gardner's Five Stocks for the Long Term: Big Diversification, AI Research, and Caution The Motley Fool",
+          "ethics_tags": []
+        },
+        {
+          "title": "New AI research improves how computers interpret the world",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5YY0RqcEdUT1FjOHNWeGJjMTgzTVE5NWhITlFHWXdkZE9yS3ZPZUJ6ZUw5eU02TDBHTTliYkUzekNDU3BIU21Yb1pYUlpkazRGNXFVeFlpNU5CVk56SFE?oc=5",
+          "source": "Tech Xplore",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T16:40:05Z",
+          "summary": "New AI research improves how computers interpret the world Tech Xplore",
+          "ethics_tags": []
+        },
+        {
+          "title": "COUNTRY LIFE: Benchmark Drops 94 cents, $2.84 below June 2025",
+          "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPWHc3UXlwUjhycFh0SThXMjh2T3hwWVQ1Ry1BTnVYX2dkTkNDai1fWTBFNXVFUHZkNUZnOTR5Ukh0YnAxcXM4VEdrYlN3UXNoZkNDX3NkVW1lV1NXaWtBVzduQ0dobFE2MmdDNGQ5dkhvSzFheDl6QlJTbldVOFRRbjhLNU9uUEdETXUwZ0tDTkJjY2JDdnlaNWM1aDRNb2ZhQTR1eVl5azd6M2s5dHRlNXVuNWdxMDBkbFQzYjg5TzhubjRXVDNLdmNHZmhrWUpZTlVOUnFWcFJqU21DcGpSM9IB4AFBVV95cUxPWHc3UXlwUjhycFh0SThXMjh2T3hwWVQ1Ry1BTnVYX2dkTkNDai1fWTBFNXVFUHZkNUZnOTR5Ukh0YnAxcXM4VEdrYlN3UXNoZkNDX3NkVW1lV1NXaWtBVzduQ0dobFE2MmdDNGQ5dkhvSzFheDl6QlJTbldVOFRRbjhLNU9uUEdETXUwZ0tDTkJjY2JDdnlaNWM1aDRNb2ZhQTR1eVl5azd6M2s5dHRlNXVuNWdxMDBkbFQzYjg5TzhubjRXVDNLdmNHZmhrWUpZTlVOUnFWcFJqU21DcGpSMw?oc=5",
+          "source": "Lynden Tribune",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T16:30:00Z",
+          "summary": "COUNTRY LIFE: Benchmark Drops 94 cents, $2.84 below June 2025 Lynden Tribune",
+          "ethics_tags": []
+        },
+        {
+          "title": "Large language model guides discovery of catalysts for clean energy tech",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPUVRBZWJQQkVjU0dMMmFNUFJoTDJWeFQ2Vk1qNXZtTVo1TW9SeVZPanBCMmpaaU84NERtOXAyOG5kc0hGVGtzTDRuaG1qQjJrY2FhS0doMl9SbFJGU3VVTkNseVZ2VndGXzZmUWV4SldWZXpyOGp4VU4zN1BTOTk0eC1n?oc=5",
+          "source": "Phys.org",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T16:20:05Z",
+          "summary": "Large language model guides discovery of catalysts for clean energy tech Phys.org",
+          "ethics_tags": [
+            "Energy & Environment"
+          ]
+        },
+        {
+          "title": "New 2026 Benchmark Maps AI Customer Service Performance Across Si",
+          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPb25nQm42U0haMmU1UHE3WHZnUlRSNWVDMGRlZlFBTDV4UDc3VUtJQ0ZJUXRTNktjdEFZTVozS2Q2bS1sdnlHVHo1V0NjanI4enVub3VLWUoyeDZxYWhSQVpfNWU2dklmV05JdGdMSXRZZTM2dDBPUkNnV2s4cHNhN3VlcWFOTnhSS1FOVkJSWE10WW5vSkZuMmxSLUVmMHR1Vm4xY1lTVkZuQQ?oc=5",
+          "source": "The National Law Review",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T16:15:12Z",
+          "summary": "New 2026 Benchmark Maps AI Customer Service Performance Across Si The National Law Review",
+          "ethics_tags": []
+        },
+        {
+          "title": "Listen to What Benchmark Says About Rocket Companies Inc (RKT) Stock",
+          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPMnRfZ2pSeXZJRVo1Wmc1RUtCYUdMY1JaN3UwdFc0ZklIbXNyRlhSQm1DQklqQnpNOHFzZjMxNjM2M0JRcGVJakJkd25TUUZsSUI5UjZvVlZtaXU5ZHZWelBXZDNsTnZyUHNzTHI0eGVrbzRWY3lUOVVSMUdSR054Smc4U2JaaVRrUkI5QnItY1BZaWJmUXhxUEtxSlpyRmJkbUFma3Vn?oc=5",
+          "source": "Yahoo Finance",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T15:32:58Z",
+          "summary": "Listen to What Benchmark Says About Rocket Companies Inc (RKT) Stock Yahoo Finance",
+          "ethics_tags": []
+        },
+        {
+          "title": "Benchmark Your Shop: View trends in top shop car counts, AROs, part margins and effective labor rates",
+          "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPNlRPSVFlTXBRejA2U2lQOGtaTm9ZaHl3RmU1M0pDQlR0Q3hDU1RnT0QwUEFwVUgybi1lSTJEdmdpcEkxUWxJTkNBNnp4bDkyM2JtUHJHT3hjLXNHY203ZExMeHoteUtJV3JBcHdJbFNXQThTSWlUYlVHNk9PSFhMZGZjY1VLNENGTk1ZVUQyRldrSEp1UW5OVEd6Q2o1YXhDUTkzdnR5aElqVEtOanVoR0FKTVhDeUdMdGlKZ0prSUlBZW1yX2lzUTVCN3dJRDBfZVJFdUI3ZTBrbVlmdGV2cGJn?oc=5",
+          "source": "Aftermarket Matters",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T15:13:20Z",
+          "summary": "Benchmark Your Shop: View trends in top shop car counts, AROs, part margins and effective labor rates Aftermarket Matters",
+          "ethics_tags": [
+            "Labor & Jobs"
+          ]
         }
       ]
     },
@@ -161,54 +340,161 @@
       "label": "Community & Discussion",
       "items": [
         {
-          "title": "Left to self-police, AI companies weaken safety commitments, Future of Life study finds",
-          "link": "https://www.wbur.org/hereandnow/2026/07/07/ai-companies-safety",
-          "source": "WBUR Here & Now",
+          "title": "AI bills are baffling the C-suite after shift to usage-based pricing",
+          "link": "https://www.theregister.com/ai-and-ml/2026/07/03/ai-bills-are-baffling-the-c-suite-after-shift-to-usage-based-pricing/5266383",
+          "source": "Web",
           "category": "community",
           "category_label": "Community & Discussion",
-          "published_display": "Jul 7, 2026",
-          "published_iso": "2026-07-07T13:00:00Z",
-          "summary": "A Future of Life Institute study finds leading labs moving the goalposts on safety commitments, with none scoring above a C+ on alignment and accountability.",
-          "ethics_tags": [
-            "Safety & Alignment",
-            "Transparency & Accountability"
-          ]
-        },
-        {
-          "title": "Google, Anthropic and OpenAI lead the AI Safety Index; SpaceXAI receives an F",
-          "link": "https://seekingalpha.com/news/4611964-google-anthropic-openai-lead-ai-safety-index-spacexai-receives-f",
-          "source": "Seeking Alpha",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Jul 6, 2026",
-          "published_iso": "2026-07-06T20:00:00Z",
-          "summary": "The latest AI Safety Index ranks the major labs on transparency, risk management, and governance, with wide gaps between leaders and laggards.",
-          "ethics_tags": [
-            "Safety & Alignment",
-            "Regulation & Governance",
-            "Transparency & Accountability"
-          ]
-        },
-        {
-          "title": "AI News Today, July 6 2026: the 15 biggest stories",
-          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026",
-          "source": "Build Fast with AI",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Jul 6, 2026",
-          "published_iso": "2026-07-06T08:00:00Z",
-          "summary": "A practitioner roundup of the week's most-discussed releases, tools, and debates across the AI community.",
+          "published_display": "Jul 9, 2026",
+          "published_iso": "2026-07-09T00:19:18Z",
+          "summary": "1 points, 0 comments on Hacker News.",
           "ethics_tags": []
         },
         {
-          "title": "In Case You Missed It: Last Week in AI, June 29 to July 5, 2026",
-          "link": "https://opendatascience.com/in-case-you-missed-it-last-week-in-ai-june-29-july-5-2026/",
-          "source": "Open Data Science",
+          "title": "QuakeWorld Air Physics",
+          "link": "https://mattias.niklewski.com/2013/01/qw_air_physics.html",
+          "source": "Web",
           "category": "community",
           "category_label": "Community & Discussion",
-          "published_display": "Jul 5, 2026",
-          "published_iso": "2026-07-05T15:00:00Z",
-          "summary": "A weekly digest summarizing model releases, research, and industry moves for machine-learning practitioners.",
+          "published_display": "Jul 9, 2026",
+          "published_iso": "2026-07-09T00:12:04Z",
+          "summary": "2 points, 0 comments on Hacker News.",
+          "ethics_tags": []
+        },
+        {
+          "title": "Rust and Artificial Intelligence: The Rust Foundation's Position",
+          "link": "https://rustfoundation.org/resource/rust-and-ai-position-statement/",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 9, 2026",
+          "published_iso": "2026-07-09T00:09:19Z",
+          "summary": "2 points, 0 comments on Hacker News.",
+          "ethics_tags": []
+        },
+        {
+          "title": "Show HN: Chrome extension that creates mini-Chrome extensions for you",
+          "link": "https://www.clickremix.com/",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 9, 2026",
+          "published_iso": "2026-07-09T00:06:33Z",
+          "summary": "1 points, 0 comments on Hacker News.",
+          "ethics_tags": []
+        },
+        {
+          "title": "Show HN: Skillburst - AI skills for your whole team, not just the engineers",
+          "link": "https://skillburst.ai/",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T23:48:27Z",
+          "summary": "1 points, 0 comments on Hacker News.",
+          "ethics_tags": []
+        },
+        {
+          "title": "Show HN: Amotions app in Zoom: real-time guidance for sales calls",
+          "link": "https://amotionsinc.com/blogs/how-to-use-amotions-ai-zoom-app",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T23:41:19Z",
+          "summary": "1 points, 0 comments on Hacker News.",
+          "ethics_tags": []
+        },
+        {
+          "title": "Hijacking Defensive Cyber AI Agents for Remote Code Execution",
+          "link": "https://ainowinstitute.org/publications/friendly-fire-exploit-brief",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T23:35:29Z",
+          "summary": "1 points, 0 comments on Hacker News.",
+          "ethics_tags": []
+        },
+        {
+          "title": "The AI Bubble We need to talk",
+          "link": "https://www.youtube.com/watch?v=2J2Fb1bBufA",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T23:34:33Z",
+          "summary": "2 points, 0 comments on Hacker News.",
+          "ethics_tags": []
+        },
+        {
+          "title": "Ask HN: What do you think of xsight labs?",
+          "link": "https://news.ycombinator.com/item?id=48838806",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T23:30:20Z",
+          "summary": "1 points, 0 comments on Hacker News.",
+          "ethics_tags": []
+        },
+        {
+          "title": "Suspecting AI cheating, Ivy League prof ordered in-person final; scores fell 50%",
+          "link": "https://arstechnica.com/ai/2026/07/we-cannot-choose-to-become-idiots-the-ai-cheating-scandal-roiling-brown-university/",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T23:11:28Z",
+          "summary": "67 points, 35 comments on Hacker News.",
+          "ethics_tags": []
+        },
+        {
+          "title": "Meta datacenter contractor flushed contaminated water",
+          "link": "https://www.theguardian.com/us-news/2026/jul/08/meta-datacenter-ai-wyoming-water",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T23:05:45Z",
+          "summary": "6 points, 2 comments on Hacker News.",
+          "ethics_tags": [
+            "Energy & Environment"
+          ]
+        },
+        {
+          "title": "Policy Statement Concerning the Suppression of Accuracy in AI Systems",
+          "link": "https://www.federalregister.gov/documents/2026/07/07/2026-13628/policy-statement-concerning-the-suppression-of-accuracy-in-artificial-intelligence-systems",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T22:33:46Z",
+          "summary": "6 points, 1 comments on Hacker News.",
+          "ethics_tags": [
+            "Regulation & Governance"
+          ]
+        },
+        {
+          "title": "Show HN: A shallow lake's report on itself",
+          "link": "https://ashallowlake.com/",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T22:32:30Z",
+          "summary": "1 points, 0 comments on Hacker News.",
+          "ethics_tags": []
+        },
+        {
+          "title": "Native-speed vLLM transformers modeling back end",
+          "link": "https://huggingface.co/blog/native-speed-vllm-transformers-backend",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T22:16:44Z",
+          "summary": "2 points, 0 comments on Hacker News.",
           "ethics_tags": []
         }
       ]
@@ -217,49 +503,159 @@
       "label": "Business & Funding",
       "items": [
         {
-          "title": "Nvidia tops $40 billion in equity bets on AI startups in 2026",
-          "link": "https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html",
-          "source": "CNBC",
+          "title": "This AI has been answering calls at S.F. restaurants. Now, some top restaurateurs are investing in the startup.",
+          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNWF9sa2hoQlp3a0xTYlFJRmpjSElyNHE2UTRPcUdBaXc4cnVwdUF2N1pCcUVnTHJJZXoxOUdYcnZHeXdrdTdEdUQyTDh5TXRQMUtxaDM2eG5iUHdHb193N3R0T2VTaFhRQ1lGMko4UEljY0UzR0FWYms2b3pPMFc3ZTh6RmR6WlhSUWtJYko1eGtqcTFnZkVQeFRFX213c1ZqZjIwa0RnY2gzYk5zOFFoZFNn?oc=5",
+          "source": "The Business Journals",
           "category": "business",
           "category_label": "Business & Funding",
-          "published_display": "Jul 3, 2026",
-          "published_iso": "2026-07-03T09:00:00Z",
-          "summary": "Nvidia's expanding investment portfolio deepens its influence across the AI supply chain, raising questions about market concentration.",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T21:16:00Z",
+          "summary": "This AI has been answering calls at S.F. restaurants. Now, some top restaurateurs are investing in the startup. The Business Journals",
+          "ethics_tags": []
+        },
+        {
+          "title": "AI investment powers growth outlook",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOdDVDenVPd291MlZuS2tBdDJNc1dYcGdfaFhKTnp2Q05zc05RX3Q2aUtHb0taekpubEkzcXk1YmlUSDhULVl1ZFNNQmdaZ204VGhtVDRBRm9tYUJEWHFNUGNxR2YtVVBpNGpqS1lZekZLdnlHVDZWTHh4VUc5cEU1YmVDRWRVRjNjNmRuOUJjNXBDMFNPalFlYVdXU0VJLTBQeE5IYmZSN2dZSkZzVFE?oc=5",
+          "source": "Vanguard Corporate",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T18:54:45Z",
+          "summary": "AI investment powers growth outlook Vanguard Corporate",
+          "ethics_tags": []
+        },
+        {
+          "title": "Nvidia backs voice AI startup Gradium, bringing seed round to over $100m",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9uRFdweFAxa1dsQlZwbnBkX1l2dFNFM21iRXdIcl9ZZmxuOURKcWE5V0ozUC1wTzAwRFpyRFlKcjVpSVBoOWVQQnZSV0ppZVk5Zk1Xb1ktalJUcFVIeUs1Y1hEZWRFYmdhYl93Yw?oc=5",
+          "source": "Sifted",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T17:07:55Z",
+          "summary": "Nvidia backs voice AI startup Gradium, bringing seed round to over $100m Sifted",
+          "ethics_tags": []
+        },
+        {
+          "title": "AI startup CEO kept doing deals after secret fraud plea",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOTVRpV0c4ME9QUlNQN2Rzd0Jsb1NXelNEME8zMHhJbS1kWkI3azNUVWs1NHR6Z1lpejJ3WEZpQWw1bEdnZmMtNjFUWlRLYW1tUkxwelh2Tld3NlhxUzNfd0NySjM4TVB0TVdLYlFYVUJGaUJmc2kzb2hzcklvUVUwa0VTRlRua3A4?oc=5",
+          "source": "Axios",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T16:35:38Z",
+          "summary": "AI startup CEO kept doing deals after secret fraud plea Axios",
           "ethics_tags": [
-            "Bias & Fairness"
+            "Misinformation & Deepfakes"
           ]
         },
         {
-          "title": "Nvidia to let AI startups use its chips now and pay with a share of future revenue",
-          "link": "https://www.cnbc.com/2026/07/02/nvidia-plans-to-offer-start-up-customers-access-to-revenue-sharing-deals.html",
-          "source": "CNBC",
+          "title": "AI startup founder pleads guilty to receiving insider tips from BigLaw lawyers",
+          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOcWVYTm9udU0yMXhYSkVWX1hOVHZwUEd1c1d0VUJ4VE9SbVoteS00V1lhS3NYYXZ5VjQySVA4WDZoQVczNVdkUDFnRXVwVGNNNkJDNlRKZWFUN2xGSlBUMlp0UF9LdmowUXB6WUZxR1owWlFvZVpNSmt1QThoWE5PMERGRTJPTS1TdE84ckdCUl8zMHBjbnFmSkhIWEpqT0w5cmpCelQxLVZzTFhtQzN6WEpCcW9UaUNxR2Iw?oc=5",
+          "source": "ABA Journal",
           "category": "business",
           "category_label": "Business & Funding",
-          "published_display": "Jul 2, 2026",
-          "published_iso": "2026-07-02T11:00:00Z",
-          "summary": "Nvidia positions itself as a financier of the AI buildout, with cloud partners reselling chip access to startups in exchange for a cut of future revenue.",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T16:13:00Z",
+          "summary": "AI startup founder pleads guilty to receiving insider tips from BigLaw lawyers ABA Journal",
           "ethics_tags": []
         },
         {
-          "title": "AI chip startups near record funding, raising $8.3B to challenge Nvidia as focus shifts to inference",
-          "link": "https://seekingalpha.com/news/4576528-ai-chip-startups-near-record-funding-to-challenge-nvidia-cnbcs-schwarz-says",
-          "source": "Seeking Alpha",
+          "title": "This AI Startup Founder Just Pleaded Guilty in a Massive, 30-Person Insider Trading Scheme",
+          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQQzlfaXpTd0xDZklSSkI0d3RlR1pHV0VZSEsxWnB6VVItek9oWnF5WFFQZFZRc0szTVJjWmQzeWpUMGh6RlMwdU9IcWxVcGQzOXpYRW5sd2hnMkpJVUNmb2Y2WmlDTHNyc1o1ZndqSVNCMGhCSW9vZU8zU0RKa1dIbW9TSXpqcWtRb0twcm4yY0tPUW1OeGNUeGZUcmxVMW1IOTZCVkNwbWNoQ0U5V3c0?oc=5",
+          "source": "inc.com",
           "category": "business",
           "category_label": "Business & Funding",
-          "published_display": "Jul 1, 2026",
-          "published_iso": "2026-07-01T17:00:00Z",
-          "summary": "Investors pour billions into inference-focused silicon, betting the next phase of the AI boom rewards efficiency over raw training scale.",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T15:47:56Z",
+          "summary": "This AI Startup Founder Just Pleaded Guilty in a Massive, 30-Person Insider Trading Scheme inc.com",
           "ethics_tags": []
         },
         {
-          "title": "Semiconductor startup funding runs hot: MatX raises $500M, Ayar Labs $500M",
-          "link": "https://news.crunchbase.com/semiconductors-and-5g/chip-startup-funding-2026-cerebras-matx-ayar-labs-ipos-nvda/",
-          "source": "Crunchbase News",
+          "title": "Is the AI funding frenzy cooling off? Amazon’s (AMZN.US) $25 billion bond offering meets lukewarm investor demand, putting tech giants’ debt binge to the test.",
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNX0IwTV9paXRVaFR1WWFaWVBJcmZUaUZYeXhrUjJYeTFsVjBDejNlalpUcEN3N1gyb3pEX21vbkpvU0hlVWVoNFBTb1BfOVRnSjc1dlJwRUFGanFPM1F3SFB5dXJBQm1tSmt3U1d5eXUtZTBPWTl0cm02eGZ1RkdKR0ZyYThwRzl3YVBIR3I2a0dyanU1WnNFTDR3?oc=5",
+          "source": "Moomoo",
           "category": "business",
           "category_label": "Business & Funding",
-          "published_display": "Jun 29, 2026",
-          "published_iso": "2026-06-29T00:00:00Z",
-          "summary": "Custom-silicon and optical-interconnect startups pull in half-billion-dollar rounds as the compute buildout accelerates.",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T14:56:58Z",
+          "summary": "Is the AI funding frenzy cooling off? Amazon’s (AMZN.US) $25 billion bond offering meets lukewarm investor demand, putting tech giants’ debt binge to the test. Moomoo",
+          "ethics_tags": []
+        },
+        {
+          "title": "Medical Plastics Companies Embrace AI",
+          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNLXlGTTlOcGROcVJrc1NsLXAtQkU4ZGE0TFJhU1I1Z3Q5YnNkN2w0aXU0UjBUNUdOLUhoc1VwVGE0TlRjMGI5XzFDOFI4VU81TGphRXd4UlVsU2lXYmJvSHFCQzdPVHNnVGNwZFJmUUNfZ3N5NTM1YlpBSlNCUWNtbzFEd1RZNXJqQk5r?oc=5",
+          "source": "PlasticsToday",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T14:18:11Z",
+          "summary": "Medical Plastics Companies Embrace AI PlasticsToday",
+          "ethics_tags": []
+        },
+        {
+          "title": "NEWS: AI startup CEO pleads guilty in US to insider trading",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPcXczaTl6WWtiMFMxVld6bVRscFUwRGU1WjRXQ211OFRsN19aNUczM2RSQ2twM0hKaFlVTngtN3VWTm1KaHV5T09WRVN3ejVxd2prMjJndnFoNVJmZ3Z6RW5UZnZxazc4MVRCc2NKLUVYcTZYeldoeXVsaURXbHVzdm5jNnBrVVVkdnFJU3ZUYnhfaDd6Zk0tMkNVSDN0MEZY?oc=5",
+          "source": "AML Intelligence",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T13:10:54Z",
+          "summary": "NEWS: AI startup CEO pleads guilty in US to insider trading AML Intelligence",
+          "ethics_tags": []
+        },
+        {
+          "title": "The public deserves socially beneficial technology in return for its AI investment",
+          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPa3E2bHJRQkxPVGtlZGRHcmN1MkVnSlVSNTJKQjFMMGhRT0Q4Q1k4d1l0YXFmcGxfSFF4aEdGd3lDSGc4Wk9UNVBVeXVkOWpPX1J2bTVrOTlBR2NKLV9wcnJoT2xNQ3ZJMHVsT2Z3WHl6eGVtaDAzUDFmRnEyNWdfdjVwbGFUeXZPY3JpMkZ1cW05Y0llckd2c0dVbFBhVzRkc0wtcTdnVDVpVnVzNTdkNERDQ3kxclNVVlRFRXRR?oc=5",
+          "source": "Computer Weekly",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T13:10:03Z",
+          "summary": "The public deserves socially beneficial technology in return for its AI investment Computer Weekly",
+          "ethics_tags": []
+        },
+        {
+          "title": "AI Start-Up Kaon AI Raises $60 Million in Funding Round in Quest to Build a ‘Personalized Story Engine’ for Users",
+          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPQk1sVHFVc0owMXhQZDNiOUhLeFV5LUVtZTUwVGZQU2stNXQ1WU1EamlKV1h5LWFrdE5iMWRZbnhlMEppZGxkRHozNWlld28wVjdWZGpMcEEzRnBxdXdnZVotbXVCbmR6WFE4aDEyeFVSTjc3Ykt6cGxoXzhMWVpQYXRtd2QyLUlveTBlX0VnRFEtYWpKSS1RTHI2TEw?oc=5",
+          "source": "Variety",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T13:00:00Z",
+          "summary": "AI Start-Up Kaon AI Raises $60 Million in Funding Round in Quest to Build a ‘Personalized Story Engine’ for Users Variety",
+          "ethics_tags": []
+        },
+        {
+          "title": "Alibaba Backs $6.5 Million Funding Round for AI Startup Alsa",
+          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQaGtnT1YxQWdEaEJfNDEyZV91NzFUWXp6U0tQQkk1dUlqTEhKY0ZQU1NTU3pGb3AxUWtxclZUNzZGMWpkdkphVmhvcjhQOVFQT1RUaHhVU0s2Y0RVc085VmdWWXBrMUM0bjhpTy1sUDdKTy1wQjA0STFnT0ZLMVRFYlNqVG9kbkl3ZFVOc0ZFX0N3dm1iMnBSVTlrSlc?oc=5",
+          "source": "Moomoo",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T12:40:28Z",
+          "summary": "Alibaba Backs $6.5 Million Funding Round for AI Startup Alsa Moomoo",
+          "ethics_tags": []
+        },
+        {
+          "title": "AI Chips Today - Certara-NVIDIA Partnership Revolutionizes AI in Drug Development",
+          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNOFBmMEdPMDVSWjNYUnhOQmdPRVQ4VGJXS2dyclRDSDFsMEZDSklJZHdwNDlaM1NxcTk2QW5vaE9ENHp6QldidmJXaHFrNWdwR3RCVFhraDF4YTFGbS1zTXc0NlFROGRZdnFxbHg1NHkxMXdtVVdzbzBQZUV2ODdRQkxkUTVfZ2hncHZLVmx4YUlCWUtiRkU0ZQ?oc=5",
+          "source": "Yahoo Finance",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T11:37:52Z",
+          "summary": "AI Chips Today - Certara-NVIDIA Partnership Revolutionizes AI in Drug Development Yahoo Finance",
+          "ethics_tags": []
+        },
+        {
+          "title": "Israeli AI startup Velocity raises $27 million to solve AI’s next big challenge",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5UNHZEaGdRWHhINDVGcUlKWjJqb1ZMWG91VW5qWlExNDEwR256R2t5MDVnWmk2bW9ZUzNYMWNDV0pHb0d5SFlTNDhaZ2pIbmctN3QtUlA2NVNWcFFQMVowalBxYw?oc=5",
+          "source": "Ynetnews",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T11:00:59Z",
+          "summary": "Israeli AI startup Velocity raises $27 million to solve AI’s next big challenge Ynetnews",
           "ethics_tags": []
         }
       ]
@@ -268,72 +664,188 @@
       "label": "Ethics & Society",
       "items": [
         {
-          "title": "EU AI Act high-risk enforcement begins August 2, 2026",
-          "link": "https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026",
-          "source": "Norton Rose Fulbright",
+          "title": "How does the First Amendment apply to AI regulation in hiring and health care? - FIRE | Foundation for Individual Rights and Expression",
+          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNU3FxVUxrbTc0VU5JZkk2UHRQUjZ2eVVLckd1UVlqT3YyOVVRZ2RVR3g2RUd2TFlMUW9hN2dyUWdWaXJxMDRIYmt1cVJPdXl4Q0QyQXhLcmNWZWVlUXNrNWxJckRwYzFnbmllRERyWFo5X1F0aFdWNmZ3VzcwcDB4RHFfaXpGNzIzTXFoSDZiVV9ka3U5TkFVQg?oc=5",
+          "source": "Google News",
           "category": "ethics",
           "category_label": "Ethics & Society",
-          "published_display": "Jul 5, 2026",
-          "published_iso": "2026-07-05T00:00:00Z",
-          "summary": "The EU AI Act's obligations for high-risk systems take effect, raising compliance, transparency, and governance stakes for AI deployers worldwide.",
+          "published_display": "Jul 9, 2026",
+          "published_iso": "2026-07-09T00:17:04Z",
+          "summary": "How does the First Amendment apply to AI regulation in hiring and health care? FIRE | Foundation for Individual Rights and Expression",
           "ethics_tags": [
-            "Regulation & Governance",
-            "Transparency & Accountability"
+            "Regulation & Governance"
           ]
         },
         {
-          "title": "AI copyright: six key rulings shaping 2026 litigation",
-          "link": "https://www.insidetechlaw.com/blog/2026/03/ai-copyright-six-key-rulings",
-          "source": "Inside Tech Law",
+          "title": "Meta Generative AI Copyright Ruling Fails to Get Quick Appeal",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNbjNQM1U0NGNRWEd2S0gwcFctY2FWZzJZbTNzM2R6TkNSM2FBLWJMSjY2dVUxZ2tMbjJGMXRRNXlWNlZ3WUg1dFVfMFRUbFdsYkhCX3ZHMHV5aWxodDA3a1ljX2F0TXl1b3Vrcl9JNHNNQU5uVEt5VnZjMUhYTzl2QWZRMWRGcDZMWTlyZHI2cnBqdTg0MHZEZ0VXNjMzYTg?oc=5",
+          "source": "Bloomberg Law News",
           "category": "ethics",
           "category_label": "Ethics & Society",
-          "published_display": "Jul 4, 2026",
-          "published_iso": "2026-07-04T00:00:00Z",
-          "summary": "A review of pivotal fair-use and infringement rulings that are setting the rules for how AI systems can lawfully learn from copyrighted work.",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T23:23:00Z",
+          "summary": "Meta Generative AI Copyright Ruling Fails to Get Quick Appeal Bloomberg Law News",
           "ethics_tags": [
             "Copyright & IP"
           ]
         },
         {
-          "title": "Court orders OpenAI to produce all 20 million output logs in copyright litigation",
-          "link": "https://www.bakerlaw.com/services/artificial-intelligence-ai/case-tracker-artificial-intelligence-copyrights-and-class-actions/",
-          "source": "BakerHostetler",
+          "title": "Illinois AI Safety Measures Act SB 315: What Frontier AI Developers Must Do Before January 2028",
+          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNaGx5dG5kQ2ZoZkhBZHlRRHBhVGM2X2xGRDhRWFE2VU1yVXhyWTlhT1FWUmZYeEhaQmxLZjFFOEJxQzFLZmU5SDRGZlMtR2FsQmZ5ajVGZzBsSnZiTmR5dmJNMUlyUjdWSGlrQVJpazdKM2JuX0JzOVE3RlI4bDZZRENTbVpNTTNKaWZQVnhta3h3V2Judld1WHlGVzUyYTBzMW5uaVR6Z2E0eXN5QmxfNUN5YjNMdEtYV1NDc0xOX3F3dWs?oc=5",
+          "source": "Crowell & Moring LLP",
           "category": "ethics",
           "category_label": "Ethics & Society",
-          "published_display": "Jul 2, 2026",
-          "published_iso": "2026-07-02T00:00:00Z",
-          "summary": "A discovery ruling forces disclosure of millions of model outputs, testing privacy and accountability questions in AI copyright cases.",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T21:32:07Z",
+          "summary": "Illinois AI Safety Measures Act SB 315: What Frontier AI Developers Must Do Before January 2028 Crowell & Moring LLP",
+          "ethics_tags": [
+            "Safety & Alignment"
+          ]
+        },
+        {
+          "title": "Pressure grows for AI regulation focused on children’s safety",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOV1JmOEJhdHowaGNhcmJCdUljWlBILVExcG4yNzBBS2ViTHppdWtQR3Z2YjV5N0E5dUQ4VmF2Y2lCNGZyOUJlcEFZVUxSdXhVeE5LZWpqd01kWUpjdFUtMHNWRkM1WWZ3ZnRqcjRWT3lDRGhNaFJ5VHJ5MFZVRFlRQWxsa1NzeW1ZcXZ2dl9tZmtubXNBTU9XaEdGZUhtNEpx?oc=5",
+          "source": "Biometric Update",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T19:00:00Z",
+          "summary": "Pressure grows for AI regulation focused on children’s safety Biometric Update",
           "ethics_tags": [
             "Privacy & Surveillance",
-            "Copyright & IP",
+            "Regulation & Governance"
+          ]
+        },
+        {
+          "title": "Elon Musk’s AI jobs prediction gets harsh reality check",
+          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOWFpjV2pvNzdUQ3FYYjBxMWd0bHUtUExMQThfUjItUDRmb0ZuMVpuRnFwREpOT1JDRTNDSk5FeDlselJNdGR6RDkxcjFMYkZrNTdvX0QzMXV4Z2Z1Rnp4amVYOEJmTTdaNnMzSnNoQWR5ME1iLUJOU3BDMEZYajBRRi1EMkxaS1piODJJMmdpbUN1RGxQM2dEcUQxWGZfdzRPVDZuVnRFbw?oc=5",
+          "source": "thestreet.com",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T18:47:00Z",
+          "summary": "Elon Musk’s AI jobs prediction gets harsh reality check thestreet.com",
+          "ethics_tags": [
+            "Labor & Jobs"
+          ]
+        },
+        {
+          "title": "From Rockets to Red Flags: Here Is How to Play SPCX Stock After AI Safety Controversy",
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOZWdSaWh2dTBCbUlpOU1kdWlnOS0tSThBNFU2R0daVzktdjE2N1ZGcnBXVnF3WDRuM3Flcm1lbVpONWk2UmhJMmVZNmJkbjZHTllOWVhRcC1KYWlXQ21OVVE0S3lZTUdPekpPSUVmX0x4RDMwbkVnWVhGZGRkaFBDQkhpR2dnam91LVN2RmwxWndKTURaVDFVcGtnRGJhbzFkVDdRR3RPZUthQ0J5eEVnZS1weW1VSUE4WkIwUTR6WGo4OHZPaEJr?oc=5",
+          "source": "Barchart.com",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T18:25:45Z",
+          "summary": "From Rockets to Red Flags: Here Is How to Play SPCX Stock After AI Safety Controversy Barchart.com",
+          "ethics_tags": [
+            "Safety & Alignment"
+          ]
+        },
+        {
+          "title": "Illinois Governor Signs AI Safety Law Requiring Yearly LLM Audits",
+          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPeE44SDNzYmpmSUNpNmxTUWxPZXZXMEl2TnppYkNtU0dtWmx5QkdiUG5WaV9PRjEzcV83MWp0R3RFNXJJWTZpSlh4OXp3VVVEWkhncV9wcnlIeFROVmdpTVdjYjJmX3RmSnIzcUFxRWZSR3ZHS0hDbUZaTXJOMUJtUmgtTHdJZ1pod0ZnR0tPNGowanhhX2hKWUZERjJDUE42SGNKejRMZjZObENFMkQ2aXZNWF9fM2ZBMlJmVXBtWEc?oc=5",
+          "source": "PYMNTS.com",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T18:20:02Z",
+          "summary": "Illinois Governor Signs AI Safety Law Requiring Yearly LLM Audits PYMNTS.com",
+          "ethics_tags": [
+            "Safety & Alignment",
             "Transparency & Accountability"
           ]
         },
         {
-          "title": "Bartz v. Anthropic settles for $1.5B over pirated books, roughly $3,000 per work",
-          "link": "https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/",
-          "source": "The Authors Guild",
+          "title": "AI Surveillance Is Being Supercharged–And It Will Chill Social Progress",
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNbHpKWEZIQk0xeFpoWTh1S0lrVlZTQVZzSmJNSk0zRHpaemlVU0xDMEMxeDdCc2Zoaklfb1M2di1RRGg4VnJxaGYtSXQ2bk9lc3I3ZjkwcTczVE9rLXo3TnNXRk56RnE3Um5Gb2F1emRuNGJYMV9kdGZFaDZZdWZLMW1DOVJQekVoNk80S2stbWhWXzR3ZjRUdkdR?oc=5",
+          "source": "The Citizen Lab",
           "category": "ethics",
           "category_label": "Ethics & Society",
-          "published_display": "Jul 1, 2026",
-          "published_iso": "2026-07-01T00:00:00Z",
-          "summary": "A landmark copyright settlement: courts held that training on books can be fair use, but storing pirated copies is not, reshaping how training data is sourced.",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T16:51:56Z",
+          "summary": "AI Surveillance Is Being Supercharged–And It Will Chill Social Progress The Citizen Lab",
           "ethics_tags": [
-            "Copyright & IP"
+            "Privacy & Surveillance"
           ]
         },
         {
-          "title": "France's competition authority fines Google 250M euros for using news articles to train Gemini",
-          "link": "https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026",
-          "source": "Norton Rose Fulbright",
+          "title": "Compliance and Enforcement in Global AI Regulation: EU AI Act Risks and International Regulatory Challenges",
+          "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPc3VkMGJRYWRSR2dTdmF3OTJCOGJMcFdZWW5VaTMyajFyUUN4RTNVQ19oVWlrMFRzU1Q4MXpTQXNIT0pvS19fMzVoUHBkanppQWdUbnJETVFoUXNzOFJNRnJpQXZNTF9RMHBMNE5KZVZWMUVEZS0wejI1OUl6ZkM1enpoN25VZUNFSGxIWGhPZFpVVHVaTGJBRF95ZWVtcGhkdzktTS0ybUtlMnNSYnRiSVJqSzI0b2RaTlR2QV90elRMOV9sT29SY3lIQUl6cDUtTXdfbUtMSlBXcHNEQU1XMlFnczdvdVVrM1ZmRDZ0SHI?oc=5",
+          "source": "Foley & Lardner LLP",
           "category": "ethics",
           "category_label": "Ethics & Society",
-          "published_display": "Jun 30, 2026",
-          "published_iso": "2026-06-30T00:00:00Z",
-          "summary": "Regulators penalize Google over unlicensed use of publishers' content, a copyright and competition flashpoint for how models are trained.",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T16:33:15Z",
+          "summary": "Compliance and Enforcement in Global AI Regulation: EU AI Act Risks and International Regulatory Challenges Foley & Lardner LLP",
           "ethics_tags": [
-            "Copyright & IP",
             "Regulation & Governance"
+          ]
+        },
+        {
+          "title": "Qatar Launches Global Alliance for AI Ethics at UN AI Governance Dialogue",
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPazItR3RkVU53ckhIN2YxMm9FQXpaNWRWMmlKbllxWHIzZGtBVGZmQklBWmoxdTdrQ3IyRWVDY09mWFBCa2owdFRTUmRWbThhb2RzQThJb1p6YVpuR0dVdUE2Mkd6R3ZHQmZFUmVlV21KOUdPTi13T2kwVW81Y1ZOMXM0ODljMHVWTFRFZnhnNXZVbk01OHh1M09lUGQ2TVFMeEFSUVRxdHNCQUpK?oc=5",
+          "source": "MIT Sloan Management Review Middle East",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T15:31:32Z",
+          "summary": "Qatar Launches Global Alliance for AI Ethics at UN AI Governance Dialogue MIT Sloan Management Review Middle East",
+          "ethics_tags": [
+            "Regulation & Governance"
+          ]
+        },
+        {
+          "title": "How frontier labs are turning AI safety into an operating system",
+          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNNEpEUTRWU2xwcmlxc0ExMlM4YU9zQ1N5T2Fxczk3ejNuU0dfbnRTZzQ0VzFONVM5MVhhYWhVSTVkeEdoajdNaEtPeWJNVVZPMFdYLTQzMVlSUjZfa1g2SmJGelJJa0YyUkc5N0RldG54ZzRsTERNdjA0b09XRVNTclZSREROQ2Q4NDZBaTg2eklqcnlMZXVWQUhlX1hVM19TUmc?oc=5",
+          "source": "Resultsense",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T15:23:20Z",
+          "summary": "How frontier labs are turning AI safety into an operating system Resultsense",
+          "ethics_tags": [
+            "Safety & Alignment"
+          ]
+        },
+        {
+          "title": "Tech CEOs Ditch the AI Jobs Apocalypse Narrative",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQQjhvYm1iOS1adzBCX3cxazhHeFZXUkNDUzBvRHZBWksxckJDUmE1OTZSVmpCYkczSTZHN29SQXBOZzV6ejFQZHhnM0N4TGpPNXoyZXpORTduTmF3U0w3TEVWMWY1czRCV01Dd2JWQXhvem5ldmtSOXRIUVQtUG0wQk0xeXhtWmt6QkFJTXN2am43TnZjejBCVW1LNA?oc=5",
+          "source": "WSJ",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T14:55:00Z",
+          "summary": "Tech CEOs Ditch the AI Jobs Apocalypse Narrative WSJ",
+          "ethics_tags": [
+            "Labor & Jobs"
+          ]
+        },
+        {
+          "title": "Snapshot on Manufacturing Industry: Mitigating AI Bias Risk in Hiring and Workforce Management",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQb1M2cmhsUUpVZHlrRWdRcXYxb3ljYTRjWG9LbzJxbFpqemVSZUVIS28xdjRrNHUzM2JzYUdGcVo3UWwySkxaYmlQTUFrV1ktQUZmMXNza1ZSZTNJbkE4SGFBdF82YW1kZ091NTNvR3Ziclo3b056R2tza1I0X3dmVVdGMA?oc=5",
+          "source": "JD Supra",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T14:10:08Z",
+          "summary": "Snapshot on Manufacturing Industry: Mitigating AI Bias Risk in Hiring and Workforce Management JD Supra",
+          "ethics_tags": [
+            "Bias & Fairness",
+            "Labor & Jobs"
+          ]
+        },
+        {
+          "title": "Strict AI Safety Rules Coming to Illinois: 5 Key Takeaways for Businesses on New State Law",
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQanlPNXdZSlpwdkgtR1ZaS3otRmZVYmF3eGVScjVxSkN6QTBNTFJqcXdPamFkeEVmMURienl3b2dGaVhHTmExRmtaQUw0UEFsNFpLMDN6ZFk5bWlZS2FLM25KOWo2NFdfX25QTE9OSmlOYm5ma3drSGp0SGJKU3QxVA?oc=5",
+          "source": "JD Supra",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Jul 8, 2026",
+          "published_iso": "2026-07-08T14:05:08Z",
+          "summary": "Strict AI Safety Rules Coming to Illinois: 5 Key Takeaways for Businesses on New State Law JD Supra",
+          "ethics_tags": [
+            "Safety & Alignment"
           ]
         }
       ]
@@ -341,517 +853,594 @@
   },
   "trending": [
     {
-      "term": "Anthropic",
-      "count": 7
-    },
-    {
       "term": "agent",
-      "count": 5
+      "count": 101
     },
     {
-      "term": "OpenAI",
-      "count": 4
-    },
-    {
-      "term": "Google",
-      "count": 4
-    },
-    {
-      "term": "copyright",
-      "count": 4
-    },
-    {
-      "term": "Nvidia",
-      "count": 3
-    },
-    {
-      "term": "agentic",
-      "count": 3
+      "term": "benchmark",
+      "count": 94
     },
     {
       "term": "safety",
-      "count": 3
+      "count": 61
     },
     {
-      "term": "Claude",
-      "count": 2
+      "term": "Nvidia",
+      "count": 57
     },
     {
-      "term": "Gemini",
-      "count": 2
+      "term": "Anthropic",
+      "count": 49
     },
     {
       "term": "chip",
-      "count": 2
+      "count": 38
     },
     {
-      "term": "funding",
-      "count": 2
+      "term": "coding",
+      "count": 38
+    },
+    {
+      "term": "OpenAI",
+      "count": 27
+    },
+    {
+      "term": "agentic",
+      "count": 23
+    },
+    {
+      "term": "multimodal",
+      "count": 22
+    },
+    {
+      "term": "Meta",
+      "count": 20
+    },
+    {
+      "term": "regulation",
+      "count": 20
+    },
+    {
+      "term": "GPT",
+      "count": 18
+    },
+    {
+      "term": "Claude",
+      "count": 17
     }
   ],
   "ethics_themes": [
     {
-      "theme": "Regulation & Governance",
-      "count": 4,
-      "slug": "regulation-governance"
-    },
-    {
-      "theme": "Transparency & Accountability",
-      "count": 4,
-      "slug": "transparency-accountability"
-    },
-    {
-      "theme": "Copyright & IP",
-      "count": 4,
-      "slug": "copyright-ip"
-    },
-    {
       "theme": "Safety & Alignment",
-      "count": 3,
+      "count": 56,
       "slug": "safety-alignment"
     },
     {
-      "theme": "Bias & Fairness",
-      "count": 2,
-      "slug": "bias-fairness"
+      "theme": "Regulation & Governance",
+      "count": 47,
+      "slug": "regulation-governance"
+    },
+    {
+      "theme": "Labor & Jobs",
+      "count": 29,
+      "slug": "labor-jobs"
+    },
+    {
+      "theme": "Transparency & Accountability",
+      "count": 24,
+      "slug": "transparency-accountability"
     },
     {
       "theme": "Privacy & Surveillance",
-      "count": 1,
+      "count": 19,
       "slug": "privacy-surveillance"
+    },
+    {
+      "theme": "Energy & Environment",
+      "count": 18,
+      "slug": "energy-environment"
+    },
+    {
+      "theme": "Misinformation & Deepfakes",
+      "count": 17,
+      "slug": "misinformation-deepfakes"
+    },
+    {
+      "theme": "Copyright & IP",
+      "count": 15,
+      "slug": "copyright-ip"
+    },
+    {
+      "theme": "Bias & Fairness",
+      "count": 14,
+      "slug": "bias-fairness"
     }
   ],
   "ethics_watch": [
     {
-      "title": "Left to self-police, AI companies weaken safety commitments, Future of Life study finds",
-      "link": "https://www.wbur.org/hereandnow/2026/07/07/ai-companies-safety",
-      "source": "WBUR Here & Now",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Jul 7, 2026",
-      "published_iso": "2026-07-07T13:00:00Z",
-      "summary": "A Future of Life Institute study finds leading labs moving the goalposts on safety commitments, with none scoring above a C+ on alignment and accountability.",
-      "ethics_tags": [
-        "Safety & Alignment",
-        "Transparency & Accountability"
-      ]
-    },
-    {
-      "title": "Google, Anthropic and OpenAI lead the AI Safety Index; SpaceXAI receives an F",
-      "link": "https://seekingalpha.com/news/4611964-google-anthropic-openai-lead-ai-safety-index-spacexai-receives-f",
-      "source": "Seeking Alpha",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Jul 6, 2026",
-      "published_iso": "2026-07-06T20:00:00Z",
-      "summary": "The latest AI Safety Index ranks the major labs on transparency, risk management, and governance, with wide gaps between leaders and laggards.",
-      "ethics_tags": [
-        "Safety & Alignment",
-        "Regulation & Governance",
-        "Transparency & Accountability"
-      ]
-    },
-    {
-      "title": "EU AI Act high-risk enforcement begins August 2, 2026",
-      "link": "https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026",
-      "source": "Norton Rose Fulbright",
+      "title": "How does the First Amendment apply to AI regulation in hiring and health care? - FIRE | Foundation for Individual Rights and Expression",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNU3FxVUxrbTc0VU5JZkk2UHRQUjZ2eVVLckd1UVlqT3YyOVVRZ2RVR3g2RUd2TFlMUW9hN2dyUWdWaXJxMDRIYmt1cVJPdXl4Q0QyQXhLcmNWZWVlUXNrNWxJckRwYzFnbmllRERyWFo5X1F0aFdWNmZ3VzcwcDB4RHFfaXpGNzIzTXFoSDZiVV9ka3U5TkFVQg?oc=5",
+      "source": "Google News",
       "category": "ethics",
       "category_label": "Ethics & Society",
-      "published_display": "Jul 5, 2026",
-      "published_iso": "2026-07-05T00:00:00Z",
-      "summary": "The EU AI Act's obligations for high-risk systems take effect, raising compliance, transparency, and governance stakes for AI deployers worldwide.",
+      "published_display": "Jul 9, 2026",
+      "published_iso": "2026-07-09T00:17:04Z",
+      "summary": "How does the First Amendment apply to AI regulation in hiring and health care? FIRE | Foundation for Individual Rights and Expression",
       "ethics_tags": [
-        "Regulation & Governance",
-        "Transparency & Accountability"
+        "Regulation & Governance"
       ]
     },
     {
-      "title": "AI copyright: six key rulings shaping 2026 litigation",
-      "link": "https://www.insidetechlaw.com/blog/2026/03/ai-copyright-six-key-rulings",
-      "source": "Inside Tech Law",
+      "title": "Meta Generative AI Copyright Ruling Fails to Get Quick Appeal",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNbjNQM1U0NGNRWEd2S0gwcFctY2FWZzJZbTNzM2R6TkNSM2FBLWJMSjY2dVUxZ2tMbjJGMXRRNXlWNlZ3WUg1dFVfMFRUbFdsYkhCX3ZHMHV5aWxodDA3a1ljX2F0TXl1b3Vrcl9JNHNNQU5uVEt5VnZjMUhYTzl2QWZRMWRGcDZMWTlyZHI2cnBqdTg0MHZEZ0VXNjMzYTg?oc=5",
+      "source": "Bloomberg Law News",
       "category": "ethics",
       "category_label": "Ethics & Society",
-      "published_display": "Jul 4, 2026",
-      "published_iso": "2026-07-04T00:00:00Z",
-      "summary": "A review of pivotal fair-use and infringement rulings that are setting the rules for how AI systems can lawfully learn from copyrighted work.",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T23:23:00Z",
+      "summary": "Meta Generative AI Copyright Ruling Fails to Get Quick Appeal Bloomberg Law News",
       "ethics_tags": [
         "Copyright & IP"
       ]
     },
     {
-      "title": "Nvidia tops $40 billion in equity bets on AI startups in 2026",
-      "link": "https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html",
-      "source": "CNBC",
-      "category": "business",
-      "category_label": "Business & Funding",
-      "published_display": "Jul 3, 2026",
-      "published_iso": "2026-07-03T09:00:00Z",
-      "summary": "Nvidia's expanding investment portfolio deepens its influence across the AI supply chain, raising questions about market concentration.",
+      "title": "Meta datacenter contractor flushed contaminated water",
+      "link": "https://www.theguardian.com/us-news/2026/jul/08/meta-datacenter-ai-wyoming-water",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T23:05:45Z",
+      "summary": "6 points, 2 comments on Hacker News.",
       "ethics_tags": [
-        "Bias & Fairness"
+        "Energy & Environment"
       ]
     },
     {
-      "title": "Sam Altman seeks a 'new world order' for AI as OpenAI loses ground to Google and Anthropic",
-      "link": "https://fortune.com/2026/07/02/sam-altman-new-world-order-ai-openai-google-anthropic/",
-      "source": "Fortune",
-      "category": "labs",
-      "category_label": "Labs & Industry",
-      "published_display": "Jul 2, 2026",
-      "published_iso": "2026-07-02T09:15:00Z",
-      "summary": "With rivals gaining, OpenAI floats giving Washington a 5% equity stake, raising governance and oversight questions about the state's role in frontier AI.",
+      "title": "Policy Statement Concerning the Suppression of Accuracy in AI Systems",
+      "link": "https://www.federalregister.gov/documents/2026/07/07/2026-13628/policy-statement-concerning-the-suppression-of-accuracy-in-artificial-intelligence-systems",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T22:33:46Z",
+      "summary": "6 points, 1 comments on Hacker News.",
       "ethics_tags": [
-        "Bias & Fairness",
         "Regulation & Governance"
       ]
     },
     {
-      "title": "Court orders OpenAI to produce all 20 million output logs in copyright litigation",
-      "link": "https://www.bakerlaw.com/services/artificial-intelligence-ai/case-tracker-artificial-intelligence-copyrights-and-class-actions/",
-      "source": "BakerHostetler",
+      "title": "Illinois AI Safety Measures Act SB 315: What Frontier AI Developers Must Do Before January 2028",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNaGx5dG5kQ2ZoZkhBZHlRRHBhVGM2X2xGRDhRWFE2VU1yVXhyWTlhT1FWUmZYeEhaQmxLZjFFOEJxQzFLZmU5SDRGZlMtR2FsQmZ5ajVGZzBsSnZiTmR5dmJNMUlyUjdWSGlrQVJpazdKM2JuX0JzOVE3RlI4bDZZRENTbVpNTTNKaWZQVnhta3h3V2Judld1WHlGVzUyYTBzMW5uaVR6Z2E0eXN5QmxfNUN5YjNMdEtYV1NDc0xOX3F3dWs?oc=5",
+      "source": "Crowell & Moring LLP",
       "category": "ethics",
       "category_label": "Ethics & Society",
-      "published_display": "Jul 2, 2026",
-      "published_iso": "2026-07-02T00:00:00Z",
-      "summary": "A discovery ruling forces disclosure of millions of model outputs, testing privacy and accountability questions in AI copyright cases.",
-      "ethics_tags": [
-        "Privacy & Surveillance",
-        "Copyright & IP",
-        "Transparency & Accountability"
-      ]
-    },
-    {
-      "title": "Commerce Department lifts export controls; Anthropic restores Fable 5 and Mythos 5 globally with new safeguards",
-      "link": "https://thursdai.news/releases/2026-07",
-      "source": "ThursdAI",
-      "category": "labs",
-      "category_label": "Labs & Industry",
-      "published_display": "Jul 1, 2026",
-      "published_iso": "2026-07-01T18:00:00Z",
-      "summary": "After US export controls were lifted, Anthropic brought the models back online globally, adding cybersecurity classifiers as a safety guardrail.",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T21:32:07Z",
+      "summary": "Illinois AI Safety Measures Act SB 315: What Frontier AI Developers Must Do Before January 2028 Crowell & Moring LLP",
       "ethics_tags": [
         "Safety & Alignment"
       ]
     },
     {
-      "title": "Bartz v. Anthropic settles for $1.5B over pirated books, roughly $3,000 per work",
-      "link": "https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/",
-      "source": "The Authors Guild",
+      "title": "Google’s deepfake detector system used to debunk McConnell hoax pic",
+      "link": "https://techcrunch.com/2026/07/08/googles-deepfake-detector-system-used-to-debunk-mcconnell-hoax-pic/",
+      "source": "TechCrunch",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T20:37:03Z",
+      "summary": "Earlier this week, a picture seemed to show Kentucky Senator Mitch McConnell covered in tubes in a hospital bed in a state of extreme distress. It turned out to be an AI-generated fake.",
+      "ethics_tags": [
+        "Misinformation & Deepfakes"
+      ]
+    },
+    {
+      "title": "Pressure grows for AI regulation focused on children’s safety",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOV1JmOEJhdHowaGNhcmJCdUljWlBILVExcG4yNzBBS2ViTHppdWtQR3Z2YjV5N0E5dUQ4VmF2Y2lCNGZyOUJlcEFZVUxSdXhVeE5LZWpqd01kWUpjdFUtMHNWRkM1WWZ3ZnRqcjRWT3lDRGhNaFJ5VHJ5MFZVRFlRQWxsa1NzeW1ZcXZ2dl9tZmtubXNBTU9XaEdGZUhtNEpx?oc=5",
+      "source": "Biometric Update",
       "category": "ethics",
       "category_label": "Ethics & Society",
-      "published_display": "Jul 1, 2026",
-      "published_iso": "2026-07-01T00:00:00Z",
-      "summary": "A landmark copyright settlement: courts held that training on books can be fair use, but storing pirated copies is not, reshaping how training data is sourced.",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T19:00:00Z",
+      "summary": "Pressure grows for AI regulation focused on children’s safety Biometric Update",
+      "ethics_tags": [
+        "Privacy & Surveillance",
+        "Regulation & Governance"
+      ]
+    },
+    {
+      "title": "Elon Musk’s AI jobs prediction gets harsh reality check",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOWFpjV2pvNzdUQ3FYYjBxMWd0bHUtUExMQThfUjItUDRmb0ZuMVpuRnFwREpOT1JDRTNDSk5FeDlselJNdGR6RDkxcjFMYkZrNTdvX0QzMXV4Z2Z1Rnp4amVYOEJmTTdaNnMzSnNoQWR5ME1iLUJOU3BDMEZYajBRRi1EMkxaS1piODJJMmdpbUN1RGxQM2dEcUQxWGZfdzRPVDZuVnRFbw?oc=5",
+      "source": "thestreet.com",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T18:47:00Z",
+      "summary": "Elon Musk’s AI jobs prediction gets harsh reality check thestreet.com",
+      "ethics_tags": [
+        "Labor & Jobs"
+      ]
+    },
+    {
+      "title": "From Rockets to Red Flags: Here Is How to Play SPCX Stock After AI Safety Controversy",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOZWdSaWh2dTBCbUlpOU1kdWlnOS0tSThBNFU2R0daVzktdjE2N1ZGcnBXVnF3WDRuM3Flcm1lbVpONWk2UmhJMmVZNmJkbjZHTllOWVhRcC1KYWlXQ21OVVE0S3lZTUdPekpPSUVmX0x4RDMwbkVnWVhGZGRkaFBDQkhpR2dnam91LVN2RmwxWndKTURaVDFVcGtnRGJhbzFkVDdRR3RPZUthQ0J5eEVnZS1weW1VSUE4WkIwUTR6WGo4OHZPaEJr?oc=5",
+      "source": "Barchart.com",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T18:25:45Z",
+      "summary": "From Rockets to Red Flags: Here Is How to Play SPCX Stock After AI Safety Controversy Barchart.com",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ]
+    },
+    {
+      "title": "Illinois Governor Signs AI Safety Law Requiring Yearly LLM Audits",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPeE44SDNzYmpmSUNpNmxTUWxPZXZXMEl2TnppYkNtU0dtWmx5QkdiUG5WaV9PRjEzcV83MWp0R3RFNXJJWTZpSlh4OXp3VVVEWkhncV9wcnlIeFROVmdpTVdjYjJmX3RmSnIzcUFxRWZSR3ZHS0hDbUZaTXJOMUJtUmgtTHdJZ1pod0ZnR0tPNGowanhhX2hKWUZERjJDUE42SGNKejRMZjZObENFMkQ2aXZNWF9fM2ZBMlJmVXBtWEc?oc=5",
+      "source": "PYMNTS.com",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T18:20:02Z",
+      "summary": "Illinois Governor Signs AI Safety Law Requiring Yearly LLM Audits PYMNTS.com",
+      "ethics_tags": [
+        "Safety & Alignment",
+        "Transparency & Accountability"
+      ]
+    },
+    {
+      "title": "Why this CEO thinks video games make better training data than the internet",
+      "link": "https://techcrunch.com/video/why-this-ceo-thinks-video-games-make-better-training-data-than-the-internet/",
+      "source": "TechCrunch",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T17:47:55Z",
+      "summary": "When it comes to achieving artificial general intelligence (AGI), large language models just don’t have what it takes. Models like ChatGPT and Claude are great at text, but they’re less skilled at understanding how things actually move…",
       "ethics_tags": [
         "Copyright & IP"
       ]
     },
     {
-      "title": "France's competition authority fines Google 250M euros for using news articles to train Gemini",
-      "link": "https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026",
-      "source": "Norton Rose Fulbright",
+      "title": "AI Surveillance Is Being Supercharged–And It Will Chill Social Progress",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNbHpKWEZIQk0xeFpoWTh1S0lrVlZTQVZzSmJNSk0zRHpaemlVU0xDMEMxeDdCc2Zoaklfb1M2di1RRGg4VnJxaGYtSXQ2bk9lc3I3ZjkwcTczVE9rLXo3TnNXRk56RnE3Um5Gb2F1emRuNGJYMV9kdGZFaDZZdWZLMW1DOVJQekVoNk80S2stbWhWXzR3ZjRUdkdR?oc=5",
+      "source": "The Citizen Lab",
       "category": "ethics",
       "category_label": "Ethics & Society",
-      "published_display": "Jun 30, 2026",
-      "published_iso": "2026-06-30T00:00:00Z",
-      "summary": "Regulators penalize Google over unlicensed use of publishers' content, a copyright and competition flashpoint for how models are trained.",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T16:51:56Z",
+      "summary": "AI Surveillance Is Being Supercharged–And It Will Chill Social Progress The Citizen Lab",
       "ethics_tags": [
-        "Copyright & IP",
+        "Privacy & Surveillance"
+      ]
+    },
+    {
+      "title": "Anthropic leases new NYC office building, set to double local workforce by end of year",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQTE9LOWgybXNRaHZrUjE0QVN1TTF1STJuVGN0bW4tVEhEWXItcTk4MWNyZUd3QmJDbjZDbGNhRnVEQ05lRWg4bm16dUxyYjFBMGhhRVM4dWE0ZGhYMFFmNnBGZlVES1NKcUU4b0dqMm1CS3liZkx5dlo3VE1vSFQ4MFZ1Y2pkRGhNa3RjNDRyVldRUzRrVzF0UE5jV3h4TFJGUFgzRHR6a1FET0U4T3hSLVJ6LWhEMFk0U0ZUQ0ZHVHR2WFU?oc=5",
+      "source": "New York Post",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T16:38:00Z",
+      "summary": "Anthropic leases new NYC office building, set to double local workforce by end of year New York Post",
+      "ethics_tags": [
+        "Labor & Jobs"
+      ]
+    },
+    {
+      "title": "AI startup CEO kept doing deals after secret fraud plea",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOTVRpV0c4ME9QUlNQN2Rzd0Jsb1NXelNEME8zMHhJbS1kWkI3azNUVWs1NHR6Z1lpejJ3WEZpQWw1bEdnZmMtNjFUWlRLYW1tUkxwelh2Tld3NlhxUzNfd0NySjM4TVB0TVdLYlFYVUJGaUJmc2kzb2hzcklvUVUwa0VTRlRua3A4?oc=5",
+      "source": "Axios",
+      "category": "business",
+      "category_label": "Business & Funding",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T16:35:38Z",
+      "summary": "AI startup CEO kept doing deals after secret fraud plea Axios",
+      "ethics_tags": [
+        "Misinformation & Deepfakes"
+      ]
+    },
+    {
+      "title": "Compliance and Enforcement in Global AI Regulation: EU AI Act Risks and International Regulatory Challenges",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPc3VkMGJRYWRSR2dTdmF3OTJCOGJMcFdZWW5VaTMyajFyUUN4RTNVQ19oVWlrMFRzU1Q4MXpTQXNIT0pvS19fMzVoUHBkanppQWdUbnJETVFoUXNzOFJNRnJpQXZNTF9RMHBMNE5KZVZWMUVEZS0wejI1OUl6ZkM1enpoN25VZUNFSGxIWGhPZFpVVHVaTGJBRF95ZWVtcGhkdzktTS0ybUtlMnNSYnRiSVJqSzI0b2RaTlR2QV90elRMOV9sT29SY3lIQUl6cDUtTXdfbUtMSlBXcHNEQU1XMlFnczdvdVVrM1ZmRDZ0SHI?oc=5",
+      "source": "Foley & Lardner LLP",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T16:33:15Z",
+      "summary": "Compliance and Enforcement in Global AI Regulation: EU AI Act Risks and International Regulatory Challenges Foley & Lardner LLP",
+      "ethics_tags": [
         "Regulation & Governance"
+      ]
+    },
+    {
+      "title": "Large language model guides discovery of catalysts for clean energy tech",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPUVRBZWJQQkVjU0dMMmFNUFJoTDJWeFQ2Vk1qNXZtTVo1TW9SeVZPanBCMmpaaU84NERtOXAyOG5kc0hGVGtzTDRuaG1qQjJrY2FhS0doMl9SbFJGU3VVTkNseVZ2VndGXzZmUWV4SldWZXpyOGp4VU4zN1BTOTk0eC1n?oc=5",
+      "source": "Phys.org",
+      "category": "research",
+      "category_label": "Research & Papers",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T16:20:05Z",
+      "summary": "Large language model guides discovery of catalysts for clean energy tech Phys.org",
+      "ethics_tags": [
+        "Energy & Environment"
       ]
     }
   ],
   "latest": [
     {
-      "title": "Left to self-police, AI companies weaken safety commitments, Future of Life study finds",
-      "link": "https://www.wbur.org/hereandnow/2026/07/07/ai-companies-safety",
-      "source": "WBUR Here & Now",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Jul 7, 2026",
-      "published_iso": "2026-07-07T13:00:00Z",
-      "summary": "A Future of Life Institute study finds leading labs moving the goalposts on safety commitments, with none scoring above a C+ on alignment and accountability.",
-      "ethics_tags": [
-        "Safety & Alignment",
-        "Transparency & Accountability"
-      ]
-    },
-    {
-      "title": "Google, Anthropic and OpenAI lead the AI Safety Index; SpaceXAI receives an F",
-      "link": "https://seekingalpha.com/news/4611964-google-anthropic-openai-lead-ai-safety-index-spacexai-receives-f",
-      "source": "Seeking Alpha",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Jul 6, 2026",
-      "published_iso": "2026-07-06T20:00:00Z",
-      "summary": "The latest AI Safety Index ranks the major labs on transparency, risk management, and governance, with wide gaps between leaders and laggards.",
-      "ethics_tags": [
-        "Safety & Alignment",
-        "Regulation & Governance",
-        "Transparency & Accountability"
-      ]
-    },
-    {
-      "title": "AI News Today, July 6 2026: the 15 biggest stories",
-      "link": "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026",
-      "source": "Build Fast with AI",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Jul 6, 2026",
-      "published_iso": "2026-07-06T08:00:00Z",
-      "summary": "A practitioner roundup of the week's most-discussed releases, tools, and debates across the AI community.",
-      "ethics_tags": []
-    },
-    {
-      "title": "In Case You Missed It: Last Week in AI, June 29 to July 5, 2026",
-      "link": "https://opendatascience.com/in-case-you-missed-it-last-week-in-ai-june-29-july-5-2026/",
-      "source": "Open Data Science",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Jul 5, 2026",
-      "published_iso": "2026-07-05T15:00:00Z",
-      "summary": "A weekly digest summarizing model releases, research, and industry moves for machine-learning practitioners.",
-      "ethics_tags": []
-    },
-    {
-      "title": "EU AI Act high-risk enforcement begins August 2, 2026",
-      "link": "https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026",
-      "source": "Norton Rose Fulbright",
-      "category": "ethics",
-      "category_label": "Ethics & Society",
-      "published_display": "Jul 5, 2026",
-      "published_iso": "2026-07-05T00:00:00Z",
-      "summary": "The EU AI Act's obligations for high-risk systems take effect, raising compliance, transparency, and governance stakes for AI deployers worldwide.",
-      "ethics_tags": [
-        "Regulation & Governance",
-        "Transparency & Accountability"
-      ]
-    },
-    {
-      "title": "Unisound U2: a 266B-parameter MoE built for agents hits 72.2% on SWE-bench Verified",
-      "link": "https://llm-stats.com/ai-news",
-      "source": "llm-stats",
+      "title": "Japan benchmark bond yield hits 30-year high on inflation, fiscal health concerns",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNQ2VaM2wyWXJ2MHBHdzl4YmhTTW5mRGo3QkxPRVhnbWxaN0xGOUMzTjJ5czRhQ1lJUjJ5aU05MUVfdkQ5Sjd2bjhBVzgtTUFXSnktbmR4N1JFWmpWSXYwODVic2s2OVctUzlSR0d3SDF0QzhHMUdaZ296WFl4R0NseER4endVVENsV1Y5SzdicEVEbEdYeHpWdkZzdmU4SDFRaDY3cmxadmxfRW5aZXREMFhrWVJkdFFDZW5reG9PMUxHaXlIZXNzQ2lPUjQ?oc=5",
+      "source": "Reuters",
       "category": "research",
       "category_label": "Research & Papers",
-      "published_display": "Jul 4, 2026",
-      "published_iso": "2026-07-04T00:00:00Z",
-      "summary": "The mixture-of-experts model (266B total / 10B active) posts strong reasoning and coding scores, underscoring the shift toward agent-optimized architectures.",
+      "published_display": "Jul 9, 2026",
+      "published_iso": "2026-07-09T00:32:00Z",
+      "summary": "Japan benchmark bond yield hits 30-year high on inflation, fiscal health concerns Reuters",
       "ethics_tags": []
     },
     {
-      "title": "AI copyright: six key rulings shaping 2026 litigation",
-      "link": "https://www.insidetechlaw.com/blog/2026/03/ai-copyright-six-key-rulings",
-      "source": "Inside Tech Law",
+      "title": "AI bills are baffling the C-suite after shift to usage-based pricing",
+      "link": "https://www.theregister.com/ai-and-ml/2026/07/03/ai-bills-are-baffling-the-c-suite-after-shift-to-usage-based-pricing/5266383",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 9, 2026",
+      "published_iso": "2026-07-09T00:19:18Z",
+      "summary": "1 points, 0 comments on Hacker News.",
+      "ethics_tags": []
+    },
+    {
+      "title": "How does the First Amendment apply to AI regulation in hiring and health care? - FIRE | Foundation for Individual Rights and Expression",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNU3FxVUxrbTc0VU5JZkk2UHRQUjZ2eVVLckd1UVlqT3YyOVVRZ2RVR3g2RUd2TFlMUW9hN2dyUWdWaXJxMDRIYmt1cVJPdXl4Q0QyQXhLcmNWZWVlUXNrNWxJckRwYzFnbmllRERyWFo5X1F0aFdWNmZ3VzcwcDB4RHFfaXpGNzIzTXFoSDZiVV9ka3U5TkFVQg?oc=5",
+      "source": "Google News",
       "category": "ethics",
       "category_label": "Ethics & Society",
-      "published_display": "Jul 4, 2026",
-      "published_iso": "2026-07-04T00:00:00Z",
-      "summary": "A review of pivotal fair-use and infringement rulings that are setting the rules for how AI systems can lawfully learn from copyrighted work.",
+      "published_display": "Jul 9, 2026",
+      "published_iso": "2026-07-09T00:17:04Z",
+      "summary": "How does the First Amendment apply to AI regulation in hiring and health care? FIRE | Foundation for Individual Rights and Expression",
+      "ethics_tags": [
+        "Regulation & Governance"
+      ]
+    },
+    {
+      "title": "QuakeWorld Air Physics",
+      "link": "https://mattias.niklewski.com/2013/01/qw_air_physics.html",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 9, 2026",
+      "published_iso": "2026-07-09T00:12:04Z",
+      "summary": "2 points, 0 comments on Hacker News.",
+      "ethics_tags": []
+    },
+    {
+      "title": "Rust and Artificial Intelligence: The Rust Foundation's Position",
+      "link": "https://rustfoundation.org/resource/rust-and-ai-position-statement/",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 9, 2026",
+      "published_iso": "2026-07-09T00:09:19Z",
+      "summary": "2 points, 0 comments on Hacker News.",
+      "ethics_tags": []
+    },
+    {
+      "title": "Show HN: Chrome extension that creates mini-Chrome extensions for you",
+      "link": "https://www.clickremix.com/",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 9, 2026",
+      "published_iso": "2026-07-09T00:06:33Z",
+      "summary": "1 points, 0 comments on Hacker News.",
+      "ethics_tags": []
+    },
+    {
+      "title": "Show HN: Skillburst - AI skills for your whole team, not just the engineers",
+      "link": "https://skillburst.ai/",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T23:48:27Z",
+      "summary": "1 points, 0 comments on Hacker News.",
+      "ethics_tags": []
+    },
+    {
+      "title": "Show HN: Amotions app in Zoom: real-time guidance for sales calls",
+      "link": "https://amotionsinc.com/blogs/how-to-use-amotions-ai-zoom-app",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T23:41:19Z",
+      "summary": "1 points, 0 comments on Hacker News.",
+      "ethics_tags": []
+    },
+    {
+      "title": "Hijacking Defensive Cyber AI Agents for Remote Code Execution",
+      "link": "https://ainowinstitute.org/publications/friendly-fire-exploit-brief",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T23:35:29Z",
+      "summary": "1 points, 0 comments on Hacker News.",
+      "ethics_tags": []
+    },
+    {
+      "title": "The AI Bubble We need to talk",
+      "link": "https://www.youtube.com/watch?v=2J2Fb1bBufA",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T23:34:33Z",
+      "summary": "2 points, 0 comments on Hacker News.",
+      "ethics_tags": []
+    },
+    {
+      "title": "Ask HN: What do you think of xsight labs?",
+      "link": "https://news.ycombinator.com/item?id=48838806",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T23:30:20Z",
+      "summary": "1 points, 0 comments on Hacker News.",
+      "ethics_tags": []
+    },
+    {
+      "title": "Meta Generative AI Copyright Ruling Fails to Get Quick Appeal",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNbjNQM1U0NGNRWEd2S0gwcFctY2FWZzJZbTNzM2R6TkNSM2FBLWJMSjY2dVUxZ2tMbjJGMXRRNXlWNlZ3WUg1dFVfMFRUbFdsYkhCX3ZHMHV5aWxodDA3a1ljX2F0TXl1b3Vrcl9JNHNNQU5uVEt5VnZjMUhYTzl2QWZRMWRGcDZMWTlyZHI2cnBqdTg0MHZEZ0VXNjMzYTg?oc=5",
+      "source": "Bloomberg Law News",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T23:23:00Z",
+      "summary": "Meta Generative AI Copyright Ruling Fails to Get Quick Appeal Bloomberg Law News",
       "ethics_tags": [
         "Copyright & IP"
       ]
     },
     {
-      "title": "Anthropic unveils Claude Science Workbench, connecting Opus 4.8 to 60+ scientific databases",
-      "link": "https://thursdai.news/releases/2026-07",
-      "source": "ThursdAI",
-      "category": "labs",
-      "category_label": "Labs & Industry",
-      "published_display": "Jul 3, 2026",
-      "published_iso": "2026-07-03T16:00:00Z",
-      "summary": "The workbench links Claude to genomics, proteomics, cheminformatics, and clinical-trial databases, pushing AI deeper into scientific research workflows.",
+      "title": "Suspecting AI cheating, Ivy League prof ordered in-person final; scores fell 50%",
+      "link": "https://arstechnica.com/ai/2026/07/we-cannot-choose-to-become-idiots-the-ai-cheating-scandal-roiling-brown-university/",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T23:11:28Z",
+      "summary": "67 points, 35 comments on Hacker News.",
       "ethics_tags": []
     },
     {
-      "title": "Nvidia tops $40 billion in equity bets on AI startups in 2026",
-      "link": "https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html",
-      "source": "CNBC",
-      "category": "business",
-      "category_label": "Business & Funding",
-      "published_display": "Jul 3, 2026",
-      "published_iso": "2026-07-03T09:00:00Z",
-      "summary": "Nvidia's expanding investment portfolio deepens its influence across the AI supply chain, raising questions about market concentration.",
+      "title": "Meta datacenter contractor flushed contaminated water",
+      "link": "https://www.theguardian.com/us-news/2026/jul/08/meta-datacenter-ai-wyoming-water",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T23:05:45Z",
+      "summary": "6 points, 2 comments on Hacker News.",
       "ethics_tags": [
-        "Bias & Fairness"
+        "Energy & Environment"
       ]
     },
     {
-      "title": "Anthropic overtakes OpenAI on self-reported revenue, targeting $47B and profitability by 2029",
-      "link": "https://fortune.com/2026/07/02/sam-altman-new-world-order-ai-openai-google-anthropic/",
-      "source": "Fortune",
+      "title": "Lovable reportedly in talks to double its valuation to $13.2B",
+      "link": "https://techcrunch.com/2026/07/08/lovable-reportedly-in-talks-to-double-its-valuation-to-13-2b/",
+      "source": "TechCrunch",
       "category": "labs",
       "category_label": "Labs & Industry",
-      "published_display": "Jul 2, 2026",
-      "published_iso": "2026-07-02T12:30:00Z",
-      "summary": "Anthropic says it is on course to reach $47 billion in revenue and profitability a year ahead of OpenAI, reshaping the competitive landscape among leading labs.",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T22:41:33Z",
+      "summary": "The $300 million round is expected to be led by Menlo Ventures, Sifted reported.",
       "ethics_tags": []
     },
     {
-      "title": "Nvidia to let AI startups use its chips now and pay with a share of future revenue",
-      "link": "https://www.cnbc.com/2026/07/02/nvidia-plans-to-offer-start-up-customers-access-to-revenue-sharing-deals.html",
-      "source": "CNBC",
-      "category": "business",
-      "category_label": "Business & Funding",
-      "published_display": "Jul 2, 2026",
-      "published_iso": "2026-07-02T11:00:00Z",
-      "summary": "Nvidia positions itself as a financier of the AI buildout, with cloud partners reselling chip access to startups in exchange for a cut of future revenue.",
-      "ethics_tags": []
-    },
-    {
-      "title": "Google DeepMind delays Gemini 3.5 Pro to July 17 for a full architectural rebuild",
-      "link": "https://finance.biggo.com/news/6f0c6bb2-795f-4c57-9d09-6db691d7638a",
-      "source": "BigGo Finance",
-      "category": "labs",
-      "category_label": "Labs & Industry",
-      "published_display": "Jul 2, 2026",
-      "published_iso": "2026-07-02T10:00:00Z",
-      "summary": "DeepMind scraps the Gemini 2.5 Pro architecture for a ground-up redesign adding a 2M-token context window, a Deep Think reasoning layer, and autonomous workflow capabilities.",
-      "ethics_tags": []
-    },
-    {
-      "title": "Sam Altman seeks a 'new world order' for AI as OpenAI loses ground to Google and Anthropic",
-      "link": "https://fortune.com/2026/07/02/sam-altman-new-world-order-ai-openai-google-anthropic/",
-      "source": "Fortune",
-      "category": "labs",
-      "category_label": "Labs & Industry",
-      "published_display": "Jul 2, 2026",
-      "published_iso": "2026-07-02T09:15:00Z",
-      "summary": "With rivals gaining, OpenAI floats giving Washington a 5% equity stake, raising governance and oversight questions about the state's role in frontier AI.",
+      "title": "Policy Statement Concerning the Suppression of Accuracy in AI Systems",
+      "link": "https://www.federalregister.gov/documents/2026/07/07/2026-13628/policy-statement-concerning-the-suppression-of-accuracy-in-artificial-intelligence-systems",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T22:33:46Z",
+      "summary": "6 points, 1 comments on Hacker News.",
       "ethics_tags": [
-        "Bias & Fairness",
         "Regulation & Governance"
       ]
     },
     {
-      "title": "Court orders OpenAI to produce all 20 million output logs in copyright litigation",
-      "link": "https://www.bakerlaw.com/services/artificial-intelligence-ai/case-tracker-artificial-intelligence-copyrights-and-class-actions/",
-      "source": "BakerHostetler",
-      "category": "ethics",
-      "category_label": "Ethics & Society",
-      "published_display": "Jul 2, 2026",
-      "published_iso": "2026-07-02T00:00:00Z",
-      "summary": "A discovery ruling forces disclosure of millions of model outputs, testing privacy and accountability questions in AI copyright cases.",
-      "ethics_tags": [
-        "Privacy & Surveillance",
-        "Copyright & IP",
-        "Transparency & Accountability"
-      ]
+      "title": "Show HN: A shallow lake's report on itself",
+      "link": "https://ashallowlake.com/",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T22:32:30Z",
+      "summary": "1 points, 0 comments on Hacker News.",
+      "ethics_tags": []
     },
     {
-      "title": "Commerce Department lifts export controls; Anthropic restores Fable 5 and Mythos 5 globally with new safeguards",
-      "link": "https://thursdai.news/releases/2026-07",
-      "source": "ThursdAI",
-      "category": "labs",
-      "category_label": "Labs & Industry",
-      "published_display": "Jul 1, 2026",
-      "published_iso": "2026-07-01T18:00:00Z",
-      "summary": "After US export controls were lifted, Anthropic brought the models back online globally, adding cybersecurity classifiers as a safety guardrail.",
+      "title": "Native-speed vLLM transformers modeling back end",
+      "link": "https://huggingface.co/blog/native-speed-vllm-transformers-backend",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T22:16:44Z",
+      "summary": "2 points, 0 comments on Hacker News.",
+      "ethics_tags": []
+    },
+    {
+      "title": "Show HN: A tool that checks how your business appears in AI search",
+      "link": "https://www.tryagentscore.com",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T22:15:16Z",
+      "summary": "2 points, 1 comments on Hacker News.",
+      "ethics_tags": []
+    },
+    {
+      "title": "The neutral proof standard for consequential AI-agent actions",
+      "link": "https://github.com/Actenon",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T21:58:53Z",
+      "summary": "1 points, 0 comments on Hacker News.",
+      "ethics_tags": []
+    },
+    {
+      "title": "Former executive accuses Mayo of cutting corners on AI research",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOQ1piSlZKc3djeDRBVTRRSTFhbWNaRFcweW8tMnJhRHQwdmRyZVlIOTdsb29HbU1OZGx6YV9CdUd3alphcUpET09vWmx2SVo0UHAyeDJ3N3N3aXdNRzhubHduU0pLMEhnOGlmb2xnVVBWWEZuSHQ2aGZETGo2enlqMmJ5MU90SW40alVTLXFia3BESXdHQ1FRTVFSRFZoZWZEUEtN?oc=5",
+      "source": "Star Tribune",
+      "category": "research",
+      "category_label": "Research & Papers",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T21:40:28Z",
+      "summary": "Former executive accuses Mayo of cutting corners on AI research Star Tribune",
+      "ethics_tags": []
+    },
+    {
+      "title": "Illinois AI Safety Measures Act SB 315: What Frontier AI Developers Must Do Before January 2028",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNaGx5dG5kQ2ZoZkhBZHlRRHBhVGM2X2xGRDhRWFE2VU1yVXhyWTlhT1FWUmZYeEhaQmxLZjFFOEJxQzFLZmU5SDRGZlMtR2FsQmZ5ajVGZzBsSnZiTmR5dmJNMUlyUjdWSGlrQVJpazdKM2JuX0JzOVE3RlI4bDZZRENTbVpNTTNKaWZQVnhta3h3V2Judld1WHlGVzUyYTBzMW5uaVR6Z2E0eXN5QmxfNUN5YjNMdEtYV1NDc0xOX3F3dWs?oc=5",
+      "source": "Crowell & Moring LLP",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T21:32:07Z",
+      "summary": "Illinois AI Safety Measures Act SB 315: What Frontier AI Developers Must Do Before January 2028 Crowell & Moring LLP",
       "ethics_tags": [
         "Safety & Alignment"
       ]
     },
     {
-      "title": "AI chip startups near record funding, raising $8.3B to challenge Nvidia as focus shifts to inference",
-      "link": "https://seekingalpha.com/news/4576528-ai-chip-startups-near-record-funding-to-challenge-nvidia-cnbcs-schwarz-says",
-      "source": "Seeking Alpha",
-      "category": "business",
-      "category_label": "Business & Funding",
-      "published_display": "Jul 1, 2026",
-      "published_iso": "2026-07-01T17:00:00Z",
-      "summary": "Investors pour billions into inference-focused silicon, betting the next phase of the AI boom rewards efficiency over raw training scale.",
+      "title": "Nika – Intent as Code for AI Workflows",
+      "link": "https://github.com/supernovae-st/nika",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T21:30:00Z",
+      "summary": "1 points, 0 comments on Hacker News.",
       "ethics_tags": []
     },
     {
-      "title": "Anthropic launches Claude Sonnet 5 with near-Opus performance at $2/$10 introductory pricing",
-      "link": "https://thursdai.news/releases/2026-07",
-      "source": "ThursdAI",
-      "category": "labs",
-      "category_label": "Labs & Industry",
-      "published_display": "Jul 1, 2026",
-      "published_iso": "2026-07-01T14:00:00Z",
-      "summary": "Sonnet 5 lands close to Opus 4.8 quality at aggressive introductory pricing through August 31, intensifying the price-performance race among frontier labs.",
-      "ethics_tags": []
-    },
-    {
-      "title": "Bartz v. Anthropic settles for $1.5B over pirated books, roughly $3,000 per work",
-      "link": "https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/",
-      "source": "The Authors Guild",
-      "category": "ethics",
-      "category_label": "Ethics & Society",
-      "published_display": "Jul 1, 2026",
-      "published_iso": "2026-07-01T00:00:00Z",
-      "summary": "A landmark copyright settlement: courts held that training on books can be fair use, but storing pirated copies is not, reshaping how training data is sourced.",
-      "ethics_tags": [
-        "Copyright & IP"
-      ]
-    },
-    {
-      "title": "OpenThoughts-Agent: data recipes for agentic models",
-      "link": "https://arxiv.org/pdf/2606.24855",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Jun 30, 2026",
-      "published_iso": "2026-06-30T00:00:00Z",
-      "summary": "The paper details reproducible data recipes for training agentic models, part of a fast-growing body of work on tool use and long-horizon reasoning.",
-      "ethics_tags": []
-    },
-    {
-      "title": "The Hitchhiker's Guide to Agentic AI: from foundations to systems",
-      "link": "https://arxiv.org/pdf/2606.24937",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Jun 30, 2026",
-      "published_iso": "2026-06-30T00:00:00Z",
-      "summary": "A broad survey of agentic AI covering foundations, memory, evaluation, and multi-agent system design as autonomy becomes a dominant research theme.",
-      "ethics_tags": []
-    },
-    {
-      "title": "France's competition authority fines Google 250M euros for using news articles to train Gemini",
-      "link": "https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026",
-      "source": "Norton Rose Fulbright",
-      "category": "ethics",
-      "category_label": "Ethics & Society",
-      "published_display": "Jun 30, 2026",
-      "published_iso": "2026-06-30T00:00:00Z",
-      "summary": "Regulators penalize Google over unlicensed use of publishers' content, a copyright and competition flashpoint for how models are trained.",
-      "ethics_tags": [
-        "Copyright & IP",
-        "Regulation & Governance"
-      ]
-    },
-    {
-      "title": "Semiconductor startup funding runs hot: MatX raises $500M, Ayar Labs $500M",
-      "link": "https://news.crunchbase.com/semiconductors-and-5g/chip-startup-funding-2026-cerebras-matx-ayar-labs-ipos-nvda/",
-      "source": "Crunchbase News",
-      "category": "business",
-      "category_label": "Business & Funding",
-      "published_display": "Jun 29, 2026",
-      "published_iso": "2026-06-29T00:00:00Z",
-      "summary": "Custom-silicon and optical-interconnect startups pull in half-billion-dollar rounds as the compute buildout accelerates.",
-      "ethics_tags": []
-    },
-    {
-      "title": "DeepResearch Bench: a comprehensive benchmark for deep research agents",
-      "link": "https://arxiv.org/pdf/2506.11763",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Jun 28, 2026",
-      "published_iso": "2026-06-28T00:00:00Z",
-      "summary": "A new benchmark evaluates autonomous research agents on multi-step tasks such as web browsing, tool use, and synthesis, sharpening how the field measures agentic reasoning.",
-      "ethics_tags": []
-    },
-    {
-      "title": "Topical phase transitions in AI research: an early-warning signature for emerging topics",
-      "link": "https://arxiv.org/pdf/2606.12828",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Jun 27, 2026",
-      "published_iso": "2026-06-27T00:00:00Z",
-      "summary": "Large-scale analysis finds 'reasoning' grew 4.6x in 2025 and identifies an early-warning signature for emerging AI research topics before they surge.",
+      "title": "Show HN: Runtime security enforcement and capability scoping for agents",
+      "link": "https://www.clayseal.com",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 8, 2026",
+      "published_iso": "2026-07-08T21:27:04Z",
+      "summary": "2 points, 0 comments on Hacker News.",
       "ethics_tags": []
     }
   ]

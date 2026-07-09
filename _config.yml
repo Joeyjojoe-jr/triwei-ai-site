@@ -24,7 +24,6 @@ defaults:
 
 exclude:
   - node_modules
-  - src
   - scripts
   - public
   - "site (2)"
@@ -34,10 +33,7 @@ exclude:
   - .project
   - .vscode
   - package.json
-  - package-lock.json
-  - postcss.config.cjs
-  - tailwind.config.mjs
-  - astro.config.mjs
+  - Gemfile
   - README.md
   - CONTRIBUTING.md
   - DEVELOPER_GUIDE.md

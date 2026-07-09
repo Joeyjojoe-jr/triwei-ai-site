@@ -155,11 +155,6 @@
               } else if (link.closest('.footer-inner nav')) {
                 track('footer_click', { href: href, text: text });
               }
-              if (/^\/games\/[^/]+\/?$/.test(href)) {
-                track('game_launch_click', { href: href, text: text });
-              } else if (href === '/games/' || href === '/games') {
-                track('games_hub_click', { href: href, text: text });
-              }
             }
 
             var button = target.closest('button');
@@ -167,14 +162,6 @@
 
             if (button.id === 'theme-toggle') {
               track('theme_toggle', { theme: document.documentElement.getAttribute('data-theme') || 'light' });
-              return;
-            }
-
-            if (window.location.pathname.indexOf('/games/') === 0 && button.id) {
-              track('game_button_click', {
-                id: button.id,
-                label: safeText(button.textContent)
-              });
             }
           },
           true

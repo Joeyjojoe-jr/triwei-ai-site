@@ -2,23 +2,10 @@
   "name": "triwei-ai-site",
   "private": true,
   "version": "0.1.0",
-  "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build && node scripts/check_dist_size.mjs",
-    "preview": "astro preview",
-    "sync:games-data": "node scripts/sync_games_data.mjs",
-    "check:games": "npm run sync:games-data && node scripts/sanity_check_games.mjs",
-    "specs:check": "node scripts/check_game_specs.mjs",
-    "assets:check": "node scripts/check_asset_budgets.mjs",
-    "check:links": "node scripts/broken_link_detector.mjs",
-    "check:site": "npm run check:games && npm run specs:check && npm run assets:check && npm run check:links"
-  },
-  "dependencies": {
-    "astro": "^4.15.0",
-    "@astrojs/tailwind": "^5.1.0",
-    "tailwindcss": "^3.4.0",
-    "autoprefixer": "^10.4.0",
-    "postcss": "^8.4.0"
+    "dev": "bundle exec jekyll serve",
+    "build": "bundle exec jekyll build",
+    "news:fetch": "python scripts/fetch_news.py",
+    "check:news": "python -m py_compile scripts/fetch_news.py"
   }
 }

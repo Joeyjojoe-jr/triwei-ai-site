@@ -1,5 +1,5 @@
 title: TriWei AI
-description: Explorer Hub for AI topics, experiments, guides, and notes.
+description: A self-updating tracker for AI news, trends, and hot topics — every story read through an ethics lens.
 url: "https://triwei.ai"
 baseurl: ""
 timezone: America/Chicago
@@ -15,41 +15,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-collections:
-  experiments:
-    output: true
-    permalink: /experiments/:name/
-  guides:
-    output: true
-    permalink: /guides/:name/
-  knowledge:
-    output: true
-    permalink: /knowledge/:name/
-  blog:
-    output: true
-    permalink: /blog/:name/
-
 defaults:
-  - scope:
-      path: ""
-      type: "experiments"
-    values:
-      layout: post
-  - scope:
-      path: ""
-      type: "guides"
-    values:
-      layout: page
-  - scope:
-      path: ""
-      type: "knowledge"
-    values:
-      layout: page
-  - scope:
-      path: ""
-      type: "blog"
-    values:
-      layout: post
   - scope:
       path: ""
       type: "pages"
@@ -58,13 +24,17 @@ defaults:
 
 exclude:
   - node_modules
-  - src
   - scripts
   - public
+  - "site (2)"
+  - triwei_scaffold
+  - egg
   - .github
   - .project
+  - .vscode
   - package.json
-  - package-lock.json
-  - postcss.config.cjs
-  - tailwind.config.mjs
-  - astro.config.mjs
+  - Gemfile
+  - README.md
+  - CONTRIBUTING.md
+  - DEVELOPER_GUIDE.md
+  - SITE_STRUCTURE.md

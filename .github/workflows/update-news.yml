@@ -1,0 +1,42 @@
+name: Update AI news
+
+# Refreshes _data/news.json from live feeds so the site tracks current
+# AI trends and hot topics. Runs every 6 hours and on demand.
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-news
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch news and rebuild data
+        run: python scripts/fetch_news.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name  "triwei-news-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add _data/news.json
+          if git diff --cached --quiet; then
+            echo "No news changes."
+          else
+            git commit -m "chore: refresh AI news data ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+            git push
+          fi

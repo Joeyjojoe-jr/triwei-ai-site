@@ -1,7 +1,11 @@
 node_modules
 dist
-.astro
 .cache
+.bundle
+.jekyll-cache
+.jekyll-metadata
+_site
+vendor/bundle
 .DS_Store
 __pycache__/
 *.pyc

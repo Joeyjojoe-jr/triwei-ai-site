@@ -21,14 +21,8 @@
   <link rel="preload" href="{{ '/assets/fonts/press-start-2p.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ '/assets/css/style.css' | relative_url }}" as="style">
 
-  <!-- Global stylesheet for the Explorer Hub. -->
+  <!-- Global stylesheet for the AI news tracker. -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-
-  {% if page.permalink and page.permalink contains '/games/' %}
-    <script src="{{ '/games/common/notify.js' | relative_url }}"></script>
-    <script src="{{ '/games/common/seeded_rng.js' | relative_url }}"></script>
-    <script src="{{ '/games/common/inspector.js' | relative_url }}"></script>
-  {% endif %}
 
   <script>
     // Early theme hydration to reduce flash before CSS fully paints.

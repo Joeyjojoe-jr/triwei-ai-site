@@ -2,6 +2,14 @@
 <html lang="en">
   {% include head.html %}
   <body>
+    <div class="holodeck" aria-hidden="true"><div class="hd-room">
+      <div class="hd-face hd-back"></div>
+      <div class="hd-face hd-left"></div>
+      <div class="hd-face hd-right"></div>
+      <div class="hd-face hd-top"></div>
+      <div class="hd-face hd-bottom"></div>
+    </div></div>
+    <canvas id="holodeck-canvas" aria-hidden="true"></canvas>
     <a class="skip-link" href="#main-content">Skip to content</a>
     {% include header.html %}
 
@@ -168,5 +176,7 @@
         );
       })();
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="{{ '/assets/js/holodeck.js' | relative_url }}" defer></script>
   </body>
 </html>

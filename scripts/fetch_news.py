@@ -341,6 +341,13 @@ def format_datetime(d):
     )
 
 
+def annotate_trend_scores(items, trending):
+    tc = {t["term"].lower(): t["count"] for t in trending}
+    for i in items:
+        text = (i["title"] + " " + i["summary"]).lower()
+        i["trend_score"] = sum(c for term, c in tc.items() if term in text)
+
+
 def display_item(i):
     iso = i["published_iso"]
     disp = ""
@@ -355,6 +362,7 @@ def display_item(i):
         "category": i["category"], "category_label": CATEGORY_LABELS[i["category"]],
         "published_display": disp, "published_iso": iso,
         "summary": i["summary"], "ethics_tags": i["ethics_tags"],
+        "trend_score": i.get("trend_score", 0),
     }
 
 
@@ -368,6 +376,7 @@ def main():
         return 0
 
     trending = compute_trending(all_items)
+    annotate_trend_scores(all_items, trending)
     themes, watch = compute_ethics(all_items)
 
     all_sorted = sorted(all_items, key=lambda x: x["epoch"], reverse=True)
@@ -384,7 +393,10 @@ def main():
         "item_count": len(all_items),
         "category_order": CATEGORY_ORDER,
         "categories": {c: {"label": categories[c]["label"],
-                           "items": [display_item(i) for i in categories[c]["items"]]}
+                           "items": [display_item(i) for i in categories[c]["items"]],
+                           "folder_items": [display_item(i) for i in sorted(
+                               categories[c]["items"],
+                               key=lambda x: x.get("trend_score", 0), reverse=True)[:3]]}
                        for c in CATEGORY_ORDER},
         "trending": trending,
         "ethics_themes": themes,

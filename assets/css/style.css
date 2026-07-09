@@ -814,3 +814,488 @@ main .game-controls .control-card p {
   background: var(--accent-soft);
   color: var(--accent);
 }
+
+/* ===================================================================
+   TERMINAL / SIGNAL THEME  (overrides — keep at end of file)
+   Dark phosphor + amber, monospace UI, grid backdrop.
+   =================================================================== */
+:root,
+html[data-theme="dark"] {
+  --bg: #0a0e13;
+  --surface: #0e141b;
+  --surface-soft: #121a23;
+  --text: #d7e3ea;
+  --muted: #6f8a99;
+  --accent: #33ff33;          /* CRT P1 phosphor green */
+  --accent-soft: #0c2110;
+  --accent-2: #ffb454;        /* amber */
+  --border: #1d2a33;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --mono: ui-monospace, "SFMono-Regular", "Cascadia Code", "Consolas", monospace;
+}
+
+html[data-theme="light"] {
+  --bg: #ecebe3;
+  --surface: #f7f6ef;
+  --surface-soft: #efeee5;
+  --text: #17231b;
+  --muted: #5c6b60;
+  --accent: #0a7a1e;
+  --accent-soft: #dcefe2;
+  --accent-2: #b3560a;        /* burnt amber */
+  --border: #cfd3c4;
+  --shadow: 0 8px 22px rgba(20, 40, 28, 0.12);
+  --mono: ui-monospace, "SFMono-Regular", "Cascadia Code", "Consolas", monospace;
+}
+
+/* flat dark backdrop with faint terminal grid */
+body {
+  background: var(--bg) !important;
+  font-family: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+}
+body::before,
+body::after { display: none !important; }
+body {
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--accent) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--accent) 6%, transparent) 1px, transparent 1px) !important;
+  background-size: 44px 44px, 44px 44px !important;
+  background-attachment: fixed !important;
+}
+
+/* Header as a command bar */
+.site-header {
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  border-bottom: 1px solid var(--border);
+}
+.brand-mark {
+  background: var(--accent);
+  color: #03130c;
+  border-radius: 4px;
+  font-family: var(--mono);
+}
+.brand-text strong { font-family: var(--mono); letter-spacing: -0.01em; }
+.brand-text small { font-family: var(--mono); color: var(--accent); font-size: 0.72rem; }
+.site-nav a { font-family: var(--mono); font-size: 0.9rem; border-radius: 4px; }
+.site-nav a::before { content: "› "; color: var(--muted); }
+.site-nav a:hover, .site-nav a.is-active { background: var(--accent-soft); color: var(--accent); }
+.site-nav a.is-active::before { color: var(--accent); }
+.theme-toggle { font-family: var(--mono); border-radius: 4px; }
+
+/* Hero */
+.hero { border-radius: 8px; border: 1px solid var(--border); position: relative; }
+.hero::before {
+  content: "● ● ●";
+  position: absolute; top: 0.7rem; left: 1rem;
+  letter-spacing: 0.35rem; font-size: 0.6rem; color: var(--border);
+}
+.hero .eyebrow { font-family: var(--mono); color: var(--accent); }
+.hero h1 { font-family: var(--mono); letter-spacing: -0.02em; }
+.hero-cycle {
+  color: var(--accent-2);
+  display: inline-block;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.hero-cycle::before { content: "› "; color: var(--muted); }
+.hero-cycle.swap { opacity: 0; transform: translateY(6px); }
+.updated-stamp { font-family: var(--mono); color: var(--accent); }
+.updated-stamp::before { content: "◉ "; color: var(--accent); }
+
+/* Trending ticker (marquee) */
+.ticker {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  margin-bottom: 1.4rem;
+  white-space: nowrap;
+  position: relative;
+}
+.ticker::before {
+  content: "TRENDING";
+  position: absolute; left: 0; top: 0; bottom: 0;
+  display: flex; align-items: center; padding: 0 0.7rem; z-index: 2;
+  font-family: var(--mono); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+  color: #03130c; background: var(--accent);
+}
+.ticker-track {
+  display: inline-flex; gap: 2rem; padding: 0.5rem 0 0.5rem 6.5rem;
+  animation: ticker-scroll 38s linear infinite;
+}
+.ticker:hover .ticker-track { animation-play-state: paused; }
+.ticker-item { font-family: var(--mono); font-size: 0.85rem; color: var(--text); }
+.ticker-item b { color: var(--accent); margin-left: 0.3rem; }
+@keyframes ticker-scroll { from { transform: translateX(0);} to { transform: translateX(-50%);} }
+
+/* Section headings — mono, prompt style */
+.section-heading h2 { font-family: var(--mono); letter-spacing: -0.01em; }
+.section-heading h2::before { content: "# "; color: var(--accent); }
+
+/* Chips */
+.trend-chip, .theme-chip {
+  font-family: var(--mono); border-radius: 4px;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.trend-chip:hover { transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 4px 0 color-mix(in srgb, var(--accent) 35%, transparent); }
+.theme-chip { background: var(--accent-soft); color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); }
+.trend-count { background: color-mix(in srgb, var(--accent) 20%, transparent); color: var(--accent); font-family: var(--mono); }
+
+/* News cards */
+.news-item {
+  border-radius: 6px;
+  border-left: 3px solid var(--accent-2);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+}
+.news-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.45), -3px 0 0 var(--accent);
+}
+.news-item h3, .news-item h3 a { font-family: "IBM Plex Sans", system-ui, sans-serif; }
+.news-meta { font-family: var(--mono); font-size: 0.8rem; }
+.news-meta .sep { color: var(--muted); }
+.cat-pill { font-family: var(--mono); border-radius: 3px; background: var(--accent-soft); color: var(--accent); }
+
+/* Ethics accents */
+.ethics-flagged { border-left-color: var(--accent); }
+.ethics-tags li {
+  font-family: var(--mono); border-radius: 3px;
+  background: color-mix(in srgb, var(--accent-2) 14%, transparent);
+  color: var(--accent-2);
+  border: 1px solid color-mix(in srgb, var(--accent-2) 38%, transparent);
+  transition: transform 0.15s ease;
+}
+.news-item:hover .ethics-tags li { transform: translateY(-1px); }
+
+/* Per-card ethics heat meter */
+.card-heat { font-family: var(--mono); letter-spacing: 1px; color: var(--accent); font-size: 0.8rem; }
+.card-heat .off { color: var(--border); }
+
+/* Ethics theme heat bars */
+.heat-list { display: grid; gap: 0.55rem; margin: 0.4rem 0 1rem; }
+.heat-row { display: grid; grid-template-columns: minmax(9rem, 14rem) 1fr auto; align-items: center; gap: 0.7rem; }
+.heat-label { font-family: var(--mono); font-size: 0.82rem; color: var(--text); }
+.heat-bar { height: 0.7rem; background: var(--surface-soft); border: 1px solid var(--border); border-radius: 2px; overflow: hidden; }
+.heat-fill {
+  display: block; height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  box-shadow: 0 0 8px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+.heat-num { font-family: var(--mono); font-size: 0.8rem; color: var(--accent); min-width: 1.5rem; text-align: right; }
+
+/* Footer */
+.site-footer { background: color-mix(in srgb, var(--surface) 94%, transparent); }
+.footer-inner p, .footer-inner nav a { font-family: var(--mono); font-size: 0.82rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; }
+  .news-item:hover, .trend-chip:hover { transform: none; }
+}
+
+/* CRT phosphor glow on accent text */
+.brand-text small,
+.updated-stamp,
+.hero .eyebrow,
+.hero-cycle,
+.ticker-item b,
+.trend-count,
+.heat-num,
+.section-heading h2::before {
+  text-shadow: 0 0 6px color-mix(in srgb, var(--accent) 55%, transparent);
+}
+.heat-fill { box-shadow: 0 0 10px color-mix(in srgb, var(--accent) 55%, transparent); }
+
+/* ===================================================================
+   ORBIT HERO — central emblem with 16-bit category folders orbiting
+   =================================================================== */
+.hero-orbit-wrap { text-align: center; }
+.hero-orbit-wrap .eyebrow { text-align: center; }
+.hero-orbit-wrap .lead { margin-left: auto; margin-right: auto; }
+.hero-orbit-wrap .hero-title { text-align: center; }
+.hero-orbit-wrap .updated-stamp { text-align: center; }
+
+.orbit {
+  position: relative;
+  width: min(560px, 100%);
+  height: 430px;
+  margin: 1.4rem auto 1.6rem;
+}
+
+.orbit-core {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px; height: 250px;
+  display: flex; align-items: center; justify-content: center;
+}
+.emblem {
+  width: 100%; height: auto;
+  filter: drop-shadow(0 0 10px color-mix(in srgb, var(--accent) 75%, transparent))
+          drop-shadow(0 0 22px color-mix(in srgb, var(--accent) 40%, transparent));
+  animation: core-pulse 3.6s ease-in-out infinite;
+}
+@keyframes core-pulse {
+  0%, 100% { filter: drop-shadow(0 0 8px color-mix(in srgb, var(--accent) 60%, transparent))
+                     drop-shadow(0 0 18px color-mix(in srgb, var(--accent) 30%, transparent)); }
+  50%      { filter: drop-shadow(0 0 14px color-mix(in srgb, var(--accent) 90%, transparent))
+                     drop-shadow(0 0 30px color-mix(in srgb, var(--accent) 55%, transparent)); }
+}
+
+.orbit-folder {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 104px;
+  text-decoration: none;
+  z-index: 2;
+}
+.orbit-float {
+  display: block;
+  animation: folder-float 5.5s ease-in-out infinite;
+}
+.f-1 .orbit-float { animation-delay: 0s; }
+.f-2 .orbit-float { animation-delay: 0.7s; }
+.f-3 .orbit-float { animation-delay: 1.4s; }
+.f-4 .orbit-float { animation-delay: 2.1s; }
+.f-5 .orbit-float { animation-delay: 2.8s; }
+@keyframes folder-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-9px); }
+}
+.folder-ico {
+  width: 92px; height: auto; display: block; margin: 0 auto;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 0 5px color-mix(in srgb, var(--accent) 60%, transparent));
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+.folder-label {
+  display: block;
+  margin-top: 0.25rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  transition: color 0.18s ease, text-shadow 0.18s ease;
+}
+.orbit-folder:hover .folder-ico,
+.orbit-folder:focus-visible .folder-ico {
+  transform: scale(1.14) translateY(-2px);
+  filter: drop-shadow(0 0 10px var(--accent)) drop-shadow(0 0 20px color-mix(in srgb, var(--accent) 60%, transparent));
+}
+.orbit-folder:hover .folder-label,
+.orbit-folder:focus-visible .folder-label {
+  color: var(--accent);
+  text-shadow: 0 0 8px color-mix(in srgb, var(--accent) 60%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .emblem, .orbit-float { animation: none; }
+}
+
+/* Responsive: collapse orbit into a centered grid on small screens */
+@media (max-width: 620px) {
+  .orbit {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem 1rem;
+  }
+  .orbit-core {
+    position: static;
+    transform: none;
+    width: 150px; height: 150px;
+    order: -1;
+    flex-basis: 100%;
+  }
+  .orbit-folder {
+    position: static !important;
+    transform: none !important;
+    left: auto !important; top: auto !important;
+    width: 88px;
+  }
+  .orbit-float { animation: none; }
+  .folder-ico { width: 78px; }
+}
+
+/* Real logo image as orbit core: screen-blend removes its black background on the dark theme */
+.orbit-core .emblem { mix-blend-mode: screen; }
+html[data-theme="light"] .orbit-core .emblem { mix-blend-mode: normal; }
+
+/* ===================================================================
+   3D GRID SPACE + REVOLVING FOLDER CARDS  (final overrides)
+   =================================================================== */
+/* Tron-style perspective grid: black floor + ceiling of glowing green lines */
+body {
+  background: radial-gradient(ellipse 90% 70% at 50% 46%, #0a3a1e 0%, #041a0d 45%, #01100a 100%) !important;
+  perspective: 340px;
+  perspective-origin: 50% 44%;
+}
+body::before,
+body::after {
+  content: "" !important;
+  display: block !important;
+  position: fixed;
+  left: -50%; right: auto;
+  width: 200%; height: 135%;
+  background-image:
+    linear-gradient(rgba(30, 200, 80, 0.16), rgba(6, 40, 20, 0.05)),
+    linear-gradient(to right, rgba(70, 255, 90, 0.55) 1.4px, transparent 1.4px),
+    linear-gradient(to bottom, rgba(70, 255, 90, 0.55) 1.4px, transparent 1.4px);
+  background-size: 100% 100%, 48px 48px, 48px 48px;
+  background-repeat: no-repeat, repeat, repeat;
+  z-index: -1;
+  animation: grid-scroll 4.5s linear infinite;
+  pointer-events: none;
+}
+body::before {
+  bottom: -12%; top: auto;
+  transform-origin: 50% 100%;
+  transform: rotateX(76deg);
+  -webkit-mask-image: linear-gradient(to top, #000 10%, transparent 80%);
+          mask-image: linear-gradient(to top, #000 10%, transparent 80%);
+}
+body::after {
+  top: -12%; bottom: auto;
+  transform-origin: 50% 0%;
+  transform: rotateX(-76deg);
+  -webkit-mask-image: linear-gradient(to bottom, #000 10%, transparent 80%);
+          mask-image: linear-gradient(to bottom, #000 10%, transparent 80%);
+}
+@keyframes grid-scroll { from { background-position: 0 0, 0 0, 0 0; } to { background-position: 0 0, 0 48px, 0 48px; } }
+
+/* Orbit hero floats in the grid space (no card chrome) */
+.hero-orbit-wrap { background: transparent; border: none; box-shadow: none; padding-top: 1rem; }
+.hero-orbit-wrap::before { content: none; }
+.hero-orbit-wrap .hero-title,
+.hero-orbit-wrap .lead,
+.hero-orbit-wrap .eyebrow,
+.hero-orbit-wrap .updated-stamp { text-shadow: 0 1px 8px rgba(0,0,0,0.8); }
+
+.orbit {
+  position: relative;
+  width: min(800px, 100%);
+  height: 700px;
+  margin: 0.5rem auto 1.5rem;
+}
+.orbit-core {
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px; height: 260px; z-index: 6;
+  display: flex; align-items: center; justify-content: center;
+}
+.orbit-core .emblem {
+  width: 100%; height: auto;
+  mix-blend-mode: screen;
+  animation: core-pulse 3.6s ease-in-out infinite;
+}
+html[data-theme="light"] .orbit-core .emblem { mix-blend-mode: normal; }
+
+.orbit-ring { position: absolute; inset: 0; animation: orbit-spin 96s linear infinite; }
+@keyframes orbit-spin { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+@keyframes orbit-spin-rev { from { transform: rotate(0); } to { transform: rotate(-360deg); } }
+
+.orbit-folder {
+  position: absolute; top: 50%; left: 50%;
+  --r: 258px;
+  width: 224px;
+  transform: translate(-50%, -50%) rotate(var(--a)) translate(0, calc(-1 * var(--r)));
+}
+.folder-spin { display: block; animation: orbit-spin-rev 96s linear infinite; }
+.orbit:hover .orbit-ring,
+.orbit:hover .folder-spin { animation-play-state: paused; }
+
+.folder-card {
+  transform: rotate(calc(-1 * var(--a)));
+  width: 224px;
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+  box-shadow: 0 0 12px color-mix(in srgb, var(--accent) 28%, transparent);
+  overflow: hidden;
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+.orbit-folder:hover .folder-card {
+  box-shadow: 0 0 20px color-mix(in srgb, var(--accent) 55%, transparent);
+}
+.folder-tab {
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.5rem 0.6rem;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  border-bottom: 1px solid var(--accent);
+  color: var(--accent); text-decoration: none;
+}
+.folder-tab:hover { text-decoration: none; }
+.folder-tab .folder-ico {
+  width: 34px; height: auto; image-rendering: pixelated;
+  filter: drop-shadow(0 0 4px var(--accent));
+}
+.folder-name { font-family: var(--mono); font-size: 0.8rem; font-weight: 700; }
+.folder-heads { list-style: none; margin: 0; padding: 0.45rem 0.55rem; display: grid; gap: 0.4rem; }
+.folder-heads li a {
+  display: flex; gap: 0.4rem; align-items: flex-start;
+  font-size: 0.76rem; line-height: 1.28; color: var(--text); text-decoration: none;
+}
+.folder-heads li a:hover { color: var(--accent); }
+.folder-heads .rank {
+  flex: none; font-family: var(--mono); font-size: 0.66rem; font-weight: 700;
+  color: #03130c; background: var(--accent); border-radius: 2px; padding: 0.05rem 0.32rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-ring, .folder-spin, .orbit-core .emblem,
+  body::before, body::after { animation: none !important; }
+}
+
+/* Small screens: no orbit, stack folder cards */
+@media (max-width: 720px) {
+  .orbit { height: auto; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+  .orbit-core { position: static; transform: none; width: 180px; height: 180px; }
+  .orbit-ring { position: static; inset: auto; animation: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; width: 100%; }
+  .orbit-folder { position: static !important; transform: none !important; --r: 0; width: min(300px, 92%); }
+  .folder-spin { animation: none !important; }
+  .folder-card { transform: none !important; width: 100%; }
+}
+
+/* ===================================================================
+   HOLODECK ROOM  (final override) — empty black room, green grid on
+   every surface, perspective from inside. Replaces the plane grid.
+   =================================================================== */
+body { background: #000 !important; perspective: none !important; }
+body::before, body::after { display: none !important; }
+
+.holodeck {
+  position: fixed; inset: 0; z-index: -1;
+  background: #000; overflow: hidden;
+  perspective: 700px;
+  perspective-origin: 50% 47%;
+}
+.hd-room { position: absolute; inset: 0; transform-style: preserve-3d; }
+.hd-face {
+  position: absolute; left: 50%; top: 50%;
+  width: 2400px; height: 2400px; margin: -1200px 0 0 -1200px;
+  background-color: #000;
+  background-image:
+    linear-gradient(to right,  rgba(0, 255, 95, 0.45) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 255, 95, 0.45) 1px, transparent 1px),
+    linear-gradient(to right,  rgba(60, 255, 120, 0.80) 2px, transparent 2px),
+    linear-gradient(to bottom, rgba(60, 255, 120, 0.80) 2px, transparent 2px);
+  background-size: 80px 80px, 80px 80px, 400px 400px, 400px 400px;
+  box-shadow: inset 0 0 260px rgba(0, 255, 90, 0.10);
+}
+.hd-back   { transform: rotateY(180deg) translateZ(1200px); }
+.hd-right  { transform: rotateY(90deg)  translateZ(1200px); }
+.hd-left   { transform: rotateY(-90deg) translateZ(1200px); }
+.hd-top    { transform: rotateX(90deg)  translateZ(1200px); }
+.hd-bottom { transform: rotateX(-90deg) translateZ(1200px); }
+
+/* Depth vignette so far edges fall into black */
+.holodeck::after {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 75% 65% at 50% 47%, transparent 40%, rgba(0,0,0,0.85) 100%);
+  pointer-events: none;
+}
+
+/* WebGL holodeck canvas sits above the CSS fallback room */
+#holodeck-canvas { position: fixed; inset: 0; z-index: -1; display: block; width: 100%; height: 100%; }
+.holodeck { z-index: -2 !important; }

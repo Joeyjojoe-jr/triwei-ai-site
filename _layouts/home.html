@@ -3,9 +3,45 @@ layout: default
 ---
 {% assign news = site.data.news %}
 
-<section class="hero card animate-in">
+<section class="hero card animate-in hero-orbit-wrap">
   <p class="eyebrow">AI News &amp; Trends · through an ethics lens</p>
-  <h1>What's moving in AI right now</h1>
+
+  <div class="orbit" role="group" aria-label="Category folders orbiting the TriWei AI logo">
+    <div class="orbit-core">
+      <img class="emblem" src="{{ '/assets/images/triwei-logo.png' | relative_url }}" alt="TriWei AI logo" width="250" height="250">
+    </div>
+
+    <div class="orbit-ring">
+      {% assign folders = "labs,research,community,business,ethics" | split: "," %}
+      {% assign angles = "0,72,144,216,288" | split: "," %}
+      {% for key in folders %}
+        {% assign group = news.categories[key] %}
+        {% assign ranked = group.folder_items | default: group.items %}
+        <div class="orbit-folder" style="--a: {{ angles[forloop.index0] }}deg;">
+          <div class="folder-spin">
+            <div class="folder-card">
+              <a class="folder-tab" href="#cat-{{ key }}" aria-label="Jump to {{ group.label }}">
+                <img class="folder-ico" src="{{ '/assets/images/folders/' | append: key | append: '.svg' | relative_url }}" alt="" width="120" height="96" loading="lazy">
+                <span class="folder-name">{{ group.label }}</span>
+              </a>
+              <ol class="folder-heads">
+                {% for h in ranked limit: 3 %}
+                <li>
+                  <a href="{{ h.link }}" target="_blank" rel="noopener">
+                    <span class="rank">{{ forloop.index }}</span>
+                    <span class="rank-title">{{ h.title | truncate: 58 }}</span>
+                  </a>
+                </li>
+                {% endfor %}
+              </ol>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <h1 class="hero-title">Right now in AI: <span class="hero-cycle" id="hero-cycle">the latest</span></h1>
   <p class="lead">TriWei AI tracks the hot topics, releases, research, deals, and debates shaping artificial intelligence — and flags the ethical stakes in every story.</p>
   {% if news %}
   <p class="updated-stamp">Last updated {{ news.generated_display }} · {{ news.item_count }} stories tracked</p>
@@ -14,9 +50,18 @@ layout: default
 
 {% if news %}
 
+{% if news.trending.size > 0 %}
+<div class="ticker" role="marquee" aria-label="Trending AI topics">
+  <div class="ticker-track">
+    {% for t in news.trending %}<span class="ticker-item">{{ t.term }}<b>{{ t.count }}</b></span>{% endfor %}
+    {% for t in news.trending %}<span class="ticker-item">{{ t.term }}<b>{{ t.count }}</b></span>{% endfor %}
+  </div>
+</div>
+{% endif %}
+
 <section class="section-block animate-in" aria-labelledby="trending">
   <div class="section-heading">
-    <h2 id="trending">Now trending</h2>
+    <h2 id="trending">now trending</h2>
     <p>Topics appearing most across today's AI coverage. Click a topic to see the latest.</p>
   </div>
   {% if news.trending.size > 0 %}
@@ -34,13 +79,18 @@ layout: default
 
 <section class="section-block animate-in ethics-block" aria-labelledby="ethics-watch">
   <div class="section-heading">
-    <h2 id="ethics-watch">Ethics watch</h2>
-    <p>Every story is screened for ethical dimensions — bias, safety, privacy, copyright, labor, energy, regulation, and more.</p>
+    <h2 id="ethics-watch">ethics watch</h2>
+    <p>Every story is screened for ethical dimensions. Heat bars show which are running hottest right now.</p>
   </div>
   {% if news.ethics_themes.size > 0 %}
-  <div class="theme-cloud">
+  {% assign maxc = news.ethics_themes[0].count %}
+  <div class="heat-list">
     {% for th in news.ethics_themes %}
-    <a class="theme-chip" href="{{ '/ethics/' | relative_url }}">{{ th.theme }}<span class="trend-count">{{ th.count }}</span></a>
+    <div class="heat-row">
+      <span class="heat-label">{{ th.theme }}</span>
+      <span class="heat-bar"><span class="heat-fill" style="width: {{ th.count | times: 100 | divided_by: maxc }}%;"></span></span>
+      <span class="heat-num">{{ th.count }}</span>
+    </div>
     {% endfor %}
   </div>
   {% endif %}
@@ -48,7 +98,11 @@ layout: default
     {% for item in news.ethics_watch limit: 5 %}
     <article class="news-item ethics-flagged">
       <h3><a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a></h3>
-      <p class="news-meta"><span class="cat-pill cat-{{ item.category }}">{{ item.category_label }}</span> {{ item.source }}{% if item.published_display %} · {{ item.published_display }}{% endif %}</p>
+      <p class="news-meta">
+        <span class="cat-pill cat-{{ item.category }}">{{ item.category_label }}</span>
+        {{ item.source }}{% if item.published_display %} <span class="sep">·</span> {{ item.published_display }}{% endif %}
+        <span class="card-heat" title="{{ item.ethics_tags.size }} ethical dimensions">{% for t in item.ethics_tags %}▰{% endfor %}</span>
+      </p>
       {% if item.summary != "" %}<p class="news-summary">{{ item.summary }}</p>{% endif %}
       {% if item.ethics_tags.size > 0 %}
       <ul class="ethics-tags">{% for t in item.ethics_tags %}<li>{{ t }}</li>{% endfor %}</ul>
@@ -70,7 +124,10 @@ layout: default
     {% for item in group.items limit: 8 %}
     <article class="news-item">
       <h3><a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a></h3>
-      <p class="news-meta">{{ item.source }}{% if item.published_display %} · {{ item.published_display }}{% endif %}</p>
+      <p class="news-meta">
+        {{ item.source }}{% if item.published_display %} <span class="sep">·</span> {{ item.published_display }}{% endif %}
+        {% if item.ethics_tags.size > 0 %}<span class="card-heat" title="{{ item.ethics_tags.size }} ethical dimensions">{% for t in item.ethics_tags %}▰{% endfor %}</span>{% endif %}
+      </p>
       {% if item.summary != "" %}<p class="news-summary">{{ item.summary }}</p>{% endif %}
       {% if item.ethics_tags.size > 0 %}
       <ul class="ethics-tags">{% for t in item.ethics_tags %}<li>{{ t }}</li>{% endfor %}</ul>
@@ -83,6 +140,25 @@ layout: default
   {% endif %}
 </section>
 {% endfor %}
+
+<script>
+  (function () {
+    var el = document.getElementById('hero-cycle');
+    if (!el) return;
+    var items = [{% for t in news.trending limit: 8 %}{{ t.term | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}];
+    if (!items.length) return;
+    var i = 0;
+    function tick() { el.textContent = items[i % items.length]; i++; }
+    tick();
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce) {
+      setInterval(function () {
+        el.classList.add('swap');
+        setTimeout(function () { tick(); el.classList.remove('swap'); }, 250);
+      }, 2600);
+    }
+  })();
+</script>
 
 {% else %}
 <section class="section-block">

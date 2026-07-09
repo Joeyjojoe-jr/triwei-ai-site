@@ -2,19 +2,16 @@
 layout: page
 title: About
 permalink: /about/
-description: Why this Explorer Hub exists and how to use it.
+description: What TriWei AI is and why it reads AI news through an ethics lens.
 ---
-TriWei AI is a personal Explorer Hub for studying AI systems through focused reading, practical experiments, and reusable guides.
+TriWei AI is a self-updating tracker for the trends and hot topics shaping artificial intelligence — built on the belief that you can't understand where AI is going without also asking who it affects and at what cost.
 
-## How to use this hub
+## Why an ethics lens
 
-1. Start with the Knowledge Map from `_knowledge/` for core concepts.
-2. Follow Guides from `_guides/` for repeatable setup and workflows.
-3. Review experiments in `_experiments/` for implementation notes.
-4. Capture reflections in `_blog/` as your understanding evolves.
+AI news usually gets covered as a race: who shipped the biggest model, who raised the most money, who topped the benchmark. Those things matter, but they're only half the story. Behind every release are questions about bias, privacy, copyright, labor, energy use, safety, and who gets to set the rules. TriWei AI keeps those questions in frame by tagging the ethical dimensions of every story it tracks.
 
-## Update rhythm
+## How to use it
 
-- Add one knowledge page whenever you finish a concept.
-- Add one experiment note after each hands-on session.
-- Add short blog notes to summarize what changed in your thinking.
+Start on the home page for a live snapshot: what's trending, what's on the Ethics Watch, and the latest across labs, research, community, business, and ethics. Dig into [Ethics Watch](/ethics/) when you want the stories with ethical stakes pulled together in one place. See [Sources & Method](/sources/) for exactly where the data comes from and how it's ranked.
+
+The page refreshes automatically every few hours, so it's worth checking back.

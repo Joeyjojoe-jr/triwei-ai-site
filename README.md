@@ -1,24 +1,41 @@
-# TriWei AI Explorer Hub
+# TriWei AI — AI news & trends tracker
 
-Jekyll + GitHub Pages site for `triwei.ai`.
+A self-updating [Jekyll](https://jekyllrb.com/) site (GitHub Pages) that tracks
+the hot topics and trends in AI news, and reads every story through an **ethics
+lens**. Live at [triwei.ai](https://triwei.ai).
 
-## Collections
+## How it updates itself
 
-- `_experiments/` for experiment notes.
-- `_guides/` for step-by-step workflows.
-- `_knowledge/` for topic pages.
-- `_blog/` for dated learning notes.
+A GitHub Action (`.github/workflows/update-news.yml`) runs every 6 hours:
 
-## Entry Pages
+1. `scripts/fetch_news.py` pulls AI feeds across five categories
+   (Labs & Industry, Research & Papers, Community, Business & Funding, Ethics),
+   dedupes them, ranks trending topics, and tags each story with any ethical
+   dimensions it touches (bias, safety, privacy, copyright, labor, energy,
+   regulation, and more).
+2. Results are written to `_data/news.json`.
+3. The workflow commits the file; GitHub Pages rebuilds the site.
 
-- `index.md` uses `_layouts/home.html`.
-- `experiments.md` renders `/experiments/`.
-- `guides.md` renders `/guides/`.
-- `knowledge.md` renders `/knowledge/`.
-- `blog.md` renders `/blog/`.
+The script uses only the Python standard library, so no extra installs are needed.
 
-## Build Notes
+## Layout
 
-- `CNAME` must contain exactly `triwei.ai`.
-- `_config.yml` uses only GitHub Pages-safe plugins.
-- Non-Jekyll tool directories are excluded from build output.
+- `_layouts/home.html` — the live dashboard (trending, ethics watch, categories).
+- `ethics.md` → `/ethics/` — full Ethics Watch.
+- `sources.md` → `/sources/` — sources and methodology.
+- `about.md` → `/about/` — what the site is.
+- `_data/news.json` — machine-generated data the site renders.
+- `scripts/fetch_news.py` — the aggregator.
+
+## Running locally
+
+```bash
+python scripts/fetch_news.py        # refresh _data/news.json
+bundle exec jekyll serve            # preview the site
+```
+
+## Tuning
+
+- Edit the `FEEDS` dict in `scripts/fetch_news.py` to add/remove sources.
+- Edit `ETHICS_THEMES` to adjust the ethics lens.
+- Change the cron in `.github/workflows/update-news.yml` for a different cadence.

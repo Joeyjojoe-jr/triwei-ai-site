@@ -1,92 +1,91 @@
 ---
 layout: default
 ---
+{% assign news = site.data.news %}
+
 <section class="hero card animate-in">
-  <p class="eyebrow">Explorer Hub</p>
-  <h1>TriWei AI</h1>
-  <p class="lead">Learn AI with focused topics, practical experiments, and repeatable guides.</p>
-</section>
-
-<section class="section-block animate-in" aria-labelledby="start-exploring">
-  <div class="section-heading">
-    <h2 id="start-exploring">Start Exploring</h2>
-    <p>Jump directly into the three core parts of the hub.</p>
-  </div>
-  <div class="card-grid nav-grid">
-    <article class="nav-card">
-      <h3><a href="{{ '/knowledge/' | relative_url }}">Explore Topics</a></h3>
-      <p>Browse the complete knowledge map from <code>_knowledge/</code>.</p>
-      <a class="text-link" href="{{ '/knowledge/' | relative_url }}">Open Knowledge Map</a>
-    </article>
-    <article class="nav-card">
-      <h3><a href="{{ '/experiments/' | relative_url }}">Experiments</a></h3>
-      <p>Review hands-on notes from <code>_experiments/</code>.</p>
-      <a class="text-link" href="{{ '/experiments/' | relative_url }}">Browse Experiments</a>
-    </article>
-    <article class="nav-card">
-      <h3><a href="{{ '/guides/' | relative_url }}">Guides</a></h3>
-      <p>Follow step-by-step playbooks from <code>_guides/</code>.</p>
-      <a class="text-link" href="{{ '/guides/' | relative_url }}">Read Guides</a>
-    </article>
-  </div>
-</section>
-
-{% assign featured_experiment = site.experiments | sort: "date" | reverse | first %}
-<section class="section-block animate-in" aria-labelledby="featured-experiment">
-  <div class="section-heading">
-    <h2 id="featured-experiment">Featured Experiment</h2>
-    <p>Shows the most recent entry from <code>_experiments/</code>.</p>
-  </div>
-  {% if featured_experiment %}
-  <article class="feature-card">
-    <h3><a href="{{ featured_experiment.url | relative_url }}">{{ featured_experiment.title }}</a></h3>
-    <p class="content-meta">{{ featured_experiment.date | date: "%B %-d, %Y" }}</p>
-    <p>{{ featured_experiment.excerpt | default: featured_experiment.content | strip_html | strip_newlines | truncate: 190 }}</p>
-    <a class="text-link" href="{{ featured_experiment.url | relative_url }}">Read More</a>
-  </article>
-  {% else %}
-  <p class="empty-state">Add a Markdown file in <code>_experiments/</code> to populate this section.</p>
+  <p class="eyebrow">AI News &amp; Trends · through an ethics lens</p>
+  <h1>What's moving in AI right now</h1>
+  <p class="lead">TriWei AI tracks the hot topics, releases, research, deals, and debates shaping artificial intelligence — and flags the ethical stakes in every story.</p>
+  {% if news %}
+  <p class="updated-stamp">Last updated {{ news.generated_display }} · {{ news.item_count }} stories tracked</p>
   {% endif %}
 </section>
 
-{% assign knowledge_topics = site.knowledge | sort: "title" %}
-<section class="section-block animate-in" aria-labelledby="knowledge-map">
+{% if news %}
+
+<section class="section-block animate-in" aria-labelledby="trending">
   <div class="section-heading">
-    <h2 id="knowledge-map">Knowledge Map</h2>
-    <p>Lists every file from <code>_knowledge/</code>.</p>
+    <h2 id="trending">Now trending</h2>
+    <p>Topics appearing most across today's AI coverage. Click a topic to see the latest.</p>
   </div>
-  {% if knowledge_topics.size > 0 %}
-  <div class="card-grid knowledge-grid">
-    {% for topic in knowledge_topics %}
-    <article class="knowledge-card">
-      <h3><a href="{{ topic.url | relative_url }}">{{ topic.title }}</a></h3>
-      <p>{{ topic.description | default: topic.excerpt | default: topic.content | strip_html | strip_newlines | truncate: 130 }}</p>
+  {% if news.trending.size > 0 %}
+  <div class="trend-cloud">
+    {% for t in news.trending %}
+    <a class="trend-chip" href="https://news.google.com/search?q={{ t.term | url_encode }}%20AI" target="_blank" rel="noopener">
+      {{ t.term }}<span class="trend-count">{{ t.count }}</span>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="empty-state">Trending topics will appear after the next data refresh.</p>
+  {% endif %}
+</section>
+
+<section class="section-block animate-in ethics-block" aria-labelledby="ethics-watch">
+  <div class="section-heading">
+    <h2 id="ethics-watch">Ethics watch</h2>
+    <p>Every story is screened for ethical dimensions — bias, safety, privacy, copyright, labor, energy, regulation, and more.</p>
+  </div>
+  {% if news.ethics_themes.size > 0 %}
+  <div class="theme-cloud">
+    {% for th in news.ethics_themes %}
+    <a class="theme-chip" href="{{ '/ethics/' | relative_url }}">{{ th.theme }}<span class="trend-count">{{ th.count }}</span></a>
+    {% endfor %}
+  </div>
+  {% endif %}
+  <div class="news-list">
+    {% for item in news.ethics_watch limit: 5 %}
+    <article class="news-item ethics-flagged">
+      <h3><a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a></h3>
+      <p class="news-meta"><span class="cat-pill cat-{{ item.category }}">{{ item.category_label }}</span> {{ item.source }}{% if item.published_display %} · {{ item.published_display }}{% endif %}</p>
+      {% if item.summary != "" %}<p class="news-summary">{{ item.summary }}</p>{% endif %}
+      {% if item.ethics_tags.size > 0 %}
+      <ul class="ethics-tags">{% for t in item.ethics_tags %}<li>{{ t }}</li>{% endfor %}</ul>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </div>
+  <a class="text-link" href="{{ '/ethics/' | relative_url }}">See the full Ethics Watch →</a>
+</section>
+
+{% for key in news.category_order %}
+{% assign group = news.categories[key] %}
+<section class="section-block animate-in" aria-labelledby="cat-{{ key }}">
+  <div class="section-heading">
+    <h2 id="cat-{{ key }}">{{ group.label }}</h2>
+  </div>
+  {% if group.items.size > 0 %}
+  <div class="news-list">
+    {% for item in group.items limit: 8 %}
+    <article class="news-item">
+      <h3><a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a></h3>
+      <p class="news-meta">{{ item.source }}{% if item.published_display %} · {{ item.published_display }}{% endif %}</p>
+      {% if item.summary != "" %}<p class="news-summary">{{ item.summary }}</p>{% endif %}
+      {% if item.ethics_tags.size > 0 %}
+      <ul class="ethics-tags">{% for t in item.ethics_tags %}<li>{{ t }}</li>{% endfor %}</ul>
+      {% endif %}
     </article>
     {% endfor %}
   </div>
   {% else %}
-  <p class="empty-state">Add Markdown files in <code>_knowledge/</code> to build this grid.</p>
+  <p class="empty-state">No items yet — check back after the next refresh.</p>
   {% endif %}
 </section>
+{% endfor %}
 
-{% assign latest_notes = site.blog | sort: "date" | reverse | slice: 0, 3 %}
-<section class="section-block animate-in" aria-labelledby="latest-notes">
-  <div class="section-heading">
-    <h2 id="latest-notes">Latest Notes</h2>
-    <p>Displays the three newest entries from <code>_blog/</code>.</p>
-  </div>
-  {% if latest_notes.size > 0 %}
-  <div class="card-grid notes-grid">
-    {% for note in latest_notes %}
-    <article class="note-card">
-      <h3><a href="{{ note.url | relative_url }}">{{ note.title }}</a></h3>
-      <p class="content-meta">{{ note.date | date: "%B %-d, %Y" }}</p>
-      <p>{{ note.excerpt | default: note.content | strip_html | strip_newlines | truncate: 150 }}</p>
-      <a class="text-link" href="{{ note.url | relative_url }}">Read More</a>
-    </article>
-    {% endfor %}
-  </div>
-  {% else %}
-  <p class="empty-state">Add Markdown files in <code>_blog/</code> to show your latest notes.</p>
-  {% endif %}
+{% else %}
+<section class="section-block">
+  <p class="empty-state">News data has not been generated yet. Run <code>python scripts/fetch_news.py</code> or trigger the “Update AI news” GitHub Action to populate this page.</p>
 </section>
+{% endif %}

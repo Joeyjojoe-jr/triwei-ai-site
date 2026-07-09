@@ -1,0 +1,858 @@
+{
+  "generated_utc": "2026-07-08T12:00:00Z",
+  "generated_display": "July 8, 2026 (seed data — refreshes automatically every 6 hours)",
+  "item_count": 25,
+  "category_order": [
+    "labs",
+    "research",
+    "community",
+    "business",
+    "ethics"
+  ],
+  "categories": {
+    "labs": {
+      "label": "Labs & Industry",
+      "items": [
+        {
+          "title": "Anthropic unveils Claude Science Workbench, connecting Opus 4.8 to 60+ scientific databases",
+          "link": "https://thursdai.news/releases/2026-07",
+          "source": "ThursdAI",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 3, 2026",
+          "published_iso": "2026-07-03T16:00:00Z",
+          "summary": "The workbench links Claude to genomics, proteomics, cheminformatics, and clinical-trial databases, pushing AI deeper into scientific research workflows.",
+          "ethics_tags": []
+        },
+        {
+          "title": "Anthropic overtakes OpenAI on self-reported revenue, targeting $47B and profitability by 2029",
+          "link": "https://fortune.com/2026/07/02/sam-altman-new-world-order-ai-openai-google-anthropic/",
+          "source": "Fortune",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 2, 2026",
+          "published_iso": "2026-07-02T12:30:00Z",
+          "summary": "Anthropic says it is on course to reach $47 billion in revenue and profitability a year ahead of OpenAI, reshaping the competitive landscape among leading labs.",
+          "ethics_tags": []
+        },
+        {
+          "title": "Google DeepMind delays Gemini 3.5 Pro to July 17 for a full architectural rebuild",
+          "link": "https://finance.biggo.com/news/6f0c6bb2-795f-4c57-9d09-6db691d7638a",
+          "source": "BigGo Finance",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 2, 2026",
+          "published_iso": "2026-07-02T10:00:00Z",
+          "summary": "DeepMind scraps the Gemini 2.5 Pro architecture for a ground-up redesign adding a 2M-token context window, a Deep Think reasoning layer, and autonomous workflow capabilities.",
+          "ethics_tags": []
+        },
+        {
+          "title": "Sam Altman seeks a 'new world order' for AI as OpenAI loses ground to Google and Anthropic",
+          "link": "https://fortune.com/2026/07/02/sam-altman-new-world-order-ai-openai-google-anthropic/",
+          "source": "Fortune",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 2, 2026",
+          "published_iso": "2026-07-02T09:15:00Z",
+          "summary": "With rivals gaining, OpenAI floats giving Washington a 5% equity stake, raising governance and oversight questions about the state's role in frontier AI.",
+          "ethics_tags": [
+            "Bias & Fairness",
+            "Regulation & Governance"
+          ]
+        },
+        {
+          "title": "Commerce Department lifts export controls; Anthropic restores Fable 5 and Mythos 5 globally with new safeguards",
+          "link": "https://thursdai.news/releases/2026-07",
+          "source": "ThursdAI",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 1, 2026",
+          "published_iso": "2026-07-01T18:00:00Z",
+          "summary": "After US export controls were lifted, Anthropic brought the models back online globally, adding cybersecurity classifiers as a safety guardrail.",
+          "ethics_tags": [
+            "Safety & Alignment"
+          ]
+        },
+        {
+          "title": "Anthropic launches Claude Sonnet 5 with near-Opus performance at $2/$10 introductory pricing",
+          "link": "https://thursdai.news/releases/2026-07",
+          "source": "ThursdAI",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 1, 2026",
+          "published_iso": "2026-07-01T14:00:00Z",
+          "summary": "Sonnet 5 lands close to Opus 4.8 quality at aggressive introductory pricing through August 31, intensifying the price-performance race among frontier labs.",
+          "ethics_tags": []
+        }
+      ]
+    },
+    "research": {
+      "label": "Research & Papers",
+      "items": [
+        {
+          "title": "Unisound U2: a 266B-parameter MoE built for agents hits 72.2% on SWE-bench Verified",
+          "link": "https://llm-stats.com/ai-news",
+          "source": "llm-stats",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jul 4, 2026",
+          "published_iso": "2026-07-04T00:00:00Z",
+          "summary": "The mixture-of-experts model (266B total / 10B active) posts strong reasoning and coding scores, underscoring the shift toward agent-optimized architectures.",
+          "ethics_tags": []
+        },
+        {
+          "title": "OpenThoughts-Agent: data recipes for agentic models",
+          "link": "https://arxiv.org/pdf/2606.24855",
+          "source": "arXiv",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jun 30, 2026",
+          "published_iso": "2026-06-30T00:00:00Z",
+          "summary": "The paper details reproducible data recipes for training agentic models, part of a fast-growing body of work on tool use and long-horizon reasoning.",
+          "ethics_tags": []
+        },
+        {
+          "title": "The Hitchhiker's Guide to Agentic AI: from foundations to systems",
+          "link": "https://arxiv.org/pdf/2606.24937",
+          "source": "arXiv",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jun 30, 2026",
+          "published_iso": "2026-06-30T00:00:00Z",
+          "summary": "A broad survey of agentic AI covering foundations, memory, evaluation, and multi-agent system design as autonomy becomes a dominant research theme.",
+          "ethics_tags": []
+        },
+        {
+          "title": "DeepResearch Bench: a comprehensive benchmark for deep research agents",
+          "link": "https://arxiv.org/pdf/2506.11763",
+          "source": "arXiv",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jun 28, 2026",
+          "published_iso": "2026-06-28T00:00:00Z",
+          "summary": "A new benchmark evaluates autonomous research agents on multi-step tasks such as web browsing, tool use, and synthesis, sharpening how the field measures agentic reasoning.",
+          "ethics_tags": []
+        },
+        {
+          "title": "Topical phase transitions in AI research: an early-warning signature for emerging topics",
+          "link": "https://arxiv.org/pdf/2606.12828",
+          "source": "arXiv",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jun 27, 2026",
+          "published_iso": "2026-06-27T00:00:00Z",
+          "summary": "Large-scale analysis finds 'reasoning' grew 4.6x in 2025 and identifies an early-warning signature for emerging AI research topics before they surge.",
+          "ethics_tags": []
+        },
+        {
+          "title": "Verified Critical Step Optimization for LLM agents",
+          "link": "https://arxiv.org/pdf/2602.03412",
+          "source": "arXiv",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jun 25, 2026",
+          "published_iso": "2026-06-25T00:00:00Z",
+          "summary": "A method that targets the highest-impact steps in an agent's trajectory, improving reliability on complex multi-step tasks.",
+          "ethics_tags": []
+        }
+      ]
+    },
+    "community": {
+      "label": "Community & Discussion",
+      "items": [
+        {
+          "title": "Left to self-police, AI companies weaken safety commitments, Future of Life study finds",
+          "link": "https://www.wbur.org/hereandnow/2026/07/07/ai-companies-safety",
+          "source": "WBUR Here & Now",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 7, 2026",
+          "published_iso": "2026-07-07T13:00:00Z",
+          "summary": "A Future of Life Institute study finds leading labs moving the goalposts on safety commitments, with none scoring above a C+ on alignment and accountability.",
+          "ethics_tags": [
+            "Safety & Alignment",
+            "Transparency & Accountability"
+          ]
+        },
+        {
+          "title": "Google, Anthropic and OpenAI lead the AI Safety Index; SpaceXAI receives an F",
+          "link": "https://seekingalpha.com/news/4611964-google-anthropic-openai-lead-ai-safety-index-spacexai-receives-f",
+          "source": "Seeking Alpha",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 6, 2026",
+          "published_iso": "2026-07-06T20:00:00Z",
+          "summary": "The latest AI Safety Index ranks the major labs on transparency, risk management, and governance, with wide gaps between leaders and laggards.",
+          "ethics_tags": [
+            "Safety & Alignment",
+            "Regulation & Governance",
+            "Transparency & Accountability"
+          ]
+        },
+        {
+          "title": "AI News Today, July 6 2026: the 15 biggest stories",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026",
+          "source": "Build Fast with AI",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 6, 2026",
+          "published_iso": "2026-07-06T08:00:00Z",
+          "summary": "A practitioner roundup of the week's most-discussed releases, tools, and debates across the AI community.",
+          "ethics_tags": []
+        },
+        {
+          "title": "In Case You Missed It: Last Week in AI, June 29 to July 5, 2026",
+          "link": "https://opendatascience.com/in-case-you-missed-it-last-week-in-ai-june-29-july-5-2026/",
+          "source": "Open Data Science",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 5, 2026",
+          "published_iso": "2026-07-05T15:00:00Z",
+          "summary": "A weekly digest summarizing model releases, research, and industry moves for machine-learning practitioners.",
+          "ethics_tags": []
+        }
+      ]
+    },
+    "business": {
+      "label": "Business & Funding",
+      "items": [
+        {
+          "title": "Nvidia tops $40 billion in equity bets on AI startups in 2026",
+          "link": "https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html",
+          "source": "CNBC",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Jul 3, 2026",
+          "published_iso": "2026-07-03T09:00:00Z",
+          "summary": "Nvidia's expanding investment portfolio deepens its influence across the AI supply chain, raising questions about market concentration.",
+          "ethics_tags": [
+            "Bias & Fairness"
+          ]
+        },
+        {
+          "title": "Nvidia to let AI startups use its chips now and pay with a share of future revenue",
+          "link": "https://www.cnbc.com/2026/07/02/nvidia-plans-to-offer-start-up-customers-access-to-revenue-sharing-deals.html",
+          "source": "CNBC",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Jul 2, 2026",
+          "published_iso": "2026-07-02T11:00:00Z",
+          "summary": "Nvidia positions itself as a financier of the AI buildout, with cloud partners reselling chip access to startups in exchange for a cut of future revenue.",
+          "ethics_tags": []
+        },
+        {
+          "title": "AI chip startups near record funding, raising $8.3B to challenge Nvidia as focus shifts to inference",
+          "link": "https://seekingalpha.com/news/4576528-ai-chip-startups-near-record-funding-to-challenge-nvidia-cnbcs-schwarz-says",
+          "source": "Seeking Alpha",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Jul 1, 2026",
+          "published_iso": "2026-07-01T17:00:00Z",
+          "summary": "Investors pour billions into inference-focused silicon, betting the next phase of the AI boom rewards efficiency over raw training scale.",
+          "ethics_tags": []
+        },
+        {
+          "title": "Semiconductor startup funding runs hot: MatX raises $500M, Ayar Labs $500M",
+          "link": "https://news.crunchbase.com/semiconductors-and-5g/chip-startup-funding-2026-cerebras-matx-ayar-labs-ipos-nvda/",
+          "source": "Crunchbase News",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Jun 29, 2026",
+          "published_iso": "2026-06-29T00:00:00Z",
+          "summary": "Custom-silicon and optical-interconnect startups pull in half-billion-dollar rounds as the compute buildout accelerates.",
+          "ethics_tags": []
+        }
+      ]
+    },
+    "ethics": {
+      "label": "Ethics & Society",
+      "items": [
+        {
+          "title": "EU AI Act high-risk enforcement begins August 2, 2026",
+          "link": "https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026",
+          "source": "Norton Rose Fulbright",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Jul 5, 2026",
+          "published_iso": "2026-07-05T00:00:00Z",
+          "summary": "The EU AI Act's obligations for high-risk systems take effect, raising compliance, transparency, and governance stakes for AI deployers worldwide.",
+          "ethics_tags": [
+            "Regulation & Governance",
+            "Transparency & Accountability"
+          ]
+        },
+        {
+          "title": "AI copyright: six key rulings shaping 2026 litigation",
+          "link": "https://www.insidetechlaw.com/blog/2026/03/ai-copyright-six-key-rulings",
+          "source": "Inside Tech Law",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Jul 4, 2026",
+          "published_iso": "2026-07-04T00:00:00Z",
+          "summary": "A review of pivotal fair-use and infringement rulings that are setting the rules for how AI systems can lawfully learn from copyrighted work.",
+          "ethics_tags": [
+            "Copyright & IP"
+          ]
+        },
+        {
+          "title": "Court orders OpenAI to produce all 20 million output logs in copyright litigation",
+          "link": "https://www.bakerlaw.com/services/artificial-intelligence-ai/case-tracker-artificial-intelligence-copyrights-and-class-actions/",
+          "source": "BakerHostetler",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Jul 2, 2026",
+          "published_iso": "2026-07-02T00:00:00Z",
+          "summary": "A discovery ruling forces disclosure of millions of model outputs, testing privacy and accountability questions in AI copyright cases.",
+          "ethics_tags": [
+            "Privacy & Surveillance",
+            "Copyright & IP",
+            "Transparency & Accountability"
+          ]
+        },
+        {
+          "title": "Bartz v. Anthropic settles for $1.5B over pirated books, roughly $3,000 per work",
+          "link": "https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/",
+          "source": "The Authors Guild",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Jul 1, 2026",
+          "published_iso": "2026-07-01T00:00:00Z",
+          "summary": "A landmark copyright settlement: courts held that training on books can be fair use, but storing pirated copies is not, reshaping how training data is sourced.",
+          "ethics_tags": [
+            "Copyright & IP"
+          ]
+        },
+        {
+          "title": "France's competition authority fines Google 250M euros for using news articles to train Gemini",
+          "link": "https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026",
+          "source": "Norton Rose Fulbright",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Jun 30, 2026",
+          "published_iso": "2026-06-30T00:00:00Z",
+          "summary": "Regulators penalize Google over unlicensed use of publishers' content, a copyright and competition flashpoint for how models are trained.",
+          "ethics_tags": [
+            "Copyright & IP",
+            "Regulation & Governance"
+          ]
+        }
+      ]
+    }
+  },
+  "trending": [
+    {
+      "term": "Anthropic",
+      "count": 7
+    },
+    {
+      "term": "agent",
+      "count": 5
+    },
+    {
+      "term": "OpenAI",
+      "count": 4
+    },
+    {
+      "term": "Google",
+      "count": 4
+    },
+    {
+      "term": "copyright",
+      "count": 4
+    },
+    {
+      "term": "Nvidia",
+      "count": 3
+    },
+    {
+      "term": "agentic",
+      "count": 3
+    },
+    {
+      "term": "safety",
+      "count": 3
+    },
+    {
+      "term": "Claude",
+      "count": 2
+    },
+    {
+      "term": "Gemini",
+      "count": 2
+    },
+    {
+      "term": "chip",
+      "count": 2
+    },
+    {
+      "term": "funding",
+      "count": 2
+    }
+  ],
+  "ethics_themes": [
+    {
+      "theme": "Regulation & Governance",
+      "count": 4,
+      "slug": "regulation-governance"
+    },
+    {
+      "theme": "Transparency & Accountability",
+      "count": 4,
+      "slug": "transparency-accountability"
+    },
+    {
+      "theme": "Copyright & IP",
+      "count": 4,
+      "slug": "copyright-ip"
+    },
+    {
+      "theme": "Safety & Alignment",
+      "count": 3,
+      "slug": "safety-alignment"
+    },
+    {
+      "theme": "Bias & Fairness",
+      "count": 2,
+      "slug": "bias-fairness"
+    },
+    {
+      "theme": "Privacy & Surveillance",
+      "count": 1,
+      "slug": "privacy-surveillance"
+    }
+  ],
+  "ethics_watch": [
+    {
+      "title": "Left to self-police, AI companies weaken safety commitments, Future of Life study finds",
+      "link": "https://www.wbur.org/hereandnow/2026/07/07/ai-companies-safety",
+      "source": "WBUR Here & Now",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 7, 2026",
+      "published_iso": "2026-07-07T13:00:00Z",
+      "summary": "A Future of Life Institute study finds leading labs moving the goalposts on safety commitments, with none scoring above a C+ on alignment and accountability.",
+      "ethics_tags": [
+        "Safety & Alignment",
+        "Transparency & Accountability"
+      ]
+    },
+    {
+      "title": "Google, Anthropic and OpenAI lead the AI Safety Index; SpaceXAI receives an F",
+      "link": "https://seekingalpha.com/news/4611964-google-anthropic-openai-lead-ai-safety-index-spacexai-receives-f",
+      "source": "Seeking Alpha",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 6, 2026",
+      "published_iso": "2026-07-06T20:00:00Z",
+      "summary": "The latest AI Safety Index ranks the major labs on transparency, risk management, and governance, with wide gaps between leaders and laggards.",
+      "ethics_tags": [
+        "Safety & Alignment",
+        "Regulation & Governance",
+        "Transparency & Accountability"
+      ]
+    },
+    {
+      "title": "EU AI Act high-risk enforcement begins August 2, 2026",
+      "link": "https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026",
+      "source": "Norton Rose Fulbright",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Jul 5, 2026",
+      "published_iso": "2026-07-05T00:00:00Z",
+      "summary": "The EU AI Act's obligations for high-risk systems take effect, raising compliance, transparency, and governance stakes for AI deployers worldwide.",
+      "ethics_tags": [
+        "Regulation & Governance",
+        "Transparency & Accountability"
+      ]
+    },
+    {
+      "title": "AI copyright: six key rulings shaping 2026 litigation",
+      "link": "https://www.insidetechlaw.com/blog/2026/03/ai-copyright-six-key-rulings",
+      "source": "Inside Tech Law",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Jul 4, 2026",
+      "published_iso": "2026-07-04T00:00:00Z",
+      "summary": "A review of pivotal fair-use and infringement rulings that are setting the rules for how AI systems can lawfully learn from copyrighted work.",
+      "ethics_tags": [
+        "Copyright & IP"
+      ]
+    },
+    {
+      "title": "Nvidia tops $40 billion in equity bets on AI startups in 2026",
+      "link": "https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html",
+      "source": "CNBC",
+      "category": "business",
+      "category_label": "Business & Funding",
+      "published_display": "Jul 3, 2026",
+      "published_iso": "2026-07-03T09:00:00Z",
+      "summary": "Nvidia's expanding investment portfolio deepens its influence across the AI supply chain, raising questions about market concentration.",
+      "ethics_tags": [
+        "Bias & Fairness"
+      ]
+    },
+    {
+      "title": "Sam Altman seeks a 'new world order' for AI as OpenAI loses ground to Google and Anthropic",
+      "link": "https://fortune.com/2026/07/02/sam-altman-new-world-order-ai-openai-google-anthropic/",
+      "source": "Fortune",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Jul 2, 2026",
+      "published_iso": "2026-07-02T09:15:00Z",
+      "summary": "With rivals gaining, OpenAI floats giving Washington a 5% equity stake, raising governance and oversight questions about the state's role in frontier AI.",
+      "ethics_tags": [
+        "Bias & Fairness",
+        "Regulation & Governance"
+      ]
+    },
+    {
+      "title": "Court orders OpenAI to produce all 20 million output logs in copyright litigation",
+      "link": "https://www.bakerlaw.com/services/artificial-intelligence-ai/case-tracker-artificial-intelligence-copyrights-and-class-actions/",
+      "source": "BakerHostetler",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Jul 2, 2026",
+      "published_iso": "2026-07-02T00:00:00Z",
+      "summary": "A discovery ruling forces disclosure of millions of model outputs, testing privacy and accountability questions in AI copyright cases.",
+      "ethics_tags": [
+        "Privacy & Surveillance",
+        "Copyright & IP",
+        "Transparency & Accountability"
+      ]
+    },
+    {
+      "title": "Commerce Department lifts export controls; Anthropic restores Fable 5 and Mythos 5 globally with new safeguards",
+      "link": "https://thursdai.news/releases/2026-07",
+      "source": "ThursdAI",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Jul 1, 2026",
+      "published_iso": "2026-07-01T18:00:00Z",
+      "summary": "After US export controls were lifted, Anthropic brought the models back online globally, adding cybersecurity classifiers as a safety guardrail.",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ]
+    },
+    {
+      "title": "Bartz v. Anthropic settles for $1.5B over pirated books, roughly $3,000 per work",
+      "link": "https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/",
+      "source": "The Authors Guild",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Jul 1, 2026",
+      "published_iso": "2026-07-01T00:00:00Z",
+      "summary": "A landmark copyright settlement: courts held that training on books can be fair use, but storing pirated copies is not, reshaping how training data is sourced.",
+      "ethics_tags": [
+        "Copyright & IP"
+      ]
+    },
+    {
+      "title": "France's competition authority fines Google 250M euros for using news articles to train Gemini",
+      "link": "https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026",
+      "source": "Norton Rose Fulbright",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Jun 30, 2026",
+      "published_iso": "2026-06-30T00:00:00Z",
+      "summary": "Regulators penalize Google over unlicensed use of publishers' content, a copyright and competition flashpoint for how models are trained.",
+      "ethics_tags": [
+        "Copyright & IP",
+        "Regulation & Governance"
+      ]
+    }
+  ],
+  "latest": [
+    {
+      "title": "Left to self-police, AI companies weaken safety commitments, Future of Life study finds",
+      "link": "https://www.wbur.org/hereandnow/2026/07/07/ai-companies-safety",
+      "source": "WBUR Here & Now",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 7, 2026",
+      "published_iso": "2026-07-07T13:00:00Z",
+      "summary": "A Future of Life Institute study finds leading labs moving the goalposts on safety commitments, with none scoring above a C+ on alignment and accountability.",
+      "ethics_tags": [
+        "Safety & Alignment",
+        "Transparency & Accountability"
+      ]
+    },
+    {
+      "title": "Google, Anthropic and OpenAI lead the AI Safety Index; SpaceXAI receives an F",
+      "link": "https://seekingalpha.com/news/4611964-google-anthropic-openai-lead-ai-safety-index-spacexai-receives-f",
+      "source": "Seeking Alpha",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 6, 2026",
+      "published_iso": "2026-07-06T20:00:00Z",
+      "summary": "The latest AI Safety Index ranks the major labs on transparency, risk management, and governance, with wide gaps between leaders and laggards.",
+      "ethics_tags": [
+        "Safety & Alignment",
+        "Regulation & Governance",
+        "Transparency & Accountability"
+      ]
+    },
+    {
+      "title": "AI News Today, July 6 2026: the 15 biggest stories",
+      "link": "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026",
+      "source": "Build Fast with AI",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 6, 2026",
+      "published_iso": "2026-07-06T08:00:00Z",
+      "summary": "A practitioner roundup of the week's most-discussed releases, tools, and debates across the AI community.",
+      "ethics_tags": []
+    },
+    {
+      "title": "In Case You Missed It: Last Week in AI, June 29 to July 5, 2026",
+      "link": "https://opendatascience.com/in-case-you-missed-it-last-week-in-ai-june-29-july-5-2026/",
+      "source": "Open Data Science",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 5, 2026",
+      "published_iso": "2026-07-05T15:00:00Z",
+      "summary": "A weekly digest summarizing model releases, research, and industry moves for machine-learning practitioners.",
+      "ethics_tags": []
+    },
+    {
+      "title": "EU AI Act high-risk enforcement begins August 2, 2026",
+      "link": "https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026",
+      "source": "Norton Rose Fulbright",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Jul 5, 2026",
+      "published_iso": "2026-07-05T00:00:00Z",
+      "summary": "The EU AI Act's obligations for high-risk systems take effect, raising compliance, transparency, and governance stakes for AI deployers worldwide.",
+      "ethics_tags": [
+        "Regulation & Governance",
+        "Transparency & Accountability"
+      ]
+    },
+    {
+      "title": "Unisound U2: a 266B-parameter MoE built for agents hits 72.2% on SWE-bench Verified",
+      "link": "https://llm-stats.com/ai-news",
+      "source": "llm-stats",
+      "category": "research",
+      "category_label": "Research & Papers",
+      "published_display": "Jul 4, 2026",
+      "published_iso": "2026-07-04T00:00:00Z",
+      "summary": "The mixture-of-experts model (266B total / 10B active) posts strong reasoning and coding scores, underscoring the shift toward agent-optimized architectures.",
+      "ethics_tags": []
+    },
+    {
+      "title": "AI copyright: six key rulings shaping 2026 litigation",
+      "link": "https://www.insidetechlaw.com/blog/2026/03/ai-copyright-six-key-rulings",
+      "source": "Inside Tech Law",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Jul 4, 2026",
+      "published_iso": "2026-07-04T00:00:00Z",
+      "summary": "A review of pivotal fair-use and infringement rulings that are setting the rules for how AI systems can lawfully learn from copyrighted work.",
+      "ethics_tags": [
+        "Copyright & IP"
+      ]
+    },
+    {
+      "title": "Anthropic unveils Claude Science Workbench, connecting Opus 4.8 to 60+ scientific databases",
+      "link": "https://thursdai.news/releases/2026-07",
+      "source": "ThursdAI",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Jul 3, 2026",
+      "published_iso": "2026-07-03T16:00:00Z",
+      "summary": "The workbench links Claude to genomics, proteomics, cheminformatics, and clinical-trial databases, pushing AI deeper into scientific research workflows.",
+      "ethics_tags": []
+    },
+    {
+      "title": "Nvidia tops $40 billion in equity bets on AI startups in 2026",
+      "link": "https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html",
+      "source": "CNBC",
+      "category": "business",
+      "category_label": "Business & Funding",
+      "published_display": "Jul 3, 2026",
+      "published_iso": "2026-07-03T09:00:00Z",
+      "summary": "Nvidia's expanding investment portfolio deepens its influence across the AI supply chain, raising questions about market concentration.",
+      "ethics_tags": [
+        "Bias & Fairness"
+      ]
+    },
+    {
+      "title": "Anthropic overtakes OpenAI on self-reported revenue, targeting $47B and profitability by 2029",
+      "link": "https://fortune.com/2026/07/02/sam-altman-new-world-order-ai-openai-google-anthropic/",
+      "source": "Fortune",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Jul 2, 2026",
+      "published_iso": "2026-07-02T12:30:00Z",
+      "summary": "Anthropic says it is on course to reach $47 billion in revenue and profitability a year ahead of OpenAI, reshaping the competitive landscape among leading labs.",
+      "ethics_tags": []
+    },
+    {
+      "title": "Nvidia to let AI startups use its chips now and pay with a share of future revenue",
+      "link": "https://www.cnbc.com/2026/07/02/nvidia-plans-to-offer-start-up-customers-access-to-revenue-sharing-deals.html",
+      "source": "CNBC",
+      "category": "business",
+      "category_label": "Business & Funding",
+      "published_display": "Jul 2, 2026",
+      "published_iso": "2026-07-02T11:00:00Z",
+      "summary": "Nvidia positions itself as a financier of the AI buildout, with cloud partners reselling chip access to startups in exchange for a cut of future revenue.",
+      "ethics_tags": []
+    },
+    {
+      "title": "Google DeepMind delays Gemini 3.5 Pro to July 17 for a full architectural rebuild",
+      "link": "https://finance.biggo.com/news/6f0c6bb2-795f-4c57-9d09-6db691d7638a",
+      "source": "BigGo Finance",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Jul 2, 2026",
+      "published_iso": "2026-07-02T10:00:00Z",
+      "summary": "DeepMind scraps the Gemini 2.5 Pro architecture for a ground-up redesign adding a 2M-token context window, a Deep Think reasoning layer, and autonomous workflow capabilities.",
+      "ethics_tags": []
+    },
+    {
+      "title": "Sam Altman seeks a 'new world order' for AI as OpenAI loses ground to Google and Anthropic",
+      "link": "https://fortune.com/2026/07/02/sam-altman-new-world-order-ai-openai-google-anthropic/",
+      "source": "Fortune",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Jul 2, 2026",
+      "published_iso": "2026-07-02T09:15:00Z",
+      "summary": "With rivals gaining, OpenAI floats giving Washington a 5% equity stake, raising governance and oversight questions about the state's role in frontier AI.",
+      "ethics_tags": [
+        "Bias & Fairness",
+        "Regulation & Governance"
+      ]
+    },
+    {
+      "title": "Court orders OpenAI to produce all 20 million output logs in copyright litigation",
+      "link": "https://www.bakerlaw.com/services/artificial-intelligence-ai/case-tracker-artificial-intelligence-copyrights-and-class-actions/",
+      "source": "BakerHostetler",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Jul 2, 2026",
+      "published_iso": "2026-07-02T00:00:00Z",
+      "summary": "A discovery ruling forces disclosure of millions of model outputs, testing privacy and accountability questions in AI copyright cases.",
+      "ethics_tags": [
+        "Privacy & Surveillance",
+        "Copyright & IP",
+        "Transparency & Accountability"
+      ]
+    },
+    {
+      "title": "Commerce Department lifts export controls; Anthropic restores Fable 5 and Mythos 5 globally with new safeguards",
+      "link": "https://thursdai.news/releases/2026-07",
+      "source": "ThursdAI",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Jul 1, 2026",
+      "published_iso": "2026-07-01T18:00:00Z",
+      "summary": "After US export controls were lifted, Anthropic brought the models back online globally, adding cybersecurity classifiers as a safety guardrail.",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ]
+    },
+    {
+      "title": "AI chip startups near record funding, raising $8.3B to challenge Nvidia as focus shifts to inference",
+      "link": "https://seekingalpha.com/news/4576528-ai-chip-startups-near-record-funding-to-challenge-nvidia-cnbcs-schwarz-says",
+      "source": "Seeking Alpha",
+      "category": "business",
+      "category_label": "Business & Funding",
+      "published_display": "Jul 1, 2026",
+      "published_iso": "2026-07-01T17:00:00Z",
+      "summary": "Investors pour billions into inference-focused silicon, betting the next phase of the AI boom rewards efficiency over raw training scale.",
+      "ethics_tags": []
+    },
+    {
+      "title": "Anthropic launches Claude Sonnet 5 with near-Opus performance at $2/$10 introductory pricing",
+      "link": "https://thursdai.news/releases/2026-07",
+      "source": "ThursdAI",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Jul 1, 2026",
+      "published_iso": "2026-07-01T14:00:00Z",
+      "summary": "Sonnet 5 lands close to Opus 4.8 quality at aggressive introductory pricing through August 31, intensifying the price-performance race among frontier labs.",
+      "ethics_tags": []
+    },
+    {
+      "title": "Bartz v. Anthropic settles for $1.5B over pirated books, roughly $3,000 per work",
+      "link": "https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/",
+      "source": "The Authors Guild",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Jul 1, 2026",
+      "published_iso": "2026-07-01T00:00:00Z",
+      "summary": "A landmark copyright settlement: courts held that training on books can be fair use, but storing pirated copies is not, reshaping how training data is sourced.",
+      "ethics_tags": [
+        "Copyright & IP"
+      ]
+    },
+    {
+      "title": "OpenThoughts-Agent: data recipes for agentic models",
+      "link": "https://arxiv.org/pdf/2606.24855",
+      "source": "arXiv",
+      "category": "research",
+      "category_label": "Research & Papers",
+      "published_display": "Jun 30, 2026",
+      "published_iso": "2026-06-30T00:00:00Z",
+      "summary": "The paper details reproducible data recipes for training agentic models, part of a fast-growing body of work on tool use and long-horizon reasoning.",
+      "ethics_tags": []
+    },
+    {
+      "title": "The Hitchhiker's Guide to Agentic AI: from foundations to systems",
+      "link": "https://arxiv.org/pdf/2606.24937",
+      "source": "arXiv",
+      "category": "research",
+      "category_label": "Research & Papers",
+      "published_display": "Jun 30, 2026",
+      "published_iso": "2026-06-30T00:00:00Z",
+      "summary": "A broad survey of agentic AI covering foundations, memory, evaluation, and multi-agent system design as autonomy becomes a dominant research theme.",
+      "ethics_tags": []
+    },
+    {
+      "title": "France's competition authority fines Google 250M euros for using news articles to train Gemini",
+      "link": "https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026",
+      "source": "Norton Rose Fulbright",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Jun 30, 2026",
+      "published_iso": "2026-06-30T00:00:00Z",
+      "summary": "Regulators penalize Google over unlicensed use of publishers' content, a copyright and competition flashpoint for how models are trained.",
+      "ethics_tags": [
+        "Copyright & IP",
+        "Regulation & Governance"
+      ]
+    },
+    {
+      "title": "Semiconductor startup funding runs hot: MatX raises $500M, Ayar Labs $500M",
+      "link": "https://news.crunchbase.com/semiconductors-and-5g/chip-startup-funding-2026-cerebras-matx-ayar-labs-ipos-nvda/",
+      "source": "Crunchbase News",
+      "category": "business",
+      "category_label": "Business & Funding",
+      "published_display": "Jun 29, 2026",
+      "published_iso": "2026-06-29T00:00:00Z",
+      "summary": "Custom-silicon and optical-interconnect startups pull in half-billion-dollar rounds as the compute buildout accelerates.",
+      "ethics_tags": []
+    },
+    {
+      "title": "DeepResearch Bench: a comprehensive benchmark for deep research agents",
+      "link": "https://arxiv.org/pdf/2506.11763",
+      "source": "arXiv",
+      "category": "research",
+      "category_label": "Research & Papers",
+      "published_display": "Jun 28, 2026",
+      "published_iso": "2026-06-28T00:00:00Z",
+      "summary": "A new benchmark evaluates autonomous research agents on multi-step tasks such as web browsing, tool use, and synthesis, sharpening how the field measures agentic reasoning.",
+      "ethics_tags": []
+    },
+    {
+      "title": "Topical phase transitions in AI research: an early-warning signature for emerging topics",
+      "link": "https://arxiv.org/pdf/2606.12828",
+      "source": "arXiv",
+      "category": "research",
+      "category_label": "Research & Papers",
+      "published_display": "Jun 27, 2026",
+      "published_iso": "2026-06-27T00:00:00Z",
+      "summary": "Large-scale analysis finds 'reasoning' grew 4.6x in 2025 and identifies an early-warning signature for emerging AI research topics before they surge.",
+      "ethics_tags": []
+    }
+  ]
+}

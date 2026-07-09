@@ -3,6 +3,9 @@ name: Update AI news
 # Refreshes _data/news.json from live feeds so the site tracks current
 # AI trends and hot topics. Runs every 6 hours and on demand.
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: '0 */6 * * *'
   workflow_dispatch:
@@ -10,14 +13,18 @@ on:
 permissions:
   contents: write
   pages: write
+  id-token: write
 
 concurrency:
-  group: update-news
+  group: pages
   cancel-in-progress: false
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -45,8 +52,18 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Rebuild GitHub Pages
-        if: steps.commit.outputs.changed == 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh api --method POST "repos/${{ github.repository }}/pages/builds"
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build GitHub Pages site
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

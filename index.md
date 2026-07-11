@@ -1,5 +1,6 @@
 ---
 layout: home
-title: TriWei AI
+title: Home
+permalink: /
 ---
-Welcome to TriWei AI! We explore the latest developments in artificial intelligence—including tools, news, research breakthroughs, and ethical insights. New posts are added every week.
+<!-- Homepage content lives in _layouts/home.html. -->

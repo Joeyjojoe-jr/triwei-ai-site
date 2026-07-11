@@ -1,34 +1,70 @@
 title: TriWei AI
-description: Weekly AI tools and news
-theme: minima
+description: Explorer Hub for AI topics, experiments, guides, and notes.
+url: "https://triwei.ai"
+baseurl: ""
+timezone: America/Chicago
 logo: /assets/images/logo.png
 
-# Site basics
-url: https://www.triwei.ai
-permalink: /:categories/:year/:month/:day/:title/
-timezone: America/Chicago
-
-# Build
 markdown: kramdown
 kramdown:
   input: GFM
+permalink: pretty
 
-# Plugins allowed on GitHub Pages
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Defaults
+collections:
+  experiments:
+    output: true
+    permalink: /experiments/:name/
+  guides:
+    output: true
+    permalink: /guides/:name/
+  knowledge:
+    output: true
+    permalink: /knowledge/:name/
+  blog:
+    output: true
+    permalink: /blog/:name/
+
 defaults:
   - scope:
       path: ""
-      type: "posts"
+      type: "experiments"
     values:
       layout: post
-      image: /assets/images/logo.png
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: "knowledge"
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: "blog"
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
 
-# Exclude directories that should not be processed by Jekyll
 exclude:
-  - "site (2)"
-  - "triwei_scaffold"
+  - node_modules
+  - src
+  - scripts
+  - public
+  - .github
+  - .project
+  - package.json
+  - package-lock.json
+  - postcss.config.cjs
+  - tailwind.config.mjs
+  - astro.config.mjs

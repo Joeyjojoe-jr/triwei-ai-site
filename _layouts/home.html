@@ -1,37 +1,92 @@
 ---
 layout: default
 ---
-<main class="home">
-  <!-- Hero section -->
-  <section class="hero">
-    <img class="hero-logo" src="{{ site.logo | relative_url }}" alt="{{ site.title }} logo" />
-    <h1 class="hero-title">{{ site.title }}</h1>
-    <p class="hero-tagline">{{ site.description }}</p>
-  </section>
+<section class="hero card animate-in">
+  <p class="eyebrow">Explorer Hub</p>
+  <h1>TriWei AI</h1>
+  <p class="lead">Learn AI with focused topics, practical experiments, and repeatable guides.</p>
+</section>
 
-  <!-- About snippet -->
-  <section class="about-snippet">
-    <h2>About TriWei AI</h2>
-    <p>TriWei AI curates practical AI tools, short explainers and a weekly roundup of news and research. Our mission is to translate complex breakthroughs into actionable insights that empower you.</p>
-  </section>
+<section class="section-block animate-in" aria-labelledby="start-exploring">
+  <div class="section-heading">
+    <h2 id="start-exploring">Start Exploring</h2>
+    <p>Jump directly into the three core parts of the hub.</p>
+  </div>
+  <div class="card-grid nav-grid">
+    <article class="nav-card">
+      <h3><a href="{{ '/knowledge/' | relative_url }}">Explore Topics</a></h3>
+      <p>Browse the complete knowledge map from <code>_knowledge/</code>.</p>
+      <a class="text-link" href="{{ '/knowledge/' | relative_url }}">Open Knowledge Map</a>
+    </article>
+    <article class="nav-card">
+      <h3><a href="{{ '/experiments/' | relative_url }}">Experiments</a></h3>
+      <p>Review hands-on notes from <code>_experiments/</code>.</p>
+      <a class="text-link" href="{{ '/experiments/' | relative_url }}">Browse Experiments</a>
+    </article>
+    <article class="nav-card">
+      <h3><a href="{{ '/guides/' | relative_url }}">Guides</a></h3>
+      <p>Follow step-by-step playbooks from <code>_guides/</code>.</p>
+      <a class="text-link" href="{{ '/guides/' | relative_url }}">Read Guides</a>
+    </article>
+  </div>
+</section>
 
-  <!-- Latest posts grid -->
-  <section class="posts-grid">
-    <h2>Latest Posts</h2>
-    <div class="post-grid">
-      {% assign latest_posts = site.posts | slice: 0, 6 %}
-      {% if latest_posts.size > 0 %}
-        {% for post in latest_posts %}
-          <article class="post-card">
-            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            <p class="post-meta">{{ post.date | date: '%B %-d, %Y' }}</p>
-            <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
-            <a class="read-more" href="{{ post.url | relative_url }}">Read more →</a>
-          </article>
-        {% endfor %}
-      {% else %}
-        <p>There are no posts yet. Check back soon for our first weekly update!</p>
-      {% endif %}
-    </div>
-  </section>
-</main>
+{% assign featured_experiment = site.experiments | sort: "date" | reverse | first %}
+<section class="section-block animate-in" aria-labelledby="featured-experiment">
+  <div class="section-heading">
+    <h2 id="featured-experiment">Featured Experiment</h2>
+    <p>Shows the most recent entry from <code>_experiments/</code>.</p>
+  </div>
+  {% if featured_experiment %}
+  <article class="feature-card">
+    <h3><a href="{{ featured_experiment.url | relative_url }}">{{ featured_experiment.title }}</a></h3>
+    <p class="content-meta">{{ featured_experiment.date | date: "%B %-d, %Y" }}</p>
+    <p>{{ featured_experiment.excerpt | default: featured_experiment.content | strip_html | strip_newlines | truncate: 190 }}</p>
+    <a class="text-link" href="{{ featured_experiment.url | relative_url }}">Read More</a>
+  </article>
+  {% else %}
+  <p class="empty-state">Add a Markdown file in <code>_experiments/</code> to populate this section.</p>
+  {% endif %}
+</section>
+
+{% assign knowledge_topics = site.knowledge | sort: "title" %}
+<section class="section-block animate-in" aria-labelledby="knowledge-map">
+  <div class="section-heading">
+    <h2 id="knowledge-map">Knowledge Map</h2>
+    <p>Lists every file from <code>_knowledge/</code>.</p>
+  </div>
+  {% if knowledge_topics.size > 0 %}
+  <div class="card-grid knowledge-grid">
+    {% for topic in knowledge_topics %}
+    <article class="knowledge-card">
+      <h3><a href="{{ topic.url | relative_url }}">{{ topic.title }}</a></h3>
+      <p>{{ topic.description | default: topic.excerpt | default: topic.content | strip_html | strip_newlines | truncate: 130 }}</p>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="empty-state">Add Markdown files in <code>_knowledge/</code> to build this grid.</p>
+  {% endif %}
+</section>
+
+{% assign latest_notes = site.blog | sort: "date" | reverse | slice: 0, 3 %}
+<section class="section-block animate-in" aria-labelledby="latest-notes">
+  <div class="section-heading">
+    <h2 id="latest-notes">Latest Notes</h2>
+    <p>Displays the three newest entries from <code>_blog/</code>.</p>
+  </div>
+  {% if latest_notes.size > 0 %}
+  <div class="card-grid notes-grid">
+    {% for note in latest_notes %}
+    <article class="note-card">
+      <h3><a href="{{ note.url | relative_url }}">{{ note.title }}</a></h3>
+      <p class="content-meta">{{ note.date | date: "%B %-d, %Y" }}</p>
+      <p>{{ note.excerpt | default: note.content | strip_html | strip_newlines | truncate: 150 }}</p>
+      <a class="text-link" href="{{ note.url | relative_url }}">Read More</a>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="empty-state">Add Markdown files in <code>_blog/</code> to show your latest notes.</p>
+  {% endif %}
+</section>

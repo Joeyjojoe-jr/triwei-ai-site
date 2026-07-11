@@ -1,0 +1,34 @@
+name: Validate Curiosity Mall
+
+on:
+  push:
+    branches:
+      - "agent/**"
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --trace
+
+      - name: Check Curiosity Mall JavaScript syntax
+        run: node --check assets/js/mall.js
+
+      - name: Validate generated internal links and assets
+        run: python scripts/validate_site.py _site

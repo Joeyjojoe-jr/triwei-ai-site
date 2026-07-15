@@ -134,6 +134,7 @@ html[data-holodeck="static"] #holodeck-canvas {
   }
 
   .site-header {
+    background: var(--surface);
     background: color-mix(in srgb, var(--surface) 97%, #000000);
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
@@ -234,6 +235,7 @@ html[data-holodeck="static"] #holodeck-canvas {
     width: 100% !important;
   }
 
+  .animate-in,
   .emblem,
   .orbit-core .emblem,
   html[data-palette="amber"] .emblem,
@@ -241,6 +243,10 @@ html[data-holodeck="static"] #holodeck-canvas {
   .orbit-ring,
   .folder-spin {
     animation: none !important;
+  }
+
+  .hero-cycle {
+    transition: none !important;
   }
 
   .ticker {

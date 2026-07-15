@@ -1118,10 +1118,6 @@ body {
   .folder-ico { width: 78px; }
 }
 
-/* Real logo image as orbit core: screen-blend removes its black background on the dark theme */
-.orbit-core .emblem { mix-blend-mode: screen; }
-html[data-theme="light"] .orbit-core .emblem { mix-blend-mode: normal; }
-
 /* ===================================================================
    3D GRID SPACE + REVOLVING FOLDER CARDS  (final overrides)
    =================================================================== */
@@ -1186,10 +1182,8 @@ body::after {
 }
 .orbit-core .emblem {
   width: 100%; height: auto;
-  mix-blend-mode: screen;
   animation: core-pulse 3.6s ease-in-out infinite;
 }
-html[data-theme="light"] .orbit-core .emblem { mix-blend-mode: normal; }
 
 .orbit-ring { position: absolute; inset: 0; animation: orbit-spin 96s linear infinite; }
 @keyframes orbit-spin { from { transform: rotate(0); } to { transform: rotate(360deg); } }

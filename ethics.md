@@ -10,7 +10,7 @@ description: Every AI story, screened for its ethical dimensions — bias, safet
   <p class="eyebrow">the lens</p>
   <h1>Ethics Watch</h1>
   <p class="lead">TriWei AI reads every headline for its ethical stakes. Below are the themes surfacing most across current coverage, and the stories driving them.</p>
-  {% if news %}<p class="updated-stamp">Last updated {{ news.generated_display }}</p>{% endif %}
+  {% if news %}<p class="updated-stamp">Last updated {{ news.generated_display | escape }}</p>{% endif %}
 </section>
 
 {% if news %}
@@ -24,7 +24,7 @@ description: Every AI story, screened for its ethical dimensions — bias, safet
   <div class="heat-list">
     {% for th in news.ethics_themes %}
     <div class="heat-row">
-      <span class="heat-label">{{ th.theme }}</span>
+      <span class="heat-label">{{ th.theme | escape }}</span>
       <span class="heat-bar"><span class="heat-fill" style="width: {{ th.count | times: 100 | divided_by: maxc }}%;"></span></span>
       <span class="heat-num">{{ th.count }}</span>
     </div>
@@ -41,15 +41,15 @@ description: Every AI story, screened for its ethical dimensions — bias, safet
   <div class="news-list">
     {% for item in news.ethics_watch %}
     <article class="news-item ethics-flagged">
-      <h3><a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a></h3>
+      <h3><a href="{{ item.link | escape }}" target="_blank" rel="noopener noreferrer">{{ item.title | escape }}</a></h3>
       <p class="news-meta">
-        <span class="cat-pill cat-{{ item.category }}">{{ item.category_label }}</span>
-        {{ item.source }}{% if item.published_display %} <span class="sep">·</span> {{ item.published_display }}{% endif %}
+        <span class="cat-pill cat-{{ item.category }}">{{ item.category_label | escape }}</span>
+        {{ item.source | escape }}{% if item.published_display %} <span class="sep">·</span> {{ item.published_display | escape }}{% endif %}
         <span class="card-heat" title="{{ item.ethics_tags.size }} ethical dimensions">{% for t in item.ethics_tags %}▰{% endfor %}</span>
       </p>
-      {% if item.summary != "" %}<p class="news-summary">{{ item.summary }}</p>{% endif %}
+      {% if item.summary != "" %}<p class="news-summary">{{ item.summary | escape }}</p>{% endif %}
       {% if item.ethics_tags.size > 0 %}
-      <ul class="ethics-tags">{% for t in item.ethics_tags %}<li>{{ t }}</li>{% endfor %}</ul>
+      <ul class="ethics-tags">{% for t in item.ethics_tags %}<li>{{ t | escape }}</li>{% endfor %}</ul>
       {% endif %}
     </article>
     {% endfor %}

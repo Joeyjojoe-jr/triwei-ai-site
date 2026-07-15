@@ -21,6 +21,7 @@ import html
 import time
 import datetime as dt
 from urllib.request import Request, urlopen
+from urllib.parse import urlsplit
 from urllib.error import URLError, HTTPError
 from xml.etree import ElementTree as ET
 
@@ -88,57 +89,59 @@ CATEGORY_LABELS = {
 # story is assigned to exactly one subcategory so counts remain meaningful.
 SUBCATEGORY_RULES = {
     "labs": [
-        ("models", "Models & Releases",
-         ["model", "release", "launch", "gpt", "claude", "gemini", "llama", "mistral"]),
         ("hardware", "Chips, Robots & Devices",
-         ["chip", "gpu", "nvidia", "robot", "humanoid", "device", "hardware", "speaker"]),
-        ("enterprise", "Enterprise AI",
-         ["enterprise", "workplace", "business", "developer", "coding", "sales", "customer"]),
+         ["chip*", "gpu*", "nvidia", "robot*", "humanoid*", "device*", "hardware", "speaker*"]),
         ("governance", "Lab Safety & Policy",
-         ["safety", "alignment", "policy", "regulat", "lawsuit", "copyright", "standard"]),
+         ["safety", "alignment", "policy", "regulat*", "lawsuit*", "copyright", "standard*"]),
+        ("enterprise", "Enterprise AI",
+         ["enterprise", "workplace", "business", "developer*", "coding", "sales", "customer*"]),
+        ("models", "Models & Releases",
+         ["model*", "release*", "launch*", "gpt*", "claude", "gemini", "llama*", "mistral"]),
         ("frontier", "Frontier Labs", []),
     ],
     "research": [
+        ("evaluation", "Evaluation & Safety",
+         ["benchmark*", "evaluat*", "safety", "alignment", "audit*", "robust*", "interpret*"]),
         ("language", "Language Models",
-         ["language model", "llm", "transformer", "token", "linguistic", "text generation"]),
+         ["language model*", "llm*", "transformer*", "token*", "linguistic*", "text generation"]),
         ("agents", "Agents & Reasoning",
-         ["agent", "reasoning", "reinforcement", "planning", "decision", "control"]),
+         ["agent*", "reasoning", "reinforcement", "planning", "decision*", "control*"]),
         ("vision", "Vision & Multimodal",
          ["vision", "image", "video", "multimodal", "visual", "speech", "audio"]),
-        ("evaluation", "Evaluation & Safety",
-         ["benchmark", "evaluat", "safety", "alignment", "audit", "robust", "interpret"]),
         ("applied", "Applied AI", []),
     ],
     "community": [
-        ("open-source", "Open Source",
-         ["open source", "open-source", "open weight", "github", "repository"]),
+        ("open-source", "Open & Local AI",
+         ["open source", "open-source", "open weight*", "local llm*", "github", "repository"]),
         ("tools", "Tools & Projects",
-         ["tool", "project", "build", "library", "framework", " app", "release"]),
+         ["show hn", "tool*", "project*", "build*", "library", "framework*", "typescript",
+          "repo", "cli", "coding", "compiler*", "dsl*", "pipeline*", "webhook*"]),
         ("research", "Research Discussion",
-         ["paper", "research", "arxiv", "study", "benchmark"]),
+         ["paper*", "research", "arxiv", "study", "studies", "benchmark*", "clinical*"]),
         ("industry", "Industry Debate",
-         ["openai", "anthropic", "google", "meta", "microsoft", "nvidia", "startup"]),
+         ["openai", "anthropic", "google", "meta", "microsoft", "nvidia", "startup*",
+          "business", "industry", "pricing", "implementation"]),
         ("pulse", "Community Pulse", []),
     ],
     "business": [
         ("funding", "Funding & Venture",
-         ["funding", " fund", "raised", "round", "venture", "invest"]),
+         ["fund*", "raised", "round", "venture*", "invest*"]),
         ("deals", "Deals & Acquisitions",
-         ["acquisition", "acquire", "merger", "deal", "buyout", "ipo"]),
+         ["acquisition*", "acquire*", "merger*", "deal*", "buyout*", "ipo*", "sues", "lawsuit*"]),
         ("startups", "Startups",
-         ["startup", "founder", "launch"]),
+         ["startup*", "founder*", "launch*"]),
         ("compute", "Chips & Compute",
-         ["chip", "gpu", "nvidia", "compute", "data center", "datacenter", "semiconductor"]),
+         ["chip*", "gpu*", "nvidia", "compute", "data center*", "datacenter*", "semiconductor*"]),
         ("markets", "Markets & Strategy", []),
     ],
     "ethics": [
-        ("bias", "Bias & Fairness", ["bias & fairness", "bias", "fairness", "discriminat"]),
+        ("bias", "Bias & Fairness", ["bias & fairness", "bias*", "fairness", "discriminat*"]),
         ("privacy", "Privacy & Surveillance",
-         ["privacy & surveillance", "privacy", "surveillance", "biometric"]),
+         ["privacy & surveillance", "privacy", "surveillance", "biometric*"]),
         ("safety", "Safety & Alignment",
-         ["safety & alignment", "safety", "alignment", "guardrail", "jailbreak"]),
+         ["safety & alignment", "safety", "alignment", "guardrail*", "jailbreak*"]),
         ("rights", "Copyright, Labor & Rights",
-         ["copyright & ip", "labor & jobs", "copyright", "worker", "labor", "job"]),
+         ["copyright & ip", "labor & jobs", "copyright", "worker*", "labor", "job*"]),
         ("governance", "Governance & Society", []),
     ],
 }
@@ -355,6 +358,20 @@ def source_from_url(url):
     return "Web"
 
 
+def safe_external_url(value):
+    """Return an absolute HTTP(S) URL or an empty string for unsafe input."""
+    if not isinstance(value, str):
+        return ""
+    value = value.strip()
+    try:
+        parsed = urlsplit(value)
+    except ValueError:
+        return ""
+    if parsed.scheme.lower() not in ("http", "https") or not parsed.netloc:
+        return ""
+    return value
+
+
 def collect():
     seen = set()
     categories = {}
@@ -374,6 +391,9 @@ def collect():
                 summary = clean_text(r.get("desc"))
                 if not is_story_relevant(cat, title, summary, url):
                     continue
+                link = safe_external_url(r.get("link"))
+                if not link:
+                    continue
                 key = re.sub(r"[^a-z0-9]", "", title.lower())[:80]
                 if not key or key in seen:
                     continue
@@ -382,7 +402,7 @@ def collect():
                 etags = tag_ethics(title + " " + summary)
                 item = {
                     "title": clean_text(title, 160),
-                    "link": r.get("link", ""),
+                    "link": link,
                     "source": src,
                     "category": cat,
                     "published_iso": iso,
@@ -448,8 +468,32 @@ def format_datetime(d):
 def annotate_trend_scores(items, trending):
     tc = {t["term"].lower(): t["count"] for t in trending}
     for i in items:
-        text = (i["title"] + " " + i["summary"]).lower()
-        i["trend_score"] = sum(c for term, c in tc.items() if term in text)
+        text = "%s %s" % (i.get("title") or "", i.get("summary") or "")
+        text = text.lower()
+        i["trend_score"] = sum(
+            count for term, count in tc.items()
+            if re.search(r"(?<!\w)%s(?!\w)" % re.escape(term), text)
+        )
+
+
+def matches_subcategory_term(text, term):
+    """Match a complete term, or a word-prefix when the rule ends in '*'."""
+    prefix = term.endswith("*")
+    literal = term[:-1] if prefix else term
+    pattern = r"(?<!\w)%s" % re.escape(literal)
+    if not prefix:
+        pattern += r"(?!\w)"
+    return re.search(pattern, text, re.IGNORECASE) is not None
+
+
+def safe_trend_score(value):
+    """Normalize numeric trend scores; malformed or null values rank as zero."""
+    if isinstance(value, (int, float)) and not isinstance(value, bool):
+        return value
+    try:
+        return float(value or 0)
+    except (TypeError, ValueError):
+        return 0.0
 
 
 def classify_subcategory(category, item):
@@ -457,20 +501,28 @@ def classify_subcategory(category, item):
     rules = SUBCATEGORY_RULES.get(category)
     if not rules:
         raise ValueError("Unknown category: %s" % category)
+    tags = item.get("ethics_tags") or []
+    if not isinstance(tags, (list, tuple)):
+        tags = []
     text = " ".join([
-        item.get("title", ""),
-        item.get("summary", ""),
-        item.get("source", ""),
-        " ".join(item.get("ethics_tags", [])),
+        str(item.get("title") or ""),
+        str(item.get("summary") or ""),
+        str(item.get("source") or ""),
+        " ".join(str(tag) for tag in tags if tag),
     ]).lower()
     for key, _label, terms in rules:
-        if not terms or any(term in text for term in terms):
+        if not terms or any(matches_subcategory_term(text, term) for term in terms):
             return key
     return rules[-1][0]
 
 
 def display_item(i):
-    iso = i["published_iso"]
+    iso = i.get("published_iso")
+    if not isinstance(iso, str) or not iso:
+        iso = None
+    ethics_tags = i.get("ethics_tags") or []
+    if not isinstance(ethics_tags, (list, tuple)):
+        ethics_tags = []
     disp = ""
     if iso:
         try:
@@ -479,11 +531,15 @@ def display_item(i):
         except ValueError:
             disp = ""
     return {
-        "title": i["title"], "link": i["link"], "source": i["source"],
-        "category": i["category"], "category_label": CATEGORY_LABELS[i["category"]],
+        "title": str(i.get("title") or ""),
+        "link": safe_external_url(i.get("link")),
+        "source": str(i.get("source") or ""),
+        "category": i.get("category") or "",
+        "category_label": CATEGORY_LABELS.get(i.get("category"), ""),
         "published_display": disp, "published_iso": iso,
-        "summary": i["summary"], "ethics_tags": i["ethics_tags"],
-        "trend_score": i.get("trend_score", 0),
+        "summary": str(i.get("summary") or ""),
+        "ethics_tags": [str(tag) for tag in ethics_tags if tag],
+        "trend_score": safe_trend_score(i.get("trend_score")),
     }
 
 
@@ -499,11 +555,13 @@ def display_subcategories(category, items):
         ranked = sorted(
             buckets[key],
             key=lambda item: (
-                item.get("trend_score", 0),
-                item.get("published_iso") or "",
+                safe_trend_score(item.get("trend_score")),
+                str(item.get("published_iso") or ""),
             ),
             reverse=True,
         )
+        if not ranked:
+            continue
         result.append({
             "key": key,
             "label": label,

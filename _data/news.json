@@ -224,34 +224,10 @@
       ],
       "subcategories": [
         {
-          "key": "models",
-          "label": "Models & Releases",
-          "count": 7,
+          "key": "hardware",
+          "label": "Chips, Robots & Devices",
+          "count": 5,
           "folder_items": [
-            {
-              "title": "How sales teams use ChatGPT Work",
-              "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9JTUM4S19scnlQTlpEejE3S3ltaVRjSjI5YzIySDlnMmFpd05sZEpmbGhRYkRIM1N1LVJ2QUE5TG10dF9RTnpUQVpOaTFXb3BOMjRNX1dYdDhXaUl6bjRmb21GTVpDRW1fSDUtMm9mQ0xaUVdHNUdJ?oc=5",
-              "source": "OpenAI",
-              "category": "labs",
-              "category_label": "Labs & Industry",
-              "published_display": "Jul 14, 2026",
-              "published_iso": "2026-07-14T23:59:17Z",
-              "summary": "How sales teams use ChatGPT Work OpenAI",
-              "ethics_tags": [],
-              "trend_score": 87
-            },
-            {
-              "title": "OpenAI’s new flagship model deletes files on its own, people keep warning",
-              "link": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/",
-              "source": "TechCrunch",
-              "category": "labs",
-              "category_label": "Labs & Industry",
-              "published_display": "Jul 14, 2026",
-              "published_iso": "2026-07-14T21:50:11Z",
-              "summary": "A number of social media posts claim that GPT-5.6 Sol deleted files and data without warning. OpenAI had basically disclosed the problem in June.",
-              "ethics_tags": [],
-              "trend_score": 87
-            },
             {
               "title": "OpenAI may announce a ChatGPT smart speaker this year",
               "link": "https://www.theverge.com/ai-artificial-intelligence/965670/openai-chatgpt-ai-smart-speaker-hardware-device",
@@ -263,14 +239,7 @@
               "summary": "OpenAI's first device is set to be a smart speaker that lets you talk with ChatGPT, according to a report from Bloomberg. The device apparently won't have a screen, but will use a camera and additional sensors to \"understand\" your…",
               "ethics_tags": [],
               "trend_score": 87
-            }
-          ]
-        },
-        {
-          "key": "hardware",
-          "label": "Chips, Robots & Devices",
-          "count": 4,
-          "folder_items": [
+            },
             {
               "title": "OpenAI’s first hardware device is reportedly a screenless speaker that can move",
               "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOb3BNUnBVbTFTTUJEai1vQ19aSUdEYnBIbFl4NU9UVGhfX1o4dEdCNHVkVThYOC1KbVItRUladDdndkRYekFwWmgtcTFtcVBGV20tbDJROWRlc1lxamRZNFZRSEV4WDhpRjYyM2FWd0tpcXR5SExNVFEtckZOdk1SaWdOejV2MVNSVHhYR2dDdWplYXVYY2VadXB6UVJJYVVlU1NOZUFtY3BYbkZKM3MwOXJxUQ?oc=5",
@@ -294,26 +263,8 @@
               "summary": "OpenAI's first hardware device will be a speaker, Bloomberg News reports Reuters",
               "ethics_tags": [],
               "trend_score": 65
-            },
-            {
-              "title": "OpenAI’s First Device Will Be Movable, Screenless Speaker Built as AI Companion",
-              "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNaHphUl80MV93dEdWUTFUelkxbFd1QktjLWhTVjdnVk9yNXBrRkYyUTFYdGRSMXltRUhnRHJvYjF3eEk0b3BEU3ZscllTajVaSWE1NmxqNnluTGthNzRoTG1NVXV0bVNhRHU4ekxDUmRjdDFvTndaY3Uxdm9yVllJWXBSdmNlVnQ1V0xVM19NNHRmMkNvTE15OFdUa2pxSjVkcnlNekUzMmNjUEtpRmhaWmc0dG1wOEk5V3pZVkR5bTNybDZXU0Z2Wndn?oc=5",
-              "source": "Bloomberg.com",
-              "category": "labs",
-              "category_label": "Labs & Industry",
-              "published_display": "Jul 14, 2026",
-              "published_iso": "2026-07-14T20:52:15Z",
-              "summary": "OpenAI’s First Device Will Be Movable, Screenless Speaker Built as AI Companion Bloomberg.com",
-              "ethics_tags": [],
-              "trend_score": 65
             }
           ]
-        },
-        {
-          "key": "enterprise",
-          "label": "Enterprise AI",
-          "count": 0,
-          "folder_items": []
         },
         {
           "key": "governance",
@@ -345,6 +296,80 @@
                 "Copyright & IP"
               ],
               "trend_score": 85
+            }
+          ]
+        },
+        {
+          "key": "enterprise",
+          "label": "Enterprise AI",
+          "count": 2,
+          "folder_items": [
+            {
+              "title": "How sales teams use ChatGPT Work",
+              "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9JTUM4S19scnlQTlpEejE3S3ltaVRjSjI5YzIySDlnMmFpd05sZEpmbGhRYkRIM1N1LVJ2QUE5TG10dF9RTnpUQVpOaTFXb3BOMjRNX1dYdDhXaUl6bjRmb21GTVpDRW1fSDUtMm9mQ0xaUVdHNUdJ?oc=5",
+              "source": "OpenAI",
+              "category": "labs",
+              "category_label": "Labs & Industry",
+              "published_display": "Jul 14, 2026",
+              "published_iso": "2026-07-14T23:59:17Z",
+              "summary": "How sales teams use ChatGPT Work OpenAI",
+              "ethics_tags": [],
+              "trend_score": 87
+            },
+            {
+              "title": "Anthropic, Blackstone bet the next trillion-dollar AI business is implementation, not models",
+              "link": "https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/",
+              "source": "TechCrunch",
+              "category": "labs",
+              "category_label": "Labs & Industry",
+              "published_display": "Jul 15, 2026",
+              "published_iso": "2026-07-15T13:10:47Z",
+              "summary": "Anthropic-backed Ode launches as AI labs bet that embedding forward-deployed engineers inside enterprises is the key to accelerating enterprise AI adoption.",
+              "ethics_tags": [],
+              "trend_score": 40
+            }
+          ]
+        },
+        {
+          "key": "models",
+          "label": "Models & Releases",
+          "count": 4,
+          "folder_items": [
+            {
+              "title": "OpenAI’s new flagship model deletes files on its own, people keep warning",
+              "link": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/",
+              "source": "TechCrunch",
+              "category": "labs",
+              "category_label": "Labs & Industry",
+              "published_display": "Jul 14, 2026",
+              "published_iso": "2026-07-14T21:50:11Z",
+              "summary": "A number of social media posts claim that GPT-5.6 Sol deleted files and data without warning. OpenAI had basically disclosed the problem in June.",
+              "ethics_tags": [],
+              "trend_score": 87
+            },
+            {
+              "title": "OpenAI researcher Miles Wang in talks to launch AI drug discovery startup valued at $2B",
+              "link": "https://techcrunch.com/2026/07/14/openai-researcher-miles-wang-in-talks-to-launch-ai-drug-discovery-startup-valued-at-2b/",
+              "source": "TechCrunch",
+              "category": "labs",
+              "category_label": "Labs & Industry",
+              "published_display": "Jul 15, 2026",
+              "published_iso": "2026-07-15T00:27:04Z",
+              "summary": "The funding discussions point to investor interest in applying AI to make breakthroughs in life sciences.",
+              "ethics_tags": [],
+              "trend_score": 65
+            },
+            {
+              "title": "Anthropic launches free Claude for Teachers",
+              "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9LZ0hrSDhsTHprNnhsc0tGSDd4aGpUQ095bmhWRHp6eTlrdmVzRHdtT1RqRUxOb1lXVmhMZlNDSG5sdUlKakR6b3hWQ1RvWDVmYlpvbUNKV3NEai1zX2FWdTdPenY1SkNFenJLbHpGQlU5NTZzT2lPclZHc1pWd9IBgwFBVV95cUxPVGg3MUxmUWp1TG5xbzZyN2VQVEZtT1p6MmNhR0lOdjNvN1N2NUh3dDlfSkdYaXAwWVoxTS0weWNOTlVNWERYdkdhdnlZWkt3LVRBQ0txc3FmaWdSNERqSmxWRjNWTnF4R05LWmdaZng4aTFXXzhyeE9FWkRBM0NIdC0xdw?oc=5",
+              "source": "The Hill",
+              "category": "labs",
+              "category_label": "Labs & Industry",
+              "published_display": "Jul 14, 2026",
+              "published_iso": "2026-07-14T22:58:00Z",
+              "summary": "Anthropic launches free Claude for Teachers The Hill",
+              "ethics_tags": [],
+              "trend_score": 54
             }
           ]
         },
@@ -595,9 +620,56 @@
       ],
       "subcategories": [
         {
+          "key": "evaluation",
+          "label": "Evaluation & Safety",
+          "count": 6,
+          "folder_items": [
+            {
+              "title": "Operationalising Multi-Dimensional Evaluation for Conversational Agents: A Scalable, Governed Pipeline with Selective Re-evaluation and Model Benchmarking",
+              "link": "https://arxiv.org/abs/2607.12085",
+              "source": "arXiv",
+              "category": "research",
+              "category_label": "Research & Papers",
+              "published_display": "Jul 15, 2026",
+              "published_iso": "2026-07-15T04:00:00Z",
+              "summary": "arXiv:2607.12085v1 Announce Type: new Abstract: Evaluating retail conversational agents requires methods beyond lexical-overlap metrics to assess intent alignment, factuality, helpfulness, clarity, tone, and overall response quality.…",
+              "ethics_tags": [
+                "Safety & Alignment"
+              ],
+              "trend_score": 131
+            },
+            {
+              "title": "Designing Agent-Ready Websites for AI Web Agents: A Framework for Machine Readability, Actionability, and Decision Reliability",
+              "link": "https://arxiv.org/abs/2607.12056",
+              "source": "arXiv",
+              "category": "research",
+              "category_label": "Research & Papers",
+              "published_display": "Jul 15, 2026",
+              "published_iso": "2026-07-15T04:00:00Z",
+              "summary": "arXiv:2607.12056v1 Announce Type: new Abstract: Online shopping is increasingly shifting toward a model in which AI agents independently search for products, compare options, evaluate constraints, and carry out parts of the purchasing…",
+              "ethics_tags": [],
+              "trend_score": 93
+            },
+            {
+              "title": "Optimization Is Not All You Need",
+              "link": "https://arxiv.org/abs/2607.11977",
+              "source": "arXiv",
+              "category": "research",
+              "category_label": "Research & Papers",
+              "published_display": "Jul 15, 2026",
+              "published_iso": "2026-07-15T04:00:00Z",
+              "summary": "arXiv:2607.11977v1 Announce Type: new Abstract: In 2019, OpenAI released two million GPT-2 outputs-ungrammatical, half broken-to aid the detection of machine-generated text. The alignment that produced their more fluent successors is…",
+              "ethics_tags": [
+                "Safety & Alignment"
+              ],
+              "trend_score": 87
+            }
+          ]
+        },
+        {
           "key": "language",
           "label": "Language Models",
-          "count": 3,
+          "count": 2,
           "folder_items": [
             {
               "title": "In-Context Reinforcement Learning under Non-Stationarity: A Survey",
@@ -624,43 +696,14 @@
                 "Regulation & Governance"
               ],
               "trend_score": 25
-            },
-            {
-              "title": "Ontology-Amplified Distillation and Contextuality Auditing for Sovereign Enterprise Language Models: A Combined Proof-of-Mechanism and Negative-Results Method…",
-              "link": "https://arxiv.org/abs/2607.11948",
-              "source": "arXiv",
-              "category": "research",
-              "category_label": "Research & Papers",
-              "published_display": "Jul 15, 2026",
-              "published_iso": "2026-07-15T04:00:00Z",
-              "summary": "arXiv:2607.11948v1 Announce Type: new Abstract: Regulated financial institutions operating under data-residency rules need tenant-owned language models that can run inside the institution's perimeter. This paper combines two related FAOS…",
-              "ethics_tags": [
-                "Regulation & Governance",
-                "Transparency & Accountability"
-              ],
-              "trend_score": 0
             }
           ]
         },
         {
           "key": "agents",
           "label": "Agents & Reasoning",
-          "count": 6,
+          "count": 3,
           "folder_items": [
-            {
-              "title": "Operationalising Multi-Dimensional Evaluation for Conversational Agents: A Scalable, Governed Pipeline with Selective Re-evaluation and Model Benchmarking",
-              "link": "https://arxiv.org/abs/2607.12085",
-              "source": "arXiv",
-              "category": "research",
-              "category_label": "Research & Papers",
-              "published_display": "Jul 15, 2026",
-              "published_iso": "2026-07-15T04:00:00Z",
-              "summary": "arXiv:2607.12085v1 Announce Type: new Abstract: Evaluating retail conversational agents requires methods beyond lexical-overlap metrics to assess intent alignment, factuality, helpfulness, clarity, tone, and overall response quality.…",
-              "ethics_tags": [
-                "Safety & Alignment"
-              ],
-              "trend_score": 131
-            },
             {
               "title": "The Emerging Paradigm of Geospatial Foundation Models: From Pre-Training to Agentic Reasoning",
               "link": "https://arxiv.org/abs/2607.12177",
@@ -674,16 +717,28 @@
               "trend_score": 113
             },
             {
-              "title": "Designing Agent-Ready Websites for AI Web Agents: A Framework for Machine Readability, Actionability, and Decision Reliability",
-              "link": "https://arxiv.org/abs/2607.12056",
+              "title": "Graph Feedback Controls Consensus and Clique Formation in Open-Weight Language-Model Populations",
+              "link": "https://arxiv.org/abs/2607.12077",
               "source": "arXiv",
               "category": "research",
               "category_label": "Research & Papers",
               "published_display": "Jul 15, 2026",
               "published_iso": "2026-07-15T04:00:00Z",
-              "summary": "arXiv:2607.12056v1 Announce Type: new Abstract: Online shopping is increasingly shifting toward a model in which AI agents independently search for products, compare options, evaluate constraints, and carry out parts of the purchasing…",
+              "summary": "arXiv:2607.12077v1 Announce Type: new Abstract: Multi-agent language-model systems increasingly route local interactions, yet the runtime interaction graph is often treated as an implementation detail. We study convention formation in…",
               "ethics_tags": [],
               "trend_score": 93
+            },
+            {
+              "title": "Optimal Adaptive Market Making: A Theoretical Framework for High-Yield Liquidity Provision in Perpetual Futures Markets",
+              "link": "https://arxiv.org/abs/2607.11888",
+              "source": "arXiv",
+              "category": "research",
+              "category_label": "Research & Papers",
+              "published_display": "Jul 15, 2026",
+              "published_iso": "2026-07-15T04:00:00Z",
+              "summary": "arXiv:2607.11888v1 Announce Type: new Abstract: We develop a rigorous theoretical framework for optimal market making in perpetual futures markets with zero maker fees. We model the market maker's problem as a stochastic optimal control…",
+              "ethics_tags": [],
+              "trend_score": 0
             }
           ]
         },
@@ -703,39 +758,6 @@
               "summary": "arXiv:2607.12097v1 Announce Type: new Abstract: Video games are a dynamic medium experienced over time. While there are many Procedural Content Generation (PCG) approaches for generating video game levels, they often use representations…",
               "ethics_tags": [],
               "trend_score": 0
-            }
-          ]
-        },
-        {
-          "key": "evaluation",
-          "label": "Evaluation & Safety",
-          "count": 2,
-          "folder_items": [
-            {
-              "title": "Optimization Is Not All You Need",
-              "link": "https://arxiv.org/abs/2607.11977",
-              "source": "arXiv",
-              "category": "research",
-              "category_label": "Research & Papers",
-              "published_display": "Jul 15, 2026",
-              "published_iso": "2026-07-15T04:00:00Z",
-              "summary": "arXiv:2607.11977v1 Announce Type: new Abstract: In 2019, OpenAI released two million GPT-2 outputs-ungrammatical, half broken-to aid the detection of machine-generated text. The alignment that produced their more fluent successors is…",
-              "ethics_tags": [
-                "Safety & Alignment"
-              ],
-              "trend_score": 87
-            },
-            {
-              "title": "Connected by Construction: Learning Tractable Near-Tour Marginals for Traveling Salesman Problems",
-              "link": "https://arxiv.org/abs/2607.12127",
-              "source": "arXiv",
-              "category": "research",
-              "category_label": "Research & Papers",
-              "published_display": "Jul 15, 2026",
-              "published_iso": "2026-07-15T04:00:00Z",
-              "summary": "arXiv:2607.12127v1 Announce Type: new Abstract: Learning-based methods for the traveling salesman problem (TSP) are often evaluated through the tours produced after decoding or search, but the learned object itself frequently lives in a…",
-              "ethics_tags": [],
-              "trend_score": 25
             }
           ]
         },
@@ -984,52 +1006,9 @@
       ],
       "subcategories": [
         {
-          "key": "open-source",
-          "label": "Open Source",
-          "count": 0,
-          "folder_items": []
-        },
-        {
           "key": "tools",
           "label": "Tools & Projects",
-          "count": 2,
-          "folder_items": [
-            {
-              "title": "Show HN: StyleSeed – a design-rules engine so AI agents stop building generic UI",
-              "link": "https://github.com/bitjaru/styleseed",
-              "source": "Web",
-              "category": "community",
-              "category_label": "Community & Discussion",
-              "published_display": "Jul 15, 2026",
-              "published_iso": "2026-07-15T13:55:23Z",
-              "summary": "1 points, 0 comments on Hacker News.",
-              "ethics_tags": [],
-              "trend_score": 93
-            },
-            {
-              "title": "Show HN: Grepathy – Claude made a decision nobody approved",
-              "link": "https://github.com/evansjp/grepathy",
-              "source": "Web",
-              "category": "community",
-              "category_label": "Community & Discussion",
-              "published_display": "Jul 15, 2026",
-              "published_iso": "2026-07-15T13:26:24Z",
-              "summary": "4 points, 3 comments on Hacker News.",
-              "ethics_tags": [],
-              "trend_score": 14
-            }
-          ]
-        },
-        {
-          "key": "research",
-          "label": "Research Discussion",
-          "count": 0,
-          "folder_items": []
-        },
-        {
-          "key": "industry",
-          "label": "Industry Debate",
-          "count": 2,
+          "count": 9,
           "folder_items": [
             {
               "title": "Show HN: InferAll – One API for OpenAI, Anthropic, Google, Nvidia Nim",
@@ -1043,25 +1022,6 @@
               "ethics_tags": [],
               "trend_score": 121
             },
-            {
-              "title": "Anthropic, Blackstone bet the next trillion-dollar AI business is implementation",
-              "link": "https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/",
-              "source": "Web",
-              "category": "community",
-              "category_label": "Community & Discussion",
-              "published_display": "Jul 15, 2026",
-              "published_iso": "2026-07-15T13:18:30Z",
-              "summary": "3 points, 2 comments on Hacker News.",
-              "ethics_tags": [],
-              "trend_score": 40
-            }
-          ]
-        },
-        {
-          "key": "pulse",
-          "label": "Community Pulse",
-          "count": 10,
-          "folder_items": [
             {
               "title": "Show HN: Agent's Design – Claude/Codex copy-paste templates that kill AI-slop UI",
               "link": "https://agents-design.com",
@@ -1085,18 +1045,80 @@
               "summary": "2 points, 0 comments on Hacker News.",
               "ethics_tags": [],
               "trend_score": 107
-            },
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "Industry Debate",
+          "count": 3,
+          "folder_items": [
             {
-              "title": "Show HN: Aict – Unix coreutils that output XML/JSON, built for AI agents",
-              "link": "https://github.com/synseqack/aict",
+              "title": "Anthropic, Blackstone bet the next trillion-dollar AI business is implementation",
+              "link": "https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/",
               "source": "Web",
               "category": "community",
               "category_label": "Community & Discussion",
               "published_display": "Jul 15, 2026",
-              "published_iso": "2026-07-15T13:39:54Z",
-              "summary": "1 points, 0 comments on Hacker News.",
+              "published_iso": "2026-07-15T13:18:30Z",
+              "summary": "3 points, 2 comments on Hacker News.",
+              "ethics_tags": [],
+              "trend_score": 40
+            },
+            {
+              "title": "Can SiPearl Revive the European HPC and AI Chip Industry?",
+              "link": "https://www.hpcwire.com/2026/07/14/can-sipearl-revive-european-hpc-and-ai-chips/",
+              "source": "Web",
+              "category": "community",
+              "category_label": "Community & Discussion",
+              "published_display": "Jul 15, 2026",
+              "published_iso": "2026-07-15T13:13:55Z",
+              "summary": "2 points, 0 comments on Hacker News.",
+              "ethics_tags": [],
+              "trend_score": 36
+            },
+            {
+              "title": "Wrap an LLM, charge $20, lose money: the pricing trap the model owners hit first",
+              "link": "https://okaneland.com/study/unit-economics-of-wrapping-an-llm/",
+              "source": "Web",
+              "category": "community",
+              "category_label": "Community & Discussion",
+              "published_display": "Jul 15, 2026",
+              "published_iso": "2026-07-15T11:37:30Z",
+              "summary": "2 points, 0 comments on Hacker News.",
+              "ethics_tags": [],
+              "trend_score": 0
+            }
+          ]
+        },
+        {
+          "key": "pulse",
+          "label": "Community Pulse",
+          "count": 2,
+          "folder_items": [
+            {
+              "title": "Aliens: Explaining LLMs and AI agents to my children",
+              "link": "https://archive.org/details/aliens_202607",
+              "source": "Web",
+              "category": "community",
+              "category_label": "Community & Discussion",
+              "published_display": "Jul 15, 2026",
+              "published_iso": "2026-07-15T12:14:04Z",
+              "summary": "2 points, 3 comments on Hacker News.",
               "ethics_tags": [],
               "trend_score": 93
+            },
+            {
+              "title": "If you want Claude to speak nicely to you, try Hindi or Arabic",
+              "link": "https://www.theregister.com/ai-and-ml/2026/07/14/if-you-want-claude-to-speak-nicely-to-you-try-hindi-or-arabic/5271409",
+              "source": "Web",
+              "category": "community",
+              "category_label": "Community & Discussion",
+              "published_display": "Jul 15, 2026",
+              "published_iso": "2026-07-15T13:04:25Z",
+              "summary": "5 points, 0 comments on Hacker News.",
+              "ethics_tags": [],
+              "trend_score": 14
             }
           ]
         }
@@ -1333,18 +1355,6 @@
           ]
         },
         {
-          "key": "deals",
-          "label": "Deals & Acquisitions",
-          "count": 0,
-          "folder_items": []
-        },
-        {
-          "key": "startups",
-          "label": "Startups",
-          "count": 0,
-          "folder_items": []
-        },
-        {
           "key": "compute",
           "label": "Chips & Compute",
           "count": 13,
@@ -1386,12 +1396,6 @@
               "trend_score": 52
             }
           ]
-        },
-        {
-          "key": "markets",
-          "label": "Markets & Strategy",
-          "count": 0,
-          "folder_items": []
         }
       ]
     },
@@ -1639,18 +1643,6 @@
         }
       ],
       "subcategories": [
-        {
-          "key": "bias",
-          "label": "Bias & Fairness",
-          "count": 0,
-          "folder_items": []
-        },
-        {
-          "key": "privacy",
-          "label": "Privacy & Surveillance",
-          "count": 0,
-          "folder_items": []
-        },
         {
           "key": "safety",
           "label": "Safety & Alignment",

@@ -69,11 +69,11 @@ class SubcategoryTests(unittest.TestCase):
             self.assertEqual(5, len({rule[0] for rule in rules}))
             self.assertEqual([], rules[-1][2])
 
-    def test_research_story_is_classified_by_topic(self):
+    def test_research_evaluation_has_priority_over_broad_model_terms(self):
         item = self.make_item(
             "research", "A transformer benchmark for language model evaluation")
         self.assertEqual(
-            "language", fetch_news.classify_subcategory("research", item))
+            "evaluation", fetch_news.classify_subcategory("research", item))
 
     def test_ethics_story_can_be_classified_from_ethics_tags(self):
         item = self.make_item(
@@ -94,10 +94,49 @@ class SubcategoryTests(unittest.TestCase):
             self.make_item("labs", "General lab update", trend_score=1),
         ]
         groups = fetch_news.display_subcategories("labs", items)
-        self.assertEqual(5, len(groups))
+        self.assertEqual(3, len(groups))
         self.assertEqual(len(items), sum(group["count"] for group in groups))
+        self.assertNotIn(0, [group["count"] for group in groups])
         models = next(group for group in groups if group["key"] == "models")
         self.assertEqual("Another AI model release", models["folder_items"][0]["title"])
+
+    def test_null_feed_fields_do_not_crash_classification_or_display(self):
+        item = self.make_item("labs", None, ethics_tags=None)
+        item.update({"summary": None, "source": None, "published_iso": None})
+        self.assertEqual("frontier", fetch_news.classify_subcategory("labs", item))
+        groups = fetch_news.display_subcategories("labs", [item])
+        self.assertEqual(1, len(groups))
+        self.assertEqual("", groups[0]["folder_items"][0]["title"])
+
+    def test_null_and_malformed_trend_scores_rank_as_zero(self):
+        first = self.make_item("labs", "AI model alpha", trend_score=None)
+        second = self.make_item("labs", "AI model beta", trend_score="not-a-number")
+        groups = fetch_news.display_subcategories("labs", [first, second])
+        self.assertEqual(2, groups[0]["count"])
+        self.assertEqual(0, groups[0]["folder_items"][0]["trend_score"])
+
+    def test_subcategory_terms_respect_word_boundaries(self):
+        self.assertFalse(fetch_news.matches_subcategory_term("Apple launches", "app"))
+        self.assertTrue(fetch_news.matches_subcategory_term("models released", "model*"))
+
+    def test_external_urls_are_restricted_to_absolute_http_or_https(self):
+        self.assertEqual(
+            "https://example.com/story",
+            fetch_news.safe_external_url("https://example.com/story"),
+        )
+        self.assertEqual("", fetch_news.safe_external_url("javascript:alert(1)"))
+        self.assertEqual("", fetch_news.safe_external_url("data:text/html,bad"))
+        self.assertEqual("", fetch_news.safe_external_url("//example.com/story"))
+        self.assertEqual("", fetch_news.safe_external_url(None))
+
+    def test_trend_scores_match_complete_terms_only(self):
+        items = [{"title": "Chip design", "summary": "Shipping update"}]
+        fetch_news.annotate_trend_scores(items, [
+            {"term": "chip", "count": 7},
+            {"term": "shipping", "count": 3},
+            {"term": "hip", "count": 20},
+        ])
+        self.assertEqual(10, items[0]["trend_score"])
 
 
 if __name__ == "__main__":

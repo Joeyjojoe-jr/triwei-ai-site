@@ -161,7 +161,7 @@ def is_story_relevant(category, title, summary, feed_url=""):
     if category == "research" and "arxiv.org/rss/" in feed_url:
         return True
 
-    text = clean_text(title + " " + summary, 1000)
+    text = clean_text((title or "") + " " + (summary or ""), 1000)
     if not matches_any(text, AI_PATTERNS):
         return False
     if category == "research" and not matches_any(text, RESEARCH_PATTERNS):

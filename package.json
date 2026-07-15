@@ -6,6 +6,6 @@
     "dev": "bundle exec jekyll serve",
     "build": "bundle exec jekyll build",
     "news:fetch": "python scripts/fetch_news.py",
-    "check:news": "python -m py_compile scripts/fetch_news.py"
+    "check:news": "python -m py_compile scripts/fetch_news.py && python -m unittest discover -s scripts -p \"test_*.py\""
   }
 }

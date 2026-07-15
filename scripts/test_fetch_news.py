@@ -49,5 +49,56 @@ class StoryRelevanceTests(unittest.TestCase):
         ))
 
 
+class SubcategoryTests(unittest.TestCase):
+    def make_item(self, category, title, trend_score=0, ethics_tags=None):
+        return {
+            "title": title,
+            "link": "https://example.com/story",
+            "source": "Example",
+            "category": category,
+            "published_iso": "2026-07-15T00:00:00Z",
+            "summary": "",
+            "ethics_tags": ethics_tags or [],
+            "trend_score": trend_score,
+        }
+
+    def test_each_category_has_five_unique_subcategories(self):
+        for category in fetch_news.CATEGORY_ORDER:
+            rules = fetch_news.SUBCATEGORY_RULES[category]
+            self.assertEqual(5, len(rules))
+            self.assertEqual(5, len({rule[0] for rule in rules}))
+            self.assertEqual([], rules[-1][2])
+
+    def test_research_story_is_classified_by_topic(self):
+        item = self.make_item(
+            "research", "A transformer benchmark for language model evaluation")
+        self.assertEqual(
+            "language", fetch_news.classify_subcategory("research", item))
+
+    def test_ethics_story_can_be_classified_from_ethics_tags(self):
+        item = self.make_item(
+            "ethics", "New report", ethics_tags=["Privacy & Surveillance"])
+        self.assertEqual(
+            "privacy", fetch_news.classify_subcategory("ethics", item))
+
+    def test_unmatched_story_uses_stable_catch_all(self):
+        item = self.make_item("business", "Quarterly AI market outlook")
+        self.assertEqual(
+            "markets", fetch_news.classify_subcategory("business", item))
+
+    def test_display_subcategories_assigns_every_story_once_and_ranks_previews(self):
+        items = [
+            self.make_item("labs", "New AI model release", trend_score=2),
+            self.make_item("labs", "Another AI model release", trend_score=9),
+            self.make_item("labs", "AI chip announced", trend_score=4),
+            self.make_item("labs", "General lab update", trend_score=1),
+        ]
+        groups = fetch_news.display_subcategories("labs", items)
+        self.assertEqual(5, len(groups))
+        self.assertEqual(len(items), sum(group["count"] for group in groups))
+        models = next(group for group in groups if group["key"] == "models")
+        self.assertEqual("Another AI model release", models["folder_items"][0]["title"])
+
+
 if __name__ == "__main__":
     unittest.main()

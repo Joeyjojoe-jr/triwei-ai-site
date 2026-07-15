@@ -26,6 +26,22 @@
   <!-- Global stylesheet for the AI news tracker. -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
+  {% if page.layout == "home" %}
+  <!-- Give rotating folder cards slightly more desktop clearance without changing the mobile stack. -->
+  <style>
+    @media (min-width: 721px) {
+      .orbit {
+        width: min(860px, 100%);
+        height: 740px;
+      }
+
+      .orbit-folder {
+        --r: clamp(258px, 34vw, 278px);
+      }
+    }
+  </style>
+  {% endif %}
+
   <script>
     // Early theme hydration to reduce flash before CSS fully paints.
     (function () {

@@ -2,7 +2,7 @@
   <!-- Edit this file to control global metadata, SEO tags, and shared assets. -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
   <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{{ page.description | default: site.description | escape }}">
@@ -15,10 +15,12 @@
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#33ff33">
 
-  <!-- Apply the saved terminal palette before styles paint to prevent a color flash. -->
+  <!-- Apply saved palette and select a safe holodeck mode before styles paint. -->
   <script>
     (function () {
       var palette = 'phosphor';
+      var useStaticHolodeck = false;
+
       try {
         var saved = localStorage.getItem('triwei-palette');
         if (saved === 'phosphor' || saved === 'amber') {
@@ -27,8 +29,28 @@
       } catch (error) {
         palette = 'phosphor';
       }
+
+      try {
+        var nav = window.navigator || {};
+        var connection = nav.connection || nav.mozConnection || nav.webkitConnection;
+        useStaticHolodeck = Boolean(
+          (window.matchMedia && (
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+            window.matchMedia('(max-width: 900px)').matches ||
+            window.matchMedia('(pointer: coarse)').matches ||
+            window.matchMedia('(hover: none)').matches
+          )) ||
+          (connection && connection.saveData === true) ||
+          (typeof nav.deviceMemory === 'number' && nav.deviceMemory <= 4)
+        );
+      } catch (error) {
+        useStaticHolodeck = true;
+      }
+
       document.documentElement.setAttribute('data-theme', 'dark');
       document.documentElement.setAttribute('data-palette', palette);
+      document.documentElement.setAttribute('data-holodeck', useStaticHolodeck ? 'static' : 'pending');
+
       var themeColorMeta = document.querySelector('meta[name="theme-color"]');
       if (themeColorMeta) {
         themeColorMeta.setAttribute('content', palette === 'amber' ? '#ff8800' : '#33ff33');
@@ -45,9 +67,11 @@
   <link rel="preload" href="{{ '/assets/css/style.css' | relative_url }}" as="style">
   <link rel="preload" href="{{ '/assets/css/palette-toggle.css' | relative_url }}" as="style">
 
-  <!-- Global styles. Palette overrides load last by design. -->
+  <!-- Global styles. Release fixes load last so their safety overrides win. -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/palette-toggle.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/mobile-hardening.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/mobile-release-fixes.css' | relative_url }}">
 
   {% if page.layout == "home" %}
   <!-- Give rotating folder cards slightly more desktop clearance without changing the mobile stack. -->

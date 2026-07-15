@@ -1,0 +1,14 @@
+/* Final mobile release overrides.
+   Loaded after mobile-hardening.css so safe-area insets preserve normal gutters. */
+@supports (padding: max(0px)) {
+  .site-header,
+  .page-shell,
+  .site-footer {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+
+  .site-footer {
+    padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+  }
+}

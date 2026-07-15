@@ -1,0 +1,382 @@
+/* TriWei AI — mobile stability, responsive layout, and accessibility layer.
+   This file intentionally loads after all other site styles. */
+
+html {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+iframe,
+canvas {
+  max-width: 100%;
+}
+
+img,
+svg,
+video {
+  height: auto;
+}
+
+main,
+.container,
+.content-page,
+.content-body,
+.prose,
+.card,
+.news-item,
+.folder-card,
+.folder-heads li,
+.folder-heads li a,
+.rank-title {
+  min-width: 0;
+}
+
+.prose img,
+.prose video,
+.prose iframe,
+.prose svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.prose table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.prose,
+.news-item,
+.news-item h3,
+.news-meta,
+.news-summary,
+.folder-name,
+.rank-title,
+.site-nav a {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+
+/* JS-enabled clients never composite the five 2400px CSS 3D planes.
+   Static mode uses one lightweight 2D grid; WebGL mode uses a black base. */
+html[data-holodeck] .hd-room {
+  display: none !important;
+}
+
+html[data-holodeck] .holodeck {
+  perspective: none !important;
+  background-color: #000000;
+  background-image:
+    linear-gradient(to right, var(--palette-grid-minor) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--palette-grid-minor) 1px, transparent 1px),
+    radial-gradient(ellipse 80% 65% at 50% 48%, var(--palette-grid-glow), transparent 75%);
+  background-size: 52px 52px, 52px 52px, 100% 100%;
+}
+
+html[data-holodeck="webgl"] .holodeck,
+html[data-holodeck="loading"] .holodeck {
+  background: #000000 !important;
+}
+
+#holodeck-canvas[hidden],
+html[data-holodeck="static"] #holodeck-canvas {
+  display: none !important;
+}
+
+@supports (padding: max(0px)) {
+  .site-header,
+  .page-shell,
+  .site-footer {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  .site-footer {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+@media (hover: none) {
+  .news-item:hover,
+  .trend-chip:hover,
+  .orbit-folder:hover .folder-card,
+  .orbit-folder:hover .folder-ico {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 900px), (pointer: coarse), (hover: none) {
+  .holodeck {
+    z-index: -2 !important;
+    background-size: 38px 38px, 38px 38px, 100% 100% !important;
+  }
+
+  #holodeck-canvas {
+    display: none !important;
+  }
+
+  .site-header {
+    background: var(--surface);
+    background: color-mix(in srgb, var(--surface) 97%, #000000);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .header-inner {
+    gap: 0.55rem 0.7rem;
+    padding: 0.65rem 0;
+  }
+
+  .brand {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .brand-text {
+    min-width: 0;
+  }
+
+  .brand-text strong,
+  .brand-text small {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .palette-toggle {
+    flex: 0 0 auto;
+    min-width: 6.7rem;
+    min-height: 44px;
+    padding: 0.55rem 0.65rem;
+    font-size: 0.8rem;
+  }
+
+  .site-nav {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .site-nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.35rem;
+  }
+
+  .site-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.5rem 0.6rem;
+    line-height: 1.25;
+  }
+
+  .container {
+    width: min(1100px, calc(100% - 1rem));
+  }
+
+  .page-shell {
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .hero,
+  .content-page {
+    padding: 1rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.65rem, 8vw, 2.2rem);
+  }
+
+  .hero::before {
+    top: 0.45rem;
+    left: 0.7rem;
+  }
+
+  .orbit {
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .orbit-level-status {
+    position: static;
+    order: -2;
+    width: 100%;
+    margin: 0 0 0.25rem;
+    transform: none;
+  }
+
+  .orbit-core {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    order: -1;
+    flex-basis: auto;
+    width: 160px !important;
+    height: 160px !important;
+    transform: none !important;
+  }
+
+  .orbit-ring {
+    position: static !important;
+    inset: auto !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 0.8rem !important;
+  }
+
+  .orbit-folder {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    width: min(320px, 100%) !important;
+    transform: none !important;
+    --r: 0;
+  }
+
+  .folder-card {
+    width: 100% !important;
+    transform: none !important;
+  }
+
+  .animate-in,
+  .emblem,
+  .orbit-core .emblem,
+  html[data-palette="amber"] .emblem,
+  .orbit-float,
+  .orbit-ring,
+  .folder-spin {
+    animation: none !important;
+  }
+
+  .hero-cycle {
+    transition: none !important;
+  }
+
+  .ticker {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .ticker-track {
+    animation: none !important;
+  }
+
+  .trend-chip,
+  .theme-chip,
+  .folder-tab,
+  main :is(
+    .game-button,
+    .signal-button,
+    .vector-button,
+    .lattice-button,
+    .flux-button,
+    .pulse-button,
+    .hopper-button,
+    .echo-button,
+    .relay-button,
+    .tempo-button,
+    .swap-button,
+    .primary-button
+  ) {
+    min-height: 44px;
+  }
+
+  .heat-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.35rem 0.6rem;
+  }
+
+  .heat-bar {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .heat-num {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .news-list {
+    gap: 0.7rem;
+  }
+
+  .news-item {
+    padding: 0.85rem;
+  }
+
+  .news-item:hover,
+  .trend-chip:hover {
+    transform: none;
+  }
+
+  .news-meta {
+    align-items: flex-start;
+    line-height: 1.45;
+  }
+
+  .footer-inner nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-text small {
+    display: none;
+  }
+
+  .brand-mark {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .palette-toggle {
+    min-width: 6.1rem;
+    gap: 0.3rem;
+    padding-inline: 0.5rem;
+  }
+
+  .site-nav a {
+    font-size: 0.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

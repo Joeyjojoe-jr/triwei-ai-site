@@ -190,8 +190,20 @@ layout: default
     var i = 0;
     function tick() { el.textContent = items[i % items.length]; i++; }
     tick();
+
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!reduce) {
+    var constrained = false;
+    try {
+      constrained = Boolean(window.matchMedia && (
+        window.matchMedia('(max-width: 900px)').matches ||
+        window.matchMedia('(pointer: coarse)').matches ||
+        window.matchMedia('(hover: none)').matches
+      ));
+    } catch (error) {
+      constrained = true;
+    }
+
+    if (!reduce && !constrained) {
       setInterval(function () {
         el.classList.add('swap');
         setTimeout(function () { tick(); el.classList.remove('swap'); }, 250);

@@ -64,6 +64,7 @@
       event.preventDefault();
       lastOpener = opener;
       track('orbit_folder_open', { category: level });
+      backButton.focus();
     });
   });
 

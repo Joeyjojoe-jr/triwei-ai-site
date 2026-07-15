@@ -127,6 +127,7 @@ test('opens a category subfolder ring and restores the main ring', () => {
   assert.equal(fixture.research.hidden, false);
   assert.equal(fixture.opener.getAttribute('aria-expanded'), 'true');
   assert.equal(fixture.back.disabled, false);
+  assert.equal(fixture.back.focused, true);
   assert.equal(fixture.orbit.classList.contains('is-drilled'), true);
   assert.match(fixture.status.textContent, /Research & Papers/);
 

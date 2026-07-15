@@ -53,7 +53,9 @@
   renderer.setClearColor(0x000000, 1);
 
   var initialSize = viewportSize();
-  renderer.setSize(initialSize.width, initialSize.height, false);
+  var viewWidth = initialSize.width;
+  var viewHeight = initialSize.height;
+  renderer.setSize(viewWidth, viewHeight, false);
 
   var scene = new THREE.Scene();
   scene.background = new THREE.Color(0x000000);
@@ -61,7 +63,7 @@
 
   var camera = new THREE.PerspectiveCamera(
     72,
-    initialSize.width / initialSize.height,
+    viewWidth / viewHeight,
     0.1,
     500
   );
@@ -175,8 +177,8 @@
   var time = 0;
 
   window.addEventListener('mousemove', function (event) {
-    targetX = (event.clientX / Math.max(window.innerWidth, 1)) - 0.5;
-    targetY = (event.clientY / Math.max(window.innerHeight, 1)) - 0.5;
+    targetX = (event.clientX / viewWidth) - 0.5;
+    targetY = (event.clientY / viewHeight) - 0.5;
   }, { passive: true });
 
   function frame(timestamp) {
@@ -213,9 +215,11 @@
   function resizeRenderer() {
     if (contextLost) return;
     var size = viewportSize();
-    camera.aspect = size.width / size.height;
+    viewWidth = size.width;
+    viewHeight = size.height;
+    camera.aspect = viewWidth / viewHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(size.width, size.height, false);
+    renderer.setSize(viewWidth, viewHeight, false);
     renderScene();
   }
 
@@ -252,7 +256,7 @@
     stopAnimation();
     if (!event || !event.persisted) {
       clearRoom();
-      if (renderer.dispose) renderer.dispose();
+      if (renderer && renderer.dispose) renderer.dispose();
     }
   });
 

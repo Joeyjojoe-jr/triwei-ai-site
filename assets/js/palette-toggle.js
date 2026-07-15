@@ -5,10 +5,6 @@
   var root = document.documentElement;
   var storageKey = 'triwei-palette';
   var validPalettes = { phosphor: true, amber: true };
-  var paletteAssets = {
-    phosphor: 'triwei-logo.png',
-    amber: 'triwei-logo-amber.png'
-  };
   var paletteColors = {
     phosphor: '#33ff33',
     amber: '#ff8800'
@@ -24,33 +20,6 @@
     } catch (error) {
       return normalizePalette(root.getAttribute('data-palette'));
     }
-  }
-
-  function imageBasePath(image) {
-    var src = image.getAttribute('src') || '';
-    var marker = '/assets/images/';
-    var markerIndex = src.lastIndexOf(marker);
-    if (markerIndex === -1) return '/assets/images/';
-    return src.slice(0, markerIndex + marker.length);
-  }
-
-  function updateEmblems(palette) {
-    var images = document.querySelectorAll('img.emblem');
-    images.forEach(function (image) {
-      var nextSource = imageBasePath(image) + paletteAssets[palette];
-      if (image.getAttribute('src') === nextSource) return;
-
-      image.classList.add('is-palette-swapping');
-      var finishSwap = function () {
-        image.classList.remove('is-palette-swapping');
-      };
-      image.addEventListener('load', finishSwap, { once: true });
-      image.addEventListener('error', finishSwap, { once: true });
-      image.setAttribute('src', nextSource);
-      if (image.complete) {
-        window.requestAnimationFrame(finishSwap);
-      }
-    });
   }
 
   function updateControl(palette) {
@@ -82,7 +51,6 @@
     }
 
     updateControl(palette);
-    updateEmblems(palette);
 
     if (settings.persist) {
       try {
@@ -99,14 +67,6 @@
     }
 
     return palette;
-  }
-
-  function preloadAlternate(palette) {
-    var image = document.querySelector('img.emblem');
-    if (!image) return;
-    var alternate = palette === 'amber' ? 'phosphor' : 'amber';
-    var preload = new Image();
-    preload.src = imageBasePath(image) + paletteAssets[alternate];
   }
 
   var currentPalette = applyPalette(
@@ -129,10 +89,6 @@
     if (event.key !== storageKey || !validPalettes[event.newValue]) return;
     currentPalette = applyPalette(event.newValue, { persist: false, emit: true });
   });
-
-  window.addEventListener('load', function () {
-    preloadAlternate(currentPalette);
-  }, { once: true });
 
   window.triweiPalette = {
     get: function () {

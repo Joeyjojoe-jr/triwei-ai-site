@@ -1,0 +1,128 @@
+/* TriWei terminal palette layer.
+   Loaded after style.css so every accent resolves through one palette. */
+
+:root,
+html[data-palette="phosphor"] {
+  --bg: #000000;
+  --surface: #0b110d;
+  --surface-soft: #101a13;
+  --text: #d9e6dc;
+  --muted: #76927c;
+  --accent: #33ff33;
+  --accent-soft: #08240b;
+  --accent-2: #a6ff33;
+  --border: #1a3520;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.58);
+  --palette-grid-minor: rgba(0, 255, 95, 0.45);
+  --palette-grid-major: rgba(60, 255, 120, 0.80);
+  --palette-grid-glow: rgba(0, 255, 90, 0.10);
+  --palette-glow: rgba(51, 255, 51, 0.55);
+  --palette-contrast: #020b04;
+}
+
+html[data-palette="amber"] {
+  --bg: #000000;
+  --surface: #140d06;
+  --surface-soft: #211308;
+  --text: #f2dfc8;
+  --muted: #aa8060;
+  --accent: #ff8800;
+  --accent-soft: #2a1300;
+  --accent-2: #ffb000;
+  --border: #4a2a0d;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.62);
+  --palette-grid-minor: rgba(255, 118, 0, 0.46);
+  --palette-grid-major: rgba(255, 172, 48, 0.82);
+  --palette-grid-glow: rgba(255, 118, 0, 0.12);
+  --palette-glow: rgba(255, 136, 0, 0.58);
+  --palette-contrast: #160900;
+}
+
+html,
+body {
+  color-scheme: dark;
+}
+
+/* Keep both selectable palettes black-background terminal modes. */
+body,
+html[data-theme="light"] body,
+html[data-theme="dark"] body {
+  background-color: #000000 !important;
+}
+
+/* Accessible, compact action button. Its dot previews the palette it will activate. */
+.palette-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 7.15rem;
+  justify-content: center;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.palette-toggle-dot {
+  width: 0.72rem;
+  height: 0.72rem;
+  flex: none;
+  border-radius: 50%;
+  background: var(--palette-toggle-preview, #ff8800);
+  box-shadow: 0 0 7px var(--palette-toggle-preview, #ff8800),
+              0 0 14px color-mix(in srgb, var(--palette-toggle-preview, #ff8800) 55%, transparent);
+}
+
+.palette-toggle[data-next-palette="amber"] {
+  --palette-toggle-preview: #ff8800;
+}
+
+.palette-toggle[data-next-palette="phosphor"] {
+  --palette-toggle-preview: #33ff33;
+}
+
+.palette-toggle:hover {
+  color: var(--accent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 45%, transparent),
+              0 0 14px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+/* Recolor the CSS fallback holodeck; WebGL uses the same palette via JS. */
+.hd-face {
+  background-color: #000000;
+  background-image:
+    linear-gradient(to right, var(--palette-grid-minor) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--palette-grid-minor) 1px, transparent 1px),
+    linear-gradient(to right, var(--palette-grid-major) 2px, transparent 2px),
+    linear-gradient(to bottom, var(--palette-grid-major) 2px, transparent 2px);
+  box-shadow: inset 0 0 260px var(--palette-grid-glow);
+}
+
+/* The repository's external folder SVGs are authored in phosphor green.
+   A hue rotation converts every non-transparent SVG pixel to amber. */
+html[data-palette="amber"] .folder-ico {
+  filter: hue-rotate(270deg) saturate(1.45) brightness(1.08)
+          drop-shadow(0 0 5px color-mix(in srgb, var(--accent) 62%, transparent));
+}
+
+html[data-palette="amber"] .orbit-folder:hover .folder-ico,
+html[data-palette="amber"] .orbit-folder:focus-visible .folder-ico,
+html[data-palette="amber"] .folder-tab .folder-ico {
+  filter: hue-rotate(270deg) saturate(1.45) brightness(1.08)
+          drop-shadow(0 0 8px color-mix(in srgb, var(--accent) 78%, transparent));
+}
+
+/* Avoid a visual jump while the center emblem source changes. */
+.emblem {
+  transition: opacity 120ms ease;
+}
+
+.emblem.is-palette-swapping {
+  opacity: 0.72;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .emblem {
+    transition: none;
+  }
+}

@@ -112,6 +112,9 @@ test('templates and styles contain mobile safety controls', () => {
 
   assert.match(css, /html\[data-holodeck\] \.hd-room\s*\{\s*display:\s*none !important;/);
   assert.match(css, /@media \(max-width: 900px\), \(pointer: coarse\), \(hover: none\)/);
+  assert.match(css, /background:\s*var\(--surface\);\s*background:\s*color-mix/);
+  assert.match(css, /\.orbit\s*\{[\s\S]*?height:\s*auto !important;[\s\S]*?flex-direction:\s*column;/);
+  assert.match(css, /\.orbit-folder\s*\{[\s\S]*?position:\s*static !important;[\s\S]*?transform:\s*none !important;/);
   assert.match(css, /backdrop-filter:\s*none/);
   assert.match(css, /animation:\s*none !important/);
 
@@ -121,4 +124,8 @@ test('templates and styles contain mobile safety controls', () => {
   assert.match(holodeck, /webglcontextlost/);
   assert.match(holodeck, /visibilitychange/);
   assert.match(holodeck, /1000 \/ 30/);
+
+  const initialExposeIndex = holodeck.lastIndexOf("root.setAttribute('data-holodeck', 'webgl')");
+  const pagehideIndex = holodeck.indexOf("window.addEventListener('pagehide'");
+  assert.ok(initialExposeIndex > pagehideIndex, 'WebGL mode must be exposed only after initialization and lifecycle hooks');
 });

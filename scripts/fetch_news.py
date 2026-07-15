@@ -135,7 +135,7 @@ AI_PATTERNS = [
     r"\bmachine learning\b", r"\bdeep learning\b", r"\blarge language models?\b",
     r"\blanguage models?\b", r"\bllms?\b", r"\bneural networks?\b",
     # Do not let a company/domain ending in ".ai" satisfy AI relevance.
-    r"(?<!\.)\bai (?:agents?|models?|systems?|tools?|chips?|safety|research|regulation|labs?)\b",
+    r"(?<!\.)\bai\b",
     r"\b(?:openai|anthropic|chatgpt|deepmind|gemini|claude|llama|mistral|deepseek)\b",
 ]
 

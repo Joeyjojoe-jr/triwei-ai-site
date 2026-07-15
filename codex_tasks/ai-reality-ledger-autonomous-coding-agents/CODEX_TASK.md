@@ -190,7 +190,9 @@ Use this dataset directly unless the repo already contains a better reviewed eve
 Use normal outbound links in the source audit table where appropriate:
 
 ```text
+GitHub Copilot preview: https://github.blog/2021-06-29-introducing-github-copilot-ai-pair-programmer/
 SWE-bench: https://www.swebench.com/original.html
+Devin demo: https://www.cognition.ai/blog/introducing-devin
 Codex preview: https://openai.com/index/introducing-codex/
 Claude Code GA: https://www.anthropic.com/news/claude-4
 GitHub Copilot coding agent GA: https://github.blog/changelog/2025-09-25-copilot-coding-agent-is-now-generally-available/

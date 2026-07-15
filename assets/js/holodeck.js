@@ -82,8 +82,9 @@
   }
 
   function clearRoom() {
-    while (room.children.length) {
-      var child = room.children.pop();
+    while (room.children.length > 0) {
+      var child = room.children[0];
+      room.remove(child);
       disposeObject(child);
     }
   }

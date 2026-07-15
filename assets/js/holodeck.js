@@ -125,6 +125,7 @@
     room.add(front);
 
     glow.color.setHex(colors.glow);
+    if (reduce) render();
   }
 
   buildRoom(currentPalette());

@@ -67,10 +67,11 @@
   <link rel="preload" href="{{ '/assets/css/style.css' | relative_url }}" as="style">
   <link rel="preload" href="{{ '/assets/css/palette-toggle.css' | relative_url }}" as="style">
 
-  <!-- Global styles. Mobile hardening loads last so its safety overrides win. -->
+  <!-- Global styles. Release fixes load last so their safety overrides win. -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/palette-toggle.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/mobile-hardening.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/mobile-release-fixes.css' | relative_url }}">
 
   {% if page.layout == "home" %}
   <!-- Give rotating folder cards slightly more desktop clearance without changing the mobile stack. -->

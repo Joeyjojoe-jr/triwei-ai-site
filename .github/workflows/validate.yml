@@ -39,6 +39,9 @@ jobs:
       - name: Test palette toggle
         run: npm run check:palette
 
+      - name: Test mobile hardening
+        run: npm run check:mobile
+
       - name: Validate generated news data
         run: npm run check:data
 

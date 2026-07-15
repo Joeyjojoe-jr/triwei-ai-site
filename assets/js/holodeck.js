@@ -41,10 +41,6 @@
     return;
   }
 
-  root.setAttribute('data-holodeck', 'webgl');
-  if (root.removeAttribute) root.removeAttribute('data-holodeck-reason');
-  canvas.hidden = false;
-
   function viewportSize() {
     var doc = document.documentElement || {};
     return {
@@ -267,6 +263,9 @@
     }
   });
 
+  root.setAttribute('data-holodeck', 'webgl');
+  if (root.removeAttribute) root.removeAttribute('data-holodeck-reason');
+  canvas.hidden = false;
   startAnimation();
 
   window.triweiHolodeck = {

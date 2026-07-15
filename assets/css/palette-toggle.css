@@ -116,7 +116,8 @@ html[data-palette="amber"] .folder-tab .folder-ico {
   transition: filter 180ms ease;
 }
 
-html[data-palette="amber"] .emblem {
+html[data-palette="amber"] .emblem,
+html[data-palette="amber"] .orbit.is-drilled .orbit-core-button .emblem {
   animation-name: core-pulse-amber;
   filter: hue-rotate(270deg) saturate(1.35) brightness(1.08)
           drop-shadow(0 0 10px color-mix(in srgb, var(--accent) 75%, transparent))
@@ -141,7 +142,8 @@ html[data-palette="amber"] .emblem {
     transition: none;
   }
 
-  html[data-palette="amber"] .emblem {
+  html[data-palette="amber"] .emblem,
+  html[data-palette="amber"] .orbit.is-drilled .orbit-core-button .emblem {
     animation: none !important;
     filter: hue-rotate(270deg) saturate(1.35) brightness(1.08)
             drop-shadow(0 0 10px color-mix(in srgb, var(--accent) 70%, transparent));

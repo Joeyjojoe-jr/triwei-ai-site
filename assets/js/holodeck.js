@@ -1,32 +1,63 @@
-/* TriWei AI — WebGL holodeck background.
-   A gridded room in real 3D with palette-aware lines, fog depth,
-   subtle mouse parallax, and gentle drift. Falls back to CSS when
-   Three.js or WebGL is unavailable. */
+/* TriWei AI — desktop WebGL holodeck background.
+   Constrained clients are filtered by holodeck-loader.js before this file
+   loads. The renderer still uses conservative settings and clean fallback. */
 (function () {
   'use strict';
 
   if (!window.THREE) return;
+
+  var root = document.documentElement;
   var canvas = document.getElementById('holodeck-canvas');
   if (!canvas) return;
 
   var reduce = window.matchMedia &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
   var renderer;
+  var contextLost = false;
+  var animationFrameId = 0;
+  var running = false;
+  var lastFrameTime = 0;
+  var FRAME_INTERVAL = 1000 / 30;
+
+  function useFallback(reason) {
+    contextLost = true;
+    stopAnimation();
+    canvas.hidden = true;
+    root.setAttribute('data-holodeck', 'static');
+    root.setAttribute('data-holodeck-reason', reason || 'renderer-failed');
+  }
+
   try {
     renderer = new THREE.WebGLRenderer({
       canvas: canvas,
-      antialias: true,
-      alpha: true,
-      preserveDrawingBuffer: true
+      antialias: false,
+      alpha: false,
+      powerPreference: 'low-power',
+      preserveDrawingBuffer: false,
+      failIfMajorPerformanceCaveat: true
     });
   } catch (error) {
+    useFallback('renderer-construction-failed');
     return;
   }
 
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  root.setAttribute('data-holodeck', 'webgl');
+  if (root.removeAttribute) root.removeAttribute('data-holodeck-reason');
+  canvas.hidden = false;
+
+  function viewportSize() {
+    var doc = document.documentElement || {};
+    return {
+      width: Math.max(1, window.innerWidth || doc.clientWidth || 1),
+      height: Math.max(1, window.innerHeight || doc.clientHeight || 1)
+    };
+  }
+
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
   renderer.setClearColor(0x000000, 1);
-  renderer.setSize(window.innerWidth, window.innerHeight);
+
+  var initialSize = viewportSize();
+  renderer.setSize(initialSize.width, initialSize.height, false);
 
   var scene = new THREE.Scene();
   scene.background = new THREE.Color(0x000000);
@@ -34,7 +65,7 @@
 
   var camera = new THREE.PerspectiveCamera(
     72,
-    window.innerWidth / window.innerHeight,
+    initialSize.width / initialSize.height,
     0.1,
     500
   );
@@ -64,9 +95,7 @@
   scene.add(glow);
 
   function currentPalette() {
-    return document.documentElement.getAttribute('data-palette') === 'amber'
-      ? 'amber'
-      : 'phosphor';
+    return root.getAttribute('data-palette') === 'amber' ? 'amber' : 'phosphor';
   }
 
   function disposeObject(object) {
@@ -94,6 +123,7 @@
   }
 
   function renderScene() {
+    if (contextLost) return;
     camera.lookAt(0, 0, -HALF);
     renderer.render(scene, camera);
   }
@@ -131,14 +161,15 @@
     room.add(front);
 
     glow.color.setHex(colors.glow);
-    if (reduce) renderScene();
   }
 
   buildRoom(currentPalette());
+  renderScene();
 
   window.addEventListener('triwei:palettechange', function (event) {
     var palette = event.detail && event.detail.palette;
     buildRoom(palette === 'amber' ? 'amber' : 'phosphor');
+    renderScene();
   });
 
   var targetX = 0;
@@ -148,20 +179,19 @@
   var time = 0;
 
   window.addEventListener('mousemove', function (event) {
-    targetX = (event.clientX / window.innerWidth) - 0.5;
-    targetY = (event.clientY / window.innerHeight) - 0.5;
+    targetX = (event.clientX / Math.max(window.innerWidth, 1)) - 0.5;
+    targetY = (event.clientY / Math.max(window.innerHeight, 1)) - 0.5;
   }, { passive: true });
 
-  function resize() {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    if (reduce) renderScene();
-  }
-  window.addEventListener('resize', resize);
+  function frame(timestamp) {
+    if (!running || contextLost || document.hidden) return;
+    animationFrameId = window.requestAnimationFrame(frame);
 
-  function frame() {
-    window.requestAnimationFrame(frame);
+    if (timestamp && lastFrameTime && timestamp - lastFrameTime < FRAME_INTERVAL) {
+      return;
+    }
+    lastFrameTime = timestamp || 0;
+
     time += 0.0016;
     mouseX += (targetX - mouseX) * 0.04;
     mouseY += (targetY - mouseY) * 0.04;
@@ -170,7 +200,80 @@
     renderScene();
   }
 
-  if (!reduce) {
-    frame();
+  function startAnimation() {
+    if (reduce || running || contextLost || document.hidden || !window.requestAnimationFrame) return;
+    running = true;
+    animationFrameId = window.requestAnimationFrame(frame);
   }
+
+  function stopAnimation() {
+    running = false;
+    if (animationFrameId && window.cancelAnimationFrame) {
+      window.cancelAnimationFrame(animationFrameId);
+    }
+    animationFrameId = 0;
+  }
+
+  function resizeRenderer() {
+    if (contextLost) return;
+    var size = viewportSize();
+    camera.aspect = size.width / size.height;
+    camera.updateProjectionMatrix();
+    renderer.setSize(size.width, size.height, false);
+    renderScene();
+  }
+
+  window.addEventListener('resize', resizeRenderer, { passive: true });
+
+  if (document.addEventListener) {
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        stopAnimation();
+      } else {
+        renderScene();
+        startAnimation();
+      }
+    });
+  }
+
+  if (canvas.addEventListener) {
+    canvas.addEventListener('webglcontextlost', function (event) {
+      if (event && event.preventDefault) event.preventDefault();
+      useFallback('webgl-context-lost');
+    }, false);
+
+    canvas.addEventListener('webglcontextrestored', function () {
+      contextLost = false;
+      root.setAttribute('data-holodeck', 'webgl');
+      if (root.removeAttribute) root.removeAttribute('data-holodeck-reason');
+      canvas.hidden = false;
+      resizeRenderer();
+      startAnimation();
+    }, false);
+  }
+
+  window.addEventListener('pagehide', function (event) {
+    stopAnimation();
+    if (!event || !event.persisted) {
+      clearRoom();
+      if (renderer.dispose) renderer.dispose();
+    }
+  });
+
+  window.addEventListener('pageshow', function () {
+    if (!contextLost) {
+      renderScene();
+      startAnimation();
+    }
+  });
+
+  startAnimation();
+
+  window.triweiHolodeck = {
+    start: startAnimation,
+    stop: stopAnimation,
+    isWebGL: function () {
+      return !contextLost;
+    }
+  };
 })();

@@ -93,6 +93,11 @@
     return new THREE.GridHelper(SIZE, DIVISIONS, colors.major, colors.minor);
   }
 
+  function renderScene() {
+    camera.lookAt(0, 0, -HALF);
+    renderer.render(scene, camera);
+  }
+
   function buildRoom(paletteName) {
     var colors = palettes[paletteName] || palettes.phosphor;
     clearRoom();
@@ -126,7 +131,7 @@
     room.add(front);
 
     glow.color.setHex(colors.glow);
-    if (reduce) render();
+    if (reduce) renderScene();
   }
 
   buildRoom(currentPalette());
@@ -151,21 +156,21 @@
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
+    if (reduce) renderScene();
   }
   window.addEventListener('resize', resize);
 
   function frame() {
     window.requestAnimationFrame(frame);
-    if (!reduce) {
-      time += 0.0016;
-      mouseX += (targetX - mouseX) * 0.04;
-      mouseY += (targetY - mouseY) * 0.04;
-      camera.position.x = mouseX * 16 + Math.sin(time) * 3.2;
-      camera.position.y = -mouseY * 11 + Math.cos(time * 0.8) * 2.2;
-    }
-    camera.lookAt(0, 0, -HALF);
-    renderer.render(scene, camera);
+    time += 0.0016;
+    mouseX += (targetX - mouseX) * 0.04;
+    mouseY += (targetY - mouseY) * 0.04;
+    camera.position.x = mouseX * 16 + Math.sin(time) * 3.2;
+    camera.position.y = -mouseY * 11 + Math.cos(time * 0.8) * 2.2;
+    renderScene();
   }
 
-  frame();
+  if (!reduce) {
+    frame();
+  }
 })();

@@ -311,9 +311,10 @@ def collect():
             fb = source_from_url(url)
             for r in rows:
                 title, src = split_source(r["title"], fb)
-                summary = clean_text(r.get("desc"))
-                if not is_story_relevant(cat, title, summary, url):
+                raw_desc = r.get("desc") or ""
+                if not is_story_relevant(cat, title, raw_desc, url):
                     continue
+                summary = clean_text(raw_desc)
                 key = re.sub(r"[^a-z0-9]", "", title.lower())[:80]
                 if not key or key in seen:
                     continue

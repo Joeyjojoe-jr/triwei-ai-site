@@ -17,13 +17,11 @@ function makeElement() {
   };
 }
 
-test('palette controller toggles, persists, and updates accessible state', () => {
+test('palette controller toggles, persists, and resets after storage is cleared', () => {
   const source = fs.readFileSync(path.join(repoRoot, 'assets/js/palette-toggle.js'), 'utf8');
   const root = makeElement();
   root.setAttribute('data-palette', 'phosphor');
-  const label = { textContent: '' };
   const button = makeElement();
-  button.querySelector = (selector) => selector === '[data-palette-toggle-label]' ? label : null;
   const meta = makeElement();
   const storage = new Map();
   const windowListeners = Object.create(null);
@@ -61,7 +59,7 @@ test('palette controller toggles, persists, and updates accessible state', () =>
   assert.equal(root.getAttribute('data-palette'), 'phosphor');
   assert.equal(button.getAttribute('data-next-palette'), 'amber');
   assert.equal(button.getAttribute('aria-pressed'), 'false');
-  assert.equal(label.textContent, 'AMBER');
+  assert.equal(button.getAttribute('aria-label'), 'Switch to amber color palette');
 
   button.listeners.click();
   assert.equal(root.getAttribute('data-palette'), 'amber');
@@ -69,7 +67,7 @@ test('palette controller toggles, persists, and updates accessible state', () =>
   assert.equal(meta.getAttribute('content'), '#ff8800');
   assert.equal(button.getAttribute('data-next-palette'), 'phosphor');
   assert.equal(button.getAttribute('aria-pressed'), 'true');
-  assert.equal(label.textContent, 'PHOSPHOR');
+  assert.equal(button.getAttribute('aria-label'), 'Switch to phosphor color palette');
   assert.equal(dispatched.at(-1).type, 'triwei:palettechange');
   assert.equal(dispatched.at(-1).detail.palette, 'amber');
 
@@ -79,15 +77,49 @@ test('palette controller toggles, persists, and updates accessible state', () =>
 
   windowListeners.storage({ key: 'triwei-palette', newValue: 'amber' });
   assert.equal(root.getAttribute('data-palette'), 'amber');
+
+  windowListeners.storage({ key: 'triwei-palette', newValue: null });
+  assert.equal(root.getAttribute('data-palette'), 'phosphor');
+  assert.equal(meta.getAttribute('content'), '#33ff33');
+
+  windowListeners.storage({ key: null, newValue: null });
+  assert.equal(root.getAttribute('data-palette'), 'phosphor');
+
+  windowListeners.storage({ key: 'unrelated-key', newValue: 'amber' });
+  assert.equal(root.getAttribute('data-palette'), 'phosphor');
 });
 
-test('holodeck rebuilds all six grids with amber colors', () => {
+test('toggle label and preview are correct before deferred JavaScript executes', () => {
+  const header = fs.readFileSync(path.join(repoRoot, '_includes/header.html'), 'utf8');
+  const css = fs.readFileSync(path.join(repoRoot, 'assets/css/palette-toggle.css'), 'utf8');
+
+  assert.match(
+    header,
+    /<span class="palette-toggle-label" aria-hidden="true"><\/span>/
+  );
+  assert.doesNotMatch(header, /data-palette-toggle-label/);
+  assert.match(
+    css,
+    /\.palette-toggle-label::after\s*\{\s*content:\s*"AMBER";\s*\}/
+  );
+  assert.match(
+    css,
+    /html\[data-palette="amber"\] \.palette-toggle-label::after\s*\{\s*content:\s*"PHOSPHOR";\s*\}/
+  );
+  assert.match(
+    css,
+    /html\[data-palette="amber"\] \.palette-toggle\s*\{\s*--palette-toggle-preview:\s*#33ff33;\s*\}/
+  );
+});
+
+test('reduced-motion holodeck renders only on state changes', () => {
   const source = fs.readFileSync(path.join(repoRoot, 'assets/js/holodeck.js'), 'utf8');
   const root = makeElement();
   root.setAttribute('data-palette', 'phosphor');
   const listeners = Object.create(null);
   let lastScene = null;
   let lastRenderer = null;
+  let animationFrameRequests = 0;
 
   class Disposable {
     constructor() { this.disposed = false; }
@@ -102,12 +134,16 @@ test('holodeck rebuilds all six grids with amber colors', () => {
   class WebGLRenderer {
     constructor(options) {
       this.options = options;
+      this.renderCount = 0;
       lastRenderer = this;
     }
     setPixelRatio(value) { this.pixelRatio = value; }
     setClearColor(color, alpha) { this.clearColor = color; this.clearAlpha = alpha; }
     setSize(width, height) { this.width = width; this.height = height; }
-    render(scene, camera) { this.rendered = { scene, camera }; }
+    render(scene, camera) {
+      this.renderCount += 1;
+      this.rendered = { scene, camera };
+    }
   }
 
   class Scene {
@@ -131,8 +167,18 @@ test('holodeck rebuilds all six grids with amber colors', () => {
   }
 
   class Group {
-    constructor() { this.children = []; }
+    constructor() {
+      this.children = [];
+      this.removed = [];
+    }
     add(object) { this.children.push(object); }
+    remove(object) {
+      const index = this.children.indexOf(object);
+      if (index !== -1) {
+        this.children.splice(index, 1);
+        this.removed.push(object);
+      }
+    }
   }
 
   class GridHelper {
@@ -175,7 +221,7 @@ test('holodeck rebuilds all six grids with amber colors', () => {
     devicePixelRatio: 1,
     matchMedia() { return { matches: true }; },
     addEventListener(name, fn) { listeners[name] = fn; },
-    requestAnimationFrame() {}
+    requestAnimationFrame() { animationFrameRequests += 1; }
   };
 
   const context = {
@@ -199,11 +245,25 @@ test('holodeck rebuilds all six grids with amber colors', () => {
   assert.equal(room.children.length, 6);
   assert.equal(room.children[0].major, 0x33ff66);
   assert.equal(room.children[0].minor, 0x0f8a34);
+  assert.equal(lastRenderer.renderCount, 1);
+  assert.equal(animationFrameRequests, 0);
 
+  const originalChildren = room.children.slice();
   listeners['triwei:palettechange']({ detail: { palette: 'amber' } });
   assert.equal(room.children.length, 6);
+  assert.equal(room.removed.length, 6);
+  assert.ok(originalChildren.every((child) => child.geometry.disposed && child.material.disposed));
   assert.equal(room.children[0].major, 0xffa000);
   assert.equal(room.children[0].minor, 0x8a3f0f);
   assert.equal(glow.color.hex, 0xff7800);
-  assert.ok(lastRenderer.rendered);
+  assert.equal(lastRenderer.renderCount, 2);
+  assert.equal(animationFrameRequests, 0);
+
+  windowObject.innerWidth = 1024;
+  windowObject.innerHeight = 768;
+  listeners.resize();
+  assert.equal(lastRenderer.width, 1024);
+  assert.equal(lastRenderer.height, 768);
+  assert.equal(lastRenderer.renderCount, 3);
+  assert.equal(animationFrameRequests, 0);
 });

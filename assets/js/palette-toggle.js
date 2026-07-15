@@ -27,14 +27,10 @@
     if (!button) return;
 
     var nextPalette = palette === 'amber' ? 'phosphor' : 'amber';
-    var label = button.querySelector('[data-palette-toggle-label]');
     button.setAttribute('data-next-palette', nextPalette);
     button.setAttribute('aria-pressed', palette === 'amber' ? 'true' : 'false');
     button.setAttribute('aria-label', 'Switch to ' + nextPalette + ' color palette');
     button.setAttribute('title', 'Switch to ' + nextPalette + ' color palette');
-    if (label) {
-      label.textContent = nextPalette.toUpperCase();
-    }
   }
 
   function applyPalette(value, options) {

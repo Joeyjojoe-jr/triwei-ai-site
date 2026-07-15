@@ -214,25 +214,55 @@ html[data-holodeck="static"] #holodeck-canvas {
   }
 
   .orbit {
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 0.8rem;
     margin-bottom: 1.2rem;
   }
 
-  .orbit-core {
-    width: 160px !important;
-    height: 160px !important;
+  .orbit-level-status {
+    position: static;
+    order: -2;
+    width: 100%;
+    margin: 0 0 0.25rem;
+    transform: none;
   }
 
-  .orbit-folder {
-    width: min(320px, 100%) !important;
+  .orbit-core {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    order: -1;
+    flex-basis: auto;
+    width: 160px !important;
+    height: 160px !important;
+    transform: none !important;
   }
 
   .orbit-ring {
+    position: static !important;
+    inset: auto !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
     gap: 0.8rem !important;
+  }
+
+  .orbit-folder {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    width: min(320px, 100%) !important;
+    transform: none !important;
+    --r: 0;
   }
 
   .folder-card {
     width: 100% !important;
+    transform: none !important;
   }
 
   .animate-in,

@@ -100,6 +100,7 @@ test('failed desktop dependency load falls back safely', () => {
 test('templates and styles contain mobile safety controls', () => {
   const head = fs.readFileSync(path.join(repoRoot, '_includes/head.html'), 'utf8');
   const layout = fs.readFileSync(path.join(repoRoot, '_layouts/default.html'), 'utf8');
+  const home = fs.readFileSync(path.join(repoRoot, '_layouts/home.html'), 'utf8');
   const css = fs.readFileSync(path.join(repoRoot, 'assets/css/mobile-hardening.css'), 'utf8');
   const holodeck = fs.readFileSync(path.join(repoRoot, 'assets/js/holodeck.js'), 'utf8');
 
@@ -109,6 +110,9 @@ test('templates and styles contain mobile safety controls', () => {
   assert.match(layout, /id="holodeck-canvas"[^>]*hidden/);
   assert.match(layout, /holodeck-loader\.js/);
   assert.doesNotMatch(layout, /<script src="https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/three\.js/);
+
+  assert.match(home, /window\.matchMedia\('\(max-width: 900px\)'\)\.matches/);
+  assert.match(home, /if \(!reduce && !constrained\)/);
 
   assert.match(css, /html\[data-holodeck\] \.hd-room\s*\{\s*display:\s*none !important;/);
   assert.match(css, /@media \(max-width: 900px\), \(pointer: coarse\), \(hover: none\)/);

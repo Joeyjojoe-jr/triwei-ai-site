@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-07-15T14:52:38.901852Z",
-  "generated_display": "July 15, 2026 at 9:52 AM CDT",
-  "item_count": 679,
+  "generated_utc": "2026-07-15T15:16:01.937015Z",
+  "generated_display": "July 15, 2026 at 10:16 AM CDT",
+  "item_count": 677,
   "category_order": [
     "labs",
     "research",
@@ -23,19 +23,7 @@
           "published_iso": "2026-07-15T13:10:47Z",
           "summary": "Anthropic, Blackstone bet the next trillion-dollar AI business is implementation, not just models TechCrunch",
           "ethics_tags": [],
-          "trend_score": 37
-        },
-        {
-          "title": "Robostral Navigate: single-camera AI navigation",
-          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBuODdfOFZITFJmb0FyNW00TkZEdUtFYzVxWnV5bWxCY1dRc3hnVjdFUVpqNHRnWDBGVUMzYXViZ1ViVEVCR216YzNOZ0lDbXZHMGNnUW93?oc=5",
-          "source": "mistral.ai",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Jul 15, 2026",
-          "published_iso": "2026-07-15T13:01:31Z",
-          "summary": "Robostral Navigate: single-camera AI navigation mistral.ai",
-          "ethics_tags": [],
-          "trend_score": 0
+          "trend_score": 36
         },
         {
           "title": "Vint Cerf is working on a plan to unleash AI agents on the open internet",
@@ -83,7 +71,7 @@
           "published_iso": "2026-07-14T22:58:00Z",
           "summary": "Anthropic launches free Claude for Teachers The Hill",
           "ethics_tags": [],
-          "trend_score": 37
+          "trend_score": 36
         },
         {
           "title": "OpenAI’s first hardware device is reportedly a screenless speaker that can move",
@@ -169,7 +157,7 @@
           "published_iso": "2026-07-14T19:41:27Z",
           "summary": "Anthropic has consistently attempted to depict itself as the ethical foil to other AI companies. This latest marketing stunt — which leans into criticism of AI as a way to make Anthropic seem aware of the responsibility it carries — would…",
           "ethics_tags": [],
-          "trend_score": 37
+          "trend_score": 36
         },
         {
           "title": "US official says Nvidia has begun shipping powerful H200 AI chips to China",
@@ -181,7 +169,21 @@
           "published_iso": "2026-07-14T19:22:42Z",
           "summary": "US official says Nvidia has begun shipping powerful H200 AI chips to China Reuters",
           "ethics_tags": [],
-          "trend_score": 15
+          "trend_score": 14
+        },
+        {
+          "title": "DeepMind CEO calls for an independent standards body to regulate frontier AI",
+          "link": "https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/",
+          "source": "TechCrunch",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 14, 2026",
+          "published_iso": "2026-07-14T17:45:55Z",
+          "summary": "DeepMind CEO Demis Hassabis is proposing an AI \"standards body\" modeled after FINRA, to test frontier models and develop best practices for their release.",
+          "ethics_tags": [
+            "Regulation & Governance"
+          ],
+          "trend_score": 0
         }
       ],
       "folder_items": [
@@ -271,7 +273,7 @@
         {
           "key": "governance",
           "label": "Lab Safety & Policy",
-          "count": 2,
+          "count": 3,
           "folder_items": [
             {
               "title": "OpenAI pushes back on Apple trade secret lawsuit",
@@ -297,6 +299,20 @@
               "published_iso": "2026-07-15T12:00:00Z",
               "summary": "The guy behind TCP/IP is working on a standard for identifying AI agents in the wild.",
               "ethics_tags": [],
+              "trend_score": 0
+            },
+            {
+              "title": "DeepMind CEO calls for an independent standards body to regulate frontier AI",
+              "link": "https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/",
+              "source": "TechCrunch",
+              "category": "labs",
+              "category_label": "Labs & Industry",
+              "published_display": "Jul 14, 2026",
+              "published_iso": "2026-07-14T17:45:55Z",
+              "summary": "DeepMind CEO Demis Hassabis is proposing an AI \"standards body\" modeled after FINRA, to test frontier models and develop best practices for their release.",
+              "ethics_tags": [
+                "Regulation & Governance"
+              ],
               "trend_score": 0
             }
           ]
@@ -328,14 +344,14 @@
               "published_iso": "2026-07-15T13:10:47Z",
               "summary": "Anthropic, Blackstone bet the next trillion-dollar AI business is implementation, not just models TechCrunch",
               "ethics_tags": [],
-              "trend_score": 37
+              "trend_score": 36
             }
           ]
         },
         {
           "key": "models",
           "label": "Models & Releases",
-          "count": 4,
+          "count": 3,
           "folder_items": [
             {
               "title": "OpenAI’s new flagship model deletes files on its own, people keep warning",
@@ -371,7 +387,7 @@
               "published_iso": "2026-07-14T22:58:00Z",
               "summary": "Anthropic launches free Claude for Teachers The Hill",
               "ethics_tags": [],
-              "trend_score": 37
+              "trend_score": 36
             }
           ]
         },
@@ -390,7 +406,7 @@
               "published_iso": "2026-07-14T19:41:27Z",
               "summary": "Anthropic has consistently attempted to depict itself as the ethical foil to other AI companies. This latest marketing stunt — which leans into criticism of AI as a way to make Anthropic seem aware of the responsibility it carries — would…",
               "ethics_tags": [],
-              "trend_score": 37
+              "trend_score": 36
             }
           ]
         }
@@ -410,18 +426,6 @@
           "summary": "Stripe Benchmark Shows AI Agents Build Integrations but Struggle with Validation infoq.com",
           "ethics_tags": [],
           "trend_score": 40
-        },
-        {
-          "title": "AI Research Verification Tools",
-          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5wSGRfSDZXNk1jTnM4VEdvZ0pXNDFIdnhsblZFOUNQeEhRdmhjTGtsMFhIV0hqcUJsODN1ci1mR2dCV0VvTExoSkViWXkxRXhZeVFHNUdUUmo3VUVZMV9VUm1FZFJOMWFwOXFtMDIzONIBb0FVX3lxTE5wSGRfSDZXNk1jTnM4VEdvZ0pXNDFIdnhsblZFOUNQeEhRdmhjTGtsMFhIV0hqcUJsODN1ci1mR2dCV0VvTExoSkViWXkxRXhZeVFHNUdUUmo3VUVZMV9VUm1FZFJOMWFwOXFtMDIzOA?oc=5",
-          "source": "Trend Hunter",
-          "category": "research",
-          "category_label": "Research & Papers",
-          "published_display": "Jul 15, 2026",
-          "published_iso": "2026-07-15T13:56:19Z",
-          "summary": "AI Research Verification Tools Trend Hunter",
-          "ethics_tags": [],
-          "trend_score": 0
         },
         {
           "title": "DeliberationBench: A Normative Benchmark for Assessing the Influence of Large Language Models on Users’ Views - The Association for the Advancement of…",
@@ -457,7 +461,7 @@
           "published_iso": "2026-07-15T08:41:10Z",
           "summary": "Anthropic commits $10 million CAD to Canadian AI research EdTech Innovation Hub",
           "ethics_tags": [],
-          "trend_score": 37
+          "trend_score": 36
         },
         {
           "title": "Optimal Adaptive Market Making: A Theoretical Framework for High-Yield Liquidity Provision in Perpetual Futures Markets",
@@ -563,7 +567,7 @@
           "published_iso": "2026-07-15T04:00:00Z",
           "summary": "arXiv:2607.12056v1 Announce Type: new Abstract: Online shopping is increasingly shifting toward a model in which AI agents independently search for products, compare options, evaluate constraints, and carry out parts of the purchasing…",
           "ethics_tags": [],
-          "trend_score": 92
+          "trend_score": 93
         },
         {
           "title": "Graph Feedback Controls Consensus and Clique Formation in Open-Weight Language-Model Populations",
@@ -575,7 +579,21 @@
           "published_iso": "2026-07-15T04:00:00Z",
           "summary": "arXiv:2607.12077v1 Announce Type: new Abstract: Multi-agent language-model systems increasingly route local interactions, yet the runtime interaction graph is often treated as an implementation detail. We study convention formation in…",
           "ethics_tags": [],
-          "trend_score": 92
+          "trend_score": 93
+        },
+        {
+          "title": "Operationalising Multi-Dimensional Evaluation for Conversational Agents: A Scalable, Governed Pipeline with Selective Re-evaluation and Model Benchmarking",
+          "link": "https://arxiv.org/abs/2607.12085",
+          "source": "arXiv",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jul 15, 2026",
+          "published_iso": "2026-07-15T04:00:00Z",
+          "summary": "arXiv:2607.12085v1 Announce Type: new Abstract: Evaluating retail conversational agents requires methods beyond lexical-overlap metrics to assess intent alignment, factuality, helpfulness, clarity, tone, and overall response quality.…",
+          "ethics_tags": [
+            "Safety & Alignment"
+          ],
+          "trend_score": 0
         }
       ],
       "folder_items": [
@@ -589,7 +607,7 @@
           "published_iso": "2026-07-15T04:00:00Z",
           "summary": "arXiv:2607.12056v1 Announce Type: new Abstract: Online shopping is increasingly shifting toward a model in which AI agents independently search for products, compare options, evaluate constraints, and carry out parts of the purchasing…",
           "ethics_tags": [],
-          "trend_score": 92
+          "trend_score": 93
         },
         {
           "title": "Graph Feedback Controls Consensus and Clique Formation in Open-Weight Language-Model Populations",
@@ -601,7 +619,7 @@
           "published_iso": "2026-07-15T04:00:00Z",
           "summary": "arXiv:2607.12077v1 Announce Type: new Abstract: Multi-agent language-model systems increasingly route local interactions, yet the runtime interaction graph is often treated as an implementation detail. We study convention formation in…",
           "ethics_tags": [],
-          "trend_score": 92
+          "trend_score": 93
         },
         {
           "title": "Optimization Is Not All You Need",
@@ -622,7 +640,7 @@
         {
           "key": "evaluation",
           "label": "Evaluation & Safety",
-          "count": 6,
+          "count": 7,
           "folder_items": [
             {
               "title": "Designing Agent-Ready Websites for AI Web Agents: A Framework for Machine Readability, Actionability, and Decision Reliability",
@@ -634,7 +652,7 @@
               "published_iso": "2026-07-15T04:00:00Z",
               "summary": "arXiv:2607.12056v1 Announce Type: new Abstract: Online shopping is increasingly shifting toward a model in which AI agents independently search for products, compare options, evaluate constraints, and carry out parts of the purchasing…",
               "ethics_tags": [],
-              "trend_score": 92
+              "trend_score": 93
             },
             {
               "title": "Optimization Is Not All You Need",
@@ -712,7 +730,7 @@
               "published_iso": "2026-07-15T04:00:00Z",
               "summary": "arXiv:2607.12077v1 Announce Type: new Abstract: Multi-agent language-model systems increasingly route local interactions, yet the runtime interaction graph is often treated as an implementation detail. We study convention formation in…",
               "ethics_tags": [],
-              "trend_score": 92
+              "trend_score": 93
             },
             {
               "title": "Optimal Adaptive Market Making: A Theoretical Framework for High-Yield Liquidity Provision in Perpetual Futures Markets",
@@ -731,7 +749,7 @@
         {
           "key": "applied",
           "label": "Applied AI",
-          "count": 4,
+          "count": 3,
           "folder_items": [
             {
               "title": "Anthropic commits $10 million CAD to Canadian AI research",
@@ -743,19 +761,7 @@
               "published_iso": "2026-07-15T08:41:10Z",
               "summary": "Anthropic commits $10 million CAD to Canadian AI research EdTech Innovation Hub",
               "ethics_tags": [],
-              "trend_score": 37
-            },
-            {
-              "title": "AI Research Verification Tools",
-              "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5wSGRfSDZXNk1jTnM4VEdvZ0pXNDFIdnhsblZFOUNQeEhRdmhjTGtsMFhIV0hqcUJsODN1ci1mR2dCV0VvTExoSkViWXkxRXhZeVFHNUdUUmo3VUVZMV9VUm1FZFJOMWFwOXFtMDIzONIBb0FVX3lxTE5wSGRfSDZXNk1jTnM4VEdvZ0pXNDFIdnhsblZFOUNQeEhRdmhjTGtsMFhIV0hqcUJsODN1ci1mR2dCV0VvTExoSkViWXkxRXhZeVFHNUdUUmo3VUVZMV9VUm1FZFJOMWFwOXFtMDIzOA?oc=5",
-              "source": "Trend Hunter",
-              "category": "research",
-              "category_label": "Research & Papers",
-              "published_display": "Jul 15, 2026",
-              "published_iso": "2026-07-15T13:56:19Z",
-              "summary": "AI Research Verification Tools Trend Hunter",
-              "ethics_tags": [],
-              "trend_score": 0
+              "trend_score": 36
             },
             {
               "title": "BioHarvest receives $1.4M grant for AI research platform",
@@ -768,6 +774,18 @@
               "summary": "BioHarvest receives $1.4M grant for AI research platform Investing.com",
               "ethics_tags": [],
               "trend_score": 0
+            },
+            {
+              "title": "LP Mining with LP2Graph: A Use Case for Railway Rescheduling",
+              "link": "https://arxiv.org/abs/2607.11980",
+              "source": "arXiv",
+              "category": "research",
+              "category_label": "Research & Papers",
+              "published_display": "Jul 15, 2026",
+              "published_iso": "2026-07-15T04:00:00Z",
+              "summary": "arXiv:2607.11980v1 Announce Type: new Abstract: Like many optimization-driven domains, railway rescheduling relies on Mixed-Integer Linear Programming (MILP), yet the field's modeling knowledge is scattered across hundreds of papers in…",
+              "ethics_tags": [],
+              "trend_score": 0
             }
           ]
         }
@@ -776,6 +794,30 @@
     "community": {
       "label": "Community & Discussion",
       "items": [
+        {
+          "title": "Agent runtime reduces LLM turns by 80% with a higher success rate in DeepSWE",
+          "link": "https://github.com/Tura-AI/tura",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 15, 2026",
+          "published_iso": "2026-07-15T15:10:14Z",
+          "summary": "1 points, 1 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 93
+        },
+        {
+          "title": "Detecting Prompt Injection Attacks on Purpose-Specific LLM Agents",
+          "link": "https://arxiv.org/abs/2607.12624",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 15, 2026",
+          "published_iso": "2026-07-15T14:56:23Z",
+          "summary": "1 points, 0 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
         {
           "title": "GPU-Tile-SIM: Tile-Centric GPU Simulation for LLM Hardware-Software Co-Design",
           "link": "https://arxiv.org/abs/2607.11262",
@@ -796,7 +838,7 @@
           "category_label": "Community & Discussion",
           "published_display": "Jul 15, 2026",
           "published_iso": "2026-07-15T14:41:23Z",
-          "summary": "1 points, 0 comments on Hacker News.",
+          "summary": "3 points, 0 comments on Hacker News.",
           "ethics_tags": [],
           "trend_score": 0
         },
@@ -834,7 +876,7 @@
           "published_iso": "2026-07-15T14:07:42Z",
           "summary": "2 points, 0 comments on Hacker News.",
           "ethics_tags": [],
-          "trend_score": 92
+          "trend_score": 93
         },
         {
           "title": "Show HN: I Am Hosting Amalia – The First Portuguese LLM",
@@ -871,18 +913,6 @@
           "summary": "2 points, 0 comments on Hacker News.",
           "ethics_tags": [],
           "trend_score": 0
-        },
-        {
-          "title": "Show HN: InferAll – One API for OpenAI, Anthropic, Google, Nvidia Nim",
-          "link": "https://inferall.ai/?src=hn",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Jul 15, 2026",
-          "published_iso": "2026-07-15T13:52:28Z",
-          "summary": "2 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 116
         },
         {
           "title": "Show HN: Ranking 19 LLMs on Flutter code by compile pass & hidden-test pass-at-1",
@@ -931,32 +961,20 @@
           "summary": "2 points, 3 comments on Hacker News.",
           "ethics_tags": [],
           "trend_score": 0
-        },
-        {
-          "title": "Wrap an LLM, charge $20, lose money: the pricing trap the model owners hit first",
-          "link": "https://okaneland.com/study/unit-economics-of-wrapping-an-llm/",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Jul 15, 2026",
-          "published_iso": "2026-07-15T11:37:30Z",
-          "summary": "2 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 0
         }
       ],
       "folder_items": [
         {
-          "title": "Show HN: InferAll – One API for OpenAI, Anthropic, Google, Nvidia Nim",
-          "link": "https://inferall.ai/?src=hn",
+          "title": "Agent runtime reduces LLM turns by 80% with a higher success rate in DeepSWE",
+          "link": "https://github.com/Tura-AI/tura",
           "source": "Web",
           "category": "community",
           "category_label": "Community & Discussion",
           "published_display": "Jul 15, 2026",
-          "published_iso": "2026-07-15T13:52:28Z",
-          "summary": "2 points, 0 comments on Hacker News.",
+          "published_iso": "2026-07-15T15:10:14Z",
+          "summary": "1 points, 1 comments on Hacker News.",
           "ethics_tags": [],
-          "trend_score": 116
+          "trend_score": 93
         },
         {
           "title": "Show HN: An AI agent fixed 98% of vulnerable deps in one run, 14% in the next",
@@ -968,7 +986,7 @@
           "published_iso": "2026-07-15T14:07:42Z",
           "summary": "2 points, 0 comments on Hacker News.",
           "ethics_tags": [],
-          "trend_score": 92
+          "trend_score": 93
         },
         {
           "title": "AI/ML Research",
@@ -1006,20 +1024,8 @@
         {
           "key": "tools",
           "label": "Tools & Projects",
-          "count": 7,
+          "count": 6,
           "folder_items": [
-            {
-              "title": "Show HN: InferAll – One API for OpenAI, Anthropic, Google, Nvidia Nim",
-              "link": "https://inferall.ai/?src=hn",
-              "source": "Web",
-              "category": "community",
-              "category_label": "Community & Discussion",
-              "published_display": "Jul 15, 2026",
-              "published_iso": "2026-07-15T13:52:28Z",
-              "summary": "2 points, 0 comments on Hacker News.",
-              "ethics_tags": [],
-              "trend_score": 116
-            },
             {
               "title": "Show HN: An AI agent fixed 98% of vulnerable deps in one run, 14% in the next",
               "link": "https://bomly.dev/blog/coding-agents-with-and-without-bomly-mcp",
@@ -1030,7 +1036,7 @@
               "published_iso": "2026-07-15T14:07:42Z",
               "summary": "2 points, 0 comments on Hacker News.",
               "ethics_tags": [],
-              "trend_score": 92
+              "trend_score": 93
             },
             {
               "title": "Show HN: I blind-test 6 LLMs daily by having them summarize the same story",
@@ -1041,6 +1047,18 @@
               "published_display": "Jul 15, 2026",
               "published_iso": "2026-07-15T14:35:48Z",
               "summary": "1 points, 0 comments on Hacker News.",
+              "ethics_tags": [],
+              "trend_score": 0
+            },
+            {
+              "title": "Show HN: I Am Hosting Amalia – The First Portuguese LLM",
+              "link": "https://iaamalia.com/",
+              "source": "Web",
+              "category": "community",
+              "category_label": "Community & Discussion",
+              "published_display": "Jul 15, 2026",
+              "published_iso": "2026-07-15T14:04:40Z",
+              "summary": "2 points, 0 comments on Hacker News.",
               "ethics_tags": [],
               "trend_score": 0
             }
@@ -1066,29 +1084,34 @@
           ]
         },
         {
-          "key": "industry",
-          "label": "Industry Debate",
-          "count": 1,
+          "key": "pulse",
+          "label": "Community Pulse",
+          "count": 6,
           "folder_items": [
             {
-              "title": "Wrap an LLM, charge $20, lose money: the pricing trap the model owners hit first",
-              "link": "https://okaneland.com/study/unit-economics-of-wrapping-an-llm/",
+              "title": "Agent runtime reduces LLM turns by 80% with a higher success rate in DeepSWE",
+              "link": "https://github.com/Tura-AI/tura",
               "source": "Web",
               "category": "community",
               "category_label": "Community & Discussion",
               "published_display": "Jul 15, 2026",
-              "published_iso": "2026-07-15T11:37:30Z",
-              "summary": "2 points, 0 comments on Hacker News.",
+              "published_iso": "2026-07-15T15:10:14Z",
+              "summary": "1 points, 1 comments on Hacker News.",
+              "ethics_tags": [],
+              "trend_score": 93
+            },
+            {
+              "title": "Detecting Prompt Injection Attacks on Purpose-Specific LLM Agents",
+              "link": "https://arxiv.org/abs/2607.12624",
+              "source": "Web",
+              "category": "community",
+              "category_label": "Community & Discussion",
+              "published_display": "Jul 15, 2026",
+              "published_iso": "2026-07-15T14:56:23Z",
+              "summary": "1 points, 0 comments on Hacker News.",
               "ethics_tags": [],
               "trend_score": 0
-            }
-          ]
-        },
-        {
-          "key": "pulse",
-          "label": "Community Pulse",
-          "count": 4,
-          "folder_items": [
+            },
             {
               "title": "GPU-Tile-SIM: Tile-Centric GPU Simulation for LLM Hardware-Software Co-Design",
               "link": "https://arxiv.org/abs/2607.11262",
@@ -1100,30 +1123,6 @@
               "summary": "1 points, 0 comments on Hacker News.",
               "ethics_tags": [],
               "trend_score": 0
-            },
-            {
-              "title": "How to explain LLM architecture to your mom and dad",
-              "link": "https://www.ibm.com/think/news/what-does-ai-look-like",
-              "source": "Web",
-              "category": "community",
-              "category_label": "Community & Discussion",
-              "published_display": "Jul 15, 2026",
-              "published_iso": "2026-07-15T14:41:23Z",
-              "summary": "1 points, 0 comments on Hacker News.",
-              "ethics_tags": [],
-              "trend_score": 0
-            },
-            {
-              "title": "Ask HN: Is HN comments used to train AI models?",
-              "link": "https://news.ycombinator.com/item?id=48920951",
-              "source": "Web",
-              "category": "community",
-              "category_label": "Community & Discussion",
-              "published_display": "Jul 15, 2026",
-              "published_iso": "2026-07-15T14:00:34Z",
-              "summary": "4 points, 3 comments on Hacker News.",
-              "ethics_tags": [],
-              "trend_score": 0
             }
           ]
         }
@@ -1132,6 +1131,20 @@
     "business": {
       "label": "Business & Funding",
       "items": [
+        {
+          "title": "UAE Rewarded with US AI Chips after Joining Military Aggression on Iran – WSJ",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOQ2pzam5lV2RKTmJHNHhzQ3F5NlJoN0x1alBHSmgtQUdZRGowLVMwZDY4TWRNLUppUHlLRFJpbGtzclZlcElDSU9TU1hwdHJtZmgzRlZ5eXlRRlNJTGd5aWhxUThhQXRNdldmTkdWZ1g5M2VPU3VsdVhjNkphQzAzdFlicVhfZGRXcl9sa29leUZkNXpaY0N6Qzd5OA?oc=5",
+          "source": "Palestine Chronicle",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Jul 15, 2026",
+          "published_iso": "2026-07-15T14:26:15Z",
+          "summary": "UAE Rewarded with US AI Chips after Joining Military Aggression on Iran – WSJ Palestine Chronicle",
+          "ethics_tags": [
+            "Autonomy & Weapons"
+          ],
+          "trend_score": 0
+        },
         {
           "title": "US holds lead in high-end AI chips against China, but access is a concern",
           "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9YU00yNXJzSWl0aUpOYTZFVlNINTd6aUhLMnBDZjBkaWFlY19uT2xDUlpvVl9OUnpXS3BPTDZsSC1rUHBsbEU2QWJ1X0NCOW9JNlVfUHBsWWVId1U?oc=5",
@@ -1154,7 +1167,7 @@
           "published_iso": "2026-07-15T12:25:43Z",
           "summary": "Jensen Huang still steps in to settle internal fights over Nvidia's scarce AI chips, executive says Business Insider",
           "ethics_tags": [],
-          "trend_score": 15
+          "trend_score": 14
         },
         {
           "title": "AI Chips Update - Arteris Arm Partnership Strengthens AI Chip Security",
@@ -1166,7 +1179,7 @@
           "published_iso": "2026-07-15T11:38:01Z",
           "summary": "AI Chips Update - Arteris Arm Partnership Strengthens AI Chip Security Yahoo Finance",
           "ethics_tags": [],
-          "trend_score": 36
+          "trend_score": 35
         },
         {
           "title": "Amazon (AMZN) Starts Selling Trainium AI Chips Beyond AWS And Into Rival Turf",
@@ -1190,19 +1203,7 @@
           "published_iso": "2026-07-15T05:10:18Z",
           "summary": "ASML rises 3% after hiking sales forecast for second time this year on strong AI chip demand CNBC",
           "ethics_tags": [],
-          "trend_score": 36
-        },
-        {
-          "title": "Meta and AMD Agree to AI Chips Deal Worth More Than $100 Billion",
-          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOM1AwWUgxQmpZVUJQT0E2NUJTYXRRdlJFN3dJdW9sME5MWG12Y0k3LVJjTmdhSk9HS3Z4WjdQazRLS1ExVDF0VnVBRlJfclZTTFhYcEhUZy01akNfaTlNdFpqZURtZUV3WTF2LUhfc29nREJkeGxGWWxNNkZSaXVNal9NMFMxT3ZQMTU1dllMRnpYQy0wUEE?oc=5",
-          "source": "Moomoo",
-          "category": "business",
-          "category_label": "Business & Funding",
-          "published_display": "Jul 15, 2026",
-          "published_iso": "2026-07-15T04:18:17Z",
-          "summary": "Meta and AMD Agree to AI Chips Deal Worth More Than $100 Billion Moomoo",
-          "ethics_tags": [],
-          "trend_score": 0
+          "trend_score": 35
         },
         {
           "title": "Anthony Albanese promises fast-track approvals for datacentres to shore up AI investment | AI (artificial intelligence)",
@@ -1241,18 +1242,6 @@
           "trend_score": 0
         },
         {
-          "title": "TYLSemi raises $43M to build the Lego blocks of custom AI chips",
-          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5hLU94STZXd3AzeDV2VlJCVHc1SmhXT1BmV1FLb3BRV19za0ZxTEc1QlFsclJYaDlXU2hlejA2RDlKb1RUUUg3d1BLTU1LRFJIcVhHcVJTTEdUWU9MR1ZXd1NxUHBucHpfSnozOGhtQQ?oc=5",
-          "source": "Crypto Briefing",
-          "category": "business",
-          "category_label": "Business & Funding",
-          "published_display": "Jul 14, 2026",
-          "published_iso": "2026-07-14T21:59:29Z",
-          "summary": "TYLSemi raises $43M to build the Lego blocks of custom AI chips Crypto Briefing",
-          "ethics_tags": [],
-          "trend_score": 0
-        },
-        {
           "title": "OpenAI and Anthropic Are Developing Their Own Custom AI Chips: Here Are the Stocks That Could Benefit The Most",
           "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQVGVSRVEtZnQxU1l6UFZCQTlfV2cwT0xoNEM2VGZsX3dWazB1MWZBRkt4c2VHWWFTa09tQmczNEhvb05aT3hjRUZoa19OYUo0UHNRaGNJRlYwaVhoTnFITHRxQU5DZkRKR3JYUjlPRTRpdG5JQUdGR1lPZWY5NUJKd2JVZHlfcGJQalBYQXVpNXpXcVlCTk5xaXFIZG9wRGttMHBqNw?oc=5",
           "source": "Yahoo Finance",
@@ -1262,7 +1251,7 @@
           "published_iso": "2026-07-14T19:20:00Z",
           "summary": "OpenAI and Anthropic Are Developing Their Own Custom AI Chips: Here Are the Stocks That Could Benefit The Most Yahoo Finance",
           "ethics_tags": [],
-          "trend_score": 101
+          "trend_score": 100
         },
         {
           "title": "TYLSemi raises $43 million to create building blocks of custom AI chips",
@@ -1299,6 +1288,18 @@
           "summary": "AMD (AMD) Wins Approval To Sell AI Chips To Select Chinese Firms Yahoo Finance",
           "ethics_tags": [],
           "trend_score": 0
+        },
+        {
+          "title": "Small Amount of Nvidia AI Chips Sold to China Via US License",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQZVBaYzdJcGJweFBldUpSTzhNR0RMT3JwdHRXTENmWG95SlJOaVVzTTNPMXNhX0ZKV2lkNTByd3BUNGJaSUdiRXZzSDU1RU1ZY3JEdXFncEJPLXhLamFwOW9Na3JVU3VLVTF0QV9lanRaS1ZmYmNuU3lhQUxuQTlPZGpkbGxWOGJreG94ZkQ5cUtNbWVDZmZqcmZvZjVBVksxNkY2MTFRbFJWakNJUWR5c0paZV9fZw?oc=5",
+          "source": "Bloomberg.com",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Jul 14, 2026",
+          "published_iso": "2026-07-14T17:10:01Z",
+          "summary": "Small Amount of Nvidia AI Chips Sold to China Via US License Bloomberg.com",
+          "ethics_tags": [],
+          "trend_score": 14
         }
       ],
       "folder_items": [
@@ -1312,7 +1313,7 @@
           "published_iso": "2026-07-14T19:20:00Z",
           "summary": "OpenAI and Anthropic Are Developing Their Own Custom AI Chips: Here Are the Stocks That Could Benefit The Most Yahoo Finance",
           "ethics_tags": [],
-          "trend_score": 101
+          "trend_score": 100
         },
         {
           "title": "AI Chips Update - Arteris Arm Partnership Strengthens AI Chip Security",
@@ -1324,7 +1325,7 @@
           "published_iso": "2026-07-15T11:38:01Z",
           "summary": "AI Chips Update - Arteris Arm Partnership Strengthens AI Chip Security Yahoo Finance",
           "ethics_tags": [],
-          "trend_score": 36
+          "trend_score": 35
         },
         {
           "title": "ASML rises 3% after hiking sales forecast for second time this year on strong AI chip demand",
@@ -1336,7 +1337,7 @@
           "published_iso": "2026-07-15T05:10:18Z",
           "summary": "ASML rises 3% after hiking sales forecast for second time this year on strong AI chip demand CNBC",
           "ethics_tags": [],
-          "trend_score": 36
+          "trend_score": 35
         }
       ],
       "subcategories": [
@@ -1360,28 +1361,9 @@
           ]
         },
         {
-          "key": "deals",
-          "label": "Deals & Acquisitions",
-          "count": 1,
-          "folder_items": [
-            {
-              "title": "Meta and AMD Agree to AI Chips Deal Worth More Than $100 Billion",
-              "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOM1AwWUgxQmpZVUJQT0E2NUJTYXRRdlJFN3dJdW9sME5MWG12Y0k3LVJjTmdhSk9HS3Z4WjdQazRLS1ExVDF0VnVBRlJfclZTTFhYcEhUZy01akNfaTlNdFpqZURtZUV3WTF2LUhfc29nREJkeGxGWWxNNkZSaXVNal9NMFMxT3ZQMTU1dllMRnpYQy0wUEE?oc=5",
-              "source": "Moomoo",
-              "category": "business",
-              "category_label": "Business & Funding",
-              "published_display": "Jul 15, 2026",
-              "published_iso": "2026-07-15T04:18:17Z",
-              "summary": "Meta and AMD Agree to AI Chips Deal Worth More Than $100 Billion Moomoo",
-              "ethics_tags": [],
-              "trend_score": 0
-            }
-          ]
-        },
-        {
           "key": "compute",
           "label": "Chips & Compute",
-          "count": 12,
+          "count": 13,
           "folder_items": [
             {
               "title": "OpenAI and Anthropic Are Developing Their Own Custom AI Chips: Here Are the Stocks That Could Benefit The Most",
@@ -1393,7 +1375,7 @@
               "published_iso": "2026-07-14T19:20:00Z",
               "summary": "OpenAI and Anthropic Are Developing Their Own Custom AI Chips: Here Are the Stocks That Could Benefit The Most Yahoo Finance",
               "ethics_tags": [],
-              "trend_score": 101
+              "trend_score": 100
             },
             {
               "title": "AI Chips Update - Arteris Arm Partnership Strengthens AI Chip Security",
@@ -1405,7 +1387,7 @@
               "published_iso": "2026-07-15T11:38:01Z",
               "summary": "AI Chips Update - Arteris Arm Partnership Strengthens AI Chip Security Yahoo Finance",
               "ethics_tags": [],
-              "trend_score": 36
+              "trend_score": 35
             },
             {
               "title": "ASML rises 3% after hiking sales forecast for second time this year on strong AI chip demand",
@@ -1417,7 +1399,7 @@
               "published_iso": "2026-07-15T05:10:18Z",
               "summary": "ASML rises 3% after hiking sales forecast for second time this year on strong AI chip demand CNBC",
               "ethics_tags": [],
-              "trend_score": 36
+              "trend_score": 35
             }
           ]
         }
@@ -1452,7 +1434,7 @@
           "ethics_tags": [
             "Safety & Alignment"
           ],
-          "trend_score": 134
+          "trend_score": 133
         },
         {
           "title": "Clear, Compelling Arguments: Rethinking the Foundations of Frontier AI Safety Cases - The Association for the Advancement of Artificial Intelligence",
@@ -1463,6 +1445,32 @@
           "published_display": "Jul 15, 2026",
           "published_iso": "2026-07-15T12:40:20Z",
           "summary": "Clear, Compelling Arguments: Rethinking the Foundations of Frontier AI Safety Cases The Association for the Advancement of Artificial Intelligence",
+          "ethics_tags": [
+            "Safety & Alignment"
+          ],
+          "trend_score": 33
+        },
+        {
+          "title": "Tracing the Moving Target: Locating Value Propositions on AI Ethics in the European Union (2018-2025) - The Association for the Advancement of Artificial…",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE01bnBXbDlGZzhscHZXSE9zZXJ4a2lfVVpTTDFMR3pOd1FSZFNwY1VwU0VJYlRfdllJNE40QXQ3SW9VVXdYbThBNUNNTllnSFEwNmpacU05WVYyYUxlOW1kNHJWdDZjSjQ?oc=5",
+          "source": "Google News",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Jul 15, 2026",
+          "published_iso": "2026-07-15T12:40:19Z",
+          "summary": "Tracing the Moving Target: Locating Value Propositions on AI Ethics in the European Union (2018-2025) The Association for the Advancement of Artificial Intelligence",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "The Coordination Gap in Frontier AI Safety Policies - The Association for the Advancement of Artificial Intelligence",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBCdlhnX3VIcEI1RTY2RjlRby0zNkV2UDdnVkJqLXR0UXkxWjhUMW5tazVfME5meUtTVTZodnAtVDVSTVVlZk9yblQwbXpxN2FBLWdwOFB6YUszRlRBdjI0LUZ2WXdNVDg?oc=5",
+          "source": "Google News",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Jul 15, 2026",
+          "published_iso": "2026-07-15T12:40:14Z",
+          "summary": "The Coordination Gap in Frontier AI Safety Policies The Association for the Advancement of Artificial Intelligence",
           "ethics_tags": [
             "Safety & Alignment"
           ],
@@ -1480,7 +1488,7 @@
           "ethics_tags": [
             "Safety & Alignment"
           ],
-          "trend_score": 70
+          "trend_score": 69
         },
         {
           "title": "Inside Anthropic’s state-by-state plan to ratchet up AI rules",
@@ -1492,7 +1500,7 @@
           "published_iso": "2026-07-15T08:45:00Z",
           "summary": "Inside Anthropic’s state-by-state plan to ratchet up AI rules Politico",
           "ethics_tags": [],
-          "trend_score": 37
+          "trend_score": 36
         },
         {
           "title": "Sen. Rick Scott introduces 'Safeguard Kids Act' to fund AI safety lessons in schools",
@@ -1592,34 +1600,6 @@
             "Safety & Alignment"
           ],
           "trend_score": 33
-        },
-        {
-          "title": "UCL PhD student awarded $485,000 to launch an independent AI safety evaluation organisation",
-          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNd19HTWl0NGxGTDZPUExJOTBIa1lHLS02aDhSUlB2REdiZ2x0Vjg5c1RncngzQ1NZcE1YYy1DTGZlSG4yazRJRFRxdTBvV0ZGYU9Pb0R4ekVFZEJUX0pBNmlPTlZuWHE1d20weXpfUEFXaFZ2c0Zwb0dDdUU5T0ZTcFJlSGNmSTFENUVNcHgyRW9XNW1XNTBfSnRwV3NhWHF2Tkkwd2RHdWtzaTUtZmZwM3lKZV9XWl9Zb2VXZ1NiNkFpeHRyeUlra2YyYw?oc=5",
-          "source": "UCL | University College London",
-          "category": "ethics",
-          "category_label": "Ethics & Society",
-          "published_display": "Jul 14, 2026",
-          "published_iso": "2026-07-14T05:06:46Z",
-          "summary": "UCL PhD student awarded $485,000 to launch an independent AI safety evaluation organisation UCL | University College London",
-          "ethics_tags": [
-            "Safety & Alignment"
-          ],
-          "trend_score": 33
-        },
-        {
-          "title": "AI regulation answers the wrong question",
-          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQTlVnLVhoZWN3VFpiSHdGT3VMQ0liLVV3TnFxX2V2Zk13WjFwVjJmQ2kyczlHMnM1NF9LSW8zRFJxT21fZlJ3WkRDSGZIbVBDWkxmRmNjcUwwUXpYT3R0TEVGUWNoYjltQWtZX0RtM3ctTngxNjlLSkVib2Nhc0NzbWtadGhEeTZoQ2pvTGRqaw?oc=5",
-          "source": "Lowy Institute",
-          "category": "ethics",
-          "category_label": "Ethics & Society",
-          "published_display": "Jul 14, 2026",
-          "published_iso": "2026-07-14T02:58:21Z",
-          "summary": "AI regulation answers the wrong question Lowy Institute",
-          "ethics_tags": [
-            "Regulation & Governance"
-          ],
-          "trend_score": 19
         }
       ],
       "folder_items": [
@@ -1635,7 +1615,7 @@
           "ethics_tags": [
             "Safety & Alignment"
           ],
-          "trend_score": 134
+          "trend_score": 133
         },
         {
           "title": "Anthropic expands hiring push to address AI safety risks",
@@ -1649,7 +1629,7 @@
           "ethics_tags": [
             "Safety & Alignment"
           ],
-          "trend_score": 70
+          "trend_score": 69
         },
         {
           "title": "News outlets urge judge to sanction OpenAI in high-stakes AI copyright fight",
@@ -1684,7 +1664,7 @@
               "ethics_tags": [
                 "Safety & Alignment"
               ],
-              "trend_score": 134
+              "trend_score": 133
             },
             {
               "title": "Anthropic expands hiring push to address AI safety risks",
@@ -1698,7 +1678,7 @@
               "ethics_tags": [
                 "Safety & Alignment"
               ],
-              "trend_score": 70
+              "trend_score": 69
             },
             {
               "title": "Clear, Compelling Arguments: Rethinking the Foundations of Frontier AI Safety Cases - The Association for the Advancement of Artificial Intelligence",
@@ -1766,7 +1746,7 @@
               "published_iso": "2026-07-15T08:45:00Z",
               "summary": "Inside Anthropic’s state-by-state plan to ratchet up AI rules Politico",
               "ethics_tags": [],
-              "trend_score": 37
+              "trend_score": 36
             },
             {
               "title": "Moulton on affordability, research support and AI regulation",
@@ -1804,7 +1784,7 @@
   "trending": [
     {
       "term": "agent",
-      "count": 92
+      "count": 93
     },
     {
       "term": "OpenAI",
@@ -1816,11 +1796,11 @@
     },
     {
       "term": "Anthropic",
-      "count": 37
+      "count": 36
     },
     {
       "term": "chip",
-      "count": 36
+      "count": 35
     },
     {
       "term": "safety",
@@ -1828,7 +1808,7 @@
     },
     {
       "term": "coding",
-      "count": 25
+      "count": 24
     },
     {
       "term": "GPT",
@@ -1852,11 +1832,11 @@
     },
     {
       "term": "Nvidia",
-      "count": 15
+      "count": 14
     },
     {
       "term": "robot",
-      "count": 14
+      "count": 13
     }
   ],
   "ethics_themes": [
@@ -1907,11 +1887,25 @@
     },
     {
       "theme": "Autonomy & Weapons",
-      "count": 1,
+      "count": 2,
       "slug": "autonomy-weapons"
     }
   ],
   "ethics_watch": [
+    {
+      "title": "UAE Rewarded with US AI Chips after Joining Military Aggression on Iran – WSJ",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOQ2pzam5lV2RKTmJHNHhzQ3F5NlJoN0x1alBHSmgtQUdZRGowLVMwZDY4TWRNLUppUHlLRFJpbGtzclZlcElDSU9TU1hwdHJtZmgzRlZ5eXlRRlNJTGd5aWhxUThhQXRNdldmTkdWZ1g5M2VPU3VsdVhjNkphQzAzdFlicVhfZGRXcl9sa29leUZkNXpaY0N6Qzd5OA?oc=5",
+      "source": "Palestine Chronicle",
+      "category": "business",
+      "category_label": "Business & Funding",
+      "published_display": "Jul 15, 2026",
+      "published_iso": "2026-07-15T14:26:15Z",
+      "summary": "UAE Rewarded with US AI Chips after Joining Military Aggression on Iran – WSJ Palestine Chronicle",
+      "ethics_tags": [
+        "Autonomy & Weapons"
+      ],
+      "trend_score": 0
+    },
     {
       "title": "News outlets urge judge to sanction OpenAI in high-stakes AI copyright fight",
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxObjRUVDVmQ1dQZHUzV281SkNZcHhRdlMwMHZLRFNzNXZVY1J5RUdQSXZiZ3p0UzdmZ1NGR3Q4d2JZazlXdGNBT213dWNVY1NOb2pSQkdGbzdLSy1yS0tGMFFOWWZZalYycHFKTmdJNGFyS3l6X25yaE9CSVNVVzFydDIyYlVGejdkRzd6aFp1ZWl6ckZBYm9UMFl1WnhBdzI4aGxtQXJaaklKM3lNQkZ6cTNUV3U?oc=5",
@@ -1938,7 +1932,7 @@
       "ethics_tags": [
         "Safety & Alignment"
       ],
-      "trend_score": 134
+      "trend_score": 133
     },
     {
       "title": "Clear, Compelling Arguments: Rethinking the Foundations of Frontier AI Safety Cases - The Association for the Advancement of Artificial Intelligence",
@@ -1949,6 +1943,20 @@
       "published_display": "Jul 15, 2026",
       "published_iso": "2026-07-15T12:40:20Z",
       "summary": "Clear, Compelling Arguments: Rethinking the Foundations of Frontier AI Safety Cases The Association for the Advancement of Artificial Intelligence",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ],
+      "trend_score": 33
+    },
+    {
+      "title": "The Coordination Gap in Frontier AI Safety Policies - The Association for the Advancement of Artificial Intelligence",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBCdlhnX3VIcEI1RTY2RjlRby0zNkV2UDdnVkJqLXR0UXkxWjhUMW5tazVfME5meUtTVTZodnAtVDVSTVVlZk9yblQwbXpxN2FBLWdwOFB6YUszRlRBdjI0LUZ2WXdNVDg?oc=5",
+      "source": "Google News",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Jul 15, 2026",
+      "published_iso": "2026-07-15T12:40:14Z",
+      "summary": "The Coordination Gap in Frontier AI Safety Policies The Association for the Advancement of Artificial Intelligence",
       "ethics_tags": [
         "Safety & Alignment"
       ],
@@ -1966,7 +1974,7 @@
       "ethics_tags": [
         "Safety & Alignment"
       ],
-      "trend_score": 70
+      "trend_score": 69
     },
     {
       "title": "Ontology-Amplified Distillation and Contextuality Auditing for Sovereign Enterprise Language Models: A Combined Proof-of-Mechanism and Negative-Results Method…",
@@ -2108,38 +2116,34 @@
       "ethics_tags": [
         "Regulation & Governance"
       ],
-      "trend_score": 92
-    },
-    {
-      "title": "Accuracy and Normalized Accuracy under Length Bias: Analysis, Guidelines, and a Bayesian Alternative",
-      "link": "https://arxiv.org/abs/2607.12767",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Jul 15, 2026",
-      "published_iso": "2026-07-15T04:00:00Z",
-      "summary": "arXiv:2607.12767v1 Announce Type: new Abstract: Multiple-choice benchmarks that rank candidate completions by conditional log-probability suffer from a length bias: because log-probabilities sum over tokens, longer answers tend to be…",
-      "ethics_tags": [
-        "Bias & Fairness"
-      ],
-      "trend_score": 0
-    },
-    {
-      "title": "Scaling Point-in-Time Language Models",
-      "link": "https://arxiv.org/abs/2607.11889",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Jul 15, 2026",
-      "published_iso": "2026-07-15T04:00:00Z",
-      "summary": "arXiv:2607.11889v1 Announce Type: cross Abstract: Large language models trained on unrestricted internet corpora inevitably embed information from the future, introducing lookahead bias that compromises the validity of backtests and causal…",
-      "ethics_tags": [
-        "Bias & Fairness"
-      ],
-      "trend_score": 0
+      "trend_score": 93
     }
   ],
   "latest": [
+    {
+      "title": "Agent runtime reduces LLM turns by 80% with a higher success rate in DeepSWE",
+      "link": "https://github.com/Tura-AI/tura",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 15, 2026",
+      "published_iso": "2026-07-15T15:10:14Z",
+      "summary": "1 points, 1 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 93
+    },
+    {
+      "title": "Detecting Prompt Injection Attacks on Purpose-Specific LLM Agents",
+      "link": "https://arxiv.org/abs/2607.12624",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 15, 2026",
+      "published_iso": "2026-07-15T14:56:23Z",
+      "summary": "1 points, 0 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
     {
       "title": "GPU-Tile-SIM: Tile-Centric GPU Simulation for LLM Hardware-Software Co-Design",
       "link": "https://arxiv.org/abs/2607.11262",
@@ -2160,7 +2164,7 @@
       "category_label": "Community & Discussion",
       "published_display": "Jul 15, 2026",
       "published_iso": "2026-07-15T14:41:23Z",
-      "summary": "1 points, 0 comments on Hacker News.",
+      "summary": "3 points, 0 comments on Hacker News.",
       "ethics_tags": [],
       "trend_score": 0
     },
@@ -2189,6 +2193,20 @@
       "trend_score": 0
     },
     {
+      "title": "UAE Rewarded with US AI Chips after Joining Military Aggression on Iran – WSJ",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOQ2pzam5lV2RKTmJHNHhzQ3F5NlJoN0x1alBHSmgtQUdZRGowLVMwZDY4TWRNLUppUHlLRFJpbGtzclZlcElDSU9TU1hwdHJtZmgzRlZ5eXlRRlNJTGd5aWhxUThhQXRNdldmTkdWZ1g5M2VPU3VsdVhjNkphQzAzdFlicVhfZGRXcl9sa29leUZkNXpaY0N6Qzd5OA?oc=5",
+      "source": "Palestine Chronicle",
+      "category": "business",
+      "category_label": "Business & Funding",
+      "published_display": "Jul 15, 2026",
+      "published_iso": "2026-07-15T14:26:15Z",
+      "summary": "UAE Rewarded with US AI Chips after Joining Military Aggression on Iran – WSJ Palestine Chronicle",
+      "ethics_tags": [
+        "Autonomy & Weapons"
+      ],
+      "trend_score": 0
+    },
+    {
       "title": "Stripe Benchmark Shows AI Agents Build Integrations but Struggle with Validation",
       "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE81OVphUkpUdVBXeVZPN21nR2NoUURzdVBfMEFGTkE5U1ZOb1JEWTdtNlpoTWtqQ2trYUhEZFNGWXVuZWtibmZlZU5ScmxkdjFYd1ZINlpBNWtxWXR0dUJzT3owS3A4eHVIM0NCV3NYbw?oc=5",
       "source": "infoq.com",
@@ -2210,7 +2228,7 @@
       "published_iso": "2026-07-15T14:07:42Z",
       "summary": "2 points, 0 comments on Hacker News.",
       "ethics_tags": [],
-      "trend_score": 92
+      "trend_score": 93
     },
     {
       "title": "Show HN: I Am Hosting Amalia – The First Portuguese LLM",
@@ -2237,18 +2255,6 @@
       "trend_score": 0
     },
     {
-      "title": "AI Research Verification Tools",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5wSGRfSDZXNk1jTnM4VEdvZ0pXNDFIdnhsblZFOUNQeEhRdmhjTGtsMFhIV0hqcUJsODN1ci1mR2dCV0VvTExoSkViWXkxRXhZeVFHNUdUUmo3VUVZMV9VUm1FZFJOMWFwOXFtMDIzONIBb0FVX3lxTE5wSGRfSDZXNk1jTnM4VEdvZ0pXNDFIdnhsblZFOUNQeEhRdmhjTGtsMFhIV0hqcUJsODN1ci1mR2dCV0VvTExoSkViWXkxRXhZeVFHNUdUUmo3VUVZMV9VUm1FZFJOMWFwOXFtMDIzOA?oc=5",
-      "source": "Trend Hunter",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Jul 15, 2026",
-      "published_iso": "2026-07-15T13:56:19Z",
-      "summary": "AI Research Verification Tools Trend Hunter",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
       "title": "Show HN: StyleSeed – a design-rules engine so AI agents stop building generic UI",
       "link": "https://github.com/bitjaru/styleseed",
       "source": "Web",
@@ -2259,18 +2265,6 @@
       "summary": "2 points, 0 comments on Hacker News.",
       "ethics_tags": [],
       "trend_score": 0
-    },
-    {
-      "title": "Show HN: InferAll – One API for OpenAI, Anthropic, Google, Nvidia Nim",
-      "link": "https://inferall.ai/?src=hn",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Jul 15, 2026",
-      "published_iso": "2026-07-15T13:52:28Z",
-      "summary": "2 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 116
     },
     {
       "title": "Show HN: Ranking 19 LLMs on Flutter code by compile pass & hidden-test pass-at-1",
@@ -2332,7 +2326,7 @@
       "published_iso": "2026-07-15T13:10:47Z",
       "summary": "Anthropic, Blackstone bet the next trillion-dollar AI business is implementation, not just models TechCrunch",
       "ethics_tags": [],
-      "trend_score": 37
+      "trend_score": 36
     },
     {
       "title": "US holds lead in high-end AI chips against China, but access is a concern",
@@ -2343,18 +2337,6 @@
       "published_display": "Jul 15, 2026",
       "published_iso": "2026-07-15T13:07:38Z",
       "summary": "US holds lead in high-end AI chips against China, but access is a concern Fox Business",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "Robostral Navigate: single-camera AI navigation",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBuODdfOFZITFJmb0FyNW00TkZEdUtFYzVxWnV5bWxCY1dRc3hnVjdFUVpqNHRnWDBGVUMzYXViZ1ViVEVCR216YzNOZ0lDbXZHMGNnUW93?oc=5",
-      "source": "mistral.ai",
-      "category": "labs",
-      "category_label": "Labs & Industry",
-      "published_display": "Jul 15, 2026",
-      "published_iso": "2026-07-15T13:01:31Z",
-      "summary": "Robostral Navigate: single-camera AI navigation mistral.ai",
       "ethics_tags": [],
       "trend_score": 0
     },
@@ -2370,7 +2352,7 @@
       "ethics_tags": [
         "Safety & Alignment"
       ],
-      "trend_score": 134
+      "trend_score": 133
     },
     {
       "title": "Clear, Compelling Arguments: Rethinking the Foundations of Frontier AI Safety Cases - The Association for the Advancement of Artificial Intelligence",
@@ -2387,6 +2369,18 @@
       "trend_score": 33
     },
     {
+      "title": "Tracing the Moving Target: Locating Value Propositions on AI Ethics in the European Union (2018-2025) - The Association for the Advancement of Artificial…",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE01bnBXbDlGZzhscHZXSE9zZXJ4a2lfVVpTTDFMR3pOd1FSZFNwY1VwU0VJYlRfdllJNE40QXQ3SW9VVXdYbThBNUNNTllnSFEwNmpacU05WVYyYUxlOW1kNHJWdDZjSjQ?oc=5",
+      "source": "Google News",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Jul 15, 2026",
+      "published_iso": "2026-07-15T12:40:19Z",
+      "summary": "Tracing the Moving Target: Locating Value Propositions on AI Ethics in the European Union (2018-2025) The Association for the Advancement of Artificial Intelligence",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
       "title": "DeliberationBench: A Normative Benchmark for Assessing the Influence of Large Language Models on Users’ Views - The Association for the Advancement of…",
       "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5zeFlQRHJWTXhHYTBTZmVpbWFuZll5elo3N1I2VTFHZFJILWxjMVItNXI4ZHFWU0Q2T2JpUVhqMmZjdWVaajIwM2FhSEZMbWNscmtIWmt4V09QVzBoS2Fuc041UnlfVnc?oc=5",
       "source": "Google News",
@@ -2399,6 +2393,20 @@
       "trend_score": 40
     },
     {
+      "title": "The Coordination Gap in Frontier AI Safety Policies - The Association for the Advancement of Artificial Intelligence",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBCdlhnX3VIcEI1RTY2RjlRby0zNkV2UDdnVkJqLXR0UXkxWjhUMW5tazVfME5meUtTVTZodnAtVDVSTVVlZk9yblQwbXpxN2FBLWdwOFB6YUszRlRBdjI0LUZ2WXdNVDg?oc=5",
+      "source": "Google News",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Jul 15, 2026",
+      "published_iso": "2026-07-15T12:40:14Z",
+      "summary": "The Coordination Gap in Frontier AI Safety Policies The Association for the Advancement of Artificial Intelligence",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ],
+      "trend_score": 33
+    },
+    {
       "title": "BioHarvest receives $1.4M grant for AI research platform",
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNN0ZIX1F4bmNYZDJfdHNRWGttTXp3dnNlbXh4Y1Z0YXpSRTY4Mi1XRHdQazBLTHhhdlNFQ182dnJaNWt1N1JKd2ZKbmxWakRydFkwYWNTd2hsX2NudmtlcThSOThxMm9QVXEyQW1GYUxhYkVoZmstdGVrZ0trdnE3bm1OdE5jQTNUaVNFbEhndG1QSXpMS0pyMU1NYU11NkY4dnV0eXdzWjJzdHVvWFpaLQ?oc=5",
       "source": "Investing.com",
@@ -2407,30 +2415,6 @@
       "published_display": "Jul 15, 2026",
       "published_iso": "2026-07-15T12:33:09Z",
       "summary": "BioHarvest receives $1.4M grant for AI research platform Investing.com",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "Jensen Huang still steps in to settle internal fights over Nvidia's scarce AI chips, executive says",
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZ1E3M2xtTmt0NlUyZUFzdFZ5TVpSUnBSWC1oQnFQX1QxMUplT3d6T0hxcnNTNTktLUV6eUMxM3V0WjV5SDJydVV3eUpnZ3FBVWZYODNXdnNpSnRvUW11N01yOEdFVmNzMHJna2d0VTRXRUtzNFJLMXNtcjk2RWVYSjJkRDNSMjZiM2VlaFFRUVdCSHhIOGxiNjVqckZwcmtU?oc=5",
-      "source": "Business Insider",
-      "category": "business",
-      "category_label": "Business & Funding",
-      "published_display": "Jul 15, 2026",
-      "published_iso": "2026-07-15T12:25:43Z",
-      "summary": "Jensen Huang still steps in to settle internal fights over Nvidia's scarce AI chips, executive says Business Insider",
-      "ethics_tags": [],
-      "trend_score": 15
-    },
-    {
-      "title": "Aliens: Explaining LLMs and AI agents to my children",
-      "link": "https://archive.org/details/aliens_202607",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Jul 15, 2026",
-      "published_iso": "2026-07-15T12:14:04Z",
-      "summary": "2 points, 3 comments on Hacker News.",
       "ethics_tags": [],
       "trend_score": 0
     }

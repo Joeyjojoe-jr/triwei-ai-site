@@ -126,6 +126,48 @@ TREND_TERMS = [
     "jobs", "video", "image generation", "coding", "healthcare", "education",
 ]
 
+# Feed search results are candidates, not proof that a story belongs on the
+# site.  Google News in particular occasionally returns stories where "AI"
+# only appears in unrelated page furniture or where a broad word such as
+# "research" is the sole match.
+AI_PATTERNS = [
+    r"\bartificial intelligence\b", r"\bgenerative ai\b", r"\bgenai\b",
+    r"\bmachine learning\b", r"\bdeep learning\b", r"\blarge language models?\b",
+    r"\blanguage models?\b", r"\bllms?\b", r"\bneural networks?\b",
+    # Do not let a company/domain ending in ".ai" satisfy AI relevance.
+    r"(?<!\.)\bai (?:agents?|models?|systems?|tools?|chips?|safety|research|regulation|labs?)\b",
+    r"\b(?:openai|anthropic|chatgpt|deepmind|gemini|claude|llama|mistral|deepseek)\b",
+]
+
+RESEARCH_PATTERNS = [
+    r"\bresearch(?:ers?)?\b", r"\bpaper\b", r"\bstud(?:y|ies)\b",
+    r"\bbenchmark\b", r"\bdataset\b", r"\bevaluation\b", r"\bmodel\b",
+    r"\btraining\b", r"\binference\b", r"\barchitecture\b", r"\barxiv\b",
+]
+
+
+def matches_any(text, patterns):
+    return any(re.search(pattern, text, re.IGNORECASE) for pattern in patterns)
+
+
+def is_story_relevant(category, title, summary, feed_url=""):
+    """Validate a feed candidate before it can enter a category.
+
+    arXiv category feeds are trusted research sources. Other feeds must show
+    explicit AI relevance in their own title/summary. Research candidates also
+    need a separate research signal, preventing generic personnel or business
+    stories containing words such as "research" from slipping through.
+    """
+    if category == "research" and "arxiv.org/rss/" in feed_url:
+        return True
+
+    text = clean_text(title + " " + summary, 1000)
+    if not matches_any(text, AI_PATTERNS):
+        return False
+    if category == "research" and not matches_any(text, RESEARCH_PATTERNS):
+        return False
+    return True
+
 
 
 def fetch(url):
@@ -269,12 +311,14 @@ def collect():
             fb = source_from_url(url)
             for r in rows:
                 title, src = split_source(r["title"], fb)
+                summary = clean_text(r.get("desc"))
+                if not is_story_relevant(cat, title, summary, url):
+                    continue
                 key = re.sub(r"[^a-z0-9]", "", title.lower())[:80]
                 if not key or key in seen:
                     continue
                 seen.add(key)
                 iso, epoch = parse_date(r.get("date"))
-                summary = clean_text(r.get("desc"))
                 etags = tag_ethics(title + " " + summary)
                 item = {
                     "title": clean_text(title, 160),

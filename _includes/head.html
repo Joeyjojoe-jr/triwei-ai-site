@@ -29,6 +29,10 @@
       }
       document.documentElement.setAttribute('data-theme', 'dark');
       document.documentElement.setAttribute('data-palette', palette);
+      var themeColorMeta = document.querySelector('meta[name="theme-color"]');
+      if (themeColorMeta) {
+        themeColorMeta.setAttribute('content', palette === 'amber' ? '#ff8800' : '#33ff33');
+      }
     })();
   </script>
 

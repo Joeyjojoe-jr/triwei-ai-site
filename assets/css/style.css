@@ -1293,3 +1293,136 @@ body::before, body::after { display: none !important; }
 /* WebGL holodeck canvas sits above the CSS fallback room */
 #holodeck-canvas { position: fixed; inset: 0; z-index: -1; display: block; width: 100%; height: 100%; }
 .holodeck { z-index: -2 !important; }
+
+/* ===================================================================
+   ORBIT FOLDER DRILL-DOWN — category folders expand into subfolders
+   =================================================================== */
+.orbit-ring[hidden] {
+  display: none !important;
+}
+
+.orbit-core-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+.orbit-core-button:disabled {
+  cursor: default;
+}
+
+.orbit.is-drilled .orbit-core-button {
+  cursor: pointer;
+}
+
+.orbit.is-drilled .orbit-core-button .emblem {
+  filter: drop-shadow(0 0 14px var(--accent))
+          drop-shadow(0 0 30px color-mix(in srgb, var(--accent) 55%, transparent));
+}
+
+.orbit-core-hint {
+  position: absolute;
+  left: 50%;
+  bottom: -1.45rem;
+  width: max-content;
+  max-width: 250px;
+  transform: translateX(-50%);
+  padding: 0.18rem 0.45rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.orbit.is-drilled .orbit-core-hint::before {
+  content: "← ";
+}
+
+.orbit-level-status {
+  position: absolute;
+  z-index: 8;
+  top: 0;
+  left: 50%;
+  width: min(620px, 92%);
+  margin: 0;
+  transform: translateX(-50%);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  line-height: 1.35;
+  text-align: center;
+  text-shadow: 0 1px 8px #000;
+}
+
+.folder-tab {
+  width: 100%;
+  text-align: left;
+}
+
+.folder-tab-static {
+  cursor: default;
+}
+
+.folder-count {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.45rem;
+  height: 1.45rem;
+  margin-left: auto;
+  padding: 0 0.3rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.folder-card-subcategory .folder-name {
+  line-height: 1.15;
+}
+
+.folder-empty {
+  min-height: 4.8rem;
+  margin: 0;
+  padding: 0.65rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  text-align: left;
+}
+
+@media (max-width: 720px) {
+  .orbit-level-status {
+    position: static;
+    order: -2;
+    transform: none;
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  .orbit-core-hint {
+    bottom: -1rem;
+  }
+
+  .orbit-core {
+    flex-basis: auto;
+    order: -1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit.is-drilled .orbit-core-button .emblem {
+    animation: none !important;
+  }
+}

@@ -83,6 +83,66 @@ CATEGORY_LABELS = {
     "ethics": "Ethics & Society",
 }
 
+# Stable second-level folders for the interactive homepage orbit. Rules are
+# checked in order; the final entry in every category is the catch-all. A
+# story is assigned to exactly one subcategory so counts remain meaningful.
+SUBCATEGORY_RULES = {
+    "labs": [
+        ("models", "Models & Releases",
+         ["model", "release", "launch", "gpt", "claude", "gemini", "llama", "mistral"]),
+        ("hardware", "Chips, Robots & Devices",
+         ["chip", "gpu", "nvidia", "robot", "humanoid", "device", "hardware", "speaker"]),
+        ("enterprise", "Enterprise AI",
+         ["enterprise", "workplace", "business", "developer", "coding", "sales", "customer"]),
+        ("governance", "Lab Safety & Policy",
+         ["safety", "alignment", "policy", "regulat", "lawsuit", "copyright", "standard"]),
+        ("frontier", "Frontier Labs", []),
+    ],
+    "research": [
+        ("language", "Language Models",
+         ["language model", "llm", "transformer", "token", "linguistic", "text generation"]),
+        ("agents", "Agents & Reasoning",
+         ["agent", "reasoning", "reinforcement", "planning", "decision", "control"]),
+        ("vision", "Vision & Multimodal",
+         ["vision", "image", "video", "multimodal", "visual", "speech", "audio"]),
+        ("evaluation", "Evaluation & Safety",
+         ["benchmark", "evaluat", "safety", "alignment", "audit", "robust", "interpret"]),
+        ("applied", "Applied AI", []),
+    ],
+    "community": [
+        ("open-source", "Open Source",
+         ["open source", "open-source", "open weight", "github", "repository"]),
+        ("tools", "Tools & Projects",
+         ["tool", "project", "build", "library", "framework", " app", "release"]),
+        ("research", "Research Discussion",
+         ["paper", "research", "arxiv", "study", "benchmark"]),
+        ("industry", "Industry Debate",
+         ["openai", "anthropic", "google", "meta", "microsoft", "nvidia", "startup"]),
+        ("pulse", "Community Pulse", []),
+    ],
+    "business": [
+        ("funding", "Funding & Venture",
+         ["funding", " fund", "raised", "round", "venture", "invest"]),
+        ("deals", "Deals & Acquisitions",
+         ["acquisition", "acquire", "merger", "deal", "buyout", "ipo"]),
+        ("startups", "Startups",
+         ["startup", "founder", "launch"]),
+        ("compute", "Chips & Compute",
+         ["chip", "gpu", "nvidia", "compute", "data center", "datacenter", "semiconductor"]),
+        ("markets", "Markets & Strategy", []),
+    ],
+    "ethics": [
+        ("bias", "Bias & Fairness", ["bias & fairness", "bias", "fairness", "discriminat"]),
+        ("privacy", "Privacy & Surveillance",
+         ["privacy & surveillance", "privacy", "surveillance", "biometric"]),
+        ("safety", "Safety & Alignment",
+         ["safety & alignment", "safety", "alignment", "guardrail", "jailbreak"]),
+        ("rights", "Copyright, Labor & Rights",
+         ["copyright & ip", "labor & jobs", "copyright", "worker", "labor", "job"]),
+        ("governance", "Governance & Society", []),
+    ],
+}
+
 # ---------------------------------------------------------------------------
 # Ethics lens: theme -> keywords. Titles/summaries are matched case-insensitively.
 # ---------------------------------------------------------------------------
@@ -392,6 +452,23 @@ def annotate_trend_scores(items, trending):
         i["trend_score"] = sum(c for term, c in tc.items() if term in text)
 
 
+def classify_subcategory(category, item):
+    """Return the one stable second-level folder key for a news item."""
+    rules = SUBCATEGORY_RULES.get(category)
+    if not rules:
+        raise ValueError("Unknown category: %s" % category)
+    text = " ".join([
+        item.get("title", ""),
+        item.get("summary", ""),
+        item.get("source", ""),
+        " ".join(item.get("ethics_tags", [])),
+    ]).lower()
+    for key, _label, terms in rules:
+        if not terms or any(term in text for term in terms):
+            return key
+    return rules[-1][0]
+
+
 def display_item(i):
     iso = i["published_iso"]
     disp = ""
@@ -408,6 +485,32 @@ def display_item(i):
         "summary": i["summary"], "ethics_tags": i["ethics_tags"],
         "trend_score": i.get("trend_score", 0),
     }
+
+
+def display_subcategories(category, items):
+    """Build five orbit-ready subcategory folders with ranked story previews."""
+    rules = SUBCATEGORY_RULES[category]
+    buckets = {key: [] for key, _label, _terms in rules}
+    for item in items:
+        buckets[classify_subcategory(category, item)].append(item)
+
+    result = []
+    for key, label, _terms in rules:
+        ranked = sorted(
+            buckets[key],
+            key=lambda item: (
+                item.get("trend_score", 0),
+                item.get("published_iso") or "",
+            ),
+            reverse=True,
+        )
+        result.append({
+            "key": key,
+            "label": label,
+            "count": len(ranked),
+            "folder_items": [display_item(item) for item in ranked[:3]],
+        })
+    return result
 
 
 def main():
@@ -440,7 +543,9 @@ def main():
                            "items": [display_item(i) for i in categories[c]["items"]],
                            "folder_items": [display_item(i) for i in sorted(
                                categories[c]["items"],
-                               key=lambda x: x.get("trend_score", 0), reverse=True)[:3]]}
+                               key=lambda x: x.get("trend_score", 0), reverse=True)[:3]],
+                           "subcategories": display_subcategories(
+                               c, categories[c]["items"])}
                        for c in CATEGORY_ORDER},
         "trending": trending,
         "ethics_themes": themes,

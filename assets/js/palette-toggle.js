@@ -82,8 +82,10 @@
   }
 
   window.addEventListener('storage', function (event) {
-    if (event.key !== storageKey || !validPalettes[event.newValue]) return;
-    currentPalette = applyPalette(event.newValue, { persist: false, emit: true });
+    if (event.key !== storageKey && event.key !== null) return;
+    var nextPalette = event.newValue || 'phosphor';
+    if (!validPalettes[nextPalette]) return;
+    currentPalette = applyPalette(nextPalette, { persist: false, emit: true });
   });
 
   window.triweiPalette = {

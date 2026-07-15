@@ -50,8 +50,9 @@ html[data-theme="dark"] body {
   background-color: #000000 !important;
 }
 
-/* Accessible, compact action button. Its dot previews the palette it will activate. */
+/* Accessible, compact action button. Its dot and label preview the palette it will activate. */
 .palette-toggle {
+  --palette-toggle-preview: #ff8800;
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -63,14 +64,26 @@ html[data-theme="dark"] body {
   text-transform: uppercase;
 }
 
+html[data-palette="amber"] .palette-toggle {
+  --palette-toggle-preview: #33ff33;
+}
+
+.palette-toggle-label::after {
+  content: "AMBER";
+}
+
+html[data-palette="amber"] .palette-toggle-label::after {
+  content: "PHOSPHOR";
+}
+
 .palette-toggle-dot {
   width: 0.72rem;
   height: 0.72rem;
   flex: none;
   border-radius: 50%;
-  background: var(--palette-toggle-preview, #ff8800);
-  box-shadow: 0 0 7px var(--palette-toggle-preview, #ff8800),
-              0 0 14px color-mix(in srgb, var(--palette-toggle-preview, #ff8800) 55%, transparent);
+  background: var(--palette-toggle-preview);
+  box-shadow: 0 0 7px var(--palette-toggle-preview),
+              0 0 14px color-mix(in srgb, var(--palette-toggle-preview) 55%, transparent);
 }
 
 .palette-toggle[data-next-palette="amber"] {

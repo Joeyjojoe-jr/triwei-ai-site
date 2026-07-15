@@ -21,67 +21,7 @@
 
     {% include footer.html %}
 
-    <script>
-      // Theme toggle logic with localStorage persistence.
-      (function () {
-        var root = document.documentElement;
-        var toggleButton = document.getElementById('theme-toggle');
-        var themeColorMeta = document.querySelector('meta[name=\"theme-color\"]');
-        var systemPrefersDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
-        var storageKey = 'triwei-theme';
-
-        function applyTheme(theme) {
-          var isDark = theme === 'dark';
-          root.setAttribute('data-theme', theme);
-          if (themeColorMeta) {
-            themeColorMeta.setAttribute('content', isDark ? '#0f1722' : '#33ff33');
-          }
-          if (toggleButton) {
-            toggleButton.textContent = isDark ? 'Light' : 'Dark';
-            toggleButton.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-            toggleButton.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
-            toggleButton.title = isDark ? 'Switch to light theme' : 'Switch to dark theme';
-          }
-        }
-
-        var savedTheme = null;
-        try {
-          savedTheme = localStorage.getItem(storageKey);
-        } catch (error) {
-          savedTheme = null;
-        }
-
-        var hasExplicitPreference = savedTheme === 'light' || savedTheme === 'dark';
-        if (!hasExplicitPreference) {
-          savedTheme = systemPrefersDark && systemPrefersDark.matches ? 'dark' : 'light';
-        }
-
-        applyTheme(savedTheme);
-
-        if (!hasExplicitPreference && systemPrefersDark) {
-          var handleSystemThemeChange = function (event) {
-            applyTheme(event.matches ? 'dark' : 'light');
-          };
-          if (systemPrefersDark.addEventListener) {
-            systemPrefersDark.addEventListener('change', handleSystemThemeChange);
-          } else if (systemPrefersDark.addListener) {
-            systemPrefersDark.addListener(handleSystemThemeChange);
-          }
-        }
-
-        if (toggleButton) {
-          toggleButton.addEventListener('click', function () {
-            var nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            applyTheme(nextTheme);
-            try {
-              localStorage.setItem(storageKey, nextTheme);
-            } catch (error) {
-              // Ignore storage failures and keep theme for current session.
-            }
-          });
-        }
-      })();
-    </script>
+    <script src="{{ '/assets/js/palette-toggle.js' | relative_url }}" defer></script>
     <script>
       // Lightweight client-side analytics hooks (no backend transport).
       (function () {
@@ -168,8 +108,12 @@
             var button = target.closest('button');
             if (!button) return;
 
-            if (button.id === 'theme-toggle') {
-              track('theme_toggle', { theme: document.documentElement.getAttribute('data-theme') || 'light' });
+            if (button.id === 'palette-toggle') {
+              window.setTimeout(function () {
+                track('palette_toggle', {
+                  palette: document.documentElement.getAttribute('data-palette') || 'phosphor'
+                });
+              }, 0);
             }
           },
           true

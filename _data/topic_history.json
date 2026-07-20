@@ -2,38 +2,34 @@
   "days": [
     {
       "date": "2026-07-16",
-      "story_count": 1,
+      "story_count": 3,
       "topics": {}
     },
     {
       "date": "2026-07-17",
-      "story_count": 13,
+      "story_count": 7,
       "topics": {
-        "agent": 1,
-        "Anthropic": 3,
-        "coding": 1,
-        "OpenAI": 2,
-        "safety": 2
+        "Anthropic": 1,
+        "DeepSeek": 1,
+        "safety": 1
       }
     },
     {
       "date": "2026-07-18",
-      "story_count": 3,
+      "story_count": 2,
       "topics": {
         "Anthropic": 1,
         "Claude": 1,
-        "OpenAI": 1,
         "safety": 2
       }
     },
     {
       "date": "2026-07-19",
-      "story_count": 11,
+      "story_count": 9,
       "topics": {
-        "Anthropic": 2,
-        "Apple": 2,
-        "lawsuit": 1,
-        "OpenAI": 2,
+        "Anthropic": 1,
+        "Apple": 1,
+        "OpenAI": 1,
         "regulation": 1,
         "robot": 1,
         "safety": 3
@@ -41,16 +37,20 @@
     },
     {
       "date": "2026-07-20",
-      "story_count": 42,
+      "story_count": 49,
       "topics": {
-        "agent": 5,
+        "agent": 7,
         "agentic": 1,
-        "Anthropic": 5,
-        "Claude": 2,
+        "Anthropic": 3,
+        "benchmark": 1,
+        "Claude": 1,
+        "coding": 1,
+        "DeepSeek": 2,
         "healthcare": 1,
+        "multimodal": 1,
         "Nvidia": 1,
         "OpenAI": 4,
-        "safety": 3
+        "safety": 4
       }
     }
   ]

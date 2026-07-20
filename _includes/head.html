@@ -72,6 +72,9 @@
   <link rel="stylesheet" href="{{ '/assets/css/palette-toggle.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/mobile-hardening.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/mobile-release-fixes.css' | relative_url }}">
+  {% if page.atlas or page.layout == "home" %}
+  <link rel="stylesheet" href="{{ '/assets/css/industry-atlas.css' | relative_url }}">
+  {% endif %}
 
   {% if page.layout == "home" %}
   <!-- Give rotating folder cards slightly more desktop clearance without changing the mobile stack. -->

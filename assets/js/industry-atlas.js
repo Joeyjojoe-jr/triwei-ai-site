@@ -258,77 +258,98 @@
 
   function renderModels() {
     var container = document.querySelector('[data-atlas-chart="models"]');
-    var modelData = data.model_frontier || {};
+    var modelData = data.model_value || {};
     var models = modelData.models || [];
     if (!container || !models.length) return;
     clear(container);
 
-    var legend = htmlElement('div', 'atlas-chart-legend');
-    var frontierKey = htmlElement('span', 'atlas-frontier-key', 'Value frontier');
-    legend.appendChild(frontierKey);
-    legend.appendChild(htmlElement('span', 'atlas-ordinary-key', 'Other measured models'));
-    container.appendChild(legend);
+    var profiles = modelData.profiles || [];
+    var controls = htmlElement('div', 'model-profile-controls');
+    controls.setAttribute('role', 'group');
+    controls.setAttribute('aria-label', 'Choose API workload shape');
+    container.appendChild(controls);
 
-    var width = 920;
-    var height = 430;
-    var margin = { top: 25, right: 30, bottom: 62, left: 66 };
-    var plotWidth = width - margin.left - margin.right;
-    var plotHeight = height - margin.top - margin.bottom;
-    var prices = models.map(function (row) { return Number(row.price); });
-    var scores = models.map(function (row) { return Number(row.score); });
-    var minPrice = Math.min.apply(Math, prices) * 0.8;
-    var maxPrice = Math.max.apply(Math, prices) * 1.25;
-    var minScore = Math.max(0, Math.floor(Math.min.apply(Math, scores) / 10) * 10 - 10);
-    var maxScore = Math.ceil(Math.max.apply(Math, scores) / 10) * 10;
-    var svg = makeSvg(container, modelData.metric || 'Model value frontier', height, 'group');
+    var list = htmlElement('div', 'model-price-list');
+    container.appendChild(list);
 
-    [0, 0.25, 0.5, 0.75, 1].forEach(function (fraction) {
-      var y = margin.top + plotHeight - plotHeight * fraction;
-      svg.appendChild(svgElement('line', { x1: margin.left, y1: y, x2: width - margin.right, y2: y, class: 'atlas-grid-line' }));
-      addAxisLabel(svg, margin.left - 10, y + 4, Math.round(minScore + (maxScore - minScore) * fraction), 'end');
-    });
-    [0.05, 0.1, 0.5, 1, 5, 10, 30].forEach(function (tick) {
-      if (tick < minPrice || tick > maxPrice) return;
-      var x = logScale(tick, minPrice, maxPrice, margin.left, plotWidth);
-      svg.appendChild(svgElement('line', { x1: x, y1: margin.top, x2: x, y2: margin.top + plotHeight, class: 'atlas-grid-line atlas-grid-line-x' }));
-      addAxisLabel(svg, x, height - 28, '$' + tick, 'middle');
-    });
-    addAxisLabel(svg, margin.left + plotWidth / 2, height - 5, 'weighted price per 1M tokens · logarithmic', 'middle', 'atlas-axis-title');
-    addAxisLabel(svg, 17, margin.top + plotHeight / 2, modelData.benchmark + ' score', 'middle', 'atlas-axis-title atlas-axis-title-y');
-
-    var frontier = models.filter(function (row) { return row.frontier; }).sort(function (a, b) { return a.price - b.price; });
-    if (frontier.length > 1) {
-      var frontierPath = frontier.map(function (row, index) {
-        var x = logScale(Number(row.price), minPrice, maxPrice, margin.left, plotWidth);
-        var y = margin.top + plotHeight - ((Number(row.score) - minScore) / (maxScore - minScore)) * plotHeight;
-        return (index ? 'L' : 'M') + x.toFixed(1) + ' ' + y.toFixed(1);
-      }).join(' ');
-      svg.appendChild(svgElement('path', { d: frontierPath, class: 'atlas-frontier-line' }));
+    function priceFor(row, profile) {
+      return Number(row.input_price) * Number(profile.input_share)
+        + Number(row.output_price) * Number(profile.output_share);
     }
 
-    models.forEach(function (row) {
-      var x = logScale(Number(row.price), minPrice, maxPrice, margin.left, plotWidth);
-      var y = margin.top + plotHeight - ((Number(row.score) - minScore) / (maxScore - minScore)) * plotHeight;
-      var group = svgElement('g', { class: 'atlas-data-point' + (row.frontier ? ' is-frontier' : '') });
-      var circle = svgElement('circle', {
-        cx: x,
-        cy: y,
-        r: row.frontier ? 8 : 5.5,
-        fill: colorForOrganization(row.organization),
-        class: 'atlas-point-circle'
-      });
-      circle.appendChild(svgElement('title', {}, row.name + ': ' + row.score + ' at $' + row.price + ' per 1M tokens'));
-      group.appendChild(circle);
-      if (row.frontier) {
-        group.appendChild(svgElement('text', { x: x + 10, y: y - 9, class: 'atlas-point-label' }, row.name));
-      }
-      wireSvgPoint(group, row.name + ', score ' + row.score + ', price $' + row.price + ' per million tokens', function () {
-        var speed = row.speed ? ', ' + row.speed + ' tokens/second' : '';
-        setSelection('models', row.name + ' · ' + row.organization + ' · score ' + row.score + ' · $' + row.price + ' per 1M tokens' + speed + (row.frontier ? ' · on value frontier' : ''));
-        track('atlas_model_select', { model: row.name, organization: row.organization });
-      });
-      svg.appendChild(group);
+    function priceLabel(value) {
+      if (value < 0.01) return '$' + value.toFixed(4);
+      if (value < 1) return '$' + value.toFixed(3).replace(/0+$/, '').replace(/\.$/, '');
+      return '$' + value.toFixed(2).replace(/\.00$/, '');
+    }
+
+    var allPrices = [];
+    profiles.forEach(function (profile) {
+      models.forEach(function (row) { allPrices.push(priceFor(row, profile)); });
     });
+    var minPrice = Math.max(0.0001, Math.min.apply(Math, allPrices));
+    var maxPrice = Math.max.apply(Math, allPrices);
+
+    function draw(profile) {
+      Array.prototype.forEach.call(controls.querySelectorAll('button'), function (button) {
+        button.setAttribute('aria-pressed', button.getAttribute('data-model-profile') === profile.key ? 'true' : 'false');
+      });
+      clear(list);
+
+      var note = htmlElement('div', 'model-price-scale');
+      note.appendChild(htmlElement('span', '', priceLabel(minPrice) + ' / MTok'));
+      note.appendChild(htmlElement('span', '', 'log price scale'));
+      note.appendChild(htmlElement('span', '', priceLabel(maxPrice) + ' / MTok'));
+      list.appendChild(note);
+
+      models.map(function (row) {
+        return { row: row, blended: priceFor(row, profile) };
+      }).sort(function (a, b) {
+        return a.blended - b.blended;
+      }).forEach(function (item) {
+        var row = item.row;
+        var normalized = (Math.log10(item.blended) - Math.log10(minPrice))
+          / (Math.log10(maxPrice) - Math.log10(minPrice));
+        var button = htmlElement('button', 'model-price-row');
+        button.type = 'button';
+        button.setAttribute('aria-label', row.name + ', ' + priceLabel(item.blended) + ' per million tokens for ' + profile.label + ' workload');
+
+        var identity = htmlElement('span', 'model-price-identity');
+        identity.appendChild(htmlElement('strong', '', row.name));
+        identity.appendChild(htmlElement('small', '', row.organization));
+        button.appendChild(identity);
+
+        var priceTrack = htmlElement('span', 'model-price-track');
+        var bar = htmlElement('i', 'model-price-bar');
+        bar.style.setProperty('--model-price-share', (4 + normalized * 96).toFixed(1) + '%');
+        bar.style.setProperty('--model-color', colorForOrganization(row.organization));
+        priceTrack.appendChild(bar);
+        button.appendChild(priceTrack);
+        button.appendChild(htmlElement('strong', 'model-price-value', priceLabel(item.blended)));
+
+        button.addEventListener('click', function () {
+          var cache = row.cached_input_price === undefined ? 'not listed' : priceLabel(Number(row.cached_input_price));
+          setSelection('models', row.name + ' · ' + row.organization + ' · ' + profile.label + ' blend ' + priceLabel(item.blended) + '/MTok · input ' + priceLabel(Number(row.input_price)) + ' · cached input ' + cache + ' · output ' + priceLabel(Number(row.output_price)) + '.');
+          track('atlas_model_price_select', { model: row.name, profile: profile.key });
+        });
+        list.appendChild(button);
+      });
+      track('atlas_model_profile', { profile: profile.key });
+    }
+
+    profiles.forEach(function (profile) {
+      var button = htmlElement('button', 'model-profile-button', profile.label);
+      button.type = 'button';
+      button.setAttribute('data-model-profile', profile.key);
+      button.setAttribute('aria-pressed', 'false');
+      button.addEventListener('click', function () { draw(profile); });
+      controls.appendChild(button);
+    });
+
+    var defaultProfile = profiles.filter(function (profile) {
+      return profile.key === modelData.default_profile;
+    })[0] || profiles[0];
+    if (defaultProfile) draw(defaultProfile);
   }
 
   function renderAdoption() {

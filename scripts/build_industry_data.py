@@ -29,6 +29,7 @@ NEWS_PATH = os.path.join(ROOT, "_data", "news.json")
 OUT_PATH = os.path.join(ROOT, "_data", "industry.json")
 HISTORY_PATH = os.path.join(ROOT, "_data", "topic_history.json")
 DIFFUSION_HISTORY_PATH = os.path.join(ROOT, "_data", "diffusion_history.json")
+MODEL_PRICE_PATH = os.path.join(ROOT, "_data", "model_api_prices.json")
 
 USER_AGENT = "TriWeiIndustryBot/1.0 (+https://triwei.ai)"
 TIMEOUT = 35
@@ -55,7 +56,12 @@ SOURCES = {
         "kind": "market",
     },
     "model": {
-        "label": "Epoch AI — LLM inference price trends",
+        "label": "Official provider API price pages — current snapshot",
+        "url": "/sources/",
+        "kind": "market",
+    },
+    "model_history": {
+        "label": "Epoch AI — historical LLM inference price research",
         "url": "https://epoch.ai/data-insights/llm-inference-price-trends",
         "kind": "market",
     },
@@ -69,7 +75,220 @@ SOURCES = {
         "url": "/sources/",
         "kind": "strategic",
     },
+    "supply_chain": {
+        "label": "Primary-source AI hardware supply-chain ledger",
+        "url": "/sources/",
+        "kind": "strategic",
+    },
 }
+
+SUPPLY_CHAIN_VERIFIED_ON = dt.date(2026, 7, 20)
+
+SUPPLY_CHAIN_STAGES = [
+    {
+        "key": "materials",
+        "number": "01",
+        "label": "Critical materials",
+        "lane": "feedstock",
+        "input": "Rare earths, gallium, germanium, copper and specialty gases",
+        "output": "Magnets, power components, optics and process materials",
+        "hubs": ["China", "United States", "Australia", "Malaysia"],
+        "companies": ["China Northern Rare Earth", "MP Materials", "Lynas"],
+        "choke_level": "critical",
+        "choke": "Separation, refining and permanent magnets",
+        "why": "Rare earths are not the silicon in a GPU; they enter through fab equipment, power delivery, cooling, motors and other data-center systems. China accounted for 91% of refined magnet rare earths and 94% of sintered permanent magnets in 2024.",
+        "evidence_date": "2026 report · 2024 production",
+        "sources": [
+            {
+                "label": "IEA Rare Earth Elements",
+                "url": "https://www.iea.org/reports/rare-earth-elements/executive-summary",
+            }
+        ],
+    },
+    {
+        "key": "wafers",
+        "number": "02",
+        "label": "Silicon wafers",
+        "lane": "core",
+        "input": "Electronic-grade polysilicon",
+        "output": "Qualified 300 mm polished and epitaxial wafers",
+        "hubs": ["Japan", "Germany", "Singapore", "Taiwan", "South Korea"],
+        "companies": ["Shin-Etsu", "SUMCO", "GlobalWafers", "Siltronic", "SK Siltron"],
+        "choke_level": "high",
+        "choke": "A small qualified supplier set and slow fab qualification",
+        "why": "AI logic and HBM both depend on high-quality 300 mm wafers. SEMI reported 12,973 million square inches of global silicon-wafer shipments in 2025 and highlighted strong AI-led demand for leading-edge wafers.",
+        "evidence_date": "Feb 2026 · 2025 shipments",
+        "sources": [
+            {
+                "label": "SEMI wafer shipments",
+                "url": "https://www.semi.org/en/semi-press-release/semi-reports-2025-annual-worldwide-silicon-wafer-shipments-and-revenue-results",
+            },
+            {
+                "label": "Siltronic 2025 annual report",
+                "url": "https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260312_Siltronic_Annual_Report_2025_safe.pdf",
+            },
+        ],
+    },
+    {
+        "key": "tools",
+        "number": "03",
+        "label": "Fab tools",
+        "lane": "core",
+        "input": "Lithography, deposition, etch, inspection and EDA",
+        "output": "The ability to print advanced logic and memory",
+        "hubs": ["Netherlands", "United States", "Japan"],
+        "companies": ["ASML", "Applied Materials", "Lam Research", "KLA", "Tokyo Electron"],
+        "choke_level": "critical",
+        "choke": "ASML is the only producer of EUV lithography systems",
+        "why": "Leading-edge logic and DRAM depend on EUV for their most intricate layers. ASML sold 48 EUV systems in 2025; the technology remains unique to one supplier and a deeply specialized supplier network.",
+        "evidence_date": "ASML FY2025",
+        "sources": [
+            {
+                "label": "ASML EUV systems",
+                "url": "https://www.asml.com/products/euv-lithography-systems",
+            },
+            {
+                "label": "ASML 2025 annual report",
+                "url": "https://www.asml.com/en/investors/annual-report/2025",
+            },
+        ],
+    },
+    {
+        "key": "accelerators",
+        "number": "04",
+        "label": "Accelerator dies",
+        "lane": "core",
+        "input": "Chip designs plus leading-edge wafer capacity",
+        "output": "GPU, TPU and custom accelerator dies",
+        "hubs": ["Taiwan", "United States", "South Korea"],
+        "companies": ["TSMC", "Samsung", "NVIDIA", "AMD", "Google", "Broadcom"],
+        "choke_level": "critical",
+        "choke": "Leading-edge foundry capacity and yield",
+        "why": "NVIDIA and AMD disclose that TSMC is a core wafer foundry. TSMC managed more than 17 million 12-inch-equivalent wafers of annual capacity in 2025, with most of its large fab base still in Taiwan despite expansion in Arizona and Japan.",
+        "evidence_date": "TSMC and NVIDIA FY2025/26",
+        "sources": [
+            {
+                "label": "TSMC 2025 annual report",
+                "url": "https://investor.tsmc.com/static/annualReports/2025/english/index.html",
+            },
+            {
+                "label": "NVIDIA FY2026 10-K",
+                "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+            },
+        ],
+    },
+    {
+        "key": "memory",
+        "number": "05",
+        "label": "HBM memory",
+        "lane": "parallel",
+        "input": "Leading-edge DRAM wafers and through-silicon-via stacking",
+        "output": "High-bandwidth memory stacks",
+        "hubs": ["South Korea", "United States", "Japan", "Taiwan"],
+        "companies": ["SK hynix", "Samsung", "Micron"],
+        "choke_level": "high",
+        "choke": "Qualified HBM supply, stacking yield and capacity ramps",
+        "why": "HBM is made on a parallel track and converges with the accelerator at packaging. NVIDIA identifies SK hynix, Micron and Samsung as its memory suppliers; SK hynix and Micron announced HBM4 production readiness and ramps for the next platform cycle.",
+        "evidence_date": "NVIDIA FY2026 · supplier updates 2025/26",
+        "sources": [
+            {
+                "label": "NVIDIA FY2026 10-K",
+                "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+            },
+            {
+                "label": "SK hynix HBM4 production readiness",
+                "url": "https://news.skhynix.com/sk-hynix-completes-worlds-first-hbm4-development-and-readies-mass-production/",
+            },
+        ],
+    },
+    {
+        "key": "packaging",
+        "number": "06",
+        "label": "Advanced packaging",
+        "lane": "convergence",
+        "input": "Accelerator dies, HBM stacks and substrates",
+        "output": "A complete AI accelerator package",
+        "hubs": ["Taiwan", "South Korea", "Malaysia", "United States"],
+        "companies": ["TSMC CoWoS", "ASE", "Amkor", "Samsung"],
+        "choke_level": "critical",
+        "choke": "CoWoS-class capacity, substrates and thermal integration",
+        "why": "This is where logic and memory become one accelerator. NVIDIA explicitly identifies CoWoS as its packaging technology, while TSMC describes advanced packaging and 3D stacking as core capacity for high-performance computing.",
+        "evidence_date": "TSMC and NVIDIA FY2025/26",
+        "sources": [
+            {
+                "label": "TSMC 2025 annual report",
+                "url": "https://investor.tsmc.com/static/annualReports/2025/english/index.html",
+            },
+            {
+                "label": "NVIDIA FY2026 10-K",
+                "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+            },
+        ],
+    },
+    {
+        "key": "systems",
+        "number": "07",
+        "label": "Servers & computers",
+        "lane": "system",
+        "input": "Accelerators, CPUs, networking, power and cooling",
+        "output": "AI servers, racks, clusters and workstations",
+        "hubs": ["Taiwan", "Mexico", "United States", "Southeast Asia"],
+        "companies": ["Hon Hai / Foxconn", "Quanta", "Wistron", "Inventec", "Supermicro", "Dell", "HPE"],
+        "choke_level": "high",
+        "choke": "Rack integration, networking, power delivery and liquid cooling",
+        "why": "NVIDIA names Hon Hai, Wistron and Fabrinet among its assembly, test and packaging partners and says its supply chain remains mainly concentrated in Asia while expanding into the United States and Latin America.",
+        "evidence_date": "NVIDIA FY2026",
+        "sources": [
+            {
+                "label": "NVIDIA FY2026 10-K",
+                "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+            },
+            {
+                "label": "Hon Hai 2025 annual report",
+                "url": "https://image.honhai.com/upload/202605/financy_by_year/2025_Annual_Report_20260523_7728.pdf",
+            },
+        ],
+    },
+    {
+        "key": "destinations",
+        "number": "08",
+        "label": "Destinations",
+        "lane": "demand",
+        "input": "Finished systems and cloud capacity",
+        "output": "Data centers, model labs, enterprises, governments and edge systems",
+        "hubs": ["United States", "Europe", "China", "Middle East", "Asia-Pacific"],
+        "companies": ["Cloud providers", "AI labs", "Neoclouds", "Enterprises", "Public sector"],
+        "choke_level": "policy",
+        "choke": "Customer concentration, grid access and export licensing",
+        "why": "NVIDIA's FY2026 revenue is a useful AI-accelerator proxy: about 90% went to Data Center. Billing geography is not final destination—NVIDIA says 76% of Data Center revenue billed to Taiwan-headquartered customers was attributable to end customers in the United States and Europe.",
+        "evidence_date": "NVIDIA FY2026 · BIS Jan/May 2026",
+        "sources": [
+            {
+                "label": "NVIDIA FY2026 10-K",
+                "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+            },
+            {
+                "label": "BIS China license policy",
+                "url": "https://www.bis.gov/press-release/department-commerce-revises-license-review-policy-semiconductors-exported-china",
+            },
+        ],
+    },
+]
+
+SUPPLY_CHAIN_DESTINATIONS = [
+    {"label": "Data center", "revenue_millions": 193737, "share": 89.7},
+    {"label": "Gaming", "revenue_millions": 16042, "share": 7.4},
+    {"label": "Professional visualization", "revenue_millions": 3191, "share": 1.5},
+    {"label": "Automotive", "revenue_millions": 2349, "share": 1.1},
+    {"label": "OEM & other", "revenue_millions": 619, "share": 0.3},
+]
+
+SUPPLY_CHAIN_BILLING_ROUTES = [
+    {"label": "United States-headquartered customers", "share": 69.3},
+    {"label": "Taiwan-headquartered customers", "share": 19.6},
+    {"label": "China and Hong Kong-headquartered customers", "share": 9.1},
+    {"label": "Other customer headquarters", "share": 2.0},
+]
 
 DIFFUSION_LABS = {
     "DeepSeek": ["deepseek"],
@@ -627,7 +846,97 @@ def infer_model_organization(name):
     return "Other"
 
 
-def build_model_frontier():
+def build_model_value(now):
+    """Build a freshness-gated view of current first-party API list prices."""
+    snapshot = load_json(MODEL_PRICE_PATH, {})
+    verified_on = dt.date.fromisoformat(snapshot.get("verified_on", ""))
+    age_days = max(0, (now.date() - verified_on).days)
+    max_age_days = int(snapshot.get("max_current_age_days", 30))
+    if age_days <= max_age_days // 2:
+        freshness = "current"
+    elif age_days <= max_age_days:
+        freshness = "review_due"
+    else:
+        freshness = "expired"
+
+    models = []
+    for source_row in snapshot.get("models", []):
+        row = dict(source_row)
+        price_until = row.get("price_until")
+        if price_until and now.date() > dt.date.fromisoformat(price_until):
+            row["input_price"] = row.pop("next_input_price")
+            row["output_price"] = row.pop("next_output_price")
+            if row.get("next_cached_input_price") is not None:
+                row["cached_input_price"] = row.pop("next_cached_input_price")
+            row["context_note"] = (
+                "Scheduled standard pricing effective after " + price_until
+            )
+        row["blended_price"] = round(
+            float(row["input_price"]) * 0.75
+            + float(row["output_price"]) * 0.25,
+            4,
+        )
+        models.append(row)
+    models.sort(key=lambda row: (row["blended_price"], row["name"]))
+
+    return {
+        "status": "available",
+        "verified_on": verified_on.isoformat(),
+        "verified_display": verified_on.strftime("%b %d, %Y"),
+        "age_days": age_days,
+        "max_current_age_days": max_age_days,
+        "freshness": freshness,
+        "models": models,
+        "profiles": [
+            {"key": "input", "label": "Input-heavy", "input_share": 0.75, "output_share": 0.25},
+            {"key": "balanced", "label": "Balanced", "input_share": 0.5, "output_share": 0.5},
+            {"key": "output", "label": "Output-heavy", "input_share": 0.25, "output_share": 0.75},
+        ],
+        "default_profile": "input",
+        "metric": "Official first-party list price by workload shape",
+        "price_metric": "USD per 1M tokens; cache-miss input and output",
+        "method_note": (
+            "This is a price comparison, not a capability ranking. Tokenizers, reasoning-token use, "
+            "latency, reliability, tools and provider terms differ. Rankings are hidden after the "
+            "freshness window expires."
+        ),
+        "live_benchmark_url": "https://artificialanalysis.ai/models",
+        "source": "model",
+    }
+
+
+def build_supply_chain(now):
+    """Build the physical AI supply-chain and destination ledger."""
+    age_days = max(0, (now.date() - SUPPLY_CHAIN_VERIFIED_ON).days)
+    stages = [dict(stage) for stage in SUPPLY_CHAIN_STAGES]
+    critical_count = sum(stage["choke_level"] == "critical" for stage in stages)
+    return {
+        "verified_on": SUPPLY_CHAIN_VERIFIED_ON.isoformat(),
+        "verified_display": SUPPLY_CHAIN_VERIFIED_ON.strftime("%b %d, %Y"),
+        "age_days": age_days,
+        "freshness": "current" if age_days <= 90 else "review_due",
+        "stages": stages,
+        "critical_count": critical_count,
+        "high_or_critical_count": sum(
+            stage["choke_level"] in {"high", "critical"} for stage in stages
+        ),
+        "kpis": [
+            {"value": "91%", "label": "China share of refined magnet rare earths", "period": "2024 · IEA 2026"},
+            {"value": "1", "label": "supplier of production EUV systems", "period": "ASML"},
+            {"value": "17M+", "label": "TSMC 12-inch-equivalent wafer capacity", "period": "2025"},
+            {"value": "89.7%", "label": "NVIDIA revenue from Data Center", "period": "FY2026 proxy"},
+        ],
+        "destinations": SUPPLY_CHAIN_DESTINATIONS,
+        "billing_routes": SUPPLY_CHAIN_BILLING_ROUTES,
+        "destination_note": (
+            "NVIDIA is used as a disclosed AI-accelerator demand proxy, not the whole semiconductor market. "
+            "Customer-headquarters revenue is not shipment geography or final end use."
+        ),
+        "source": "supply_chain",
+    }
+
+
+def build_model_history():
     text = fetch_bytes(EPOCH_MODEL_URL).decode("utf-8-sig")
     rows = []
     for row in csv.DictReader(io.StringIO(text)):
@@ -679,7 +988,7 @@ def build_model_frontier():
         "data_through": newest,
         "models": candidates,
         "metric": "Benchmark score versus standardized API price",
-        "source": "model",
+        "source": "model_history",
     }
 
 
@@ -776,20 +1085,23 @@ def main():
         "generated_display": now.astimezone().strftime("%b %d, %Y"),
         "coverage_generated_display": news.get("generated_display", ""),
         "diffusion_watch": build_diffusion_watch(items, now),
+        "supply_chain": build_supply_chain(now),
         "topic_lifecycle": build_topic_history(news, items, now),
         "industry_stack": build_stack(items),
-        "model_frontier": preserve_or_build(previous, "model_frontier", build_model_frontier),
+        "model_value": build_model_value(now),
+        "model_history": preserve_or_build(previous, "model_history", build_model_history),
         "adoption": preserve_or_build(previous, "adoption", build_adoption),
         "company_economics": preserve_or_build(previous, "company_economics", build_company_economics),
         "sources": SOURCES,
     }
     write_json(OUT_PATH, payload)
     print(
-        "Wrote %s (%d topic series, %d companies, %d adoption sectors)."
+        "Wrote %s (%d topic series, %d companies, %d supply-chain stages, %d adoption sectors)."
         % (
             OUT_PATH,
             len(payload["topic_lifecycle"].get("series", [])),
             len(payload["industry_stack"].get("companies", [])),
+            len(payload["supply_chain"].get("stages", [])),
             len(payload["adoption"].get("sectors", [])),
         )
     )

@@ -1,0 +1,89 @@
+{
+  "verified_on": "2026-07-20",
+  "max_current_age_days": 30,
+  "models": [
+    {
+      "name": "GPT-5.6 Sol",
+      "organization": "OpenAI",
+      "input_price": 5.0,
+      "cached_input_price": 0.5,
+      "output_price": 30.0,
+      "context_note": "Standard, short-context API pricing",
+      "source_label": "OpenAI API pricing",
+      "source_url": "https://developers.openai.com/api/docs/pricing"
+    },
+    {
+      "name": "Claude Fable 5",
+      "organization": "Anthropic",
+      "input_price": 10.0,
+      "cached_input_price": 1.0,
+      "output_price": 50.0,
+      "context_note": "First-party Claude API base pricing",
+      "source_label": "Claude Platform pricing",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    {
+      "name": "Claude Sonnet 5",
+      "organization": "Anthropic",
+      "input_price": 2.0,
+      "cached_input_price": 0.2,
+      "output_price": 10.0,
+      "price_until": "2026-08-31",
+      "next_input_price": 3.0,
+      "next_cached_input_price": 0.3,
+      "next_output_price": 15.0,
+      "context_note": "Introductory pricing through Aug 31, 2026; scheduled standard pricing is applied automatically afterward",
+      "source_label": "Claude Platform pricing",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    {
+      "name": "Gemini 3.5 Flash",
+      "organization": "Google",
+      "input_price": 1.5,
+      "cached_input_price": 0.15,
+      "output_price": 9.0,
+      "context_note": "Paid-tier standard text pricing",
+      "source_label": "Gemini Developer API pricing",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing"
+    },
+    {
+      "name": "Grok 4.5",
+      "organization": "xAI",
+      "input_price": 2.0,
+      "cached_input_price": 0.5,
+      "output_price": 6.0,
+      "context_note": "Standard, short-context API pricing",
+      "source_label": "xAI API pricing",
+      "source_url": "https://docs.x.ai/developers/pricing"
+    },
+    {
+      "name": "Kimi K3",
+      "organization": "Moonshot AI",
+      "input_price": 3.0,
+      "cached_input_price": 0.3,
+      "output_price": 15.0,
+      "context_note": "Official Kimi API cache-miss input and output pricing",
+      "source_label": "Kimi K3 technical blog",
+      "source_url": "https://www.kimi.com/blog/kimi-k3"
+    },
+    {
+      "name": "DeepSeek V4 Pro",
+      "organization": "DeepSeek",
+      "input_price": 0.435,
+      "cached_input_price": 0.003625,
+      "output_price": 0.87,
+      "context_note": "Official cache-miss input and output pricing",
+      "source_label": "DeepSeek models and pricing",
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing/"
+    },
+    {
+      "name": "Mistral Medium 3.5",
+      "organization": "Mistral AI",
+      "input_price": 1.5,
+      "output_price": 7.5,
+      "context_note": "First-party API list pricing; no cache price included",
+      "source_label": "Mistral Medium 3.5 model card",
+      "source_url": "https://docs.mistral.ai/models/model-cards/mistral-medium-3-5-26-04"
+    }
+  ]
+}

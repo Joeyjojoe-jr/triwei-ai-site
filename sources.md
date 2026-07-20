@@ -32,8 +32,18 @@ The [AI Industry Atlas](/industry/) keeps coverage signals and industry measures
 
 - **Momentum and industry stack** use TriWei's deduplicated story sample. They describe this site's coverage, not market share or company performance. Daily topic aggregates are retained for up to 90 days.
 - **Business adoption** comes from the U.S. Census Bureau's [Business Trends and Outlook Survey](https://www.census.gov/hfp/btos/data_downloads). The chart uses the latest sector estimates under the AI question wording introduced in November 2025 and does not splice them onto the older series.
-- **Model value** uses the reproducible dataset behind Epoch AI's [LLM inference price analysis](https://epoch.ai/data-insights/llm-inference-price-trends). Price is a 3:1 weighted average of input and output token prices; benchmark performance is informative but not a complete measure of model usefulness.
+- **Current model API cost** uses prices checked against first-party pages from [OpenAI](https://developers.openai.com/api/docs/pricing), [Anthropic](https://platform.claude.com/docs/en/about-claude/pricing), [Google](https://ai.google.dev/gemini-api/docs/pricing), [xAI](https://docs.x.ai/developers/pricing), [DeepSeek](https://api-docs.deepseek.com/quick_start/pricing/), [Kimi](https://www.kimi.com/blog/kimi-k3), and [Mistral](https://docs.mistral.ai/models/model-cards/mistral-medium-3-5-26-04). The interactive chart changes the input/output token mix but never equates price with capability. A freshness guard pauses the current ranking after 30 days unless the ledger is re-verified.
+- **Historical model value** retains the reproducible dataset behind Epoch AI's [LLM inference price analysis](https://epoch.ai/data-insights/llm-inference-price-trends), clearly labeled with its February 2025 endpoint. It is available for historical analysis only, not current buying guidance. For continuously measured independent performance, use the [Artificial Analysis live model index](https://artificialanalysis.ai/models).
 - **Lab economics** uses Epoch AI's [AI Companies dataset](https://epoch.ai/data/ai-companies). Private-company revenue, funding, and staffing figures may combine disclosures and credible public estimates, so confidence and comparability are limited.
+
+## Physical AI Supply-Chain Watch
+
+The supply-chain map follows eight production stages: critical materials, silicon wafers, fab tools, accelerator dies, HBM, advanced packaging, servers and computers, and destination markets. It is a dated evidence ledger—not a claim that every vendor or shipment follows one route.
+
+- Critical-material concentration uses the IEA's 2026 [Rare Earth Elements](https://www.iea.org/reports/rare-earth-elements/executive-summary) and [Global Critical Minerals Outlook](https://www.iea.org/reports/global-critical-minerals-outlook-2026/executive-summary). Rare earths are shown as inputs to fab equipment, power, cooling, motors, and related systems; they are not mislabeled as the silicon substrate in a GPU.
+- Wafer demand and locations use [SEMI's 2025 shipment report](https://www.semi.org/en/semi-press-release/semi-reports-2025-annual-worldwide-silicon-wafer-shipments-and-revenue-results), [SUMCO](https://www.sumcosi.com/english/), and [Siltronic's 2025 annual report](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260312_Siltronic_Annual_Report_2025_safe.pdf).
+- Tool, foundry, memory, packaging, and system routes use [ASML's EUV documentation](https://www.asml.com/products/euv-lithography-systems), [TSMC's 2025 annual report](https://investor.tsmc.com/static/annualReports/2025/english/index.html), [NVIDIA's FY2026 Form 10-K](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm), and supplier disclosures. Representative companies indicate the cluster; they are not a complete supplier list or market-share estimate.
+- Destination bars use NVIDIA's disclosed FY2026 revenue by end market as an AI-accelerator demand proxy, not the whole semiconductor market. Its customer-headquarters geography is shown separately because billing address, shipment location, cloud operator, and final end user can differ. Current export-policy gates link to the U.S. Bureau of Industry and Security's [January 2026 China licensing policy](https://www.bis.gov/press-release/department-commerce-revises-license-review-policy-semiconductors-exported-china).
 
 ## Frontier Diffusion Watch
 
@@ -48,4 +58,4 @@ The evidence timeline uses primary sources and keeps four classes separate:
 
 Benchmark similarity, answer style, or release timing alone is never treated as proof of model lineage.
 
-External sections keep the last successfully retrieved snapshot if a source is temporarily unavailable. Every chart shows its definition, source, freshness, and a tabular alternative.
+External sections keep the last successfully retrieved snapshot if a source is temporarily unavailable, but current API prices expire visibly instead of silently masquerading as live data. Every chart shows its definition, source, freshness, and a tabular alternative.

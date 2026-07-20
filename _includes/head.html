@@ -80,6 +80,8 @@
   {% endif %}
 
   {% if page.layout == "home" %}
+  <link rel="stylesheet" href="{{ '/assets/css/guided-home.css' | relative_url }}">
+  <script src="{{ '/assets/js/guided-home.js' | relative_url }}" defer></script>
   <!-- Give rotating folder cards slightly more desktop clearance without changing the mobile stack. -->
   <style>
     @media (min-width: 721px) {

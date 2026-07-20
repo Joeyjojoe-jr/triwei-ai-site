@@ -35,4 +35,17 @@ The [AI Industry Atlas](/industry/) keeps coverage signals and industry measures
 - **Model value** uses the reproducible dataset behind Epoch AI's [LLM inference price analysis](https://epoch.ai/data-insights/llm-inference-price-trends). Price is a 3:1 weighted average of input and output token prices; benchmark performance is informative but not a complete measure of model usefulness.
 - **Lab economics** uses Epoch AI's [AI Companies dataset](https://epoch.ai/data/ai-companies). Private-company revenue, funding, and staffing figures may combine disclosures and credible public estimates, so confidence and comparability are limited.
 
+## Frontier Diffusion Watch
+
+The strategic watch tracks China-based labs, model distillation, output extraction claims, capability convergence, and open-weight releases. A dedicated news query expands the live coverage sample, while a rolling one-year aggregate preserves the signal over time.
+
+The evidence timeline uses primary sources and keeps four classes separate:
+
+- **Developer disclosure** records teacher models or training methods identified by the developer, such as the [DeepSeek-R1 distillation releases](https://github.com/deepseek-ai/DeepSeek-R1).
+- **Provider-attributed claim** records a named provider's published attribution, including [Anthropic's distillation-attack report](https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks) and [OpenAI's U.S. House committee submission](https://cdn.openai.com/pdf/045aa967-ee96-4a09-94ee-3098ddf6db2c/OpenAI-US-House-Select-Cmte-Update-%5B021226%5D.pdf). These are labeled claims, not independent adjudications.
+- **Weights released** requires publicly downloadable checkpoints, as with [Kimi K2](https://github.com/MoonshotAI/Kimi-K2).
+- **Weights announced** records a developer commitment that has not yet been verified as a completed release, such as [Kimi K3's July 27 weight-release target](https://www.kimi.com/blog/kimi-k3).
+
+Benchmark similarity, answer style, or release timing alone is never treated as proof of model lineage.
+
 External sections keep the last successfully retrieved snapshot if a source is temporarily unavailable. Every chart shows its definition, source, freshness, and a tabular alternative.

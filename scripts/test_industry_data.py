@@ -5,6 +5,22 @@ import validate_industry_data
 
 
 class IndustryDataTests(unittest.TestCase):
+    def test_diffusion_watch_requires_a_tracked_lab_and_core_signal(self):
+        match = build_industry_data.diffusion_story({
+            "title": "Moonshot announces open-weight Kimi model",
+            "summary": "The model targets frontier coding benchmarks.",
+        })
+        self.assertEqual(["Moonshot / Kimi"], match["labs"])
+        self.assertIn("Open weights", match["signals"])
+        self.assertIsNone(build_industry_data.diffusion_story({
+            "title": "Kimi adds a spreadsheet feature",
+            "summary": "A routine product update.",
+        }))
+        self.assertIsNone(build_industry_data.diffusion_story({
+            "title": "Open-weight model released",
+            "summary": "No tracked lab is named.",
+        }))
+
     def test_stack_counts_company_layer_intersections(self):
         items = [
             {"title": "OpenAI rents cloud compute", "summary": "New model training deal"},
@@ -30,6 +46,16 @@ class IndustryDataTests(unittest.TestCase):
 
     def test_validator_accepts_minimal_complete_payload(self):
         payload = {
+            "diffusion_watch": {
+                "coverage": {"story_count": 1, "daily": []},
+                "evidence_classes": [{"key": "disclosed"}],
+                "milestones": [{
+                    "date": "2026-01-01",
+                    "headline": "Example",
+                    "evidence_class": "disclosed",
+                    "source_url": "https://example.com/source",
+                }],
+            },
             "topic_lifecycle": {
                 "series": [{"term": "AI", "points": [{"share": 25}]}]
             },
@@ -54,6 +80,7 @@ class IndustryDataTests(unittest.TestCase):
                 "census": {"label": "Census", "url": "https://example.com/census"},
                 "model": {"label": "Models", "url": "https://example.com/models"},
                 "company": {"label": "Companies", "url": "https://example.com/companies"},
+                "diffusion": {"label": "Diffusion", "url": "/sources/"},
             },
         }
         self.assertEqual([], validate_industry_data.validate(payload))

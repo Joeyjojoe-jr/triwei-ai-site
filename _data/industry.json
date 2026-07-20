@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-07-20T15:33:54.206469Z",
+  "generated_utc": "2026-07-20T15:49:41.028575Z",
   "generated_display": "Jul 20, 2026",
-  "coverage_generated_display": "July 20, 2026 at 10:17 AM CDT",
+  "coverage_generated_display": "July 20, 2026 at 10:49 AM CDT",
   "diffusion_watch": {
     "coverage": {
       "story_count": 3,
@@ -555,44 +555,13 @@
           {
             "date": "2026-07-20",
             "count": 4,
-            "share": 8.2
-          }
-        ]
-      },
-      {
-        "term": "agent",
-        "total": 7,
-        "points": [
-          {
-            "date": "2026-07-16",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-17",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-18",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-19",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-20",
-            "count": 7,
-            "share": 14.3
+            "share": 8.0
           }
         ]
       },
       {
         "term": "Anthropic",
-        "total": 6,
+        "total": 7,
         "points": [
           {
             "date": "2026-07-16",
@@ -616,8 +585,39 @@
           },
           {
             "date": "2026-07-20",
-            "count": 3,
-            "share": 6.1
+            "count": 4,
+            "share": 8.0
+          }
+        ]
+      },
+      {
+        "term": "agent",
+        "total": 6,
+        "points": [
+          {
+            "date": "2026-07-16",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-17",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-18",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-19",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-20",
+            "count": 6,
+            "share": 12.0
           }
         ]
       },
@@ -648,7 +648,7 @@
           {
             "date": "2026-07-20",
             "count": 4,
-            "share": 8.2
+            "share": 8.0
           }
         ]
       },
@@ -679,13 +679,13 @@
           {
             "date": "2026-07-20",
             "count": 2,
-            "share": 4.1
+            "share": 4.0
           }
         ]
       },
       {
         "term": "Claude",
-        "total": 2,
+        "total": 1,
         "points": [
           {
             "date": "2026-07-16",
@@ -709,8 +709,8 @@
           },
           {
             "date": "2026-07-20",
-            "count": 1,
-            "share": 2.0
+            "count": 0,
+            "share": 0.0
           }
         ]
       }
@@ -759,7 +759,7 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 2
+            "count": 3
           },
           {
             "key": "apps",
@@ -775,7 +775,7 @@
       },
       {
         "name": "Moonshot",
-        "story_count": 6,
+        "story_count": 5,
         "cells": [
           {
             "key": "hardware",
@@ -790,7 +790,7 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 5
+            "count": 4
           },
           {
             "key": "apps",
@@ -960,7 +960,7 @@
         ]
       }
     ],
-    "max_count": 5,
+    "max_count": 4,
     "metric": "Distinct stories mentioning both the company and layer",
     "source": "coverage"
   },

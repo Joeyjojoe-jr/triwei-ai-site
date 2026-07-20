@@ -1170,8 +1170,8 @@ body::after {
 
 .orbit {
   position: relative;
-  width: min(800px, 100%);
-  height: 700px;
+  width: min(1080px, 100%);
+  height: 960px;
   margin: 0.5rem auto 1.5rem;
 }
 .orbit-core {
@@ -1191,8 +1191,8 @@ body::after {
 
 .orbit-folder {
   position: absolute; top: 50%; left: 50%;
-  --r: 258px;
-  width: 224px;
+  --r: 360px;
+  width: 280px;
   transform: translate(-50%, -50%) rotate(var(--a)) translate(0, calc(-1 * var(--r)));
 }
 .folder-spin { display: block; animation: orbit-spin-rev 96s linear infinite; }
@@ -1201,7 +1201,7 @@ body::after {
 
 .folder-card {
   transform: rotate(calc(-1 * var(--a)));
-  width: 224px;
+  width: 280px;
   background: color-mix(in srgb, var(--surface) 88%, transparent);
   border: 2px solid var(--accent);
   border-radius: 4px;
@@ -1230,6 +1230,10 @@ body::after {
   display: flex; gap: 0.4rem; align-items: flex-start;
   font-size: 0.76rem; line-height: 1.28; color: var(--text); text-decoration: none;
 }
+.folder-heads .rank-title {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
 .folder-heads li a:hover { color: var(--accent); }
 .folder-heads .rank {
   flex: none; font-family: var(--mono); font-size: 0.66rem; font-weight: 700;
@@ -1241,12 +1245,12 @@ body::after {
   body::before, body::after { animation: none !important; }
 }
 
-/* Small screens: no orbit, stack folder cards */
-@media (max-width: 720px) {
+/* Small and medium screens: no orbit, stack folder cards */
+@media (max-width: 960px) {
   .orbit { height: auto; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
   .orbit-core { position: static; transform: none; width: 180px; height: 180px; }
   .orbit-ring { position: static; inset: auto; animation: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; width: 100%; }
-  .orbit-folder { position: static !important; transform: none !important; --r: 0; width: min(300px, 92%); }
+  .orbit-folder { position: static !important; transform: none !important; --r: 0; width: min(340px, 100%); }
   .folder-spin { animation: none !important; }
   .folder-card { transform: none !important; width: 100%; }
 }

@@ -1,4 +1,5 @@
 import unittest
+from unittest import mock
 
 import fetch_news
 
@@ -137,6 +138,101 @@ class SubcategoryTests(unittest.TestCase):
             {"term": "hip", "count": 20},
         ])
         self.assertEqual(10, items[0]["trend_score"])
+
+
+class StoryDeduplicationTests(unittest.TestCase):
+    def story(self, title, link=""):
+        return {"title": title, "link": link}
+
+    def test_same_url_ignores_tracking_parameters(self):
+        self.assertTrue(fetch_news.is_same_story(
+            self.story("A first headline", "https://example.com/story?utm_source=feed"),
+            self.story("A rewritten headline", "https://www.example.com/story"),
+        ))
+
+    def test_rejects_syndicated_headline_rewrite(self):
+        self.assertTrue(fetch_news.is_same_story(
+            self.story("OpenAI launches its new GPT-5 AI model today"),
+            self.story("OpenAI unveils GPT-5 AI model"),
+        ))
+
+    def test_rejects_punctuation_only_headline_change(self):
+        self.assertTrue(fetch_news.is_same_story(
+            self.story("Nvidia, Microsoft announce major AI partnership"),
+            self.story("Nvidia and Microsoft announce a major AI partnership"),
+        ))
+
+    def test_rejects_same_facts_with_light_rewrite(self):
+        self.assertTrue(fetch_news.is_same_story(
+            self.story("OpenAI's first hardware device is a screenless speaker that can move"),
+            self.story("OpenAI first device will be a movable, screenless speaker built as an AI companion"),
+        ))
+
+    def test_rejects_source_boilerplate_appended_to_headline(self):
+        self.assertTrue(fetch_news.is_same_story(
+            self.story("TYLSemi raises $43 million to create building blocks of custom AI chips"),
+            self.story("TYLSemi raises $43 million to create building blocks of custom AI chips - Euronext Markets: Real-time Stock Market Data"),
+        ))
+
+    def test_allows_different_take_on_same_event(self):
+        self.assertFalse(fetch_news.is_same_story(
+            self.story("OpenAI launches GPT-5 AI model"),
+            self.story("GPT-5 launch renews safety and copyright concerns"),
+        ))
+
+    def test_angle_marker_wins_even_when_rest_of_headline_is_nearly_identical(self):
+        self.assertFalse(fetch_news.is_same_story(
+            self.story("OpenAI launches GPT-5 AI model for enterprise developers worldwide"),
+            self.story("OpenAI launches GPT-5 AI model for enterprise developers amid safety concerns worldwide"),
+        ))
+
+    def test_allows_distinct_business_take_on_same_event(self):
+        self.assertFalse(fetch_news.is_same_story(
+            self.story("Anthropic launches Claude 5"),
+            self.story("Claude 5 could reshape Anthropic's enterprise pricing"),
+        ))
+
+    def test_collect_deduplicates_globally_but_keeps_distinct_angle(self):
+        feeds = {
+            "labs": [("rss", "labs-feed")],
+            "business": [("rss", "business-feed")],
+        }
+        rows = {
+            b"labs-feed": [{
+                "title": "OpenAI launches its new GPT-5 AI model today",
+                "link": "https://labs.example/gpt5",
+                "desc": "An artificial intelligence model launch.",
+                "date": "2026-07-19T12:00:00Z",
+            }],
+            b"business-feed": [
+                {
+                    "title": "OpenAI unveils GPT-5 AI model",
+                    "link": "https://business.example/gpt5-wire-copy",
+                    "desc": "An artificial intelligence model launch.",
+                    "date": "2026-07-19T12:05:00Z",
+                },
+                {
+                    "title": "GPT-5 launch renews safety and copyright concerns",
+                    "link": "https://business.example/gpt5-analysis",
+                    "desc": "The AI model raises artificial intelligence safety questions.",
+                    "date": "2026-07-19T12:10:00Z",
+                },
+            ],
+        }
+        with mock.patch.object(fetch_news, "FEEDS", feeds), \
+                mock.patch.object(fetch_news, "fetch", side_effect=lambda url: url.encode()), \
+                mock.patch.object(fetch_news, "parse_rss", side_effect=lambda raw: rows[raw]), \
+                mock.patch.object(fetch_news.time, "sleep"):
+            categories, all_items = fetch_news.collect()
+
+        self.assertEqual(len(all_items), 2)
+        self.assertEqual(len(categories["labs"]["items"]), 1)
+        self.assertEqual(len(categories["business"]["items"]), 1)
+        self.assertIn("safety", categories["business"]["items"][0]["title"])
+
+    def test_preserves_full_headline_text(self):
+        headline = "A" * 220
+        self.assertEqual(fetch_news.clean_text(headline, None), headline)
 
 
 if __name__ == "__main__":

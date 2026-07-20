@@ -8,7 +8,7 @@ TriWei AI is an automated tracker for AI news, trends, and hot topics. It refres
 
 ## How it works
 
-A scheduled job runs every six hours (via GitHub Actions). It pulls headlines from a spread of AI sources, removes duplicates, ranks the topics appearing most often, tags each story with any ethical dimensions it touches, and writes the results to a data file the site renders. No story is written by hand — the page reflects whatever the feeds are surfacing right now.
+A scheduled job runs every six hours (via GitHub Actions). It pulls headlines from a spread of AI sources, removes exact and near-duplicate articles across all folders, ranks the topics appearing most often, tags each story with any ethical dimensions it touches, and writes the results to a data file the site renders. The duplicate check is deliberately conservative: lightly rewritten or syndicated copies are collapsed, while reporting that adds a distinct angle—such as safety, copyright, pricing, or impact—can remain. No story is written by hand — the page reflects whatever the feeds are surfacing right now.
 
 ## What it tracks
 

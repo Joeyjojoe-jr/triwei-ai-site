@@ -9,7 +9,7 @@ function read(relativePath) {
   return fs.readFileSync(path.join(repoRoot, relativePath), 'utf8');
 }
 
-test('atlas page presents five question-led visualizations and the diffusion watch', () => {
+test('atlas page presents five question-led visualizations and both strategic watches', () => {
   const page = read('industry.md');
   const chartNames = ['topics', 'stack', 'models', 'adoption', 'economics'];
 
@@ -19,10 +19,18 @@ test('atlas page presents five question-led visualizations and the diffusion wat
   });
   assert.match(page, /Coverage signal/);
   assert.match(page, /Industry measure/);
+  assert.match(page, /id="supply-chain"/);
+  assert.match(page, /PRODUCTION SPLITS INTO PARALLEL ROUTES/);
+  assert.match(page, /supply-flow-convergence/);
+  assert.match(page, /include supply-stage\.html stage=stage/);
+  assert.match(page, /supply\.destinations/);
+  assert.match(page, /Billing address ≠ final destination/);
   assert.match(page, /id="diffusion"/);
   assert.match(page, /evidence-\{\{ milestone\.evidence_class \}\}/);
   assert.match(page, /diffusion\.evidence_classes/);
   assert.match(page, /matching output style or benchmark performance is not proof/i);
+  assert.match(page, /model_value\.freshness == "expired"/);
+  assert.match(page, /Historical research snapshot — not current buying guidance/);
   assert.match(page, /industry-atlas-data/);
 });
 
@@ -46,6 +54,11 @@ test('atlas styling provides mobile overflow and reduced-motion behavior', () =>
   assert.match(css, /@media \(prefers-reduced-motion: reduce\)/);
   assert.match(css, /\.atlas-heatmap-grid/);
   assert.match(css, /\.atlas-adoption-row/);
+  assert.match(css, /\.supply-chain-flow/);
+  assert.match(css, /\.supply-parallel-stack/);
+  assert.match(css, /\.supply-flow-convergence/);
+  assert.match(css, /\.supply-choke-critical/);
+  assert.match(css, /\.model-profile-button/);
   assert.match(css, /\.diffusion-timeline/);
   assert.match(css, /\.evidence-provider_claim/);
 });
@@ -56,4 +69,12 @@ test('homepage promotes the strategic diffusion watch', () => {
   assert.match(home, /Strategic watch · model diffusion/);
   assert.match(home, /\/industry\/#diffusion/);
   assert.match(home, /diffusion\.coverage\.story_count/);
+});
+
+test('homepage promotes the physical AI supply-chain watch', () => {
+  const home = read('_layouts/home.html');
+
+  assert.match(home, /Strategic watch · physical AI stack/);
+  assert.match(home, /\/industry\/#supply-chain/);
+  assert.match(home, /supply\.critical_count/);
 });

@@ -14,8 +14,8 @@ A GitHub Action (`.github/workflows/update-news.yml`) runs every 6 hours:
    dimensions it touches (bias, safety, privacy, copyright, labor, energy,
    regulation, and more).
 2. Results are written to `_data/news.json`; the Industry Atlas builder combines
-   that coverage with public Census and Epoch AI datasets and maintains a
-   primary-source Frontier Diffusion Watch.
+   that coverage with public Census and Epoch AI datasets, current first-party
+   API pricing, and primary-source hardware and Frontier Diffusion watches.
 3. The workflow commits the file; GitHub Pages rebuilds the site.
 
 The script uses only the Python standard library, so no extra installs are needed.
@@ -23,7 +23,7 @@ The script uses only the Python standard library, so no extra installs are neede
 ## Layout
 
 - `_layouts/home.html` — the live dashboard (trending, ethics watch, categories).
-- `industry.md` → `/industry/` — five-part AI Industry Atlas plus Frontier Diffusion Watch.
+- `industry.md` → `/industry/` — five-part AI Industry Atlas plus physical supply-chain and Frontier Diffusion watches.
 - `ethics.md` → `/ethics/` — full Ethics Watch.
 - `sources.md` → `/sources/` — sources and methodology.
 - `about.md` → `/about/` — what the site is.
@@ -31,6 +31,7 @@ The script uses only the Python standard library, so no extra installs are neede
 - `_data/industry.json` — generated coverage and industry measures for the atlas.
 - `_data/topic_history.json` — rolling 90-day topic aggregates.
 - `_data/diffusion_history.json` — rolling one-year model-diffusion coverage signals.
+- `_data/model_api_prices.json` — source-dated first-party API price ledger with an explicit freshness limit.
 - `scripts/fetch_news.py` — the aggregator.
 - `scripts/build_industry_data.py` — the Industry Atlas data builder.
 

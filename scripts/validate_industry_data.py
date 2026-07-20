@@ -88,17 +88,60 @@ def validate(payload):
             if len(company.get("cells", [])) != len(layers):
                 errors.append("industry_stack.companies[%d] must have one cell per layer" % index)
 
-    models = payload.get("model_frontier", {})
-    if models.get("status") != "unavailable":
-        rows = models.get("models")
-        if not isinstance(rows, list) or not rows:
-            errors.append("model_frontier.models must be non-empty when available")
+    supply_chain = payload.get("supply_chain", {})
+    stages = supply_chain.get("stages")
+    if not isinstance(stages, list) or len(stages) != 8:
+        errors.append("supply_chain.stages must contain eight stages")
+    else:
+        allowed_levels = {"critical", "high", "medium", "policy"}
+        for index, stage in enumerate(stages):
+            if stage.get("choke_level") not in allowed_levels:
+                errors.append("supply_chain.stages[%d].choke_level is unknown" % index)
+            if not stage.get("label") or not stage.get("hubs") or not stage.get("choke"):
+                errors.append("supply_chain.stages[%d] needs label, hubs, and choke" % index)
+            stage_sources = stage.get("sources")
+            if not isinstance(stage_sources, list) or not stage_sources:
+                errors.append("supply_chain.stages[%d].sources must be non-empty" % index)
+            else:
+                for source_index, source in enumerate(stage_sources):
+                    if not source.get("label") or not safe_url(source.get("url")):
+                        errors.append(
+                            "supply_chain.stages[%d].sources[%d] must be safe"
+                            % (index, source_index)
+                        )
+    destinations = supply_chain.get("destinations")
+    if not isinstance(destinations, list) or not destinations:
+        errors.append("supply_chain.destinations must be non-empty")
+    else:
+        destination_share = sum(row.get("share", 0) for row in destinations)
+        if not 99.5 <= destination_share <= 100.5:
+            errors.append("supply_chain.destinations shares must total approximately 100")
+
+    models = payload.get("model_value", {})
+    rows = models.get("models")
+    if not isinstance(rows, list) or not rows:
+        errors.append("model_value.models must be non-empty")
+    else:
+        for index, row in enumerate(rows):
+            for field in ("input_price", "output_price", "blended_price"):
+                if not is_number(row.get(field)) or row[field] <= 0:
+                    errors.append("model_value.models[%d].%s must be positive" % (index, field))
+            if not safe_url(row.get("source_url")):
+                errors.append("model_value.models[%d].source_url must be safe" % index)
+    if models.get("freshness") not in {"current", "review_due", "expired"}:
+        errors.append("model_value.freshness must be current, review_due, or expired")
+
+    history = payload.get("model_history", {})
+    if history.get("status") != "unavailable":
+        history_rows = history.get("models")
+        if not isinstance(history_rows, list) or not history_rows:
+            errors.append("model_history.models must be non-empty when available")
         else:
-            for index, row in enumerate(rows):
+            for index, row in enumerate(history_rows):
                 if not is_number(row.get("price")) or row["price"] <= 0:
-                    errors.append("model_frontier.models[%d].price must be positive" % index)
+                    errors.append("model_history.models[%d].price must be positive" % index)
                 if not is_number(row.get("score")):
-                    errors.append("model_frontier.models[%d].score must be numeric" % index)
+                    errors.append("model_history.models[%d].score must be numeric" % index)
 
     adoption = payload.get("adoption", {})
     if adoption.get("status") != "unavailable":

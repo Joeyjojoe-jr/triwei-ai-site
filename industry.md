@@ -2,7 +2,7 @@
 layout: default
 title: AI Industry Atlas
 permalink: /industry/
-description: Five evidence-backed views of the AI industry, plus a primary-source watch on model distillation and open-weight diffusion.
+description: Five evidence-backed views of the AI industry, plus primary-source watches on the physical chip supply chain and frontier-model diffusion.
 atlas: true
 ---
 {% assign atlas = site.data.industry %}
@@ -11,7 +11,7 @@ atlas: true
   <header class="atlas-hero card animate-in">
     <p class="eyebrow">Data, not hype</p>
     <h1>The AI industry, in five questions</h1>
-    <p class="lead">Move from what is getting attention to who is building, what delivers value, where AI is actually used, and which companies can sustain the frontier.</p>
+    <p class="lead">Move from what is getting attention to who is building, what current APIs cost, where the physical choke points sit, where AI is used, and which companies can sustain the frontier.</p>
     <div class="atlas-freshness" aria-label="Atlas freshness">
       <span>Industry data refreshed {{ atlas.generated_display | escape }}</span>
       <span>Coverage snapshot {{ atlas.coverage_generated_display | escape }}</span>
@@ -19,6 +19,7 @@ atlas: true
 
     <nav class="atlas-path" aria-label="Industry Atlas sections">
       <ol>
+        <li><a href="#supply-chain"><span>Watch</span>Chip supply chain</a></li>
         <li><a href="#diffusion"><span>Watch</span>Frontier diffusion</a></li>
         <li><a href="#momentum"><span>01</span>Momentum</a></li>
         <li><a href="#stack"><span>02</span>Industry stack</a></li>
@@ -34,6 +35,123 @@ atlas: true
       <span><i class="atlas-type atlas-type-strategic" aria-hidden="true"></i><strong>Strategic watch</strong> — claims, disclosures, and releases kept in separate evidence classes</span>
     </div>
   </header>
+
+  {% assign supply = atlas.supply_chain %}
+  <section class="atlas-section atlas-supply card animate-in" id="supply-chain" aria-labelledby="supply-chain-title">
+    <header class="atlas-section-head">
+      <div class="atlas-index atlas-index-watch" aria-hidden="true">⇢</div>
+      <div>
+        <p class="atlas-kind atlas-kind-strategic">Strategic watch</p>
+        <h2 id="supply-chain-title">Where is the physical AI stack made—and where can it break?</h2>
+        <p>Follow the real production route from critical materials and silicon wafers through fab tools, accelerator dies, HBM, advanced packaging, complete systems, and their destination markets.</p>
+      </div>
+    </header>
+
+    <div class="supply-freshness" aria-label="Supply-chain evidence freshness">
+      <span class="evidence-badge evidence-released">Evidence checked {{ supply.verified_display | escape }}</span>
+      <span>Company filings and institutional sources; figures retain their stated reference period.</span>
+    </div>
+
+    <div class="supply-kpis" aria-label="Supply-chain concentration summary">
+      {% for kpi in supply.kpis %}
+      <div><strong>{{ kpi.value | escape }}</strong><span>{{ kpi.label | escape }}</span><small>{{ kpi.period | escape }}</small></div>
+      {% endfor %}
+    </div>
+
+    <div class="supply-chain-flow" aria-label="AI hardware production map">
+      <div class="supply-flow-group">
+        <p class="supply-flow-label"><span>Upstream</span> Materials and tools qualify the two chip routes</p>
+        <div class="supply-flow-row supply-flow-row-upstream">
+          {% for stage in supply.stages limit: 3 %}
+            {% include supply-stage.html stage=stage %}
+            {% unless forloop.last %}<span class="supply-flow-arrow" aria-hidden="true">→</span>{% endunless %}
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="supply-flow-split" aria-hidden="true"><span>↙ COMPUTE DIE</span><strong>PRODUCTION SPLITS INTO PARALLEL ROUTES</strong><span>MEMORY ↘</span></div>
+
+      <div class="supply-flow-convergence">
+        <div class="supply-parallel-stack" aria-label="Parallel accelerator and memory production routes">
+          {% for stage in supply.stages offset: 3 limit: 2 %}
+            {% include supply-stage.html stage=stage %}
+          {% endfor %}
+        </div>
+        <span class="supply-converge-arrow" aria-hidden="true">⇒</span>
+        {% for stage in supply.stages offset: 5 limit: 1 %}
+          {% include supply-stage.html stage=stage %}
+        {% endfor %}
+      </div>
+
+      <div class="supply-flow-down" aria-hidden="true"><span>↓</span> PACKAGE BECOMES A DEPLOYABLE SYSTEM</div>
+
+      <div class="supply-flow-row supply-flow-row-demand">
+        {% for stage in supply.stages offset: 6 limit: 2 %}
+          {% include supply-stage.html stage=stage %}
+          {% unless forloop.last %}<span class="supply-flow-arrow" aria-hidden="true">→</span>{% endunless %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="supply-destination-grid">
+      <section class="supply-destinations" aria-labelledby="supply-destinations-title">
+        <div class="diffusion-subhead">
+          <div>
+            <p class="eyebrow">Where the systems go</p>
+            <h3 id="supply-destinations-title">NVIDIA FY2026 end-market proxy</h3>
+          </div>
+          <span>Share of disclosed revenue · not unit shipments</span>
+        </div>
+        <div class="supply-destination-bars">
+          {% for destination in supply.destinations %}
+          <div class="supply-destination-row">
+            <span>{{ destination.label | escape }}</span>
+            <div><i style="--destination-share: {{ destination.share }}%"></i></div>
+            <strong>{{ destination.share }}%</strong>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+
+      <aside class="supply-routing" aria-labelledby="supply-routing-title">
+        <p class="eyebrow">Routing reality</p>
+        <h3 id="supply-routing-title">Billing address ≠ final destination</h3>
+        <ul>
+          {% for route in supply.billing_routes %}
+          <li><span>{{ route.label | escape }}</span><strong>{{ route.share }}%</strong></li>
+          {% endfor %}
+        </ul>
+        <p>NVIDIA says 76% of Data Center revenue billed to Taiwan-headquartered customers was attributable to end customers in the United States and Europe. Export controls add a policy gate before some China-bound shipments.</p>
+      </aside>
+    </div>
+
+    <aside class="atlas-readout supply-readout">
+      <strong>Read the chain</strong>
+      <p>The most fragile points are not all mines or fabs. EUV tools, qualified 300 mm wafers, leading-edge foundry capacity, HBM yield, CoWoS-class packaging, rack power, and export licenses can each throttle the final number of usable AI systems.</p>
+    </aside>
+
+    <details class="atlas-data-table supply-table">
+      <summary>Inspect every stage, company cluster, caveat, and source</summary>
+      <div class="atlas-table-scroll">
+        <table>
+          <thead><tr><th>Stage</th><th>Production hubs</th><th>Representative companies</th><th>Choke point</th><th>Why it matters</th><th>Evidence</th></tr></thead>
+          <tbody>
+          {% for stage in supply.stages %}
+            <tr>
+              <th scope="row">{{ stage.number }} · {{ stage.label | escape }}</th>
+              <td>{{ stage.hubs | join: ", " | escape }}</td>
+              <td>{{ stage.companies | join: ", " | escape }}</td>
+              <td><span class="supply-choke supply-choke-{{ stage.choke_level }}">{{ stage.choke_level | escape }}</span><br>{{ stage.choke | escape }}</td>
+              <td>{{ stage.why | escape }}</td>
+              <td>{{ stage.evidence_date | escape }}{% for source in stage.sources %}<br><a href="{{ source.url | escape }}" target="_blank" rel="noopener noreferrer">{{ source.label | escape }} ↗</a>{% endfor %}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <p>{{ supply.destination_note | escape }}</p>
+    </details>
+  </section>
 
   {% assign diffusion = atlas.diffusion_watch %}
   <section class="atlas-section atlas-diffusion card animate-in" id="diffusion" aria-labelledby="diffusion-title">
@@ -223,39 +341,68 @@ atlas: true
       <div class="atlas-index" aria-hidden="true">03</div>
       <div>
         <p class="atlas-kind atlas-kind-market">Industry measure</p>
-        <h2 id="value-title">Which models deliver value?</h2>
-        <p>Independent benchmark performance versus standardized API price. The highlighted frontier contains models that were not beaten by a cheaper option in this research snapshot.</p>
+        <h2 id="value-title">What do leading model APIs cost now?</h2>
+        <p>Current first-party list prices, compared across input-heavy, balanced, and output-heavy workloads. Capability is deliberately not inferred from price.</p>
       </div>
     </header>
-    {% if atlas.model_frontier.status == "unavailable" %}
-      <p class="empty-state">{{ atlas.model_frontier.message | escape }}</p>
+    {% assign model_value = atlas.model_value %}
+    <div class="atlas-metric-line">
+      <span>Official prices checked {{ model_value.verified_display | escape }}</span>
+      <span>{{ model_value.price_metric | escape }}</span>
+      <span class="model-freshness model-freshness-{{ model_value.freshness }}">{{ model_value.freshness | replace: "_", " " | escape }}</span>
+    </div>
+    {% if model_value.freshness == "expired" %}
+      <div class="model-expired" role="status">
+        <strong>Current ranking paused</strong>
+        <p>This price snapshot is older than {{ model_value.max_current_age_days }} days, so TriWei will not present it as “current.” Use the linked provider pages below until the ledger is re-verified.</p>
+      </div>
     {% else %}
-      <div class="atlas-metric-line">
-        <span>{{ atlas.model_frontier.benchmark | escape }}</span>
-        <span>Research data through {{ atlas.model_frontier.data_through | date: "%b %Y" }}</span>
+      <div class="atlas-chart atlas-price-chart" data-atlas-chart="models" role="group" aria-label="Current model API price comparison">
+        <p class="atlas-loading">Comparing current API prices…</p>
       </div>
-      <div class="atlas-chart atlas-scatter" data-atlas-chart="models" role="group" aria-label="Model value frontier chart">
-        <p class="atlas-loading">Plotting price and performance…</p>
-      </div>
-      <div class="atlas-selection" data-atlas-selection="models" aria-live="polite">Select a model for exact values.</div>
+      <div class="atlas-selection" data-atlas-selection="models" aria-live="polite">Choose a workload shape, then select a model for exact input, cached-input, and output prices.</div>
       <aside class="atlas-readout">
         <strong>Read the signal</strong>
-        <p>Up and left is better: higher benchmark performance at a lower token price. This is a value lens, not a universal model ranking; reliability, context, latency, and task fit still matter.</p>
+        <p>Shorter bars mean lower list-price cost for the selected token mix—not “better model.” Reasoning-token use, tokenizer differences, cache behavior, latency, tools, reliability, and task success determine the bill that matters.</p>
       </aside>
-      <details class="atlas-data-table">
-        <summary>View model data and caveats</summary>
-        <p>{{ atlas.model_frontier.price_metric | escape }}. Reasoning-model costs can be understated by per-token comparisons because those models may generate more tokens.</p>
-        <div class="atlas-table-scroll">
-          <table>
-            <thead><tr><th>Model</th><th>Organization</th><th>Price</th><th>{{ atlas.model_frontier.benchmark | escape }}</th><th>Value frontier</th></tr></thead>
-            <tbody>
-            {% for model in atlas.model_frontier.models %}
-              <tr><th scope="row">{{ model.name | escape }}</th><td>{{ model.organization | escape }}</td><td>${{ model.price }}</td><td>{{ model.score }}</td><td>{% if model.frontier %}Yes{% else %}No{% endif %}</td></tr>
-            {% endfor %}
-            </tbody>
-          </table>
-        </div>
-      </details>
+    {% endif %}
+    <details class="atlas-data-table">
+      <summary>View current prices, provider sources, and caveats</summary>
+      <p>{{ model_value.method_note | escape }} For continuously measured, independent performance data, open the <a href="{{ model_value.live_benchmark_url | escape }}" target="_blank" rel="noopener noreferrer">Artificial Analysis live model index ↗</a>.</p>
+      <div class="atlas-table-scroll">
+        <table>
+          <thead><tr><th>Model</th><th>Provider</th><th>Input / MTok</th><th>Cached input / MTok</th><th>Output / MTok</th><th>Pricing basis</th><th>Official source</th></tr></thead>
+          <tbody>
+          {% for model in model_value.models %}
+            <tr>
+              <th scope="row">{{ model.name | escape }}</th>
+              <td>{{ model.organization | escape }}</td>
+              <td>${{ model.input_price }}</td>
+              <td>{% if model.cached_input_price %}${{ model.cached_input_price }}{% else %}Not listed{% endif %}</td>
+              <td>${{ model.output_price }}</td>
+              <td>{{ model.context_note | escape }}</td>
+              <td><a href="{{ model.source_url | escape }}" target="_blank" rel="noopener noreferrer">{{ model.source_label | escape }} ↗</a></td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </details>
+    {% if atlas.model_history.status != "unavailable" %}
+    <details class="atlas-data-table model-history">
+      <summary>Historical research snapshot — not current buying guidance</summary>
+      <p>The previous Epoch AI comparison ends in {{ atlas.model_history.data_through | date: "%b %Y" }}. It is retained only for historical analysis and is never labeled as today’s model-value frontier.</p>
+      <div class="atlas-table-scroll">
+        <table>
+          <thead><tr><th>Historical model</th><th>Organization</th><th>Historical blended price</th><th>{{ atlas.model_history.benchmark | escape }}</th><th>Release date</th></tr></thead>
+          <tbody>
+          {% for model in atlas.model_history.models %}
+            <tr><th scope="row">{{ model.name | escape }}</th><td>{{ model.organization | escape }}</td><td>${{ model.price }}</td><td>{{ model.score }}</td><td>{{ model.release_date | date: "%b %Y" }}</td></tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </details>
     {% endif %}
   </section>
 

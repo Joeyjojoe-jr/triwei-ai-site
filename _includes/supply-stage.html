@@ -1,0 +1,18 @@
+{% assign stage = include.stage %}
+<article class="supply-stage supply-stage-{{ stage.choke_level }} supply-node-{{ stage.key }}{% if stage.lane == 'parallel' %} is-parallel{% endif %}{% if stage.lane == 'convergence' %} is-convergence{% endif %}">
+  <div class="supply-stage-head">
+    <span>{{ stage.number | escape }}</span>
+    <span class="supply-choke supply-choke-{{ stage.choke_level }}">{{ stage.choke_level | escape }}</span>
+  </div>
+  <h3>{{ stage.label | escape }}</h3>
+  <p class="supply-stage-route"><strong>{{ stage.input | escape }}</strong><span aria-hidden="true">↓</span>{{ stage.output | escape }}</p>
+  <div class="supply-stage-meta">
+    <span>Made in</span>
+    <p>{{ stage.hubs | join: " · " | escape }}</p>
+  </div>
+  <div class="supply-stage-meta">
+    <span>Gate</span>
+    <p>{{ stage.choke | escape }}</p>
+  </div>
+  {% if stage.lane == 'parallel' %}<span class="supply-branch-note">Parallel memory route · joins the accelerator at packaging</span>{% endif %}
+</article>

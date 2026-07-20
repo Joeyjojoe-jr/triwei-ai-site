@@ -163,6 +163,22 @@ layout: default
 </section>
 {% endif %}
 
+{% assign supply = site.data.industry.supply_chain %}
+{% if supply %}
+<section class="supply-chain-entry card animate-in" aria-labelledby="supply-chain-entry-title">
+  <div class="diffusion-entry-copy">
+    <p class="pulse-kicker">Strategic watch · physical AI stack</p>
+    <h2 id="supply-chain-entry-title">See where AI hardware is made—and where it can choke</h2>
+    <p>Trace critical materials, silicon wafers, fab tools, accelerator dies, HBM, advanced packaging, server assembly, destination markets, and export-policy gates.</p>
+  </div>
+  <div class="diffusion-entry-stats" aria-label="Current supply-chain watch summary">
+    <span><strong>{{ supply.stages.size }}</strong> production stages</span>
+    <span><strong>{{ supply.critical_count }}</strong> critical gates</span>
+  </div>
+  <a class="atlas-entry-link" href="{{ '/industry/#supply-chain' | relative_url }}">Open supply-chain map →</a>
+</section>
+{% endif %}
+
 {% assign diffusion = site.data.industry.diffusion_watch %}
 {% if diffusion %}
 <section class="diffusion-entry card animate-in" aria-labelledby="diffusion-entry-title">
@@ -183,7 +199,7 @@ layout: default
   <div>
     <p class="pulse-kicker">Beyond today's headlines</p>
     <h2 id="industry-atlas-entry">See the AI industry in five questions</h2>
-    <p>Follow momentum, map the industry stack, compare model value, measure real adoption, and inspect frontier-lab economics.</p>
+    <p>Follow momentum, map the industry stack, compare source-dated API costs, measure real adoption, and inspect frontier-lab economics.</p>
   </div>
   <a class="atlas-entry-link" href="{{ '/industry/' | relative_url }}">Open Industry Atlas →</a>
 </section>

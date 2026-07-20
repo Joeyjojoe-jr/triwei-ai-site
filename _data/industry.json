@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-07-20T15:17:12.851071Z",
+  "generated_utc": "2026-07-20T15:33:54.206469Z",
   "generated_display": "Jul 20, 2026",
   "coverage_generated_display": "July 20, 2026 at 10:17 AM CDT",
   "diffusion_watch": {
@@ -170,6 +170,359 @@
       }
     ],
     "source": "diffusion"
+  },
+  "supply_chain": {
+    "verified_on": "2026-07-20",
+    "verified_display": "Jul 20, 2026",
+    "age_days": 0,
+    "freshness": "current",
+    "stages": [
+      {
+        "key": "materials",
+        "number": "01",
+        "label": "Critical materials",
+        "lane": "feedstock",
+        "input": "Rare earths, gallium, germanium, copper and specialty gases",
+        "output": "Magnets, power components, optics and process materials",
+        "hubs": [
+          "China",
+          "United States",
+          "Australia",
+          "Malaysia"
+        ],
+        "companies": [
+          "China Northern Rare Earth",
+          "MP Materials",
+          "Lynas"
+        ],
+        "choke_level": "critical",
+        "choke": "Separation, refining and permanent magnets",
+        "why": "Rare earths are not the silicon in a GPU; they enter through fab equipment, power delivery, cooling, motors and other data-center systems. China accounted for 91% of refined magnet rare earths and 94% of sintered permanent magnets in 2024.",
+        "evidence_date": "2026 report · 2024 production",
+        "sources": [
+          {
+            "label": "IEA Rare Earth Elements",
+            "url": "https://www.iea.org/reports/rare-earth-elements/executive-summary"
+          }
+        ]
+      },
+      {
+        "key": "wafers",
+        "number": "02",
+        "label": "Silicon wafers",
+        "lane": "core",
+        "input": "Electronic-grade polysilicon",
+        "output": "Qualified 300 mm polished and epitaxial wafers",
+        "hubs": [
+          "Japan",
+          "Germany",
+          "Singapore",
+          "Taiwan",
+          "South Korea"
+        ],
+        "companies": [
+          "Shin-Etsu",
+          "SUMCO",
+          "GlobalWafers",
+          "Siltronic",
+          "SK Siltron"
+        ],
+        "choke_level": "high",
+        "choke": "A small qualified supplier set and slow fab qualification",
+        "why": "AI logic and HBM both depend on high-quality 300 mm wafers. SEMI reported 12,973 million square inches of global silicon-wafer shipments in 2025 and highlighted strong AI-led demand for leading-edge wafers.",
+        "evidence_date": "Feb 2026 · 2025 shipments",
+        "sources": [
+          {
+            "label": "SEMI wafer shipments",
+            "url": "https://www.semi.org/en/semi-press-release/semi-reports-2025-annual-worldwide-silicon-wafer-shipments-and-revenue-results"
+          },
+          {
+            "label": "Siltronic 2025 annual report",
+            "url": "https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260312_Siltronic_Annual_Report_2025_safe.pdf"
+          }
+        ]
+      },
+      {
+        "key": "tools",
+        "number": "03",
+        "label": "Fab tools",
+        "lane": "core",
+        "input": "Lithography, deposition, etch, inspection and EDA",
+        "output": "The ability to print advanced logic and memory",
+        "hubs": [
+          "Netherlands",
+          "United States",
+          "Japan"
+        ],
+        "companies": [
+          "ASML",
+          "Applied Materials",
+          "Lam Research",
+          "KLA",
+          "Tokyo Electron"
+        ],
+        "choke_level": "critical",
+        "choke": "ASML is the only producer of EUV lithography systems",
+        "why": "Leading-edge logic and DRAM depend on EUV for their most intricate layers. ASML sold 48 EUV systems in 2025; the technology remains unique to one supplier and a deeply specialized supplier network.",
+        "evidence_date": "ASML FY2025",
+        "sources": [
+          {
+            "label": "ASML EUV systems",
+            "url": "https://www.asml.com/products/euv-lithography-systems"
+          },
+          {
+            "label": "ASML 2025 annual report",
+            "url": "https://www.asml.com/en/investors/annual-report/2025"
+          }
+        ]
+      },
+      {
+        "key": "accelerators",
+        "number": "04",
+        "label": "Accelerator dies",
+        "lane": "core",
+        "input": "Chip designs plus leading-edge wafer capacity",
+        "output": "GPU, TPU and custom accelerator dies",
+        "hubs": [
+          "Taiwan",
+          "United States",
+          "South Korea"
+        ],
+        "companies": [
+          "TSMC",
+          "Samsung",
+          "NVIDIA",
+          "AMD",
+          "Google",
+          "Broadcom"
+        ],
+        "choke_level": "critical",
+        "choke": "Leading-edge foundry capacity and yield",
+        "why": "NVIDIA and AMD disclose that TSMC is a core wafer foundry. TSMC managed more than 17 million 12-inch-equivalent wafers of annual capacity in 2025, with most of its large fab base still in Taiwan despite expansion in Arizona and Japan.",
+        "evidence_date": "TSMC and NVIDIA FY2025/26",
+        "sources": [
+          {
+            "label": "TSMC 2025 annual report",
+            "url": "https://investor.tsmc.com/static/annualReports/2025/english/index.html"
+          },
+          {
+            "label": "NVIDIA FY2026 10-K",
+            "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm"
+          }
+        ]
+      },
+      {
+        "key": "memory",
+        "number": "05",
+        "label": "HBM memory",
+        "lane": "parallel",
+        "input": "Leading-edge DRAM wafers and through-silicon-via stacking",
+        "output": "High-bandwidth memory stacks",
+        "hubs": [
+          "South Korea",
+          "United States",
+          "Japan",
+          "Taiwan"
+        ],
+        "companies": [
+          "SK hynix",
+          "Samsung",
+          "Micron"
+        ],
+        "choke_level": "high",
+        "choke": "Qualified HBM supply, stacking yield and capacity ramps",
+        "why": "HBM is made on a parallel track and converges with the accelerator at packaging. NVIDIA identifies SK hynix, Micron and Samsung as its memory suppliers; SK hynix and Micron announced HBM4 production readiness and ramps for the next platform cycle.",
+        "evidence_date": "NVIDIA FY2026 · supplier updates 2025/26",
+        "sources": [
+          {
+            "label": "NVIDIA FY2026 10-K",
+            "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm"
+          },
+          {
+            "label": "SK hynix HBM4 production readiness",
+            "url": "https://news.skhynix.com/sk-hynix-completes-worlds-first-hbm4-development-and-readies-mass-production/"
+          }
+        ]
+      },
+      {
+        "key": "packaging",
+        "number": "06",
+        "label": "Advanced packaging",
+        "lane": "convergence",
+        "input": "Accelerator dies, HBM stacks and substrates",
+        "output": "A complete AI accelerator package",
+        "hubs": [
+          "Taiwan",
+          "South Korea",
+          "Malaysia",
+          "United States"
+        ],
+        "companies": [
+          "TSMC CoWoS",
+          "ASE",
+          "Amkor",
+          "Samsung"
+        ],
+        "choke_level": "critical",
+        "choke": "CoWoS-class capacity, substrates and thermal integration",
+        "why": "This is where logic and memory become one accelerator. NVIDIA explicitly identifies CoWoS as its packaging technology, while TSMC describes advanced packaging and 3D stacking as core capacity for high-performance computing.",
+        "evidence_date": "TSMC and NVIDIA FY2025/26",
+        "sources": [
+          {
+            "label": "TSMC 2025 annual report",
+            "url": "https://investor.tsmc.com/static/annualReports/2025/english/index.html"
+          },
+          {
+            "label": "NVIDIA FY2026 10-K",
+            "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm"
+          }
+        ]
+      },
+      {
+        "key": "systems",
+        "number": "07",
+        "label": "Servers & computers",
+        "lane": "system",
+        "input": "Accelerators, CPUs, networking, power and cooling",
+        "output": "AI servers, racks, clusters and workstations",
+        "hubs": [
+          "Taiwan",
+          "Mexico",
+          "United States",
+          "Southeast Asia"
+        ],
+        "companies": [
+          "Hon Hai / Foxconn",
+          "Quanta",
+          "Wistron",
+          "Inventec",
+          "Supermicro",
+          "Dell",
+          "HPE"
+        ],
+        "choke_level": "high",
+        "choke": "Rack integration, networking, power delivery and liquid cooling",
+        "why": "NVIDIA names Hon Hai, Wistron and Fabrinet among its assembly, test and packaging partners and says its supply chain remains mainly concentrated in Asia while expanding into the United States and Latin America.",
+        "evidence_date": "NVIDIA FY2026",
+        "sources": [
+          {
+            "label": "NVIDIA FY2026 10-K",
+            "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm"
+          },
+          {
+            "label": "Hon Hai 2025 annual report",
+            "url": "https://image.honhai.com/upload/202605/financy_by_year/2025_Annual_Report_20260523_7728.pdf"
+          }
+        ]
+      },
+      {
+        "key": "destinations",
+        "number": "08",
+        "label": "Destinations",
+        "lane": "demand",
+        "input": "Finished systems and cloud capacity",
+        "output": "Data centers, model labs, enterprises, governments and edge systems",
+        "hubs": [
+          "United States",
+          "Europe",
+          "China",
+          "Middle East",
+          "Asia-Pacific"
+        ],
+        "companies": [
+          "Cloud providers",
+          "AI labs",
+          "Neoclouds",
+          "Enterprises",
+          "Public sector"
+        ],
+        "choke_level": "policy",
+        "choke": "Customer concentration, grid access and export licensing",
+        "why": "NVIDIA's FY2026 revenue is a useful AI-accelerator proxy: about 90% went to Data Center. Billing geography is not final destination—NVIDIA says 76% of Data Center revenue billed to Taiwan-headquartered customers was attributable to end customers in the United States and Europe.",
+        "evidence_date": "NVIDIA FY2026 · BIS Jan/May 2026",
+        "sources": [
+          {
+            "label": "NVIDIA FY2026 10-K",
+            "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm"
+          },
+          {
+            "label": "BIS China license policy",
+            "url": "https://www.bis.gov/press-release/department-commerce-revises-license-review-policy-semiconductors-exported-china"
+          }
+        ]
+      }
+    ],
+    "critical_count": 4,
+    "high_or_critical_count": 7,
+    "kpis": [
+      {
+        "value": "91%",
+        "label": "China share of refined magnet rare earths",
+        "period": "2024 · IEA 2026"
+      },
+      {
+        "value": "1",
+        "label": "supplier of production EUV systems",
+        "period": "ASML"
+      },
+      {
+        "value": "17M+",
+        "label": "TSMC 12-inch-equivalent wafer capacity",
+        "period": "2025"
+      },
+      {
+        "value": "89.7%",
+        "label": "NVIDIA revenue from Data Center",
+        "period": "FY2026 proxy"
+      }
+    ],
+    "destinations": [
+      {
+        "label": "Data center",
+        "revenue_millions": 193737,
+        "share": 89.7
+      },
+      {
+        "label": "Gaming",
+        "revenue_millions": 16042,
+        "share": 7.4
+      },
+      {
+        "label": "Professional visualization",
+        "revenue_millions": 3191,
+        "share": 1.5
+      },
+      {
+        "label": "Automotive",
+        "revenue_millions": 2349,
+        "share": 1.1
+      },
+      {
+        "label": "OEM & other",
+        "revenue_millions": 619,
+        "share": 0.3
+      }
+    ],
+    "billing_routes": [
+      {
+        "label": "United States-headquartered customers",
+        "share": 69.3
+      },
+      {
+        "label": "Taiwan-headquartered customers",
+        "share": 19.6
+      },
+      {
+        "label": "China and Hong Kong-headquartered customers",
+        "share": 9.1
+      },
+      {
+        "label": "Other customer headquarters",
+        "share": 2.0
+      }
+    ],
+    "destination_note": "NVIDIA is used as a disclosed AI-accelerator demand proxy, not the whole semiconductor market. Customer-headquarters revenue is not shipment geography or final end use.",
+    "source": "supply_chain"
   },
   "topic_lifecycle": {
     "window_days": 90,
@@ -611,7 +964,134 @@
     "metric": "Distinct stories mentioning both the company and layer",
     "source": "coverage"
   },
-  "model_frontier": {
+  "model_value": {
+    "status": "available",
+    "verified_on": "2026-07-20",
+    "verified_display": "Jul 20, 2026",
+    "age_days": 0,
+    "max_current_age_days": 30,
+    "freshness": "current",
+    "models": [
+      {
+        "name": "DeepSeek V4 Pro",
+        "organization": "DeepSeek",
+        "input_price": 0.435,
+        "cached_input_price": 0.003625,
+        "output_price": 0.87,
+        "context_note": "Official cache-miss input and output pricing",
+        "source_label": "DeepSeek models and pricing",
+        "source_url": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "blended_price": 0.5437
+      },
+      {
+        "name": "Grok 4.5",
+        "organization": "xAI",
+        "input_price": 2.0,
+        "cached_input_price": 0.5,
+        "output_price": 6.0,
+        "context_note": "Standard, short-context API pricing",
+        "source_label": "xAI API pricing",
+        "source_url": "https://docs.x.ai/developers/pricing",
+        "blended_price": 3.0
+      },
+      {
+        "name": "Mistral Medium 3.5",
+        "organization": "Mistral AI",
+        "input_price": 1.5,
+        "output_price": 7.5,
+        "context_note": "First-party API list pricing; no cache price included",
+        "source_label": "Mistral Medium 3.5 model card",
+        "source_url": "https://docs.mistral.ai/models/model-cards/mistral-medium-3-5-26-04",
+        "blended_price": 3.0
+      },
+      {
+        "name": "Gemini 3.5 Flash",
+        "organization": "Google",
+        "input_price": 1.5,
+        "cached_input_price": 0.15,
+        "output_price": 9.0,
+        "context_note": "Paid-tier standard text pricing",
+        "source_label": "Gemini Developer API pricing",
+        "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+        "blended_price": 3.375
+      },
+      {
+        "name": "Claude Sonnet 5",
+        "organization": "Anthropic",
+        "input_price": 2.0,
+        "cached_input_price": 0.2,
+        "output_price": 10.0,
+        "price_until": "2026-08-31",
+        "next_input_price": 3.0,
+        "next_cached_input_price": 0.3,
+        "next_output_price": 15.0,
+        "context_note": "Introductory pricing through Aug 31, 2026; scheduled standard pricing is applied automatically afterward",
+        "source_label": "Claude Platform pricing",
+        "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "blended_price": 4.0
+      },
+      {
+        "name": "Kimi K3",
+        "organization": "Moonshot AI",
+        "input_price": 3.0,
+        "cached_input_price": 0.3,
+        "output_price": 15.0,
+        "context_note": "Official Kimi API cache-miss input and output pricing",
+        "source_label": "Kimi K3 technical blog",
+        "source_url": "https://www.kimi.com/blog/kimi-k3",
+        "blended_price": 6.0
+      },
+      {
+        "name": "GPT-5.6 Sol",
+        "organization": "OpenAI",
+        "input_price": 5.0,
+        "cached_input_price": 0.5,
+        "output_price": 30.0,
+        "context_note": "Standard, short-context API pricing",
+        "source_label": "OpenAI API pricing",
+        "source_url": "https://developers.openai.com/api/docs/pricing",
+        "blended_price": 11.25
+      },
+      {
+        "name": "Claude Fable 5",
+        "organization": "Anthropic",
+        "input_price": 10.0,
+        "cached_input_price": 1.0,
+        "output_price": 50.0,
+        "context_note": "First-party Claude API base pricing",
+        "source_label": "Claude Platform pricing",
+        "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "blended_price": 20.0
+      }
+    ],
+    "profiles": [
+      {
+        "key": "input",
+        "label": "Input-heavy",
+        "input_share": 0.75,
+        "output_share": 0.25
+      },
+      {
+        "key": "balanced",
+        "label": "Balanced",
+        "input_share": 0.5,
+        "output_share": 0.5
+      },
+      {
+        "key": "output",
+        "label": "Output-heavy",
+        "input_share": 0.25,
+        "output_share": 0.75
+      }
+    ],
+    "default_profile": "input",
+    "metric": "Official first-party list price by workload shape",
+    "price_metric": "USD per 1M tokens; cache-miss input and output",
+    "method_note": "This is a price comparison, not a capability ranking. Tokenizers, reasoning-token use, latency, reliability, tools and provider terms differ. Rankings are hidden after the freshness window expires.",
+    "live_benchmark_url": "https://artificialanalysis.ai/models",
+    "source": "model"
+  },
+  "model_history": {
     "benchmark": "GPQA Diamond",
     "price_metric": "USD per 1M tokens, 3:1 input/output weighted",
     "data_through": "2025-02-05",
@@ -816,7 +1296,7 @@
       }
     ],
     "metric": "Benchmark score versus standardized API price",
-    "source": "model",
+    "source": "model_history",
     "status": "fresh"
   },
   "adoption": {
@@ -1014,7 +1494,12 @@
       "kind": "market"
     },
     "model": {
-      "label": "Epoch AI — LLM inference price trends",
+      "label": "Official provider API price pages — current snapshot",
+      "url": "/sources/",
+      "kind": "market"
+    },
+    "model_history": {
+      "label": "Epoch AI — historical LLM inference price research",
       "url": "https://epoch.ai/data-insights/llm-inference-price-trends",
       "kind": "market"
     },
@@ -1025,6 +1510,11 @@
     },
     "diffusion": {
       "label": "Primary-source model diffusion ledger",
+      "url": "/sources/",
+      "kind": "strategic"
+    },
+    "supply_chain": {
+      "label": "Primary-source AI hardware supply-chain ledger",
       "url": "/sources/",
       "kind": "strategic"
     }

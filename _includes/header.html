@@ -11,6 +11,7 @@
     <nav class="site-nav" aria-label="Primary">
       <ul>
         <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="is-active" aria-current="page"{% endif %}>Home</a></li>
+        <li><a href="{{ '/industry/' | relative_url }}"{% if page.url contains '/industry/' %} class="is-active" aria-current="page"{% endif %}>Industry Atlas</a></li>
         <li><a href="{{ '/ethics/' | relative_url }}"{% if page.url contains '/ethics/' %} class="is-active" aria-current="page"{% endif %}>Ethics Watch</a></li>
         <li><a href="{{ '/sources/' | relative_url }}"{% if page.url contains '/sources/' %} class="is-active" aria-current="page"{% endif %}>Sources &amp; Method</a></li>
         <li><a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about/' %} class="is-active" aria-current="page"{% endif %}>About</a></li>

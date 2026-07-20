@@ -1,0 +1,765 @@
+{
+  "generated_utc": "2026-07-20T14:25:35.192793Z",
+  "generated_display": "Jul 20, 2026",
+  "coverage_generated_display": "July 20, 2026 at 9:23 AM CDT",
+  "topic_lifecycle": {
+    "window_days": 90,
+    "observed_days": 5,
+    "series": [
+      {
+        "term": "OpenAI",
+        "total": 8,
+        "points": [
+          {
+            "date": "2026-07-16",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-17",
+            "count": 3,
+            "share": 50.0
+          },
+          {
+            "date": "2026-07-18",
+            "count": 2,
+            "share": 50.0
+          },
+          {
+            "date": "2026-07-19",
+            "count": 1,
+            "share": 100.0
+          },
+          {
+            "date": "2026-07-20",
+            "count": 2,
+            "share": 6.5
+          }
+        ]
+      },
+      {
+        "term": "agent",
+        "total": 7,
+        "points": [
+          {
+            "date": "2026-07-16",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-17",
+            "count": 1,
+            "share": 16.7
+          },
+          {
+            "date": "2026-07-18",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-19",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-20",
+            "count": 6,
+            "share": 19.4
+          }
+        ]
+      },
+      {
+        "term": "Claude",
+        "total": 5,
+        "points": [
+          {
+            "date": "2026-07-16",
+            "count": 1,
+            "share": 25.0
+          },
+          {
+            "date": "2026-07-17",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-18",
+            "count": 1,
+            "share": 25.0
+          },
+          {
+            "date": "2026-07-19",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-20",
+            "count": 3,
+            "share": 9.7
+          }
+        ]
+      },
+      {
+        "term": "Apple",
+        "total": 4,
+        "points": [
+          {
+            "date": "2026-07-16",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-17",
+            "count": 3,
+            "share": 50.0
+          },
+          {
+            "date": "2026-07-18",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-19",
+            "count": 1,
+            "share": 100.0
+          },
+          {
+            "date": "2026-07-20",
+            "count": 0,
+            "share": 0.0
+          }
+        ]
+      },
+      {
+        "term": "Anthropic",
+        "total": 3,
+        "points": [
+          {
+            "date": "2026-07-16",
+            "count": 1,
+            "share": 25.0
+          },
+          {
+            "date": "2026-07-17",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-18",
+            "count": 1,
+            "share": 25.0
+          },
+          {
+            "date": "2026-07-19",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-20",
+            "count": 1,
+            "share": 3.2
+          }
+        ]
+      },
+      {
+        "term": "lawsuit",
+        "total": 3,
+        "points": [
+          {
+            "date": "2026-07-16",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-17",
+            "count": 2,
+            "share": 33.3
+          },
+          {
+            "date": "2026-07-18",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-19",
+            "count": 1,
+            "share": 100.0
+          },
+          {
+            "date": "2026-07-20",
+            "count": 0,
+            "share": 0.0
+          }
+        ]
+      }
+    ],
+    "metric": "Share of distinct TriWei stories mentioning the topic",
+    "source": "coverage"
+  },
+  "industry_stack": {
+    "layers": [
+      {
+        "key": "hardware",
+        "label": "Chips & hardware"
+      },
+      {
+        "key": "cloud",
+        "label": "Cloud & compute"
+      },
+      {
+        "key": "models",
+        "label": "Models & research"
+      },
+      {
+        "key": "apps",
+        "label": "Tools & applications"
+      },
+      {
+        "key": "society",
+        "label": "Policy & society"
+      }
+    ],
+    "companies": [
+      {
+        "name": "OpenAI",
+        "story_count": 6,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 3
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 4
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 1
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 4
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "name": "Anthropic",
+        "story_count": 5,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 1
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 1
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 1
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "Google",
+        "story_count": 2,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 0
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 2
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "Moonshot",
+        "story_count": 2,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 1
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 2
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      }
+    ],
+    "max_count": 4,
+    "metric": "Distinct stories mentioning both the company and layer",
+    "source": "coverage"
+  },
+  "model_frontier": {
+    "benchmark": "GPQA Diamond",
+    "price_metric": "USD per 1M tokens, 3:1 input/output weighted",
+    "data_through": "2025-02-05",
+    "models": [
+      {
+        "name": "Llama-3.2-Instruct-1B",
+        "organization": "Meta",
+        "release_date": "2024-09-24",
+        "price": 0.05,
+        "score": 14.0,
+        "speed": 552.1,
+        "frontier": true
+      },
+      {
+        "name": "Gemini-1.5-Flash-8B",
+        "organization": "Google",
+        "release_date": "2024-10-03",
+        "price": 0.07,
+        "score": 30.0,
+        "speed": 285.2,
+        "frontier": true
+      },
+      {
+        "name": "Llama-3.2-Instruct-3B",
+        "organization": "Meta",
+        "release_date": "2024-09-24",
+        "price": 0.08,
+        "score": 21.0,
+        "speed": 200.3,
+        "frontier": false
+      },
+      {
+        "name": "Llama-3.1-Instruct-8B",
+        "organization": "Meta",
+        "release_date": "2024-07-23",
+        "price": 0.1,
+        "score": 27.0,
+        "speed": 164.3,
+        "frontier": false
+      },
+      {
+        "name": "Phi 4",
+        "organization": "Microsoft",
+        "release_date": "2024-12-13",
+        "price": 0.1225,
+        "score": 53.0,
+        "speed": null,
+        "frontier": true
+      },
+      {
+        "name": "Gemini-1.5-Flash-2024-09",
+        "organization": "Google",
+        "release_date": "2024-09-24",
+        "price": 0.13,
+        "score": 45.0,
+        "speed": 190.5,
+        "frontier": false
+      },
+      {
+        "name": "Mistral-NeMo",
+        "organization": "Mistral",
+        "release_date": "2024-07-18",
+        "price": 0.13,
+        "score": 33.0,
+        "speed": 88.3,
+        "frontier": false
+      },
+      {
+        "name": "Gemma-2-9B",
+        "organization": "Google",
+        "release_date": "2024-06-24",
+        "price": 0.13,
+        "score": 31.0,
+        "speed": 162.8,
+        "frontier": false
+      },
+      {
+        "name": "Gemini 2.0 Flash",
+        "organization": "Google",
+        "release_date": "2025-02-05",
+        "price": 0.175,
+        "score": 62.0,
+        "speed": null,
+        "frontier": true
+      },
+      {
+        "name": "GPT-4o-mini",
+        "organization": "OpenAI",
+        "release_date": "2024-07-18",
+        "price": 0.26,
+        "score": 43.0,
+        "speed": 112.2,
+        "frontier": false
+      },
+      {
+        "name": "Gemma-2-27B",
+        "organization": "Google",
+        "release_date": "2024-06-24",
+        "price": 0.26,
+        "score": 39.0,
+        "speed": 47.9,
+        "frontier": false
+      },
+      {
+        "name": "Mistral Small 3",
+        "organization": "Mistral",
+        "release_date": "2025-01-30",
+        "price": 0.475,
+        "score": 46.0,
+        "speed": null,
+        "frontier": false
+      },
+      {
+        "name": "Llama-3.1-Instruct-70B",
+        "organization": "Meta",
+        "release_date": "2024-07-23",
+        "price": 0.72,
+        "score": 43.0,
+        "speed": 71.6,
+        "frontier": false
+      },
+      {
+        "name": "Claude-3.5-Haiku",
+        "organization": "Anthropic",
+        "release_date": "2024-10-22",
+        "price": 1.6,
+        "score": 37.0,
+        "speed": 64.2,
+        "frontier": false
+      },
+      {
+        "name": "Gemini-1.5-Pro-2024-09",
+        "organization": "Google",
+        "release_date": "2024-09-24",
+        "price": 2.19,
+        "score": 61.0,
+        "speed": 59.1,
+        "frontier": false
+      },
+      {
+        "name": "Mistral-Large-2-2024-11",
+        "organization": "Mistral",
+        "release_date": "2024-11-18",
+        "price": 3.0,
+        "score": 47.0,
+        "speed": 43.5,
+        "frontier": false
+      },
+      {
+        "name": "Mistral-Large-2-2024-07",
+        "organization": "Mistral",
+        "release_date": "2024-07-24",
+        "price": 3.0,
+        "score": 48.0,
+        "speed": 34.4,
+        "frontier": false
+      },
+      {
+        "name": "Llama-3.1-Instruct-405B",
+        "organization": "Meta",
+        "release_date": "2024-07-23",
+        "price": 3.5,
+        "score": 50.0,
+        "speed": 27.9,
+        "frontier": false
+      },
+      {
+        "name": "GPT-4o-2024-11",
+        "organization": "OpenAI",
+        "release_date": "2024-11-20",
+        "price": 4.38,
+        "score": 54.0,
+        "speed": 148.9,
+        "frontier": false
+      },
+      {
+        "name": "GPT-4o-2024-08",
+        "organization": "OpenAI",
+        "release_date": "2024-08-06",
+        "price": 4.38,
+        "score": 52.0,
+        "speed": 81.0,
+        "frontier": false
+      },
+      {
+        "name": "Claude-3.5-Sonnet-2024-10",
+        "organization": "Anthropic",
+        "release_date": "2024-10-22",
+        "price": 6.0,
+        "score": 58.0,
+        "speed": 55.2,
+        "frontier": false
+      },
+      {
+        "name": "Claude-3.5-Sonnet-2024-06",
+        "organization": "Anthropic",
+        "release_date": "2024-06-20",
+        "price": 6.0,
+        "score": 56.0,
+        "speed": 55.9,
+        "frontier": false
+      }
+    ],
+    "metric": "Benchmark score versus standardized API price",
+    "source": "model",
+    "status": "fresh"
+  },
+  "adoption": {
+    "period": "Reference period ending Jun 28, 2026",
+    "sectors": [
+      {
+        "code": "51",
+        "name": "Information",
+        "current": 43.7,
+        "expected": 46.8,
+        "gap": 3.1
+      },
+      {
+        "code": "54",
+        "name": "Professional & technical services",
+        "current": 37.6,
+        "expected": 41.8,
+        "gap": 4.2
+      },
+      {
+        "code": "52",
+        "name": "Finance & insurance",
+        "current": 36.0,
+        "expected": 41.7,
+        "gap": 5.7
+      },
+      {
+        "code": "61",
+        "name": "Education",
+        "current": 30.9,
+        "expected": 33.1,
+        "gap": 2.2
+      },
+      {
+        "code": "53",
+        "name": "Real estate",
+        "current": 29.0,
+        "expected": 32.1,
+        "gap": 3.1
+      },
+      {
+        "code": "55",
+        "name": "Company management",
+        "current": 27.3,
+        "expected": 38.4,
+        "gap": 11.1
+      },
+      {
+        "code": "62",
+        "name": "Health care",
+        "current": 24.7,
+        "expected": 28.5,
+        "gap": 3.8
+      },
+      {
+        "code": "56",
+        "name": "Administrative services",
+        "current": 20.2,
+        "expected": 21.8,
+        "gap": 1.6
+      },
+      {
+        "code": "31",
+        "name": "Manufacturing",
+        "current": 19.7,
+        "expected": 21.3,
+        "gap": 1.6
+      },
+      {
+        "code": "42",
+        "name": "Wholesale trade",
+        "current": 18.6,
+        "expected": 22.0,
+        "gap": 3.4
+      },
+      {
+        "code": "71",
+        "name": "Arts & recreation",
+        "current": 18.3,
+        "expected": 21.8,
+        "gap": 3.5
+      },
+      {
+        "code": "44",
+        "name": "Retail trade",
+        "current": 17.4,
+        "expected": 18.6,
+        "gap": 1.2
+      },
+      {
+        "code": "23",
+        "name": "Construction",
+        "current": 13.9,
+        "expected": 15.7,
+        "gap": 1.8
+      },
+      {
+        "code": "22",
+        "name": "Utilities",
+        "current": 13.4,
+        "expected": 12.5,
+        "gap": -0.9
+      },
+      {
+        "code": "81",
+        "name": "Other services",
+        "current": 11.5,
+        "expected": 13.3,
+        "gap": 1.8
+      },
+      {
+        "code": "21",
+        "name": "Mining & extraction",
+        "current": 9.8,
+        "expected": 7.2,
+        "gap": -2.6
+      },
+      {
+        "code": "72",
+        "name": "Accommodation & food",
+        "current": 9.7,
+        "expected": 11.8,
+        "gap": 2.1
+      },
+      {
+        "code": "48",
+        "name": "Transportation & warehousing",
+        "current": 9.3,
+        "expected": 13.8,
+        "gap": 4.5
+      }
+    ],
+    "metric": "Share of U.S. employer businesses reporting AI use",
+    "method_note": "Current means used AI in any business function in the prior two weeks; expected means plans to use AI in the next six months.",
+    "source": "census",
+    "status": "fresh"
+  },
+  "company_economics": {
+    "companies": [
+      {
+        "name": "Anthropic",
+        "funding": 139404000000,
+        "revenue": 47000000000,
+        "staff": 2300,
+        "date": "2026-05-15",
+        "confidence": "Likely"
+      },
+      {
+        "name": "OpenAI",
+        "funding": 182750000000,
+        "revenue": 25000000000,
+        "staff": 4000,
+        "date": "2026-02-28",
+        "confidence": "Likely"
+      },
+      {
+        "name": "xAI",
+        "funding": 37000000000,
+        "revenue": 428000000,
+        "staff": 300,
+        "date": "2025-09-30",
+        "confidence": "Likely"
+      },
+      {
+        "name": "Mistral AI",
+        "funding": 3034300000,
+        "revenue": 400000000,
+        "staff": 350,
+        "date": "2026-01-31",
+        "confidence": "Likely"
+      },
+      {
+        "name": "Z.ai (Zhipu)",
+        "funding": 558000000,
+        "revenue": 153000000,
+        "staff": 883,
+        "date": "2025-10-01",
+        "confidence": "Likely"
+      }
+    ],
+    "metric": "Latest reported annualized revenue versus cumulative equity funding",
+    "method_note": "Private-company figures are public estimates or disclosures and are not perfectly comparable. Bubble size represents latest reported staff count.",
+    "source": "company",
+    "status": "fresh"
+  },
+  "sources": {
+    "coverage": {
+      "label": "TriWei AI coverage",
+      "url": "/sources/",
+      "kind": "coverage"
+    },
+    "census": {
+      "label": "U.S. Census Bureau — Business Trends and Outlook Survey",
+      "url": "https://www.census.gov/hfp/btos/data_downloads",
+      "kind": "market"
+    },
+    "model": {
+      "label": "Epoch AI — LLM inference price trends",
+      "url": "https://epoch.ai/data-insights/llm-inference-price-trends",
+      "kind": "market"
+    },
+    "company": {
+      "label": "Epoch AI — AI Companies dataset",
+      "url": "https://epoch.ai/data/ai-companies",
+      "kind": "market"
+    }
+  }
+}

@@ -159,9 +159,18 @@ layout: default
     </article>
     {% endfor %}
   </div>
-  {% endif %}
+{% endif %}
 </section>
 {% endif %}
+
+<section class="atlas-entry card animate-in" aria-labelledby="industry-atlas-entry">
+  <div>
+    <p class="pulse-kicker">Beyond today's headlines</p>
+    <h2 id="industry-atlas-entry">See the AI industry in five questions</h2>
+    <p>Follow momentum, map the industry stack, compare model value, measure real adoption, and inspect frontier-lab economics.</p>
+  </div>
+  <a class="atlas-entry-link" href="{{ '/industry/' | relative_url }}">Open Industry Atlas →</a>
+</section>
 
 {% if news.trending.size > 0 %}
 <div class="ticker" role="marquee" aria-label="Trending AI topics">

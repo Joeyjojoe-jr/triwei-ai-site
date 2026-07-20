@@ -38,6 +38,16 @@ def validate_signals(data: dict) -> None:
     declared_relationships = {item["key"] for item in data["relationship_types"]}
     if declared_relationships != RELATIONSHIPS:
         raise ValueError("signals.relationship_types must declare all four editorial relationships")
+    signal_method = data.get("generation_method", {})
+    for field in ("automation", "collection", "relationship_assignment", "verification", "filtering"):
+        if not str(signal_method.get(field, "")).strip():
+            raise ValueError(f"signals.generation_method is missing {field}")
+    if "ai-assisted" not in signal_method["automation"].lower():
+        raise ValueError("signals must disclose AI assistance")
+    for relationship in data["relationship_types"]:
+        for field in ("decision_rule", "not_claim"):
+            if not str(relationship.get(field, "")).strip():
+                raise ValueError(f"signal relationship {relationship['key']} is missing {field}")
 
     filters = {item["key"] for item in data["filters"]}
     if "all" not in filters:
@@ -96,10 +106,21 @@ def validate_hardware(data: dict, allow_stale: bool = False) -> None:
     if age > 90:
         print(f"WARNING: hardware ledger is {age} days old; the rendered page must show its expired state.")
 
+    hardware_method = data.get("generation_method", {})
+    for field in ("automation", "comparison", "workload_modes", "projects", "verification"):
+        if not str(hardware_method.get(field, "")).strip():
+            raise ValueError(f"hardware.generation_method is missing {field}")
+    if "ai-assisted" not in hardware_method["automation"].lower():
+        raise ValueError("hardware must disclose AI assistance")
+
     metrics = {item["key"] for item in data.get("metrics", [])}
     required_metrics = {"capacity", "bandwidth", "compute", "interconnect", "power", "software"}
     if metrics != required_metrics:
         raise ValueError("hardware metrics must explain all six workload gates")
+    for metric in data["metrics"]:
+        for field in ("method", "limit"):
+            if not str(metric.get(field, "")).strip():
+                raise ValueError(f"hardware metric {metric['key']} is missing {field}")
 
     products = {gpu["key"]: gpu for gpu in data.get("gpus", [])}
     for key in ("rtx-4060-ti-16", "rtx-4070-super-12"):
@@ -115,6 +136,12 @@ def validate_hardware(data: dict, allow_stale: bool = False) -> None:
         if product["memory_capacity_gb"] <= 0 or product["memory_bandwidth_gbps"] <= 0:
             raise ValueError(f"hardware product {key} has a non-positive memory specification")
         require_https(product["source_url"], f"hardware.gpus.{key}.source_url")
+
+    if "arithmetic floor" not in data.get("model_fit_method", "").lower():
+        raise ValueError("hardware model-fit table must disclose its arithmetic-only method")
+    for example in data.get("model_fit_examples", []):
+        if not str(example.get("raw_floor", "")).strip() or "range" in example:
+            raise ValueError("hardware model-fit rows must show the raw floor and avoid unsupported working ranges")
 
     materials = data.get("materials", [])
     if len(materials) < 5:

@@ -3,11 +3,18 @@
   "coverage_start": "2010-01-01",
   "coverage_start_label": "2010 · DeepMind founded",
   "method_note": "A curated, expanding evidence ledger. Later events can strengthen, complicate, or redirect an earlier claim; they do not prove that an author was simply right or wrong.",
+  "generation_method": {
+    "automation": "AI-assisted curation: the seed ledger was assembled during site development with an AI research and coding assistant using the sources linked on each node. It is static data, not the output of a live truth model when this page loads.",
+    "collection": "Candidate nodes were selected because a dated source made a specific claim or documented an event that materially bears on a thread. This is a small editorial seed set, not an index of all media.",
+    "relationship_assignment": "The relationship labels are editorial synthesis. Each label must describe how the later source bears on a material part of the thread; it is not a causal inference, accuracy score, or probability.",
+    "verification": "The verification date records when the linked source and this summary were checked during development. It does not mean the publisher, author, or an independent fact-checker endorsed TriWei's interpretation.",
+    "filtering": "Topic pills run a literal browser-side match against curator-assigned tags and visible thread text. No model classifies or reranks the evidence when a filter is clicked."
+  },
   "relationship_types": [
-    {"key": "seed", "label": "Early signal", "meaning": "A paper, report, article, or opinion that framed a consequential possibility before its later significance was clear."},
-    {"key": "corroborates", "label": "Strengthens", "meaning": "A later event or result that is consistent with a material part of the earlier signal."},
-    {"key": "complicates", "label": "Complicates", "meaning": "Evidence that narrows, qualifies, or exposes a constraint in the earlier framing."},
-    {"key": "redirects", "label": "Redirects", "meaning": "A development that moves the story into a materially different technical, commercial, or social path."}
+    {"key": "seed", "label": "Early signal", "meaning": "A paper, report, article, or opinion that framed a consequential possibility before its later significance was clear.", "decision_rule": "The dated source must make a specific, inspectable claim that defines the thread; vague optimism or generic warnings do not qualify.", "not_claim": "It does not mean the source was first, unique, correct in every respect, or destined to become important."},
+    {"key": "corroborates", "label": "Strengthens", "meaning": "A later event or result that is consistent with a material part of the earlier signal.", "decision_rule": "The later source must document an event or result consistent with a named part of the thread, while preserving differences in scope and context.", "not_claim": "Consistency is not proof of causation, complete validation, or endorsement of every claim in the earlier source."},
+    {"key": "complicates", "label": "Complicates", "meaning": "Evidence that narrows, qualifies, or exposes a constraint in the earlier framing.", "decision_rule": "The source must identify a material boundary, counterexample, cost, or unresolved condition—not merely express disagreement.", "not_claim": "A complication does not automatically falsify the thread; it limits what the available evidence can support."},
+    {"key": "redirects", "label": "Redirects", "meaning": "A development that moves the story into a materially different technical, commercial, or social path.", "decision_rule": "The later event must change the mechanism, application, access pattern, policy setting, or affected group enough to alter the thread's direction.", "not_claim": "A redirection is not necessarily progress or regression, and it does not establish that the early source predicted the new path."}
   ],
   "filters": [
     {"key": "all", "label": "All threads"},

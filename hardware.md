@@ -16,11 +16,13 @@ intelligence: true
     <p class="intel-kicker">From rock to rack</p>
     <h1>AI hardware,<br><span>without the spec-sheet fog</span></h1>
     <p class="intel-lead">See what GPU numbers actually control, why memory capacity is only one gate, how materials enter the system, where new fabs are moving, and when retooling an older line makes less sense than keeping or replacing it.</p>
+    <p class="intel-truth-strip"><strong>How this was made:</strong> AI-assisted source research, a dated static specification ledger, and fixed comparison rules. No live model recommends hardware or invents a score on page load.</p>
+    <div class="intel-interaction-key" aria-label="How to interact with this page"><span><b>Selectors</b> compare records</span><span><b>▾ Why/how?</b> opens method</span><span><b>↗</b> opens the cited source</span></div>
     <div class="intel-hero-kpis" role="list" aria-label="Hardware reference points">
-      <div role="listitem"><strong>12 vs 16 GB</strong><span>capacity is not speed</span></div>
-      <div role="listitem"><strong>4.8 TB/s</strong><span>H200 HBM bandwidth</span></div>
-      <div role="listitem"><strong>5</strong><span>material systems mapped</span></div>
-      <div role="listitem"><strong>$20–25B</strong><span>leading-edge fab scale</span></div>
+      <div role="listitem"><a class="intel-kpi-link" href="#compare"><strong>12 vs 16 GB</strong><span>capacity is not speed · compare</span></a></div>
+      <div role="listitem"><a class="intel-kpi-link" href="#compare"><strong>4.8 TB/s</strong><span>H200 peak bandwidth · inspect</span></a></div>
+      <div role="listitem"><a class="intel-kpi-link" href="#materials"><strong>5</strong><span>material systems · open 5W1H</span></a></div>
+      <div role="listitem"><a class="intel-kpi-link" href="#fabs"><strong>$20–25B</strong><span>fab scale · inspect sources</span></a></div>
     </div>
     {% if hardware_age_seconds > 7776000 %}
     <p class="intel-freshness intel-freshness-expired">Reference expired · re-verification required · specifications remain available as a dated historical snapshot</p>
@@ -39,6 +41,17 @@ intelligence: true
   </nav>
   <p class="hardware-atlas-bridge">Need the compact production-route view? <a href="{{ '/industry/#supply-chain' | relative_url }}">Open the eight-stage supply-chain map →</a></p>
 
+  <details class="intel-method-disclosure card">
+    <summary>Exactly how TriWei assembled and computes this view</summary>
+    <div class="intel-method-stack intel-method-grid">
+      <p><strong>AI's role</strong>{{ hardware.generation_method.automation | escape }}</p>
+      <p><strong>Comparator math</strong>{{ hardware.generation_method.comparison | escape }}</p>
+      <p><strong>Workload buttons</strong>{{ hardware.generation_method.workload_modes | escape }}</p>
+      <p><strong>Factory interpretation</strong>{{ hardware.generation_method.projects | escape }}</p>
+      <p><strong>What “checked” means</strong>{{ hardware.generation_method.verification | escape }}</p>
+    </div>
+  </details>
+
   <section class="hardware-section card" id="gpu-numbers" aria-labelledby="gpu-numbers-title">
     <div class="intel-section-head">
       <div>
@@ -53,12 +66,10 @@ intelligence: true
     </div>
     <div class="hardware-metric-grid">
       {% for metric in hardware.metrics %}
-      <article data-hardware-metric="{{ metric.key | escape }}">
-        <span>0{{ forloop.index }}</span>
-        <h3>{{ metric.label | escape }}</h3>
-        <strong>{{ metric.question | escape }}</strong>
-        <p>{{ metric.explanation | escape }}</p>
-      </article>
+      <details data-hardware-metric="{{ metric.key | escape }}">
+        <summary title="Open how this factor is measured"><span>0{{ forloop.index }}</span><h3>{{ metric.label | escape }}</h3><strong>{{ metric.question | escape }}</strong><small>Open measurement + limits</small></summary>
+        <div><p>{{ metric.explanation | escape }}</p><p><strong>How TriWei uses it</strong>{{ metric.method | escape }}</p><p><strong>Limit</strong>{{ metric.limit | escape }}</p></div>
+      </details>
       {% endfor %}
     </div>
   </section>
@@ -78,6 +89,7 @@ intelligence: true
       <button type="button" data-hardware-mode="data-center" aria-pressed="false">Data center</button>
     </div>
     <p class="hardware-mode-copy" id="hardware-mode-copy" aria-live="polite">Local LLM: first ask whether weights, runtime, context, and KV cache fit; then compare bandwidth, compute, kernels, and offload cost.</p>
+    <details class="intel-inline-proof"><summary>How does this comparator calculate the display?</summary><div class="intel-proof-grid"><p><strong>Record selection</strong>{{ hardware.generation_method.comparison | escape }}</p><p><strong>Workload emphasis</strong>{{ hardware.generation_method.workload_modes | escape }}</p><p><strong>Source boundary</strong>{{ hardware.generation_method.verification | escape }}</p><p><strong>Decision boundary</strong>{{ hardware.comparison_note | escape }}</p></div></details>
 
     <div class="hardware-compare-selectors">
       <label>Hardware A<select id="hardware-left">{% for gpu in hardware.gpus %}<option value="{{ gpu.key | escape }}"{% if gpu.key == 'rtx-4070-super-12' %} selected{% endif %}>{{ gpu.name | escape }}</option>{% endfor %}</select></label>
@@ -96,10 +108,11 @@ intelligence: true
     </aside>
 
     <div class="hardware-fit-table" role="region" aria-label="Approximate local model memory-fit examples" tabindex="0">
+      <details class="intel-inline-proof" open><summary>Show the arithmetic and omissions behind this table</summary><p>{{ hardware.model_fit_method | escape }}</p></details>
       <table>
-        <caption>Illustrative local-LLM fit gates—not performance estimates</caption>
-        <thead><tr><th>Model class</th><th>Working range</th><th>4060 Ti 16GB</th><th>4070 SUPER 12GB</th><th>Why approximate</th></tr></thead>
-        <tbody>{% for example in hardware.model_fit_examples %}<tr><th scope="row">{{ example.label | escape }}</th><td>{{ example.range | escape }}</td><td>{{ example.rtx_4060_ti | escape }}</td><td>{{ example.rtx_4070_super | escape }}</td><td>{{ example.note | escape }}</td></tr>{% endfor %}</tbody>
+        <caption>4-bit raw-weight arithmetic—not a benchmark or practical-fit promise</caption>
+        <thead><tr><th>Model class</th><th>Raw weight floor</th><th>4060 Ti 16GB</th><th>4070 SUPER 12GB</th><th>What the arithmetic omits</th></tr></thead>
+        <tbody>{% for example in hardware.model_fit_examples %}<tr><th scope="row">{{ example.label | escape }}</th><td>{{ example.raw_floor | escape }}</td><td>{{ example.rtx_4060_ti | escape }}</td><td>{{ example.rtx_4070_super | escape }}</td><td>{{ example.note | escape }}</td></tr>{% endfor %}</tbody>
       </table>
     </div>
   </section>
@@ -111,12 +124,10 @@ intelligence: true
     </div>
     <div class="memory-architecture-grid">
       {% for memory in hardware.memory_architectures %}
-      <article>
-        <span>0{{ forloop.index }}</span><h3>{{ memory.label | escape }}</h3>
-        <p class="memory-path">{{ memory.path | escape }}</p>
-        <p><strong>Strength:</strong> {{ memory.strength | escape }}</p>
-        <p><strong>Constraint:</strong> {{ memory.constraint | escape }}</p>
-      </article>
+      <details>
+        <summary title="Open strengths and constraints"><span>0{{ forloop.index }}</span><h3>{{ memory.label | escape }}</h3><p class="memory-path">{{ memory.path | escape }}</p><small>Open strength + constraint</small></summary>
+        <div><p><strong>Strength</strong>{{ memory.strength | escape }}</p><p><strong>Constraint</strong>{{ memory.constraint | escape }}</p></div>
+      </details>
       {% endfor %}
     </div>
   </section>
@@ -152,11 +163,12 @@ intelligence: true
     <div class="fab-timeline">
       {% for fab in hardware.fab_projects %}
       <article>
-        <div class="fab-status">{{ fab.status | escape }}</div>
+        <div class="fab-status" title="Status wording follows the cited company disclosure; open the method below.">Source status · {{ fab.status | escape }}</div>
         <h3>{{ fab.name | escape }}</h3><p class="fab-place">{{ fab.place | escape }}</p>
         <dl><div><dt>Function</dt><dd>{{ fab.function | escape }}</dd></div><div><dt>Start</dt><dd>{{ fab.announced | escape }}</dd></div><div><dt>Output</dt><dd>{{ fab.production | escape }}</dd></div><div><dt>Capital</dt><dd>{{ fab.investment | escape }}</dd></div><div><dt>Clock</dt><dd>{{ fab.elapsed | escape }}</dd></div></dl>
         <p class="fab-lesson"><strong>What it teaches:</strong> {{ fab.lesson | escape }}</p>
         <a href="{{ fab.source_url | escape }}" target="_blank" rel="noopener noreferrer">{{ fab.source_label | escape }} ↗</a>
+        <details class="intel-inline-proof"><summary>How should I read this status?</summary><p>{{ hardware.generation_method.projects | escape }} {{ hardware.generation_method.verification | escape }}</p></details>
       </article>
       {% endfor %}
     </div>
@@ -170,11 +182,11 @@ intelligence: true
     <div class="conversion-equation"><span>Incremental good dies × price × utilization</span><strong>−</strong><span>capex + downtime + qualification + yield risk + operating cost</span><strong>=</strong><span>risk-adjusted value</span></div>
     <div class="conversion-grid">
       {% for option in hardware.conversion_options %}
-      <article class="conversion-{{ option.key }}"><span>0{{ forloop.index }}</span><h3>{{ option.label | escape }}</h3><p><strong>Best when</strong>{{ option.best_when | escape }}</p><p><strong>Benefit</strong>{{ option.benefit | escape }}</p><p><strong>Cost</strong>{{ option.cost | escape }}</p><p><strong>Hidden gate</strong>{{ option.hidden_gate | escape }}</p></article>
+      <details class="conversion-{{ option.key }}"><summary title="Open the decision factors"><span>0{{ forloop.index }}</span><h3>{{ option.label | escape }}</h3><small>Open decision factors</small></summary><div><p><strong>Best when</strong>{{ option.best_when | escape }}</p><p><strong>Benefit</strong>{{ option.benefit | escape }}</p><p><strong>Cost</strong>{{ option.cost | escape }}</p><p><strong>Hidden gate</strong>{{ option.hidden_gate | escape }}</p><p class="intel-framework-note">Decision framework—not a market forecast or a project-specific financial model.</p></div></details>
       {% endfor %}
     </div>
     <h3 class="conversion-clock-title">The conversion clock has five separate gates</h3>
-    <ol class="conversion-clock">{% for clock in hardware.conversion_clock %}<li><span>{{ clock.step | escape }}</span><strong>{{ clock.label | escape }}</strong><p>{{ clock.detail | escape }}</p></li>{% endfor %}</ol>
+    <ol class="conversion-clock">{% for clock in hardware.conversion_clock %}<li><details><summary><span>{{ clock.step | escape }}</span><strong>{{ clock.label | escape }}</strong><small>Open gate</small></summary><p>{{ clock.detail | escape }}</p></details></li>{% endfor %}</ol>
   </section>
 
   <section class="intel-boundary card" aria-labelledby="hardware-boundary-title">

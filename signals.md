@@ -15,11 +15,13 @@ intelligence: true
     <p class="intel-kicker">News has a memory</p>
     <h1>What looked small—<br><span>until it became the story</span></h1>
     <p class="intel-lead">Follow ideas from their early paper, article, or opinion through the events that later strengthened, complicated, or redirected the original signal. This is provenance, not a pundit scoreboard.</p>
+    <p class="intel-truth-strip"><strong>How this was made:</strong> AI-assisted source research, static editorial relationships, and direct links to every cited node. No live model decides what is true on page load.</p>
+    <div class="intel-interaction-key" aria-label="How to interact with this page"><span><b>Pills</b> filter</span><span><b>▾ Why/how?</b> opens method</span><span><b>↗</b> opens the original source</span></div>
     <div class="intel-hero-kpis" role="list" aria-label="Signal history coverage">
-      <div role="listitem"><strong>{{ signals.coverage_start_label | escape }}</strong><span>ledger begins</span></div>
-      <div role="listitem"><strong>{{ signals.threads.size }}</strong><span>connected threads</span></div>
-      <div role="listitem"><strong>{{ event_count }}</strong><span>dated evidence nodes</span></div>
-      <div role="listitem"><strong>4</strong><span>relationship types</span></div>
+      <div role="listitem"><a class="intel-kpi-link" href="#signal-method-title"><strong>{{ signals.coverage_start_label | escape }}</strong><span>ledger begins · inspect method</span></a></div>
+      <div role="listitem"><a class="intel-kpi-link" href="#signal-ledger"><strong>{{ signals.threads.size }}</strong><span>connected threads · explore</span></a></div>
+      <div role="listitem"><a class="intel-kpi-link" href="#signal-ledger"><strong>{{ event_count }}</strong><span>dated evidence nodes · inspect</span></a></div>
+      <div role="listitem"><a class="intel-kpi-link" href="#relationship-key"><strong>4</strong><span>relationship types · open rules</span></a></div>
     </div>
     <p class="intel-freshness">Evidence checked {{ signals.verified_on | date: "%b %d, %Y" }} · sources retain their original dates and claims</p>
   </header>
@@ -29,10 +31,25 @@ intelligence: true
       <p class="intel-kicker">Editorial rule</p>
       <h2 id="signal-method-title">Connect evidence. Preserve uncertainty.</h2>
       <p>{{ signals.method_note | escape }}</p>
+      <details class="intel-method-disclosure">
+        <summary>Exactly how TriWei assembled this view</summary>
+        <div class="intel-method-stack">
+          <p><strong>AI's role</strong>{{ signals.generation_method.automation | escape }}</p>
+          <p><strong>Collection rule</strong>{{ signals.generation_method.collection | escape }}</p>
+          <p><strong>Relationship rule</strong>{{ signals.generation_method.relationship_assignment | escape }}</p>
+          <p><strong>What “checked” means</strong>{{ signals.generation_method.verification | escape }}</p>
+          <p><strong>What filters do</strong>{{ signals.generation_method.filtering | escape }}</p>
+        </div>
+      </details>
     </div>
-    <ul class="signal-relationship-key">
+    <ul class="signal-relationship-key" id="relationship-key">
       {% for relationship in signals.relationship_types %}
-      <li class="relationship-{{ relationship.key }}"><strong>{{ relationship.label | escape }}</strong><span>{{ relationship.meaning | escape }}</span></li>
+      <li class="relationship-{{ relationship.key }}">
+        <details>
+          <summary title="Open the rule and its limits"><strong>{{ relationship.label | escape }}</strong><span>{{ relationship.meaning | escape }}</span><small>Open rule + limits</small></summary>
+          <div class="relationship-method"><p><b>Assignment rule</b>{{ relationship.decision_rule | escape }}</p><p><b>Does not establish</b>{{ relationship.not_claim | escape }}</p></div>
+        </details>
+      </li>
       {% endfor %}
     </ul>
   </section>
@@ -51,6 +68,7 @@ intelligence: true
       <button type="button" class="signal-filter" data-signal-filter="{{ filter.key | escape }}" aria-pressed="{% if filter.key == 'all' %}true{% else %}false{% endif %}">{{ filter.label | escape }}</button>
       {% endfor %}
     </div>
+    <p class="signal-filter-method">These pills only match the page's saved tags and text. They do not ask an AI model to judge relevance or truth.</p>
 
     <div class="signal-query-note" id="signal-query-note" hidden></div>
 
@@ -63,11 +81,17 @@ intelligence: true
             <h3>{{ thread.title | escape }}</h3>
             <p>{{ thread.dek | escape }}</p>
           </div>
-          <span class="signal-status">{{ thread.status | escape }}</span>
+          <span class="signal-status" title="Editorial synthesis, not a computed score. Open ‘How this thread was assembled’ below.">Editorial status · {{ thread.status | escape }}</span>
         </header>
+
+        <details class="intel-thread-method">
+          <summary>How this thread was assembled</summary>
+          <div class="intel-proof-grid"><p><strong>Thread claim</strong>{{ thread.dek | escape }}</p><p><strong>Included evidence</strong>{{ thread.events.size }} dated nodes whose source summaries materially bear on this claim.</p><p><strong>Status label</strong>“{{ thread.status | escape }}” is editorial synthesis, not a computed confidence score.</p><p><strong>Scope boundary</strong>Tags are navigation aids: {{ thread.tags | join: ', ' | escape }}. They are not a complete taxonomy.</p></div>
+        </details>
 
         <ol class="signal-event-list">
           {% for event in thread.events %}
+          {% assign event_relationship = signals.relationship_types | where: "key", event.relationship | first %}
           <li class="signal-event relationship-{{ event.relationship }}">
             <div class="signal-event-marker" aria-hidden="true"></div>
             <div class="signal-event-date">
@@ -76,15 +100,20 @@ intelligence: true
               <span>{{ event.source_type | escape }}</span>
             </div>
             <div class="signal-event-body">
-              {% for relationship in signals.relationship_types %}{% if relationship.key == event.relationship %}<span class="relationship-badge">{{ relationship.label | escape }}</span>{% endif %}{% endfor %}
-              <h4><a href="{{ event.url | escape }}" target="_blank" rel="noopener noreferrer">{{ event.title | escape }} ↗</a></h4>
+              <span class="relationship-badge" title="Editorial relationship. Open the ‘Why’ disclosure below.">{{ event_relationship.label | escape }}</span>
+              <h4>{{ event.title | escape }}</h4>
               <p class="signal-byline">{{ event.outlet | escape }} · {{ event.author | escape }}</p>
-              <p>{{ event.note | escape }}</p>
+              <p class="signal-node-summary">{{ event.note | escape }}</p>
+              <div class="signal-event-actions"><a href="{{ event.url | escape }}" target="_blank" rel="noopener noreferrer">Open original source ↗</a></div>
+              <details class="intel-inline-proof">
+                <summary title="Open the evidence relationship and its limits">Why is this node labeled “{{ event_relationship.label | escape }}”?</summary>
+                <div class="intel-proof-grid"><p><strong>Evidence basis</strong>{{ event.source_type | escape }} published by {{ event.outlet | escape }} on {{ event.date | date: "%b %d, %Y" }}.</p><p><strong>Assignment rule</strong>{{ event_relationship.decision_rule | escape }}</p><p><strong>This node contributes</strong>{{ event.note | escape }}</p><p><strong>Does not establish</strong>{{ event_relationship.not_claim | escape }}</p></div>
+              </details>
             </div>
           </li>
           {% endfor %}
         </ol>
-        <p class="signal-thread-tags" aria-label="Thread topics">{% for tag in thread.tags %}<span>{{ tag | escape }}</span>{% endfor %}</p>
+        <div class="signal-thread-tags" aria-label="Filter by a thread topic">{% for tag in thread.tags %}<button type="button" data-signal-tag="{{ tag | escape }}" title="Filter the ledger by this saved tag">{{ tag | escape }}</button>{% endfor %}</div>
       </article>
       {% endfor %}
     </div>
@@ -106,6 +135,7 @@ intelligence: true
         <p class="signal-outlet">{{ observer.outlet | escape }}</p>
         <p>{{ observer.signal | escape }}</p>
         <a href="{{ observer.url | escape }}" target="_blank" rel="noopener noreferrer">Read the dated source ↗</a>
+        <details class="intel-inline-proof"><summary>Why is this included?</summary><p>Inclusion records this specific dated connection: {{ observer.signal | escape }} It is not an accuracy score, “first” claim, endorsement, or lifetime judgment of the author.</p></details>
       </article>
       {% endfor %}
     </div>

@@ -2,6 +2,7 @@
   'use strict';
 
   var filters = Array.prototype.slice.call(document.querySelectorAll('[data-signal-filter]'));
+  var tagFilters = Array.prototype.slice.call(document.querySelectorAll('[data-signal-tag]'));
   var threads = Array.prototype.slice.call(document.querySelectorAll('[data-signal-thread]'));
   var status = document.getElementById('signal-filter-status');
   var queryNote = document.getElementById('signal-query-note');
@@ -25,7 +26,7 @@
     return tags.indexOf(needle) !== -1 || text.indexOf(needle) !== -1;
   }
 
-  function applyFilter(key, rawQuery, announce) {
+  function applyFilter(key, rawQuery, announce, origin) {
     var visible = 0;
     threads.forEach(function (thread) {
       var show = matches(thread, key, rawQuery);
@@ -46,9 +47,15 @@
     if (queryNote) {
       if (rawQuery) {
         queryNote.hidden = false;
-        queryNote.textContent = visible
-          ? 'Opened from “Right now in AI: ' + rawQuery + '”. Showing threads whose source trail mentions that topic.'
-          : 'No historical thread is indexed for “' + rawQuery + '” yet. Showing the full ledger instead.';
+        if (origin === 'tag') {
+          queryNote.textContent = visible
+            ? 'Showing threads matched by saved tag or text “' + rawQuery + '”. This is literal browser-side matching—not an AI judgment.'
+            : 'No additional thread matches “' + rawQuery + '”. Showing the full ledger instead.';
+        } else {
+          queryNote.textContent = visible
+            ? 'Opened from “Right now in AI: ' + rawQuery + '”. Showing threads whose source trail mentions that topic.'
+            : 'No historical thread is indexed for “' + rawQuery + '” yet. Showing the full ledger instead.';
+        }
       } else {
         queryNote.hidden = true;
         queryNote.textContent = '';
@@ -56,7 +63,7 @@
     }
 
     if (rawQuery && key === 'query' && visible === 0) {
-      applyFilter('all', '', false);
+      applyFilter('all', '', false, origin);
       if (queryNote) {
         queryNote.hidden = false;
         queryNote.textContent = 'No historical thread is indexed for “' + rawQuery + '” yet. Showing the full ledger instead.';
@@ -68,7 +75,13 @@
 
   filters.forEach(function (button) {
     button.addEventListener('click', function () {
-      applyFilter(button.getAttribute('data-signal-filter') || 'all', '', true);
+      applyFilter(button.getAttribute('data-signal-filter') || 'all', '', true, 'filter');
+    });
+  });
+
+  tagFilters.forEach(function (button) {
+    button.addEventListener('click', function () {
+      applyFilter('query', button.getAttribute('data-signal-tag') || '', true, 'tag');
     });
   });
 
@@ -79,6 +92,6 @@
     var direct = filters.filter(function (button) {
       return normalize(button.getAttribute('data-signal-filter')) === normalizedTopic;
     })[0];
-    applyFilter(direct ? direct.getAttribute('data-signal-filter') : 'query', topic, false);
+    applyFilter(direct ? direct.getAttribute('data-signal-filter') : 'query', topic, false, 'homepage');
   }
 }());

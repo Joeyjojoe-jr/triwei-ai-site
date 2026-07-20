@@ -24,6 +24,8 @@ The script uses only the Python standard library, so no extra installs are neede
 
 - `_layouts/home.html` — the live dashboard (trending, ethics watch, categories).
 - `industry.md` → `/industry/` — five-part AI Industry Atlas plus physical supply-chain and Frontier Diffusion watches.
+- `signals.md` → `/signals/` — source-linked historical threads connecting early signals to later evidence without a prediction scorecard.
+- `hardware.md` → `/hardware/` — GPU and memory comparison, material 5W1H, fab timelines, and factory-conversion economics.
 - `ethics.md` → `/ethics/` — full Ethics Watch.
 - `sources.md` → `/sources/` — sources and methodology.
 - `about.md` → `/about/` — what the site is.
@@ -32,6 +34,8 @@ The script uses only the Python standard library, so no extra installs are neede
 - `_data/topic_history.json` — rolling 90-day topic aggregates.
 - `_data/diffusion_history.json` — rolling one-year model-diffusion coverage signals.
 - `_data/model_api_prices.json` — source-dated first-party API price ledger with an explicit freshness limit.
+- `_data/signals.json` — curated historical signal threads and early-read profiles.
+- `_data/hardware.json` — source-dated hardware specifications, production inputs, and fab projects.
 - `scripts/fetch_news.py` — the aggregator.
 - `scripts/build_industry_data.py` — the Industry Atlas data builder.
 

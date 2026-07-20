@@ -894,10 +894,33 @@ body {
 .hero-cycle {
   color: var(--accent-2);
   display: inline-block;
+  text-decoration-color: color-mix(in srgb, var(--accent-2) 45%, transparent);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
+
+@media (min-width: 901px) {
+  .header-inner {
+    width: min(1360px, calc(100% - 3rem));
+    flex-wrap: nowrap;
+    gap: 0.65rem;
+  }
+
+  .site-nav a {
+    padding-inline: 0.48rem;
+    font-size: 0.86rem;
+  }
+
+  .theme-toggle {
+    padding-inline: 0.7rem;
+  }
+}
 .hero-cycle::before { content: "› "; color: var(--muted); }
+.hero-cycle:hover { color: var(--accent); text-decoration-color: currentColor; }
 .hero-cycle.swap { opacity: 0; transform: translateY(6px); }
+.hero-history-callout { max-width: 690px; margin: -0.35rem auto 0.8rem; color: var(--muted); font-family: var(--mono); font-size: 0.68rem; line-height: 1.5; text-align: center; }
+.hero-history-callout span { color: var(--accent); }
 .updated-stamp { font-family: var(--mono); color: var(--accent); }
 .updated-stamp::before { content: "◉ "; color: var(--accent); }
 

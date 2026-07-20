@@ -75,6 +75,7 @@ test('homepage promotes the physical AI supply-chain watch', () => {
   const home = read('_layouts/home.html');
 
   assert.match(home, /Strategic watch · physical AI stack/);
-  assert.match(home, /\/industry\/#supply-chain/);
+  assert.match(home, /\/hardware\//);
+  assert.match(home, /Open hardware intelligence/);
   assert.match(home, /supply\.critical_count/);
 });

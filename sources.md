@@ -59,3 +59,15 @@ The evidence timeline uses primary sources and keeps four classes separate:
 Benchmark similarity, answer style, or release timing alone is never treated as proof of model lineage.
 
 External sections keep the last successfully retrieved snapshot if a source is temporarily unavailable, but current API prices expire visibly instead of silently masquerading as live data. Every chart shows its definition, source, freshness, and a tabular alternative.
+
+## Signal History
+
+The [Signal History](/signals/) is a curated lookback ledger, not an automated verdict on who predicted the future. Each thread begins with an early paper, article, analysis, or opinion and connects it to later events using four editorial relationships: **early signal**, **strengthens**, **complicates**, and **redirects**. A relationship means the later evidence bears materially on the earlier framing; it does not mean the author was simply “right” or “wrong.”
+
+Coverage begins in 2010 with [DeepMind's founding history](https://deepmind.google/about/) and includes primary research such as [Attention Is All You Need](https://arxiv.org/abs/1706.03762), early specialist explanations such as Distill's [Attention and Augmented Recurrent Neural Networks](https://distill.pub/2016/augmented-rnns/), reported analysis from outlets including WIRED and Quanta Magazine, product releases, and regulation. The current ledger is a documented seed set, not a claim to index every article published since 2010. Threads and “durable early reads” are selected for specificity, timing, source quality, and the strength of the later evidence trail—not fame or hindsight-friendly wording.
+
+## AI Hardware intelligence
+
+The [AI Hardware](/hardware/) page separates six questions that a single GPU number cannot answer: memory capacity, memory bandwidth, compute engines, interconnect, power and cooling, and software support. Product specifications were checked against first-party sources, including [NVIDIA's GeForce RTX 40 Series specifications](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/), [NVIDIA H200](https://www.nvidia.com/en-us/data-center/h200/), [Apple M4 Max](https://www.apple.com/newsroom/2024/10/apple-introduces-m4-pro-and-m4-max/), and [NVIDIA Grace Hopper](https://developer.nvidia.com/blog/nvidia-grace-hopper-superchip-architecture-in-depth/). They explain resource gates; they are not workload benchmarks or buying recommendations.
+
+The material ledger uses current institutional and geological sources, including the IEA's [Rare Earth Elements](https://www.iea.org/reports/rare-earth-elements/executive-summary) analysis and the USGS [Mineral Commodity Summaries 2026](https://pubs.usgs.gov/publication/mcs2026). Fab timelines use current company disclosures from TSMC, Intel, Micron, and SK hynix. Announced investment and target dates can move with demand, financing, permitting, construction, tool delivery, qualification, and yield. The page shows its verification date and a 90-day re-check deadline. After that deadline, the rendered page labels the reference as expired, while the strict repository validator rejects it until the ledger is re-checked.

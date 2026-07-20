@@ -54,6 +54,7 @@ jobs:
         run: |
           npm run check:data
           npm run check:industry
+          python scripts/validate_intelligence_data.py --allow-stale
 
       - name: Commit updated data
         id: commit

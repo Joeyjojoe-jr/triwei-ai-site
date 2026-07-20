@@ -36,6 +36,9 @@ jobs:
       - name: Test orbit navigation
         run: npm run check:orbit
 
+      - name: Test guided homepage
+        run: npm run check:guided-home
+
       - name: Test palette toggle
         run: npm run check:palette
 

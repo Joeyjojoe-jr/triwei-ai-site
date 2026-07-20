@@ -11,6 +11,7 @@
     "check:industry": "python -m py_compile scripts/build_industry_data.py scripts/validate_industry_data.py && node --check assets/js/industry-atlas.js && node --test scripts/test_industry_atlas.js && python scripts/validate_industry_data.py",
     "check:intelligence": "python -m py_compile scripts/validate_intelligence_data.py && node --check assets/js/signal-history.js && node --check assets/js/hardware-intelligence.js && node --test scripts/test_intelligence.js && python scripts/validate_intelligence_data.py",
     "check:orbit": "node --check assets/js/orbit-navigation.js && node --test scripts/test_orbit_navigation.js",
+    "check:guided-home": "node --check assets/js/guided-home.js && node --test scripts/test_guided_home.js",
     "check:palette": "node --check assets/js/palette-toggle.js && node --check assets/js/holodeck.js && node --test scripts/test_palette_toggle.js",
     "check:mobile": "node --check assets/js/holodeck-loader.js && node --check assets/js/holodeck.js && node --test scripts/test_mobile_hardening.js scripts/test_release_review_fixes.js",
     "check:data": "python scripts/validate_news_data.py"

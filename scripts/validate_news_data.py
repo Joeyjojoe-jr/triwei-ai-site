@@ -48,6 +48,66 @@ def validate(payload):
     if not isinstance(categories, dict):
         return ["categories must be an object"]
 
+    pulse = payload.get("ai_pulse")
+    if not isinstance(pulse, dict):
+        errors.append("ai_pulse must be an object")
+    else:
+        for field in ("story_count", "source_count", "topic_count", "ethics_count"):
+            if not isinstance(pulse.get(field), int) or pulse[field] < 0:
+                errors.append("ai_pulse.%s must be a non-negative integer" % field)
+        if (isinstance(pulse.get("story_count"), int) and
+                isinstance(pulse.get("ethics_count"), int) and
+                pulse["ethics_count"] > pulse["story_count"]):
+            errors.append("ai_pulse.ethics_count cannot exceed story_count")
+        if (isinstance(payload.get("item_count"), int) and
+                pulse.get("story_count") != payload["item_count"]):
+            errors.append("ai_pulse.story_count must match item_count")
+        if (isinstance(payload.get("trending"), list) and
+                pulse.get("topic_count") != len(payload["trending"])):
+            errors.append("ai_pulse.topic_count must match trending length")
+        coverage = pulse.get("coverage")
+        if not isinstance(coverage, list) or len(coverage) > 4:
+            errors.append("ai_pulse.coverage must contain at most four cards")
+        else:
+            seen_pulse_links = set()
+            for card_index, card in enumerate(coverage):
+                card_location = "ai_pulse.coverage[%d]" % card_index
+                if not isinstance(card, dict):
+                    errors.append("%s must be an object" % card_location)
+                    continue
+                if not card.get("term"):
+                    errors.append("%s.term must be present" % card_location)
+                for field in ("story_count", "source_count", "category_count"):
+                    if not isinstance(card.get(field), int) or card[field] <= 0:
+                        errors.append("%s.%s must be a positive integer" %
+                                      (card_location, field))
+                if (isinstance(card.get("story_count"), int) and
+                        isinstance(card.get("source_count"), int) and
+                        card["source_count"] > card["story_count"]):
+                    errors.append("%s.source_count cannot exceed story_count" %
+                                  card_location)
+                if (isinstance(card.get("story_count"), int) and
+                        isinstance(card.get("category_count"), int) and
+                        card["category_count"] > card["story_count"]):
+                    errors.append("%s.category_count cannot exceed story_count" %
+                                  card_location)
+                strength = card.get("strength_percent")
+                if not isinstance(strength, int) or not 0 <= strength <= 100:
+                    errors.append("%s.strength_percent must be from 0 to 100" %
+                                  card_location)
+                stories = card.get("stories")
+                if not isinstance(stories, list) or not 2 <= len(stories) <= 3:
+                    errors.append("%s.stories must contain two or three items" %
+                                  card_location)
+                    continue
+                for story_index, item in enumerate(stories):
+                    validate_item(item, "%s.stories[%d]" %
+                                  (card_location, story_index), errors)
+                    link = item.get("link") if isinstance(item, dict) else None
+                    if link in seen_pulse_links:
+                        errors.append("%s.stories cannot reuse a link" % card_location)
+                    seen_pulse_links.add(link)
+
     for category in order:
         group = categories.get(category)
         location = "categories.%s" % category

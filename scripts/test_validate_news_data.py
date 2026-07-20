@@ -16,7 +16,16 @@ class NewsDataValidationTests(unittest.TestCase):
             "trend_score": 1,
         }
         return {
+            "item_count": 1,
+            "trending": [],
             "category_order": ["labs"],
+            "ai_pulse": {
+                "story_count": 1,
+                "source_count": 1,
+                "topic_count": 0,
+                "ethics_count": 0,
+                "coverage": [],
+            },
             "categories": {
                 "labs": {
                     "items": [copy.deepcopy(item)],
@@ -62,6 +71,22 @@ class NewsDataValidationTests(unittest.TestCase):
         payload["categories"]["labs"]["subcategories"] = [None]
         errors = validate_news_data.validate(payload)
         self.assertTrue(any("must be an object" in error for error in errors))
+
+    def test_rejects_reused_story_across_pulse_cards(self):
+        payload = self.payload()
+        story = copy.deepcopy(payload["categories"]["labs"]["items"][0])
+        card = {
+            "term": "OpenAI",
+            "story_count": 2,
+            "source_count": 2,
+            "category_count": 1,
+            "strength_percent": 100,
+            "top_ethics_theme": "",
+            "stories": [copy.deepcopy(story), copy.deepcopy(story)],
+        }
+        payload["ai_pulse"]["coverage"] = [card]
+        errors = validate_news_data.validate(payload)
+        self.assertTrue(any("cannot reuse a link" in error for error in errors))
 
 
 if __name__ == "__main__":

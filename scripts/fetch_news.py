@@ -498,6 +498,7 @@ def collect():
     all_items = []
     for cat in CATEGORY_ORDER:
         bucket = []
+        successful_feeds = 0
         for kind, url in FEEDS.get(cat, []):
             try:
                 raw = fetch(url)
@@ -505,6 +506,8 @@ def collect():
                 print("  ! fetch failed %s (%s)" % (url, e), file=sys.stderr)
                 continue
             rows = parse_hn(raw) if kind == "hn" else parse_rss(raw)
+            if rows:
+                successful_feeds += 1
             fb = source_from_url(url)
             for r in rows:
                 title, src = split_source(r["title"], fb)
@@ -537,7 +540,8 @@ def collect():
             time.sleep(0.4)
         bucket.sort(key=lambda x: x["epoch"], reverse=True)
         categories[cat] = {"label": CATEGORY_LABELS[cat],
-                           "items": bucket[:PER_CATEGORY]}
+                           "items": bucket[:PER_CATEGORY],
+                           "successful_feeds": successful_feeds}
     return categories, all_items
 
 
@@ -815,14 +819,103 @@ def display_subcategories(category, items):
     return result
 
 
+def load_previous_payload(path=OUT):
+    """Read the last generated payload for category-level outage recovery."""
+    if not os.path.exists(path):
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as handle:
+            payload = json.load(handle)
+    except (OSError, ValueError, TypeError):
+        return {}
+    return payload if isinstance(payload, dict) else {}
+
+
+def cached_story(item, category):
+    """Convert a previously displayed story back into the internal shape."""
+    if not isinstance(item, dict):
+        return None
+    title = str(item.get("title") or "").strip()
+    link = safe_external_url(item.get("link"))
+    if not title or not link:
+        return None
+    published_iso, epoch = parse_date(str(item.get("published_iso") or ""))
+    ethics_tags = item.get("ethics_tags") or []
+    if not isinstance(ethics_tags, (list, tuple)):
+        ethics_tags = []
+    return {
+        "title": title,
+        "link": link,
+        "source": str(item.get("source") or "Web"),
+        "category": category,
+        "published_iso": published_iso,
+        "epoch": epoch,
+        "summary": str(item.get("summary") or ""),
+        "ethics_tags": [str(tag) for tag in ethics_tags if tag],
+        "trend_score": safe_trend_score(item.get("trend_score")),
+    }
+
+
+def restore_failed_categories(categories, all_items, previous_payload):
+    """Retain last-known stories when every feed for a category is offline."""
+    previous_categories = previous_payload.get("categories", {})
+    if not isinstance(previous_categories, dict):
+        return 0
+
+    known_links = {
+        canonical_url(item.get("link", "")) for item in all_items
+        if canonical_url(item.get("link", ""))
+    }
+    restored_count = 0
+
+    for category in CATEGORY_ORDER:
+        group = categories.get(category)
+        if not isinstance(group, dict) or group.get("successful_feeds", 0) > 0:
+            continue
+        previous_group = previous_categories.get(category, {})
+        previous_items = (previous_group.get("items", [])
+                          if isinstance(previous_group, dict) else [])
+        if not isinstance(previous_items, list):
+            continue
+
+        restored = []
+        category_links = set()
+        for cached in previous_items:
+            item = cached_story(cached, category)
+            if not item:
+                continue
+            link = canonical_url(item["link"])
+            if not link or link in category_links:
+                continue
+            category_links.add(link)
+            restored.append(item)
+            if link not in known_links:
+                all_items.append(item)
+                known_links.add(link)
+            if len(restored) == PER_CATEGORY:
+                break
+
+        if restored:
+            group["items"] = restored
+            restored_count += len(restored)
+            print("  ! restored %d cached stories for %s after all feeds failed"
+                  % (len(restored), CATEGORY_LABELS[category]), file=sys.stderr)
+
+    return restored_count
+
+
 def main():
     print("Fetching feeds...")
+    previous_payload = load_previous_payload()
     categories, all_items = collect()
-    print("Collected %d unique items." % len(all_items))
+    fresh_item_count = len(all_items)
+    print("Collected %d fresh unique items." % fresh_item_count)
 
-    if len(all_items) < MIN_ITEMS_TO_WRITE and os.path.exists(OUT):
-        print("Too few items (%d); keeping existing data." % len(all_items))
+    if fresh_item_count < MIN_ITEMS_TO_WRITE and os.path.exists(OUT):
+        print("Too few items (%d); keeping existing data." % fresh_item_count)
         return 0
+
+    restore_failed_categories(categories, all_items, previous_payload)
 
     trending = compute_trending(all_items)
     annotate_trend_scores(all_items, trending)

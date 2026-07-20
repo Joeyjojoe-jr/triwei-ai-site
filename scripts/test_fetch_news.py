@@ -235,11 +235,90 @@ class StoryDeduplicationTests(unittest.TestCase):
         self.assertEqual(len(all_items), 2)
         self.assertEqual(len(categories["labs"]["items"]), 1)
         self.assertEqual(len(categories["business"]["items"]), 1)
+        self.assertEqual(categories["labs"]["successful_feeds"], 1)
+        self.assertEqual(categories["business"]["successful_feeds"], 1)
         self.assertIn("safety", categories["business"]["items"][0]["title"])
 
     def test_preserves_full_headline_text(self):
         headline = "A" * 220
         self.assertEqual(fetch_news.clean_text(headline, None), headline)
+
+
+class FeedOutageFallbackTests(unittest.TestCase):
+    def cached_item(self, category, title, link):
+        return {
+            "title": title,
+            "link": link,
+            "source": "Previous source",
+            "category": category,
+            "published_iso": "2026-07-20T12:00:00Z",
+            "summary": "A previously fetched AI story.",
+            "ethics_tags": ["Safety & Alignment"],
+            "trend_score": 4,
+        }
+
+    def test_empty_or_unparseable_feed_is_not_counted_as_successful(self):
+        with mock.patch.object(fetch_news, "FEEDS", {
+                "business": [("rss", "empty-feed")]}), \
+                mock.patch.object(fetch_news, "fetch", return_value=b"not rss"), \
+                mock.patch.object(fetch_news, "parse_rss", return_value=[]), \
+                mock.patch.object(fetch_news.time, "sleep"):
+            categories, all_items = fetch_news.collect()
+
+        self.assertEqual(categories["business"]["successful_feeds"], 0)
+        self.assertEqual(categories["business"]["items"], [])
+        self.assertEqual(all_items, [])
+
+    def test_restores_last_good_items_only_when_every_category_feed_failed(self):
+        categories = {
+            category: {
+                "label": fetch_news.CATEGORY_LABELS[category],
+                "items": [],
+                "successful_feeds": 1,
+            }
+            for category in fetch_news.CATEGORY_ORDER
+        }
+        categories["business"]["successful_feeds"] = 0
+        previous = {"categories": {
+            "business": {"items": [self.cached_item(
+                "business", "AI startup raises new funding", "https://example.com/funding")]},
+            "ethics": {"items": [self.cached_item(
+                "ethics", "AI safety policy advances", "https://example.com/policy")]},
+        }}
+        all_items = []
+
+        restored = fetch_news.restore_failed_categories(
+            categories, all_items, previous)
+
+        self.assertEqual(restored, 1)
+        self.assertEqual(len(categories["business"]["items"]), 1)
+        self.assertEqual(categories["business"]["items"][0]["category"], "business")
+        self.assertEqual(categories["ethics"]["items"], [])
+        self.assertEqual(len(all_items), 1)
+
+    def test_cached_story_does_not_duplicate_a_link_in_global_metrics(self):
+        existing = self.cached_item(
+            "labs", "AI startup raises new funding", "https://example.com/funding")
+        existing.update({"epoch": 1})
+        categories = {
+            category: {
+                "label": fetch_news.CATEGORY_LABELS[category],
+                "items": [],
+                "successful_feeds": 1,
+            }
+            for category in fetch_news.CATEGORY_ORDER
+        }
+        categories["business"]["successful_feeds"] = 0
+        previous = {"categories": {"business": {"items": [self.cached_item(
+            "business", "AI startup raises new funding", "https://example.com/funding")]}}}
+        all_items = [existing]
+
+        restored = fetch_news.restore_failed_categories(
+            categories, all_items, previous)
+
+        self.assertEqual(restored, 1)
+        self.assertEqual(len(categories["business"]["items"]), 1)
+        self.assertEqual(len(all_items), 1)
 
 
 class AiPulseTests(unittest.TestCase):

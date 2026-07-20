@@ -1,0 +1,370 @@
+/* Homepage-only guided visual layer.
+   This file deliberately inherits TriWei's existing palette and type tokens.
+   It does not style or reposition the orbit hero. */
+
+.guided-home {
+  position: relative;
+  overflow: hidden;
+  margin: 1.35rem 0 2rem;
+  padding: clamp(1rem, 2.8vw, 1.55rem);
+  border: 1px solid color-mix(in srgb, var(--accent) 48%, var(--border));
+  border-radius: 6px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--accent) 7%, transparent), transparent 38%),
+    color-mix(in srgb, var(--surface) 95%, transparent);
+  box-shadow: var(--shadow);
+}
+
+.guided-home::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  box-shadow: 0 0 14px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+.guided-home-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(17rem, 28rem);
+  align-items: end;
+  gap: 0.8rem 2rem;
+}
+
+.guided-home-kicker {
+  margin: 0 0 0.2rem;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.guided-home-title {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  line-height: 1.25;
+}
+
+.guided-home-intro {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.guided-paths {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 1.15rem 0;
+}
+
+.guided-path {
+  min-width: 0;
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text);
+  background: color-mix(in srgb, var(--surface-soft) 92%, transparent);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.guided-path:hover,
+.guided-path[aria-selected="true"] {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 9%, var(--surface-soft));
+  text-decoration: none;
+}
+
+.guided-path:focus-visible,
+.guided-signal-button:focus-visible,
+.guided-home-action:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 65%, #ffffff);
+  outline-offset: 3px;
+}
+
+.guided-path-index {
+  display: block;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+}
+
+.guided-path strong {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: var(--mono);
+  font-size: 0.92rem;
+}
+
+.guided-path span:last-child {
+  display: block;
+  margin-top: 0.3rem;
+  color: var(--muted);
+  font-size: 0.74rem;
+  line-height: 1.4;
+}
+
+.guided-home-body {
+  display: grid;
+  grid-template-columns: minmax(14rem, 0.72fr) minmax(0, 1.28fr);
+  gap: 0.85rem;
+}
+
+.guided-signal-panel,
+.guided-map-panel {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: color-mix(in srgb, var(--surface) 93%, transparent);
+}
+
+.guided-panel-label {
+  margin: 0;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.guided-panel-title {
+  margin: 0.25rem 0 0;
+  font-family: var(--mono);
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.guided-signal-list {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.guided-signal-button {
+  display: grid;
+  grid-template-columns: 1.8rem minmax(0, 1fr);
+  gap: 0.55rem;
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  background: var(--surface-soft);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.guided-signal-button:hover,
+.guided-signal-button[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface-soft));
+}
+
+.guided-signal-number {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+}
+
+.guided-signal-button strong {
+  display: block;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.guided-signal-button small {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  line-height: 1.35;
+}
+
+.guided-signal-note {
+  margin: 0.8rem 0 0;
+  padding: 0.65rem 0.75rem;
+  border-left: 2px solid var(--accent-2);
+  color: var(--muted);
+  background: color-mix(in srgb, var(--accent-2) 6%, transparent);
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.guided-map-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.guided-mode-status {
+  flex: none;
+  padding: 0.2rem 0.45rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 42%, transparent);
+  border-radius: 999px;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.guided-map {
+  width: 100%;
+  height: auto;
+  margin: 0.65rem 0 0.4rem;
+  overflow: visible;
+}
+
+.guided-map-edge {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 2;
+}
+
+.guided-map-edge-active {
+  stroke: var(--accent);
+  stroke-dasharray: 7 6;
+}
+
+.guided-map-node {
+  fill: var(--surface-soft);
+  stroke: var(--border);
+  stroke-width: 2;
+}
+
+.guided-map-node-active {
+  fill: color-mix(in srgb, var(--accent) 8%, var(--surface-soft));
+  stroke: var(--accent);
+}
+
+.guided-map-label {
+  fill: var(--text);
+  font-family: var(--mono);
+  font-size: 9px;
+  text-anchor: middle;
+}
+
+.guided-map-sub {
+  fill: var(--muted);
+  font-family: var(--mono);
+  font-size: 7px;
+  text-anchor: middle;
+}
+
+.guided-explanation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin-top: 0.65rem;
+}
+
+.guided-explanation {
+  min-width: 0;
+  padding: 0.7rem;
+  border-left: 2px solid var(--accent);
+  background: var(--surface-soft);
+}
+
+.guided-explanation span {
+  display: block;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.guided-explanation p {
+  margin: 0.3rem 0 0;
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.guided-home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.guided-home-action {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  background: var(--surface-soft);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+}
+
+.guided-home-action:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.guided-home-action-primary {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface-soft));
+}
+
+@media (max-width: 780px) {
+  .guided-home-header,
+  .guided-home-body {
+    grid-template-columns: 1fr;
+  }
+
+  .guided-paths {
+    grid-template-columns: 1fr;
+  }
+
+  .guided-map-panel {
+    order: -1;
+  }
+}
+
+@media (max-width: 520px) {
+  .guided-home {
+    padding: 0.85rem;
+  }
+
+  .guided-explanation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guided-map-label {
+    font-size: 8px;
+  }
+
+  .guided-map-sub {
+    font-size: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .guided-home *,
+  .guided-home *::before,
+  .guided-home *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}

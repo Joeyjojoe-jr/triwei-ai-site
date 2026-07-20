@@ -9,7 +9,8 @@
       "date": "2026-07-17",
       "story_count": 5,
       "topics": {
-        "Anthropic": 1
+        "Anthropic": 2,
+        "OpenAI": 1
       }
     },
     {
@@ -23,31 +24,31 @@
     },
     {
       "date": "2026-07-19",
-      "story_count": 9,
+      "story_count": 5,
       "topics": {
-        "Anthropic": 1,
         "Apple": 1,
         "OpenAI": 1,
         "regulation": 1,
-        "robot": 1,
-        "safety": 3
+        "safety": 1
       }
     },
     {
       "date": "2026-07-20",
-      "story_count": 54,
+      "story_count": 58,
       "topics": {
-        "agent": 7,
-        "agentic": 1,
-        "Anthropic": 3,
+        "agent": 11,
+        "agentic": 2,
+        "alignment": 1,
+        "Anthropic": 4,
         "benchmark": 1,
         "coding": 1,
         "DeepSeek": 1,
         "healthcare": 1,
         "multimodal": 1,
-        "Nvidia": 1,
-        "OpenAI": 3,
-        "safety": 7
+        "Nvidia": 3,
+        "OpenAI": 5,
+        "regulation": 1,
+        "safety": 12
       }
     }
   ]

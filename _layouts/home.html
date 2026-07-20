@@ -32,7 +32,7 @@ layout: default
                 <li>
                   <a href="{{ h.link | escape }}" target="_blank" rel="noopener noreferrer">
                     <span class="rank">{{ forloop.index }}</span>
-                    <span class="rank-title">{{ h.title | truncate: 58 | escape }}</span>
+                    <span class="rank-title">{{ h.title | escape }}</span>
                   </a>
                 </li>
                 {% endfor %}
@@ -64,7 +64,7 @@ layout: default
                 <li>
                   <a href="{{ h.link | escape }}" target="_blank" rel="noopener noreferrer">
                     <span class="rank">{{ forloop.index }}</span>
-                    <span class="rank-title">{{ h.title | truncate: 58 | escape }}</span>
+                    <span class="rank-title">{{ h.title | escape }}</span>
                   </a>
                 </li>
                 {% endfor %}

@@ -20,8 +20,9 @@ import sys
 import html
 import time
 import datetime as dt
+from difflib import SequenceMatcher
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 from urllib.request import Request, urlopen
-from urllib.parse import urlsplit
 from urllib.error import URLError, HTTPError
 from xml.etree import ElementTree as ET
 
@@ -208,6 +209,47 @@ RESEARCH_PATTERNS = [
     r"\btraining\b", r"\binference\b", r"\barchitecture\b", r"\barxiv\b",
 ]
 
+# Headline matching deliberately ignores only grammatical and generic news
+# language.  Event details (for example "safety", "pricing", or "lawsuit")
+# remain significant so distinct reporting angles are not collapsed together.
+HEADLINE_STOPWORDS = {
+    "a", "an", "and", "are", "as", "at", "be", "been", "being", "but",
+    "by", "can", "for", "from", "in", "into", "is", "it", "its", "new",
+    "news", "now", "of", "on", "or", "report", "reportedly", "reports",
+    "says", "that", "the", "their", "these", "this", "those", "to", "today",
+    "will", "with",
+}
+
+HEADLINE_EQUIVALENTS = {
+    "announced": "announce", "announces": "announce", "announcing": "announce",
+    "acquired": "acquire", "acquires": "acquire", "acquiring": "acquire",
+    "bought": "acquire", "buys": "acquire",
+    "debuts": "launch", "debuted": "launch",
+    "introduced": "launch", "introduces": "launch",
+    "launched": "launch", "launches": "launch", "launching": "launch",
+    "movable": "move", "moved": "move", "moves": "move", "moving": "move",
+    "released": "launch", "releases": "launch", "releasing": "launch",
+    "unveiled": "launch", "unveils": "launch",
+}
+
+# Differences containing one of these terms usually represent an editorial or
+# consequence-focused take, not a wire-copy rewrite of the same basic report.
+EDITORIAL_ANGLE_TERMS = {
+    "accountability", "analysis", "benchmark", "bias", "climate", "competition",
+    "concern", "concerns", "cost", "copyright", "critic", "critics", "critique",
+    "deepfake", "energy", "environment", "explainer", "fairness", "funding",
+    "governance", "impact", "impacts", "implication", "implications", "investor",
+    "investors", "jobs", "labor", "lawsuit", "market", "means", "military",
+    "misinformation", "opinion", "price", "pricing", "privacy", "problem",
+    "problems", "regulation", "revenue", "review", "risk", "risks", "safety",
+    "strategy", "surveillance", "test", "testing", "transparency", "valuation",
+    "weapon", "weapons", "workers", "why",
+}
+
+TRACKING_QUERY_KEYS = {
+    "fbclid", "gclid", "mc_cid", "mc_eid", "ref", "source",
+}
+
 
 def matches_any(text, patterns):
     return any(re.search(pattern, text, re.IGNORECASE) for pattern in patterns)
@@ -245,9 +287,86 @@ def clean_text(s, limit=240):
     s = html.unescape(s)
     s = re.sub(r"<[^>]+>", " ", s)          # strip HTML tags
     s = re.sub(r"\s+", " ", s).strip()
-    if len(s) > limit:
+    if limit is not None and len(s) > limit:
         s = s[:limit].rsplit(" ", 1)[0] + "…"
     return s
+
+
+def canonical_url(url):
+    """Normalize a URL enough to recognize the exact article across feeds."""
+    if not url:
+        return ""
+    try:
+        parts = urlsplit(url.strip())
+    except ValueError:
+        return url.strip()
+    query = [
+        (key, value) for key, value in parse_qsl(parts.query, keep_blank_values=True)
+        if not key.lower().startswith("utm_") and key.lower() not in TRACKING_QUERY_KEYS
+    ]
+    path = parts.path.rstrip("/") or "/"
+    return urlunsplit((parts.scheme.lower(), parts.netloc.lower().removeprefix("www."),
+                       path, urlencode(query), ""))
+
+
+def headline_tokens(title):
+    """Return conservative comparison tokens while preserving editorial angles."""
+    normalized = clean_text(title, None).lower().replace("’", "'")
+    normalized = re.sub(r"(?<=\w)'s\b", "", normalized)
+    normalized = re.sub(
+        r"\b(\d+(?:\.\d+)?)\s+(million|billion)\b",
+        lambda match: match.group(1) + ("m" if match.group(2) == "million" else "b"),
+        normalized,
+    )
+    words = re.findall(r"[a-z0-9]+", normalized)
+    return [HEADLINE_EQUIVALENTS.get(word, word) for word in words
+            if word not in HEADLINE_STOPWORDS]
+
+
+def is_same_story(first, second):
+    """Identify exact or near-duplicate articles without merging an event's takes.
+
+    URL equality is decisive. Headline equality is intentionally conservative:
+    it catches syndicated headlines, punctuation changes, and minor rewrites,
+    but requires most meaningful words to overlap. New angle-specific words
+    therefore keep a second article eligible for coverage.
+    """
+    first_url = canonical_url(first.get("link", ""))
+    second_url = canonical_url(second.get("link", ""))
+    if first_url and first_url == second_url:
+        return True
+
+    left = headline_tokens(first.get("title", ""))
+    right = headline_tokens(second.get("title", ""))
+    if not left or not right:
+        return False
+    if left == right:
+        return True
+
+    first_title = clean_text(first.get("title", ""), None).lower()
+    second_title = clean_text(second.get("title", ""), None).lower()
+    for shorter, longer in ((first_title, second_title), (second_title, first_title)):
+        if any(longer.startswith(shorter + separator)
+               for separator in (" - ", " | ", " — ")):
+            return True
+
+    left_text = " ".join(left)
+    right_text = " ".join(right)
+    left_set, right_set = set(left), set(right)
+    different_words = left_set ^ right_set
+    if different_words & EDITORIAL_ANGLE_TERMS:
+        return False
+    if SequenceMatcher(None, left_text, right_text).ratio() >= 0.88:
+        return True
+
+    shared = len(left_set & right_set)
+    smaller = min(len(left_set), len(right_set))
+    union = len(left_set | right_set)
+    containment = shared / smaller
+    jaccard = shared / union
+    same_event_facts = shared >= 5 and containment >= 0.80
+    return ((smaller >= 4 and containment >= 0.90 and jaccard >= 0.72) or
+            (smaller >= 5 and jaccard >= 0.82) or same_event_facts)
 
 
 def parse_date(s):
@@ -373,7 +492,7 @@ def safe_external_url(value):
 
 
 def collect():
-    seen = set()
+    accepted = []
     categories = {}
     all_items = []
     for cat in CATEGORY_ORDER:
@@ -394,14 +513,15 @@ def collect():
                 link = safe_external_url(r.get("link"))
                 if not link:
                     continue
-                key = re.sub(r"[^a-z0-9]", "", title.lower())[:80]
-                if not key or key in seen:
+                candidate = {"title": title, "link": link}
+                if not headline_tokens(title) or any(
+                        is_same_story(candidate, previous) for previous in accepted):
                     continue
-                seen.add(key)
                 iso, epoch = parse_date(r.get("date"))
                 etags = tag_ethics(title + " " + summary)
                 item = {
-                    "title": clean_text(title, 160),
+                    # Preserve the full feed headline. Presentation layers wrap it.
+                    "title": clean_text(title, None),
                     "link": link,
                     "source": src,
                     "category": cat,
@@ -412,6 +532,7 @@ def collect():
                 }
                 bucket.append(item)
                 all_items.append(item)
+                accepted.append(item)
             time.sleep(0.4)
         bucket.sort(key=lambda x: x["epoch"], reverse=True)
         categories[cat] = {"label": CATEGORY_LABELS[cat],

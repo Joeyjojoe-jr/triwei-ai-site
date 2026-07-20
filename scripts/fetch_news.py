@@ -33,6 +33,7 @@ UA = ("Mozilla/5.0 (compatible; TriWeiNewsBot/1.0; +https://triwei.ai)")
 TIMEOUT = 25
 PER_CATEGORY = 14          # items kept per category
 TRENDING_COUNT = 14        # trending chips shown
+PULSE_COVERAGE_COUNT = 4   # visual topic cards below the homepage hero
 MIN_ITEMS_TO_WRITE = 8     # safety: don't overwrite good data with a bad run
 
 # ---------------------------------------------------------------------------
@@ -544,8 +545,8 @@ def compute_trending(items):
     counts = {}
     texts = [(i["title"] + " " + i["summary"]).lower() for i in items]
     for term in TREND_TERMS:
-        tl = term.lower()
-        c = sum(1 for t in texts if tl in t)
+        pattern = trend_term_pattern(term)
+        c = sum(1 for text in texts if re.search(pattern, text, re.IGNORECASE))
         if c >= 2:
             counts[term] = counts.get(term, 0) + c
     # merge obvious duplicates
@@ -590,11 +591,133 @@ def annotate_trend_scores(items, trending):
     tc = {t["term"].lower(): t["count"] for t in trending}
     for i in items:
         text = "%s %s" % (i.get("title") or "", i.get("summary") or "")
-        text = text.lower()
         i["trend_score"] = sum(
             count for term, count in tc.items()
-            if re.search(r"(?<!\w)%s(?!\w)" % re.escape(term), text)
+            if re.search(trend_term_pattern(term), text, re.IGNORECASE)
         )
+
+
+def trend_term_pattern(term):
+    """Match complete trend terms and their simple plurals, never substrings."""
+    literal = str(term or "").strip()
+    plural = ""
+    if literal and literal[-1].isalnum() and not literal.lower().endswith("s"):
+        plural = "s?"
+    return r"(?<!\w)%s%s(?!\w)" % (re.escape(literal), plural)
+
+
+def item_matches_trend(item, term):
+    """Return whether a complete trend term occurs in an item's text."""
+    text = "%s %s" % (item.get("title") or "", item.get("summary") or "")
+    return re.search(trend_term_pattern(term), text, re.IGNORECASE) is not None
+
+
+def source_identity(item):
+    """Return an honest source label, falling back to the article's domain."""
+    source = str(item.get("source") or "").strip()
+    if source and source.lower() not in ("web", "google news"):
+        return source
+    link = safe_external_url(item.get("link"))
+    if link:
+        return urlsplit(link).netloc.lower().removeprefix("www.")
+    return source or "Unknown"
+
+
+def diverse_story_sample(items, blocked_links, limit=3):
+    """Select strong stories while favoring new sources, desks, and links."""
+    ranked = sorted(
+        items,
+        key=lambda item: (
+            safe_trend_score(item.get("trend_score")),
+            len(item.get("ethics_tags") or []),
+            item.get("epoch") or 0,
+        ),
+        reverse=True,
+    )
+    selected = []
+    selected_sources = set()
+    selected_categories = set()
+
+    for require_new_source, require_new_category in ((True, True), (True, False),
+                                                       (False, False)):
+        for item in ranked:
+            link = canonical_url(item.get("link", ""))
+            source = source_identity(item).lower()
+            category = item.get("category") or ""
+            if not link or link in blocked_links or any(
+                    canonical_url(chosen.get("link", "")) == link for chosen in selected):
+                continue
+            if require_new_source and source in selected_sources:
+                continue
+            if require_new_category and category in selected_categories:
+                continue
+            selected.append(item)
+            selected_sources.add(source)
+            selected_categories.add(category)
+            if len(selected) == limit:
+                return selected
+    return selected
+
+
+def compute_ai_pulse(items, trending):
+    """Build truthful homepage counters and non-repeating topic coverage cards."""
+    source_count = len({source_identity(item).lower() for item in items})
+    ethics_count = sum(1 for item in items if item.get("ethics_tags"))
+    max_trend_count = max((trend.get("count", 0) for trend in trending), default=0)
+    used_links = set()
+    selected_signatures = []
+    coverage = []
+
+    for trend in trending:
+        term = str(trend.get("term") or "").strip()
+        if not term:
+            continue
+        matched = [item for item in items if item_matches_trend(item, term)]
+        signature = {canonical_url(item.get("link", "")) for item in matched}
+        signature.discard("")
+        if len(signature) < 2:
+            continue
+        if any(len(signature & previous) / min(len(signature), len(previous)) >= 0.75
+               for previous in selected_signatures):
+            continue
+
+        stories = diverse_story_sample(matched, used_links)
+        if len(stories) < 2:
+            continue
+
+        theme_counts = {}
+        for item in matched:
+            for theme in item.get("ethics_tags") or []:
+                theme_counts[theme] = theme_counts.get(theme, 0) + 1
+        top_ethics_theme = ""
+        if theme_counts:
+            top_ethics_theme = sorted(
+                theme_counts.items(), key=lambda pair: (-pair[1], pair[0]))[0][0]
+
+        for story in stories:
+            used_links.add(canonical_url(story.get("link", "")))
+        selected_signatures.append(signature)
+        coverage.append({
+            "term": term,
+            "story_count": len(matched),
+            "source_count": len({source_identity(item).lower() for item in matched}),
+            "category_count": len({item.get("category") for item in matched
+                                   if item.get("category")}),
+            "strength_percent": (round(trend.get("count", 0) * 100 / max_trend_count)
+                                 if max_trend_count else 0),
+            "top_ethics_theme": top_ethics_theme,
+            "stories": [display_item(item) for item in stories],
+        })
+        if len(coverage) == PULSE_COVERAGE_COUNT:
+            break
+
+    return {
+        "story_count": len(items),
+        "source_count": source_count,
+        "topic_count": len(trending),
+        "ethics_count": ethics_count,
+        "coverage": coverage,
+    }
 
 
 def matches_subcategory_term(text, term):
@@ -727,6 +850,7 @@ def main():
                                c, categories[c]["items"])}
                        for c in CATEGORY_ORDER},
         "trending": trending,
+        "ai_pulse": compute_ai_pulse(all_items, trending),
         "ethics_themes": themes,
         "ethics_watch": [display_item(i) for i in watch[:16]],
         "latest": [display_item(i) for i in all_sorted[:24]],

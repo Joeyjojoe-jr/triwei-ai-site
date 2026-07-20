@@ -90,6 +90,79 @@ layout: default
 
 {% if news %}
 
+{% assign pulse = news.ai_pulse %}
+{% if pulse %}
+<section class="section-block animate-in pulse-block" aria-labelledby="ai-pulse">
+  <div class="section-heading pulse-heading">
+    <div>
+      <p class="pulse-kicker">Live coverage intelligence</p>
+      <h2 id="ai-pulse">AI pulse</h2>
+    </div>
+    <p>A visual read on the breadth, source mix, and ethical dimensions of the current news cycle.</p>
+  </div>
+
+  <div class="pulse-kpis" role="list" aria-label="Current AI coverage totals">
+    <div class="pulse-kpi" role="listitem">
+      <span class="pulse-kpi-index" aria-hidden="true">01</span>
+      <strong>{{ pulse.story_count }}</strong>
+      <span>stories screened</span>
+    </div>
+    <div class="pulse-kpi" role="listitem">
+      <span class="pulse-kpi-index" aria-hidden="true">02</span>
+      <strong>{{ pulse.source_count }}</strong>
+      <span>source voices</span>
+    </div>
+    <div class="pulse-kpi" role="listitem">
+      <span class="pulse-kpi-index" aria-hidden="true">03</span>
+      <strong>{{ pulse.topic_count }}</strong>
+      <span>topics moving</span>
+    </div>
+    <div class="pulse-kpi pulse-kpi-ethics" role="listitem">
+      <span class="pulse-kpi-index" aria-hidden="true">04</span>
+      <strong>{{ pulse.ethics_count }}</strong>
+      <span>ethics flagged</span>
+    </div>
+  </div>
+
+  {% if pulse.coverage.size > 0 %}
+  <div class="pulse-coverage-heading">
+    <h3>coverage map</h3>
+    <p>Different stories and angles shaping the hottest recurring topics.</p>
+  </div>
+  <div class="pulse-grid">
+    {% for cluster in pulse.coverage %}
+    <article class="pulse-card">
+      <header class="pulse-card-header">
+        <div>
+          <span class="pulse-card-label">topic {{ forloop.index | prepend: '0' }}</span>
+          <h3>{{ cluster.term | escape }}</h3>
+        </div>
+        <span class="pulse-story-count">{{ cluster.story_count }} signals</span>
+      </header>
+      <div class="pulse-meter" role="img" aria-label="{{ cluster.term | escape }} has {{ cluster.strength_percent }} percent of the leading topic's signal strength">
+        <span style="width: {{ cluster.strength_percent }}%;"></span>
+      </div>
+      <p class="pulse-card-meta">{{ cluster.source_count }} sources <span aria-hidden="true">·</span> {{ cluster.category_count }} desks</p>
+      <ol class="pulse-stories">
+        {% for story in cluster.stories %}
+        {% assign primary_lens = story.ethics_tags | first | default: story.category_label %}
+        <li>
+          <a class="pulse-story-title" href="{{ story.link | escape }}" target="_blank" rel="noopener noreferrer">{{ story.title | escape }}</a>
+          <span class="pulse-story-meta">
+            <span>{{ story.source | escape }}</span>
+            <span class="pulse-angle">{{ primary_lens | escape }}</span>
+          </span>
+        </li>
+        {% endfor %}
+      </ol>
+      <p class="pulse-why"><strong>Why it matters:</strong> {{ cluster.category_count }} desks and {{ cluster.source_count }} source voices are shaping this topic{% if cluster.top_ethics_theme != "" %}, with {{ cluster.top_ethics_theme | escape }} surfacing most often{% endif %}.</p>
+    </article>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+{% endif %}
+
 {% if news.trending.size > 0 %}
 <div class="ticker" role="marquee" aria-label="Trending AI topics">
   <div class="ticker-track">

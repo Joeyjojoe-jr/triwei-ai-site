@@ -1,3 +1,4 @@
+import re
 import unittest
 from unittest import mock
 
@@ -139,6 +140,12 @@ class SubcategoryTests(unittest.TestCase):
         ])
         self.assertEqual(10, items[0]["trend_score"])
 
+    def test_trend_terms_match_simple_plurals_but_not_substrings(self):
+        self.assertIsNotNone(re.search(
+            fetch_news.trend_term_pattern("chip"), "AI chips", re.IGNORECASE))
+        self.assertIsNone(re.search(
+            fetch_news.trend_term_pattern("chip"), "shipping", re.IGNORECASE))
+
 
 class StoryDeduplicationTests(unittest.TestCase):
     def story(self, title, link=""):
@@ -233,6 +240,56 @@ class StoryDeduplicationTests(unittest.TestCase):
     def test_preserves_full_headline_text(self):
         headline = "A" * 220
         self.assertEqual(fetch_news.clean_text(headline, None), headline)
+
+
+class AiPulseTests(unittest.TestCase):
+    def item(self, title, link, source, category, ethics_tags=None, score=1, epoch=1):
+        return {
+            "title": title,
+            "link": link,
+            "source": source,
+            "category": category,
+            "published_iso": "2026-07-20T00:00:00Z",
+            "epoch": epoch,
+            "summary": "",
+            "ethics_tags": ethics_tags or [],
+            "trend_score": score,
+        }
+
+    def test_source_identity_uses_domain_for_generic_web_source(self):
+        item = self.item(
+            "Agent project", "https://www.example.com/story", "Web", "community")
+        self.assertEqual("example.com", fetch_news.source_identity(item))
+
+    def test_pulse_counts_and_coverage_links_are_truthful_and_unique(self):
+        items = [
+            self.item("OpenAI agent launch", "https://a.example/1", "A", "labs",
+                      ["Safety & Alignment"], 9, 5),
+            self.item("OpenAI agent pricing", "https://b.example/2", "B", "business",
+                      [], 8, 4),
+            self.item("OpenAI privacy response", "https://c.example/3", "C", "ethics",
+                      ["Privacy & Surveillance"], 7, 3),
+            self.item("Claude agent benchmark", "https://d.example/4", "D", "research",
+                      [], 6, 2),
+            self.item("Local agent tool", "https://e.example/5", "Web", "community",
+                      [], 5, 1),
+        ]
+        trending = [
+            {"term": "agent", "count": 4},
+            {"term": "OpenAI", "count": 3},
+            {"term": "privacy", "count": 2},
+        ]
+
+        pulse = fetch_news.compute_ai_pulse(items, trending)
+
+        self.assertEqual(5, pulse["story_count"])
+        self.assertEqual(5, pulse["source_count"])
+        self.assertEqual(2, pulse["ethics_count"])
+        links = [story["link"] for card in pulse["coverage"]
+                 for story in card["stories"]]
+        self.assertEqual(len(links), len(set(links)))
+        self.assertTrue(all(2 <= len(card["stories"]) <= 3
+                            for card in pulse["coverage"]))
 
 
 if __name__ == "__main__":

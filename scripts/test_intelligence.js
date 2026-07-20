@@ -28,6 +28,11 @@ test('Signal History exposes relationships, filters, attribution, and limits', (
   assert.match(page, /data-signal-thread/);
   assert.match(page, /Early, durable reads/);
   assert.match(page, /not a pundit scoreboard/i);
+  assert.match(page, /AI-assisted source research/);
+  assert.match(page, /Exactly how TriWei assembled this view/);
+  assert.match(page, /Why is this node labeled/);
+  assert.match(page, /Open original source/);
+  assert.match(page, /data-signal-tag/);
   assert.deepEqual(new Set(data.relationship_types.map((item) => item.key)), new Set(['seed', 'corroborates', 'complicates', 'redirects']));
   assert.ok(data.threads.length >= 5);
 });
@@ -37,6 +42,7 @@ test('Signal History interaction is dependency-free and safe', () => {
 
   assert.match(source, /URLSearchParams/);
   assert.match(source, /aria-pressed/);
+  assert.match(source, /literal browser-side matching/);
   assert.match(source, /triweiAnalytics\.track/);
   assert.doesNotMatch(source, /innerHTML/);
   assert.doesNotMatch(source, /\bfetch\s*\(/);
@@ -52,6 +58,9 @@ test('AI Hardware teaches resource gates, memory, materials, factories, and conv
   });
   assert.match(page, /The exact 12 GB vs 16 GB lesson/);
   assert.match(page, /Specifications narrow a decision; workload tests finish it/);
+  assert.match(page, /No live model recommends hardware/);
+  assert.match(page, /How does this comparator calculate the display/);
+  assert.match(page, /raw-weight arithmetic/);
   assert.match(page, /hardware_age_seconds > 7776000/);
   assert.match(page, /Reference expired/);
   assert.match(page, /\/industry\/#supply-chain/);
@@ -59,6 +68,7 @@ test('AI Hardware teaches resource gates, memory, materials, factories, and conv
   assert.ok(data.gpus.some((gpu) => gpu.key === 'rtx-4060-ti-16'));
   assert.equal(data.conversion_options.length, 4);
   assert.equal(data.reverify_by, '2026-10-18');
+  assert.ok(data.metrics.every((metric) => metric.method && metric.limit));
 });
 
 test('AI Hardware comparator remains accessible and dependency-free', () => {
@@ -79,6 +89,9 @@ test('intelligence pages support narrow screens and reduced motion', () => {
   assert.match(css, /@media \(prefers-reduced-motion: reduce\)/);
   assert.match(css, /\.signal-event-list/);
   assert.match(css, /\.hardware-comparison/);
+  assert.match(css, /\.intel-method-disclosure/);
+  assert.match(css, /\.intel-inline-proof/);
+  assert.match(css, /summary:hover/);
 });
 
 test('primary navigation exposes both intelligence destinations', () => {

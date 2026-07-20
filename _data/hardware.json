@@ -1,0 +1,277 @@
+{
+  "verified_on": "2026-07-20",
+  "verified_display": "Jul 20, 2026",
+  "reverify_by": "2026-10-18",
+  "comparison_note": "Specifications describe different products and form factors; they are not a universal benchmark. Workload fit, software, thermals, system configuration, precision, batch size, and model architecture can reverse a simple ranking.",
+  "metrics": [
+    {"key": "capacity", "label": "Memory capacity", "question": "Does the workload fit?", "explanation": "VRAM or addressable unified memory is a hard gate. If model weights, activations, context/KV cache, and runtime overhead do not fit, the system must offload, quantize further, split across devices, or stop."},
+    {"key": "bandwidth", "label": "Memory bandwidth", "question": "How fast can data feed the cores?", "explanation": "A workload that fits can still wait on memory. Bus width, memory generation, clocking, cache, and access pattern determine effective bandwidth; capacity alone does not."},
+    {"key": "compute", "label": "Compute engines", "question": "How much math can happen in parallel?", "explanation": "CUDA/stream processors, Tensor or matrix engines, supported numerical formats, clock speed, and architecture determine usable throughput. Core counts compare cleanly only within closely related architectures."},
+    {"key": "interconnect", "label": "Interconnect", "question": "What happens beyond one chip?", "explanation": "PCIe, NVLink, CXL, Infinity Fabric, or an on-package coherent link determines how expensive it is to reach CPU memory, another GPU, storage, or the network."},
+    {"key": "power", "label": "Power and cooling", "question": "Can performance be sustained?", "explanation": "Board power, voltage limits, cooling, rack density, and facility power determine sustained clocks and total system cost—not just a peak specification."},
+    {"key": "software", "label": "Software path", "question": "Can the application use the hardware?", "explanation": "Drivers, compilers, kernels, framework support, quantization formats, media engines, and vendor libraries determine how much theoretical hardware becomes real performance."}
+  ],
+  "gpus": [
+    {
+      "key": "rtx-4060-ti-16",
+      "name": "GeForce RTX 4060 Ti 16GB",
+      "class": "Consumer discrete GPU",
+      "architecture": "Ada Lovelace",
+      "memory_capacity_gb": 16,
+      "memory_type": "GDDR6",
+      "memory_bus_bits": 128,
+      "memory_bandwidth_gbps": 288,
+      "compute_units": "4,352 CUDA cores",
+      "ai_compute": "353 AI TOPS",
+      "power": "165 W total graphics power",
+      "interconnect": "PCIe Gen 4",
+      "best_read": "More capacity can keep a larger local model or creative project resident, even when the GPU has less compute and a narrower memory path than the 4070 SUPER.",
+      "source_label": "NVIDIA RTX 40 Series specifications",
+      "source_url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/"
+    },
+    {
+      "key": "rtx-4070-super-12",
+      "name": "GeForce RTX 4070 SUPER 12GB",
+      "class": "Consumer discrete GPU",
+      "architecture": "Ada Lovelace",
+      "memory_capacity_gb": 12,
+      "memory_type": "GDDR6X",
+      "memory_bus_bits": 192,
+      "memory_bandwidth_gbps": 504,
+      "compute_units": "7,168 CUDA cores",
+      "ai_compute": "568 AI TOPS",
+      "power": "220 W total graphics power",
+      "interconnect": "PCIe Gen 4",
+      "best_read": "For a workload that fits inside 12GB, the additional compute, wider bus, and faster memory can matter more than the 4060 Ti’s extra 4GB. It still cannot make a 14GB allocation fit locally.",
+      "source_label": "NVIDIA RTX 4070 family specifications",
+      "source_url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/"
+    },
+    {
+      "key": "rtx-4090-24",
+      "name": "GeForce RTX 4090 24GB",
+      "class": "High-end consumer discrete GPU",
+      "architecture": "Ada Lovelace",
+      "memory_capacity_gb": 24,
+      "memory_type": "GDDR6X",
+      "memory_bus_bits": 384,
+      "memory_bandwidth_gbps": 1008,
+      "compute_units": "16,384 CUDA cores",
+      "ai_compute": "1,321 AI TOPS",
+      "power": "450 W total graphics power",
+      "interconnect": "PCIe Gen 4",
+      "best_read": "Capacity and throughput rise together, but multi-GPU scaling, ECC, virtualization, enterprise support, and data-center interconnect remain different from an accelerator platform.",
+      "source_label": "NVIDIA RTX 40 Series specifications",
+      "source_url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/"
+    },
+    {
+      "key": "m4-max",
+      "name": "Apple M4 Max",
+      "class": "Consumer/pro unified-memory SoC",
+      "architecture": "Apple silicon",
+      "memory_capacity_gb": 128,
+      "memory_type": "Unified memory (maximum configuration)",
+      "memory_bus_bits": null,
+      "memory_bandwidth_gbps": 546,
+      "compute_units": "Up to 40-core integrated GPU",
+      "ai_compute": "Architecture-specific; not directly comparable to NVIDIA AI TOPS",
+      "power": "System-level notebook/workstation envelope",
+      "interconnect": "On-package shared CPU/GPU memory fabric",
+      "best_read": "A large shared pool can fit models that exceed consumer VRAM, but shared capacity is not equivalent to 128GB of HBM and does not imply data-center accelerator throughput.",
+      "source_label": "Apple M4 Pro and M4 Max announcement",
+      "source_url": "https://www.apple.com/newsroom/2024/10/apple-introduces-m4-pro-and-m4-max/"
+    },
+    {
+      "key": "h200-sxm",
+      "name": "NVIDIA H200 SXM",
+      "class": "Data-center accelerator",
+      "architecture": "Hopper",
+      "memory_capacity_gb": 141,
+      "memory_type": "HBM3e with ECC",
+      "memory_bus_bits": null,
+      "memory_bandwidth_gbps": 4800,
+      "compute_units": "Tensor Core accelerator",
+      "ai_compute": "3,958 FP8 Tensor TFLOPS with sparsity",
+      "power": "Up to 700 W configurable TDP",
+      "interconnect": "900 GB/s NVLink; PCIe Gen 5",
+      "best_read": "HBM bandwidth, ECC, NVLink, virtualization, supported systems, and enterprise software make this a cluster component—not a larger gaming card.",
+      "source_label": "NVIDIA H200 specifications",
+      "source_url": "https://www.nvidia.com/en-us/data-center/h200/"
+    }
+  ],
+  "model_fit_examples": [
+    {"label": "7B-class · 4-bit", "range": "about 5–7 GB", "rtx_4060_ti": "fits", "rtx_4070_super": "fits", "note": "Weights plus a moderate runtime/context allowance."},
+    {"label": "14B-class · 4-bit", "range": "about 10–13 GB", "rtx_4060_ti": "more headroom", "rtx_4070_super": "boundary", "note": "Runtime, quantization format, context length, and KV cache decide the boundary."},
+    {"label": "32B-class · 4-bit", "range": "about 20–24 GB", "rtx_4060_ti": "offload", "rtx_4070_super": "offload", "note": "Usually needs CPU/unified-memory offload, multiple GPUs, or a higher-capacity device."}
+  ],
+  "memory_architectures": [
+    {"key": "discrete", "label": "Discrete GDDR", "path": "CPU memory ⇄ PCIe ⇄ GPU cache/cores ⇄ GDDR", "strength": "Affordable, modular, strong consumer performance.", "constraint": "A separate VRAM pool makes capacity a hard local-fit gate; PCIe transfers are much slower than on-board memory."},
+    {"key": "unified", "label": "Unified SoC memory", "path": "CPU + GPU + media engines ⇄ one physical memory pool", "strength": "Large allocations can be shared without copying between separate CPU and GPU pools.", "constraint": "Shared address space does not remove bandwidth contention or turn system memory into HBM."},
+    {"key": "hbm", "label": "On-package HBM", "path": "Accelerator die ⇄ very wide package interconnect ⇄ stacked HBM", "strength": "Extremely high bandwidth and capacity close to the accelerator for training and high-throughput inference.", "constraint": "Advanced packaging, HBM supply, thermal design, power, and cost become system gates."},
+    {"key": "coherent", "label": "Coherent CPU–GPU", "path": "CPU LPDDR ⇄ NVLink-C2C ⇄ GPU HBM with shared addressability", "strength": "The GPU can address a much larger memory domain with lower overhead than conventional PCIe offload.", "constraint": "Memory placement still matters: remote or CPU-attached memory has different bandwidth and latency from local HBM."}
+  ],
+  "materials": [
+    {
+      "key": "silicon",
+      "what": "Quartz-derived silicon → electronic-grade polysilicon → single-crystal ingot → polished 300 mm wafer",
+      "who": "Silicon producers; wafer makers including Shin-Etsu, SUMCO, GlobalWafers, Siltronic, and SK Siltron",
+      "where": "Raw and processed silicon is global; leading 300 mm wafer production is concentrated in Japan, Taiwan, Germany, Singapore, and South Korea",
+      "when": "Before every logic and memory fab step",
+      "why": "This is the crystalline substrate in which most GPU and DRAM transistors are formed.",
+      "how": "Extreme purification, crystal pulling, slicing, lapping, polishing, epitaxy, and repeated fab qualification",
+      "myth": "Rare earths are not the silicon substrate of a GPU.",
+      "source_label": "USGS Mineral Commodity Summaries 2026",
+      "source_url": "https://pubs.usgs.gov/publication/mcs2026"
+    },
+    {
+      "key": "copper-metals",
+      "what": "Copper plus small quantities of tungsten, tantalum, tin, gold, cobalt, and other specialty metals",
+      "who": "Miners, refiners, sputtering-target suppliers, chemical suppliers, substrate and PCB manufacturers",
+      "where": "Mining and refining are geographically distributed but individual high-purity forms and process steps have concentrated supplier bases",
+      "when": "Inside chip interconnect layers, package substrates, boards, power delivery, connectors, and data-center cabling",
+      "why": "A chip must move signals and power reliably; transistor density is useless without interconnect and packaging.",
+      "how": "Deposition, electroplating, chemical-mechanical polishing, vias, soldering, bonding, and multilayer board fabrication",
+      "myth": "The GPU die is only one part of the electrical system that makes an accelerator usable.",
+      "source_label": "USGS commodity statistics",
+      "source_url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+    },
+    {
+      "key": "gallium-germanium",
+      "what": "Gallium and germanium compounds used in selected semiconductors, photonics, fiber optics, infrared systems, and power/RF devices",
+      "who": "Often recovered as byproducts, then refined into high-purity metals, oxides, gases, or compound-semiconductor feedstocks",
+      "where": "China is a leading producer/refiner; additional processing occurs in the United States, Canada, Belgium, Germany, Japan, and elsewhere",
+      "when": "In optical networking, sensing, power conversion, RF, and selected fab gases—not as the bulk substrate of a conventional silicon GPU",
+      "why": "AI systems depend on networking, optics, power, and fab inputs as well as logic dies.",
+      "how": "Byproduct recovery, zone refining, chemical conversion, crystal growth, epitaxy, and device fabrication",
+      "myth": "A mineral can be critical to the AI system without being a transistor material in the GPU core.",
+      "source_label": "USGS Mineral Commodity Summaries 2026",
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+    },
+    {
+      "key": "rare-earths",
+      "what": "Magnet rare earths such as neodymium, praseodymium, dysprosium, and terbium",
+      "who": "Miners, separators, metal/alloy producers, and permanent-magnet manufacturers",
+      "where": "In 2024 China accounted for 60% of mining, 91% of refining, and 94% of sintered permanent-magnet production for magnet rare earths",
+      "when": "In motors, pumps, fans, robotics, power systems, storage drives, and precision fab equipment across the wider AI infrastructure",
+      "why": "The refining and magnet-manufacturing concentration is a system-level supply risk.",
+      "how": "Ore concentration → chemical separation → oxide → metal/alloy powder → sintered permanent magnet",
+      "myth": "Their main AI role is in machines and infrastructure around chips, not in replacing silicon wafers.",
+      "source_label": "IEA Rare Earth Elements 2026",
+      "source_url": "https://www.iea.org/reports/rare-earth-elements/executive-summary"
+    },
+    {
+      "key": "process-inputs",
+      "what": "Ultra-high-purity gases, photoresists, acids, solvents, slurries, and specialty chemicals",
+      "who": "Specialist chemical and industrial-gas suppliers qualified to exact fab recipes",
+      "where": "Production is global, but purity, transport, storage, and customer qualification make substitutions slow",
+      "when": "At lithography, deposition, etch, implant, clean, polish, and metrology steps—often hundreds of times per wafer",
+      "why": "A fab can have tools and wafers yet still stop if a qualified process input is unavailable.",
+      "how": "Closed-loop delivery systems meter materials at extreme purity and precision under tightly controlled recipes",
+      "myth": "Semiconductor supply is not reducible to mines and lithography machines.",
+      "source_label": "Semiconductor Industry Association supply-chain overview",
+      "source_url": "https://www.semiconductors.org/strengthening-the-global-semiconductor-supply-chain-in-an-uncertain-era/"
+    }
+  ],
+  "fab_projects": [
+    {
+      "name": "TSMC Arizona",
+      "place": "Phoenix, Arizona, United States",
+      "function": "Leading-edge logic plus planned advanced packaging",
+      "announced": "2020 initial project",
+      "production": "Fab 1 entered volume production in late 2024; Fab 2 target 2028",
+      "investment": "$165B total U.S. plan announced in 2025",
+      "elapsed": "~4 years from initial announcement to first volume production",
+      "status": "producing and expanding",
+      "lesson": "A working fab is only the first layer: later phases add newer nodes, packaging, suppliers, utilities, and trained labor.",
+      "source_label": "TSMC U.S. investment announcement",
+      "source_url": "https://pr.tsmc.com/system/files/newspdf/attachment/1f3cfb45dd5b56cf948833fb01a6c5c5c240a63f/TSMC%20Intends%20to%20Expand%20Its%20Investment%20in%20the%20United%20States%20to%20US%24165%20Billion%20to%20Power%20the%20Future%20of%20AI_FINAL_%28E%29_wmn.pdf"
+    },
+    {
+      "name": "Intel Ohio One",
+      "place": "New Albany, Ohio, United States",
+      "function": "Two planned leading-edge logic fabs",
+      "announced": "2022 construction start",
+      "production": "Mod 1 operations planned for 2030–31; Mod 2 for 2032",
+      "investment": "More than $28B planned",
+      "elapsed": "~8–10 years from construction start to planned operations",
+      "status": "construction paced to demand",
+      "lesson": "The building schedule is an economic variable: Intel slowed construction while preserving the option to accelerate if customer demand warrants.",
+      "source_label": "Intel Ohio One timeline update",
+      "source_url": "https://newsroom.intel.com/corporate/ohio-one-construction-timeline-update"
+    },
+    {
+      "name": "Micron Central New York",
+      "place": "Clay, New York, United States",
+      "function": "Planned leading-edge DRAM megafab campus",
+      "announced": "2022 plan; groundbreaking Jan 2026",
+      "production": "Long-horizon sequential build; precise first-output date remains demand- and execution-dependent",
+      "investment": "Up to $100B for four fabs over 20+ years",
+      "elapsed": "Not yet measurable—vertical construction began in 2026",
+      "status": "vertical construction",
+      "lesson": "Permits, environmental review, site utilities, skilled construction, and sequential fit-out precede process qualification and yield ramp.",
+      "source_label": "Micron New York construction update",
+      "source_url": "https://investors.micron.com/news-releases/news-release-details/micron-accelerates-us-investments-pours-first-concrete-new-york"
+    },
+    {
+      "name": "SK hynix West Lafayette",
+      "place": "Indiana, United States",
+      "function": "HBM advanced packaging and R&D",
+      "announced": "2024",
+      "production": "Operations scheduled by the end of 2028",
+      "investment": "Approximately $4B",
+      "elapsed": "~4 years announced to scheduled operations",
+      "status": "development and construction",
+      "lesson": "AI capacity depends on memory packaging and process integration, not only new logic-wafer fabs.",
+      "source_label": "SK hynix Indiana project",
+      "source_url": "https://www.skhynix.com/westlafayette.IN/"
+    }
+  ],
+  "conversion_options": [
+    {
+      "key": "keep",
+      "label": "Keep the mature line",
+      "best_when": "Demand is durable for analog, power, microcontrollers, connectivity, automotive, industrial, or long-lifecycle products.",
+      "benefit": "Avoids write-offs and downtime; uses qualified tools, recipes, staff, and customer designs.",
+      "cost": "Opportunity cost if another product could earn more from the same cleanroom, utilities, or wafer starts.",
+      "hidden_gate": "Customers may value reliability, longevity, and qualification more than transistor density."
+    },
+    {
+      "key": "retool",
+      "label": "Retool within a process family",
+      "best_when": "The shell, utilities, wafer size, contamination controls, and a meaningful share of tools can support the target process.",
+      "benefit": "Can reuse site infrastructure and trained operations while adding targeted capacity or efficiency.",
+      "cost": "Tool purchases, line downtime, recipe transfer, yield learning, and customer requalification can erase the apparent savings.",
+      "hidden_gate": "A ‘node change’ may require different lithography, deposition, etch, metrology, masks, materials, and design rules."
+    },
+    {
+      "key": "repurpose",
+      "label": "Repurpose the facility",
+      "best_when": "The location and cleanroom remain valuable but front-end wafer economics do not—for example, a move toward packaging, test, R&D, or specialty processes.",
+      "benefit": "Preserves part of the physical and workforce investment while filling another supply-chain gap.",
+      "cost": "The facility may still need major utility, vibration, floor-loading, airflow, and workflow changes.",
+      "hidden_gate": "Packaging and test have different equipment, material flows, customers, and qualification regimes."
+    },
+    {
+      "key": "greenfield",
+      "label": "Build a new leading-edge fab",
+      "best_when": "The target node, wafer flow, automation, EUV toolset, power, water, and future expansion need a purpose-built design.",
+      "benefit": "Optimizes layout and utilities for the process and avoids forcing atomic-scale manufacturing into an unsuitable shell.",
+      "cost": "$20–25B can be required for one leading-edge fab before ecosystem and schedule risk, according to 2026 SIA testimony.",
+      "hidden_gate": "Capital has no value until tools, materials, people, process recipes, customers, and yield converge."
+    }
+  ],
+  "conversion_clock": [
+    {"step": "01", "label": "Demand case", "detail": "Forecast product mix, price, wafer starts, customer life cycles, and downside scenarios."},
+    {"step": "02", "label": "Physical feasibility", "detail": "Audit cleanroom class, vibration, floor loading, power, water, gases, waste treatment, wafer size, and tool compatibility."},
+    {"step": "03", "label": "Tool and process transfer", "detail": "Procure or move tools, install facilities, transfer recipes, masks, metrology, and statistical controls."},
+    {"step": "04", "label": "Qualification", "detail": "Prove reliability and let customers validate redesigned or transferred products; long-lifecycle sectors can take longer."},
+    {"step": "05", "label": "Yield ramp", "detail": "Raise the share of good dies per wafer until cost, cycle time, and delivery are commercially viable."}
+  ],
+  "sources": [
+    {"label": "NVIDIA RTX 40 Series specifications", "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/"},
+    {"label": "NVIDIA H200 specifications", "url": "https://www.nvidia.com/en-us/data-center/h200/"},
+    {"label": "Apple M4 Max unified memory", "url": "https://www.apple.com/newsroom/2024/10/apple-introduces-m4-pro-and-m4-max/"},
+    {"label": "USGS Mineral Commodity Summaries 2026", "url": "https://pubs.usgs.gov/publication/mcs2026"},
+    {"label": "IEA Rare Earth Elements 2026", "url": "https://www.iea.org/reports/rare-earth-elements/executive-summary"},
+    {"label": "SIA 2026 fab-cost testimony", "url": "https://www.semiconductors.org/wp-content/uploads/2026/03/Senate-EPW-testimony-3.4.2026.pdf"}
+  ]
+}

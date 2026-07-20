@@ -75,6 +75,9 @@
   {% if page.atlas or page.layout == "home" %}
   <link rel="stylesheet" href="{{ '/assets/css/industry-atlas.css' | relative_url }}">
   {% endif %}
+  {% if page.intelligence %}
+  <link rel="stylesheet" href="{{ '/assets/css/intelligence.css' | relative_url }}">
+  {% endif %}
 
   {% if page.layout == "home" %}
   <!-- Give rotating folder cards slightly more desktop clearance without changing the mobile stack. -->

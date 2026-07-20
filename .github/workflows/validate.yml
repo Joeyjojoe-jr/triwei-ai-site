@@ -45,6 +45,9 @@ jobs:
       - name: Test Industry Atlas
         run: npm run check:industry
 
+      - name: Test Signal History and AI Hardware
+        run: npm run check:intelligence
+
       - name: Validate generated news data
         run: npm run check:data
 

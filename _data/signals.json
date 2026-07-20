@@ -1,0 +1,110 @@
+{
+  "verified_on": "2026-07-20",
+  "coverage_start": "2010-01-01",
+  "coverage_start_label": "2010 · DeepMind founded",
+  "method_note": "A curated, expanding evidence ledger. Later events can strengthen, complicate, or redirect an earlier claim; they do not prove that an author was simply right or wrong.",
+  "relationship_types": [
+    {"key": "seed", "label": "Early signal", "meaning": "A paper, report, article, or opinion that framed a consequential possibility before its later significance was clear."},
+    {"key": "corroborates", "label": "Strengthens", "meaning": "A later event or result that is consistent with a material part of the earlier signal."},
+    {"key": "complicates", "label": "Complicates", "meaning": "Evidence that narrows, qualifies, or exposes a constraint in the earlier framing."},
+    {"key": "redirects", "label": "Redirects", "meaning": "A development that moves the story into a materially different technical, commercial, or social path."}
+  ],
+  "filters": [
+    {"key": "all", "label": "All threads"},
+    {"key": "foundations", "label": "Foundations"},
+    {"key": "multimodal", "label": "Multimodal"},
+    {"key": "compute", "label": "Compute"},
+    {"key": "open-models", "label": "Open models"},
+    {"key": "science", "label": "AI for science"},
+    {"key": "accountability", "label": "Accountability"}
+  ],
+  "threads": [
+    {
+      "key": "trained-not-coded",
+      "title": "Software shifts from explicit rules to trained behavior",
+      "dek": "A seemingly abstract change in how programs are made became the operating logic of modern AI products.",
+      "tags": ["foundations", "compute", "agent", "deep learning"],
+      "status": "strengthened and still bounded",
+      "events": [
+        {"date": "2016-05-17", "relationship": "seed", "source_type": "opinion", "outlet": "WIRED", "author": "Jason Tanz", "title": "Soon We Won’t Program Computers. We’ll Train Them Like Dogs", "url": "https://www.wired.com/2016/05/the-end-of-code/", "note": "Framed machine learning as a shift from hand-authored instructions toward systems whose behavior is trained from data."},
+        {"date": "2016-12-25", "relationship": "corroborates", "source_type": "reported analysis", "outlet": "WIRED", "author": "Cade Metz", "title": "2016: The Year That Deep Learning Took Over the Internet", "url": "https://www.wired.com/2016/12/2016-year-deep-learning-took-internet/", "note": "Connected neural networks across translation, vision, speech, and the internal organization of major technology companies."},
+        {"date": "2017-06-12", "relationship": "redirects", "source_type": "research", "outlet": "arXiv / Google Brain", "author": "Vaswani et al.", "title": "Attention Is All You Need", "url": "https://arxiv.org/abs/1706.03762", "note": "Introduced a parallelizable architecture that changed what could be trained at scale."},
+        {"date": "2025-01-31", "relationship": "complicates", "source_type": "reported research", "outlet": "Quanta Magazine", "author": "Steve Nadis", "title": "Chatbot Software Begins to Face Fundamental Limitations", "url": "https://www.quantamagazine.org/chatbot-software-begins-to-face-fundamental-limitations-20250131/", "note": "Connected theoretical work on compositional limits to persistent failures in transformer-based systems."}
+      ]
+    },
+    {
+      "key": "transformer-convergence",
+      "title": "A translation architecture becomes a general-purpose interface",
+      "dek": "The Transformer began as a machine-translation result; later reporting tracked its spread across language, vision, planning, and multimodal systems.",
+      "tags": ["foundations", "multimodal", "models", "vision", "language"],
+      "status": "strongly strengthened, with open limits",
+      "events": [
+        {"date": "2016-09-08", "relationship": "seed", "source_type": "specialist explainer", "outlet": "Distill", "author": "Chris Olah and Shan Carter", "title": "Attention and Augmented Recurrent Neural Networks", "url": "https://distill.pub/2016/augmented-rnns/", "note": "Explained attention and differentiable memory before the Transformer paper, and argued that the broader space could extend deep learning’s capabilities."},
+        {"date": "2017-08-31", "relationship": "seed", "source_type": "research explainer", "outlet": "Google Research", "author": "Jakob Uszkoreit", "title": "Transformer: A Novel Neural Network Architecture for Language Understanding", "url": "https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/", "note": "Presented self-attention as particularly suited to language understanding after the initial translation results."},
+        {"date": "2020-05-28", "relationship": "corroborates", "source_type": "research", "outlet": "OpenAI", "author": "Brown et al.", "title": "Language Models are Few-Shot Learners", "url": "https://openai.com/index/language-models-are-few-shot-learners/", "note": "Showed that a scaled autoregressive Transformer could perform many tasks from prompts without task-specific weight updates."},
+        {"date": "2022-03-10", "relationship": "corroborates", "source_type": "reported analysis", "outlet": "Quanta Magazine", "author": "Stephen Ornes", "title": "Will Transformers Take Over Artificial Intelligence?", "url": "https://www.quantamagazine.org/will-transformers-take-over-artificial-intelligence-20220310/", "note": "Before ChatGPT’s public launch, traced the architecture’s move from language into vision, multimodal input, and planning."},
+        {"date": "2022-04-12", "relationship": "complicates", "source_type": "research", "outlet": "Google DeepMind", "author": "Hoffmann et al.", "title": "An empirical analysis of compute-optimal large language model training", "url": "https://deepmind.google/blog/an-empirical-analysis-of-compute-optimal-large-language-model-training/", "note": "Chinchilla showed that parameter count alone was a poor guide: data and compute allocation changed the efficient scaling path."}
+      ]
+    },
+    {
+      "key": "compute-industrialization",
+      "title": "Training compute becomes an industrial input",
+      "dek": "An early quantitative trend connected model progress to custom accelerators, parallelism, capital, power, and supply chains.",
+      "tags": ["compute", "chips", "hardware", "data center", "scaling"],
+      "status": "strengthened; efficiency changes the slope",
+      "events": [
+        {"date": "2018-05-04", "relationship": "seed", "source_type": "industry analysis", "outlet": "Forrester", "author": "Mike Gualtieri", "title": "AI Deep Learning Workloads Demand A New Approach To Infrastructure", "url": "https://www.forrester.com/report/ai-deep-learning-workloads-demand-a-new-approach-to-infrastructure/RES142531", "note": "Argued that serious enterprise deep-learning work required accelerators and new infrastructure rather than conventional CPU-only systems."},
+        {"date": "2018-05-16", "relationship": "seed", "source_type": "research analysis", "outlet": "OpenAI", "author": "Dario Amodei and Danny Hernandez", "title": "AI and Compute", "url": "https://openai.com/index/ai-and-compute/", "note": "Measured a 3.4-month doubling time in the training compute used by headline systems from 2012 to 2018, while warning that algorithmic progress and data also mattered."},
+        {"date": "2022-04-12", "relationship": "complicates", "source_type": "research", "outlet": "Google DeepMind", "author": "Hoffmann et al.", "title": "Chinchilla revises the efficient scaling recipe", "url": "https://deepmind.google/blog/an-empirical-analysis-of-compute-optimal-large-language-model-training/", "note": "A smaller model trained on more data beat much larger systems at the same compute budget, redirecting attention from size alone to utilization."},
+        {"date": "2023-11-13", "relationship": "corroborates", "source_type": "product disclosure", "outlet": "NVIDIA", "author": "NVIDIA", "title": "H200 brings 141 GB HBM3e to generative AI", "url": "https://www.nvidia.com/en-us/data-center/h200/", "note": "The product joined compute, memory bandwidth, packaging, interconnect, and power into one system-level constraint set."}
+      ]
+    },
+    {
+      "key": "ai-for-science",
+      "title": "Game-playing research redirects into scientific discovery",
+      "dek": "DeepMind’s founding thesis looked speculative; AlphaGo and AlphaFold created a traceable bridge from general learning systems to scientific tools.",
+      "tags": ["science", "foundations", "DeepMind", "biology", "reinforcement learning"],
+      "status": "strengthened in specific scientific domains",
+      "events": [
+        {"date": "2010-01-01", "date_display": "2010", "relationship": "seed", "source_type": "institutional history", "outlet": "Google DeepMind", "author": "DeepMind founders", "title": "DeepMind starts with an interdisciplinary general-AI thesis", "url": "https://deepmind.google/about/", "note": "The lab was founded around combining machine learning, neuroscience, engineering, mathematics, simulation, and computing infrastructure."},
+        {"date": "2016-03-15", "relationship": "corroborates", "source_type": "research", "outlet": "Nature", "author": "Silver et al.", "title": "Mastering the game of Go with deep neural networks and tree search", "url": "https://www.nature.com/articles/nature16961", "note": "AlphaGo demonstrated that learned representations, search, and reinforcement learning could solve a benchmark long viewed as resistant to machines."},
+        {"date": "2020-11-30", "relationship": "redirects", "source_type": "research milestone", "outlet": "Google DeepMind", "author": "AlphaFold team", "title": "AlphaFold recognized as a solution to the protein-folding problem", "url": "https://deepmind.google/science/alphafold/", "note": "The research program moved from games into a high-impact scientific prediction problem."},
+        {"date": "2024-06-26", "relationship": "complicates", "source_type": "reported analysis", "outlet": "Quanta Magazine", "author": "Dan Falk", "title": "How AI Revolutionized Protein Science, but Didn’t End It", "url": "https://www.quantamagazine.org/how-ai-revolutionized-protein-science-but-didnt-end-it-20240626/", "note": "Documented both AlphaFold’s scientific impact and the experimental, interpretive, and biological work that prediction did not replace."}
+      ]
+    },
+    {
+      "key": "open-model-diffusion",
+      "title": "Model capability diffuses outside frontier labs",
+      "dek": "Release choices, open weights, distillation, and lower-cost APIs repeatedly changed who could reproduce and extend frontier techniques.",
+      "tags": ["open-models", "open weights", "distillation", "DeepSeek", "Kimi", "Llama"],
+      "status": "strengthened; provenance and license remain contested",
+      "events": [
+        {"date": "2019-08-20", "relationship": "seed", "source_type": "release policy", "outlet": "OpenAI", "author": "OpenAI", "title": "GPT-2: 6-month follow-up", "url": "https://openai.com/index/gpt-2-6-month-follow-up/", "note": "The staged release made model access itself part of the public story, connecting capability diffusion to safety and governance."},
+        {"date": "2023-07-18", "relationship": "corroborates", "source_type": "model release", "outlet": "Meta", "author": "Meta AI", "title": "Llama 2 is released for research and commercial use", "url": "https://ai.meta.com/llama/", "note": "A major developer distributed weights broadly enough to support a large downstream ecosystem."},
+        {"date": "2025-01-20", "relationship": "redirects", "source_type": "model release", "outlet": "DeepSeek", "author": "DeepSeek", "title": "DeepSeek-R1 publishes reasoning models and distilled students", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "note": "The release explicitly connected a frontier reasoning model to smaller Qwen- and Llama-based distilled checkpoints."},
+        {"date": "2026-07-16", "relationship": "corroborates", "source_type": "developer announcement", "outlet": "Moonshot AI", "author": "Moonshot AI", "title": "Kimi K3 announces a frontier-scale open-weight release", "url": "https://www.kimi.com/blog/kimi-k3", "note": "The announcement extended the competitive pattern: proprietary product launch followed by a promised public checkpoint."}
+      ]
+    },
+    {
+      "key": "language-model-accountability",
+      "title": "Scale creates capability—and externalized costs",
+      "dek": "Early critiques of training data, environmental cost, opacity, and fluent error became operational questions after generative systems reached mass use.",
+      "tags": ["accountability", "ethics", "safety", "copyright", "bias", "energy"],
+      "status": "strengthened and actively contested",
+      "events": [
+        {"date": "2021-03-03", "relationship": "seed", "source_type": "research critique", "outlet": "ACM FAccT", "author": "Emily Bender, Timnit Gebru, Angelina McMillan-Major, Shmargaret Shmitchell", "title": "On the Dangers of Stochastic Parrots", "url": "https://doi.org/10.1145/3442188.3445922", "note": "Asked how large was too large and foregrounded environmental cost, undocumented web-scale data, encoded harms, and misleading fluency."},
+        {"date": "2022-11-30", "relationship": "corroborates", "source_type": "product release", "outlet": "OpenAI", "author": "OpenAI", "title": "ChatGPT launches as a research preview", "url": "https://openai.com/index/chatgpt/", "note": "Mass adoption turned abstract concerns about confident text generation, data provenance, and downstream use into everyday product questions."},
+        {"date": "2024-08-01", "relationship": "redirects", "source_type": "regulation", "outlet": "European Commission", "author": "European Union", "title": "The EU AI Act enters into force", "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai", "note": "The debate moved from voluntary practice toward binding, risk-tiered obligations, including rules for general-purpose AI."},
+        {"date": "2025-01-31", "relationship": "complicates", "source_type": "reported research", "outlet": "Quanta Magazine", "author": "Steve Nadis", "title": "Formal limits sharpen—but do not settle—the capability debate", "url": "https://www.quantamagazine.org/chatbot-software-begins-to-face-fundamental-limitations-20250131/", "note": "Mathematical limits on some compositional tasks qualify both maximal capability claims and dismissals based solely on next-token prediction."}
+      ]
+    }
+  ],
+  "observers": [
+    {"name": "Jason Tanz", "outlet": "WIRED", "date": "2016", "thread": "Trained software", "signal": "Saw training systems as a change in the nature of programming, before generative AI made that framing commonplace.", "url": "https://www.wired.com/2016/05/the-end-of-code/"},
+    {"name": "Chris Olah & Shan Carter", "outlet": "Distill", "date": "2016", "thread": "Attention", "signal": "Explained attention and differentiable memory as a consequential research direction before the Transformer paper.", "url": "https://distill.pub/2016/augmented-rnns/"},
+    {"name": "Cade Metz", "outlet": "WIRED", "date": "2016", "thread": "Deep learning", "signal": "Connected scattered product wins to an organizational and platform shift across the technology industry.", "url": "https://www.wired.com/2016/12/2016-year-deep-learning-took-internet/"},
+    {"name": "Dario Amodei & Danny Hernandez", "outlet": "OpenAI", "date": "2018", "thread": "Compute", "signal": "Quantified the industrial scaling of training compute while preserving algorithmic and data caveats.", "url": "https://openai.com/index/ai-and-compute/"},
+    {"name": "Stephen Ornes", "outlet": "Quanta Magazine", "date": "2022", "thread": "Transformers", "signal": "Reported the architecture’s convergence across AI domains before ChatGPT’s public release.", "url": "https://www.quantamagazine.org/will-transformers-take-over-artificial-intelligence-20220310/"},
+    {"name": "Bender, Gebru, McMillan-Major & Shmitchell", "outlet": "ACM FAccT", "date": "2021", "thread": "Accountability", "signal": "Connected scale to data documentation, environmental cost, encoded harm, and misleading fluency before mass adoption.", "url": "https://doi.org/10.1145/3442188.3445922"}
+  ]
+}

@@ -1,15 +1,15 @@
 {
-  "generated_utc": "2026-07-20T16:28:39.154196Z",
+  "generated_utc": "2026-07-20T17:05:03.043291Z",
   "generated_display": "Jul 20, 2026",
-  "coverage_generated_display": "July 20, 2026 at 11:28 AM CDT",
+  "coverage_generated_display": "July 20, 2026 at 12:05 PM CDT",
   "diffusion_watch": {
     "coverage": {
-      "story_count": 4,
+      "story_count": 3,
       "lab_count": 2,
       "labs": [
         {
           "name": "Moonshot / Kimi",
-          "count": 4
+          "count": 3
         },
         {
           "name": "Alibaba / Qwen",
@@ -18,27 +18,15 @@
       ],
       "signals": [
         {
-          "name": "Capability convergence",
-          "count": 3
+          "name": "Open weights",
+          "count": 2
         },
         {
-          "name": "Open weights",
+          "name": "Capability convergence",
           "count": 2
         }
       ],
       "stories": [
-        {
-          "title": "Chinese Moonshot AI Kimi K3 Is the Biggest Open-Source AI Model Ever Built – Will it Rival Anthropic and OpenAI?",
-          "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQSV9feXczd3RybFpIM0x1UUJWeGFZRjNzeWExOVRyd1gwcjVLM1RxSEJWTWc2am5IeE4zN3ljMmtKWUZHYXdVcm1RSmk4cmRta3hPQ01XWU43X3FrQWRYbk5BZnZYREVGa3hQcEVISk9MaHY1cy1CaEhTaFZoQUxpa3JQSlBoY2ZsbVF6N0VIVEFkZXMzeHRTaGtxblI2VzIzb1ppNHB2NzJmZDZKTTNuR1dyUkZaWWI0UWNuMzVyS090YnZsRXpWcF9oSDhCdTZQUnRpZ2dDUGNjS0kySFYzamRHeHliTGpEREI1djBFNA?oc=5",
-          "source": "UC Today",
-          "published_display": "Jul 20, 2026",
-          "labs": [
-            "Moonshot / Kimi"
-          ],
-          "signals": [
-            "Capability convergence"
-          ]
-        },
         {
           "title": "Why China’s open-weight AI model Kimi K3 is sparking anxiety in Silicon Valley",
           "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQMlJnTkVuaFpUS2lJMmx0NTJ5bHl1bFVHcVY3Y29HeV91TnZyRG9YYTc0bzNNN3prYzJVTlFXTUR2cWU3LTdZSXllMkVPNzg3QkFfRUNFa2IxaXRCY3BfUXBtY3RUTEtkektxSjFDbE9SbmRUT0hpY25MYXl6bUhmYVNZMmtJdUVzbk45SzdIOXFGc1hnd056SUx5bnZraXVEdlFDRG5kMFRKbTBIYUhIY1NQMWJUQk9zWnpfUzFwZ9IBvwFBVV95cUxOR2dfd2M4Q0NzVG9oVWxjTnpuTlhCU3JLb0hpWkozdjlzR2FubkpiMXRsa19wbjFFcmxxOEJ4WHVhVUxWZHo0am1sb2ZlUlpGODE2eW1IZVB3ZnZhekJkM3dPd0E1dlRiN0dxS2NEUkkySnNzeldiYzRaQkpGR2JaWlN3WDRxMDhweWlCY2JJd0hxTGtwOVJTVjExZ01nSjdRZklybTF5XzJLbkdqYXJxa3BnaTN3SEtwNUdyYjk1WQ?oc=5",
@@ -93,13 +81,13 @@
         },
         {
           "date": "2026-07-20",
-          "story_count": 4,
+          "story_count": 3,
           "labs": {
             "Alibaba / Qwen": 1,
-            "Moonshot / Kimi": 4
+            "Moonshot / Kimi": 3
           },
           "signals": {
-            "Capability convergence": 3,
+            "Capability convergence": 2,
             "Open weights": 2
           }
         }
@@ -542,7 +530,7 @@
     "series": [
       {
         "term": "safety",
-        "total": 10,
+        "total": 12,
         "points": [
           {
             "date": "2026-07-16",
@@ -566,14 +554,45 @@
           },
           {
             "date": "2026-07-20",
-            "count": 5,
-            "share": 9.6
+            "count": 7,
+            "share": 13.0
+          }
+        ]
+      },
+      {
+        "term": "agent",
+        "total": 7,
+        "points": [
+          {
+            "date": "2026-07-16",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-17",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-18",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-19",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-20",
+            "count": 7,
+            "share": 13.0
           }
         ]
       },
       {
         "term": "Anthropic",
-        "total": 8,
+        "total": 6,
         "points": [
           {
             "date": "2026-07-16",
@@ -597,45 +616,14 @@
           },
           {
             "date": "2026-07-20",
-            "count": 5,
-            "share": 9.6
-          }
-        ]
-      },
-      {
-        "term": "agent",
-        "total": 6,
-        "points": [
-          {
-            "date": "2026-07-16",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-17",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-18",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-19",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-20",
-            "count": 6,
-            "share": 11.5
+            "count": 3,
+            "share": 5.6
           }
         ]
       },
       {
         "term": "OpenAI",
-        "total": 5,
+        "total": 4,
         "points": [
           {
             "date": "2026-07-16",
@@ -659,14 +647,45 @@
           },
           {
             "date": "2026-07-20",
-            "count": 4,
-            "share": 7.7
+            "count": 3,
+            "share": 5.6
           }
         ]
       },
       {
-        "term": "agentic",
-        "total": 2,
+        "term": "Claude",
+        "total": 1,
+        "points": [
+          {
+            "date": "2026-07-16",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-17",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-18",
+            "count": 1,
+            "share": 50.0
+          },
+          {
+            "date": "2026-07-19",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-20",
+            "count": 0,
+            "share": 0.0
+          }
+        ]
+      },
+      {
+        "term": "Apple",
+        "total": 1,
         "points": [
           {
             "date": "2026-07-16",
@@ -685,44 +704,13 @@
           },
           {
             "date": "2026-07-19",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 11.1
           },
           {
             "date": "2026-07-20",
-            "count": 2,
-            "share": 3.8
-          }
-        ]
-      },
-      {
-        "term": "DeepSeek",
-        "total": 2,
-        "points": [
-          {
-            "date": "2026-07-16",
             "count": 0,
             "share": 0.0
-          },
-          {
-            "date": "2026-07-17",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-18",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-19",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-20",
-            "count": 2,
-            "share": 3.8
           }
         ]
       }
@@ -754,37 +742,6 @@
       }
     ],
     "companies": [
-      {
-        "name": "Anthropic",
-        "story_count": 8,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 1
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 1
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 4
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 3
-          }
-        ]
-      },
       {
         "name": "Moonshot",
         "story_count": 6,
@@ -833,12 +790,12 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 3
+            "count": 2
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 1
+            "count": 2
           },
           {
             "key": "society",
@@ -848,23 +805,23 @@
         ]
       },
       {
-        "name": "DeepSeek",
-        "story_count": 2,
+        "name": "Anthropic",
+        "story_count": 5,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 0
+            "count": 1
           },
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 0
+            "count": 1
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 1
+            "count": 2
           },
           {
             "key": "apps",
@@ -874,7 +831,7 @@
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 0
+            "count": 2
           }
         ]
       },
@@ -927,6 +884,37 @@
             "key": "models",
             "label": "Models & research",
             "count": 0
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "DeepSeek",
+        "story_count": 1,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 1
           },
           {
             "key": "apps",

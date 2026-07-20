@@ -51,6 +51,9 @@ FEEDS = {
     "labs": [
         ("rss", gnews('(OpenAI OR Anthropic OR "Google DeepMind" OR "Meta AI" '
                       'OR Mistral OR xAI OR "Microsoft AI" OR Nvidia) when:7d')),
+        ("rss", gnews('(DeepSeek OR Kimi OR "Moonshot AI" OR MiniMax OR Qwen '
+                      'OR "Z.ai" OR Zhipu) (distillation OR "open weight" '
+                      'OR "open-weight" OR "model extraction" OR model) when:7d')),
         ("rss", "https://techcrunch.com/category/artificial-intelligence/feed/"),
         ("rss", "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"),
     ],

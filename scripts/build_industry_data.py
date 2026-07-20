@@ -28,11 +28,13 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NEWS_PATH = os.path.join(ROOT, "_data", "news.json")
 OUT_PATH = os.path.join(ROOT, "_data", "industry.json")
 HISTORY_PATH = os.path.join(ROOT, "_data", "topic_history.json")
+DIFFUSION_HISTORY_PATH = os.path.join(ROOT, "_data", "diffusion_history.json")
 
 USER_AGENT = "TriWeiIndustryBot/1.0 (+https://triwei.ai)"
 TIMEOUT = 35
 HISTORY_DAYS = 90
 TOPIC_SERIES_COUNT = 6
+DIFFUSION_HISTORY_DAYS = 365
 
 CENSUS_SECTOR_URL = "https://www.census.gov/hfp/btos/downloads/Sector.xlsx"
 EPOCH_MODEL_URL = (
@@ -62,7 +64,111 @@ SOURCES = {
         "url": "https://epoch.ai/data/ai-companies",
         "kind": "market",
     },
+    "diffusion": {
+        "label": "Primary-source model diffusion ledger",
+        "url": "/sources/",
+        "kind": "strategic",
+    },
 }
+
+DIFFUSION_LABS = {
+    "DeepSeek": ["deepseek"],
+    "Moonshot / Kimi": ["moonshot", "kimi"],
+    "MiniMax": ["minimax"],
+    "Alibaba / Qwen": ["alibaba", "qwen"],
+    "Z.ai / GLM": ["z.ai", "zhipu", "glm-", "glm 5"],
+}
+
+DIFFUSION_SIGNALS = {
+    "Distillation / extraction": [
+        "distill", "model extraction", "extract capabilities", "reasoning traces",
+        "synthetic training", "teacher model",
+    ],
+    "Open weights": [
+        "open-weight", "open weight", "open-source model", "open source model",
+        "model weights", "weights release", "weights will be released",
+    ],
+    "Capability convergence": [
+        "frontier-level", "frontier model", "benchmark", "outperform", "rival",
+        "catching up", "parity", "toe-to-toe", "challenge openai", "challenge anthropic",
+    ],
+}
+
+DIFFUSION_EVIDENCE_CLASSES = [
+    {
+        "key": "disclosed",
+        "label": "Developer disclosure",
+        "meaning": "The model developer identifies its own teacher, student, or training method.",
+    },
+    {
+        "key": "provider_claim",
+        "label": "Provider-attributed claim",
+        "meaning": "A frontier provider publishes an attribution; it is not treated as an independent adjudication.",
+    },
+    {
+        "key": "released",
+        "label": "Weights released",
+        "meaning": "Downloadable checkpoints and their stated license are publicly available.",
+    },
+    {
+        "key": "announced",
+        "label": "Weights announced",
+        "meaning": "The developer has committed to a release, but the tracker has not yet verified the weights.",
+    },
+]
+
+DIFFUSION_MILESTONES = [
+    {
+        "date": "2025-01-20",
+        "lab": "DeepSeek",
+        "evidence_class": "disclosed",
+        "headline": "R1 distills its reasoning into Qwen and Llama students",
+        "detail": "DeepSeek says it fine-tuned Qwen and Llama base models on 800,000 samples curated with DeepSeek-R1.",
+        "open_weight_status": "Released",
+        "source_label": "DeepSeek-R1 repository",
+        "source_url": "https://github.com/deepseek-ai/DeepSeek-R1",
+    },
+    {
+        "date": "2025-07-11",
+        "lab": "Moonshot / Kimi",
+        "evidence_class": "released",
+        "headline": "Kimi K2 checkpoints push agentic capability into open weights",
+        "detail": "Moonshot published Kimi K2 base and instruct checkpoints for its 1T-parameter, 32B-active mixture-of-experts model.",
+        "open_weight_status": "Released",
+        "source_label": "Kimi K2 repository and technical report",
+        "source_url": "https://github.com/MoonshotAI/Kimi-K2",
+    },
+    {
+        "date": "2026-02-12",
+        "lab": "DeepSeek",
+        "evidence_class": "provider_claim",
+        "headline": "OpenAI reports activity consistent with adversarial distillation",
+        "detail": "In a U.S. House committee submission, OpenAI attributes circumvention and programmatic output collection activity to DeepSeek-associated accounts. This remains OpenAI's published attribution.",
+        "open_weight_status": "Not applicable",
+        "source_label": "OpenAI submission to the U.S. House Select Committee",
+        "source_url": "https://cdn.openai.com/pdf/045aa967-ee96-4a09-94ee-3098ddf6db2c/OpenAI-US-House-Select-Cmte-Update-%5B021226%5D.pdf",
+    },
+    {
+        "date": "2026-02-23",
+        "lab": "DeepSeek · Moonshot · MiniMax",
+        "evidence_class": "provider_claim",
+        "headline": "Anthropic attributes industrial-scale Claude extraction campaigns",
+        "detail": "Anthropic says it linked more than 16 million exchanges across roughly 24,000 accounts to the three labs. This is Anthropic's published attribution, not an independent ruling.",
+        "open_weight_status": "Not applicable",
+        "source_label": "Anthropic distillation-attack report",
+        "source_url": "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks",
+    },
+    {
+        "date": "2026-07-16",
+        "lab": "Moonshot / Kimi",
+        "evidence_class": "announced",
+        "headline": "Kimi K3 launches at the 2.8T-parameter frontier",
+        "detail": "Moonshot launched Kimi K3 through its products and API and says full model weights will be released by July 27, 2026.",
+        "open_weight_status": "Announced for Jul 27",
+        "source_label": "Kimi K3 technical blog",
+        "source_url": "https://www.kimi.com/blog/kimi-k3",
+    },
+]
 
 ENTITY_ALIASES = {
     "OpenAI": ["openai", "chatgpt", "gpt-", "gpt 4", "gpt 5"],
@@ -280,6 +386,103 @@ def build_stack(items):
         "max_count": maximum,
         "metric": "Distinct stories mentioning both the company and layer",
         "source": "coverage",
+    }
+
+
+def diffusion_story(item):
+    """Return the labs and signals for a story in the diffusion watch."""
+    text = story_text(item)
+    labs = [
+        lab for lab, aliases in DIFFUSION_LABS.items()
+        if any(alias in text for alias in aliases)
+    ]
+    signals = [
+        signal for signal, terms in DIFFUSION_SIGNALS.items()
+        if any(term in text for term in terms)
+    ]
+    core_signals = {
+        "Distillation / extraction", "Open weights", "Capability convergence",
+    }
+    if not labs or not core_signals.intersection(signals):
+        return None
+    return {"labs": labs, "signals": signals}
+
+
+def build_diffusion_watch(items, now):
+    """Build a primary-source ledger plus a rolling coverage signal."""
+    matched = []
+    for item in items:
+        classification = diffusion_story(item)
+        if not classification:
+            continue
+        matched.append({"item": item, **classification})
+
+    history = load_json(DIFFUSION_HISTORY_PATH, {"days": []})
+    records = {
+        row.get("date"): row for row in history.get("days", [])
+        if isinstance(row, dict) and row.get("date")
+    }
+    by_date = defaultdict(list)
+    for row in matched:
+        published = parse_iso(row["item"].get("published_iso"))
+        if published:
+            by_date[published.date().isoformat()].append(row)
+
+    for date_key, rows in by_date.items():
+        lab_counts = Counter(lab for row in rows for lab in row["labs"])
+        signal_counts = Counter(signal for row in rows for signal in row["signals"])
+        records[date_key] = {
+            "date": date_key,
+            "story_count": len(rows),
+            "labs": dict(sorted(lab_counts.items())),
+            "signals": dict(sorted(signal_counts.items())),
+        }
+
+    cutoff = (now.date() - dt.timedelta(days=DIFFUSION_HISTORY_DAYS - 1)).isoformat()
+    days = [records[key] for key in sorted(records) if key >= cutoff]
+    write_json(DIFFUSION_HISTORY_PATH, {"days": days})
+
+    lab_counts = Counter(lab for row in matched for lab in row["labs"])
+    signal_counts = Counter(signal for row in matched for signal in row["signals"])
+    ranked = sorted(
+        matched,
+        key=lambda row: row["item"].get("published_iso") or "",
+        reverse=True,
+    )
+    stories = []
+    for row in ranked[:8]:
+        item = row["item"]
+        stories.append({
+            "title": item.get("title", ""),
+            "link": item.get("link", ""),
+            "source": item.get("source", ""),
+            "published_display": item.get("published_display", ""),
+            "labs": row["labs"],
+            "signals": row["signals"],
+        })
+
+    return {
+        "coverage": {
+            "story_count": len(matched),
+            "lab_count": len(lab_counts),
+            "labs": [
+                {"name": name, "count": count}
+                for name, count in lab_counts.most_common()
+            ],
+            "signals": [
+                {"name": name, "count": count}
+                for name, count in signal_counts.most_common()
+            ],
+            "stories": stories,
+            "observed_days": len(days),
+            "window_days": DIFFUSION_HISTORY_DAYS,
+            "daily": days,
+            "metric": "Distinct TriWei stories connecting a tracked China-based lab to distillation, model extraction, open weights, or frontier-capability convergence",
+            "source": "coverage",
+        },
+        "evidence_classes": DIFFUSION_EVIDENCE_CLASSES,
+        "milestones": DIFFUSION_MILESTONES,
+        "source": "diffusion",
     }
 
 
@@ -572,6 +775,7 @@ def main():
         "generated_utc": now.isoformat().replace("+00:00", "Z"),
         "generated_display": now.astimezone().strftime("%b %d, %Y"),
         "coverage_generated_display": news.get("generated_display", ""),
+        "diffusion_watch": build_diffusion_watch(items, now),
         "topic_lifecycle": build_topic_history(news, items, now),
         "industry_stack": build_stack(items),
         "model_frontier": preserve_or_build(previous, "model_frontier", build_model_frontier),

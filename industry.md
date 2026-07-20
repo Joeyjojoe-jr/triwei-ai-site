@@ -2,7 +2,7 @@
 layout: default
 title: AI Industry Atlas
 permalink: /industry/
-description: Five evidence-backed views of AI momentum, industry structure, model value, business adoption, and frontier-lab economics.
+description: Five evidence-backed views of the AI industry, plus a primary-source watch on model distillation and open-weight diffusion.
 atlas: true
 ---
 {% assign atlas = site.data.industry %}
@@ -19,6 +19,7 @@ atlas: true
 
     <nav class="atlas-path" aria-label="Industry Atlas sections">
       <ol>
+        <li><a href="#diffusion"><span>Watch</span>Frontier diffusion</a></li>
         <li><a href="#momentum"><span>01</span>Momentum</a></li>
         <li><a href="#stack"><span>02</span>Industry stack</a></li>
         <li><a href="#value"><span>03</span>Model value</a></li>
@@ -30,8 +31,123 @@ atlas: true
     <div class="atlas-key" aria-label="Metric types">
       <span><i class="atlas-type atlas-type-coverage" aria-hidden="true"></i><strong>Coverage signal</strong> — what TriWei's screened stories emphasize</span>
       <span><i class="atlas-type atlas-type-market" aria-hidden="true"></i><strong>Industry measure</strong> — a statistic from an external dataset</span>
+      <span><i class="atlas-type atlas-type-strategic" aria-hidden="true"></i><strong>Strategic watch</strong> — claims, disclosures, and releases kept in separate evidence classes</span>
     </div>
   </header>
+
+  {% assign diffusion = atlas.diffusion_watch %}
+  <section class="atlas-section atlas-diffusion card animate-in" id="diffusion" aria-labelledby="diffusion-title">
+    <header class="atlas-section-head">
+      <div class="atlas-index atlas-index-watch" aria-hidden="true">↗</div>
+      <div>
+        <p class="atlas-kind atlas-kind-strategic">Strategic watch</p>
+        <h2 id="diffusion-title">How fast are frontier capabilities diffusing into open weights?</h2>
+        <p>Track China-based model labs across disclosed teacher-to-student training, provider-attributed extraction claims, capability convergence, and verified weight releases.</p>
+      </div>
+    </header>
+
+    <div class="diffusion-kpis" aria-label="Frontier diffusion summary">
+      <div><strong>{{ diffusion.coverage.story_count }}</strong><span>current coverage signals</span></div>
+      <div><strong>{{ diffusion.coverage.lab_count }}</strong><span>labs in this snapshot</span></div>
+      <div><strong>{{ diffusion.milestones.size }}</strong><span>primary-source milestones</span></div>
+      <div><strong>{{ diffusion.coverage.observed_days }}</strong><span>signal days in {{ diffusion.coverage.window_days }}-day window</span></div>
+    </div>
+
+    <div class="diffusion-flow" aria-label="Model diffusion pathway">
+      <div class="diffusion-stage">
+        <span>01 · Source capability</span>
+        <strong>Frontier APIs or an owned teacher</strong>
+        <p>The origin must be stated or attributed—not inferred from benchmark similarity.</p>
+      </div>
+      <span class="diffusion-arrow" aria-hidden="true">→</span>
+      <div class="diffusion-stage">
+        <span>02 · Training transfer</span>
+        <strong>Distillation, synthetic data, or extraction</strong>
+        <p>Legitimate disclosed distillation and alleged unauthorized extraction are labeled differently.</p>
+      </div>
+      <span class="diffusion-arrow" aria-hidden="true">→</span>
+      <div class="diffusion-stage">
+        <span>03 · Capability diffusion</span>
+        <strong>Cheaper APIs and open weights</strong>
+        <p>Release status is verified separately from performance and provenance claims.</p>
+      </div>
+    </div>
+
+    <div class="diffusion-grid">
+      <div>
+        <div class="diffusion-subhead">
+          <div>
+            <p class="eyebrow">Evidence timeline</p>
+            <h3>What is documented—and by whom</h3>
+          </div>
+          <span>Updated with primary sources</span>
+        </div>
+        <ol class="diffusion-timeline">
+          {% for milestone in diffusion.milestones reversed %}
+          <li class="diffusion-event diffusion-event-{{ milestone.evidence_class }}">
+            <time datetime="{{ milestone.date | escape }}">{{ milestone.date | date: "%b %d, %Y" }}</time>
+            <div>
+              <div class="diffusion-event-meta">
+                <span class="evidence-badge evidence-{{ milestone.evidence_class }}">{% for evidence in diffusion.evidence_classes %}{% if evidence.key == milestone.evidence_class %}{{ evidence.label | escape }}{% endif %}{% endfor %}</span>
+                <span>{{ milestone.lab | escape }}</span>
+              </div>
+              <h4>{{ milestone.headline | escape }}</h4>
+              <p>{{ milestone.detail | escape }}</p>
+              <div class="diffusion-event-foot">
+                <span>Weights: {{ milestone.open_weight_status | escape }}</span>
+                <a href="{{ milestone.source_url | escape }}" target="_blank" rel="noopener noreferrer">{{ milestone.source_label | escape }} ↗</a>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+
+      <aside class="diffusion-evidence" aria-labelledby="diffusion-evidence-title">
+        <p class="eyebrow">Evidence key</p>
+        <h3 id="diffusion-evidence-title">Confidence comes from classification</h3>
+        <ul>
+          {% for evidence in diffusion.evidence_classes %}
+          <li>
+            <span class="evidence-badge evidence-{{ evidence.key }}">{{ evidence.label | escape }}</span>
+            <p>{{ evidence.meaning | escape }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+        <p class="diffusion-rule"><strong>Editorial rule:</strong> matching output style or benchmark performance is not proof of model lineage.</p>
+      </aside>
+    </div>
+
+    <div class="diffusion-coverage">
+      <div class="diffusion-subhead">
+        <div>
+          <p class="eyebrow">Live coverage signal</p>
+          <h3>What the current news cycle is connecting</h3>
+        </div>
+        <span>{{ diffusion.coverage.metric | escape }}</span>
+      </div>
+      {% if diffusion.coverage.stories.size > 0 %}
+      <ul class="diffusion-story-list">
+        {% for story in diffusion.coverage.stories %}
+        <li>
+          <div>
+            <span>{{ story.labs | join: " · " | escape }}</span>
+            <a href="{{ story.link | escape }}" target="_blank" rel="noopener noreferrer">{{ story.title | escape }}</a>
+          </div>
+          <small>{{ story.source | escape }}{% if story.published_display %} · {{ story.published_display | escape }}{% endif %}</small>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p class="diffusion-empty">No current coverage item meets both tests: a tracked lab and a diffusion signal. The primary-source timeline remains available above.</p>
+      {% endif %}
+    </div>
+
+    <aside class="atlas-readout diffusion-readout">
+      <strong>Read the signal</strong>
+      <p>The timeline records releases, developer disclosures, and named provider claims. The live count measures TriWei coverage only. Neither is a verdict about the undisclosed training lineage of any model.</p>
+    </aside>
+  </section>
 
   <section class="atlas-section card animate-in" id="momentum" aria-labelledby="momentum-title">
     <header class="atlas-section-head">

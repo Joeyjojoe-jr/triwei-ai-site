@@ -9,7 +9,7 @@ function read(relativePath) {
   return fs.readFileSync(path.join(repoRoot, relativePath), 'utf8');
 }
 
-test('atlas page presents five question-led visualizations and source labels', () => {
+test('atlas page presents five question-led visualizations and the diffusion watch', () => {
   const page = read('industry.md');
   const chartNames = ['topics', 'stack', 'models', 'adoption', 'economics'];
 
@@ -19,6 +19,10 @@ test('atlas page presents five question-led visualizations and source labels', (
   });
   assert.match(page, /Coverage signal/);
   assert.match(page, /Industry measure/);
+  assert.match(page, /id="diffusion"/);
+  assert.match(page, /evidence-\{\{ milestone\.evidence_class \}\}/);
+  assert.match(page, /diffusion\.evidence_classes/);
+  assert.match(page, /matching output style or benchmark performance is not proof/i);
   assert.match(page, /industry-atlas-data/);
 });
 
@@ -42,4 +46,14 @@ test('atlas styling provides mobile overflow and reduced-motion behavior', () =>
   assert.match(css, /@media \(prefers-reduced-motion: reduce\)/);
   assert.match(css, /\.atlas-heatmap-grid/);
   assert.match(css, /\.atlas-adoption-row/);
+  assert.match(css, /\.diffusion-timeline/);
+  assert.match(css, /\.evidence-provider_claim/);
+});
+
+test('homepage promotes the strategic diffusion watch', () => {
+  const home = read('_layouts/home.html');
+
+  assert.match(home, /Strategic watch · model diffusion/);
+  assert.match(home, /\/industry\/#diffusion/);
+  assert.match(home, /diffusion\.coverage\.story_count/);
 });

@@ -60,7 +60,7 @@ jobs:
         run: |
           git config user.name  "triwei-news-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add _data/news.json _data/industry.json _data/topic_history.json
+          git add _data/news.json _data/industry.json _data/topic_history.json _data/diffusion_history.json
           if git diff --cached --quiet; then
             echo "No news changes."
             echo "changed=false" >> "$GITHUB_OUTPUT"

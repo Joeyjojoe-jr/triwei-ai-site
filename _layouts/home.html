@@ -163,6 +163,22 @@ layout: default
 </section>
 {% endif %}
 
+{% assign diffusion = site.data.industry.diffusion_watch %}
+{% if diffusion %}
+<section class="diffusion-entry card animate-in" aria-labelledby="diffusion-entry-title">
+  <div class="diffusion-entry-copy">
+    <p class="pulse-kicker">Strategic watch · model diffusion</p>
+    <h2 id="diffusion-entry-title">China’s open-weight push—and the provenance question</h2>
+    <p>Follow verified releases, disclosed distillation, provider-attributed extraction claims, and frontier-capability convergence without collapsing them into one claim.</p>
+  </div>
+  <div class="diffusion-entry-stats" aria-label="Current diffusion watch summary">
+    <span><strong>{{ diffusion.coverage.story_count }}</strong> coverage signals</span>
+    <span><strong>{{ diffusion.milestones.size }}</strong> sourced milestones</span>
+  </div>
+  <a class="atlas-entry-link" href="{{ '/industry/#diffusion' | relative_url }}">Open diffusion watch →</a>
+</section>
+{% endif %}
+
 <section class="atlas-entry card animate-in" aria-labelledby="industry-atlas-entry">
   <div>
     <p class="pulse-kicker">Beyond today's headlines</p>

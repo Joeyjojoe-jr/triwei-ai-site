@@ -26,6 +26,36 @@ def is_number(value):
 
 def validate(payload):
     errors = []
+    diffusion = payload.get("diffusion_watch", {})
+    evidence_classes = diffusion.get("evidence_classes")
+    milestones = diffusion.get("milestones")
+    coverage = diffusion.get("coverage", {})
+    if not isinstance(evidence_classes, list) or not evidence_classes:
+        errors.append("diffusion_watch.evidence_classes must be non-empty")
+        evidence_keys = set()
+    else:
+        evidence_keys = {row.get("key") for row in evidence_classes if row.get("key")}
+    if not isinstance(milestones, list) or not milestones:
+        errors.append("diffusion_watch.milestones must be non-empty")
+    else:
+        for index, milestone in enumerate(milestones):
+            if milestone.get("evidence_class") not in evidence_keys:
+                errors.append(
+                    "diffusion_watch.milestones[%d].evidence_class is unknown" % index
+                )
+            if not milestone.get("date") or not milestone.get("headline"):
+                errors.append(
+                    "diffusion_watch.milestones[%d] needs a date and headline" % index
+                )
+            if not safe_url(milestone.get("source_url")):
+                errors.append(
+                    "diffusion_watch.milestones[%d].source_url must be safe" % index
+                )
+    if not is_number(coverage.get("story_count")) or coverage.get("story_count", -1) < 0:
+        errors.append("diffusion_watch.coverage.story_count must be non-negative")
+    if not isinstance(coverage.get("daily"), list):
+        errors.append("diffusion_watch.coverage.daily must be a list")
+
     lifecycle = payload.get("topic_lifecycle", {})
     series = lifecycle.get("series")
     if not isinstance(series, list) or not series:

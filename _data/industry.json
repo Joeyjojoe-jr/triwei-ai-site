@@ -1,7 +1,158 @@
 {
-  "generated_utc": "2026-07-20T14:38:16.411917Z",
+  "generated_utc": "2026-07-20T15:09:44.846984Z",
   "generated_display": "Jul 20, 2026",
   "coverage_generated_display": "July 20, 2026 at 9:38 AM CDT",
+  "diffusion_watch": {
+    "coverage": {
+      "story_count": 2,
+      "lab_count": 2,
+      "labs": [
+        {
+          "name": "Moonshot / Kimi",
+          "count": 2
+        },
+        {
+          "name": "Alibaba / Qwen",
+          "count": 1
+        }
+      ],
+      "signals": [
+        {
+          "name": "Capability convergence",
+          "count": 2
+        }
+      ],
+      "stories": [
+        {
+          "title": "China delivers a one-two punch to America’s AI dominance",
+          "link": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen",
+          "source": "The Verge",
+          "published_display": "Jul 20, 2026",
+          "labs": [
+            "Moonshot / Kimi",
+            "Alibaba / Qwen"
+          ],
+          "signals": [
+            "Capability convergence"
+          ]
+        },
+        {
+          "title": "Chinese AI startup Moonshot unveils Kimi K3 Model—Will it challenge OpenAI and Anthropic?",
+          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNWnhYTGF5Z3k3S1JwdUM3dFJINkpTX2x2ZTVJVmVWaTlac3BDYUVtSm5FNFZ1U1M0b1k3UjQ5WnhjVHNPd05xOC1pY0hKc1g1Y2hQQ0NXWm4xNmtZSmJBc01hU2kwcUItU2g2aWNWMVNDLUNMMEo5YjJaRW15dGhua1hIWTkyTjM4cmFldTl0VndUcEM0dHBRN2VjWllTNkRlNkhtdnNVV0tVX0k1eDFhTTRZaGphMm5uNGsycVl0MnN4UjVZSG90MzJoSQ?oc=5",
+          "source": "Forbes Australia",
+          "published_display": "Jul 17, 2026",
+          "labs": [
+            "Moonshot / Kimi"
+          ],
+          "signals": [
+            "Capability convergence"
+          ]
+        }
+      ],
+      "observed_days": 2,
+      "window_days": 365,
+      "daily": [
+        {
+          "date": "2026-07-17",
+          "story_count": 1,
+          "labs": {
+            "Moonshot / Kimi": 1
+          },
+          "signals": {
+            "Capability convergence": 1
+          }
+        },
+        {
+          "date": "2026-07-20",
+          "story_count": 1,
+          "labs": {
+            "Alibaba / Qwen": 1,
+            "Moonshot / Kimi": 1
+          },
+          "signals": {
+            "Capability convergence": 1
+          }
+        }
+      ],
+      "metric": "Distinct TriWei stories connecting a tracked China-based lab to distillation, model extraction, open weights, or frontier-capability convergence",
+      "source": "coverage"
+    },
+    "evidence_classes": [
+      {
+        "key": "disclosed",
+        "label": "Developer disclosure",
+        "meaning": "The model developer identifies its own teacher, student, or training method."
+      },
+      {
+        "key": "provider_claim",
+        "label": "Provider-attributed claim",
+        "meaning": "A frontier provider publishes an attribution; it is not treated as an independent adjudication."
+      },
+      {
+        "key": "released",
+        "label": "Weights released",
+        "meaning": "Downloadable checkpoints and their stated license are publicly available."
+      },
+      {
+        "key": "announced",
+        "label": "Weights announced",
+        "meaning": "The developer has committed to a release, but the tracker has not yet verified the weights."
+      }
+    ],
+    "milestones": [
+      {
+        "date": "2025-01-20",
+        "lab": "DeepSeek",
+        "evidence_class": "disclosed",
+        "headline": "R1 distills its reasoning into Qwen and Llama students",
+        "detail": "DeepSeek says it fine-tuned Qwen and Llama base models on 800,000 samples curated with DeepSeek-R1.",
+        "open_weight_status": "Released",
+        "source_label": "DeepSeek-R1 repository",
+        "source_url": "https://github.com/deepseek-ai/DeepSeek-R1"
+      },
+      {
+        "date": "2025-07-11",
+        "lab": "Moonshot / Kimi",
+        "evidence_class": "released",
+        "headline": "Kimi K2 checkpoints push agentic capability into open weights",
+        "detail": "Moonshot published Kimi K2 base and instruct checkpoints for its 1T-parameter, 32B-active mixture-of-experts model.",
+        "open_weight_status": "Released",
+        "source_label": "Kimi K2 repository and technical report",
+        "source_url": "https://github.com/MoonshotAI/Kimi-K2"
+      },
+      {
+        "date": "2026-02-12",
+        "lab": "DeepSeek",
+        "evidence_class": "provider_claim",
+        "headline": "OpenAI reports activity consistent with adversarial distillation",
+        "detail": "In a U.S. House committee submission, OpenAI attributes circumvention and programmatic output collection activity to DeepSeek-associated accounts. This remains OpenAI's published attribution.",
+        "open_weight_status": "Not applicable",
+        "source_label": "OpenAI submission to the U.S. House Select Committee",
+        "source_url": "https://cdn.openai.com/pdf/045aa967-ee96-4a09-94ee-3098ddf6db2c/OpenAI-US-House-Select-Cmte-Update-%5B021226%5D.pdf"
+      },
+      {
+        "date": "2026-02-23",
+        "lab": "DeepSeek · Moonshot · MiniMax",
+        "evidence_class": "provider_claim",
+        "headline": "Anthropic attributes industrial-scale Claude extraction campaigns",
+        "detail": "Anthropic says it linked more than 16 million exchanges across roughly 24,000 accounts to the three labs. This is Anthropic's published attribution, not an independent ruling.",
+        "open_weight_status": "Not applicable",
+        "source_label": "Anthropic distillation-attack report",
+        "source_url": "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks"
+      },
+      {
+        "date": "2026-07-16",
+        "lab": "Moonshot / Kimi",
+        "evidence_class": "announced",
+        "headline": "Kimi K3 launches at the 2.8T-parameter frontier",
+        "detail": "Moonshot launched Kimi K3 through its products and API and says full model weights will be released by July 27, 2026.",
+        "open_weight_status": "Announced for Jul 27",
+        "source_label": "Kimi K3 technical blog",
+        "source_url": "https://www.kimi.com/blog/kimi-k3"
+      }
+    ],
+    "source": "diffusion"
+  },
   "topic_lifecycle": {
     "window_days": 90,
     "observed_days": 5,
@@ -853,6 +1004,11 @@
       "label": "Epoch AI — AI Companies dataset",
       "url": "https://epoch.ai/data/ai-companies",
       "kind": "market"
+    },
+    "diffusion": {
+      "label": "Primary-source model diffusion ledger",
+      "url": "/sources/",
+      "kind": "strategic"
     }
   }
 }

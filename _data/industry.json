@@ -1,15 +1,15 @@
 {
-  "generated_utc": "2026-07-21T03:25:45.508396Z",
+  "generated_utc": "2026-07-21T08:41:28.893228Z",
   "generated_display": "Jul 21, 2026",
-  "coverage_generated_display": "July 20, 2026 at 10:25 PM CDT",
+  "coverage_generated_display": "July 21, 2026 at 3:41 AM CDT",
   "diffusion_watch": {
     "coverage": {
-      "story_count": 5,
+      "story_count": 6,
       "lab_count": 2,
       "labs": [
         {
           "name": "Moonshot / Kimi",
-          "count": 5
+          "count": 6
         },
         {
           "name": "Alibaba / Qwen",
@@ -23,7 +23,7 @@
         },
         {
           "name": "Open weights",
-          "count": 2
+          "count": 3
         }
       ],
       "stories": [
@@ -88,6 +88,18 @@
           "signals": [
             "Capability convergence"
           ]
+        },
+        {
+          "title": "Moonshot unveils 2.8 trillion-parameter AI model, world’s largest open-weight system",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE43dkdRTUVSamx4b01vSVBMbzNMdDRXWUVTVkg1MU1nNlBvZ2I5czd3WndVbm1od2Z6RmtKSFo2NnBOcGh6OEpoR3ZEcjBMYVg4b1AtamZtdUpVWmhuN1lBQzNoemRkMlZBcjVHSDZ1Q1N1THhIZ1FMQk5lNlZEVnM?oc=5",
+          "source": "eciks.org",
+          "published_display": "Jul 17, 2026",
+          "labs": [
+            "Moonshot / Kimi"
+          ],
+          "signals": [
+            "Open weights"
+          ]
         }
       ],
       "observed_days": 2,
@@ -95,12 +107,13 @@
       "daily": [
         {
           "date": "2026-07-17",
-          "story_count": 2,
+          "story_count": 3,
           "labs": {
-            "Moonshot / Kimi": 2
+            "Moonshot / Kimi": 3
           },
           "signals": {
-            "Capability convergence": 2
+            "Capability convergence": 2,
+            "Open weights": 1
           }
         },
         {
@@ -554,7 +567,7 @@
     "series": [
       {
         "term": "safety",
-        "total": 14,
+        "total": 13,
         "points": [
           {
             "date": "2026-07-16",
@@ -578,19 +591,19 @@
           },
           {
             "date": "2026-07-20",
-            "count": 11,
-            "share": 22.0
+            "count": 10,
+            "share": 32.3
           },
           {
             "date": "2026-07-21",
             "count": 1,
-            "share": 10.0
+            "share": 3.2
           }
         ]
       },
       {
         "term": "Anthropic",
-        "total": 11,
+        "total": 10,
         "points": [
           {
             "date": "2026-07-16",
@@ -600,7 +613,7 @@
           {
             "date": "2026-07-17",
             "count": 2,
-            "share": 28.6
+            "share": 33.3
           },
           {
             "date": "2026-07-18",
@@ -614,19 +627,19 @@
           },
           {
             "date": "2026-07-20",
-            "count": 7,
-            "share": 14.0
+            "count": 5,
+            "share": 16.1
           },
           {
             "date": "2026-07-21",
-            "count": 1,
-            "share": 10.0
+            "count": 2,
+            "share": 6.5
           }
         ]
       },
       {
         "term": "OpenAI",
-        "total": 6,
+        "total": 8,
         "points": [
           {
             "date": "2026-07-16",
@@ -636,7 +649,7 @@
           {
             "date": "2026-07-17",
             "count": 1,
-            "share": 14.3
+            "share": 16.7
           },
           {
             "date": "2026-07-18",
@@ -651,18 +664,18 @@
           {
             "date": "2026-07-20",
             "count": 5,
-            "share": 10.0
+            "share": 16.1
           },
           {
             "date": "2026-07-21",
-            "count": 0,
-            "share": 0.0
+            "count": 2,
+            "share": 6.5
           }
         ]
       },
       {
         "term": "agent",
-        "total": 6,
+        "total": 3,
         "points": [
           {
             "date": "2026-07-16",
@@ -686,13 +699,13 @@
           },
           {
             "date": "2026-07-20",
-            "count": 2,
-            "share": 4.0
+            "count": 1,
+            "share": 3.2
           },
           {
             "date": "2026-07-21",
-            "count": 4,
-            "share": 40.0
+            "count": 2,
+            "share": 6.5
           }
         ]
       },
@@ -723,7 +736,7 @@
           {
             "date": "2026-07-20",
             "count": 3,
-            "share": 6.0
+            "share": 9.7
           },
           {
             "date": "2026-07-21",
@@ -733,7 +746,7 @@
         ]
       },
       {
-        "term": "regulation",
+        "term": "Claude",
         "total": 2,
         "points": [
           {
@@ -748,8 +761,8 @@
           },
           {
             "date": "2026-07-18",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 50.0
           },
           {
             "date": "2026-07-19",
@@ -758,13 +771,13 @@
           },
           {
             "date": "2026-07-20",
-            "count": 1,
-            "share": 2.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-07-21",
             "count": 1,
-            "share": 10.0
+            "share": 3.2
           }
         ]
       }
@@ -813,54 +826,23 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 5
+            "count": 3
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 3
+            "count": 4
           },
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 3
-          }
-        ]
-      },
-      {
-        "name": "Moonshot",
-        "story_count": 6,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 1
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 6
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 0
+            "count": 4
           }
         ]
       },
       {
         "name": "OpenAI",
-        "story_count": 6,
+        "story_count": 8,
         "cells": [
           {
             "key": "hardware",
@@ -886,6 +868,37 @@
             "key": "society",
             "label": "Policy & society",
             "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Moonshot",
+        "story_count": 7,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 1
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 7
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
           }
         ]
       },
@@ -958,7 +971,7 @@
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 1
+            "count": 2
           },
           {
             "key": "cloud",
@@ -968,7 +981,7 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 2
+            "count": 1
           },
           {
             "key": "apps",
@@ -984,7 +997,7 @@
       },
       {
         "name": "Meta",
-        "story_count": 2,
+        "story_count": 1,
         "cells": [
           {
             "key": "hardware",
@@ -1009,12 +1022,12 @@
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 1
+            "count": 0
           }
         ]
       }
     ],
-    "max_count": 6,
+    "max_count": 7,
     "metric": "Distinct stories mentioning both the company and layer",
     "source": "coverage"
   },

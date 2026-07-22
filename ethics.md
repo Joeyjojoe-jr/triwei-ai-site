@@ -2,59 +2,42 @@
 layout: default
 title: Ethics Watch
 permalink: /ethics/
-description: Every AI story, screened for its ethical dimensions — bias, safety, privacy, copyright, labor, energy, and regulation.
+description: Direct links to public AI governance, risk, copyright, and accountability records without automated ethical judgments.
+publication_key: ethics
 ---
-{% assign news = site.data.news %}
+{% assign register = site.data.ethics_sources %}
 
-<section class="hero card animate-in">
-  <p class="eyebrow">the lens</p>
-  <h1>Ethics Watch</h1>
-  <p class="lead">TriWei AI reads every headline for its ethical stakes. Below are the themes surfacing most across current coverage, and the stories driving them.</p>
-  {% if news %}<p class="updated-stamp">Last updated {{ news.generated_display | escape }}</p>{% endif %}
-</section>
+<article class="source-only-page">
+  <header class="source-only-hero card animate-in">
+    <p class="eyebrow">Ethics &amp; governance</p>
+    <h1>Original public records—without an automated verdict</h1>
+    <p>TriWei does not infer that a person, company, model, or article is ethical or unethical from keywords, frequency, sentiment, or machine-applied tags. This page links to original institutional records so readers can inspect the source directly.</p>
+    <p class="updated-stamp">Links checked {{ register.checked_on | date: "%b %d, %Y" }}</p>
+  </header>
 
-{% if news %}
-{% if news.ethics_themes.size > 0 %}
-<section class="section-block animate-in">
-  <div class="section-heading">
-    <h2>themes in play</h2>
-    <p>How strongly each ethical dimension is running across today's tracked stories.</p>
-  </div>
-  {% assign maxc = news.ethics_themes[0].count %}
-  <div class="heat-list">
-    {% for th in news.ethics_themes %}
-    <div class="heat-row">
-      <span class="heat-label">{{ th.theme | escape }}</span>
-      <span class="heat-bar"><span class="heat-fill" style="width: {{ th.count | times: 100 | divided_by: maxc }}%;"></span></span>
-      <span class="heat-num">{{ th.count }}</span>
+  <section class="source-only-section card animate-in" aria-labelledby="ethics-source-title">
+    <p class="source-only-warning">Metadata and links only</p>
+    <h2 id="ethics-source-title">Governance, risk, copyright, and accountability sources</h2>
+    <p>Inclusion means that TriWei recorded a direct public source. It is not endorsement, legal advice, an ethical rating, or independent verification of every statement in the source.</p>
+
+    <div class="source-only-grid">
+      {% for record in register.records %}
+      <article class="source-only-card">
+        <p class="source-only-type">{{ record.source_type | escape }}</p>
+        <h3><a href="{{ record.source_url | escape }}" target="_blank" rel="noopener noreferrer">{{ record.source_title | escape }} ↗</a></h3>
+        <dl>
+          <div><dt>Institution</dt><dd>{{ record.author_or_institution | escape }}</dd></div>
+          <div><dt>Publisher or host</dt><dd>{{ record.publisher_or_host | escape }}</dd></div>
+          <div><dt>Record date</dt><dd>{{ record.published_display | escape }}</dd></div>
+          <div><dt>Link checked</dt><dd>{{ record.checked_on | escape }}</dd></div>
+        </dl>
+      </article>
+      {% endfor %}
     </div>
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
+  </section>
 
-<section class="section-block animate-in">
-  <div class="section-heading">
-    <h2>flagged stories</h2>
-    <p>Every item here touches at least one ethical dimension. Tags and heat marks show how many.</p>
-  </div>
-  <div class="news-list">
-    {% for item in news.ethics_watch %}
-    <article class="news-item ethics-flagged">
-      <h3><a href="{{ item.link | escape }}" target="_blank" rel="noopener noreferrer">{{ item.title | escape }}</a></h3>
-      <p class="news-meta">
-        <span class="cat-pill cat-{{ item.category }}">{{ item.category_label | escape }}</span>
-        {{ item.source | escape }}{% if item.published_display %} <span class="sep">·</span> {{ item.published_display | escape }}{% endif %}
-        <span class="card-heat" title="{{ item.ethics_tags.size }} ethical dimensions">{% for t in item.ethics_tags %}▰{% endfor %}</span>
-      </p>
-      {% if item.summary != "" %}<p class="news-summary">{{ item.summary | escape }}</p>{% endif %}
-      {% if item.ethics_tags.size > 0 %}
-      <ul class="ethics-tags">{% for t in item.ethics_tags %}<li>{{ t | escape }}</li>{% endfor %}</ul>
-      {% endif %}
-    </article>
-    {% endfor %}
-  </div>
-</section>
-{% else %}
-<p class="empty-state">Ethics data has not been generated yet.</p>
-{% endif %}
+  <aside class="withheld-notice">
+    <strong>Why the former story heat map is not shown:</strong>
+    Automated keyword matching can help discover material for later review, but it cannot establish harm, intent, legality, safety, importance, or ethical merit. Feed summaries, machine tags, and article-frequency bars are therefore withheld from this page.
+  </aside>
+</article>

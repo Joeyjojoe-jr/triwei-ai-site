@@ -31,27 +31,35 @@
     },
     {
       "date": "2026-07-20",
-      "story_count": 9,
+      "story_count": 5,
       "topics": {
         "Anthropic": 1,
-        "Nvidia": 1,
-        "regulation": 1,
-        "safety": 3
+        "Nvidia": 1
       }
     },
     {
       "date": "2026-07-21",
-      "story_count": 59,
+      "story_count": 53,
       "topics": {
-        "agent": 6,
+        "agent": 2,
+        "agentic": 1,
         "Anthropic": 6,
-        "Claude": 2,
-        "coding": 1,
-        "Nvidia": 2,
-        "OpenAI": 3,
-        "regulation": 5,
-        "safety": 4,
-        "video": 1
+        "benchmark": 2,
+        "Claude": 3,
+        "Nvidia": 3,
+        "OpenAI": 12,
+        "regulation": 6,
+        "safety": 4
+      }
+    },
+    {
+      "date": "2026-07-22",
+      "story_count": 10,
+      "topics": {
+        "Anthropic": 1,
+        "benchmark": 1,
+        "OpenAI": 2,
+        "safety": 1
       }
     }
   ]

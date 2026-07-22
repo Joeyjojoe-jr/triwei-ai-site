@@ -63,19 +63,22 @@ test('atlas styling provides mobile overflow and reduced-motion behavior', () =>
   assert.match(css, /\.evidence-provider_claim/);
 });
 
-test('homepage promotes the strategic diffusion watch', () => {
+test('homepage promotes the strategic diffusion evidence thread', () => {
   const home = read('_layouts/home.html');
+  const evidence = read('_data/home_evidence.json');
 
-  assert.match(home, /Strategic watch · model diffusion/);
-  assert.match(home, /\/industry\/#diffusion/);
-  assert.match(home, /diffusion\.coverage\.story_count/);
+  assert.match(home, /Living evidence threads/);
+  assert.match(evidence, /Model access and provenance/);
+  assert.match(evidence, /\/industry\/#diffusion/);
+  assert.match(evidence, /Released artifacts, future commitments, disclosed distillation, and provider-attributed claims remain separate evidence classes/);
 });
 
-test('homepage promotes the physical AI supply-chain watch', () => {
+test('homepage promotes the physical AI supply-chain evidence thread', () => {
   const home = read('_layouts/home.html');
+  const evidence = read('_data/home_evidence.json');
 
-  assert.match(home, /Strategic watch · physical AI stack/);
-  assert.match(home, /\/hardware\//);
-  assert.match(home, /Open hardware intelligence/);
-  assert.match(home, /supply\.critical_count/);
+  assert.match(home, /Living evidence threads/);
+  assert.match(evidence, /Physical AI supply chain/);
+  assert.match(evidence, /\/hardware\//);
+  assert.match(evidence, /8 production stages/);
 });

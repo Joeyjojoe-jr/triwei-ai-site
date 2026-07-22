@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-07-22T03:25:52.064203Z",
+  "generated_utc": "2026-07-22T08:39:24.004076Z",
   "generated_display": "Jul 22, 2026",
-  "coverage_generated_display": "July 21, 2026 at 10:25 PM CDT",
+  "coverage_generated_display": "July 22, 2026 at 3:39 AM CDT",
   "diffusion_watch": {
     "coverage": {
       "story_count": 0,
@@ -501,19 +501,19 @@
           },
           {
             "date": "2026-07-21",
-            "count": 12,
-            "share": 22.6
+            "count": 8,
+            "share": 25.8
           },
           {
             "date": "2026-07-22",
-            "count": 2,
-            "share": 20.0
+            "count": 6,
+            "share": 17.6
           }
         ]
       },
       {
         "term": "Anthropic",
-        "total": 11,
+        "total": 10,
         "points": [
           {
             "date": "2026-07-16",
@@ -542,13 +542,13 @@
           },
           {
             "date": "2026-07-21",
-            "count": 6,
-            "share": 11.3
+            "count": 2,
+            "share": 6.5
           },
           {
             "date": "2026-07-22",
-            "count": 1,
-            "share": 10.0
+            "count": 4,
+            "share": 11.8
           }
         ]
       },
@@ -584,18 +584,18 @@
           {
             "date": "2026-07-21",
             "count": 4,
-            "share": 7.5
+            "share": 12.9
           },
           {
             "date": "2026-07-22",
             "count": 1,
-            "share": 10.0
+            "share": 2.9
           }
         ]
       },
       {
         "term": "regulation",
-        "total": 6,
+        "total": 5,
         "points": [
           {
             "date": "2026-07-16",
@@ -624,49 +624,8 @@
           },
           {
             "date": "2026-07-21",
-            "count": 6,
-            "share": 11.3
-          },
-          {
-            "date": "2026-07-22",
-            "count": 0,
-            "share": 0.0
-          }
-        ]
-      },
-      {
-        "term": "Claude",
-        "total": 4,
-        "points": [
-          {
-            "date": "2026-07-16",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-17",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-18",
-            "count": 1,
-            "share": 50.0
-          },
-          {
-            "date": "2026-07-19",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-20",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-21",
-            "count": 3,
-            "share": 5.7
+            "count": 5,
+            "share": 16.1
           },
           {
             "date": "2026-07-22",
@@ -707,12 +666,53 @@
           {
             "date": "2026-07-21",
             "count": 3,
-            "share": 5.7
+            "share": 9.7
           },
           {
             "date": "2026-07-22",
             "count": 0,
             "share": 0.0
+          }
+        ]
+      },
+      {
+        "term": "agent",
+        "total": 4,
+        "points": [
+          {
+            "date": "2026-07-16",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-17",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-18",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-19",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-20",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-21",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-22",
+            "count": 4,
+            "share": 11.8
           }
         ]
       }
@@ -766,7 +766,7 @@
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 1
+            "count": 3
           },
           {
             "key": "society",
@@ -777,7 +777,7 @@
       },
       {
         "name": "Anthropic",
-        "story_count": 9,
+        "story_count": 8,
         "cells": [
           {
             "key": "hardware",
@@ -792,7 +792,7 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 2
+            "count": 0
           },
           {
             "key": "apps",
@@ -900,8 +900,8 @@
         ]
       },
       {
-        "name": "DeepSeek",
-        "story_count": 1,
+        "name": "Mistral",
+        "story_count": 2,
         "cells": [
           {
             "key": "hardware",
@@ -916,7 +916,7 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 1
+            "count": 0
           },
           {
             "key": "apps",
@@ -926,38 +926,7 @@
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 0
-          }
-        ]
-      },
-      {
-        "name": "Moonshot",
-        "story_count": 1,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
             "count": 1
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 0
           }
         ]
       }

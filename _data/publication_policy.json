@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "effective_date": "2026-07-22",
+  "contract_url": "/sources/#site-wide-publication-contract",
+  "corrections_url": "/corrections/",
+  "pages": {
+    "about": {
+      "label": "Site scope and limits",
+      "mode": "Policy and project description",
+      "notice": "This page describes TriWei's intended practices. It does not claim completeness, neutrality, independent verification, or original reporting."
+    },
+    "signals": {
+      "label": "Historical source metadata only",
+      "mode": "Source register pending human-authored research",
+      "notice": "AI-assisted thread summaries, relationship labels, significance claims, and source synopses are withheld. The page publishes dated source metadata and direct links only."
+    },
+    "hardware": {
+      "label": "Source-dated specification register",
+      "mode": "Data transcription, not advice or benchmarking",
+      "notice": "Displayed values are attributed to cited manufacturers or institutions. Interpretive lessons, purchasing recommendations, and AI-authored explanations are withheld pending human research and review."
+    },
+    "industry": {
+      "label": "External-data and primary-source register",
+      "mode": "Source-dated measurements, not editorial ranking",
+      "notice": "Coverage frequency, AI-authored readouts, and significance rankings are not published. Figures remain attached to their source, reference period, and limitations."
+    },
+    "ethics": {
+      "label": "Official-source register",
+      "mode": "Public records, not automated ethical judgment",
+      "notice": "Machine tags and feed frequency are not findings of harm, legality, safety, or importance. This page links to original institutional records without adding an AI synopsis."
+    },
+    "sources": {
+      "label": "Publication standard",
+      "mode": "Method, attribution, and correction rules",
+      "notice": "These rules govern every public page and are enforced by automated tests, while substantive editorial responsibility remains human."
+    },
+    "corrections": {
+      "label": "Corrections and revisions",
+      "mode": "Public change record",
+      "notice": "Material errors, attribution changes, link corrections, source updates, and expired records should be logged rather than silently concealed."
+    }
+  }
+}

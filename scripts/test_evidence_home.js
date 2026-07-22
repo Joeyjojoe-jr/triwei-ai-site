@@ -7,6 +7,10 @@ const root = path.resolve(__dirname, '..');
 const head = fs.readFileSync(path.join(root, '_includes', 'head.html'), 'utf8');
 const home = fs.readFileSync(path.join(root, '_layouts', 'home.html'), 'utf8');
 const styles = fs.readFileSync(path.join(root, 'assets', 'css', 'evidence-home.css'), 'utf8');
+const orbitGuidance = fs.readFileSync(
+  path.join(root, 'assets', 'css', 'orbit-source-guidance.css'),
+  'utf8'
+);
 const sourcesPage = fs.readFileSync(path.join(root, 'sources.md'), 'utf8');
 const register = JSON.parse(
   fs.readFileSync(path.join(root, '_data', 'home_sources.json'), 'utf8')
@@ -97,7 +101,7 @@ test('automated coverage shows headlines and metadata only', () => {
   assert.doesNotMatch(home, /coverage-trends/);
 });
 
-test('homepage styles inherit TriWei and never target the preserved orbit', () => {
+test('homepage styles inherit TriWei without changing the orbit geometry', () => {
   assert.match(styles, /var\(--accent\)/);
   assert.match(styles, /var\(--surface\)/);
   assert.match(styles, /var\(--mono\)/);
@@ -111,7 +115,15 @@ test('homepage styles inherit TriWei and never target the preserved orbit', () =
     '{% endif %}'
   );
   assert.match(homeConditional, /assets\/css\/evidence-home\.css/);
+  assert.match(homeConditional, /assets\/css\/orbit-source-guidance\.css/);
   assert.doesNotMatch(homeConditional, /evidence-home-refinement/);
+
+  assert.match(orbitGuidance, /OPEN SUBCATEGORIES/);
+  assert.match(orbitGuidance, /Source gap/);
+  assert.match(orbitGuidance, /misattribution or misappropriation/);
+  assert.doesNotMatch(orbitGuidance, /\.orbit\s*\{/);
+  assert.doesNotMatch(orbitGuidance, /--r:/);
+  assert.doesNotMatch(orbitGuidance, /@keyframes/);
 });
 
 test('Sources and Method states the human-authorship and original-link rule', () => {

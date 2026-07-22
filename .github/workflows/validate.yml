@@ -39,6 +39,9 @@ jobs:
       - name: Test evidence-first homepage
         run: npm run check:evidence-home
 
+      - name: Test site-wide publication contract
+        run: npm run check:publication
+
       - name: Test palette toggle
         run: npm run check:palette
 
@@ -59,6 +62,9 @@ jobs:
         with:
           source: ./
           destination: ./_site
+
+      - name: Audit rendered publication boundaries
+        run: python scripts/audit_rendered_publication.py _site
 
       - name: Upload reviewable site preview
         uses: actions/upload-artifact@v4

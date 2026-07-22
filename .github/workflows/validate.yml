@@ -36,8 +36,8 @@ jobs:
       - name: Test orbit navigation
         run: npm run check:orbit
 
-      - name: Test guided homepage
-        run: npm run check:guided-home
+      - name: Test evidence-first homepage
+        run: npm run check:evidence-home
 
       - name: Test palette toggle
         run: npm run check:palette
@@ -63,6 +63,6 @@ jobs:
       - name: Upload reviewable site preview
         uses: actions/upload-artifact@v4
         with:
-          name: triwei-guided-home-preview
+          name: triwei-evidence-home-preview
           path: ./_site
           retention-days: 7

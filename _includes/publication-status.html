@@ -1,0 +1,16 @@
+{% assign publication = site.data.publication_policy %}
+{% assign page_status = publication.pages[page.publication_key] %}
+{% if page_status %}
+<aside class="publication-status" aria-label="Publication status">
+  <div>
+    <p class="publication-status-kicker">Publication status</p>
+    <strong>{{ page_status.label | escape }}</strong>
+    <span>{{ page_status.mode | escape }}</span>
+  </div>
+  <p>{{ page_status.notice | escape }}</p>
+  <nav aria-label="Publication safeguards">
+    <a href="{{ publication.contract_url | relative_url }}">Read the site-wide contract →</a>
+    <a href="{{ publication.corrections_url | relative_url }}">Corrections and revisions →</a>
+  </nav>
+</aside>
+{% endif %}

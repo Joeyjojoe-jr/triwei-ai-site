@@ -50,7 +50,7 @@ test('the brief preserves the hero and reuses the existing AI Pulse', () => {
   assert.match(script, /HERO_SELECTOR = '\.hero-orbit-wrap'/);
   assert.match(script, /PULSE_SELECTOR = '\.pulse-block'/);
   assert.match(script, /hero\.insertAdjacentElement\('afterend', section\)/);
-  assert.match(script, /TriWei Brief/);
+  assert.match(script, /5-minute TriWei Brief/);
   assert.match(script, /What happened/);
   assert.match(script, /Why it matters/);
   assert.match(script, /What changed/);
@@ -59,12 +59,24 @@ test('the brief preserves the hero and reuses the existing AI Pulse', () => {
   assert.doesNotMatch(script, /XMLHttpRequest/);
 });
 
+test('the revised brief is visibly different and collapses the old pulse by default', () => {
+  assert.match(script, /brief-feature/);
+  assert.match(script, /brief-rail/);
+  assert.match(script, /brief-pulse-toggle/);
+  assert.match(script, /pulse\.hidden = true/);
+  assert.match(script, /Show full AI Pulse and all underlying stories/);
+  assert.match(styles, /\.brief-stage/);
+  assert.match(styles, /\.brief-feature/);
+  assert.match(styles, /\.brief-rail/);
+  assert.match(styles, /grid-template-columns: minmax\(0, 1\.6fr\)/);
+});
+
 test('the brief uses local-only return context and explicit evidence boundaries', () => {
   assert.match(script, /triwei-brief-snapshot-v1/);
   assert.match(script, /window\.localStorage/);
   assert.match(script, /New since your last visit/);
   assert.match(script, /not a truth score/i);
-  assert.match(script, /does not establish that the sources are independent/i);
+  assert.match(script, /does not establish that sources are independent/i);
 });
 
 test('the brief inherits TriWei tokens and protects reduced motion', () => {

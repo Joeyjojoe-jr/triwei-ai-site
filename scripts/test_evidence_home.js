@@ -130,6 +130,6 @@ test('Sources and Method states the human-authorship and original-link rule', ()
   assert.match(sourcesPage, /does not publish AI-written synopses/i);
   assert.match(sourcesPage, /original author's piece/i);
   assert.match(sourcesPage, /canonical source/i);
-  assert.match(sourcesPage, /human-researched and human-authored/i);
+  assert.match(sourcesPage, /human research, human authorship/i);
   assert.match(sourcesPage, /Corrections and revisions/);
 });

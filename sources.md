@@ -2,131 +2,128 @@
 layout: page
 title: Sources & Method
 permalink: /sources/
-description: How TriWei separates reviewed evidence records, source-attributed claims, editorial synthesis, uncertainty, and automated news leads.
+description: How TriWei links to original sources, separates automated discovery from human-authored work, and handles corrections.
 ---
 
-TriWei AI is a two-layer public information site:
+TriWei is designed to help readers find and inspect original work without presenting machine-generated paraphrases as editorial research.
 
-1. The **Evidence Desk** contains small, manually reviewed, source-linked records about specific dated events.
-2. The **automated coverage inbox** collects current headlines and tags them as leads for inspection.
+## Core publication rule
 
-The two layers are deliberately separate. A topic appearing frequently in the coverage inbox does not make it true, important, ethical, unethical, safe, unsafe, or worthy of promotion.
+TriWei **does not publish AI-written synopses, summaries, or explanations of third-party articles that TriWei has not independently researched and human-authored**.
 
-## Evidence Desk publication standard
+A link collection is not original reporting. A generated paraphrase is not a substitute for reading the author. When TriWei has not produced original, human-authored analysis, the site presents source metadata and a direct link only.
 
-A homepage Evidence Desk record must identify:
+## Original-link standard
 
-- a concrete dated event rather than only a person, organization, or broad topic;
-- the type and role of the source;
-- a concise independently written factual record;
-- a clearly labeled **TriWei system context**;
-- an explicit statement of what the record does **not** establish;
-- the date TriWei last checked the source; and
-- a link to the original source and any deeper TriWei tracker.
+A public source link should preserve:
 
-Automated feeds can surface candidates, but they cannot publish an Evidence Desk record. A record is added only after its source, wording, attribution, date, and limits are reviewed.
+- the source's original title;
+- the named author or byline when the source supplies one;
+- the responsible publisher, organization, repository, or public institution;
+- the publication date when available; and
+- the direct canonical source URL.
 
-### Evidence classes
+TriWei does not guess an author. When no individual byline is supplied, the site identifies the responsible publisher or institution.
 
-- **Developer announcement** — records what a developer states or promises. It is not treated as independent verification.
-- **Released artifact** — records a cited public checkpoint, repository, paper, filing, or comparable artifact that was available when checked.
-- **Provider-attributed claim** — records an allegation or attribution by the named organization. It is not presented as an independent adjudication.
-- **Public law or regulation** — records a legal or regulatory event from a public institution. TriWei does not provide individualized legal advice.
-- **Company project disclosure** — records a company's statement about a physical project, investment, status, or target. Future schedules, output, and economics remain contingent.
+Google News, search engines, social posts, aggregators, and similar services may help locate candidate material, but their intermediary URLs are not presented as the original author's piece. An item is withheld from the public link index until a direct source URL is available.
 
-Inclusion is not endorsement, ranking, prediction, investment advice, legal advice, or a declaration that a disputed matter has been finally resolved.
+## Original-source register
 
-## Attribution and responsible use of sources
+The homepage register contains metadata and links only. It does not contain:
 
-TriWei links to the original source and writes concise original summaries. It does not copy article bodies, imply publisher or author endorsement, or claim ownership of third-party research, reporting, names, logos, or marks.
+- AI-written article summaries;
+- generated claims about why an article matters;
+- automated conclusions about truth, importance, safety, legality, or ethics;
+- invented or inferred authorship; or
+- copied article bodies.
 
-Direct quotations should be used sparingly and only when the exact wording is necessary. Most entries should paraphrase the source while preserving attribution and uncertainty. Links are provided so readers can inspect the underlying material and context.
+Inclusion means only that TriWei has recorded a direct source link. It is not endorsement, independent verification of every claim, legal advice, investment advice, or a final determination of a disputed matter.
 
-## AI-assisted work
+## Original TriWei analysis
 
-TriWei uses AI-assisted research and coding in parts of site development. AI tools may help locate candidate sources, structure records, test data, draft language, and identify possible omissions. AI assistance is disclosed because it can introduce errors.
+A future TriWei analysis must be:
 
-No live model decides truth, importance, legal merit, ethical merit, or source reliability when the page loads. Reviewed static records and explicit rules control the published Evidence Desk.
+1. independently researched by a human;
+2. human-researched and human-authored as an original TriWei work;
+3. supported by an inspectable source list;
+4. reviewed for attribution, uncertainty, and material omissions;
+5. dated and assigned a named author or responsible editorial owner; and
+6. kept separate from automated feed output.
 
-## Automated coverage inbox
+AI tools may assist site code, accessibility work, source discovery, metadata checks, testing, and internal organization. They must not generate the published synopsis of a third-party article. Any substantive TriWei analysis must remain the responsibility and work of its human author.
 
-A scheduled GitHub Actions job refreshes the coverage inbox. It pulls headlines from a range of feeds, removes exact and near-duplicate articles, identifies recurring terms, and applies keyword-based ethics tags.
+## Automated direct-link index
 
-The coverage inbox is a discovery tool, not an editorial verdict:
+A scheduled GitHub Actions job collects candidate headlines from feeds. On the public homepage, the automated index displays only:
 
-- recurrence measures this site's collected sample, not real-world importance;
+- the feed's original headline;
+- the publisher;
+- an author when the feed explicitly supplies one;
+- the publication date when available; and
+- a direct source URL.
+
+The public index does not display feed descriptions or generated summaries. Items that only have a Google News or other intermediary URL are withheld.
+
+Automated collection remains a discovery mechanism, not an editorial verdict:
+
+- recurrence in the collected sample does not establish real-world importance;
 - multiple links do not prove source independence;
-- an ethics tag is a signpost, not a finding of wrongdoing;
-- a headline or feed summary may omit material context;
-- folder placement does not endorse or condemn the subject; and
-- automated collection does not convert reporting into a TriWei factual record.
+- folder placement is a navigation aid, not endorsement or condemnation;
+- machine-applied tags are not findings of wrongdoing; and
+- collection does not convert an author's reporting into a TriWei factual record.
 
-## What the automated inbox tracks
+## Attribution and responsible use
 
-- **Labs & Industry** — releases and moves from AI developers and the surrounding technology industry.
-- **Research & Papers** — work from arXiv and coverage of models, methods, and benchmarks.
-- **Community & Discussion** — practitioner and public discussion from selected forums.
-- **Business & Funding** — companies, funding, acquisitions, chips, and market activity.
-- **Ethics & Society** — regulation, copyright, safety, privacy, bias, labor, governance, and related human impacts.
+TriWei links outward and attributes third-party work to its author, publisher, organization, repository, or institution. It does not claim ownership of third-party reporting, research, names, logos, or marks.
 
-## The ethics lens
-
-Each collected story is screened against themes including Bias & Fairness, Privacy & Surveillance, Safety & Alignment, Misinformation & Deepfakes, Copyright & IP, Labor & Jobs, Energy & Environment, Regulation & Governance, Transparency & Accountability, and Autonomy & Weapons.
-
-The screening is keyword-based. It is a fast first pass that helps readers locate relevant material; it is not a legal conclusion, moral judgment, or factual determination.
+Direct quotations should be limited to situations where exact wording is necessary. Any quotation must remain short, attributed, and linked to its original context. Article bodies are not reproduced.
 
 ## Industry Atlas data
 
-The [AI Industry Atlas](/industry/) keeps coverage signals and industry measures visibly separate:
+The [AI Industry Atlas](/industry/) keeps coverage signals and external industry measures visibly separate:
 
-- **Momentum and industry stack** use TriWei's deduplicated story sample. They describe this site's coverage, not market share or company performance.
-- **Business adoption** comes from the U.S. Census Bureau's [Business Trends and Outlook Survey](https://www.census.gov/hfp/btos/data_downloads).
-- **Current model API cost** uses source-dated first-party price pages. Price is not equated with capability, quality, safety, or value.
-- **Historical model value** retains the reproducible dataset behind Epoch AI's [LLM inference price analysis](https://epoch.ai/data-insights/llm-inference-price-trends) and labels its historical endpoint.
-- **Lab economics** uses Epoch AI's [AI Companies dataset](https://epoch.ai/data/ai-companies), with visible limits around private-company estimates and comparability.
+- coverage counts describe TriWei's collected sample, not market share, company quality, or factual importance;
+- public datasets remain attributed to their publishers;
+- company specifications and prices remain source-dated and do not establish capability, safety, value, or availability; and
+- historical datasets are labeled with their endpoint and limitations.
 
 ## Physical AI Supply-Chain Watch
 
-The supply-chain map follows critical materials, silicon wafers, fab tools, accelerator dies, HBM, advanced packaging, servers and computers, and destination markets. It is a dated evidence ledger, not a claim that every vendor or shipment follows one route.
+The supply-chain map follows critical materials, silicon wafers, fab tools, accelerator dies, HBM, advanced packaging, systems, and destination markets. It is a dated source ledger, not a claim that every vendor or shipment follows one route.
 
-Current institutional, geological, company, and regulatory sources are linked in the ledger. Representative companies illustrate a production stage; they are not a complete supplier list or market-share estimate.
+Representative companies illustrate a production stage; they are not a complete supplier list or market-share estimate.
 
 ## Frontier Diffusion Watch
 
-The diffusion watch keeps evidence classes separate:
-
-- developer-disclosed distillation;
-- provider-attributed extraction claims;
-- publicly released checkpoints;
-- future release announcements; and
-- current media coverage.
+The diffusion watch keeps different source types separate, including developer disclosures, provider claims, public repositories, regulatory records, and media coverage.
 
 Benchmark similarity, answer style, timing, or media repetition alone is never treated as proof of model lineage.
 
 ## Signal History
 
-[Signal History](/signals/) is an AI-assisted, curated lookback ledger, not an automated verdict on who predicted the future.
+[Signal History](/signals/) connects dated source records over time. Any interpretive relationship must be labeled as TriWei analysis and may not be published as an AI-written synopsis of an author's piece.
 
-Later events may **strengthen**, **complicate**, or **redirect** an earlier framing. Those relationship labels are TriWei synthesis. They do not mean the earlier author was simply right or wrong, and they do not imply publisher, author, or independent fact-checker endorsement.
+Later evidence may strengthen, complicate, redirect, or leave an earlier question unresolved. Those relationships do not imply that an earlier author was simply right or wrong.
 
 ## AI Hardware intelligence
 
 [AI Hardware](/hardware/) separates memory capacity, memory bandwidth, compute engines, interconnect, power and cooling, and software support. It does not collapse unlike products into one universal score.
 
-Product specifications, materials, and fab projects are stored in a dated static ledger with verification deadlines. Vendor specifications and schedules do not certify actual application performance, street price, availability, future output, or project completion.
+Vendor specifications and schedules do not certify actual application performance, street price, availability, future output, or project completion.
 
 ## Corrections and revisions
 
-TriWei treats correction as part of the evidence record, not as an embarrassment to hide.
+TriWei treats correction as part of responsible publication, not something to conceal.
 
 Material changes should be classified as one of the following:
 
 - **Correction** — a published factual statement was wrong.
-- **Clarification** — the wording was technically defensible but materially ambiguous or incomplete.
+- **Clarification** — wording was materially ambiguous or incomplete.
 - **Source update** — the underlying source changed, disappeared, or was superseded.
-- **Evidence update** — later evidence strengthened, complicated, redirected, or resolved part of a record.
-- **Expiry** — a current-data ledger passed its review deadline and must no longer appear current.
+- **Link correction** — an intermediary, broken, or incorrect URL was replaced with the original source.
+- **Attribution correction** — the author, publisher, or responsible institution was misstated.
+- **Expiry** — current information passed its review deadline and must no longer appear current.
 
-A material correction should identify what changed, why it changed, the date of the revision, and the affected record. Minor spelling, formatting, and accessibility repairs may be corrected without a formal log when they do not alter meaning.
+A material correction should identify what changed, why it changed, the date of revision, and the affected page or record. Minor spelling, formatting, and accessibility repairs may be corrected without a formal log when they do not alter meaning.
 
-The absence of a listed correction is not a claim that the site is error-free. Readers should inspect the original sources and report material problems through the public project repository.
+The absence of a listed correction is not a claim that the site is error-free. Readers should inspect original sources and report material problems through the public project repository.

@@ -43,7 +43,15 @@ layout: default
                   {% endunless %}
                 {% endfor %}
                 {% if shown == 0 %}
-                <li class="folder-empty">Direct source link pending.</li>
+                  {% assign fallback_items = sources.orbit_fallbacks[key] %}
+                  {% for h in fallback_items limit: 3 %}
+                  <li>
+                    <a href="{{ h.source_url | escape }}" target="_blank" rel="noopener noreferrer">
+                      <span class="rank">{{ forloop.index }}</span>
+                      <span class="rank-title">{{ h.source_title | escape }}</span>
+                    </a>
+                  </li>
+                  {% endfor %}
                 {% endif %}
               </ol>
             </div>

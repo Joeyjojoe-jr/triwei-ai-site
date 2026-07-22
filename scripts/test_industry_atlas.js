@@ -63,22 +63,22 @@ test('atlas styling provides mobile overflow and reduced-motion behavior', () =>
   assert.match(css, /\.evidence-provider_claim/);
 });
 
-test('homepage promotes the strategic diffusion evidence thread', () => {
+test('homepage source register links to the diffusion tracker', () => {
   const home = read('_layouts/home.html');
-  const evidence = read('_data/home_evidence.json');
+  const sources = read('_data/home_sources.json');
 
-  assert.match(home, /Living evidence threads/);
-  assert.match(evidence, /Model access and provenance/);
-  assert.match(evidence, /\/industry\/#diffusion/);
-  assert.match(evidence, /Released artifacts, future commitments, disclosed distillation, and provider-attributed claims remain separate evidence classes/);
+  assert.match(home, /Original pieces and public records/);
+  assert.match(sources, /Open Frontier Diffusion Watch/);
+  assert.match(sources, /\/industry\/#diffusion/);
+  assert.doesNotMatch(sources, /summary|synopsis|context|analysis/i);
 });
 
-test('homepage promotes the physical AI supply-chain evidence thread', () => {
+test('homepage source register links to the hardware tracker', () => {
   const home = read('_layouts/home.html');
-  const evidence = read('_data/home_evidence.json');
+  const sources = read('_data/home_sources.json');
 
-  assert.match(home, /Living evidence threads/);
-  assert.match(evidence, /Physical AI supply chain/);
-  assert.match(evidence, /\/hardware\//);
-  assert.match(evidence, /8 production stages/);
+  assert.match(home, /Original pieces and public records/);
+  assert.match(sources, /Open AI Hardware/);
+  assert.match(sources, /\/hardware\//);
+  assert.doesNotMatch(sources, /production stages|strategic watch/i);
 });

@@ -7,8 +7,10 @@ const root = path.resolve(__dirname, '..');
 const head = fs.readFileSync(path.join(root, '_includes', 'head.html'), 'utf8');
 const home = fs.readFileSync(path.join(root, '_layouts', 'home.html'), 'utf8');
 const styles = fs.readFileSync(path.join(root, 'assets', 'css', 'evidence-home.css'), 'utf8');
-const sources = fs.readFileSync(path.join(root, 'sources.md'), 'utf8');
-const evidence = JSON.parse(fs.readFileSync(path.join(root, '_data', 'home_evidence.json'), 'utf8'));
+const sourcesPage = fs.readFileSync(path.join(root, 'sources.md'), 'utf8');
+const register = JSON.parse(
+  fs.readFileSync(path.join(root, '_data', 'home_sources.json'), 'utf8')
+);
 
 function sectionBetween(source, start, end) {
   const startIndex = source.indexOf(start);
@@ -33,89 +35,89 @@ test('the original rotating orbit remains the first homepage section', () => {
   assert.match(hero, /Right now in AI/);
 
   const heroIndex = home.indexOf('<section class="hero card animate-in hero-orbit-wrap">');
-  const deskIndex = home.indexOf('<main class="evidence-home"');
-  assert.ok(heroIndex >= 0 && deskIndex > heroIndex, 'Evidence Desk must begin below the orbit hero');
+  const registerIndex = home.indexOf('<main class="source-home"');
+  assert.ok(heroIndex >= 0 && registerIndex > heroIndex, 'source register must begin below the orbit hero');
 });
 
-test('the homepage loads only the evidence-first stylesheet', () => {
-  const homeConditional = sectionBetween(
-    head,
-    '{% if page.layout == "home" %}',
-    '{% endif %}'
-  );
-
-  assert.match(homeConditional, /assets\/css\/evidence-home\.css/);
-  assert.doesNotMatch(homeConditional, /guided-home/);
+test('public links exclude Google News intermediary URLs', () => {
+  assert.match(home, /unless h\.link contains 'news\.google\.com'/);
+  assert.match(home, /unless item\.link contains 'news\.google\.com'/);
+  assert.match(home, /Intermediary links are withheld/);
+  assert.doesNotMatch(home, /href="https:\/\/news\.google\.com/);
 });
 
-test('reviewed evidence is separate from automated coverage', () => {
-  assert.match(home, /TriWei Evidence Desk/);
-  assert.match(home, /Documented record/);
-  assert.match(home, /System context · TriWei synthesis/);
-  assert.match(home, /Not established by this record/);
-  assert.match(home, /Automated coverage inbox/);
-  assert.match(home, /leads for inspection, not TriWei findings/);
-  assert.match(home, /data-coverage-inbox/);
+test('the homepage publishes source metadata rather than article synopses', () => {
+  assert.match(home, /Read the original work—not an AI synopsis/);
+  assert.match(home, /Original pieces and public records/);
+  assert.match(home, /Open original piece/);
+  assert.match(home, /Author or responsible institution/);
+  assert.match(home, /Publisher or host/);
 
-  const evidenceStart = home.indexOf('<main class="evidence-home"');
-  const evidenceEnd = home.indexOf('</main>', evidenceStart);
-  const desk = home.slice(evidenceStart, evidenceEnd);
-  assert.doesNotMatch(desk, /ai_pulse/);
-  assert.doesNotMatch(desk, /strength_percent/);
-  assert.doesNotMatch(desk, /source voices/i);
-  assert.doesNotMatch(desk, /truth score/i);
+  assert.doesNotMatch(home, /item\.summary/);
+  assert.doesNotMatch(home, /news-summary/);
+  assert.doesNotMatch(home, /record\.record/);
+  assert.doesNotMatch(home, /record\.context/);
+  assert.doesNotMatch(home, /record\.limits/);
+  assert.doesNotMatch(home, /TriWei synthesis/);
 });
 
-test('every homepage record has inspectable provenance and explicit limits', () => {
-  assert.ok(evidence.records.length >= 4, 'expected at least four reviewed records');
+test('every registered source is direct, attributable, and metadata-only', () => {
+  assert.ok(register.records.length >= 4, 'expected at least four source records');
   const ids = new Set();
 
-  for (const record of evidence.records) {
+  for (const record of register.records) {
     for (const field of [
-      'id', 'date', 'date_display', 'domain', 'evidence_class', 'evidence_label',
-      'source_role', 'title', 'record', 'context', 'limits', 'status',
-      'source_label', 'source_url', 'source_owner', 'verified_on',
-      'tracker_label', 'tracker_url'
+      'id', 'source_title', 'author', 'publisher', 'source_type',
+      'published_display', 'source_url', 'checked_on'
     ]) {
       assert.equal(typeof record[field], 'string', `${record.id || 'record'} missing ${field}`);
       assert.ok(record[field].trim(), `${record.id || 'record'} has empty ${field}`);
     }
 
-    assert.match(record.date, /^\d{4}(?:-\d{2})?(?:-\d{2})?$/);
-    assert.match(record.verified_on, /^\d{4}-\d{2}-\d{2}$/);
     assert.match(record.source_url, /^https:\/\//);
-    assert.match(record.tracker_url, /^\//);
-    assert.ok(record.title.trim().split(/\s+/).length >= 5, 'record title must describe an event, not only an entity');
-    assert.ok(!ids.has(record.id), `duplicate record id: ${record.id}`);
+    assert.doesNotMatch(record.source_url, /news\.google\.com/i);
+    assert.match(record.checked_on, /^\d{4}-\d{2}-\d{2}$/);
+    assert.ok(!ids.has(record.id), `duplicate source id: ${record.id}`);
     ids.add(record.id);
+
+    for (const forbidden of ['summary', 'synopsis', 'record', 'context', 'limits', 'analysis']) {
+      assert.equal(Object.hasOwn(record, forbidden), false, `${record.id} must not contain ${forbidden}`);
+    }
   }
 });
 
-test('the data contract forbids popularity and hidden verdicts', () => {
-  const serialized = JSON.stringify(evidence);
-  assert.match(evidence.purpose, /not because .* appeared frequently/i);
-  assert.match(evidence.method.publication_gate, /cannot publish/i);
-  assert.match(evidence.method.attribution, /does not reproduce article bodies/i);
-  assert.match(evidence.method.automation, /AI tools may assist/i);
-  assert.match(evidence.method.non_claim, /not endorsement/i);
-  assert.doesNotMatch(serialized, /importance_score/i);
-  assert.doesNotMatch(serialized, /truth_score/i);
-  assert.doesNotMatch(serialized, /confidence_score/i);
+test('automated coverage shows headlines and metadata only', () => {
+  assert.match(home, /Automated direct-link index/);
+  assert.match(home, /Original feed headlines and direct publisher links only/);
+  assert.match(home, /does not add article summaries/);
+  assert.match(home, /item\.title/);
+  assert.match(home, /item\.source/);
+  assert.match(home, /item\.published_display/);
+  assert.doesNotMatch(home, /ethics-tags/);
+  assert.doesNotMatch(home, /coverage-trends/);
 });
 
-test('styles inherit TriWei and never target the preserved orbit', () => {
+test('homepage styles inherit TriWei and never target the preserved orbit', () => {
   assert.match(styles, /var\(--accent\)/);
   assert.match(styles, /var\(--surface\)/);
   assert.match(styles, /var\(--mono\)/);
   assert.match(styles, /@media \(prefers-reduced-motion: reduce\)/);
   assert.doesNotMatch(styles, /\.hero-orbit-wrap\s*\{/);
   assert.doesNotMatch(styles, /\.orbit\s*\{/);
+
+  const homeConditional = sectionBetween(
+    head,
+    '{% if page.layout == "home" %}',
+    '{% endif %}'
+  );
+  assert.match(homeConditional, /assets\/css\/evidence-home\.css/);
+  assert.doesNotMatch(homeConditional, /evidence-home-refinement/);
 });
 
-test('Sources and Method documents the publication and corrections standard', () => {
-  assert.match(sources, /Evidence Desk publication standard/);
-  assert.match(sources, /automated coverage inbox/i);
-  assert.match(sources, /AI-assisted/i);
-  assert.match(sources, /Corrections and revisions/);
-  assert.match(sources, /does not copy article bodies/i);
+test('Sources and Method states the human-authorship and original-link rule', () => {
+  assert.match(sourcesPage, /does not publish AI-written synopses/i);
+  assert.match(sourcesPage, /original author or publisher/i);
+  assert.match(sourcesPage, /canonical source/i);
+  assert.match(sourcesPage, /human-researched and human-authored/i);
+  assert.match(sourcesPage, /Corrections and revisions/);
 });

@@ -65,20 +65,23 @@ test('atlas styling provides mobile overflow and reduced-motion behavior', () =>
 
 test('homepage source register links to the diffusion tracker', () => {
   const home = read('_layouts/home.html');
-  const sources = read('_data/home_sources.json');
+  const sources = JSON.parse(read('_data/home_sources.json'));
 
   assert.match(home, /Original pieces and public records/);
-  assert.match(sources, /Open Frontier Diffusion Watch/);
-  assert.match(sources, /\/industry\/#diffusion/);
-  assert.doesNotMatch(sources, /summary|synopsis|context|analysis/i);
+  assert.ok(sources.records.some((record) => record.tracker_url === '/industry/#diffusion'));
+  for (const record of sources.records) {
+    assert.equal(Object.hasOwn(record, 'summary'), false);
+    assert.equal(Object.hasOwn(record, 'synopsis'), false);
+    assert.equal(Object.hasOwn(record, 'context'), false);
+    assert.equal(Object.hasOwn(record, 'analysis'), false);
+  }
 });
 
 test('homepage source register links to the hardware tracker', () => {
   const home = read('_layouts/home.html');
-  const sources = read('_data/home_sources.json');
+  const sources = JSON.parse(read('_data/home_sources.json'));
 
   assert.match(home, /Original pieces and public records/);
-  assert.match(sources, /Open AI Hardware/);
-  assert.match(sources, /\/hardware\//);
-  assert.doesNotMatch(sources, /production stages|strategic watch/i);
+  assert.ok(sources.records.some((record) => record.tracker_url === '/hardware/'));
+  assert.ok(sources.records.some((record) => record.source_type === 'Company press release'));
 });

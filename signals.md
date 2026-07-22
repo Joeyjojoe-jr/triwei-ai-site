@@ -22,7 +22,7 @@ publication_key: signals
     TriWei does not currently publish the stored thread summaries, source notes, “strengthens/complicates/redirects” labels, observer rankings, or claims that one event explains another. Those are editorial conclusions, not source metadata.
   </aside>
 
-  <section class="source-only-section card animate-in" aria-labelledby="signal-source-title">
+  <section class="source-only-section card animate-in" id="signal-ledger" aria-labelledby="signal-source-title">
     <p class="source-only-warning">Provisional collection order</p>
     <h2 id="signal-source-title">Original historical sources</h2>
     <p>The records below preserve date, responsible author or institution, publisher, and direct source link. Their order and proximity do not establish causation, priority, prediction accuracy, endorsement, or historical importance.</p>

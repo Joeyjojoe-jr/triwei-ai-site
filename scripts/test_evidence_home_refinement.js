@@ -24,7 +24,7 @@ test('the first reading path is event, evidence, and uncertainty', () => {
 });
 
 test('methodology remains available but no longer dominates the first screen', () => {
-  assert.match(script, /createElement\('details'\)/);
+  assert.match(script, /makeElement\('details'/);
   assert.match(script, /evidence-freshness/);
   assert.match(script, /evidence-class-grid/);
   assert.match(styles, /\.evidence-method-details/);

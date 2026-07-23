@@ -65,14 +65,19 @@ test('the homepage publishes source metadata rather than article synopses', () =
   assert.doesNotMatch(home, /TriWei synthesis/);
 });
 
-test('every registered source is direct, attributable, and metadata-only', () => {
+test('every registered source is direct, attributable, metadata-only, and routed to a current page', () => {
   assert.ok(register.records.length >= 4, 'expected at least four source records');
   const ids = new Set();
+  const allowedTrackerRoutes = new Set([
+    '/industry/#diffusion',
+    '/hardware/',
+    '/ethics/',
+  ]);
 
   for (const record of register.records) {
     for (const field of [
       'id', 'source_title', 'author', 'publisher', 'source_type',
-      'published_display', 'source_url', 'checked_on'
+      'published_display', 'source_url', 'checked_on', 'tracker_label', 'tracker_url'
     ]) {
       assert.equal(typeof record[field], 'string', `${record.id || 'record'} missing ${field}`);
       assert.ok(record[field].trim(), `${record.id || 'record'} has empty ${field}`);
@@ -81,6 +86,9 @@ test('every registered source is direct, attributable, and metadata-only', () =>
     assert.match(record.source_url, /^https:\/\//);
     assert.doesNotMatch(record.source_url, /news\.google\.com/i);
     assert.match(record.checked_on, /^\d{4}-\d{2}-\d{2}$/);
+    assert.ok(allowedTrackerRoutes.has(record.tracker_url), `${record.id} uses obsolete tracker route ${record.tracker_url}`);
+    assert.doesNotMatch(record.tracker_url, /signal-ledger|\?topic=/i);
+    assert.doesNotMatch(record.tracker_label, /Signal History|Diffusion Watch/i);
     assert.ok(!ids.has(record.id), `duplicate source id: ${record.id}`);
     ids.add(record.id);
 

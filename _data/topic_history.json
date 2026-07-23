@@ -46,30 +46,32 @@
     },
     {
       "date": "2026-07-22",
-      "story_count": 38,
+      "story_count": 30,
       "topics": {
-        "agent": 2,
-        "Anthropic": 15,
-        "benchmark": 1,
+        "agent": 1,
+        "Anthropic": 14,
+        "copyright": 4,
         "Nvidia": 3,
-        "OpenAI": 11,
-        "regulation": 4,
-        "safety": 6,
+        "OpenAI": 6,
+        "regulation": 3,
+        "safety": 5,
         "video": 1
       }
     },
     {
       "date": "2026-07-23",
-      "story_count": 32,
+      "story_count": 40,
       "topics": {
-        "agent": 1,
-        "Anthropic": 1,
-        "benchmark": 1,
+        "agent": 3,
+        "Anthropic": 5,
+        "Apple": 1,
+        "benchmark": 2,
+        "Claude": 1,
+        "copyright": 1,
         "energy": 1,
         "Nvidia": 1,
-        "OpenAI": 2,
-        "safety": 3,
-        "video": 1
+        "OpenAI": 6,
+        "safety": 3
       }
     }
   ]

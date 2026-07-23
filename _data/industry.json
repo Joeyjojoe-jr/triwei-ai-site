@@ -1,21 +1,21 @@
 {
-  "generated_utc": "2026-07-23T08:41:27.031424Z",
+  "generated_utc": "2026-07-23T14:22:59.618863Z",
   "generated_display": "Jul 23, 2026",
-  "coverage_generated_display": "July 23, 2026 at 3:41 AM CDT",
+  "coverage_generated_display": "July 23, 2026 at 9:22 AM CDT",
   "diffusion_watch": {
     "coverage": {
-      "story_count": 2,
+      "story_count": 1,
       "lab_count": 1,
       "labs": [
         {
           "name": "Moonshot / Kimi",
-          "count": 2
+          "count": 1
         }
       ],
       "signals": [
         {
           "name": "Distillation / extraction",
-          "count": 2
+          "count": 1
         }
       ],
       "stories": [
@@ -23,18 +23,6 @@
           "title": "Treasury threatens sanctions after White House claims Moonshot distilled Anthropic’s Fable",
           "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxONDhXb3RlOXpEYnZGYmhTcWdNaTh2NEZCLU9ybHhLd2ZIZzFPQVVVc0h6em1SVVlSaDR5LVduUkc4Ri1EcVpUcjk4bTBkRGdiLWJSWUg5LURUUUdQN0NWZ18tTzEtbl8waWM3RjJfZHJNNkdBb0pXX0hHc1ZheDlMblMzU3F0U2tpYXdNWi1IWi1NSTJvQVk5WU1uZXQ5eldCZWd4TmtRc1Q1cFlJNHR6di1kWVY3NjVZNlctQm52TmJRUQ?oc=5",
           "source": "TechCrunch",
-          "published_display": "Jul 22, 2026",
-          "labs": [
-            "Moonshot / Kimi"
-          ],
-          "signals": [
-            "Distillation / extraction"
-          ]
-        },
-        {
-          "title": "OpenAI President Says Kimi K3 ‘Pretty Good,’ Unsure If Distilled From GPT Models",
-          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNZi1rM2VRd0hnV0VxTFkwRUNzQ2gwNDBsVEc5TFNWbzlLN0ZpWVQ1cHQ5Qmlxd25aNFB6aU1pcHBXUHI2NmRYaFBEelVONnM5cHBPWVVyWHp0dVZTdEE5WnVkc0x0eVhYV25pV1A1aXVUZURBSHVoSjI3YlJIdV9iNXhKaFhQSGdTM1hTdHFUcEJWMTlDT1RZQWEycjVPb2d6cVE1YlFOcTJiSDRKdmxBdkx3?oc=5",
-          "source": "Bloomberg.com",
           "published_display": "Jul 22, 2026",
           "labs": [
             "Moonshot / Kimi"
@@ -70,12 +58,12 @@
         },
         {
           "date": "2026-07-22",
-          "story_count": 2,
+          "story_count": 1,
           "labs": {
-            "Moonshot / Kimi": 2
+            "Moonshot / Kimi": 1
           },
           "signals": {
-            "Distillation / extraction": 2
+            "Distillation / extraction": 1
           }
         }
       ],
@@ -517,7 +505,7 @@
     "series": [
       {
         "term": "Anthropic",
-        "total": 20,
+        "total": 23,
         "points": [
           {
             "date": "2026-07-16",
@@ -551,19 +539,19 @@
           },
           {
             "date": "2026-07-22",
-            "count": 15,
-            "share": 39.5
+            "count": 14,
+            "share": 46.7
           },
           {
             "date": "2026-07-23",
-            "count": 1,
-            "share": 3.1
+            "count": 5,
+            "share": 12.5
           }
         ]
       },
       {
         "term": "OpenAI",
-        "total": 14,
+        "total": 13,
         "points": [
           {
             "date": "2026-07-16",
@@ -597,19 +585,19 @@
           },
           {
             "date": "2026-07-22",
-            "count": 11,
-            "share": 28.9
+            "count": 6,
+            "share": 20.0
           },
           {
             "date": "2026-07-23",
-            "count": 2,
-            "share": 6.2
+            "count": 6,
+            "share": 15.0
           }
         ]
       },
       {
         "term": "safety",
-        "total": 12,
+        "total": 11,
         "points": [
           {
             "date": "2026-07-16",
@@ -643,13 +631,13 @@
           },
           {
             "date": "2026-07-22",
-            "count": 6,
-            "share": 15.8
+            "count": 5,
+            "share": 16.7
           },
           {
             "date": "2026-07-23",
             "count": 3,
-            "share": 9.4
+            "share": 7.5
           }
         ]
       },
@@ -690,18 +678,18 @@
           {
             "date": "2026-07-22",
             "count": 3,
-            "share": 7.9
+            "share": 10.0
           },
           {
             "date": "2026-07-23",
             "count": 1,
-            "share": 3.1
+            "share": 2.5
           }
         ]
       },
       {
-        "term": "regulation",
-        "total": 4,
+        "term": "copyright",
+        "total": 5,
         "points": [
           {
             "date": "2026-07-16",
@@ -736,18 +724,18 @@
           {
             "date": "2026-07-22",
             "count": 4,
-            "share": 10.5
+            "share": 13.3
           },
           {
             "date": "2026-07-23",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 2.5
           }
         ]
       },
       {
         "term": "agent",
-        "total": 3,
+        "total": 4,
         "points": [
           {
             "date": "2026-07-16",
@@ -781,13 +769,13 @@
           },
           {
             "date": "2026-07-22",
-            "count": 2,
-            "share": 5.3
+            "count": 1,
+            "share": 3.3
           },
           {
             "date": "2026-07-23",
-            "count": 1,
-            "share": 3.1
+            "count": 3,
+            "share": 7.5
           }
         ]
       }
@@ -821,12 +809,12 @@
     "companies": [
       {
         "name": "Anthropic",
-        "story_count": 16,
+        "story_count": 20,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 4
+            "count": 3
           },
           {
             "key": "cloud",
@@ -837,42 +825,42 @@
             "key": "models",
             "label": "Models & research",
             "count": 2
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 2
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 8
-          }
-        ]
-      },
-      {
-        "name": "OpenAI",
-        "story_count": 13,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 7
           },
           {
             "key": "apps",
             "label": "Tools & applications",
             "count": 3
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "name": "OpenAI",
+        "story_count": 14,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 2
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 6
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 5
           },
           {
             "key": "society",
@@ -898,7 +886,7 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 2
+            "count": 1
           },
           {
             "key": "apps",
@@ -944,39 +932,8 @@
         ]
       },
       {
-        "name": "Mistral",
-        "story_count": 3,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 0
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 1
-          }
-        ]
-      },
-      {
         "name": "Google",
-        "story_count": 2,
+        "story_count": 3,
         "cells": [
           {
             "key": "hardware",
@@ -1007,6 +964,68 @@
       },
       {
         "name": "DeepSeek",
+        "story_count": 2,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 1
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "Mistral",
+        "story_count": 2,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 0
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "Meta",
         "story_count": 1,
         "cells": [
           {
@@ -1037,7 +1056,7 @@
         ]
       }
     ],
-    "max_count": 8,
+    "max_count": 9,
     "metric": "Distinct stories mentioning both the company and layer",
     "source": "coverage"
   },

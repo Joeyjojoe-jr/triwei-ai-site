@@ -14,11 +14,13 @@ function isDirectHttps(value) {
     !/news\.google\.com|google\.com\/search|bing\.com\/search/i.test(String(value || ''));
 }
 
-test('homepage topic remains a gateway into the Research Lineage Library', () => {
+test('homepage rotating topic opens current direct-source research links without promising historical analysis', () => {
   const home = read('_layouts/home.html');
 
-  assert.match(home, /class="hero-cycle"[^>]+href="\{\{ '\/signals\/'/);
-  assert.match(home, /#signal-ledger/);
+  assert.match(home, /class="hero-cycle"[^>]+href="#cat-research"/);
+  assert.match(home, /Rotation reflects collected coverage, not importance or truth/);
+  assert.doesNotMatch(home, /trace its earlier signals/i);
+  assert.doesNotMatch(home, /through AI signal history/i);
 });
 
 test('Research Lineage Library publishes arXiv metadata without paper summaries or influence claims', () => {

@@ -81,6 +81,32 @@ def audit_html(path: Path, relative: str, errors: list[str]) -> None:
             errors.append(f"{relative}: forbidden rendered phrase {phrase!r}")
 
 
+def audit_research_library(text: str, errors: list[str]) -> None:
+    relative = GOVERNED_ROUTES["signals"]
+    for required in (
+        "Research Lineage Library",
+        "OpenAI ChatGPT",
+        "Chronological order only",
+        "Open arXiv abstract",
+    ):
+        if required not in text:
+            errors.append(f"{relative}: missing research disclosure {required!r}")
+
+    arxiv_links = [
+        href for href in HREF_RE.findall(text)
+        if "arxiv.org" in href.lower()
+    ]
+    if len(arxiv_links) < 8:
+        errors.append(f"{relative}: expected at least eight direct arXiv records")
+
+    for href in arxiv_links:
+        if not re.fullmatch(r"https://arxiv\.org/abs/\d{4}\.\d{4,5}", href):
+            errors.append(f"{relative}: non-abstract or malformed arXiv link {href}")
+
+    if "Abstract:" in text:
+        errors.append(f"{relative}: paper abstract text appears to be reproduced")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("site_dir", nargs="?", default="_site")
@@ -107,6 +133,8 @@ def main() -> int:
             errors.append(f"{relative}: missing publication-status disclosure")
         if "site-wide contract" not in text.lower():
             errors.append(f"{relative}: missing publication-contract link or text")
+        if key == "signals":
+            audit_research_library(text, errors)
 
     homepage = site_dir / "index.html"
     if not homepage.is_file():
@@ -128,7 +156,8 @@ def main() -> int:
 
     print(
         "Publication audit passed: governed pages expose status disclosures, "
-        "no intermediary links or forbidden synopsis/judgment components were rendered."
+        "research records link to arXiv abstract pages, and no intermediary links "
+        "or forbidden synopsis/judgment components were rendered."
     )
     return 0
 

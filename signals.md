@@ -77,7 +77,7 @@ research_lineage: true
       <div><h3>Repository status</h3><p>{{ lineage.curation.peer_review_boundary | escape }}</p></div>
       <div><h3>Copyright and reuse</h3><p>{{ lineage.curation.license_boundary | escape }}</p></div>
       <div><h3>No generated synopsis</h3><p>TriWei does not reproduce or paraphrase the abstract. Open the linked record to read the authors’ own abstract and paper.</p></div>
-      <div><h3>Future relationships</h3><p>Labels such as “introduces,” “extends,” “tests,” or “replicates” will remain unpublished until a human verifies the specific relationship against the papers and citations.</p></div>
+      <div><h3>Future relationships</h3><p>Labels such as “introduces,” “extends,” “tests,” or “replicates” remain unpublished until a human verifies the relationship against the papers and citations. Follow the acceptance gate in the <a href="{{ '/workbench/#workbench-signal-history' | relative_url }}">Signal History workbench entry →</a></p></div>
     </div>
   </section>
 

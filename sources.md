@@ -11,7 +11,7 @@ TriWei is designed to help readers find and inspect original work without presen
 ## Site-wide publication contract
 {: #site-wide-publication-contract }
 
-These rules apply to the homepage, Signal History, AI Hardware, Industry Atlas, Ethics Watch, About, and every future public page or subpage.
+These rules apply to the homepage, Research Lineage Library, AI Hardware, Industry Atlas, Ethics Watch, About, and every future public page or subpage.
 
 TriWei must:
 
@@ -25,7 +25,7 @@ TriWei must:
 
 ## Core publication rule
 
-TriWei **does not publish AI-written synopses, summaries, or explanations of third-party articles that TriWei has not independently researched and human-authored**.
+TriWei **does not publish AI-written synopses, summaries, or explanations of third-party articles or papers that TriWei has not independently researched and human-authored**.
 
 A link collection is not original reporting. A generated paraphrase is not a substitute for reading the author. When TriWei has not produced original, human-authored analysis, the site presents source metadata, source-dated fields, and a direct link only.
 
@@ -69,7 +69,7 @@ A future TriWei analysis must be:
 6. clearly separated from automated feed output and source metadata; and
 7. subject to correction and revision.
 
-AI tools may assist site code, accessibility work, source discovery, metadata checks, testing, and internal organization. They must not generate the published synopsis of a third-party article. Any substantive TriWei analysis remains the responsibility and work of its human author.
+AI tools may assist site code, accessibility work, source discovery, metadata checks, testing, and internal organization. They must not generate the published synopsis of a third-party article or paper. Any substantive TriWei analysis remains the responsibility and work of its human author.
 
 ## Automated direct-link index
 
@@ -93,9 +93,22 @@ Automated collection remains a discovery mechanism, not an editorial verdict:
 
 ## Page-specific publication boundaries
 
-### Signal History
+### Research Lineage Library
 
-Signal History currently publishes dated source metadata and direct links only. AI-assisted thread summaries, source notes, relationship labels, observer rankings, and significance claims remain withheld until a human independently researches and authors the chronology.
+The Research Lineage Library publishes verified scholarly metadata and direct links to original abstract pages. Its first release uses chronological, topic-based reading paths to help readers locate papers without reproducing or paraphrasing their abstracts.
+
+Candidate selection and metadata organization were assisted by OpenAI ChatGPT. That assistance is disclosed on the page. TriWei remains responsible for publication, correction, and deciding whether a record should appear.
+
+The current library does **not** claim that:
+
+- a paper is important, foundational, correct, peer reviewed, accepted, or influential;
+- chronological proximity establishes citation, influence, causation, priority, validation, or supersession;
+- appearing on arXiv establishes peer review or endorsement; or
+- the library is complete.
+
+Relationship labels such as “introduces,” “extends,” “tests,” “replicates,” “critiques,” or “applies” remain unpublished until a human verifies the specific relationship against the papers and their citations.
+
+TriWei links to arXiv abstract pages rather than copying PDFs, abstracts, figures, or tables. Reuse rights depend on the license selected for the specific paper version. TriWei does not use arXiv branding in a way that suggests affiliation or endorsement.
 
 ### AI Hardware
 
@@ -113,7 +126,7 @@ Ethics Watch currently publishes original public-institution records only. Machi
 
 TriWei links outward and attributes third-party work to its author, publisher, organization, repository, company, or institution. It does not claim ownership of third-party reporting, research, names, logos, marks, datasets, or specifications.
 
-Direct quotations should be limited to situations where exact wording is necessary. Any quotation must remain short, attributed, and linked to its original context. Article bodies are not reproduced.
+Direct quotations should be limited to situations where exact wording is necessary. Any quotation must remain short, attributed, and linked to its original context. Article bodies and paper bodies are not reproduced.
 
 ## Corrections and revisions
 

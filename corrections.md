@@ -2,42 +2,43 @@
 layout: page
 title: Corrections & Revisions
 permalink: /corrections/
-description: Public record of material corrections, source updates, attribution changes, expiries, and withdrawals.
+description: Public record of material corrections, clarifications, source updates, attribution changes, feature-status changes, and withdrawals.
 publication_key: corrections
 ---
 
-TriWei treats correction as part of responsible publication. Material errors and provenance problems should be identified, corrected, and recorded rather than silently concealed.
+TriWei treats correction as part of responsible publication, not something to conceal.
 
-## Current log
+## Current record
 
-No material corrections have been recorded for the source-register version of the site in this draft branch.
+No material corrections have been recorded for the current public release.
 
-This statement does **not** mean the site is error-free. It means no correction entry has yet been approved and published in this log.
+This statement does not mean that the site is error-free. It means that no material correction has yet been entered in this public log.
 
-## What belongs in this log
+## What should be recorded
 
-A future entry should identify:
+A material entry should use one of these classifications:
 
-- the affected page or record;
-- the type of change;
-- the original publication or review date;
-- what changed;
-- why it changed;
-- the date of the correction; and
-- the source or evidence supporting the change.
-
-Change types are:
-
-- **Correction** — a factual statement was wrong.
+- **Correction** — a published factual statement was wrong.
 - **Clarification** — wording was materially ambiguous or incomplete.
-- **Source update** — a source changed, disappeared, or was superseded.
-- **Link correction** — an intermediary, broken, or incorrect link was replaced.
-- **Attribution correction** — an author, publisher, organization, or institution was misstated.
-- **Expiry** — a current record passed its review deadline.
+- **Source update** — the underlying source changed, disappeared, or was superseded.
+- **Link correction** — an intermediary, broken, or incorrect URL was replaced with the original source.
+- **Attribution correction** — the author, publisher, or responsible institution was misstated.
+- **Expiry** — current information passed its review deadline and should no longer appear current.
+- **Feature-status change** — a feature moved among Published, Research Workbench, or Retired states.
 - **Withdrawal** — material was removed because its provenance, permission, accuracy, or authorship could not be supported.
 
-## Report a problem
+Each material entry should identify:
 
-Open an issue in the [TriWei AI site repository](https://github.com/Joeyjojoe-jr/triwei-ai-site/issues) and include the affected page, the disputed statement or link, and the best original source available.
+1. the affected page, record, or feature;
+2. what changed;
+3. why it changed;
+4. the date of the change; and
+5. the source or review basis supporting the change.
 
-Do not include private, confidential, privileged, personal, or unlawfully obtained material in a public issue.
+Minor spelling, formatting, and accessibility repairs may be corrected without a formal entry when they do not change meaning.
+
+## Reporting a problem
+
+Report a material problem through the public project repository. Include the affected page, the direct source supporting the report, and a concise description of the suspected issue.
+
+Do not include private, confidential, privileged, sealed, personal, or unlawfully obtained information in a public report.

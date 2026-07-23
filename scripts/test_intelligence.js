@@ -37,6 +37,7 @@ test('Research Lineage Library publishes arXiv metadata without paper summaries 
   assert.match(page, /paper\.source_url/);
   assert.match(page, /Chronological order only/);
   assert.match(page, /lineage\.curation\.assistant_attribution/);
+  assert.match(page, /workbench-signal-history/);
   assert.match(data.curation.assistant_attribution, /OpenAI ChatGPT/);
 
   for (const forbidden of [
@@ -82,7 +83,7 @@ test('Research Lineage Library publishes arXiv metadata without paper summaries 
   }
 });
 
-test('AI Hardware publishes sourced specification fields without recommendations', () => {
+test('AI Hardware publishes sourced specification fields before the workbench referral', () => {
   const page = read('hardware.md');
   const data = JSON.parse(read('_data/hardware.json'));
 
@@ -92,7 +93,9 @@ test('AI Hardware publishes sourced specification fields without recommendations
   assert.match(page, /gpu\.source_label/);
   assert.match(page, /material\.source_url/);
   assert.match(page, /fab\.source_url/);
-  assert.match(page, /Interpretive material withheld/);
+  assert.match(page, /Visual explainers are being rebuilt/);
+  assert.match(page, /workbench-hardware-explainers/);
+  assert.ok(page.indexOf('Specification register') < page.indexOf('Visual explainers are being rebuilt'));
 
   for (const forbidden of [
     /gpu\.best_read/,
@@ -121,7 +124,7 @@ test('AI Hardware publishes sourced specification fields without recommendations
   }
 });
 
-test('research and source-only presentation support narrow screens and reduced motion', () => {
+test('research, source-only, and workbench presentations support narrow screens and reduced motion', () => {
   const publicationCss = read('assets/css/publication-standard.css');
   const researchCss = read('assets/css/research-lineage.css');
 
@@ -129,7 +132,8 @@ test('research and source-only presentation support narrow screens and reduced m
   assert.match(publicationCss, /overflow-x:\s*auto/);
   assert.match(publicationCss, /@media \(prefers-reduced-motion: reduce\)/);
   assert.match(publicationCss, /\.source-only-table/);
-  assert.match(publicationCss, /\.withheld-notice/);
+  assert.match(publicationCss, /\.workbench-page/);
+  assert.match(publicationCss, /\.workbench-referral/);
 
   assert.match(researchCss, /\.lineage-track/);
   assert.match(researchCss, /TIME ORDER ONLY/);
@@ -138,9 +142,11 @@ test('research and source-only presentation support narrow screens and reduced m
   assert.match(researchCss, /@media \(prefers-reduced-motion: reduce\)/);
 });
 
-test('primary navigation exposes Research Library and AI Hardware', () => {
+test('primary navigation exposes useful registers and the workbench', () => {
   const header = read('_includes/header.html');
 
-  assert.match(header, />Research Library<\/a>/);
-  assert.match(header, />AI Hardware<\/a>/);
+  assert.match(header, />Research<\/a>/);
+  assert.match(header, />Hardware<\/a>/);
+  assert.match(header, />Ethics Sources<\/a>/);
+  assert.match(header, />Workbench<\/a>/);
 });

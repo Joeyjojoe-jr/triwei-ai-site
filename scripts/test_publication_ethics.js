@@ -74,6 +74,11 @@ test('third-party synopsis and automated judgment fields are not rendered on gov
     /ethics-tags/,
     /coverage\.stories/,
     /coverage\.signals/,
+    /paper\.summary/,
+    /paper\.abstract/,
+    /paper\.synopsis/,
+    /paper\.importance/,
+    /paper\.influence/,
   ];
 
   for (const pattern of forbiddenTemplatePatterns) {
@@ -101,6 +106,35 @@ test('official ethics register contains direct metadata-only sources', () => {
   }
 });
 
+test('research lineage register contains direct scholarly metadata only', () => {
+  const register = json('_data/research_lineage.json');
+
+  assert.match(register.verified_on, /^\d{4}-\d{2}-\d{2}$/);
+  assert.match(register.curation.assistant_attribution, /OpenAI ChatGPT/);
+  assert.match(register.curation.sequence_rule, /does not establish/i);
+  assert.match(register.curation.peer_review_boundary, /does not by itself establish peer review/i);
+
+  const ids = new Set();
+  for (const paper of register.papers) {
+    for (const field of ['id', 'title', 'submitted_on', 'source_url', 'source_host', 'record_type', 'checked_on']) {
+      assert.equal(typeof paper[field], 'string', `${paper.id || 'paper'} missing ${field}`);
+      assert.ok(paper[field].trim(), `${paper.id || 'paper'} has empty ${field}`);
+    }
+    assert.equal(paper.source_url, `https://arxiv.org/abs/${paper.id}`);
+    assert.equal(paper.source_host, 'arXiv');
+    assert.ok(Array.isArray(paper.authors) && paper.authors.length > 0, `${paper.id} missing authors`);
+    assert.ok(!ids.has(paper.id), `duplicate paper id: ${paper.id}`);
+    ids.add(paper.id);
+
+    for (const forbidden of [
+      'summary', 'abstract', 'synopsis', 'analysis', 'importance', 'impact',
+      'influence', 'relationship', 'conclusion', 'why_it_matters',
+    ]) {
+      assert.equal(Object.hasOwn(paper, forbidden), false, `${paper.id} contains ${forbidden}`);
+    }
+  }
+});
+
 test('About, Sources, Corrections, and footer state the operational safeguards', () => {
   const about = read('about.md');
   const sources = read('sources.md');
@@ -115,12 +149,15 @@ test('About, Sources, Corrections, and footer state the operational safeguards',
   assert.match(sources, /does not publish AI-written synopses/i);
   assert.match(sources, /prefer an incomplete page/i);
   assert.match(sources, /human research, human authorship/i);
+  assert.match(sources, /Research Lineage Library/);
+  assert.match(sources, /OpenAI ChatGPT/);
   assert.match(sources, /Withdrawal/);
 
   assert.match(corrections, /Corrections & Revisions/);
   assert.match(corrections, /No material corrections have been recorded/);
   assert.match(corrections, /Do not include private, confidential, privileged/i);
   assert.match(footer, /\/corrections\//);
+  assert.match(footer, />Research Library<\/a>/);
 });
 
 test('public templates do not hard-code intermediary article URLs', () => {

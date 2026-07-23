@@ -102,8 +102,8 @@ layout: default
     {% endfor %}
   </div>
 
-  <h1 class="hero-title">Right now in AI: <a class="hero-cycle" id="hero-cycle" href="{{ '/signals/' | relative_url }}">the latest</a></h1>
-  <p class="hero-history-callout"><span aria-hidden="true">↳</span> Select the topic to trace its earlier signals, turning points, and complicating evidence.</p>
+  <h1 class="hero-title">Right now in AI: <a class="hero-cycle" id="hero-cycle" href="#cat-research">the latest</a></h1>
+  <p class="hero-history-callout"><span aria-hidden="true">↳</span> Select the rotating term to open current direct-source research links. Rotation reflects collected coverage, not importance or truth.</p>
   <p class="lead">TriWei AI tracks current releases, research, deals, and debates and links readers to the original work.</p>
   {% if news %}
   <p class="updated-stamp">Last updated {{ news.generated_display | escape }} · {{ news.item_count }} links collected</p>
@@ -260,8 +260,7 @@ layout: default
         if (!items.length) return;
         var topic = items[i % items.length];
         el.textContent = topic;
-        el.setAttribute('href', {{ '/signals/' | relative_url | jsonify }} + '?topic=' + encodeURIComponent(topic) + '#signal-ledger');
-        el.setAttribute('aria-label', 'Trace ' + topic + ' through AI signal history');
+        el.setAttribute('aria-label', 'Open current direct-source research links; rotating coverage term: ' + topic);
         i++;
       }
       tick();

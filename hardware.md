@@ -10,15 +10,10 @@ publication_key: hardware
 <article class="source-only-page">
   <header class="source-only-hero card animate-in">
     <p class="eyebrow">Hardware source register</p>
-    <h1>Published specifications—without a generated recommendation</h1>
-    <p>TriWei reproduces a limited set of source-dated fields from cited manufacturers and institutions. It does not treat vendor specifications as independent benchmarks, collapse unlike architectures into one score, or recommend a purchase or deployment.</p>
+    <h1>Compare source-dated hardware specifications</h1>
+    <p>Browse published memory, bandwidth, compute, power, and interconnect fields alongside the manufacturer or institutional source. The register preserves source terminology so readers can inspect the underlying product record rather than rely on a generated recommendation.</p>
     <p class="updated-stamp">Source fields checked {{ hardware.verified_display | escape }} · re-check by {{ hardware.reverify_by | date: "%b %d, %Y" }}</p>
   </header>
-
-  <aside class="withheld-notice">
-    <strong>Interpretive material withheld:</strong>
-    AI-assisted explanations, “best read” conclusions, model-fit lessons, material narratives, fab lessons, and retooling advice are not published here. They require independent human research, authorship, and review before they can become TriWei analysis.
-  </aside>
 
   <section class="source-only-section card animate-in" aria-labelledby="hardware-spec-title">
     <p class="source-only-warning">Vendor-published fields</p>
@@ -60,7 +55,7 @@ publication_key: hardware
   <section class="source-only-section card animate-in" aria-labelledby="hardware-source-title">
     <p class="source-only-warning">Original references</p>
     <h2 id="hardware-source-title">Materials and manufacturing sources</h2>
-    <p>These links identify the original institution or company record used during the provisional hardware research. TriWei does not publish the stored AI-assisted explanation of what each source means.</p>
+    <p>These links identify the original institution or company record used during the provisional hardware research.</p>
 
     <div class="source-only-grid">
       {% for material in hardware.materials %}
@@ -80,4 +75,9 @@ publication_key: hardware
       {% endfor %}
     </div>
   </section>
+
+  <details class="workbench-referral">
+    <summary>Visual explainers are being rebuilt—not abandoned</summary>
+    <p>The former AI-assisted lessons, model-fit conclusions, material narratives, fab lessons, and retooling guidance are not published as finished TriWei analysis. Their intended replacements and acceptance gates are listed in the <a href="{{ '/workbench/#workbench-hardware-explainers' | relative_url }}">Hardware Explainers workbench entry →</a></p>
+  </details>
 </article>

@@ -14,16 +14,18 @@ function isDirectHttps(value) {
     !/news\.google\.com|google\.com\/search|bing\.com\/search/i.test(String(value || ''));
 }
 
-test('Industry Atlas publishes source-dated registers instead of coverage narratives', () => {
+test('Industry Atlas publishes source-dated registers before its workbench referral', () => {
   const page = read('industry.md');
 
   assert.match(page, /publication_key:\s*industry/);
   assert.match(page, /API price register/);
   assert.match(page, /Physical supply-chain source register/);
   assert.match(page, /Model-access and provenance source register/);
-  assert.match(page, /Interpretive atlas views withheld/);
+  assert.match(page, /Visual Industry Atlas features are being rebuilt/);
+  assert.match(page, /workbench-industry-visualizations/);
   assert.match(page, /id="supply-chain"/);
   assert.match(page, /id="diffusion"/);
+  assert.ok(page.indexOf('API price register') < page.indexOf('Visual Industry Atlas features are being rebuilt'));
 
   for (const forbidden of [
     /data-atlas-chart/,

@@ -12,16 +12,11 @@ publication_key: industry
 
 <article class="source-only-page">
   <header class="source-only-hero card animate-in">
-    <p class="eyebrow">Industry source and data register</p>
-    <h1>Inspect the measurement and its source—not a generated market story</h1>
-    <p>TriWei publishes a limited set of source-dated fields and direct links. It does not use headline recurrence to rank importance, infer market power, judge company quality, or establish that a reported claim is true.</p>
+    <p class="eyebrow">Industry source and data registers</p>
+    <h1>Inspect AI prices, supply-chain records, and model-access sources</h1>
+    <p>TriWei presents a limited set of source-dated fields with direct links so readers can inspect the measurement or disclosure in its original context.</p>
     <p class="updated-stamp">Industry data refreshed {{ atlas.generated_display | escape }}</p>
   </header>
-
-  <aside class="withheld-notice">
-    <strong>Interpretive atlas views withheld:</strong>
-    Coverage-momentum charts, company heat maps, AI-authored supply-chain readouts, milestone synopses, significance claims, and editorial rankings are not published in this version. They require human research, authorship, and source-by-source review.
-  </aside>
 
   <section class="source-only-section card animate-in" id="pricing" aria-labelledby="pricing-title">
     <p class="source-only-warning">First-party list prices</p>
@@ -99,4 +94,9 @@ publication_key: industry
       {% endfor %}
     </div>
   </section>
+
+  <details class="workbench-referral">
+    <summary>Visual Industry Atlas features are being rebuilt</summary>
+    <p>Coverage-momentum charts, company heat maps, generated supply-chain readouts, milestone synopses, significance claims, and editorial rankings are not published as finished analysis. Their intended replacements and acceptance gates are listed in the <a href="{{ '/workbench/#workbench-industry-visualizations' | relative_url }}">Industry Visualizations workbench entry →</a></p>
+  </details>
 </article>

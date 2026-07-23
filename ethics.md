@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Ethics Watch
+title: Ethics Sources
 permalink: /ethics/
 description: Direct links to public AI governance, risk, copyright, and accountability records without automated ethical judgments.
 publication_key: ethics
@@ -9,15 +9,15 @@ publication_key: ethics
 
 <article class="source-only-page">
   <header class="source-only-hero card animate-in">
-    <p class="eyebrow">Ethics &amp; governance</p>
-    <h1>Original public records—without an automated verdict</h1>
-    <p>TriWei does not infer that a person, company, model, or article is ethical or unethical from keywords, frequency, sentiment, or machine-applied tags. This page links to original institutional records so readers can inspect the source directly.</p>
+    <p class="eyebrow">Ethics &amp; governance sources</p>
+    <h1>Inspect original public records</h1>
+    <p>Find direct institutional records concerning AI governance, risk, copyright, and accountability. Each item retains its responsible institution, host, date, and original link.</p>
     <p class="updated-stamp">Links checked {{ register.checked_on | date: "%b %d, %Y" }}</p>
   </header>
 
   <section class="source-only-section card animate-in" aria-labelledby="ethics-source-title">
-    <p class="source-only-warning">Metadata and links only</p>
-    <h2 id="ethics-source-title">Governance, risk, copyright, and accountability sources</h2>
+    <p class="source-only-warning">Direct institutional sources</p>
+    <h2 id="ethics-source-title">Governance, risk, copyright, and accountability records</h2>
     <p>Inclusion means that TriWei recorded a direct public source. It is not endorsement, legal advice, an ethical rating, or independent verification of every statement in the source.</p>
 
     <div class="source-only-grid">
@@ -36,8 +36,8 @@ publication_key: ethics
     </div>
   </section>
 
-  <aside class="withheld-notice">
-    <strong>Why the former story heat map is not shown:</strong>
-    Automated keyword matching can help discover material for later review, but it cannot establish harm, intent, legality, safety, importance, or ethical merit. Feed summaries, machine tags, and article-frequency bars are therefore withheld from this page.
-  </aside>
+  <details class="workbench-referral">
+    <summary>Human-authored Ethics Watch analysis is in development</summary>
+    <p>The former story heat map, feed summaries, and machine tags could be read as automated findings of harm, intent, legality, safety, importance, or ethical merit. The intended human-authored replacement and its acceptance gate are listed in the <a href="{{ '/workbench/#workbench-ethics-watch-analysis' | relative_url }}">Ethics Watch workbench entry →</a></p>
+  </details>
 </article>

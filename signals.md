@@ -1,46 +1,85 @@
 ---
 layout: default
-title: Signal History
+title: Research Lineage Library
 permalink: /signals/
-description: A dated register of original AI sources. Interpretive timelines remain unpublished pending human research and authorship.
+description: Direct scholarly-source links and chronological reading paths without AI paper summaries or unreviewed influence claims.
 publication_key: signals
+research_lineage: true
 ---
-{% assign signals = site.data.signals %}
-{% assign event_count = 0 %}
-{% for thread in signals.threads %}{% assign event_count = event_count | plus: thread.events.size %}{% endfor %}
+{% assign lineage = site.data.research_lineage %}
 
-<article class="source-only-page">
-  <header class="source-only-hero card animate-in">
-    <p class="eyebrow">Historical source register</p>
-    <h1>Dated sources—without an AI-authored historical narrative</h1>
-    <p>TriWei previously assembled provisional threads and relationship labels with AI assistance. Those summaries, labels, status judgments, and claims of significance are withheld until a human independently researches and authors the chronology.</p>
-    <p class="updated-stamp">{{ event_count }} source records · links last reviewed {{ signals.verified_on | date: "%b %d, %Y" }}</p>
+<article class="research-lineage-page">
+  <header class="research-lineage-hero card animate-in">
+    <p class="eyebrow">Research Lineage Library</p>
+    <h1>Trace original papers without replacing them with AI summaries</h1>
+    <p>This metadata-first library links directly to scholarly records on arXiv—pronounced “archive.” It is intended to help readers locate and revisit original work while keeping authorship, dates, source status, and uncertainty visible.</p>
+
+    <div class="research-lineage-meta" role="list" aria-label="Research library status">
+      <div role="listitem"><span>Verified records</span><strong>{{ lineage.papers.size }}</strong></div>
+      <div role="listitem"><span>Provisional reading paths</span><strong>{{ lineage.paths.size }}</strong></div>
+      <div role="listitem"><span>Metadata checked</span><strong>{{ lineage.verified_display | escape }}</strong></div>
+    </div>
   </header>
 
-  <aside class="withheld-notice">
-    <strong>What is intentionally absent:</strong>
-    TriWei does not currently publish the stored thread summaries, source notes, “strengthens/complicates/redirects” labels, observer rankings, or claims that one event explains another. Those are editorial conclusions, not source metadata.
+  <aside class="research-lineage-disclosure card">
+    <p><strong>AI-assistance disclosure:</strong> {{ lineage.curation.assistant_attribution | escape }}</p>
+    <p><strong>Publication boundary:</strong> {{ lineage.curation.publication_boundary | escape }}</p>
+    <p><strong>Chronology boundary:</strong> {{ lineage.curation.sequence_rule | escape }}</p>
   </aside>
 
-  <section class="source-only-section card animate-in" id="signal-ledger" aria-labelledby="signal-source-title">
-    <p class="source-only-warning">Provisional collection order</p>
-    <h2 id="signal-source-title">Original historical sources</h2>
-    <p>The records below preserve date, responsible author or institution, publisher, and direct source link. Their order and proximity do not establish causation, priority, prediction accuracy, endorsement, or historical importance.</p>
+  <section class="lineage-paths" aria-labelledby="lineage-paths-title">
+    <header class="source-only-section card">
+      <p class="source-only-warning">Metadata-first research paths</p>
+      <h2 id="lineage-paths-title">Follow the papers in time order</h2>
+      <p>Each card preserves the paper title, named authors, first arXiv submission date, identifier, and direct abstract-page link. The connectors show time order only; they are not claims that one paper caused, influenced, validated, or superseded another.</p>
+    </header>
 
-    <div class="source-only-grid">
-      {% for thread in signals.threads %}
-        {% for event in thread.events %}
-        <article class="source-only-card">
-          <p class="source-only-type">{{ event.source_type | escape }}</p>
-          <h3>{{ event.outlet | escape }}</h3>
-          <dl>
-            <div><dt>Author or institution</dt><dd>{{ event.author | escape }}</dd></div>
-            <div><dt>Source date</dt><dd><time datetime="{{ event.date | escape }}">{{ event.date_display | default: event.date | escape }}</time></dd></div>
-            <div><dt>Direct source</dt><dd><a href="{{ event.url | escape }}" target="_blank" rel="noopener noreferrer">Open the original piece ↗</a></dd></div>
-          </dl>
-        </article>
+    {% for path in lineage.paths %}
+    <section class="lineage-path" aria-labelledby="lineage-path-{{ path.id | escape }}">
+      <header class="lineage-path-head">
+        <div>
+          <p class="eyebrow">Provisional path 0{{ forloop.index }}</p>
+          <h2 id="lineage-path-{{ path.id | escape }}">{{ path.label | escape }}</h2>
+        </div>
+        <p class="lineage-path-rule">Chronological order only · no importance or influence ranking</p>
+      </header>
+
+      <div class="lineage-track" style="--lineage-count: {{ path.paper_ids.size }}" role="list" aria-label="{{ path.label | escape }} papers in chronological order">
+        {% for paper_id in path.paper_ids %}
+          {% assign paper = lineage.papers | where: "id", paper_id | first %}
+          {% if paper %}
+          <article class="lineage-node" role="listitem">
+            <div class="lineage-node-meta">
+              <time datetime="{{ paper.submitted_on | escape }}">First submitted {{ paper.submitted_on | date: "%b %d, %Y" }}</time>
+              <span class="lineage-node-id">arXiv:{{ paper.id | escape }}</span>
+              <span class="lineage-node-type">{{ paper.record_type | escape }}</span>
+            </div>
+            <h3>{{ paper.title | escape }}</h3>
+            <details class="lineage-authors">
+              <summary>Show all named authors</summary>
+              <p>{{ paper.authors | join: ", " | escape }}</p>
+            </details>
+            <div class="lineage-node-actions">
+              <a href="{{ paper.source_url | escape }}" target="_blank" rel="noopener noreferrer">Open arXiv abstract ↗</a>
+            </div>
+          </article>
+          {% endif %}
         {% endfor %}
-      {% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+  </section>
+
+  <section class="source-only-section card" aria-labelledby="lineage-boundary-title">
+    <p class="source-only-warning">How to read this library</p>
+    <h2 id="lineage-boundary-title">Useful navigation with visible limits</h2>
+    <div class="research-lineage-boundary">
+      <div><h3>Repository status</h3><p>{{ lineage.curation.peer_review_boundary | escape }}</p></div>
+      <div><h3>Copyright and reuse</h3><p>{{ lineage.curation.license_boundary | escape }}</p></div>
+      <div><h3>No generated synopsis</h3><p>TriWei does not reproduce or paraphrase the abstract. Open the linked record to read the authors’ own abstract and paper.</p></div>
+      <div><h3>Future relationships</h3><p>Labels such as “introduces,” “extends,” “tests,” or “replicates” will remain unpublished until a human verifies the specific relationship against the papers and citations.</p></div>
     </div>
   </section>
+
+  <p class="research-lineage-acknowledgement">This is an independent TriWei research aid and is not affiliated with or endorsed by arXiv.</p>
 </article>

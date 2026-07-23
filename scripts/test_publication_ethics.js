@@ -19,6 +19,7 @@ const publicPages = {
   hardware: 'hardware.md',
   industry: 'industry.md',
   ethics: 'ethics.md',
+  workbench: 'workbench.md',
   sources: 'sources.md',
   corrections: 'corrections.md',
 };
@@ -28,7 +29,7 @@ const intermediaryPattern = /news\.google\.com|google\.com\/search|bing\.com\/se
 test('every governed public page declares a publication status', () => {
   const policy = json('_data/publication_policy.json');
 
-  assert.equal(policy.version, '1.0.0');
+  assert.equal(policy.version, '1.1.0');
   assert.match(policy.effective_date, /^\d{4}-\d{2}-\d{2}$/);
 
   for (const [key, file] of Object.entries(publicPages)) {
@@ -39,7 +40,7 @@ test('every governed public page declares a publication status', () => {
   }
 });
 
-test('shared publication disclosure is rendered through the default layout', () => {
+test('shared publication disclosure is compact and expandable', () => {
   const layout = read('_layouts/default.html');
   const include = read('_includes/publication-status.html');
   const head = read('_includes/head.html');
@@ -47,7 +48,9 @@ test('shared publication disclosure is rendered through the default layout', () 
 
   assert.match(layout, /include publication-status\.html/);
   assert.match(include, /site\.data\.publication_policy/);
-  assert.match(include, /Corrections and revisions/);
+  assert.match(include, /<details>/);
+  assert.match(include, /Scope and safeguards/);
+  assert.match(include, /Corrections/);
   assert.match(head, /publication-standard\.css/);
   assert.match(css, /\.publication-status/);
   assert.match(css, /\.source-only-page/);
@@ -135,22 +138,70 @@ test('research lineage register contains direct scholarly metadata only', () => 
   }
 });
 
-test('About, Sources, Corrections, and footer state the operational safeguards', () => {
+test('feature registry separates published, workbench, and retired methods', () => {
+  const status = json('_data/feature_status.json');
+  const page = read('workbench.md');
+
+  assert.equal(status.version, '1.0.0');
+  assert.match(status.reviewed_on, /^\d{4}-\d{2}-\d{2}$/);
+  assert.ok(status.published.length >= 4);
+  assert.ok(status.workbench.length >= 5);
+  assert.ok(status.retired.length >= 4);
+
+  for (const feature of status.published) {
+    assert.ok(feature.id && feature.title && feature.route);
+    assert.ok(feature.available_now && feature.current_limit);
+  }
+
+  for (const feature of status.workbench) {
+    assert.ok(feature.id && feature.title && feature.intended_value);
+    assert.ok(feature.available_route && feature.available_label && feature.blocked_by);
+    assert.ok(Array.isArray(feature.acceptance_gate) && feature.acceptance_gate.length >= 3);
+  }
+
+  for (const feature of status.retired) {
+    assert.ok(feature.id && feature.title && feature.reason);
+  }
+
+  assert.match(page, /Published now/);
+  assert.match(page, /Research workbench/);
+  assert.match(page, /Retired methods/);
+  assert.match(page, /Acceptance gate before publication/);
+  assert.match(page, /A roadmap is not a promise/);
+});
+
+test('topic pages provide useful information before workbench referrals', () => {
+  for (const file of ['hardware.md', 'industry.md', 'ethics.md']) {
+    const page = read(file);
+    const firstUsefulSection = page.indexOf('<section class="source-only-section');
+    const workbenchReferral = page.indexOf('<details class="workbench-referral">');
+
+    assert.ok(firstUsefulSection >= 0, `${file} must contain a useful source section`);
+    assert.ok(workbenchReferral > firstUsefulSection, `${file} must deliver information before the workbench referral`);
+    assert.match(page, /\/workbench\/#workbench-/);
+  }
+});
+
+test('About, Sources, Corrections, footer, and navigation state the operational safeguards', () => {
   const about = read('about.md');
   const sources = read('sources.md');
   const corrections = read('corrections.md');
   const footer = read('_includes/footer.html');
+  const header = read('_includes/header.html');
 
   assert.match(about, /noncommercial source-linking and research website/i);
   assert.match(about, /incomplete folder or visible source-gap notice/i);
+  assert.match(about, /Workbench & Roadmap/);
   assert.match(about, /does not provide legal, medical, financial/i);
 
   assert.match(sources, /Site-wide publication contract/);
+  assert.match(sources, /Useful information before limitation notices/);
   assert.match(sources, /does not publish AI-written synopses/i);
   assert.match(sources, /prefer an incomplete page/i);
   assert.match(sources, /human research, human authorship/i);
   assert.match(sources, /Research Lineage Library/);
   assert.match(sources, /OpenAI ChatGPT/);
+  assert.match(sources, /Feature states/);
   assert.match(sources, /Withdrawal/);
 
   assert.match(corrections, /Corrections & Revisions/);
@@ -158,6 +209,9 @@ test('About, Sources, Corrections, and footer state the operational safeguards',
   assert.match(corrections, /Do not include private, confidential, privileged/i);
   assert.match(footer, /\/corrections\//);
   assert.match(footer, />Research Library<\/a>/);
+  assert.match(footer, /\/workbench\//);
+  assert.match(header, />Workbench<\/a>/);
+  assert.match(header, />Ethics Sources<\/a>/);
 });
 
 test('public templates do not hard-code intermediary article URLs', () => {

@@ -1,37 +1,14 @@
 {
-  "generated_utc": "2026-07-23T14:22:59.618863Z",
+  "generated_utc": "2026-07-23T15:25:31.622505Z",
   "generated_display": "Jul 23, 2026",
-  "coverage_generated_display": "July 23, 2026 at 9:22 AM CDT",
+  "coverage_generated_display": "July 23, 2026 at 10:25 AM CDT",
   "diffusion_watch": {
     "coverage": {
-      "story_count": 1,
-      "lab_count": 1,
-      "labs": [
-        {
-          "name": "Moonshot / Kimi",
-          "count": 1
-        }
-      ],
-      "signals": [
-        {
-          "name": "Distillation / extraction",
-          "count": 1
-        }
-      ],
-      "stories": [
-        {
-          "title": "Treasury threatens sanctions after White House claims Moonshot distilled Anthropic’s Fable",
-          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxONDhXb3RlOXpEYnZGYmhTcWdNaTh2NEZCLU9ybHhLd2ZIZzFPQVVVc0h6em1SVVlSaDR5LVduUkc4Ri1EcVpUcjk4bTBkRGdiLWJSWUg5LURUUUdQN0NWZ18tTzEtbl8waWM3RjJfZHJNNkdBb0pXX0hHc1ZheDlMblMzU3F0U2tpYXdNWi1IWi1NSTJvQVk5WU1uZXQ5eldCZWd4TmtRc1Q1cFlJNHR6di1kWVY3NjVZNlctQm52TmJRUQ?oc=5",
-          "source": "TechCrunch",
-          "published_display": "Jul 22, 2026",
-          "labs": [
-            "Moonshot / Kimi"
-          ],
-          "signals": [
-            "Distillation / extraction"
-          ]
-        }
-      ],
+      "story_count": 0,
+      "lab_count": 0,
+      "labs": [],
+      "signals": [],
+      "stories": [],
       "observed_days": 3,
       "window_days": 365,
       "daily": [
@@ -505,7 +482,7 @@
     "series": [
       {
         "term": "Anthropic",
-        "total": 23,
+        "total": 18,
         "points": [
           {
             "date": "2026-07-16",
@@ -539,13 +516,13 @@
           },
           {
             "date": "2026-07-22",
-            "count": 14,
-            "share": 46.7
+            "count": 11,
+            "share": 42.3
           },
           {
             "date": "2026-07-23",
-            "count": 5,
-            "share": 12.5
+            "count": 3,
+            "share": 6.8
           }
         ]
       },
@@ -585,13 +562,13 @@
           },
           {
             "date": "2026-07-22",
-            "count": 6,
-            "share": 20.0
+            "count": 5,
+            "share": 19.2
           },
           {
             "date": "2026-07-23",
-            "count": 6,
-            "share": 15.0
+            "count": 7,
+            "share": 15.9
           }
         ]
       },
@@ -631,13 +608,59 @@
           },
           {
             "date": "2026-07-22",
-            "count": 5,
-            "share": 16.7
+            "count": 4,
+            "share": 15.4
           },
           {
             "date": "2026-07-23",
-            "count": 3,
-            "share": 7.5
+            "count": 4,
+            "share": 9.1
+          }
+        ]
+      },
+      {
+        "term": "agent",
+        "total": 7,
+        "points": [
+          {
+            "date": "2026-07-16",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-17",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-18",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-19",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-20",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-21",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-22",
+            "count": 1,
+            "share": 3.8
+          },
+          {
+            "date": "2026-07-23",
+            "count": 6,
+            "share": 13.6
           }
         ]
       },
@@ -678,12 +701,12 @@
           {
             "date": "2026-07-22",
             "count": 3,
-            "share": 10.0
+            "share": 11.5
           },
           {
             "date": "2026-07-23",
             "count": 1,
-            "share": 2.5
+            "share": 2.3
           }
         ]
       },
@@ -724,58 +747,12 @@
           {
             "date": "2026-07-22",
             "count": 4,
-            "share": 13.3
+            "share": 15.4
           },
           {
             "date": "2026-07-23",
             "count": 1,
-            "share": 2.5
-          }
-        ]
-      },
-      {
-        "term": "agent",
-        "total": 4,
-        "points": [
-          {
-            "date": "2026-07-16",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-17",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-18",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-19",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-20",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-21",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-22",
-            "count": 1,
-            "share": 3.3
-          },
-          {
-            "date": "2026-07-23",
-            "count": 3,
-            "share": 7.5
+            "share": 2.3
           }
         ]
       }
@@ -809,7 +786,7 @@
     "companies": [
       {
         "name": "Anthropic",
-        "story_count": 20,
+        "story_count": 17,
         "cells": [
           {
             "key": "hardware",
@@ -824,17 +801,17 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 2
+            "count": 3
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 3
+            "count": 2
           },
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 9
+            "count": 8
           }
         ]
       },
@@ -855,7 +832,7 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 6
+            "count": 4
           },
           {
             "key": "apps",
@@ -865,7 +842,7 @@
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 1
+            "count": 3
           }
         ]
       },
@@ -886,7 +863,7 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 1
+            "count": 2
           },
           {
             "key": "apps",
@@ -953,7 +930,7 @@
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 1
+            "count": 2
           },
           {
             "key": "society",
@@ -1023,40 +1000,9 @@
             "count": 0
           }
         ]
-      },
-      {
-        "name": "Meta",
-        "story_count": 1,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 1
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 0
-          }
-        ]
       }
     ],
-    "max_count": 9,
+    "max_count": 8,
     "metric": "Distinct stories mentioning both the company and layer",
     "source": "coverage"
   },

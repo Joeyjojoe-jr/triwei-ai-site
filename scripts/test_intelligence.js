@@ -36,7 +36,8 @@ test('Research Lineage Library publishes arXiv metadata without paper summaries 
   assert.match(page, /paper\.submitted_on/);
   assert.match(page, /paper\.source_url/);
   assert.match(page, /Chronological order only/);
-  assert.match(page, /OpenAI ChatGPT/);
+  assert.match(page, /lineage\.curation\.assistant_attribution/);
+  assert.match(data.curation.assistant_attribution, /OpenAI ChatGPT/);
 
   for (const forbidden of [
     /paper\.summary/,

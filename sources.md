@@ -2,7 +2,7 @@
 layout: page
 title: Sources & Method
 permalink: /sources/
-description: The site-wide rules for original links, human authorship, data attribution, uncertainty, and corrections.
+description: The site-wide rules for original links, human authorship, data attribution, uncertainty, feature status, and corrections.
 publication_key: sources
 ---
 
@@ -11,7 +11,7 @@ TriWei is designed to help readers find and inspect original work without presen
 ## Site-wide publication contract
 {: #site-wide-publication-contract }
 
-These rules apply to the homepage, Research Lineage Library, AI Hardware, Industry Atlas, Ethics Watch, About, and every future public page or subpage.
+These rules apply to the homepage, Research Lineage Library, AI Hardware, Industry Data, Ethics Sources, Workbench, About, and every future public page or subpage.
 
 TriWei must:
 
@@ -22,6 +22,17 @@ TriWei must:
 5. expose material uncertainty, review dates, expired records, and source gaps;
 6. prefer an incomplete page over copied text, an intermediary URL, an invented attribution, or a generated substitute; and
 7. publish substantive TriWei analysis only after independent human research, human authorship, source review, attribution review, and approval.
+
+## Useful information before limitation notices
+
+Ethical safeguards should not become the primary content of the site. A topic page should provide useful source-linked information before discussing an unfinished feature. When a richer feature cannot yet be published:
+
+- the currently usable register or source material remains visible;
+- the withheld feature is moved to the [Workbench & Roadmap](/workbench/);
+- the workbench identifies the intended value, the reason it is not yet public, and the acceptance gate required for publication; and
+- a permanently rejected method is recorded as retired rather than repeatedly reconsidered as an unfinished feature.
+
+A page may still place authorship, provenance, source status, or a concise publication-mode disclosure beside the information when that context is necessary to interpret it responsibly.
 
 ## Core publication rule
 
@@ -91,6 +102,16 @@ Automated collection remains a discovery mechanism, not an editorial verdict:
 - machine-applied tags are not findings of wrongdoing, safety, legality, or merit; and
 - collection does not convert an author's reporting into a TriWei factual record.
 
+## Feature states
+
+TriWei uses three public feature states:
+
+- **Published now** — useful information that currently meets the source, attribution, and authorship requirements.
+- **Research workbench** — a feature concept with an explicit publication gate; its unfinished interpretive content is not presented as complete.
+- **Retired method** — an approach TriWei has decided not to use because it conflicts with the publication standard or creates a misleading impression.
+
+Workbench placement is not a release promise. A feature may move to published only when its gate is satisfied, or to retired when a safe and useful implementation cannot be justified.
+
 ## Page-specific publication boundaries
 
 ### Research Lineage Library
@@ -112,15 +133,15 @@ TriWei links to arXiv abstract pages rather than copying PDFs, abstracts, figure
 
 ### AI Hardware
 
-AI Hardware currently publishes source-dated manufacturer fields and original references. Vendor specifications are not independent benchmarks, and unlike compute, power, memory, and interconnect labels may not be comparable. AI-assisted lessons, purchasing guidance, model-fit conclusions, and project interpretations remain withheld.
+AI Hardware publishes source-dated manufacturer fields and original references. Vendor specifications are not independent benchmarks, and unlike compute, power, memory, and interconnect labels may not be comparable. The intended visual explainers and their acceptance gate are recorded in the Workbench.
 
-### Industry Atlas
+### Industry Data
 
-Industry Atlas currently publishes source-dated API prices, primary-source supply-chain references, and attributed model-access records. Coverage-frequency charts, company heat maps, AI-authored readouts, market rankings, and milestone synopses remain withheld.
+Industry Data publishes source-dated API prices, primary-source supply-chain references, and attributed model-access records. The intended visual atlas and its acceptance gate are recorded in the Workbench. Coverage frequency is not presented as market importance, power, quality, or truth.
 
-### Ethics Watch
+### Ethics Sources
 
-Ethics Watch currently publishes original public-institution records only. Machine tags, feed frequency, sentiment, and keyword matches are not published as ethical judgments or findings of harm, intent, legality, safety, or importance.
+Ethics Sources publishes original public-institution records. The intended human-authored Ethics Watch and its acceptance gate are recorded in the Workbench. Machine tags, feed frequency, sentiment, and keyword matches are not published as ethical judgments or findings of harm, intent, legality, safety, or importance.
 
 ## Attribution and responsible use
 
@@ -140,6 +161,7 @@ A material change should be classified as one of the following:
 - **Link correction** — an intermediary, broken, or incorrect URL was replaced with the original source.
 - **Attribution correction** — the author, publisher, or responsible institution was misstated.
 - **Expiry** — current information passed its review deadline and must no longer appear current.
+- **Feature-status change** — a feature moved among published, workbench, or retired states.
 - **Withdrawal** — material was removed because its provenance, permission, accuracy, or authorship could not be supported.
 
 A material correction should identify what changed, why it changed, the date of revision, and the affected page or record. Minor spelling, formatting, and accessibility repairs may be corrected without a formal log when they do not alter meaning.

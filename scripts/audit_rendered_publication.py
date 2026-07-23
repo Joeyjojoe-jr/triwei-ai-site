@@ -16,6 +16,7 @@ GOVERNED_ROUTES = {
     "hardware": "hardware/index.html",
     "industry": "industry/index.html",
     "ethics": "ethics/index.html",
+    "workbench": "workbench/index.html",
     "sources": "sources/index.html",
     "corrections": "corrections/index.html",
 }
@@ -107,6 +108,37 @@ def audit_research_library(text: str, errors: list[str]) -> None:
         errors.append(f"{relative}: paper abstract text appears to be reproduced")
 
 
+def audit_workbench(text: str, errors: list[str]) -> None:
+    relative = GOVERNED_ROUTES["workbench"]
+    for required in (
+        "Published now",
+        "Research workbench",
+        "Retired methods",
+        "Acceptance gate before publication",
+        "A roadmap is not a promise",
+    ):
+        if required not in text:
+            errors.append(f"{relative}: missing feature-governance element {required!r}")
+
+    if text.count('class="workbench-card workbench-card-published"') < 4:
+        errors.append(f"{relative}: expected at least four published-now entries")
+    if text.count('class="workbench-feature"') < 5:
+        errors.append(f"{relative}: expected at least five in-development entries")
+    if text.count('class="workbench-card workbench-card-retired"') < 4:
+        errors.append(f"{relative}: expected at least four retired-method entries")
+
+
+def audit_information_first(text: str, relative: str, errors: list[str]) -> None:
+    useful_index = text.find('class="source-only-section')
+    referral_index = text.find('class="workbench-referral"')
+    if useful_index < 0:
+        errors.append(f"{relative}: missing useful source-linked section")
+    if referral_index < 0:
+        errors.append(f"{relative}: missing workbench referral")
+    elif useful_index >= 0 and referral_index < useful_index:
+        errors.append(f"{relative}: limitation notice appears before useful information")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("site_dir", nargs="?", default="_site")
@@ -135,6 +167,10 @@ def main() -> int:
             errors.append(f"{relative}: missing publication-contract link or text")
         if key == "signals":
             audit_research_library(text, errors)
+        elif key == "workbench":
+            audit_workbench(text, errors)
+        elif key in {"hardware", "industry", "ethics"}:
+            audit_information_first(text, relative, errors)
 
     homepage = site_dir / "index.html"
     if not homepage.is_file():
@@ -155,9 +191,10 @@ def main() -> int:
         return 1
 
     print(
-        "Publication audit passed: governed pages expose status disclosures, "
-        "research records link to arXiv abstract pages, and no intermediary links "
-        "or forbidden synopsis/judgment components were rendered."
+        "Publication audit passed: governed pages expose compact status disclosures, "
+        "useful topic content precedes workbench limitations, research records link to "
+        "arXiv abstract pages, and no intermediary links or forbidden synopsis/judgment "
+        "components were rendered."
     )
     return 0
 

@@ -1,0 +1,112 @@
+{
+  "version": "0.1.0",
+  "verified_on": "2026-07-22",
+  "verified_display": "Jul 22, 2026",
+  "curation": {
+    "status": "AI-assisted candidate reading paths with metadata checked against the linked arXiv abstract pages.",
+    "assistant_attribution": "Candidate selection and metadata organization were assisted by OpenAI ChatGPT. TriWei remains responsible for publication and correction.",
+    "publication_boundary": "No abstracts, paper summaries, importance rankings, influence claims, or technical conclusions are reproduced or generated here.",
+    "sequence_rule": "Papers are ordered by first arXiv submission date within a provisional topic path. Chronological order does not establish citation, influence, causation, priority, correctness, or importance.",
+    "peer_review_boundary": "An arXiv record is a repository record. Presence on arXiv does not by itself establish peer review, acceptance, correctness, or endorsement.",
+    "license_boundary": "TriWei links to the abstract page and does not reproduce the paper, figures, tables, or abstract. Reuse rights depend on the license shown for the specific arXiv version."
+  },
+  "paths": [
+    {
+      "id": "transformer-language-models",
+      "label": "Transformer and language-model records",
+      "paper_ids": ["1706.03762", "1810.04805", "2005.14165", "2203.15556"]
+    },
+    {
+      "id": "retrieval-adaptation",
+      "label": "Retrieval and parameter-efficient adaptation",
+      "paper_ids": ["2005.11401", "2106.09685"]
+    },
+    {
+      "id": "generative-models",
+      "label": "Generative-model records",
+      "paper_ids": ["1406.2661", "2006.11239"]
+    }
+  ],
+  "papers": [
+    {
+      "id": "1406.2661",
+      "title": "Generative Adversarial Networks",
+      "authors": ["Ian J. Goodfellow", "Jean Pouget-Abadie", "Mehdi Mirza", "Bing Xu", "David Warde-Farley", "Sherjil Ozair", "Aaron Courville", "Yoshua Bengio"],
+      "submitted_on": "2014-06-10",
+      "source_url": "https://arxiv.org/abs/1406.2661",
+      "source_host": "arXiv",
+      "record_type": "Preprint repository record",
+      "checked_on": "2026-07-22"
+    },
+    {
+      "id": "1706.03762",
+      "title": "Attention Is All You Need",
+      "authors": ["Ashish Vaswani", "Noam Shazeer", "Niki Parmar", "Jakob Uszkoreit", "Llion Jones", "Aidan N. Gomez", "Lukasz Kaiser", "Illia Polosukhin"],
+      "submitted_on": "2017-06-12",
+      "source_url": "https://arxiv.org/abs/1706.03762",
+      "source_host": "arXiv",
+      "record_type": "Preprint repository record",
+      "checked_on": "2026-07-22"
+    },
+    {
+      "id": "1810.04805",
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "authors": ["Jacob Devlin", "Ming-Wei Chang", "Kenton Lee", "Kristina Toutanova"],
+      "submitted_on": "2018-10-11",
+      "source_url": "https://arxiv.org/abs/1810.04805",
+      "source_host": "arXiv",
+      "record_type": "Preprint repository record",
+      "checked_on": "2026-07-22"
+    },
+    {
+      "id": "2005.11401",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "authors": ["Patrick Lewis", "Ethan Perez", "Aleksandra Piktus", "Fabio Petroni", "Vladimir Karpukhin", "Naman Goyal", "Heinrich Küttler", "Mike Lewis", "Wen-tau Yih", "Tim Rocktäschel", "Sebastian Riedel", "Douwe Kiela"],
+      "submitted_on": "2020-05-22",
+      "source_url": "https://arxiv.org/abs/2005.11401",
+      "source_host": "arXiv",
+      "record_type": "Preprint repository record",
+      "checked_on": "2026-07-22"
+    },
+    {
+      "id": "2005.14165",
+      "title": "Language Models are Few-Shot Learners",
+      "authors": ["Tom B. Brown", "Benjamin Mann", "Nick Ryder", "Melanie Subbiah", "Jared Kaplan", "Prafulla Dhariwal", "Arvind Neelakantan", "Pranav Shyam", "Girish Sastry", "Amanda Askell", "Sandhini Agarwal", "Ariel Herbert-Voss", "Gretchen Krueger", "Tom Henighan", "Rewon Child", "Aditya Ramesh", "Daniel M. Ziegler", "Jeffrey Wu", "Clemens Winter", "Christopher Hesse", "Mark Chen", "Eric Sigler", "Mateusz Litwin", "Scott Gray", "Benjamin Chess", "Jack Clark", "Christopher Berner", "Sam McCandlish", "Alec Radford", "Ilya Sutskever", "Dario Amodei"],
+      "submitted_on": "2020-05-28",
+      "source_url": "https://arxiv.org/abs/2005.14165",
+      "source_host": "arXiv",
+      "record_type": "Preprint repository record",
+      "checked_on": "2026-07-22"
+    },
+    {
+      "id": "2006.11239",
+      "title": "Denoising Diffusion Probabilistic Models",
+      "authors": ["Jonathan Ho", "Ajay Jain", "Pieter Abbeel"],
+      "submitted_on": "2020-06-19",
+      "source_url": "https://arxiv.org/abs/2006.11239",
+      "source_host": "arXiv",
+      "record_type": "Preprint repository record",
+      "checked_on": "2026-07-22"
+    },
+    {
+      "id": "2106.09685",
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+      "authors": ["Edward J. Hu", "Yelong Shen", "Phillip Wallis", "Zeyuan Allen-Zhu", "Yuanzhi Li", "Shean Wang", "Lu Wang", "Weizhu Chen"],
+      "submitted_on": "2021-06-17",
+      "source_url": "https://arxiv.org/abs/2106.09685",
+      "source_host": "arXiv",
+      "record_type": "Preprint repository record",
+      "checked_on": "2026-07-22"
+    },
+    {
+      "id": "2203.15556",
+      "title": "Training Compute-Optimal Large Language Models",
+      "authors": ["Jordan Hoffmann", "Sebastian Borgeaud", "Arthur Mensch", "Elena Buchatskaya", "Trevor Cai", "Eliza Rutherford", "Diego de Las Casas", "Lisa Anne Hendricks", "Johannes Welbl", "Aidan Clark", "Tom Hennigan", "Eric Noland", "Katie Millican", "George van den Driessche", "Bogdan Damoc", "Aurelia Guy", "Simon Osindero", "Karen Simonyan", "Erich Elsen", "Jack W. Rae", "Oriol Vinyals", "Laurent Sifre"],
+      "submitted_on": "2022-03-29",
+      "source_url": "https://arxiv.org/abs/2203.15556",
+      "source_host": "arXiv",
+      "record_type": "Preprint repository record",
+      "checked_on": "2026-07-22"
+    }
+  ]
+}

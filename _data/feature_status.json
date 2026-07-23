@@ -1,0 +1,142 @@
+{
+  "version": "1.0.0",
+  "reviewed_on": "2026-07-22",
+  "states": {
+    "published": {
+      "label": "Published now",
+      "definition": "Usable public information that currently meets TriWei's source, attribution, and authorship requirements."
+    },
+    "workbench": {
+      "label": "Research workbench",
+      "definition": "A useful feature concept that is not published in its intended form until its evidence, authorship, and review gate is satisfied."
+    },
+    "retired": {
+      "label": "Retired method",
+      "definition": "An approach TriWei has decided not to use because it conflicts with the publication standard or creates a misleading impression."
+    }
+  },
+  "published": [
+    {
+      "id": "research-library",
+      "title": "Research Lineage Library",
+      "route": "/signals/",
+      "available_now": "Direct arXiv abstract links, exact titles, named authors, identifiers, dates, and provisional chronological reading paths.",
+      "current_limit": "No AI paper summaries or unreviewed claims that one paper influenced, proved, or superseded another."
+    },
+    {
+      "id": "hardware-register",
+      "title": "AI Hardware Source Register",
+      "route": "/hardware/",
+      "available_now": "Source-dated manufacturer specifications and direct materials, manufacturing, and fab-project references.",
+      "current_limit": "No generated purchasing advice, universal rankings, or claims that unlike architectures are directly comparable."
+    },
+    {
+      "id": "industry-register",
+      "title": "Industry Data Register",
+      "route": "/industry/",
+      "available_now": "First-party API prices, source-dated supply-chain references, and attributed model-access records.",
+      "current_limit": "No automated market narrative, significance ranking, or frequency-based company score."
+    },
+    {
+      "id": "ethics-register",
+      "title": "Ethics and Governance Sources",
+      "route": "/ethics/",
+      "available_now": "Direct links to public-institution records concerning governance, risk, copyright, and accountability.",
+      "current_limit": "No automated ethical rating, legal conclusion, harm finding, or article synopsis."
+    }
+  ],
+  "workbench": [
+    {
+      "id": "signal-history",
+      "title": "Evidence-based Signal History",
+      "intended_value": "A traceable visual chronology showing explicit relationships among papers, releases, tests, criticism, and later applications.",
+      "available_route": "/signals/",
+      "available_label": "Use the Research Library now",
+      "blocked_by": "The former relationship labels and historical narrative were AI-assisted and have not been independently researched and human-authored.",
+      "acceptance_gate": [
+        "A human reviews every source in the proposed chronology.",
+        "Every relationship is supported by an explicit citation or statement in the linked works.",
+        "The chronology names its human author and review date.",
+        "Competing accounts and unresolved priority questions remain visible."
+      ]
+    },
+    {
+      "id": "hardware-explainers",
+      "title": "Visual Hardware Explainers",
+      "intended_value": "Diagrams that help readers understand memory, interconnect, power, packaging, fabrication, and system-level tradeoffs.",
+      "available_route": "/hardware/",
+      "available_label": "Use the specification register now",
+      "blocked_by": "The removed explanatory lessons were AI-assisted and could imply comparability or practical conclusions not established by the cited specifications.",
+      "acceptance_gate": [
+        "A human authors each explanation from primary technical documentation.",
+        "Vendor-specific terminology and non-comparable measurements are identified.",
+        "Every diagram has source and reuse provenance.",
+        "The page avoids purchasing, safety, or deployment advice unless separately qualified and reviewed."
+      ]
+    },
+    {
+      "id": "industry-visualizations",
+      "title": "Industry and Supply-chain Visualizations",
+      "intended_value": "Source-dated maps of physical production stages, model access, pricing, and documented industry relationships.",
+      "available_route": "/industry/",
+      "available_label": "Use the industry registers now",
+      "blocked_by": "The removed visual readouts mixed source data with generated interpretation, media-frequency signals, and unsupported market conclusions.",
+      "acceptance_gate": [
+        "Every displayed relationship has an inspectable primary source.",
+        "Measurements retain units, reference periods, and known limitations.",
+        "No media-frequency or source-count field is presented as importance, market power, or truth.",
+        "Human-authored interpretation is visibly separated from source data."
+      ]
+    },
+    {
+      "id": "ethics-watch-analysis",
+      "title": "Human-authored Ethics Watch",
+      "intended_value": "Careful, attributed analysis of governance, rights, labor, safety, copyright, and accountability developments.",
+      "available_route": "/ethics/",
+      "available_label": "Use the official-source register now",
+      "blocked_by": "The former heat map and tags could be read as automated judgments of harm, legality, safety, intent, or ethical merit.",
+      "acceptance_gate": [
+        "A human identifies the exact question being examined.",
+        "Relevant legal, technical, social, and affected-party sources are included.",
+        "Claims and allegations remain attributed to their source.",
+        "The analysis states jurisdictional, evidentiary, and professional-advice limits."
+      ]
+    },
+    {
+      "id": "daily-brief",
+      "title": "TriWei Daily Brief",
+      "intended_value": "A small set of concrete, source-linked developments selected for readers who need a manageable entry point.",
+      "available_route": "/",
+      "available_label": "Use the rotating original-source folders now",
+      "blocked_by": "Automated clustering previously converted recurring names and coverage volume into generic significance claims.",
+      "acceptance_gate": [
+        "Every item is a specific documented event rather than an entity or keyword.",
+        "Selection criteria are published and do not equate recurrence with significance.",
+        "Any synopsis is independently researched and human-authored.",
+        "Primary sources, uncertainty, corrections, and conflicting evidence are visible."
+      ]
+    }
+  ],
+  "retired": [
+    {
+      "id": "ai-article-synopses",
+      "title": "AI-written article synopses",
+      "reason": "TriWei will not substitute generated paraphrases for third-party authors' work when TriWei has not independently researched and human-authored the analysis."
+    },
+    {
+      "id": "frequency-as-importance",
+      "title": "Coverage frequency as importance or truth",
+      "reason": "Repeated collection may reflect feed composition, publicity, duplication, or attention. It does not establish factual accuracy, consequence, or merit."
+    },
+    {
+      "id": "automated-ethics-scoring",
+      "title": "Automated ethical heat scores or verdicts",
+      "reason": "Keywords and machine tags cannot establish harm, intent, legality, safety, accountability, or ethical merit."
+    },
+    {
+      "id": "unreviewed-lineage",
+      "title": "Unreviewed historical or scholarly relationship claims",
+      "reason": "Chronology, similarity, and thematic proximity do not by themselves establish influence, priority, replication, criticism, or causation."
+    }
+  ]
+}

@@ -2,500 +2,101 @@
 layout: default
 title: AI Industry Atlas
 permalink: /industry/
-description: Five evidence-backed views of the AI industry, plus primary-source watches on the physical chip supply chain and frontier-model diffusion.
-atlas: true
+description: Source-dated industry measurements and original links without coverage-frequency rankings or AI-authored market conclusions.
+publication_key: industry
 ---
 {% assign atlas = site.data.industry %}
+{% assign supply = atlas.supply_chain %}
+{% assign diffusion = atlas.diffusion_watch %}
+{% assign pricing = atlas.model_value %}
 
-<article class="atlas" data-industry-atlas>
-  <header class="atlas-hero card animate-in">
-    <p class="eyebrow">Data, not hype</p>
-    <h1>The AI industry, in five questions</h1>
-    <p class="lead">Move from what is getting attention to who is building, what current APIs cost, where the physical choke points sit, where AI is used, and which companies can sustain the frontier.</p>
-    <div class="atlas-freshness" aria-label="Atlas freshness">
-      <span>Industry data refreshed {{ atlas.generated_display | escape }}</span>
-      <span>Coverage snapshot {{ atlas.coverage_generated_display | escape }}</span>
-    </div>
-
-    <nav class="atlas-path" aria-label="Industry Atlas sections">
-      <ol>
-        <li><a href="#supply-chain"><span>Watch</span>Chip supply chain</a></li>
-        <li><a href="#diffusion"><span>Watch</span>Frontier diffusion</a></li>
-        <li><a href="#momentum"><span>01</span>Momentum</a></li>
-        <li><a href="#stack"><span>02</span>Industry stack</a></li>
-        <li><a href="#value"><span>03</span>Model value</a></li>
-        <li><a href="#adoption"><span>04</span>Adoption</a></li>
-        <li><a href="#economics"><span>05</span>Lab economics</a></li>
-      </ol>
-    </nav>
-
-    <div class="atlas-key" aria-label="Metric types">
-      <span><i class="atlas-type atlas-type-coverage" aria-hidden="true"></i><strong>Coverage signal</strong> — what TriWei's screened stories emphasize</span>
-      <span><i class="atlas-type atlas-type-market" aria-hidden="true"></i><strong>Industry measure</strong> — a statistic from an external dataset</span>
-      <span><i class="atlas-type atlas-type-strategic" aria-hidden="true"></i><strong>Strategic watch</strong> — claims, disclosures, and releases kept in separate evidence classes</span>
-    </div>
+<article class="source-only-page">
+  <header class="source-only-hero card animate-in">
+    <p class="eyebrow">Industry source and data registers</p>
+    <h1>Inspect AI prices, supply-chain records, and model-access sources</h1>
+    <p>TriWei presents a limited set of source-dated fields with direct links so readers can inspect the measurement or disclosure in its original context.</p>
+    <p class="updated-stamp">Industry data refreshed {{ atlas.generated_display | escape }}</p>
   </header>
 
-  {% assign supply = atlas.supply_chain %}
-  <section class="atlas-section atlas-supply card animate-in" id="supply-chain" aria-labelledby="supply-chain-title">
-    <header class="atlas-section-head">
-      <div class="atlas-index atlas-index-watch" aria-hidden="true">⇢</div>
-      <div>
-        <p class="atlas-kind atlas-kind-strategic">Strategic watch</p>
-        <h2 id="supply-chain-title">Where is the physical AI stack made—and where can it break?</h2>
-        <p>Follow the real production route from critical materials and silicon wafers through fab tools, accelerator dies, HBM, advanced packaging, complete systems, and their destination markets.</p>
-      </div>
-    </header>
+  <section class="source-only-section card animate-in" id="pricing" aria-labelledby="pricing-title">
+    <p class="source-only-warning">First-party list prices</p>
+    <h2 id="pricing-title">API price register</h2>
+    <p>Prices are transcribed from cited first-party pages and retain the dataset's verification date. This is not a capability, quality, safety, latency, reliability, or value ranking. Token accounting, cache rules, context tiers, reasoning tokens, tools, taxes, commitments, and provider terms can change the effective cost.</p>
 
-    <div class="supply-freshness" aria-label="Supply-chain evidence freshness">
-      <span class="evidence-badge evidence-released">Evidence checked {{ supply.verified_display | escape }}</span>
-      <span>Company filings and institutional sources; figures retain their stated reference period.</span>
+    {% if pricing.freshness == "expired" %}
+    <p class="empty-state">This price register is past its review window and is retained only as a dated historical snapshot.</p>
+    {% endif %}
+
+    <div class="source-only-table-wrap" role="region" aria-label="AI API price register" tabindex="0">
+      <table class="source-only-table">
+        <thead>
+          <tr>
+            <th>Provider / model</th>
+            <th>Input price</th>
+            <th>Cached input</th>
+            <th>Output price</th>
+            <th>Reference note</th>
+            <th>Original source</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for model in pricing.models %}
+          <tr>
+            <th scope="row">{{ model.organization | escape }}<br>{{ model.name | escape }}</th>
+            <td>{% if model.input_price != nil %}${{ model.input_price }}{% else %}Not recorded{% endif %}</td>
+            <td>{% if model.cached_input_price != nil %}${{ model.cached_input_price }}{% else %}Not recorded{% endif %}</td>
+            <td>{% if model.output_price != nil %}${{ model.output_price }}{% else %}Not recorded{% endif %}</td>
+            <td>{{ model.context_note | escape }}{% if model.price_until %}<br>Recorded through {{ model.price_until | escape }}{% endif %}</td>
+            <td><a href="{{ model.source_url | escape }}" target="_blank" rel="noopener noreferrer">{{ model.source_label | escape }} ↗</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
+    <p class="content-meta">Units follow the dataset source: {{ pricing.price_metric | escape }} · fields checked {{ pricing.verified_display | escape }}.</p>
+  </section>
 
-    <div class="supply-kpis" aria-label="Supply-chain concentration summary">
-      {% for kpi in supply.kpis %}
-      <div><strong>{{ kpi.value | escape }}</strong><span>{{ kpi.label | escape }}</span><small>{{ kpi.period | escape }}</small></div>
+  <section class="source-only-section card animate-in" id="supply-chain" aria-labelledby="supply-title">
+    <p class="source-only-warning">Institutional and company records</p>
+    <h2 id="supply-title">Physical supply-chain source register</h2>
+    <p>Stage names are navigation labels only. TriWei does not claim that the list is complete, that every product follows one route, or that listed organizations represent market share or endorsement.</p>
+
+    <div class="source-only-grid">
+      {% for stage in supply.stages %}
+      <article class="source-only-card">
+        <p class="source-only-type">Stage {{ stage.number | escape }}</p>
+        <h3>{{ stage.label | escape }}</h3>
+        <dl>
+          <div><dt>Reference period</dt><dd>{{ stage.evidence_date | escape }}</dd></div>
+          <div><dt>Original sources</dt><dd>{% for source in stage.sources %}<a href="{{ source.url | escape }}" target="_blank" rel="noopener noreferrer">{{ source.label | escape }} ↗</a>{% unless forloop.last %}<br>{% endunless %}{% endfor %}</dd></div>
+        </dl>
+      </article>
       {% endfor %}
     </div>
-
-    <div class="supply-chain-flow" aria-label="AI hardware production map">
-      <div class="supply-flow-group">
-        <p class="supply-flow-label"><span>Upstream</span> Materials and tools qualify the two chip routes</p>
-        <div class="supply-flow-row supply-flow-row-upstream">
-          {% for stage in supply.stages limit: 3 %}
-            {% include supply-stage.html stage=stage %}
-            {% unless forloop.last %}<span class="supply-flow-arrow" aria-hidden="true">→</span>{% endunless %}
-          {% endfor %}
-        </div>
-      </div>
-
-      <div class="supply-flow-split" aria-hidden="true"><span>↙ COMPUTE DIE</span><strong>PRODUCTION SPLITS INTO PARALLEL ROUTES</strong><span>MEMORY ↘</span></div>
-
-      <div class="supply-flow-convergence">
-        <div class="supply-parallel-stack" aria-label="Parallel accelerator and memory production routes">
-          {% for stage in supply.stages offset: 3 limit: 2 %}
-            {% include supply-stage.html stage=stage %}
-          {% endfor %}
-        </div>
-        <span class="supply-converge-arrow" aria-hidden="true">⇒</span>
-        {% for stage in supply.stages offset: 5 limit: 1 %}
-          {% include supply-stage.html stage=stage %}
-        {% endfor %}
-      </div>
-
-      <div class="supply-flow-down" aria-hidden="true"><span>↓</span> PACKAGE BECOMES A DEPLOYABLE SYSTEM</div>
-
-      <div class="supply-flow-row supply-flow-row-demand">
-        {% for stage in supply.stages offset: 6 limit: 2 %}
-          {% include supply-stage.html stage=stage %}
-          {% unless forloop.last %}<span class="supply-flow-arrow" aria-hidden="true">→</span>{% endunless %}
-        {% endfor %}
-      </div>
-    </div>
-
-    <div class="supply-destination-grid">
-      <section class="supply-destinations" aria-labelledby="supply-destinations-title">
-        <div class="diffusion-subhead">
-          <div>
-            <p class="eyebrow">Where the systems go</p>
-            <h3 id="supply-destinations-title">NVIDIA FY2026 end-market proxy</h3>
-          </div>
-          <span>Share of disclosed revenue · not unit shipments</span>
-        </div>
-        <div class="supply-destination-bars">
-          {% for destination in supply.destinations %}
-          <div class="supply-destination-row">
-            <span>{{ destination.label | escape }}</span>
-            <div><i style="--destination-share: {{ destination.share }}%"></i></div>
-            <strong>{{ destination.share }}%</strong>
-          </div>
-          {% endfor %}
-        </div>
-      </section>
-
-      <aside class="supply-routing" aria-labelledby="supply-routing-title">
-        <p class="eyebrow">Routing reality</p>
-        <h3 id="supply-routing-title">Billing address ≠ final destination</h3>
-        <ul>
-          {% for route in supply.billing_routes %}
-          <li><span>{{ route.label | escape }}</span><strong>{{ route.share }}%</strong></li>
-          {% endfor %}
-        </ul>
-        <p>NVIDIA says 76% of Data Center revenue billed to Taiwan-headquartered customers was attributable to end customers in the United States and Europe. Export controls add a policy gate before some China-bound shipments.</p>
-      </aside>
-    </div>
-
-    <aside class="atlas-readout supply-readout">
-      <strong>Read the chain</strong>
-      <p>The most fragile points are not all mines or fabs. EUV tools, qualified 300 mm wafers, leading-edge foundry capacity, HBM yield, CoWoS-class packaging, rack power, and export licenses can each throttle the final number of usable AI systems.</p>
-    </aside>
-
-    <details class="atlas-data-table supply-table">
-      <summary>Inspect every stage, company cluster, caveat, and source</summary>
-      <div class="atlas-table-scroll">
-        <table>
-          <thead><tr><th>Stage</th><th>Production hubs</th><th>Representative companies</th><th>Choke point</th><th>Why it matters</th><th>Evidence</th></tr></thead>
-          <tbody>
-          {% for stage in supply.stages %}
-            <tr>
-              <th scope="row">{{ stage.number }} · {{ stage.label | escape }}</th>
-              <td>{{ stage.hubs | join: ", " | escape }}</td>
-              <td>{{ stage.companies | join: ", " | escape }}</td>
-              <td><span class="supply-choke supply-choke-{{ stage.choke_level }}">{{ stage.choke_level | escape }}</span><br>{{ stage.choke | escape }}</td>
-              <td>{{ stage.why | escape }}</td>
-              <td>{{ stage.evidence_date | escape }}{% for source in stage.sources %}<br><a href="{{ source.url | escape }}" target="_blank" rel="noopener noreferrer">{{ source.label | escape }} ↗</a>{% endfor %}</td>
-            </tr>
-          {% endfor %}
-          </tbody>
-        </table>
-      </div>
-      <p>{{ supply.destination_note | escape }}</p>
-    </details>
   </section>
 
-  {% assign diffusion = atlas.diffusion_watch %}
-  <section class="atlas-section atlas-diffusion card animate-in" id="diffusion" aria-labelledby="diffusion-title">
-    <header class="atlas-section-head">
-      <div class="atlas-index atlas-index-watch" aria-hidden="true">↗</div>
-      <div>
-        <p class="atlas-kind atlas-kind-strategic">Strategic watch</p>
-        <h2 id="diffusion-title">How fast are frontier capabilities diffusing into open weights?</h2>
-        <p>Track China-based model labs across disclosed teacher-to-student training, provider-attributed extraction claims, capability convergence, and verified weight releases.</p>
-      </div>
-    </header>
+  <section class="source-only-section card animate-in" id="diffusion" aria-labelledby="diffusion-title">
+    <p class="source-only-warning">Attributed source records</p>
+    <h2 id="diffusion-title">Model-access and provenance source register</h2>
+    <p>Developer disclosures, public repositories, and provider allegations remain attached to the organization that published them. Inclusion is not independent adjudication. Similar outputs, benchmark scores, media repetition, or release timing do not establish model lineage.</p>
 
-    <div class="diffusion-kpis" aria-label="Frontier diffusion summary">
-      <div><strong>{{ diffusion.coverage.story_count }}</strong><span>current coverage signals</span></div>
-      <div><strong>{{ diffusion.coverage.lab_count }}</strong><span>labs in this snapshot</span></div>
-      <div><strong>{{ diffusion.milestones.size }}</strong><span>primary-source milestones</span></div>
-      <div><strong>{{ diffusion.coverage.observed_days }}</strong><span>signal days in {{ diffusion.coverage.window_days }}-day window</span></div>
-    </div>
-
-    <div class="diffusion-flow" aria-label="Model diffusion pathway">
-      <div class="diffusion-stage">
-        <span>01 · Source capability</span>
-        <strong>Frontier APIs or an owned teacher</strong>
-        <p>The origin must be stated or attributed—not inferred from benchmark similarity.</p>
-      </div>
-      <span class="diffusion-arrow" aria-hidden="true">→</span>
-      <div class="diffusion-stage">
-        <span>02 · Training transfer</span>
-        <strong>Distillation, synthetic data, or extraction</strong>
-        <p>Legitimate disclosed distillation and alleged unauthorized extraction are labeled differently.</p>
-      </div>
-      <span class="diffusion-arrow" aria-hidden="true">→</span>
-      <div class="diffusion-stage">
-        <span>03 · Capability diffusion</span>
-        <strong>Cheaper APIs and open weights</strong>
-        <p>Release status is verified separately from performance and provenance claims.</p>
-      </div>
-    </div>
-
-    <div class="diffusion-grid">
-      <div>
-        <div class="diffusion-subhead">
-          <div>
-            <p class="eyebrow">Evidence timeline</p>
-            <h3>What is documented—and by whom</h3>
-          </div>
-          <span>Updated with primary sources</span>
-        </div>
-        <ol class="diffusion-timeline">
-          {% for milestone in diffusion.milestones reversed %}
-          <li class="diffusion-event diffusion-event-{{ milestone.evidence_class }}">
-            <time datetime="{{ milestone.date | escape }}">{{ milestone.date | date: "%b %d, %Y" }}</time>
-            <div>
-              <div class="diffusion-event-meta">
-                <span class="evidence-badge evidence-{{ milestone.evidence_class }}">{% for evidence in diffusion.evidence_classes %}{% if evidence.key == milestone.evidence_class %}{{ evidence.label | escape }}{% endif %}{% endfor %}</span>
-                <span>{{ milestone.lab | escape }}</span>
-              </div>
-              <h4>{{ milestone.headline | escape }}</h4>
-              <p>{{ milestone.detail | escape }}</p>
-              <div class="diffusion-event-foot">
-                <span>Weights: {{ milestone.open_weight_status | escape }}</span>
-                <a href="{{ milestone.source_url | escape }}" target="_blank" rel="noopener noreferrer">{{ milestone.source_label | escape }} ↗</a>
-              </div>
-            </div>
-          </li>
-          {% endfor %}
-        </ol>
-      </div>
-
-      <aside class="diffusion-evidence" aria-labelledby="diffusion-evidence-title">
-        <p class="eyebrow">Evidence key</p>
-        <h3 id="diffusion-evidence-title">Confidence comes from classification</h3>
-        <ul>
-          {% for evidence in diffusion.evidence_classes %}
-          <li>
-            <span class="evidence-badge evidence-{{ evidence.key }}">{{ evidence.label | escape }}</span>
-            <p>{{ evidence.meaning | escape }}</p>
-          </li>
-          {% endfor %}
-        </ul>
-        <p class="diffusion-rule"><strong>Editorial rule:</strong> matching output style or benchmark performance is not proof of model lineage.</p>
-      </aside>
-    </div>
-
-    <div class="diffusion-coverage">
-      <div class="diffusion-subhead">
-        <div>
-          <p class="eyebrow">Live coverage signal</p>
-          <h3>What the current news cycle is connecting</h3>
-        </div>
-        <span>{{ diffusion.coverage.metric | escape }}</span>
-      </div>
-      {% if diffusion.coverage.stories.size > 0 %}
-      <ul class="diffusion-story-list">
-        {% for story in diffusion.coverage.stories %}
-        <li>
-          <div>
-            <span>{{ story.labs | join: " · " | escape }}</span>
-            <a href="{{ story.link | escape }}" target="_blank" rel="noopener noreferrer">{{ story.title | escape }}</a>
-          </div>
-          <small>{{ story.source | escape }}{% if story.published_display %} · {{ story.published_display | escape }}{% endif %}</small>
-        </li>
-        {% endfor %}
-      </ul>
-      {% else %}
-      <p class="diffusion-empty">No current coverage item meets both tests: a tracked lab and a diffusion signal. The primary-source timeline remains available above.</p>
-      {% endif %}
-    </div>
-
-    <aside class="atlas-readout diffusion-readout">
-      <strong>Read the signal</strong>
-      <p>The timeline records releases, developer disclosures, and named provider claims. The live count measures TriWei coverage only. Neither is a verdict about the undisclosed training lineage of any model.</p>
-    </aside>
-  </section>
-
-  <section class="atlas-section card animate-in" id="momentum" aria-labelledby="momentum-title">
-    <header class="atlas-section-head">
-      <div class="atlas-index" aria-hidden="true">01</div>
-      <div>
-        <p class="atlas-kind atlas-kind-coverage">Coverage signal</p>
-        <h2 id="momentum-title">What is gaining momentum?</h2>
-        <p>Daily share of distinct stories mentioning each leading topic. This separates a single news spike from a theme that keeps returning.</p>
-      </div>
-    </header>
-    <div class="atlas-metric-line">
-      <span>{{ atlas.topic_lifecycle.observed_days }} days observed</span>
-      <span>Growing toward a {{ atlas.topic_lifecycle.window_days }}-day window</span>
-    </div>
-    <div class="atlas-chart atlas-line-chart" data-atlas-chart="topics" role="group" aria-label="Topic momentum chart">
-      <p class="atlas-loading">Preparing the topic timeline…</p>
-    </div>
-    <aside class="atlas-readout">
-      <strong>Read the signal</strong>
-      <p>Compare direction and persistence, not just height. A high line means a large share of this site's current coverage mentions the topic; it does not mean market share.</p>
-    </aside>
-    <details class="atlas-data-table">
-      <summary>View topic data</summary>
-      <div class="atlas-table-scroll">
-        <table>
-          <thead><tr><th>Topic</th><th>Total signals</th><th>Days tracked</th></tr></thead>
-          <tbody>
-          {% for series in atlas.topic_lifecycle.series %}
-            <tr><th scope="row">{{ series.term | escape }}</th><td>{{ series.total }}</td><td>{{ series.points.size }}</td></tr>
-          {% endfor %}
-          </tbody>
-        </table>
-      </div>
-    </details>
-  </section>
-
-  <section class="atlas-section card animate-in" id="stack" aria-labelledby="stack-title">
-    <header class="atlas-section-head">
-      <div class="atlas-index" aria-hidden="true">02</div>
-      <div>
-        <p class="atlas-kind atlas-kind-coverage">Coverage signal</p>
-        <h2 id="stack-title">Who is active where?</h2>
-        <p>A company-by-layer map of current coverage, from chips and cloud infrastructure through models, applications, and society.</p>
-      </div>
-    </header>
-    <div class="atlas-chart atlas-heatmap" data-atlas-chart="stack" role="group" aria-label="Company activity heatmap">
-      <p class="atlas-loading">Mapping the industry stack…</p>
-    </div>
-    <div class="atlas-selection" data-atlas-selection="stack" aria-live="polite">Select a cell to inspect its count.</div>
-    <aside class="atlas-readout">
-      <strong>Read the signal</strong>
-      <p>Darker cells mean more current TriWei stories connect that company to that layer. A blank cell means no matching story in this snapshot—not that the company has no activity there.</p>
-    </aside>
-    <details class="atlas-data-table">
-      <summary>View company-layer data</summary>
-      <div class="atlas-table-scroll">
-        <table>
-          <thead>
-            <tr><th>Company</th>{% for layer in atlas.industry_stack.layers %}<th>{{ layer.label | escape }}</th>{% endfor %}<th>All stories</th></tr>
-          </thead>
-          <tbody>
-          {% for company in atlas.industry_stack.companies %}
-            <tr><th scope="row">{{ company.name | escape }}</th>{% for cell in company.cells %}<td>{{ cell.count }}</td>{% endfor %}<td>{{ company.story_count }}</td></tr>
-          {% endfor %}
-          </tbody>
-        </table>
-      </div>
-    </details>
-  </section>
-
-  <section class="atlas-section card animate-in" id="value" aria-labelledby="value-title">
-    <header class="atlas-section-head">
-      <div class="atlas-index" aria-hidden="true">03</div>
-      <div>
-        <p class="atlas-kind atlas-kind-market">Industry measure</p>
-        <h2 id="value-title">What do leading model APIs cost now?</h2>
-        <p>Current first-party list prices, compared across input-heavy, balanced, and output-heavy workloads. Capability is deliberately not inferred from price.</p>
-      </div>
-    </header>
-    {% assign model_value = atlas.model_value %}
-    <div class="atlas-metric-line">
-      <span>Official prices checked {{ model_value.verified_display | escape }}</span>
-      <span>{{ model_value.price_metric | escape }}</span>
-      <span class="model-freshness model-freshness-{{ model_value.freshness }}">{{ model_value.freshness | replace: "_", " " | escape }}</span>
-    </div>
-    {% if model_value.freshness == "expired" %}
-      <div class="model-expired" role="status">
-        <strong>Current ranking paused</strong>
-        <p>This price snapshot is older than {{ model_value.max_current_age_days }} days, so TriWei will not present it as “current.” Use the linked provider pages below until the ledger is re-verified.</p>
-      </div>
-    {% else %}
-      <div class="atlas-chart atlas-price-chart" data-atlas-chart="models" role="group" aria-label="Current model API price comparison">
-        <p class="atlas-loading">Comparing current API prices…</p>
-      </div>
-      <div class="atlas-selection" data-atlas-selection="models" aria-live="polite">Choose a workload shape, then select a model for exact input, cached-input, and output prices.</div>
-      <aside class="atlas-readout">
-        <strong>Read the signal</strong>
-        <p>Shorter bars mean lower list-price cost for the selected token mix—not “better model.” Reasoning-token use, tokenizer differences, cache behavior, latency, tools, reliability, and task success determine the bill that matters.</p>
-      </aside>
-    {% endif %}
-    <details class="atlas-data-table">
-      <summary>View current prices, provider sources, and caveats</summary>
-      <p>{{ model_value.method_note | escape }} For continuously measured, independent performance data, open the <a href="{{ model_value.live_benchmark_url | escape }}" target="_blank" rel="noopener noreferrer">Artificial Analysis live model index ↗</a>.</p>
-      <div class="atlas-table-scroll">
-        <table>
-          <thead><tr><th>Model</th><th>Provider</th><th>Input / MTok</th><th>Cached input / MTok</th><th>Output / MTok</th><th>Pricing basis</th><th>Official source</th></tr></thead>
-          <tbody>
-          {% for model in model_value.models %}
-            <tr>
-              <th scope="row">{{ model.name | escape }}</th>
-              <td>{{ model.organization | escape }}</td>
-              <td>${{ model.input_price }}</td>
-              <td>{% if model.cached_input_price %}${{ model.cached_input_price }}{% else %}Not listed{% endif %}</td>
-              <td>${{ model.output_price }}</td>
-              <td>{{ model.context_note | escape }}</td>
-              <td><a href="{{ model.source_url | escape }}" target="_blank" rel="noopener noreferrer">{{ model.source_label | escape }} ↗</a></td>
-            </tr>
-          {% endfor %}
-          </tbody>
-        </table>
-      </div>
-    </details>
-    {% if atlas.model_history.status != "unavailable" %}
-    <details class="atlas-data-table model-history">
-      <summary>Historical research snapshot — not current buying guidance</summary>
-      <p>The previous Epoch AI comparison ends in {{ atlas.model_history.data_through | date: "%b %Y" }}. It is retained only for historical analysis and is never labeled as today’s model-value frontier.</p>
-      <div class="atlas-table-scroll">
-        <table>
-          <thead><tr><th>Historical model</th><th>Organization</th><th>Historical blended price</th><th>{{ atlas.model_history.benchmark | escape }}</th><th>Release date</th></tr></thead>
-          <tbody>
-          {% for model in atlas.model_history.models %}
-            <tr><th scope="row">{{ model.name | escape }}</th><td>{{ model.organization | escape }}</td><td>${{ model.price }}</td><td>{{ model.score }}</td><td>{{ model.release_date | date: "%b %Y" }}</td></tr>
-          {% endfor %}
-          </tbody>
-        </table>
-      </div>
-    </details>
-    {% endif %}
-  </section>
-
-  <section class="atlas-section card animate-in" id="adoption" aria-labelledby="adoption-title">
-    <header class="atlas-section-head">
-      <div class="atlas-index" aria-hidden="true">04</div>
-      <div>
-        <p class="atlas-kind atlas-kind-market">Industry measure</p>
-        <h2 id="adoption-title">Where is AI actually being used?</h2>
-        <p>Current and expected AI use among U.S. employer businesses. The distance between the dots is the near-term adoption gap.</p>
-      </div>
-    </header>
-    {% if atlas.adoption.status == "unavailable" %}
-      <p class="empty-state">{{ atlas.adoption.message | escape }}</p>
-    {% else %}
-      <div class="atlas-metric-line">
-        <span>{{ atlas.adoption.period | escape }}</span>
-        <span>Firm-weighted share</span>
-      </div>
-      <div class="atlas-chart atlas-dumbbell" data-atlas-chart="adoption" role="group" aria-label="AI adoption by business sector">
-        <p class="atlas-loading">Comparing current and expected use…</p>
-      </div>
-      <aside class="atlas-readout">
-        <strong>Read the signal</strong>
-        <p>Adoption is uneven: information-intensive sectors lead, while physical and service sectors remain lower. Expected use measures intention, not guaranteed deployment.</p>
-      </aside>
-      <details class="atlas-data-table">
-        <summary>View all sectors and methodology</summary>
-        <p>{{ atlas.adoption.method_note | escape }}</p>
-        <div class="atlas-table-scroll">
-          <table>
-            <thead><tr><th>Sector</th><th>Current use</th><th>Expected use</th><th>Gap</th></tr></thead>
-            <tbody>
-            {% for sector in atlas.adoption.sectors %}
-              <tr><th scope="row">{{ sector.name | escape }}</th><td>{{ sector.current }}%</td><td>{{ sector.expected }}%</td><td>{{ sector.gap }} pts</td></tr>
-            {% endfor %}
-            </tbody>
-          </table>
-        </div>
-      </details>
-    {% endif %}
-  </section>
-
-  <section class="atlas-section card animate-in" id="economics" aria-labelledby="economics-title">
-    <header class="atlas-section-head">
-      <div class="atlas-index" aria-hidden="true">05</div>
-      <div>
-        <p class="atlas-kind atlas-kind-market">Industry measure</p>
-        <h2 id="economics-title">Who can afford the frontier?</h2>
-        <p>Cumulative equity funding versus latest reported annualized revenue for selected private foundation-model companies.</p>
-      </div>
-    </header>
-    {% if atlas.company_economics.status == "unavailable" %}
-      <p class="empty-state">{{ atlas.company_economics.message | escape }}</p>
-    {% else %}
-      <div class="atlas-chart atlas-scatter" data-atlas-chart="economics" role="group" aria-label="Frontier AI company economics chart">
-        <p class="atlas-loading">Plotting company scale…</p>
-      </div>
-      <div class="atlas-selection" data-atlas-selection="economics" aria-live="polite">Select a company for exact values.</div>
-      <aside class="atlas-readout">
-        <strong>Read the signal</strong>
-        <p>Upper-right companies combine large capital bases with meaningful revenue scale. Funding is cumulative and revenue is annualized, so the chart shows operating position—not profitability.</p>
-      </aside>
-      <details class="atlas-data-table">
-        <summary>View company data and caveats</summary>
-        <p>{{ atlas.company_economics.method_note | escape }}</p>
-        <div class="atlas-table-scroll">
-          <table>
-            <thead><tr><th>Company</th><th>Equity funding</th><th>Annualized revenue</th><th>Staff</th><th>Confidence</th></tr></thead>
-            <tbody>
-            {% for company in atlas.company_economics.companies %}
-              <tr><th scope="row">{{ company.name | escape }}</th><td data-money="{{ company.funding }}">{{ company.funding }}</td><td data-money="{{ company.revenue }}">{{ company.revenue }}</td><td>{{ company.staff | default: "—" }}</td><td>{{ company.confidence | escape }}</td></tr>
-            {% endfor %}
-            </tbody>
-          </table>
-        </div>
-      </details>
-    {% endif %}
-  </section>
-
-  <section class="atlas-method card animate-in" aria-labelledby="atlas-method-title">
-    <p class="eyebrow">How to trust the atlas</p>
-    <h2 id="atlas-method-title">Different evidence, clearly labeled</h2>
-    <p>Coverage charts describe this site's screened news sample. They are useful for attention and narrative, never as a substitute for revenue, adoption, or market share. Industry charts retain the definitions and caveats of their source datasets.</p>
-    <ul class="atlas-source-list">
-      {% for source_pair in atlas.sources %}
-        {% assign source = source_pair[1] %}
-        <li><span class="atlas-kind atlas-kind-{{ source.kind }}">{{ source.kind | capitalize }}</span><a href="{{ source.url | escape }}"{% unless source.url contains '/sources/' %} target="_blank" rel="noopener noreferrer"{% endunless %}>{{ source.label | escape }}</a></li>
+    <div class="source-only-grid">
+      {% for milestone in diffusion.milestones %}
+      <article class="source-only-card">
+        <p class="source-only-type">{{ milestone.evidence_class | replace: '_', ' ' | capitalize | escape }}</p>
+        <h3>{{ milestone.lab | escape }}</h3>
+        <dl>
+          <div><dt>Source date</dt><dd><time datetime="{{ milestone.date | escape }}">{{ milestone.date | date: "%b %d, %Y" }}</time></dd></div>
+          <div><dt>Recorded release status</dt><dd>{{ milestone.open_weight_status | escape }}</dd></div>
+          <div><dt>Original source</dt><dd><a href="{{ milestone.source_url | escape }}" target="_blank" rel="noopener noreferrer">{{ milestone.source_label | escape }} ↗</a></dd></div>
+        </dl>
+      </article>
       {% endfor %}
-    </ul>
-    <p class="atlas-method-note">The Census AI question changed in November 2025 to cover use in “any business function,” so the adoption view does not splice the newer series onto the older wording. Model and private-company estimates are snapshots, not live quotes.</p>
+    </div>
   </section>
+
+  <details class="workbench-referral">
+    <summary>Visual Industry Atlas features are being rebuilt</summary>
+    <p>Coverage-momentum charts, company heat maps, generated supply-chain readouts, milestone synopses, significance claims, and editorial rankings are not published as finished analysis. Their intended replacements and acceptance gates are listed in the <a href="{{ '/workbench/#workbench-industry-visualizations' | relative_url }}">Industry Visualizations workbench entry →</a></p>
+  </details>
 </article>
-
-<script id="industry-atlas-data" type="application/json">{{ atlas | jsonify }}</script>
-<script src="{{ '/assets/js/industry-atlas.js' | relative_url }}" defer></script>

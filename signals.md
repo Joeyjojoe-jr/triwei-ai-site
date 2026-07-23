@@ -1,156 +1,85 @@
 ---
 layout: default
-title: Signal History
+title: Research Lineage Library
 permalink: /signals/
-description: Trace early AI reporting, research, and prognostications into later events that strengthen, complicate, or redirect the original signal.
-intelligence: true
+description: Direct scholarly-source links and chronological reading paths without AI paper summaries or unreviewed influence claims.
+publication_key: signals
+research_lineage: true
 ---
+{% assign lineage = site.data.research_lineage %}
 
-{% assign signals = site.data.signals %}
-{% assign event_count = 0 %}
-{% for thread in signals.threads %}{% assign event_count = event_count | plus: thread.events.size %}{% endfor %}
+<article class="research-lineage-page">
+  <header class="research-lineage-hero card animate-in">
+    <p class="eyebrow">Research Lineage Library</p>
+    <h1>Trace original papers without replacing them with AI summaries</h1>
+    <p>This metadata-first library links directly to scholarly records on arXiv—pronounced “archive.” It is intended to help readers locate and revisit original work while keeping authorship, dates, source status, and uncertainty visible.</p>
 
-<div class="intel-page signal-page">
-  <header class="intel-hero card">
-    <p class="intel-kicker">News has a memory</p>
-    <h1>What looked small—<br><span>until it became the story</span></h1>
-    <p class="intel-lead">Follow ideas from their early paper, article, or opinion through the events that later strengthened, complicated, or redirected the original signal. This is provenance, not a pundit scoreboard.</p>
-    <p class="intel-truth-strip"><strong>How this was made:</strong> AI-assisted source research, static editorial relationships, and direct links to every cited node. No live model decides what is true on page load.</p>
-    <div class="intel-interaction-key" aria-label="How to interact with this page"><span><b>Pills</b> filter</span><span><b>▾ Why/how?</b> opens method</span><span><b>↗</b> opens the original source</span></div>
-    <div class="intel-hero-kpis" role="list" aria-label="Signal history coverage">
-      <div role="listitem"><a class="intel-kpi-link" href="#signal-method-title"><strong>{{ signals.coverage_start_label | escape }}</strong><span>ledger begins · inspect method</span></a></div>
-      <div role="listitem"><a class="intel-kpi-link" href="#signal-ledger"><strong>{{ signals.threads.size }}</strong><span>connected threads · explore</span></a></div>
-      <div role="listitem"><a class="intel-kpi-link" href="#signal-ledger"><strong>{{ event_count }}</strong><span>dated evidence nodes · inspect</span></a></div>
-      <div role="listitem"><a class="intel-kpi-link" href="#relationship-key"><strong>4</strong><span>relationship types · open rules</span></a></div>
+    <div class="research-lineage-meta" role="list" aria-label="Research library status">
+      <div role="listitem"><span>Verified records</span><strong>{{ lineage.papers.size }}</strong></div>
+      <div role="listitem"><span>Provisional reading paths</span><strong>{{ lineage.paths.size }}</strong></div>
+      <div role="listitem"><span>Metadata checked</span><strong>{{ lineage.verified_display | escape }}</strong></div>
     </div>
-    <p class="intel-freshness">Evidence checked {{ signals.verified_on | date: "%b %d, %Y" }} · sources retain their original dates and claims</p>
   </header>
 
-  <section class="signal-method card" aria-labelledby="signal-method-title">
-    <div>
-      <p class="intel-kicker">Editorial rule</p>
-      <h2 id="signal-method-title">Connect evidence. Preserve uncertainty.</h2>
-      <p>{{ signals.method_note | escape }}</p>
-      <details class="intel-method-disclosure">
-        <summary>Exactly how TriWei assembled this view</summary>
-        <div class="intel-method-stack">
-          <p><strong>AI's role</strong>{{ signals.generation_method.automation | escape }}</p>
-          <p><strong>Collection rule</strong>{{ signals.generation_method.collection | escape }}</p>
-          <p><strong>Relationship rule</strong>{{ signals.generation_method.relationship_assignment | escape }}</p>
-          <p><strong>What “checked” means</strong>{{ signals.generation_method.verification | escape }}</p>
-          <p><strong>What filters do</strong>{{ signals.generation_method.filtering | escape }}</p>
+  <aside class="research-lineage-disclosure card">
+    <p><strong>AI-assistance disclosure:</strong> {{ lineage.curation.assistant_attribution | escape }}</p>
+    <p><strong>Publication boundary:</strong> {{ lineage.curation.publication_boundary | escape }}</p>
+    <p><strong>Chronology boundary:</strong> {{ lineage.curation.sequence_rule | escape }}</p>
+  </aside>
+
+  <section class="lineage-paths" aria-labelledby="lineage-paths-title">
+    <header class="source-only-section card">
+      <p class="source-only-warning">Metadata-first research paths</p>
+      <h2 id="lineage-paths-title">Follow the papers in time order</h2>
+      <p>Each card preserves the paper title, named authors, first arXiv submission date, identifier, and direct abstract-page link. The connectors show time order only; they are not claims that one paper caused, influenced, validated, or superseded another.</p>
+    </header>
+
+    {% for path in lineage.paths %}
+    <section class="lineage-path" aria-labelledby="lineage-path-{{ path.id | escape }}">
+      <header class="lineage-path-head">
+        <div>
+          <p class="eyebrow">Provisional path 0{{ forloop.index }}</p>
+          <h2 id="lineage-path-{{ path.id | escape }}">{{ path.label | escape }}</h2>
         </div>
-      </details>
-    </div>
-    <ul class="signal-relationship-key" id="relationship-key">
-      {% for relationship in signals.relationship_types %}
-      <li class="relationship-{{ relationship.key }}">
-        <details>
-          <summary title="Open the rule and its limits"><strong>{{ relationship.label | escape }}</strong><span>{{ relationship.meaning | escape }}</span><small>Open rule + limits</small></summary>
-          <div class="relationship-method"><p><b>Assignment rule</b>{{ relationship.decision_rule | escape }}</p><p><b>Does not establish</b>{{ relationship.not_claim | escape }}</p></div>
-        </details>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
+        <p class="lineage-path-rule">Chronological order only · no importance or influence ranking</p>
+      </header>
 
-  <section class="signal-ledger" id="signal-ledger" aria-labelledby="signal-ledger-title">
-    <div class="intel-section-head">
-      <div>
-        <p class="intel-kicker">Lookback portal</p>
-        <h2 id="signal-ledger-title">Trace a signal through time</h2>
-      </div>
-      <p id="signal-filter-status" aria-live="polite">Showing all {{ signals.threads.size }} threads.</p>
-    </div>
-
-    <div class="signal-filter-bar" role="group" aria-label="Filter historical signal threads">
-      {% for filter in signals.filters %}
-      <button type="button" class="signal-filter" data-signal-filter="{{ filter.key | escape }}" aria-pressed="{% if filter.key == 'all' %}true{% else %}false{% endif %}">{{ filter.label | escape }}</button>
-      {% endfor %}
-    </div>
-    <p class="signal-filter-method">These pills only match the page's saved tags and text. They do not ask an AI model to judge relevance or truth.</p>
-
-    <div class="signal-query-note" id="signal-query-note" hidden></div>
-
-    <div class="signal-thread-list">
-      {% for thread in signals.threads %}
-      <article class="signal-thread card" data-signal-thread data-signal-tags="{{ thread.tags | join: '|' | downcase | escape }}">
-        <header class="signal-thread-head">
-          <div>
-            <p class="intel-kicker">Thread 0{{ forloop.index }}</p>
-            <h3>{{ thread.title | escape }}</h3>
-            <p>{{ thread.dek | escape }}</p>
-          </div>
-          <span class="signal-status" title="Editorial synthesis, not a computed score. Open ‘How this thread was assembled’ below.">Editorial status · {{ thread.status | escape }}</span>
-        </header>
-
-        <details class="intel-thread-method">
-          <summary>How this thread was assembled</summary>
-          <div class="intel-proof-grid"><p><strong>Thread claim</strong>{{ thread.dek | escape }}</p><p><strong>Included evidence</strong>{{ thread.events.size }} dated nodes whose source summaries materially bear on this claim.</p><p><strong>Status label</strong>“{{ thread.status | escape }}” is editorial synthesis, not a computed confidence score.</p><p><strong>Scope boundary</strong>Tags are navigation aids: {{ thread.tags | join: ', ' | escape }}. They are not a complete taxonomy.</p></div>
-        </details>
-
-        <ol class="signal-event-list">
-          {% for event in thread.events %}
-          {% assign event_relationship = signals.relationship_types | where: "key", event.relationship | first %}
-          <li class="signal-event relationship-{{ event.relationship }}">
-            <div class="signal-event-marker" aria-hidden="true"></div>
-            <div class="signal-event-date">
-              {% assign event_month = event.date | date: "%b %Y" %}
-              <time datetime="{{ event.date | escape }}">{{ event.date_display | default: event_month | escape }}</time>
-              <span>{{ event.source_type | escape }}</span>
+      <div class="lineage-track" style="--lineage-count: {{ path.paper_ids.size }}" role="list" aria-label="{{ path.label | escape }} papers in chronological order">
+        {% for paper_id in path.paper_ids %}
+          {% assign paper = lineage.papers | where: "id", paper_id | first %}
+          {% if paper %}
+          <article class="lineage-node" role="listitem">
+            <div class="lineage-node-meta">
+              <time datetime="{{ paper.submitted_on | escape }}">First submitted {{ paper.submitted_on | date: "%b %d, %Y" }}</time>
+              <span class="lineage-node-id">arXiv:{{ paper.id | escape }}</span>
+              <span class="lineage-node-type">{{ paper.record_type | escape }}</span>
             </div>
-            <div class="signal-event-body">
-              <span class="relationship-badge" title="Editorial relationship. Open the ‘Why’ disclosure below.">{{ event_relationship.label | escape }}</span>
-              <h4>{{ event.title | escape }}</h4>
-              <p class="signal-byline">{{ event.outlet | escape }} · {{ event.author | escape }}</p>
-              <p class="signal-node-summary">{{ event.note | escape }}</p>
-              <div class="signal-event-actions"><a href="{{ event.url | escape }}" target="_blank" rel="noopener noreferrer">Open original source ↗</a></div>
-              <details class="intel-inline-proof">
-                <summary title="Open the evidence relationship and its limits">Why is this node labeled “{{ event_relationship.label | escape }}”?</summary>
-                <div class="intel-proof-grid"><p><strong>Evidence basis</strong>{{ event.source_type | escape }} published by {{ event.outlet | escape }} on {{ event.date | date: "%b %d, %Y" }}.</p><p><strong>Assignment rule</strong>{{ event_relationship.decision_rule | escape }}</p><p><strong>This node contributes</strong>{{ event.note | escape }}</p><p><strong>Does not establish</strong>{{ event_relationship.not_claim | escape }}</p></div>
-              </details>
+            <h3>{{ paper.title | escape }}</h3>
+            <details class="lineage-authors">
+              <summary>Show all named authors</summary>
+              <p>{{ paper.authors | join: ", " | escape }}</p>
+            </details>
+            <div class="lineage-node-actions">
+              <a href="{{ paper.source_url | escape }}" target="_blank" rel="noopener noreferrer">Open arXiv abstract ↗</a>
             </div>
-          </li>
-          {% endfor %}
-        </ol>
-        <div class="signal-thread-tags" aria-label="Filter by a thread topic">{% for tag in thread.tags %}<button type="button" data-signal-tag="{{ tag | escape }}" title="Filter the ledger by this saved tag">{{ tag | escape }}</button>{% endfor %}</div>
-      </article>
-      {% endfor %}
-    </div>
-  </section>
-
-  <section class="signal-observers card" aria-labelledby="signal-observers-title">
-    <div class="intel-section-head">
-      <div>
-        <p class="intel-kicker">Early, durable reads</p>
-        <h2 id="signal-observers-title">People and outlets that noticed a consequential connection</h2>
+          </article>
+          {% endif %}
+        {% endfor %}
       </div>
-      <p>No accuracy score. Inclusion means a dated source made a material connection before its later significance was widely visible.</p>
-    </div>
-    <div class="signal-observer-grid">
-      {% for observer in signals.observers %}
-      <article>
-        <span>{{ observer.date | escape }} · {{ observer.thread | escape }}</span>
-        <h3>{{ observer.name | escape }}</h3>
-        <p class="signal-outlet">{{ observer.outlet | escape }}</p>
-        <p>{{ observer.signal | escape }}</p>
-        <a href="{{ observer.url | escape }}" target="_blank" rel="noopener noreferrer">Read the dated source ↗</a>
-        <details class="intel-inline-proof"><summary>Why is this included?</summary><p>Inclusion records this specific dated connection: {{ observer.signal | escape }} It is not an accuracy score, “first” claim, endorsement, or lifetime judgment of the author.</p></details>
-      </article>
-      {% endfor %}
+    </section>
+    {% endfor %}
+  </section>
+
+  <section class="source-only-section card" aria-labelledby="lineage-boundary-title">
+    <p class="source-only-warning">How to read this library</p>
+    <h2 id="lineage-boundary-title">Useful navigation with visible limits</h2>
+    <div class="research-lineage-boundary">
+      <div><h3>Repository status</h3><p>{{ lineage.curation.peer_review_boundary | escape }}</p></div>
+      <div><h3>Copyright and reuse</h3><p>{{ lineage.curation.license_boundary | escape }}</p></div>
+      <div><h3>No generated synopsis</h3><p>TriWei does not reproduce or paraphrase the abstract. Open the linked record to read the authors’ own abstract and paper.</p></div>
+      <div><h3>Future relationships</h3><p>Labels such as “introduces,” “extends,” “tests,” or “replicates” remain unpublished until a human verifies the relationship against the papers and citations. Follow the acceptance gate in the <a href="{{ '/workbench/#workbench-signal-history' | relative_url }}">Signal History workbench entry →</a></p></div>
     </div>
   </section>
 
-  <section class="intel-boundary card" aria-labelledby="signal-boundary-title">
-    <p class="intel-kicker">Coverage boundary</p>
-    <h2 id="signal-boundary-title">What this portal does—and does not claim</h2>
-    <div class="intel-boundary-grid">
-      <p><strong>Curated, not total.</strong> The historical web, paywalls, archives, link rot, and licensing prevent a credible claim that every AI article has been indexed. The ledger expands source by source.</p>
-      <p><strong>Claims stay attached.</strong> A later event can support one part of an article while undermining another. Each connection describes the specific relationship instead of awarding a binary verdict.</p>
-      <p><strong>Small outlets remain visible.</strong> Specialist research explainers and niche reporting appear beside major publications when their dated observation materially shaped a thread.</p>
-      <p><strong>Corrections are part of the record.</strong> Source changes, retractions, disputed provenance, and later qualifications should become additional evidence nodes—not silent edits.</p>
-    </div>
-  </section>
-</div>
-
-<script src="{{ '/assets/js/signal-history.js' | relative_url }}" defer></script>
+  <p class="research-lineage-acknowledgement">This is an independent TriWei research aid and is not affiliated with or endorsed by arXiv.</p>
+</article>

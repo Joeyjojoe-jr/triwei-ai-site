@@ -2,72 +2,168 @@
 layout: page
 title: Sources & Method
 permalink: /sources/
-description: Where TriWei AI's news comes from and how trending topics and the ethics lens are computed.
+description: The site-wide rules for original links, human authorship, data attribution, uncertainty, feature status, and corrections.
+publication_key: sources
 ---
-TriWei AI is an automated tracker for AI news, trends, and hot topics. It refreshes on its own and reads every story through an ethics lens.
 
-## How it works
+TriWei is designed to help readers find and inspect original work without presenting machine-generated paraphrases as editorial research.
 
-A scheduled job runs every six hours (via GitHub Actions). It pulls headlines from a spread of AI sources, removes exact and near-duplicate articles across all folders, ranks the topics appearing most often, tags each story with any ethical dimensions it touches, and writes the results to a data file the site renders. The duplicate check is deliberately conservative: lightly rewritten or syndicated copies are collapsed, while reporting that adds a distinct angle—such as safety, copyright, pricing, or impact—can remain. No story is written by hand — the page reflects whatever the feeds are surfacing right now.
+## Site-wide publication contract
+{: #site-wide-publication-contract }
 
-## What it tracks
+These rules apply to the homepage, Research Lineage Library, AI Hardware, Industry Data, Ethics Sources, Workbench, About, and every future public page or subpage.
 
-- **Labs & Industry** — releases and moves from OpenAI, Anthropic, Google DeepMind, Meta, Mistral, Nvidia and others, plus mainstream tech press.
-- **Research & Papers** — new work from arXiv (cs.AI, cs.LG, cs.CL) and coverage of notable models and benchmarks.
-- **Community & Discussion** — what practitioners are talking about on Hacker News and machine-learning forums.
-- **Business & Funding** — startups, funding rounds, acquisitions, chips, and market moves.
-- **Ethics & Society** — regulation, copyright, safety, privacy, bias, labor, and governance.
+TriWei must:
 
-## The ethics lens
+1. link to the original author, publisher, organization, repository, company, or public institution whenever a third-party source is presented;
+2. preserve source metadata without guessing a byline, date, publisher, or canonical URL;
+3. identify whether a displayed value is a source statement, a vendor specification, an external measurement, an automated collection count, or original TriWei analysis;
+4. keep claims attached to the person or organization that made them;
+5. expose material uncertainty, review dates, expired records, and source gaps;
+6. prefer an incomplete page over copied text, an intermediary URL, an invented attribution, or a generated substitute; and
+7. publish substantive TriWei analysis only after independent human research, human authorship, source review, attribution review, and approval.
 
-Each story is screened against a set of ethical themes: Bias & Fairness, Privacy & Surveillance, Safety & Alignment, Misinformation & Deepfakes, Copyright & IP, Labor & Jobs, Energy & Environment, Regulation & Governance, Transparency & Accountability, and Autonomy & Weapons. Stories that match one or more are collected on the Ethics Watch page and tagged inline everywhere they appear.
+## Useful information before limitation notices
 
-## A note on automation
+Ethical safeguards should not become the primary content of the site. A topic page should provide useful source-linked information before discussing an unfinished feature. When a richer feature cannot yet be published:
 
-Topic ranking and ethics tagging are keyword-based, so they are a fast first pass, not a substitute for judgment. Treat the tags as signposts pointing you toward stories worth a closer, critical read.
+- the currently usable register or source material remains visible;
+- the withheld feature is moved to the [Workbench & Roadmap](/workbench/);
+- the workbench identifies the intended value, the reason it is not yet public, and the acceptance gate required for publication; and
+- a permanently rejected method is recorded as retired rather than repeatedly reconsidered as an unfinished feature.
 
-## Industry Atlas data
+A page may still place authorship, provenance, source status, or a concise publication-mode disclosure beside the information when that context is necessary to interpret it responsibly.
 
-The [AI Industry Atlas](/industry/) keeps coverage signals and industry measures visibly separate:
+## Core publication rule
 
-- **Momentum and industry stack** use TriWei's deduplicated story sample. They describe this site's coverage, not market share or company performance. Daily topic aggregates are retained for up to 90 days.
-- **Business adoption** comes from the U.S. Census Bureau's [Business Trends and Outlook Survey](https://www.census.gov/hfp/btos/data_downloads). The chart uses the latest sector estimates under the AI question wording introduced in November 2025 and does not splice them onto the older series.
-- **Current model API cost** uses prices checked against first-party pages from [OpenAI](https://developers.openai.com/api/docs/pricing), [Anthropic](https://platform.claude.com/docs/en/about-claude/pricing), [Google](https://ai.google.dev/gemini-api/docs/pricing), [xAI](https://docs.x.ai/developers/pricing), [DeepSeek](https://api-docs.deepseek.com/quick_start/pricing/), [Kimi](https://www.kimi.com/blog/kimi-k3), and [Mistral](https://docs.mistral.ai/models/model-cards/mistral-medium-3-5-26-04). The interactive chart changes the input/output token mix but never equates price with capability. A freshness guard pauses the current ranking after 30 days unless the ledger is re-verified.
-- **Historical model value** retains the reproducible dataset behind Epoch AI's [LLM inference price analysis](https://epoch.ai/data-insights/llm-inference-price-trends), clearly labeled with its February 2025 endpoint. It is available for historical analysis only, not current buying guidance. For continuously measured independent performance, use the [Artificial Analysis live model index](https://artificialanalysis.ai/models).
-- **Lab economics** uses Epoch AI's [AI Companies dataset](https://epoch.ai/data/ai-companies). Private-company revenue, funding, and staffing figures may combine disclosures and credible public estimates, so confidence and comparability are limited.
+TriWei **does not publish AI-written synopses, summaries, or explanations of third-party articles or papers that TriWei has not independently researched and human-authored**.
 
-## Physical AI Supply-Chain Watch
+A link collection is not original reporting. A generated paraphrase is not a substitute for reading the author. When TriWei has not produced original, human-authored analysis, the site presents source metadata, source-dated fields, and a direct link only.
 
-The supply-chain map follows eight production stages: critical materials, silicon wafers, fab tools, accelerator dies, HBM, advanced packaging, servers and computers, and destination markets. It is a dated evidence ledger—not a claim that every vendor or shipment follows one route.
+## Original-link standard
 
-- Critical-material concentration uses the IEA's 2026 [Rare Earth Elements](https://www.iea.org/reports/rare-earth-elements/executive-summary) and [Global Critical Minerals Outlook](https://www.iea.org/reports/global-critical-minerals-outlook-2026/executive-summary). Rare earths are shown as inputs to fab equipment, power, cooling, motors, and related systems; they are not mislabeled as the silicon substrate in a GPU.
-- Wafer demand and locations use [SEMI's 2025 shipment report](https://www.semi.org/en/semi-press-release/semi-reports-2025-annual-worldwide-silicon-wafer-shipments-and-revenue-results), [SUMCO](https://www.sumcosi.com/english/), and [Siltronic's 2025 annual report](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260312_Siltronic_Annual_Report_2025_safe.pdf).
-- Tool, foundry, memory, packaging, and system routes use [ASML's EUV documentation](https://www.asml.com/products/euv-lithography-systems), [TSMC's 2025 annual report](https://investor.tsmc.com/static/annualReports/2025/english/index.html), [NVIDIA's FY2026 Form 10-K](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm), and supplier disclosures. Representative companies indicate the cluster; they are not a complete supplier list or market-share estimate.
-- Destination bars use NVIDIA's disclosed FY2026 revenue by end market as an AI-accelerator demand proxy, not the whole semiconductor market. Its customer-headquarters geography is shown separately because billing address, shipment location, cloud operator, and final end user can differ. Current export-policy gates link to the U.S. Bureau of Industry and Security's [January 2026 China licensing policy](https://www.bis.gov/press-release/department-commerce-revises-license-review-policy-semiconductors-exported-china).
+A public source record should preserve:
 
-## Frontier Diffusion Watch
+- the source's original title when it has been verified;
+- the named author or byline when the source supplies one;
+- the responsible publisher, organization, repository, company, or public institution;
+- the publication date or reference period when available; and
+- the direct canonical source URL.
 
-The strategic watch tracks China-based labs, model distillation, output extraction claims, capability convergence, and open-weight releases. A dedicated news query expands the live coverage sample, while a rolling one-year aggregate preserves the signal over time.
+TriWei does not guess an author. When no individual byline is supplied, the site identifies the responsible publisher or institution.
 
-The evidence timeline uses primary sources and keeps four classes separate:
+Google News, search engines, social feeds, aggregators, and similar services may help locate candidate material, but their intermediary URLs are not presented as the original author's piece. An item is withheld until a direct source URL is available.
 
-- **Developer disclosure** records teacher models or training methods identified by the developer, such as the [DeepSeek-R1 distillation releases](https://github.com/deepseek-ai/DeepSeek-R1).
-- **Provider-attributed claim** records a named provider's published attribution, including [Anthropic's distillation-attack report](https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks) and [OpenAI's U.S. House committee submission](https://cdn.openai.com/pdf/045aa967-ee96-4a09-94ee-3098ddf6db2c/OpenAI-US-House-Select-Cmte-Update-%5B021226%5D.pdf). These are labeled claims, not independent adjudications.
-- **Weights released** requires publicly downloadable checkpoints, as with [Kimi K2](https://github.com/MoonshotAI/Kimi-K2).
-- **Weights announced** records a developer commitment that has not yet been verified as a completed release, such as [Kimi K3's July 27 weight-release target](https://www.kimi.com/blog/kimi-k3).
+## Source metadata is not verification
 
-Benchmark similarity, answer style, or release timing alone is never treated as proof of model lineage.
+Inclusion in a TriWei register means that TriWei recorded a direct source or a source-dated value. It does not mean:
 
-External sections keep the last successfully retrieved snapshot if a source is temporarily unavailable, but current API prices expire visibly instead of silently masquerading as live data. Every chart shows its definition, source, freshness, and a tabular alternative.
+- every claim in the source was independently verified;
+- the source is endorsed;
+- the source is complete or unbiased;
+- a provider allegation was independently adjudicated;
+- a vendor specification predicts real-world performance;
+- a public institution's page constitutes legal advice; or
+- TriWei's collection is a complete account of the field.
 
-## Signal History
+Readers should inspect the original source and its context.
 
-The [Signal History](/signals/) is an AI-assisted, curated lookback ledger, not an automated verdict on who predicted the future. Its seed dataset was assembled during site development with an AI research and coding assistant using the sources linked on every node. It is static data: no live model decides truth, confidence, or relevance when the page loads. Each thread begins with an early paper, article, analysis, or opinion and connects it to later events using four editorial relationships: **early signal**, **strengthens**, **complicates**, and **redirects**. A relationship is editorial synthesis meaning the later evidence bears materially on the earlier framing; it does not mean the author was simply “right” or “wrong,” and TriWei does not claim independent fact-checker or publisher endorsement.
+## Original TriWei analysis
 
-Coverage begins in 2010 with [DeepMind's founding history](https://deepmind.google/about/) and includes primary research such as [Attention Is All You Need](https://arxiv.org/abs/1706.03762), early specialist explanations such as Distill's [Attention and Augmented Recurrent Neural Networks](https://distill.pub/2016/augmented-rnns/), reported analysis from outlets including WIRED and Quanta Magazine, product releases, and regulation. The current ledger is a documented seed set, not a claim to index every article published since 2010. Threads and “durable early reads” are selected for specificity, timing, source quality, and the strength of the later evidence trail—not fame or hindsight-friendly wording.
+A future TriWei analysis must be:
 
-## AI Hardware intelligence
+1. independently researched by a human;
+2. human-authored as an original TriWei work;
+3. supported by an inspectable source list;
+4. reviewed for attribution, uncertainty, material omissions, and conflicts;
+5. dated and assigned a named author or responsible editorial owner;
+6. clearly separated from automated feed output and source metadata; and
+7. subject to correction and revision.
 
-The [AI Hardware](/hardware/) page separates six questions that a single GPU number cannot answer: memory capacity, memory bandwidth, compute engines, interconnect, power and cooling, and software support. Its initial static ledger was researched and structured with AI assistance during site development. Product specifications were checked against first-party sources, including [NVIDIA's GeForce RTX 40 Series specifications](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/), [NVIDIA H200](https://www.nvidia.com/en-us/data-center/h200/), [Apple M4 Max](https://www.apple.com/newsroom/2024/10/apple-introduces-m4-pro-and-m4-max/), and [NVIDIA Grace Hopper](https://developer.nvidia.com/blog/nvidia-grace-hopper-superchip-architecture-in-depth/). The comparator uses fixed browser-side rules: numeric bars are normalized only within the selected pair, text fields receive no synthetic score, and workload buttons highlight manually encoded factors. These displays explain resource gates; they are not workload benchmarks or buying recommendations.
+AI tools may assist site code, accessibility work, source discovery, metadata checks, testing, and internal organization. They must not generate the published synopsis of a third-party article or paper. Any substantive TriWei analysis remains the responsibility and work of its human author.
 
-The material ledger uses current institutional and geological sources, including the IEA's [Rare Earth Elements](https://www.iea.org/reports/rare-earth-elements/executive-summary) analysis and the USGS [Mineral Commodity Summaries 2026](https://pubs.usgs.gov/publication/mcs2026). Fab timelines use current company disclosures from TSMC, Intel, Micron, and SK hynix. Announced investment and target dates can move with demand, financing, permitting, construction, tool delivery, qualification, and yield. The page shows its verification date and a 90-day re-check deadline. After that deadline, the rendered page labels the reference as expired, while the strict repository validator rejects it until the ledger is re-checked.
+## Automated direct-link index
+
+A scheduled GitHub Actions job collects candidate headlines from feeds. On public pages, automated material may display only:
+
+- the feed's original headline when it can be preserved accurately;
+- the publisher;
+- an author when the feed explicitly supplies one;
+- the publication date when available; and
+- a direct source URL.
+
+The public index does not display feed descriptions or generated summaries. Items that only have a Google News or other intermediary URL are withheld.
+
+Automated collection remains a discovery mechanism, not an editorial verdict:
+
+- recurrence in the collected sample does not establish importance or truth;
+- multiple links do not prove source independence;
+- folder placement is a navigation aid, not endorsement or condemnation;
+- machine-applied tags are not findings of wrongdoing, safety, legality, or merit; and
+- collection does not convert an author's reporting into a TriWei factual record.
+
+## Feature states
+
+TriWei uses three public feature states:
+
+- **Published now** — useful information that currently meets the source, attribution, and authorship requirements.
+- **Research workbench** — a feature concept with an explicit publication gate; its unfinished interpretive content is not presented as complete.
+- **Retired method** — an approach TriWei has decided not to use because it conflicts with the publication standard or creates a misleading impression.
+
+Workbench placement is not a release promise. A feature may move to published only when its gate is satisfied, or to retired when a safe and useful implementation cannot be justified.
+
+## Page-specific publication boundaries
+
+### Research Lineage Library
+
+The Research Lineage Library publishes verified scholarly metadata and direct links to original abstract pages. Its first release uses chronological, topic-based reading paths to help readers locate papers without reproducing or paraphrasing their abstracts.
+
+Candidate selection and metadata organization were assisted by OpenAI ChatGPT. That assistance is disclosed on the page. TriWei remains responsible for publication, correction, and deciding whether a record should appear.
+
+The current library does **not** claim that:
+
+- a paper is important, foundational, correct, peer reviewed, accepted, or influential;
+- chronological proximity establishes citation, influence, causation, priority, validation, or supersession;
+- appearing on arXiv establishes peer review or endorsement; or
+- the library is complete.
+
+Relationship labels such as “introduces,” “extends,” “tests,” “replicates,” “critiques,” or “applies” remain unpublished until a human verifies the specific relationship against the papers and their citations.
+
+TriWei links to arXiv abstract pages rather than copying PDFs, abstracts, figures, or tables. Reuse rights depend on the license selected for the specific paper version. TriWei does not use arXiv branding in a way that suggests affiliation or endorsement.
+
+### AI Hardware
+
+AI Hardware publishes source-dated manufacturer fields and original references. Vendor specifications are not independent benchmarks, and unlike compute, power, memory, and interconnect labels may not be comparable. The intended visual explainers and their acceptance gate are recorded in the Workbench.
+
+### Industry Data
+
+Industry Data publishes source-dated API prices, primary-source supply-chain references, and attributed model-access records. The intended visual atlas and its acceptance gate are recorded in the Workbench. Coverage frequency is not presented as market importance, power, quality, or truth.
+
+### Ethics Sources
+
+Ethics Sources publishes original public-institution records. The intended human-authored Ethics Watch and its acceptance gate are recorded in the Workbench. Machine tags, feed frequency, sentiment, and keyword matches are not published as ethical judgments or findings of harm, intent, legality, safety, or importance.
+
+## Attribution and responsible use
+
+TriWei links outward and attributes third-party work to its author, publisher, organization, repository, company, or institution. It does not claim ownership of third-party reporting, research, names, logos, marks, datasets, or specifications.
+
+Direct quotations should be limited to situations where exact wording is necessary. Any quotation must remain short, attributed, and linked to its original context. Article bodies and paper bodies are not reproduced.
+
+## Corrections and revisions
+
+TriWei treats correction as part of responsible publication, not something to conceal. Material changes are recorded on [Corrections & Revisions](/corrections/).
+
+A material change should be classified as one of the following:
+
+- **Correction** — a published factual statement was wrong.
+- **Clarification** — wording was materially ambiguous or incomplete.
+- **Source update** — the underlying source changed, disappeared, or was superseded.
+- **Link correction** — an intermediary, broken, or incorrect URL was replaced with the original source.
+- **Attribution correction** — the author, publisher, or responsible institution was misstated.
+- **Expiry** — current information passed its review deadline and must no longer appear current.
+- **Feature-status change** — a feature moved among published, workbench, or retired states.
+- **Withdrawal** — material was removed because its provenance, permission, accuracy, or authorship could not be supported.
+
+A material correction should identify what changed, why it changed, the date of revision, and the affected page or record. Minor spelling, formatting, and accessibility repairs may be corrected without a formal log when they do not alter meaning.
+
+The absence of a listed correction is not a claim that the site is error-free. Readers should inspect original sources and report material problems through the public project repository.

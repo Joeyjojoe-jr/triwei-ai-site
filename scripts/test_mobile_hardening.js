@@ -112,7 +112,7 @@ test('templates and styles contain mobile safety controls', () => {
   assert.doesNotMatch(layout, /<script src="https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/three\.js/);
 
   assert.match(home, /window\.matchMedia\('\(max-width: 900px\)'\)\.matches/);
-  assert.match(home, /if \(!reduce && !constrained\)/);
+  assert.match(home, /if \(!reduce && !constrained(?: && items\.length)?\)/);
 
   assert.match(css, /html\[data-holodeck\] \.hd-room\s*\{\s*display:\s*none !important;/);
   assert.match(css, /@media \(max-width: 900px\), \(pointer: coarse\), \(hover: none\)/);

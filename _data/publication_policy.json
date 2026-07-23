@@ -1,0 +1,48 @@
+{
+  "version": "1.1.0",
+  "effective_date": "2026-07-22",
+  "contract_url": "/sources/#site-wide-publication-contract",
+  "corrections_url": "/corrections/",
+  "pages": {
+    "about": {
+      "label": "Site scope and limits",
+      "mode": "Policy and project description",
+      "notice": "This page describes TriWei's intended practices. It does not claim completeness, neutrality, independent verification, or original reporting."
+    },
+    "signals": {
+      "label": "Research metadata and reading paths",
+      "mode": "Direct scholarly records",
+      "notice": "The library publishes verified metadata and direct arXiv links. It does not publish AI paper summaries or unreviewed influence claims."
+    },
+    "hardware": {
+      "label": "Source-dated hardware register",
+      "mode": "Published specifications and direct references",
+      "notice": "Displayed values remain attributed to cited manufacturers or institutions and are not presented as independent benchmarks or purchasing advice."
+    },
+    "industry": {
+      "label": "Source-dated industry registers",
+      "mode": "External measurements and primary records",
+      "notice": "Figures remain attached to their source, reference period, and limitations. Coverage frequency is not used as an importance or market-power ranking."
+    },
+    "ethics": {
+      "label": "Ethics and governance sources",
+      "mode": "Direct public records",
+      "notice": "The page links to original institutional records and does not publish automated ethical, legal, harm, safety, or importance judgments."
+    },
+    "workbench": {
+      "label": "Feature status and acceptance gates",
+      "mode": "Published, in development, and retired",
+      "notice": "Workbench entries record current intent rather than release promises. A feature becomes public only after its stated evidence, authorship, and review gate is satisfied."
+    },
+    "sources": {
+      "label": "Publication standard",
+      "mode": "Method, attribution, and correction rules",
+      "notice": "These rules govern every public page and are enforced by automated tests, while substantive editorial responsibility remains human."
+    },
+    "corrections": {
+      "label": "Corrections and revisions",
+      "mode": "Public change record",
+      "notice": "Material errors, attribution changes, link corrections, source updates, expired records, and feature-status changes should be logged rather than silently concealed."
+    }
+  }
+}

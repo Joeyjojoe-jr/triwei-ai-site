@@ -36,6 +36,12 @@ jobs:
       - name: Test orbit navigation
         run: npm run check:orbit
 
+      - name: Test evidence-first homepage
+        run: npm run check:evidence-home
+
+      - name: Test site-wide publication contract
+        run: npm run check:publication
+
       - name: Test palette toggle
         run: npm run check:palette
 
@@ -45,7 +51,7 @@ jobs:
       - name: Test Industry Atlas
         run: npm run check:industry
 
-      - name: Test Signal History and AI Hardware
+      - name: Test Research Library and AI Hardware
         run: npm run check:intelligence
 
       - name: Validate generated news data
@@ -56,3 +62,13 @@ jobs:
         with:
           source: ./
           destination: ./_site
+
+      - name: Audit rendered publication boundaries
+        run: python scripts/audit_rendered_publication.py _site
+
+      - name: Upload reviewable site preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: triwei-evidence-home-preview
+          path: ./_site
+          retention-days: 7

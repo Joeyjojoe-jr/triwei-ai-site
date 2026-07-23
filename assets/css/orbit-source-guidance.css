@@ -1,0 +1,64 @@
+/* Homepage orbit guidance for source gaps and category drill-down.
+   This file does not alter the orbit geometry, animation, or visual identity. */
+
+.folder-tab[data-orbit-open] {
+  cursor: pointer;
+  flex-wrap: wrap;
+}
+
+.folder-tab[data-orbit-open]::after {
+  content: "OPEN SUBCATEGORIES →";
+  margin-left: auto;
+  color: color-mix(in srgb, var(--accent) 78%, var(--muted));
+  font-family: var(--mono);
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.orbit-ring[data-orbit-level="main"] .folder-card {
+  cursor: pointer;
+}
+
+/* Modern browsers show a visual explanation when a main folder has fewer
+   than three verified direct-source links. The same policy is also announced
+   in the orbit's live status text for assistive technology and older browsers. */
+.orbit-ring[data-orbit-level="main"] .folder-heads:has(> li:first-child:last-child)::after,
+.orbit-ring[data-orbit-level="main"] .folder-heads:has(> li:nth-child(2):last-child)::after {
+  content: "Source gap — sorry. Additional direct links were withheld rather than risk misattribution or misappropriation.";
+  display: block;
+  margin-top: 0.22rem;
+  padding-top: 0.38rem;
+  border-top: 1px dashed color-mix(in srgb, var(--accent) 28%, transparent);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.56rem;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.folder-empty::before {
+  content: "SOURCE GAP";
+  display: block;
+  margin-bottom: 0.28rem;
+  color: var(--accent-2);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 960px) {
+  .folder-tab[data-orbit-open]::after {
+    flex-basis: 100%;
+    margin-left: 2.65rem;
+    margin-top: -0.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .folder-tab[data-orbit-open]::after {
+    transition: none;
+  }
+}

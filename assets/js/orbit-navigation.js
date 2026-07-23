@@ -15,6 +15,10 @@
   var status = orbit.querySelector('[data-orbit-status]');
   var openers = Array.prototype.slice.call(orbit.querySelectorAll('[data-orbit-open]'));
   var rings = Array.prototype.slice.call(orbit.querySelectorAll('[data-orbit-level]'));
+  var mainCards = mainRing && mainRing.querySelectorAll
+    ? Array.prototype.slice.call(mainRing.querySelectorAll('.folder-card'))
+    : [];
+  var emptyStates = Array.prototype.slice.call(orbit.querySelectorAll('.folder-empty'));
   var lastOpener = null;
 
   if (!mainRing || !backButton || !hint || !status) return null;
@@ -52,8 +56,8 @@
     );
     hint.textContent = isMain ? 'Main folders' : 'Back to main folders';
     status.textContent = isMain
-      ? 'Main folders — choose one to explore'
-      : title + ' — subfolders now orbiting; select a story or use the TriWei logo to go back';
+      ? 'Choose a folder to open subcategories; story titles open original sources. We apologize for source gaps and leave them visible rather than risk misattribution or misappropriation.'
+      : title + ' — subfolders now orbiting; select an original-source link or use the TriWei logo to go back';
     return true;
   }
 
@@ -66,6 +70,19 @@
       track('orbit_folder_open', { category: level });
       backButton.focus();
     });
+  });
+
+  mainCards.forEach(function (card) {
+    card.addEventListener('click', function (event) {
+      var target = event.target;
+      if (target && target.closest && target.closest('a')) return;
+      var opener = card.querySelector && card.querySelector('[data-orbit-open]');
+      if (opener && typeof opener.click === 'function') opener.click();
+    });
+  });
+
+  emptyStates.forEach(function (emptyState) {
+    emptyState.textContent = 'Sorry, this source folder is incomplete. TriWei withholds intermediary or unverified links rather than risk misattribution, misappropriation, copied text, or an AI-written substitute.';
   });
 
   backButton.addEventListener('click', function () {

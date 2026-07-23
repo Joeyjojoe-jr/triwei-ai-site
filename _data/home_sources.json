@@ -1,0 +1,99 @@
+{
+  "version": "1.0.1",
+  "checked_on": "2026-07-23",
+  "publication_rule": "TriWei does not publish AI-written synopses of third-party works. This register contains source metadata and direct links only.",
+  "orbit_fallbacks": {
+    "labs": [
+      {
+        "source_title": "Kimi K3: Open Frontier Intelligence",
+        "source_url": "https://www.kimi.com/blog/kimi-k3"
+      }
+    ],
+    "research": [
+      {
+        "source_title": "MoonshotAI/Kimi-K2",
+        "source_url": "https://github.com/MoonshotAI/Kimi-K2"
+      }
+    ],
+    "community": [
+      {
+        "source_title": "MoonshotAI/Kimi-K2",
+        "source_url": "https://github.com/MoonshotAI/Kimi-K2"
+      }
+    ],
+    "business": [
+      {
+        "source_title": "Micron Accelerates U.S. Investments, Pours First Concrete at New York Fab",
+        "source_url": "https://investors.micron.com/news-releases/news-release-details/micron-accelerates-us-investments-pours-first-concrete-new-york"
+      }
+    ],
+    "ethics": [
+      {
+        "source_title": "AI Act",
+        "source_url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "kimi-k3-open-frontier-intelligence",
+      "source_title": "Kimi K3: Open Frontier Intelligence",
+      "author": "Moonshot AI",
+      "publisher": "Kimi",
+      "source_type": "Developer publication",
+      "published_display": "Jul 16, 2026",
+      "source_url": "https://www.kimi.com/blog/kimi-k3",
+      "checked_on": "2026-07-23",
+      "tracker_label": "Open model-access sources",
+      "tracker_url": "/industry/#diffusion"
+    },
+    {
+      "id": "anthropic-distillation-attacks",
+      "source_title": "Detecting and preventing distillation attacks",
+      "author": "Anthropic",
+      "publisher": "Anthropic",
+      "source_type": "Organization-authored publication",
+      "published_display": "Feb 23, 2026",
+      "source_url": "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks",
+      "checked_on": "2026-07-23",
+      "tracker_label": "Open model-access sources",
+      "tracker_url": "/industry/#diffusion"
+    },
+    {
+      "id": "micron-new-york-fab",
+      "source_title": "Micron Accelerates U.S. Investments, Pours First Concrete at New York Fab",
+      "author": "Micron Technology, Inc.",
+      "publisher": "Micron Investor Relations",
+      "source_type": "Company press release",
+      "published_display": "Jul 9, 2026",
+      "source_url": "https://investors.micron.com/news-releases/news-release-details/micron-accelerates-us-investments-pours-first-concrete-new-york",
+      "checked_on": "2026-07-23",
+      "tracker_label": "Open AI Hardware",
+      "tracker_url": "/hardware/"
+    },
+    {
+      "id": "moonshot-kimi-k2-repository",
+      "source_title": "MoonshotAI/Kimi-K2",
+      "author": "Moonshot AI team",
+      "publisher": "GitHub",
+      "source_type": "Public repository",
+      "published_display": "Repository",
+      "source_url": "https://github.com/MoonshotAI/Kimi-K2",
+      "checked_on": "2026-07-23",
+      "tracker_label": "Open model-access sources",
+      "tracker_url": "/industry/#diffusion"
+    },
+    {
+      "id": "european-commission-ai-act",
+      "source_title": "AI Act",
+      "author": "European Commission",
+      "publisher": "Shaping Europe’s digital future",
+      "source_type": "Public institution page",
+      "published_display": "Current public record",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      "checked_on": "2026-07-23",
+      "tracker_label": "Open Ethics Sources",
+      "tracker_url": "/ethics/"
+    }
+  ]
+}

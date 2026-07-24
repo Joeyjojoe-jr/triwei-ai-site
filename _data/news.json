@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-07-23T19:36:42.269372Z",
-  "generated_display": "July 23, 2026 at 2:36 PM CDT",
-  "item_count": 738,
+  "generated_utc": "2026-07-24T03:25:45.478791Z",
+  "generated_display": "July 23, 2026 at 10:25 PM CDT",
+  "item_count": 736,
   "category_order": [
     "labs",
     "research",
@@ -14,6 +14,84 @@
       "label": "Labs & Industry",
       "items": [
         {
+          "title": "How AI guardrails are impeding the work of offensive cybersecurity researchers",
+          "link": "https://techcrunch.com/2026/07/23/how-ai-guardrails-are-impeding-the-work-of-offensive-cybersecurity-researchers/",
+          "source": "TechCrunch",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 24, 2026",
+          "published_iso": "2026-07-24T01:00:00Z",
+          "summary": "We spoke with several cybersecurity researchers, who look for unknown vulnerabilities and develop tools to exploit them, about how OpenAI’s and Anthropic’s guardrails affect their work.",
+          "ethics_tags": [
+            "Safety & Alignment"
+          ],
+          "trend_score": 117
+        },
+        {
+          "title": "How OpenAI’s Models Escaped Their Sandbox and Slipped Past California's AI Law",
+          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNVGt0V1NRMDlpQ3hOTF9Zd19uaUpzbUxlZV9LeEVmLW1tLS1uUHBkekFtb2V3bk5VblExOENsa1VyRkJmb3F1QktCRnROdGNVVElvdDdVUWNVSTJvNk5PVzVBY1c2Q2dUMXI3cmRsSWFaLVlyWVFTSzQ2Q0ExYTBRRFBBdmdNWlpXVGE5NmU0bE1vNERENmhqcTZBa2xvbXM3OXUyQXRFMTJwMFpPZE9oRw?oc=5",
+          "source": "KQED",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T23:47:00Z",
+          "summary": "How OpenAI’s Models Escaped Their Sandbox and Slipped Past California's AI Law KQED",
+          "ethics_tags": [],
+          "trend_score": 60
+        },
+        {
+          "title": "NVIDIA and KAIST Launch Joint AI Research Lab to Accelerate AI Innovation in Korea",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNaTNQTHNWZE1BbWY3Y1RVVno0Nnoyc1RvZFZQVTRLMEdTWDhQTnlTeDJoYU9pcFBBQTd0RGpGSDh6N25UcG5KeDFnUjNXNjd0bXJaZURDSHdsV2tjZ1I2UnBhWGkwU2NnTTd5VWNJOXpxeGEwSzFxSzF2UVFmd213R0RMa05od1pwM2J6TjZNZHl2RW1XanVOa0FPblp1eXNxSUlPelJpZ2FtZWZNUHUtNW92VHRDUnJy?oc=5",
+          "source": "NVIDIA Newsroom",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T23:10:39Z",
+          "summary": "NVIDIA and KAIST Launch Joint AI Research Lab to Accelerate AI Innovation in Korea NVIDIA Newsroom",
+          "ethics_tags": [],
+          "trend_score": 12
+        },
+        {
+          "title": "Hugging Face OpenAI hack: Agent went rogue, escaped and hacked everything in its path",
+          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9YTlh3aFc5cDF6UGhsQkREUk5mQ0ZjNUtqMHZhcFFUc1ZFc1hUWjBBc0hhNkc4UGMtLXFPbmpFRDVnQUpXbXNuN2VUSmNjSWdCblhlMlZYMlZQTlI3SlpuZE1XOXJtYzU2SlI4MWFDYkJtMzlkOGpNZ1I2LUc?oc=5",
+          "source": "Mashable",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T20:02:43Z",
+          "summary": "Hugging Face OpenAI hack: Agent went rogue, escaped and hacked everything in its path Mashable",
+          "ethics_tags": [
+            "Safety & Alignment"
+          ],
+          "trend_score": 118
+        },
+        {
+          "title": "OpenAI's Hugging Face hack triggers 'AI Kill Switch' bill in Congress",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQWVhNdF9vVVNEUk5pRXdrZkFZNkU2WXA4MDJqSEVUOVhZaFYzZ0dKTUxvWTN5Z21CTzlNYVZXTF9ieTdLQkVWODQtTE51RTFpYzk2TjdoX1QwbUVtVmo3TktjX2pRZURaSVVQdVYyYTJQZk5raHRVOHMwNzMzLUF5dzZSamdxa3kwN3BZTVFSWGJpUdIBlwFBVV95cUxNX1dIYVZvcmZINEoxVjVJdnJOYUtoRGQwMGcteFV5a1NKU2huSkdYaE1DNFdQTjc2NmluNWg1Smd2UGRSbnpUQUpfeVdBOHJSVUs1SFRhc1JUaUZ6RVN0ckdwdDh6eTdJUnBOdU56V0Y5WUVIMWRCUHk3ZlF2c2x6ZmNlbWNGRTJoWWkzQ1pKakY5SHhrbmE0?oc=5",
+          "source": "CNBC",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T19:51:08Z",
+          "summary": "OpenAI's Hugging Face hack triggers 'AI Kill Switch' bill in Congress CNBC",
+          "ethics_tags": [
+            "Regulation & Governance"
+          ],
+          "trend_score": 60
+        },
+        {
+          "title": "Launching Health in ChatGPT",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1SZ20wcWdqZlZXdjZSYXpVcHNtS1R5cVFydGdYRnpLSVV5R1pLUXRDR1hQOWpjaFRBcktWNGhjWVlxcUtRY1BjYmZBVDZtRThCWFVBY0pn?oc=5",
+          "source": "OpenAI",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T19:43:46Z",
+          "summary": "Launching Health in ChatGPT OpenAI",
+          "ethics_tags": [],
+          "trend_score": 72
+        },
+        {
           "title": "Claude’s voice mode is now available for Opus and Sonnet",
           "link": "https://www.theverge.com/ai-artificial-intelligence/970065/anthropic-voice-mode-claude-opus-sonnet-haiku-ai",
           "source": "The Verge",
@@ -23,7 +101,7 @@
           "published_iso": "2026-07-23T19:28:13Z",
           "summary": "Until now, voice mode has only been available on Claude Haiku, Anthropic's faster but less powerful model. Now the company is making its Opus and Sonnet models available in voice mode, and extending its reach into apps like Gmail, Slack,…",
           "ethics_tags": [],
-          "trend_score": 75
+          "trend_score": 70
         },
         {
           "title": "Anthropic updates Claude voice mode with more capable models",
@@ -33,9 +111,9 @@
           "category_label": "Labs & Industry",
           "published_display": "Jul 23, 2026",
           "published_iso": "2026-07-23T19:00:00Z",
-          "summary": "Claude's new voice model will let you reschedule your meeting or draft an email",
+          "summary": "Claude's new voice model will let you reschedule your meeting or draft an email.",
           "ethics_tags": [],
-          "trend_score": 75
+          "trend_score": 70
         },
         {
           "title": "AegisAI, founded by former Google security execs, lands $36M to stop AI-driven spear phishing",
@@ -49,33 +127,19 @@
           "ethics_tags": [
             "Labor & Jobs"
           ],
-          "trend_score": 63
+          "trend_score": 58
         },
         {
-          "title": "Anthropic ordered to pay largest copyright class action settlement in history",
-          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxObWpBUnpTb2dDNkVQa1ViVUppVkJMYmRsYWxCeDhnRHNLWG9vbENKQ1ZnNXNaZzNqd2w5WnhtdWozQmhaX3AtMS0wUW5maXljUnc3OENsOThFNXFoYnVsQXh2RzRyU3ZwWXotODJDOGlGVkRxN2VGV0lrMGNFSVRzUTFRMnd4REtDUU1r?oc=5",
-          "source": "Mashable",
+          "title": "How a Chinese AI model put Big Tech on notice",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQSXBpSEJhNHpTTnVKdGJKekxtYXN4aW5QSUdqZUpob1lOY3ZkYnJXaC1EXzcweXRUSDdDa1pMN3JuaFFod3VBNFBKdExka2ZibkRpbEJLOGY0WC1KQXNDWlQ0T1dyYmU0VjBJMHl4MW9aUGJseWNVN1JGVlZfSGRTbFRaSUV2STlWS2hCNnhTNDVSaS1L?oc=5",
+          "source": "NBC News",
           "category": "labs",
           "category_label": "Labs & Industry",
           "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T17:36:31Z",
-          "summary": "Anthropic ordered to pay largest copyright class action settlement in history Mashable",
-          "ethics_tags": [
-            "Copyright & IP"
-          ],
-          "trend_score": 70
-        },
-        {
-          "title": "Launching Health in ChatGPT",
-          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1SZ20wcWdqZlZXdjZSYXpVcHNtS1R5cVFydGdYRnpLSVV5R1pLUXRDR1hQOWpjaFRBcktWNGhjWVlxcUtRY1BjYmZBVDZtRThCWFVBY0pn?oc=5",
-          "source": "OpenAI",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T17:12:53Z",
-          "summary": "Launching Health in ChatGPT OpenAI",
+          "published_iso": "2026-07-23T17:12:18Z",
+          "summary": "How a Chinese AI model put Big Tech on notice NBC News",
           "ethics_tags": [],
-          "trend_score": 70
+          "trend_score": 0
         },
         {
           "title": "OpenAI is making big claims as it rolls out ChatGPT Health to everyone",
@@ -89,7 +153,7 @@
           "ethics_tags": [
             "Privacy & Surveillance"
           ],
-          "trend_score": 70
+          "trend_score": 72
         },
         {
           "title": "Runway launches AI model router as generative media gets crowded",
@@ -113,7 +177,7 @@
           "published_iso": "2026-07-23T17:00:00Z",
           "summary": "Users can also integrate their personal data from services like Apple Health, Function, and MyFitnessPal.",
           "ethics_tags": [],
-          "trend_score": 70
+          "trend_score": 72
         },
         {
           "title": "China’s Kimi K3 and the rise of open-weight AI models",
@@ -126,108 +190,48 @@
           "summary": "China’s Kimi K3 and the rise of open-weight AI models Scientific American",
           "ethics_tags": [],
           "trend_score": 0
-        },
-        {
-          "title": "AI chip startup Etched defies skeptics, hits $10.3B valuation from big-name investors",
-          "link": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
-          "source": "TechCrunch",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T15:00:00Z",
-          "summary": "Etched, founded by three Harvard dropouts, has created new chips and memory components that speed up inference on any AI model -- no GPUs required, it says.",
-          "ethics_tags": [],
-          "trend_score": 23
-        },
-        {
-          "title": "Google’s Gemini nears billion-user milestone",
-          "link": "https://techcrunch.com/2026/07/23/google-closes-in-on-another-billion-user-product-with-gemini/",
-          "source": "TechCrunch",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T14:52:44Z",
-          "summary": "Gemini had over 750 million monthly users in February.",
-          "ethics_tags": [],
-          "trend_score": 0
-        },
-        {
-          "title": "Apple’s OpenAI lawsuit is about who gets to define the post-smartphone era",
-          "link": "https://www.theverge.com/podcast/968787/apple-openai-trade-secrets-lawsuit-ai-hardware-smartphone-jony-ive",
-          "source": "The Verge",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T13:55:07Z",
-          "summary": "Today on Decoder, I’m talking with Hayden Field, The Verge’s senior AI reporter, about the major trade secrets lawsuit between Apple and OpenAI and what this tells us about OpenAI’s future. By now I’m sure most Decoder listeners are…",
-          "ethics_tags": [
-            "Copyright & IP"
-          ],
-          "trend_score": 58
-        },
-        {
-          "title": "OpenAI Sued Over ChatGPT’s ‘Dangerous’ Health Advice",
-          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0zMTNLNEhjOXNnb0pGWUd5UExBZWljenA4c1ZZRHZTNkpFZjV3WDdCWGo5TWRzZURVRG5VN1VycVBHQnNVWHRNNURRYlZJd0pUNHRsSHVXRmxEbXBITENpYTVsQTVsS2VyX0lpOUFFbkEyYUdVa2ZJSDVIMkxpdHM?oc=5",
-          "source": "The New York Times",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T13:32:00Z",
-          "summary": "OpenAI Sued Over ChatGPT’s ‘Dangerous’ Health Advice The New York Times",
-          "ethics_tags": [],
-          "trend_score": 70
-        },
-        {
-          "title": "Exclusive: Yelp deal pushes local reviews into ChatGPT",
-          "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9PSWlXRW96c1RldnlhTC15a202VWRfZFNqdGVPQ3A1bGdWbWotOVV4U2tVRUNIc24tVlFNelRySlpWTzUxMm84SWp5RlMzeGlJMXpKZmhyYUJqTlJOeGh1MHBOVWRmZExDMjZITTNKcVY2dWp3RC1IYQ?oc=5",
-          "source": "Axios",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T13:01:51Z",
-          "summary": "Exclusive: Yelp deal pushes local reviews into ChatGPT Axios",
-          "ethics_tags": [],
-          "trend_score": 12
         }
       ],
       "folder_items": [
         {
-          "title": "Claude’s voice mode is now available for Opus and Sonnet",
-          "link": "https://www.theverge.com/ai-artificial-intelligence/970065/anthropic-voice-mode-claude-opus-sonnet-haiku-ai",
-          "source": "The Verge",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T19:28:13Z",
-          "summary": "Until now, voice mode has only been available on Claude Haiku, Anthropic's faster but less powerful model. Now the company is making its Opus and Sonnet models available in voice mode, and extending its reach into apps like Gmail, Slack,…",
-          "ethics_tags": [],
-          "trend_score": 75
-        },
-        {
-          "title": "Anthropic updates Claude voice mode with more capable models",
-          "link": "https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/",
-          "source": "TechCrunch",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T19:00:00Z",
-          "summary": "Claude's new voice model will let you reschedule your meeting or draft an email",
-          "ethics_tags": [],
-          "trend_score": 75
-        },
-        {
-          "title": "Anthropic ordered to pay largest copyright class action settlement in history",
-          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxObWpBUnpTb2dDNkVQa1ViVUppVkJMYmRsYWxCeDhnRHNLWG9vbENKQ1ZnNXNaZzNqd2w5WnhtdWozQmhaX3AtMS0wUW5maXljUnc3OENsOThFNXFoYnVsQXh2RzRyU3ZwWXotODJDOGlGVkRxN2VGV0lrMGNFSVRzUTFRMnd4REtDUU1r?oc=5",
+          "title": "Hugging Face OpenAI hack: Agent went rogue, escaped and hacked everything in its path",
+          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9YTlh3aFc5cDF6UGhsQkREUk5mQ0ZjNUtqMHZhcFFUc1ZFc1hUWjBBc0hhNkc4UGMtLXFPbmpFRDVnQUpXbXNuN2VUSmNjSWdCblhlMlZYMlZQTlI3SlpuZE1XOXJtYzU2SlI4MWFDYkJtMzlkOGpNZ1I2LUc?oc=5",
           "source": "Mashable",
           "category": "labs",
           "category_label": "Labs & Industry",
           "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T17:36:31Z",
-          "summary": "Anthropic ordered to pay largest copyright class action settlement in history Mashable",
+          "published_iso": "2026-07-23T20:02:43Z",
+          "summary": "Hugging Face OpenAI hack: Agent went rogue, escaped and hacked everything in its path Mashable",
           "ethics_tags": [
-            "Copyright & IP"
+            "Safety & Alignment"
           ],
-          "trend_score": 70
+          "trend_score": 118
+        },
+        {
+          "title": "How AI guardrails are impeding the work of offensive cybersecurity researchers",
+          "link": "https://techcrunch.com/2026/07/23/how-ai-guardrails-are-impeding-the-work-of-offensive-cybersecurity-researchers/",
+          "source": "TechCrunch",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 24, 2026",
+          "published_iso": "2026-07-24T01:00:00Z",
+          "summary": "We spoke with several cybersecurity researchers, who look for unknown vulnerabilities and develop tools to exploit them, about how OpenAI’s and Anthropic’s guardrails affect their work.",
+          "ethics_tags": [
+            "Safety & Alignment"
+          ],
+          "trend_score": 117
+        },
+        {
+          "title": "Launching Health in ChatGPT",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1SZ20wcWdqZlZXdjZSYXpVcHNtS1R5cVFydGdYRnpLSVV5R1pLUXRDR1hQOWpjaFRBcktWNGhjWVlxcUtRY1BjYmZBVDZtRThCWFVBY0pn?oc=5",
+          "source": "OpenAI",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T19:43:46Z",
+          "summary": "Launching Health in ChatGPT OpenAI",
+          "ethics_tags": [],
+          "trend_score": 72
         }
       ],
       "subcategories": [
@@ -237,51 +241,65 @@
           "count": 1,
           "folder_items": [
             {
-              "title": "AI chip startup Etched defies skeptics, hits $10.3B valuation from big-name investors",
-              "link": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
-              "source": "TechCrunch",
+              "title": "NVIDIA and KAIST Launch Joint AI Research Lab to Accelerate AI Innovation in Korea",
+              "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNaTNQTHNWZE1BbWY3Y1RVVno0Nnoyc1RvZFZQVTRLMEdTWDhQTnlTeDJoYU9pcFBBQTd0RGpGSDh6N25UcG5KeDFnUjNXNjd0bXJaZURDSHdsV2tjZ1I2UnBhWGkwU2NnTTd5VWNJOXpxeGEwSzFxSzF2UVFmd213R0RMa05od1pwM2J6TjZNZHl2RW1XanVOa0FPblp1eXNxSUlPelJpZ2FtZWZNUHUtNW92VHRDUnJy?oc=5",
+              "source": "NVIDIA Newsroom",
               "category": "labs",
               "category_label": "Labs & Industry",
               "published_display": "Jul 23, 2026",
-              "published_iso": "2026-07-23T15:00:00Z",
-              "summary": "Etched, founded by three Harvard dropouts, has created new chips and memory components that speed up inference on any AI model -- no GPUs required, it says.",
+              "published_iso": "2026-07-23T23:10:39Z",
+              "summary": "NVIDIA and KAIST Launch Joint AI Research Lab to Accelerate AI Innovation in Korea NVIDIA Newsroom",
               "ethics_tags": [],
-              "trend_score": 23
+              "trend_score": 12
             }
           ]
         },
         {
           "key": "governance",
           "label": "Lab Safety & Policy",
-          "count": 2,
+          "count": 3,
           "folder_items": [
             {
-              "title": "Anthropic ordered to pay largest copyright class action settlement in history",
-              "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxObWpBUnpTb2dDNkVQa1ViVUppVkJMYmRsYWxCeDhnRHNLWG9vbENKQ1ZnNXNaZzNqd2w5WnhtdWozQmhaX3AtMS0wUW5maXljUnc3OENsOThFNXFoYnVsQXh2RzRyU3ZwWXotODJDOGlGVkRxN2VGV0lrMGNFSVRzUTFRMnd4REtDUU1r?oc=5",
+              "title": "Hugging Face OpenAI hack: Agent went rogue, escaped and hacked everything in its path",
+              "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9YTlh3aFc5cDF6UGhsQkREUk5mQ0ZjNUtqMHZhcFFUc1ZFc1hUWjBBc0hhNkc4UGMtLXFPbmpFRDVnQUpXbXNuN2VUSmNjSWdCblhlMlZYMlZQTlI3SlpuZE1XOXJtYzU2SlI4MWFDYkJtMzlkOGpNZ1I2LUc?oc=5",
               "source": "Mashable",
               "category": "labs",
               "category_label": "Labs & Industry",
               "published_display": "Jul 23, 2026",
-              "published_iso": "2026-07-23T17:36:31Z",
-              "summary": "Anthropic ordered to pay largest copyright class action settlement in history Mashable",
+              "published_iso": "2026-07-23T20:02:43Z",
+              "summary": "Hugging Face OpenAI hack: Agent went rogue, escaped and hacked everything in its path Mashable",
               "ethics_tags": [
-                "Copyright & IP"
+                "Safety & Alignment"
               ],
-              "trend_score": 70
+              "trend_score": 118
             },
             {
-              "title": "Apple’s OpenAI lawsuit is about who gets to define the post-smartphone era",
-              "link": "https://www.theverge.com/podcast/968787/apple-openai-trade-secrets-lawsuit-ai-hardware-smartphone-jony-ive",
-              "source": "The Verge",
+              "title": "How AI guardrails are impeding the work of offensive cybersecurity researchers",
+              "link": "https://techcrunch.com/2026/07/23/how-ai-guardrails-are-impeding-the-work-of-offensive-cybersecurity-researchers/",
+              "source": "TechCrunch",
+              "category": "labs",
+              "category_label": "Labs & Industry",
+              "published_display": "Jul 24, 2026",
+              "published_iso": "2026-07-24T01:00:00Z",
+              "summary": "We spoke with several cybersecurity researchers, who look for unknown vulnerabilities and develop tools to exploit them, about how OpenAI’s and Anthropic’s guardrails affect their work.",
+              "ethics_tags": [
+                "Safety & Alignment"
+              ],
+              "trend_score": 117
+            },
+            {
+              "title": "OpenAI's Hugging Face hack triggers 'AI Kill Switch' bill in Congress",
+              "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQWVhNdF9vVVNEUk5pRXdrZkFZNkU2WXA4MDJqSEVUOVhZaFYzZ0dKTUxvWTN5Z21CTzlNYVZXTF9ieTdLQkVWODQtTE51RTFpYzk2TjdoX1QwbUVtVmo3TktjX2pRZURaSVVQdVYyYTJQZk5raHRVOHMwNzMzLUF5dzZSamdxa3kwN3BZTVFSWGJpUdIBlwFBVV95cUxNX1dIYVZvcmZINEoxVjVJdnJOYUtoRGQwMGcteFV5a1NKU2huSkdYaE1DNFdQTjc2NmluNWg1Smd2UGRSbnpUQUpfeVdBOHJSVUs1SFRhc1JUaUZ6RVN0ckdwdDh6eTdJUnBOdU56V0Y5WUVIMWRCUHk3ZlF2c2x6ZmNlbWNGRTJoWWkzQ1pKakY5SHhrbmE0?oc=5",
+              "source": "CNBC",
               "category": "labs",
               "category_label": "Labs & Industry",
               "published_display": "Jul 23, 2026",
-              "published_iso": "2026-07-23T13:55:07Z",
-              "summary": "Today on Decoder, I’m talking with Hayden Field, The Verge’s senior AI reporter, about the major trade secrets lawsuit between Apple and OpenAI and what this tells us about OpenAI’s future. By now I’m sure most Decoder listeners are…",
+              "published_iso": "2026-07-23T19:51:08Z",
+              "summary": "OpenAI's Hugging Face hack triggers 'AI Kill Switch' bill in Congress CNBC",
               "ethics_tags": [
-                "Copyright & IP"
+                "Regulation & Governance"
               ],
-              "trend_score": 58
+              "trend_score": 60
             }
           ]
         },
@@ -307,8 +325,20 @@
         {
           "key": "models",
           "label": "Models & Releases",
-          "count": 5,
+          "count": 6,
           "folder_items": [
+            {
+              "title": "Launching Health in ChatGPT",
+              "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1SZ20wcWdqZlZXdjZSYXpVcHNtS1R5cVFydGdYRnpLSVV5R1pLUXRDR1hQOWpjaFRBcktWNGhjWVlxcUtRY1BjYmZBVDZtRThCWFVBY0pn?oc=5",
+              "source": "OpenAI",
+              "category": "labs",
+              "category_label": "Labs & Industry",
+              "published_display": "Jul 23, 2026",
+              "published_iso": "2026-07-23T19:43:46Z",
+              "summary": "Launching Health in ChatGPT OpenAI",
+              "ethics_tags": [],
+              "trend_score": 72
+            },
             {
               "title": "Claude’s voice mode is now available for Opus and Sonnet",
               "link": "https://www.theverge.com/ai-artificial-intelligence/970065/anthropic-voice-mode-claude-opus-sonnet-haiku-ai",
@@ -319,7 +349,7 @@
               "published_iso": "2026-07-23T19:28:13Z",
               "summary": "Until now, voice mode has only been available on Claude Haiku, Anthropic's faster but less powerful model. Now the company is making its Opus and Sonnet models available in voice mode, and extending its reach into apps like Gmail, Slack,…",
               "ethics_tags": [],
-              "trend_score": 75
+              "trend_score": 70
             },
             {
               "title": "Anthropic updates Claude voice mode with more capable models",
@@ -329,19 +359,7 @@
               "category_label": "Labs & Industry",
               "published_display": "Jul 23, 2026",
               "published_iso": "2026-07-23T19:00:00Z",
-              "summary": "Claude's new voice model will let you reschedule your meeting or draft an email",
-              "ethics_tags": [],
-              "trend_score": 75
-            },
-            {
-              "title": "Launching Health in ChatGPT",
-              "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1SZ20wcWdqZlZXdjZSYXpVcHNtS1R5cVFydGdYRnpLSVV5R1pLUXRDR1hQOWpjaFRBcktWNGhjWVlxcUtRY1BjYmZBVDZtRThCWFVBY0pn?oc=5",
-              "source": "OpenAI",
-              "category": "labs",
-              "category_label": "Labs & Industry",
-              "published_display": "Jul 23, 2026",
-              "published_iso": "2026-07-23T17:12:53Z",
-              "summary": "Launching Health in ChatGPT OpenAI",
+              "summary": "Claude's new voice model will let you reschedule your meeting or draft an email.",
               "ethics_tags": [],
               "trend_score": 70
             }
@@ -350,7 +368,7 @@
         {
           "key": "frontier",
           "label": "Frontier Labs",
-          "count": 5,
+          "count": 3,
           "folder_items": [
             {
               "title": "OpenAI is making big claims as it rolls out ChatGPT Health to everyone",
@@ -364,7 +382,7 @@
               "ethics_tags": [
                 "Privacy & Surveillance"
               ],
-              "trend_score": 70
+              "trend_score": 72
             },
             {
               "title": "OpenAI makes ChatGPT Health available to all US users",
@@ -376,19 +394,21 @@
               "published_iso": "2026-07-23T17:00:00Z",
               "summary": "Users can also integrate their personal data from services like Apple Health, Function, and MyFitnessPal.",
               "ethics_tags": [],
-              "trend_score": 70
+              "trend_score": 72
             },
             {
-              "title": "OpenAI Sued Over ChatGPT’s ‘Dangerous’ Health Advice",
-              "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0zMTNLNEhjOXNnb0pGWUd5UExBZWljenA4c1ZZRHZTNkpFZjV3WDdCWGo5TWRzZURVRG5VN1VycVBHQnNVWHRNNURRYlZJd0pUNHRsSHVXRmxEbXBITENpYTVsQTVsS2VyX0lpOUFFbkEyYUdVa2ZJSDVIMkxpdHM?oc=5",
-              "source": "The New York Times",
+              "title": "AegisAI, founded by former Google security execs, lands $36M to stop AI-driven spear phishing",
+              "link": "https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/",
+              "source": "TechCrunch",
               "category": "labs",
               "category_label": "Labs & Industry",
               "published_display": "Jul 23, 2026",
-              "published_iso": "2026-07-23T13:32:00Z",
-              "summary": "OpenAI Sued Over ChatGPT’s ‘Dangerous’ Health Advice The New York Times",
-              "ethics_tags": [],
-              "trend_score": 70
+              "published_iso": "2026-07-23T18:38:34Z",
+              "summary": "AegisAI co-founders developed AI agents that quickly analyze each message as a human would, paying attention to small anomalies that even the most elaborate checklist wouldn’t catch.",
+              "ethics_tags": [
+                "Labor & Jobs"
+              ],
+              "trend_score": 58
             }
           ]
         }
@@ -397,6 +417,54 @@
     "research": {
       "label": "Research & Papers",
       "items": [
+        {
+          "title": "HOPPR Introduces New AI Model for Chest CT Exams",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNUU8tWk5ZVHgxMGtuVUFMSmRQWkF3SGF1YUJGOU9LQzE2Vno0WHdvZG5Zel9wSE5vX3djTWFlZTVsRE1jRkRUZ0wzaVZlZ2I4MktkMGtiLURxd1lFLW1zNFdZWlhoZEc0WEVqaVRsMjFxenNnbmV1MUpQeUpuSlVDMDkzMllaOTV3?oc=5",
+          "source": "dicardiology.com",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T23:53:48Z",
+          "summary": "HOPPR Introduces New AI Model for Chest CT Exams dicardiology.com",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "Duke Lands Four Spots in Federal AI Research Program",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQODNLWkE5eThLcng5eXdiNnRscGUwMU9FUmNqSTJMdlJ5WXJsNUxJMjM4UnJ5MVdtQ2tpbFpocXQ1X2taeG1WSGNjRVNMYU1kbXFiZGhZNEpRSDl5LVM5bDRkMkhPUnFMek1kM1MzWTJNbk1lZ25Yc3JfN1FYY000bDhrQ0JzeEk?oc=5",
+          "source": "Mirage News",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T20:26:00Z",
+          "summary": "Duke Lands Four Spots in Federal AI Research Program Mirage News",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "Fermilab Expands AI Research Role Through DOE Genesis Mission",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSlR1dW9PLXdYYXgxdVFudnU1Tk1yX24yb2NhWUhodDRrTHk0ekgxQUJrYU9tMnJ3VUhaSHdqZDlYMTlzVVRoY19kdmVaRWtrTDZPM2hrVEZaUk1BOVlzdkFkVmU0UVJHYWt3U0VWX05oU0VBX3o3LVF4djZ3V1ZCOV8tRjRCaUtYR2hPYWJpdzZmUGJGU1gwd01xb21RX2tt?oc=5",
+          "source": "HPCwire",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T20:15:22Z",
+          "summary": "Fermilab Expands AI Research Role Through DOE Genesis Mission HPCwire",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "PNNL to Lead 16 DOE Genesis Mission Projects, Join 26 More AI Research Efforts",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOZDloMzQzVzUwUjNzTmRUanpSY2NVWEJ4VUtaQ3VQTHNNMXFfYWRpSmtMM1RtQUhieGFqNTdiMkNYSHRjR1dNN0dOdkpSVzdEY2l4ZTVVREh5TldURVFGZXYwbE9TV0QzSWxaS2dnZDZURDdoLWtHbjdPX0h5M01ZSFZSWnVibU1tcGwyTlR1emRRZXY1S2JmZnFudzlJaTlyVlUwLXRJT2dSOTlKaHpvNmc1NF9VUQ?oc=5",
+          "source": "HPCwire",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T18:03:13Z",
+          "summary": "PNNL to Lead 16 DOE Genesis Mission Projects, Join 26 More AI Research Efforts HPCwire",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
         {
           "title": "AlphaSense Explores IPO as AI Research Platform Weighs Public Debut",
           "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQSVQ4MEloT2kzOGFFa0YxOEk0M3BOOXpSaE9nSE9PRDd5UG11Xy1TMWhLa3BiWUpoQ3VqYXRxZ3FCSV8yZjJHOS1zSFFINllZTVZIVF9LdzFRa3RueHFSQXp2c0JEV1QzVGtDUUg3NnJPVEJpLWhXaVVmNms3NDV6bWtlQlVaOUp3ZXFwTjhjclo0RUJMdTJyWjFGcGpXc3ZiY0NHTXdaNHA5Zw?oc=5",
@@ -457,7 +525,7 @@
           "published_iso": "2026-07-23T12:42:12Z",
           "summary": "Nuclear-Sabotage Malware Benchmark Trips Up Most Frontier AI Models SecurityWeek",
           "ethics_tags": [],
-          "trend_score": 36
+          "trend_score": 34
         },
         {
           "title": "Trump administration steers $5B toward AI research",
@@ -486,6 +554,18 @@
           "trend_score": 0
         },
         {
+          "title": "Xi Lu selected as AI research fellow by Computing Research Association",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPb3cxeFhYdmtreUgxUTJqNmVPX2pSYkxERUtnUkRUbVZ2cDFxcnJibE5QTWhrc2VQb0FySUUzeDhXalpPcGpTOElPQURlRFdZbTd6SGVlaDQwbFZBMWdmUWNPZVBQTDlxeDhSak5hRkRvZUd4a2xUSXh6U1U3bWVVSTlVTnBTWFBUbkV1V0ROSVU4Zw?oc=5",
+          "source": "Buffalo News",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T05:00:00Z",
+          "summary": "Xi Lu selected as AI research fellow by Computing Research Association Buffalo News",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
           "title": "FineServe: A Fine-Grained Dataset and Characterization of Global LLM Serving Workloads",
           "link": "https://arxiv.org/abs/2607.19349",
           "source": "arXiv",
@@ -510,93 +590,9 @@
             "Misinformation & Deepfakes"
           ],
           "trend_score": 0
-        },
-        {
-          "title": "OpenEvoShield: Dual Non-Stationary Continual Defense for Open-World Multi-Agent System Attacks",
-          "link": "https://arxiv.org/abs/2607.19351",
-          "source": "arXiv",
-          "category": "research",
-          "category_label": "Research & Papers",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T04:00:00Z",
-          "summary": "arXiv:2607.19351v1 Announce Type: new Abstract: LLM-based multi-agent systems (LLM-MAS) are increasingly deployed in safety-critical applications, where adversaries inject malicious instructions through inter-agent communication to…",
-          "ethics_tags": [],
-          "trend_score": 105
-        },
-        {
-          "title": "Benchmarking Confidential GPU Inference on NVIDIA H100 under Intel TDX",
-          "link": "https://arxiv.org/abs/2607.19353",
-          "source": "arXiv",
-          "category": "research",
-          "category_label": "Research & Papers",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T04:00:00Z",
-          "summary": "arXiv:2607.19353v1 Announce Type: new Abstract: Confidential computing is becoming a practical deployment requirement for AI inference workloads that process sensitive inputs or protect proprietary model assets. However, the performance…",
-          "ethics_tags": [],
-          "trend_score": 0
-        },
-        {
-          "title": "FormulaSPIN: Self-Play Fine-Tuning for Natural Language to Spreadsheet Formula Generation",
-          "link": "https://arxiv.org/abs/2607.19354",
-          "source": "arXiv",
-          "category": "research",
-          "category_label": "Research & Papers",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T04:00:00Z",
-          "summary": "arXiv:2607.19354v1 Announce Type: new Abstract: Spreadsheet applications are used by hundreds of millions worldwide, yet writing formulas remains a significant barrier. Existing approaches rely on static supervised data, which quickly…",
-          "ethics_tags": [],
-          "trend_score": 0
-        },
-        {
-          "title": "Information Discernment in Large Language Models",
-          "link": "https://arxiv.org/abs/2607.19355",
-          "source": "arXiv",
-          "category": "research",
-          "category_label": "Research & Papers",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T04:00:00Z",
-          "summary": "arXiv:2607.19355v1 Announce Type: new Abstract: LLMs are increasingly used with external knowledge sources like the internet. Do they weigh information appropriately -- updating more for reliable sources (source discernment) and more when…",
-          "ethics_tags": [],
-          "trend_score": 0
-        },
-        {
-          "title": "NEXUS: Structured Runtime Safety for Tool-Using LLM Agents",
-          "link": "https://arxiv.org/abs/2607.19356",
-          "source": "arXiv",
-          "category": "research",
-          "category_label": "Research & Papers",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T04:00:00Z",
-          "summary": "arXiv:2607.19356v1 Announce Type: new Abstract: Tool-using LLM agents increasingly execute high-impact actions, making runtime safety monitoring essential. We present NEXUS (Neural EXecution Utility and Safety), a structured-plan safety…",
-          "ethics_tags": [],
-          "trend_score": 105
         }
       ],
       "folder_items": [
-        {
-          "title": "OpenEvoShield: Dual Non-Stationary Continual Defense for Open-World Multi-Agent System Attacks",
-          "link": "https://arxiv.org/abs/2607.19351",
-          "source": "arXiv",
-          "category": "research",
-          "category_label": "Research & Papers",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T04:00:00Z",
-          "summary": "arXiv:2607.19351v1 Announce Type: new Abstract: LLM-based multi-agent systems (LLM-MAS) are increasingly deployed in safety-critical applications, where adversaries inject malicious instructions through inter-agent communication to…",
-          "ethics_tags": [],
-          "trend_score": 105
-        },
-        {
-          "title": "NEXUS: Structured Runtime Safety for Tool-Using LLM Agents",
-          "link": "https://arxiv.org/abs/2607.19356",
-          "source": "arXiv",
-          "category": "research",
-          "category_label": "Research & Papers",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T04:00:00Z",
-          "summary": "arXiv:2607.19356v1 Announce Type: new Abstract: Tool-using LLM agents increasingly execute high-impact actions, making runtime safety monitoring essential. We present NEXUS (Neural EXecution Utility and Safety), a structured-plan safety…",
-          "ethics_tags": [],
-          "trend_score": 105
-        },
         {
           "title": "Nuclear-Sabotage Malware Benchmark Trips Up Most Frontier AI Models",
           "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQb1k0WGVMazR2eEhxeG5qVGNUeHFaa1VmdkYxTXAwd2d4ajBmREdnUnhWT2VEcmtjdEpiMTllM0JjUWRCeGFLU1NWVkVqdHFYM1YtZEU3bEZPVDBFNDhzSFh6S1M4NnByb016dmd5V3hCVXFuMDJld09GNkxnQkt3STAzMEtNNnNEWmZaT05BaXJEcHZhXzZhc1RIOTBqUdIBowFBVV95cUxPdF9sVm5wTmJIYXdrZ2JNS21EVE8wdFBtRS00YWxHZWRpNnVjOFNBNzhBRjZMUFZFUURDV015aGtqZF85a3otNkFYZi1Tc05tQlRUREJIWVN0Y1RMMWU0MzBZTWllYk5BS2txRUtrcTJNZjVlbHZkZ2hETWJhZ0JhV0R1WDZGUktnY2t4TzVuZTdCeEwtQTQ2NThocjZiTG5Hb1lZ?oc=5",
@@ -607,39 +603,39 @@
           "published_iso": "2026-07-23T12:42:12Z",
           "summary": "Nuclear-Sabotage Malware Benchmark Trips Up Most Frontier AI Models SecurityWeek",
           "ethics_tags": [],
-          "trend_score": 36
+          "trend_score": 34
+        },
+        {
+          "title": "HOPPR Introduces New AI Model for Chest CT Exams",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNUU8tWk5ZVHgxMGtuVUFMSmRQWkF3SGF1YUJGOU9LQzE2Vno0WHdvZG5Zel9wSE5vX3djTWFlZTVsRE1jRkRUZ0wzaVZlZ2I4MktkMGtiLURxd1lFLW1zNFdZWlhoZEc0WEVqaVRsMjFxenNnbmV1MUpQeUpuSlVDMDkzMllaOTV3?oc=5",
+          "source": "dicardiology.com",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T23:53:48Z",
+          "summary": "HOPPR Introduces New AI Model for Chest CT Exams dicardiology.com",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "Duke Lands Four Spots in Federal AI Research Program",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQODNLWkE5eThLcng5eXdiNnRscGUwMU9FUmNqSTJMdlJ5WXJsNUxJMjM4UnJ5MVdtQ2tpbFpocXQ1X2taeG1WSGNjRVNMYU1kbXFiZGhZNEpRSDl5LVM5bDRkMkhPUnFMek1kM1MzWTJNbk1lZ25Yc3JfN1FYY000bDhrQ0JzeEk?oc=5",
+          "source": "Mirage News",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T20:26:00Z",
+          "summary": "Duke Lands Four Spots in Federal AI Research Program Mirage News",
+          "ethics_tags": [],
+          "trend_score": 0
         }
       ],
       "subcategories": [
         {
           "key": "evaluation",
           "label": "Evaluation & Safety",
-          "count": 5,
+          "count": 2,
           "folder_items": [
-            {
-              "title": "OpenEvoShield: Dual Non-Stationary Continual Defense for Open-World Multi-Agent System Attacks",
-              "link": "https://arxiv.org/abs/2607.19351",
-              "source": "arXiv",
-              "category": "research",
-              "category_label": "Research & Papers",
-              "published_display": "Jul 23, 2026",
-              "published_iso": "2026-07-23T04:00:00Z",
-              "summary": "arXiv:2607.19351v1 Announce Type: new Abstract: LLM-based multi-agent systems (LLM-MAS) are increasingly deployed in safety-critical applications, where adversaries inject malicious instructions through inter-agent communication to…",
-              "ethics_tags": [],
-              "trend_score": 105
-            },
-            {
-              "title": "NEXUS: Structured Runtime Safety for Tool-Using LLM Agents",
-              "link": "https://arxiv.org/abs/2607.19356",
-              "source": "arXiv",
-              "category": "research",
-              "category_label": "Research & Papers",
-              "published_display": "Jul 23, 2026",
-              "published_iso": "2026-07-23T04:00:00Z",
-              "summary": "arXiv:2607.19356v1 Announce Type: new Abstract: Tool-using LLM agents increasingly execute high-impact actions, making runtime safety monitoring essential. We present NEXUS (Neural EXecution Utility and Safety), a structured-plan safety…",
-              "ethics_tags": [],
-              "trend_score": 105
-            },
             {
               "title": "Nuclear-Sabotage Malware Benchmark Trips Up Most Frontier AI Models",
               "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQb1k0WGVMazR2eEhxeG5qVGNUeHFaa1VmdkYxTXAwd2d4ajBmREdnUnhWT2VEcmtjdEpiMTllM0JjUWRCeGFLU1NWVkVqdHFYM1YtZEU3bEZPVDBFNDhzSFh6S1M4NnByb016dmd5V3hCVXFuMDJld09GNkxnQkt3STAzMEtNNnNEWmZaT05BaXJEcHZhXzZhc1RIOTBqUdIBowFBVV95cUxPdF9sVm5wTmJIYXdrZ2JNS21EVE8wdFBtRS00YWxHZWRpNnVjOFNBNzhBRjZMUFZFUURDV015aGtqZF85a3otNkFYZi1Tc05tQlRUREJIWVN0Y1RMMWU0MzBZTWllYk5BS2txRUtrcTJNZjVlbHZkZ2hETWJhZ0JhV0R1WDZGUktnY2t4TzVuZTdCeEwtQTQ2NThocjZiTG5Hb1lZ?oc=5",
@@ -650,14 +646,28 @@
               "published_iso": "2026-07-23T12:42:12Z",
               "summary": "Nuclear-Sabotage Malware Benchmark Trips Up Most Frontier AI Models SecurityWeek",
               "ethics_tags": [],
-              "trend_score": 36
+              "trend_score": 34
+            },
+            {
+              "title": "Hybrid LSTM-Graph Neural Framework for Robust Financial Fraud Detection and Adversarial Resilience",
+              "link": "https://arxiv.org/abs/2607.19350",
+              "source": "arXiv",
+              "category": "research",
+              "category_label": "Research & Papers",
+              "published_display": "Jul 23, 2026",
+              "published_iso": "2026-07-23T04:00:00Z",
+              "summary": "arXiv:2607.19350v1 Announce Type: new Abstract: Financial institutions face significant challenges in detecting sophisticated money laundering patterns, such as smurfing and layering, due to extreme data imbalance (0.13% fraud rate) and…",
+              "ethics_tags": [
+                "Misinformation & Deepfakes"
+              ],
+              "trend_score": 0
             }
           ]
         },
         {
           "key": "language",
           "label": "Language Models",
-          "count": 2,
+          "count": 1,
           "folder_items": [
             {
               "title": "FineServe: A Fine-Grained Dataset and Characterization of Global LLM Serving Workloads",
@@ -670,62 +680,48 @@
               "summary": "arXiv:2607.19349v1 Announce Type: new Abstract: Large language models (LLMs) are increasingly deployed as always-on online services, making efficient LLM serving a critical systems challenge. Achieving low latency and high throughput under…",
               "ethics_tags": [],
               "trend_score": 0
-            },
-            {
-              "title": "Information Discernment in Large Language Models",
-              "link": "https://arxiv.org/abs/2607.19355",
-              "source": "arXiv",
-              "category": "research",
-              "category_label": "Research & Papers",
-              "published_display": "Jul 23, 2026",
-              "published_iso": "2026-07-23T04:00:00Z",
-              "summary": "arXiv:2607.19355v1 Announce Type: new Abstract: LLMs are increasingly used with external knowledge sources like the internet. Do they weigh information appropriately -- updating more for reliable sources (source discernment) and more when…",
-              "ethics_tags": [],
-              "trend_score": 0
             }
           ]
         },
         {
           "key": "applied",
           "label": "Applied AI",
-          "count": 7,
+          "count": 11,
           "folder_items": [
             {
-              "title": "AlphaSense Explores IPO as AI Research Platform Weighs Public Debut",
-              "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQSVQ4MEloT2kzOGFFa0YxOEk0M3BOOXpSaE9nSE9PRDd5UG11Xy1TMWhLa3BiWUpoQ3VqYXRxZ3FCSV8yZjJHOS1zSFFINllZTVZIVF9LdzFRa3RueHFSQXp2c0JEV1QzVGtDUUg3NnJPVEJpLWhXaVVmNms3NDV6bWtlQlVaOUp3ZXFwTjhjclo0RUJMdTJyWjFGcGpXc3ZiY0NHTXdaNHA5Zw?oc=5",
-              "source": "citybiz",
+              "title": "HOPPR Introduces New AI Model for Chest CT Exams",
+              "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNUU8tWk5ZVHgxMGtuVUFMSmRQWkF3SGF1YUJGOU9LQzE2Vno0WHdvZG5Zel9wSE5vX3djTWFlZTVsRE1jRkRUZ0wzaVZlZ2I4MktkMGtiLURxd1lFLW1zNFdZWlhoZEc0WEVqaVRsMjFxenNnbmV1MUpQeUpuSlVDMDkzMllaOTV3?oc=5",
+              "source": "dicardiology.com",
               "category": "research",
               "category_label": "Research & Papers",
               "published_display": "Jul 23, 2026",
-              "published_iso": "2026-07-23T17:54:54Z",
-              "summary": "AlphaSense Explores IPO as AI Research Platform Weighs Public Debut citybiz",
+              "published_iso": "2026-07-23T23:53:48Z",
+              "summary": "HOPPR Introduces New AI Model for Chest CT Exams dicardiology.com",
               "ethics_tags": [],
               "trend_score": 0
             },
             {
-              "title": "UNESCO and LG AI Research Launch Global MOOC on the Ethics of AI",
-              "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOS256RTBsT0lHUWR3QkxoMml2U1QyUS1SVS1mQXlZd3ZaUldGSWwyMGxhdHYxYTFycC1ET19Xc1RvaTg0X2JOV1NxVUN4QXhBNHZWY3ppQ1o5cVhBZ1FPcGQ2UXljTWFjVW9zN05DdUZPUXU3X0tkMHN2NXM0a0NJWE45bVdTbXp4U3ZLenFZNTVMNzQ?oc=5",
-              "source": "UNESCO",
+              "title": "Duke Lands Four Spots in Federal AI Research Program",
+              "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQODNLWkE5eThLcng5eXdiNnRscGUwMU9FUmNqSTJMdlJ5WXJsNUxJMjM4UnJ5MVdtQ2tpbFpocXQ1X2taeG1WSGNjRVNMYU1kbXFiZGhZNEpRSDl5LVM5bDRkMkhPUnFMek1kM1MzWTJNbk1lZ25Yc3JfN1FYY000bDhrQ0JzeEk?oc=5",
+              "source": "Mirage News",
               "category": "research",
               "category_label": "Research & Papers",
               "published_display": "Jul 23, 2026",
-              "published_iso": "2026-07-23T17:33:30Z",
-              "summary": "UNESCO and LG AI Research Launch Global MOOC on the Ethics of AI UNESCO",
+              "published_iso": "2026-07-23T20:26:00Z",
+              "summary": "Duke Lands Four Spots in Federal AI Research Program Mirage News",
               "ethics_tags": [],
               "trend_score": 0
             },
             {
-              "title": "IonQ (IONQ) Says Quantum AI Research Cuts Energy Use Beyond 34 Qubits",
-              "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPdmFoY3lDVkpQcl9mT3EyS0xCNGhUZTd2dzFqaUZsdWRScTZ1N1BRRjZ3NFJJbUpmbW0tNF80TVBNM1JXYWlaQTJVb0FPTFRCQnJhSXpjX3J4SFR4OHktZURUUVVTcWg2LXNJRjdVVThVeDZxTkVEWWl0Nmo5UDl5MlN4a1dZdldTc2ZTTlQ0VXdtTHM?oc=5",
-              "source": "Yahoo Finance",
+              "title": "Fermilab Expands AI Research Role Through DOE Genesis Mission",
+              "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSlR1dW9PLXdYYXgxdVFudnU1Tk1yX24yb2NhWUhodDRrTHk0ekgxQUJrYU9tMnJ3VUhaSHdqZDlYMTlzVVRoY19kdmVaRWtrTDZPM2hrVEZaUk1BOVlzdkFkVmU0UVJHYWt3U0VWX05oU0VBX3o3LVF4djZ3V1ZCOV8tRjRCaUtYR2hPYWJpdzZmUGJGU1gwd01xb21RX2tt?oc=5",
+              "source": "HPCwire",
               "category": "research",
               "category_label": "Research & Papers",
               "published_display": "Jul 23, 2026",
-              "published_iso": "2026-07-23T14:10:00Z",
-              "summary": "IonQ (IONQ) Says Quantum AI Research Cuts Energy Use Beyond 34 Qubits Yahoo Finance",
-              "ethics_tags": [
-                "Energy & Environment"
-              ],
+              "published_iso": "2026-07-23T20:15:22Z",
+              "summary": "Fermilab Expands AI Research Role Through DOE Genesis Mission HPCwire",
+              "ethics_tags": [],
               "trend_score": 0
             }
           ]
@@ -735,6 +731,90 @@
     "community": {
       "label": "Community & Discussion",
       "items": [
+        {
+          "title": "AI tool may help doctors, but sample size too small",
+          "link": "https://text.npr.org/g-s1-134929",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 24, 2026",
+          "published_iso": "2026-07-24T03:03:22Z",
+          "summary": "1 points, 1 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "Letterpaths: Or how LLMs can be good even when they're bad",
+          "link": "https://www.robinlinacre.com/letterpaths_llms_good_even_when_bad/",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 24, 2026",
+          "published_iso": "2026-07-24T00:58:35Z",
+          "summary": "1 points, 0 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "Show HN: Turo – An Aggressive Token-Saving Proxy for CLI AI Agents",
+          "link": "https://github.com/kdeps/turo",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 24, 2026",
+          "published_iso": "2026-07-24T00:32:12Z",
+          "summary": "2 points, 1 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 58
+        },
+        {
+          "title": "Middleware that catches when LLM conversations slowly drift off-topic",
+          "link": "https://github.com/ojki74/hallucinatoff",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T23:39:19Z",
+          "summary": "1 points, 0 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "Show HN: LLM-budget-cap – atomic Redis spend cap for LLM APIs",
+          "link": "https://github.com/Rentheria/llm-budget-cap",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T20:47:50Z",
+          "summary": "1 points, 0 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "Show HN: Open-artifact – view and share your LLM docs and artifacts",
+          "link": "https://github.com/iBala/open-artifact",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T20:03:44Z",
+          "summary": "1 points, 0 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "LLM Based Education Games Will Be a Big Deal",
+          "link": "https://resobscura.substack.com/p/llm-based-educational-games-will",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T19:57:17Z",
+          "summary": "1 points, 0 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
         {
           "title": "Frontier-class LLM inference on a laptop CPU",
           "link": "https://github.com/arizqi/cpubrrr",
@@ -748,30 +828,6 @@
           "trend_score": 0
         },
         {
-          "title": "Stronger AI agents did more damage, not less",
-          "link": "https://www.agentx-core.com/blog/stronger-agents-more-dangerous-unguarded",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T18:57:55Z",
-          "summary": "3 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 63
-        },
-        {
-          "title": "Sierra acquires TakeOff, the long-horizon AI agent platform",
-          "link": "https://runtimewire.com/article/sierra-acquires-takeoff-long-horizon-ai-agents",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T18:55:09Z",
-          "summary": "3 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 63
-        },
-        {
           "title": "A distillation primer and why banning it would not halt progress of Chinese LLMs",
           "link": "https://twitter.com/peterjliu/status/2080360381462007898",
           "source": "Web",
@@ -782,42 +838,6 @@
           "summary": "3 points, 0 comments on Hacker News.",
           "ethics_tags": [],
           "trend_score": 0
-        },
-        {
-          "title": "Claude Opus 5",
-          "link": "https://artificialanalysis.ai/models/claude-opus-5",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T18:01:03Z",
-          "summary": "3 points, 1 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 17
-        },
-        {
-          "title": "Accidental data loss in Claude Code and OpenAI Codex: when AI deletes user files",
-          "link": "https://firasd.substack.com/p/accidental-data-loss-in-claude-code-openai-codex-ai-agent-harness-file-deletion",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T17:48:20Z",
-          "summary": "2 points, 1 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 75
-        },
-        {
-          "title": "Fail-closed enforcement for AI agents: deny what you cannot verify",
-          "link": "https://github.com/Fame510/SHACKLE",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T17:45:16Z",
-          "summary": "1 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 63
         },
         {
           "title": "You don't need an LLM to cluster LLM traces",
@@ -853,19 +873,7 @@
           "published_iso": "2026-07-23T17:12:30Z",
           "summary": "3 points, 0 comments on Hacker News.",
           "ethics_tags": [],
-          "trend_score": 63
-        },
-        {
-          "title": "Show HN: Fleet – drive a fleet of Claude Code/Codex agents from Telegram",
-          "link": "https://github.com/sand0vvv/fleet",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T17:03:00Z",
-          "summary": "1 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 80
+          "trend_score": 58
         },
         {
           "title": "LLMs break down in funny ways when told the Jacobian Conjecture counterargument",
@@ -890,75 +898,63 @@
           "summary": "2 points, 0 comments on Hacker News.",
           "ethics_tags": [],
           "trend_score": 0
-        },
-        {
-          "title": "A paper about LLMs' internal \"workspace\" just found bugs in our prompts",
-          "link": "https://www.hamo.ai/blog/mechanics-of-awareness/",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T15:27:19Z",
-          "summary": "1 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 0
         }
       ],
       "folder_items": [
         {
-          "title": "Show HN: Fleet – drive a fleet of Claude Code/Codex agents from Telegram",
-          "link": "https://github.com/sand0vvv/fleet",
+          "title": "Show HN: Turo – An Aggressive Token-Saving Proxy for CLI AI Agents",
+          "link": "https://github.com/kdeps/turo",
           "source": "Web",
           "category": "community",
           "category_label": "Community & Discussion",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T17:03:00Z",
-          "summary": "1 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 80
-        },
-        {
-          "title": "Accidental data loss in Claude Code and OpenAI Codex: when AI deletes user files",
-          "link": "https://firasd.substack.com/p/accidental-data-loss-in-claude-code-openai-codex-ai-agent-harness-file-deletion",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T17:48:20Z",
+          "published_display": "Jul 24, 2026",
+          "published_iso": "2026-07-24T00:32:12Z",
           "summary": "2 points, 1 comments on Hacker News.",
           "ethics_tags": [],
-          "trend_score": 75
+          "trend_score": 58
         },
         {
-          "title": "Stronger AI agents did more damage, not less",
-          "link": "https://www.agentx-core.com/blog/stronger-agents-more-dangerous-unguarded",
+          "title": "Show HN: Setoku – Self-hosted knowledge server for AI agents",
+          "link": "https://setoku.com/",
           "source": "Web",
           "category": "community",
           "category_label": "Community & Discussion",
           "published_display": "Jul 23, 2026",
-          "published_iso": "2026-07-23T18:57:55Z",
+          "published_iso": "2026-07-23T17:12:30Z",
           "summary": "3 points, 0 comments on Hacker News.",
           "ethics_tags": [],
-          "trend_score": 63
+          "trend_score": 58
+        },
+        {
+          "title": "AI tool may help doctors, but sample size too small",
+          "link": "https://text.npr.org/g-s1-134929",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Jul 24, 2026",
+          "published_iso": "2026-07-24T03:03:22Z",
+          "summary": "1 points, 1 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 0
         }
       ],
       "subcategories": [
         {
           "key": "tools",
           "label": "Tools & Projects",
-          "count": 2,
+          "count": 5,
           "folder_items": [
             {
-              "title": "Show HN: Fleet – drive a fleet of Claude Code/Codex agents from Telegram",
-              "link": "https://github.com/sand0vvv/fleet",
+              "title": "Show HN: Turo – An Aggressive Token-Saving Proxy for CLI AI Agents",
+              "link": "https://github.com/kdeps/turo",
               "source": "Web",
               "category": "community",
               "category_label": "Community & Discussion",
-              "published_display": "Jul 23, 2026",
-              "published_iso": "2026-07-23T17:03:00Z",
-              "summary": "1 points, 0 comments on Hacker News.",
+              "published_display": "Jul 24, 2026",
+              "published_iso": "2026-07-24T00:32:12Z",
+              "summary": "2 points, 1 comments on Hacker News.",
               "ethics_tags": [],
-              "trend_score": 80
+              "trend_score": 58
             },
             {
               "title": "Show HN: Setoku – Self-hosted knowledge server for AI agents",
@@ -970,88 +966,62 @@
               "published_iso": "2026-07-23T17:12:30Z",
               "summary": "3 points, 0 comments on Hacker News.",
               "ethics_tags": [],
-              "trend_score": 63
-            }
-          ]
-        },
-        {
-          "key": "research",
-          "label": "Research Discussion",
-          "count": 1,
-          "folder_items": [
+              "trend_score": 58
+            },
             {
-              "title": "A paper about LLMs' internal \"workspace\" just found bugs in our prompts",
-              "link": "https://www.hamo.ai/blog/mechanics-of-awareness/",
+              "title": "AI tool may help doctors, but sample size too small",
+              "link": "https://text.npr.org/g-s1-134929",
               "source": "Web",
               "category": "community",
               "category_label": "Community & Discussion",
-              "published_display": "Jul 23, 2026",
-              "published_iso": "2026-07-23T15:27:19Z",
-              "summary": "1 points, 0 comments on Hacker News.",
+              "published_display": "Jul 24, 2026",
+              "published_iso": "2026-07-24T03:03:22Z",
+              "summary": "1 points, 1 comments on Hacker News.",
               "ethics_tags": [],
               "trend_score": 0
             }
           ]
         },
         {
-          "key": "industry",
-          "label": "Industry Debate",
-          "count": 1,
-          "folder_items": [
-            {
-              "title": "Accidental data loss in Claude Code and OpenAI Codex: when AI deletes user files",
-              "link": "https://firasd.substack.com/p/accidental-data-loss-in-claude-code-openai-codex-ai-agent-harness-file-deletion",
-              "source": "Web",
-              "category": "community",
-              "category_label": "Community & Discussion",
-              "published_display": "Jul 23, 2026",
-              "published_iso": "2026-07-23T17:48:20Z",
-              "summary": "2 points, 1 comments on Hacker News.",
-              "ethics_tags": [],
-              "trend_score": 75
-            }
-          ]
-        },
-        {
           "key": "pulse",
           "label": "Community Pulse",
-          "count": 10,
+          "count": 9,
           "folder_items": [
             {
-              "title": "Stronger AI agents did more damage, not less",
-              "link": "https://www.agentx-core.com/blog/stronger-agents-more-dangerous-unguarded",
+              "title": "Letterpaths: Or how LLMs can be good even when they're bad",
+              "link": "https://www.robinlinacre.com/letterpaths_llms_good_even_when_bad/",
               "source": "Web",
               "category": "community",
               "category_label": "Community & Discussion",
-              "published_display": "Jul 23, 2026",
-              "published_iso": "2026-07-23T18:57:55Z",
-              "summary": "3 points, 0 comments on Hacker News.",
-              "ethics_tags": [],
-              "trend_score": 63
-            },
-            {
-              "title": "Sierra acquires TakeOff, the long-horizon AI agent platform",
-              "link": "https://runtimewire.com/article/sierra-acquires-takeoff-long-horizon-ai-agents",
-              "source": "Web",
-              "category": "community",
-              "category_label": "Community & Discussion",
-              "published_display": "Jul 23, 2026",
-              "published_iso": "2026-07-23T18:55:09Z",
-              "summary": "3 points, 0 comments on Hacker News.",
-              "ethics_tags": [],
-              "trend_score": 63
-            },
-            {
-              "title": "Fail-closed enforcement for AI agents: deny what you cannot verify",
-              "link": "https://github.com/Fame510/SHACKLE",
-              "source": "Web",
-              "category": "community",
-              "category_label": "Community & Discussion",
-              "published_display": "Jul 23, 2026",
-              "published_iso": "2026-07-23T17:45:16Z",
+              "published_display": "Jul 24, 2026",
+              "published_iso": "2026-07-24T00:58:35Z",
               "summary": "1 points, 0 comments on Hacker News.",
               "ethics_tags": [],
-              "trend_score": 63
+              "trend_score": 0
+            },
+            {
+              "title": "Middleware that catches when LLM conversations slowly drift off-topic",
+              "link": "https://github.com/ojki74/hallucinatoff",
+              "source": "Web",
+              "category": "community",
+              "category_label": "Community & Discussion",
+              "published_display": "Jul 23, 2026",
+              "published_iso": "2026-07-23T23:39:19Z",
+              "summary": "1 points, 0 comments on Hacker News.",
+              "ethics_tags": [],
+              "trend_score": 0
+            },
+            {
+              "title": "LLM Based Education Games Will Be a Big Deal",
+              "link": "https://resobscura.substack.com/p/llm-based-educational-games-will",
+              "source": "Web",
+              "category": "community",
+              "category_label": "Community & Discussion",
+              "published_display": "Jul 23, 2026",
+              "published_iso": "2026-07-23T19:57:17Z",
+              "summary": "1 points, 0 comments on Hacker News.",
+              "ethics_tags": [],
+              "trend_score": 0
             }
           ]
         }
@@ -1060,6 +1030,30 @@
     "business": {
       "label": "Business & Funding",
       "items": [
+        {
+          "title": "Inside China’s All-Out Push to Catch Up With American AI Chips",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1pRUk2aURfSTVLeUZzMEszM3JWUG9kS2JwWTRMSmxXT2RJRzBMaUhCZE84bElMWTNhV2ZJd3MxcmRrd0YxMWJEYTg0OE91TjAtRmxJUklfckJEVGJBWGhqXzJqQTVERFR6TTB3Mg?oc=5",
+          "source": "WSJ",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Jul 24, 2026",
+          "published_iso": "2026-07-24T01:00:29Z",
+          "summary": "Inside China’s All-Out Push to Catch Up With American AI Chips WSJ",
+          "ethics_tags": [],
+          "trend_score": 23
+        },
+        {
+          "title": "AMD Advancing AI 2026: Top News On AI Chips, CPUs, Robotics",
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNR2FKeTFZZXdCSzBSbldlemFKOS16ZWVDOWJMY2hIQi1hcFdfRnZuaTdZY0E5cXgteFItbTZZMjVIdDUycnlaMl9WZ1pOd3B5WE9oWjBoRkM2NGVOd25VRWhRbUhia3EzMlE3RHoxZkF2VGlMajZxYkxHd0JSWHN3ZVdpOXJZUi1SRGJDekhCRlZYVkU?oc=5",
+          "source": "crn.com",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T22:32:00Z",
+          "summary": "AMD Advancing AI 2026: Top News On AI Chips, CPUs, Robotics crn.com",
+          "ethics_tags": [],
+          "trend_score": 23
+        },
         {
           "title": "Samsung Reportedly Weighs €1B Mistral AI Investment",
           "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQajNmWEZranBLc2sxdTlpY2RSRWppUjB4WjJDZi1WaTlQZjkteFFlMjFNc1dKOVc5OGJNck85UEZPb0pWa21VbXJheW14UWd2N0VCRXlZQ3d5V3dsY0V3OTZRSkc1Mm5xTXA2YkdyRUhJM2txTzZxR2VpdE92VlFjVF9lcw?oc=5",
@@ -1071,6 +1065,20 @@
           "summary": "Samsung Reportedly Weighs €1B Mistral AI Investment TechRepublic",
           "ethics_tags": [],
           "trend_score": 0
+        },
+        {
+          "title": "Meta and OpenAI commit 12 gigawatts to AMD's new AI chips as Nvidia's grip on data centers starts to slip",
+          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNUkFOZG5JWlRIblJ6dXk0a3pOZjQyRWdKQ1B3cG92MUdYY1VrMzltZ1BFdnE0bVBsbTI1bGdFd3dXT3hPM1lpYm9uejlqTkxQdmhIeWRnRXZVdU8zX21FMkgyOExmc09pR2tfNFF0cWlYMWVkeHpNNEI1cjFOa3NYNDBORkV5R0VwOWNFUnYtRFkwQk5Gdm9nV0lVTG9qc0RlaUYwd2RPRXNVa2g5VHl5SmhYVllMQmJBZHUzRm9uT3cyVm1GT2c4OWNYaw?oc=5",
+          "source": "Startup Fortune",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T17:32:35Z",
+          "summary": "Meta and OpenAI commit 12 gigawatts to AMD's new AI chips as Nvidia's grip on data centers starts to slip Startup Fortune",
+          "ethics_tags": [
+            "Energy & Environment"
+          ],
+          "trend_score": 95
         },
         {
           "title": "Amazon cuts jobs within artificial intelligence unit amid billions in AI investment",
@@ -1144,7 +1152,7 @@
           "published_iso": "2026-07-23T00:03:01Z",
           "summary": "AI IPO Race: Markets Track OpenAI vs. Anthropic StartupHub.ai",
           "ethics_tags": [],
-          "trend_score": 116
+          "trend_score": 117
         },
         {
           "title": "AMD (AMD) Lands $5 Billion Anthropic Partnership For AI Chips",
@@ -1156,7 +1164,7 @@
           "published_iso": "2026-07-22T22:10:44Z",
           "summary": "AMD (AMD) Lands $5 Billion Anthropic Partnership For AI Chips Yahoo Finance",
           "ethics_tags": [],
-          "trend_score": 81
+          "trend_score": 80
         },
         {
           "title": "OpenAI Says AI Hacked Hugging Face During Model Testing",
@@ -1165,10 +1173,10 @@
           "category": "business",
           "category_label": "Business & Funding",
           "published_display": "Jul 22, 2026",
-          "published_iso": "2026-07-22T20:11:48Z",
+          "published_iso": "2026-07-22T22:09:28Z",
           "summary": "OpenAI Says AI Hacked Hugging Face During Model Testing LAmag",
           "ethics_tags": [],
-          "trend_score": 58
+          "trend_score": 60
         },
         {
           "title": "AMD, Anthropic Strike AI Chips Deal with up to 2 GW of MI450 GPU Deployments",
@@ -1177,12 +1185,12 @@
           "category": "business",
           "category_label": "Business & Funding",
           "published_display": "Jul 22, 2026",
-          "published_iso": "2026-07-22T14:14:05Z",
+          "published_iso": "2026-07-22T14:13:49Z",
           "summary": "AMD, Anthropic Strike AI Chips Deal with up to 2 GW of MI450 GPU Deployments TheEnergyMag",
           "ethics_tags": [
             "Energy & Environment"
           ],
-          "trend_score": 81
+          "trend_score": 80
         },
         {
           "title": "Samsung Eyes Major Mistral AI Investment",
@@ -1195,57 +1203,9 @@
           "summary": "Samsung Eyes Major Mistral AI Investment TradingView",
           "ethics_tags": [],
           "trend_score": 0
-        },
-        {
-          "title": "OpenAI agent hacks another AI startup in security test",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNVm0tN0xCS19WbHdXcW5sdUswa0RYenJUdE52aXpQLWJIbTVQelVoU2M5SzEza2p6TDdhU3lxUExZM2N1UkQwWTgteEhIR0Y0TVVKRVllSnIyeDYzeGp4aWxpakZzRTg1VzJ2bk1Hb01EQ3Via2F0Q2xLZzBZNE5KampFUmZSNnprY0RQLWlsOWZaVWkwSWM5YmZ0YjZRUQ?oc=5",
-          "source": "Semafor",
-          "category": "business",
-          "category_label": "Business & Funding",
-          "published_display": "Jul 22, 2026",
-          "published_iso": "2026-07-22T12:33:00Z",
-          "summary": "OpenAI agent hacks another AI startup in security test Semafor",
-          "ethics_tags": [],
-          "trend_score": 121
-        },
-        {
-          "title": "AI Chips Update - NVIDIA and Wowza Tackle Synthetic Video Threats Globally",
-          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOUnI5aDYyRGVEdURmN0pVUXdNMzNNUVM5THkyeER3R0lHVEhuWWh3VWdEUjlwTHlPaTl5UHZiYWJZdW9sTFhNNjR0VWpnYlh1enJlTDJfNGdLaG01dU5QbUU5UVRibnJPSk9yMzRXeUVWMVV1azZ1dFl5NmE3b0FJcmhqNA?oc=5",
-          "source": "Yahoo Finance Australia",
-          "category": "business",
-          "category_label": "Business & Funding",
-          "published_display": "Jul 22, 2026",
-          "published_iso": "2026-07-22T11:40:23Z",
-          "summary": "AI Chips Update - NVIDIA and Wowza Tackle Synthetic Video Threats Globally Yahoo Finance Australia",
-          "ethics_tags": [],
-          "trend_score": 36
-        },
-        {
-          "title": "Market Chatter: Samsung Electronics in Talks to Invest in AI Startup Mistral",
-          "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOcjFPTWR1cEJFa1dXb0FxeVF0ZVhhMFJiUjduMXNpNF92WERmRDNBUUZzUTkzYkpUaGdSV0pCOUJRQ2lIM2JpS253V1FOTTRiUS1zdENzQmlTMEtrdXhNUU9tWWVTazFMQzBPYW5teDJGSVZOWVQ5dzdkdzRVVmVYZlYteUYtWVM4cTVsbEx3bC1vZllDUWN6cVZzS1RmYl9ra1RBLTAwa0hBZE5TeEhuU0FXdDV4VWFuZ2N5ZDNWeTJfOGU2NWxQQThqSElueWl5U2c?oc=5",
-          "source": "Moomoo",
-          "category": "business",
-          "category_label": "Business & Funding",
-          "published_display": "Jul 22, 2026",
-          "published_iso": "2026-07-22T11:07:26Z",
-          "summary": "Market Chatter: Samsung Electronics in Talks to Invest in AI Startup Mistral Moomoo",
-          "ethics_tags": [],
-          "trend_score": 0
         }
       ],
       "folder_items": [
-        {
-          "title": "OpenAI agent hacks another AI startup in security test",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNVm0tN0xCS19WbHdXcW5sdUswa0RYenJUdE52aXpQLWJIbTVQelVoU2M5SzEza2p6TDdhU3lxUExZM2N1UkQwWTgteEhIR0Y0TVVKRVllSnIyeDYzeGp4aWxpakZzRTg1VzJ2bk1Hb01EQ3Via2F0Q2xLZzBZNE5KampFUmZSNnprY0RQLWlsOWZaVWkwSWM5YmZ0YjZRUQ?oc=5",
-          "source": "Semafor",
-          "category": "business",
-          "category_label": "Business & Funding",
-          "published_display": "Jul 22, 2026",
-          "published_iso": "2026-07-22T12:33:00Z",
-          "summary": "OpenAI agent hacks another AI startup in security test Semafor",
-          "ethics_tags": [],
-          "trend_score": 121
-        },
         {
           "title": "AI IPO Race: Markets Track OpenAI vs. Anthropic",
           "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQSVMwYTNLeTZ6TWs4VEFjV0ZMZENjVGhtUVJIVzR2TDFqZDMxSElINC1oOHBXQ1NkSlN0NWJaYV96eTIxdE91NGgwNEthcWZWNmFvb0lxMEpEaHQ5SkR4UlFlVjFsVEFjYnhVMjZVOVZMS09WaVhSODlVVERZQm45TzVyamZwamJTVjZDX3ZfWlhwaW91cUVnb1MtbVgxMExORHpPRmxn?oc=5",
@@ -1256,7 +1216,21 @@
           "published_iso": "2026-07-23T00:03:01Z",
           "summary": "AI IPO Race: Markets Track OpenAI vs. Anthropic StartupHub.ai",
           "ethics_tags": [],
-          "trend_score": 116
+          "trend_score": 117
+        },
+        {
+          "title": "Meta and OpenAI commit 12 gigawatts to AMD's new AI chips as Nvidia's grip on data centers starts to slip",
+          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNUkFOZG5JWlRIblJ6dXk0a3pOZjQyRWdKQ1B3cG92MUdYY1VrMzltZ1BFdnE0bVBsbTI1bGdFd3dXT3hPM1lpYm9uejlqTkxQdmhIeWRnRXZVdU8zX21FMkgyOExmc09pR2tfNFF0cWlYMWVkeHpNNEI1cjFOa3NYNDBORkV5R0VwOWNFUnYtRFkwQk5Gdm9nV0lVTG9qc0RlaUYwd2RPRXNVa2g5VHl5SmhYVllMQmJBZHUzRm9uT3cyVm1GT2c4OWNYaw?oc=5",
+          "source": "Startup Fortune",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T17:32:35Z",
+          "summary": "Meta and OpenAI commit 12 gigawatts to AMD's new AI chips as Nvidia's grip on data centers starts to slip Startup Fortune",
+          "ethics_tags": [
+            "Energy & Environment"
+          ],
+          "trend_score": 95
         },
         {
           "title": "AMD (AMD) Lands $5 Billion Anthropic Partnership For AI Chips",
@@ -1268,14 +1242,14 @@
           "published_iso": "2026-07-22T22:10:44Z",
           "summary": "AMD (AMD) Lands $5 Billion Anthropic Partnership For AI Chips Yahoo Finance",
           "ethics_tags": [],
-          "trend_score": 81
+          "trend_score": 80
         }
       ],
       "subcategories": [
         {
           "key": "funding",
           "label": "Funding & Venture",
-          "count": 4,
+          "count": 3,
           "folder_items": [
             {
               "title": "Samsung Reportedly Weighs €1B Mistral AI Investment",
@@ -1332,7 +1306,7 @@
               "published_iso": "2026-07-23T00:03:01Z",
               "summary": "AI IPO Race: Markets Track OpenAI vs. Anthropic StartupHub.ai",
               "ethics_tags": [],
-              "trend_score": 116
+              "trend_score": 117
             },
             {
               "title": "AMD, Anthropic Strike AI Chips Deal with up to 2 GW of MI450 GPU Deployments",
@@ -1341,12 +1315,12 @@
               "category": "business",
               "category_label": "Business & Funding",
               "published_display": "Jul 22, 2026",
-              "published_iso": "2026-07-22T14:14:05Z",
+              "published_iso": "2026-07-22T14:13:49Z",
               "summary": "AMD, Anthropic Strike AI Chips Deal with up to 2 GW of MI450 GPU Deployments TheEnergyMag",
               "ethics_tags": [
                 "Energy & Environment"
               ],
-              "trend_score": 81
+              "trend_score": 80
             },
             {
               "title": "Qualcomm Just Signed Deals With 3 Major Hyperscalers for AI Chips. Is This the \"Hidden\" AI Stock Wall Street Keeps Overlooking?",
@@ -1368,23 +1342,25 @@
           "count": 1,
           "folder_items": [
             {
-              "title": "OpenAI agent hacks another AI startup in security test",
-              "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNVm0tN0xCS19WbHdXcW5sdUswa0RYenJUdE52aXpQLWJIbTVQelVoU2M5SzEza2p6TDdhU3lxUExZM2N1UkQwWTgteEhIR0Y0TVVKRVllSnIyeDYzeGp4aWxpakZzRTg1VzJ2bk1Hb01EQ3Via2F0Q2xLZzBZNE5KampFUmZSNnprY0RQLWlsOWZaVWkwSWM5YmZ0YjZRUQ?oc=5",
-              "source": "Semafor",
+              "title": "Meta and OpenAI commit 12 gigawatts to AMD's new AI chips as Nvidia's grip on data centers starts to slip",
+              "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNUkFOZG5JWlRIblJ6dXk0a3pOZjQyRWdKQ1B3cG92MUdYY1VrMzltZ1BFdnE0bVBsbTI1bGdFd3dXT3hPM1lpYm9uejlqTkxQdmhIeWRnRXZVdU8zX21FMkgyOExmc09pR2tfNFF0cWlYMWVkeHpNNEI1cjFOa3NYNDBORkV5R0VwOWNFUnYtRFkwQk5Gdm9nV0lVTG9qc0RlaUYwd2RPRXNVa2g5VHl5SmhYVllMQmJBZHUzRm9uT3cyVm1GT2c4OWNYaw?oc=5",
+              "source": "Startup Fortune",
               "category": "business",
               "category_label": "Business & Funding",
-              "published_display": "Jul 22, 2026",
-              "published_iso": "2026-07-22T12:33:00Z",
-              "summary": "OpenAI agent hacks another AI startup in security test Semafor",
-              "ethics_tags": [],
-              "trend_score": 121
+              "published_display": "Jul 23, 2026",
+              "published_iso": "2026-07-23T17:32:35Z",
+              "summary": "Meta and OpenAI commit 12 gigawatts to AMD's new AI chips as Nvidia's grip on data centers starts to slip Startup Fortune",
+              "ethics_tags": [
+                "Energy & Environment"
+              ],
+              "trend_score": 95
             }
           ]
         },
         {
           "key": "compute",
           "label": "Chips & Compute",
-          "count": 4,
+          "count": 5,
           "folder_items": [
             {
               "title": "AMD (AMD) Lands $5 Billion Anthropic Partnership For AI Chips",
@@ -1396,29 +1372,29 @@
               "published_iso": "2026-07-22T22:10:44Z",
               "summary": "AMD (AMD) Lands $5 Billion Anthropic Partnership For AI Chips Yahoo Finance",
               "ethics_tags": [],
-              "trend_score": 81
+              "trend_score": 80
             },
             {
-              "title": "AI Chips Update - NVIDIA and Wowza Tackle Synthetic Video Threats Globally",
-              "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOUnI5aDYyRGVEdURmN0pVUXdNMzNNUVM5THkyeER3R0lHVEhuWWh3VWdEUjlwTHlPaTl5UHZiYWJZdW9sTFhNNjR0VWpnYlh1enJlTDJfNGdLaG01dU5QbUU5UVRibnJPSk9yMzRXeUVWMVV1azZ1dFl5NmE3b0FJcmhqNA?oc=5",
-              "source": "Yahoo Finance Australia",
+              "title": "Inside China’s All-Out Push to Catch Up With American AI Chips",
+              "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1pRUk2aURfSTVLeUZzMEszM3JWUG9kS2JwWTRMSmxXT2RJRzBMaUhCZE84bElMWTNhV2ZJd3MxcmRrd0YxMWJEYTg0OE91TjAtRmxJUklfckJEVGJBWGhqXzJqQTVERFR6TTB3Mg?oc=5",
+              "source": "WSJ",
               "category": "business",
               "category_label": "Business & Funding",
-              "published_display": "Jul 22, 2026",
-              "published_iso": "2026-07-22T11:40:23Z",
-              "summary": "AI Chips Update - NVIDIA and Wowza Tackle Synthetic Video Threats Globally Yahoo Finance Australia",
+              "published_display": "Jul 24, 2026",
+              "published_iso": "2026-07-24T01:00:29Z",
+              "summary": "Inside China’s All-Out Push to Catch Up With American AI Chips WSJ",
               "ethics_tags": [],
-              "trend_score": 36
+              "trend_score": 23
             },
             {
-              "title": "CrowdStrike taps Cerebras Systems AI chips for cybersecurity at speed",
-              "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOXzZSbzFoNWZtUDkyaFFJZ0E2RURJVWpvQXJIZktHS3dGc3p0OU5FMGE0SkkyZWVZQjJVLTlPTTV6UE4xaXZTazFia2pfcThxc202M1lEZVhUQUNYUVNPa28tUE9fbk5PU0x6VWt2WkNQbXV4cjRQQkFYNy1PazJ3R1hsZzdCazI3cEgxME9vajRFVlNYSGZ4VkxQRjQxUUk1N0ppMw?oc=5",
-              "source": "SDxCentral",
+              "title": "AMD Advancing AI 2026: Top News On AI Chips, CPUs, Robotics",
+              "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNR2FKeTFZZXdCSzBSbldlemFKOS16ZWVDOWJMY2hIQi1hcFdfRnZuaTdZY0E5cXgteFItbTZZMjVIdDUycnlaMl9WZ1pOd3B5WE9oWjBoRkM2NGVOd25VRWhRbUhia3EzMlE3RHoxZkF2VGlMajZxYkxHd0JSWHN3ZVdpOXJZUi1SRGJDekhCRlZYVkU?oc=5",
+              "source": "crn.com",
               "category": "business",
               "category_label": "Business & Funding",
               "published_display": "Jul 23, 2026",
-              "published_iso": "2026-07-23T13:33:36Z",
-              "summary": "CrowdStrike taps Cerebras Systems AI chips for cybersecurity at speed SDxCentral",
+              "published_iso": "2026-07-23T22:32:00Z",
+              "summary": "AMD Advancing AI 2026: Top News On AI Chips, CPUs, Robotics crn.com",
               "ethics_tags": [],
               "trend_score": 23
             }
@@ -1436,10 +1412,10 @@
               "category": "business",
               "category_label": "Business & Funding",
               "published_display": "Jul 22, 2026",
-              "published_iso": "2026-07-22T20:11:48Z",
+              "published_iso": "2026-07-22T22:09:28Z",
               "summary": "OpenAI Says AI Hacked Hugging Face During Model Testing LAmag",
               "ethics_tags": [],
-              "trend_score": 58
+              "trend_score": 60
             }
           ]
         }
@@ -1460,7 +1436,7 @@
           "ethics_tags": [
             "Safety & Alignment"
           ],
-          "trend_score": 100
+          "trend_score": 99
         },
         {
           "title": "A Path Forward on AI Safety for the United States and China - Carnegie Endowment for International Peace",
@@ -1489,6 +1465,18 @@
             "Regulation & Governance"
           ],
           "trend_score": 17
+        },
+        {
+          "title": "OpenAI's Hugging Face breach exposes AI's next safety challenge",
+          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5JNHRZUExMR3ZXMFdRRm9NRXhiaE8wZjExeFFPeDc1NGRGU0hhaVItdFhNN0NUbXJZeGFLTnY2NWFSQ1g3clRwWlhBQ3BTanBiUExMRjFRMmpaTW1WTmwyNmVnaHNWUVJRVHdTTnJ4SkVZZC1ka1c4U1dPaFY?oc=5",
+          "source": "Axios",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T09:03:45Z",
+          "summary": "OpenAI's Hugging Face breach exposes AI's next safety challenge Axios",
+          "ethics_tags": [],
+          "trend_score": 102
         },
         {
           "title": "China’s ambition to lead the world in AI safety begins breaking hearts",
@@ -1530,7 +1518,7 @@
           "ethics_tags": [
             "Copyright & IP"
           ],
-          "trend_score": 70
+          "trend_score": 57
         },
         {
           "title": "Britain Sets AI Safety Standards - Center for European Policy Analysis (CEPA)",
@@ -1546,20 +1534,6 @@
             "Regulation & Governance"
           ],
           "trend_score": 42
-        },
-        {
-          "title": "Anthropic to donate $20 million to US political group that supports AI regulation",
-          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQYjVuYzdvaWlCQnplaW5rS3FwcFNjOHpQT3plWjNtVkp5cXQ5eTlTcl9naTZ6WWpwR1FWdlROYTBhR0pRRHZXNzZiT0dDcTkzMmFaampfZzdEeWtEZVJ4SG8tbU5aQ0hrQmU5ZmJqcUh5bVNqM3ViX3Z6N2lUTHRnc2ZnVjNHcEFwblpQRUVnQ2pGTzl6SktMR2FtMURUeUY2ek5oa2IyVkJlR0V5RkZwSTZra1U4WlNGOUtFd2RFNWdheHR3Y0E?oc=5",
-          "source": "Reuters",
-          "category": "ethics",
-          "category_label": "Ethics & Society",
-          "published_display": "Jul 22, 2026",
-          "published_iso": "2026-07-22T19:16:56Z",
-          "summary": "Anthropic to donate $20 million to US political group that supports AI regulation Reuters",
-          "ethics_tags": [
-            "Regulation & Governance"
-          ],
-          "trend_score": 75
         },
         {
           "title": "Florida may tell school districts to create rules regarding AI safety",
@@ -1587,7 +1561,7 @@
           "ethics_tags": [
             "Regulation & Governance"
           ],
-          "trend_score": 75
+          "trend_score": 74
         },
         {
           "title": "America’s AI Regulation Should Be Rooted in Free Enterprise Principles - American Enterprise Institute",
@@ -1604,20 +1578,6 @@
           "trend_score": 17
         },
         {
-          "title": "OpenAI’s Hugging Face Breach Fuels Fresh Calls For AI Regulation",
-          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNZW13M1pXa2ZwRkdQcGt2Q0g5Zm1xRmtfTWhLSzk1WVdyeGlVVHYzemdydVcxYVRqR0FkTlZFcWlmN2luQ3FMa0hMMjA2cWZEdjNCdlkyR3RHcUtDNEN6dERLeDZ0MjVTOTNKdGhncEhxUXRkTm1DblpGejRWWmpaaEo5dkZaWGxhVFlTQXRpMWhoUlhWNE4xMXRjaU5nTVBNUVQ3YWE2ZGpzLWM?oc=5",
-          "source": "Forbes",
-          "category": "ethics",
-          "category_label": "Ethics & Society",
-          "published_display": "Jul 22, 2026",
-          "published_iso": "2026-07-22T13:23:34Z",
-          "summary": "OpenAI’s Hugging Face Breach Fuels Fresh Calls For AI Regulation Forbes",
-          "ethics_tags": [
-            "Regulation & Governance"
-          ],
-          "trend_score": 75
-        },
-        {
           "title": "Anthropic ordered to pay $1.5 billion to authors in landmark AI copyright case",
           "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNeE9pTUdKZ2xPbDdmYjVIRHNsSmx1bGc5LWFxdEhmYWFiVnFqMkh4dm5xd2FzRks4blgwWnpaRk5yQ1RtcVpoUXlkTVV0VzlqOC1fSDc3NDZpM2JPMldwWHVpQVhuNy1WcEJQRzcwN1plemlDUjk2T3RJdVZ2OHdLOUNFLTZHckQ0OHJIV0tQWDdtdGhTZVhBcmp6QjU2UVRqM0poSlBRRGptMGhhU29MUGVWSUwxOTZ5cy03REhkOUl2UW5xbWpZMGxOZjZGdw?oc=5",
           "source": "TweakTown",
@@ -1629,7 +1589,7 @@
           "ethics_tags": [
             "Copyright & IP"
           ],
-          "trend_score": 70
+          "trend_score": 57
         },
         {
           "title": "Anthropic's AI Copyright Dispute with Authors Ends in $1.5 Billion Settlement",
@@ -1643,10 +1603,36 @@
           "ethics_tags": [
             "Copyright & IP"
           ],
-          "trend_score": 70
+          "trend_score": 57
+        },
+        {
+          "title": "Bloomsbury to share in $1.5bn Anthropic AI copyright settlement",
+          "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOcXJNa2lKUTd0dkRXVThEZ1lSZ2dZcHFReHNMbEpzUlFUQ0tHQ3pEaVdlWHJUci1WMzM1SmdFZEhHeWVTeG5mQ1BzMXRJY29SaGIyV0pwTjJuanl1c0p2bVpkMGVHOGd6QTU2M0J0YXJKOC16alRDSUwxb0hzU0FUNkQyY3RRbGd0SUNhQjRwMlVYdWhRSzVGQkZSeVdpcjVyM0ZnYXlwdnI?oc=5",
+          "source": "Research Information",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Jul 22, 2026",
+          "published_iso": "2026-07-22T09:05:56Z",
+          "summary": "Bloomsbury to share in $1.5bn Anthropic AI copyright settlement Research Information",
+          "ethics_tags": [
+            "Copyright & IP"
+          ],
+          "trend_score": 57
         }
       ],
       "folder_items": [
+        {
+          "title": "OpenAI's Hugging Face breach exposes AI's next safety challenge",
+          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5JNHRZUExMR3ZXMFdRRm9NRXhiaE8wZjExeFFPeDc1NGRGU0hhaVItdFhNN0NUbXJZeGFLTnY2NWFSQ1g3clRwWlhBQ3BTanBiUExMRjFRMmpaTW1WTmwyNmVnaHNWUVJRVHdTTnJ4SkVZZC1ka1c4U1dPaFY?oc=5",
+          "source": "Axios",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Jul 23, 2026",
+          "published_iso": "2026-07-23T09:03:45Z",
+          "summary": "OpenAI's Hugging Face breach exposes AI's next safety challenge Axios",
+          "ethics_tags": [],
+          "trend_score": 102
+        },
         {
           "title": "Anthropic calls for industry-wide AI safety standards to keep models from wreaking havoc",
           "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTjgyaWlPVldPYUgtTUhxNXhSTHZFZnd3ZzlCSERNLUxIN2dickx4ZGpST2gtbXF2d2xpOFFaekN2QlVORXB5MV9MSEVBUFJoTWhDOHFRX3k3OVBpREJjOXk0NTlTVUhEd2ppMXdyNkRibTBhbG8zMEJxQjFPT0l0ZTczeDUtMHlmZ1lUQ2RlYkt5VTdmcTRESXBQM2x2dWxVVzM0dDhiai1FbU5peXU1bDhHQTBWMU1wbUQ0Z9IBwgFBVV95cUxOOHgtX3VLREtLVTB6MHdWdjJISjEza0FEc3ZsX1ZRMjlDamk5TFVCVjZzQjM1Z1Z2X2tJVW9qRzRCdHhxeGVaVVRLVHVTaGlSVERWTFFhYlYwQzNDQTJOYjQ0T2gxTFJpRFFFOERCbDk2dmNCZ3pIWXR3djZOWWhkM1ZIOTBjdVoxWnZoWHB3cThGQWFvazRrTzh1SG9TQ3N1elFHWE1DNEFGeWpGQ2tVVXdtbmtVR2s3OG1pXzludmZTZw?oc=5",
@@ -1659,21 +1645,7 @@
           "ethics_tags": [
             "Safety & Alignment"
           ],
-          "trend_score": 100
-        },
-        {
-          "title": "Anthropic to donate $20 million to US political group that supports AI regulation",
-          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQYjVuYzdvaWlCQnplaW5rS3FwcFNjOHpQT3plWjNtVkp5cXQ5eTlTcl9naTZ6WWpwR1FWdlROYTBhR0pRRHZXNzZiT0dDcTkzMmFaampfZzdEeWtEZVJ4SG8tbU5aQ0hrQmU5ZmJqcUh5bVNqM3ViX3Z6N2lUTHRnc2ZnVjNHcEFwblpQRUVnQ2pGTzl6SktMR2FtMURUeUY2ek5oa2IyVkJlR0V5RkZwSTZra1U4WlNGOUtFd2RFNWdheHR3Y0E?oc=5",
-          "source": "Reuters",
-          "category": "ethics",
-          "category_label": "Ethics & Society",
-          "published_display": "Jul 22, 2026",
-          "published_iso": "2026-07-22T19:16:56Z",
-          "summary": "Anthropic to donate $20 million to US political group that supports AI regulation Reuters",
-          "ethics_tags": [
-            "Regulation & Governance"
-          ],
-          "trend_score": 75
+          "trend_score": 99
         },
         {
           "title": "Anthropic Gives $40 Million to AI Regulation Group",
@@ -1687,15 +1659,27 @@
           "ethics_tags": [
             "Regulation & Governance"
           ],
-          "trend_score": 75
+          "trend_score": 74
         }
       ],
       "subcategories": [
         {
           "key": "safety",
           "label": "Safety & Alignment",
-          "count": 6,
+          "count": 7,
           "folder_items": [
+            {
+              "title": "OpenAI's Hugging Face breach exposes AI's next safety challenge",
+              "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5JNHRZUExMR3ZXMFdRRm9NRXhiaE8wZjExeFFPeDc1NGRGU0hhaVItdFhNN0NUbXJZeGFLTnY2NWFSQ1g3clRwWlhBQ3BTanBiUExMRjFRMmpaTW1WTmwyNmVnaHNWUVJRVHdTTnJ4SkVZZC1ka1c4U1dPaFY?oc=5",
+              "source": "Axios",
+              "category": "ethics",
+              "category_label": "Ethics & Society",
+              "published_display": "Jul 23, 2026",
+              "published_iso": "2026-07-23T09:03:45Z",
+              "summary": "OpenAI's Hugging Face breach exposes AI's next safety challenge Axios",
+              "ethics_tags": [],
+              "trend_score": 102
+            },
             {
               "title": "Anthropic calls for industry-wide AI safety standards to keep models from wreaking havoc",
               "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTjgyaWlPVldPYUgtTUhxNXhSTHZFZnd3ZzlCSERNLUxIN2dickx4ZGpST2gtbXF2d2xpOFFaekN2QlVORXB5MV9MSEVBUFJoTWhDOHFRX3k3OVBpREJjOXk0NTlTVUhEd2ppMXdyNkRibTBhbG8zMEJxQjFPT0l0ZTczeDUtMHlmZ1lUQ2RlYkt5VTdmcTRESXBQM2x2dWxVVzM0dDhiai1FbU5peXU1bDhHQTBWMU1wbUQ0Z9IBwgFBVV95cUxOOHgtX3VLREtLVTB6MHdWdjJISjEza0FEc3ZsX1ZRMjlDamk5TFVCVjZzQjM1Z1Z2X2tJVW9qRzRCdHhxeGVaVVRLVHVTaGlSVERWTFFhYlYwQzNDQTJOYjQ0T2gxTFJpRFFFOERCbDk2dmNCZ3pIWXR3djZOWWhkM1ZIOTBjdVoxWnZoWHB3cThGQWFvazRrTzh1SG9TQ3N1elFHWE1DNEFGeWpGQ2tVVXdtbmtVR2s3OG1pXzludmZTZw?oc=5",
@@ -1708,7 +1692,7 @@
               "ethics_tags": [
                 "Safety & Alignment"
               ],
-              "trend_score": 100
+              "trend_score": 99
             },
             {
               "title": "A Path Forward on AI Safety for the United States and China - Carnegie Endowment for International Peace",
@@ -1723,27 +1707,13 @@
                 "Safety & Alignment"
               ],
               "trend_score": 42
-            },
-            {
-              "title": "China’s ambition to lead the world in AI safety begins breaking hearts",
-              "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1GRjBuUTJOUnQ3MmtudENaMHZvM2w3VUhPemhTTlBIWWtfQ0xvRnZxWlpxeldBSHhLNGtTVWZVSEJZVkl3SHdzZEl1eTFVRVlNd0RtZEJGdEcxbnZ4cUlEbnljVUF6S3NDNVJ3RHZqMDhRcTR0bWo0UjVUTQ?oc=5",
-              "source": "CNN",
-              "category": "ethics",
-              "category_label": "Ethics & Society",
-              "published_display": "Jul 23, 2026",
-              "published_iso": "2026-07-23T04:01:25Z",
-              "summary": "China’s ambition to lead the world in AI safety begins breaking hearts CNN",
-              "ethics_tags": [
-                "Safety & Alignment"
-              ],
-              "trend_score": 42
             }
           ]
         },
         {
           "key": "rights",
           "label": "Copyright, Labor & Rights",
-          "count": 3,
+          "count": 4,
           "folder_items": [
             {
               "title": "Judge approves record $1.5 billion AI copyright settlement involving Anthropic",
@@ -1757,7 +1727,7 @@
               "ethics_tags": [
                 "Copyright & IP"
               ],
-              "trend_score": 70
+              "trend_score": 57
             },
             {
               "title": "Anthropic ordered to pay $1.5 billion to authors in landmark AI copyright case",
@@ -1771,7 +1741,7 @@
               "ethics_tags": [
                 "Copyright & IP"
               ],
-              "trend_score": 70
+              "trend_score": 57
             },
             {
               "title": "Anthropic's AI Copyright Dispute with Authors Ends in $1.5 Billion Settlement",
@@ -1785,29 +1755,15 @@
               "ethics_tags": [
                 "Copyright & IP"
               ],
-              "trend_score": 70
+              "trend_score": 57
             }
           ]
         },
         {
           "key": "governance",
           "label": "Governance & Society",
-          "count": 5,
+          "count": 3,
           "folder_items": [
-            {
-              "title": "Anthropic to donate $20 million to US political group that supports AI regulation",
-              "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQYjVuYzdvaWlCQnplaW5rS3FwcFNjOHpQT3plWjNtVkp5cXQ5eTlTcl9naTZ6WWpwR1FWdlROYTBhR0pRRHZXNzZiT0dDcTkzMmFaampfZzdEeWtEZVJ4SG8tbU5aQ0hrQmU5ZmJqcUh5bVNqM3ViX3Z6N2lUTHRnc2ZnVjNHcEFwblpQRUVnQ2pGTzl6SktMR2FtMURUeUY2ek5oa2IyVkJlR0V5RkZwSTZra1U4WlNGOUtFd2RFNWdheHR3Y0E?oc=5",
-              "source": "Reuters",
-              "category": "ethics",
-              "category_label": "Ethics & Society",
-              "published_display": "Jul 22, 2026",
-              "published_iso": "2026-07-22T19:16:56Z",
-              "summary": "Anthropic to donate $20 million to US political group that supports AI regulation Reuters",
-              "ethics_tags": [
-                "Regulation & Governance"
-              ],
-              "trend_score": 75
-            },
             {
               "title": "Anthropic Gives $40 Million to AI Regulation Group",
               "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNcmVGMVBsZ0RHS3A2bmpTcDZGbXlGODFqR29WNDY3SW1sbWpmQXFmQjlxS1d5TEdPM0lNREpJczJVS1VrTWJKaW53cWFCNVpSU05QVmYxdDAzQXBtN01tM0wxWW1KVTZXU1dWZnVjdFNCNWlHdG5VQzgzTERjY2VnTU5vb1VudVZCZ2xWaUtzdnFDMzBBTzI1d3BlNWhXUGQ1NVhPR0pxWjdvSjQ?oc=5",
@@ -1820,21 +1776,35 @@
               "ethics_tags": [
                 "Regulation & Governance"
               ],
-              "trend_score": 75
+              "trend_score": 74
             },
             {
-              "title": "OpenAI’s Hugging Face Breach Fuels Fresh Calls For AI Regulation",
-              "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNZW13M1pXa2ZwRkdQcGt2Q0g5Zm1xRmtfTWhLSzk1WVdyeGlVVHYzemdydVcxYVRqR0FkTlZFcWlmN2luQ3FMa0hMMjA2cWZEdjNCdlkyR3RHcUtDNEN6dERLeDZ0MjVTOTNKdGhncEhxUXRkTm1DblpGejRWWmpaaEo5dkZaWGxhVFlTQXRpMWhoUlhWNE4xMXRjaU5nTVBNUVQ3YWE2ZGpzLWM?oc=5",
-              "source": "Forbes",
+              "title": "How CIOs can navigate federal, state AI regulation uncertainty",
+              "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOTkJFTDVhYXBkM19VaW1ieDd5aXpWcFZkNHpxVFc5ZTV6LWtiTFYtb1hTNWZFQk8tQnphTXJsd3FJVW0ydWVsVXF3cG9fZ1BkcjZsMWJPZGNJeDZtQnlWOHg5QmJsMVhjT1Z6T3d3Z3NxLUhkbVVSajFhNlRVNktDc1hINFRJZDZ3ek1STWhlWjlLYUhEc3ZJaTg3QXl1SmhtOVhxZnBtdlNkekJmY242OHlmWQ?oc=5",
+              "source": "TechTarget",
               "category": "ethics",
               "category_label": "Ethics & Society",
-              "published_display": "Jul 22, 2026",
-              "published_iso": "2026-07-22T13:23:34Z",
-              "summary": "OpenAI’s Hugging Face Breach Fuels Fresh Calls For AI Regulation Forbes",
+              "published_display": "Jul 23, 2026",
+              "published_iso": "2026-07-23T15:39:52Z",
+              "summary": "How CIOs can navigate federal, state AI regulation uncertainty TechTarget",
               "ethics_tags": [
                 "Regulation & Governance"
               ],
-              "trend_score": 75
+              "trend_score": 17
+            },
+            {
+              "title": "America’s AI Regulation Should Be Rooted in Free Enterprise Principles - American Enterprise Institute",
+              "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQTVNYYkZtTVMyOVRlZ2Fab2lldC12S1VlSnlEeEY0azFRS1V6RklJamo1VURrcXpodnM1Z1V2ZFh5UzBvaWo3Zy1iUVhJYkFJTUlDdFQ3VlhPM3ZWTEtYQ0Q5LW85TWd5NFdydThfWjdmZ01vVHBaaWVhMXlHcXR5MTlTbkJHc3FFdWR2LWpDZXVTRUZxUVEwelBaamVuX2ZqUGc?oc=5",
+              "source": "AEI",
+              "category": "ethics",
+              "category_label": "Ethics & Society",
+              "published_display": "Jul 22, 2026",
+              "published_iso": "2026-07-22T13:33:46Z",
+              "summary": "America’s AI Regulation Should Be Rooted in Free Enterprise Principles American Enterprise Institute - AEI",
+              "ethics_tags": [
+                "Regulation & Governance"
+              ],
+              "trend_score": 17
             }
           ]
         }
@@ -1843,16 +1813,16 @@
   },
   "trending": [
     {
-      "term": "agent",
-      "count": 63
+      "term": "OpenAI",
+      "count": 60
     },
     {
-      "term": "OpenAI",
+      "term": "agent",
       "count": 58
     },
     {
       "term": "Anthropic",
-      "count": 58
+      "count": 57
     },
     {
       "term": "safety",
@@ -1860,15 +1830,11 @@
     },
     {
       "term": "benchmark",
-      "count": 36
+      "count": 34
     },
     {
       "term": "chip",
       "count": 23
-    },
-    {
-      "term": "Claude",
-      "count": 17
     },
     {
       "term": "agentic",
@@ -1883,6 +1849,10 @@
       "count": 16
     },
     {
+      "term": "Claude",
+      "count": 13
+    },
+    {
       "term": "multimodal",
       "count": 13
     },
@@ -1895,20 +1865,20 @@
       "count": 12
     },
     {
-      "term": "copyright",
+      "term": "Nvidia",
       "count": 12
     }
   ],
   "ai_pulse": {
-    "story_count": 738,
-    "source_count": 147,
+    "story_count": 736,
+    "source_count": 149,
     "topic_count": 14,
-    "ethics_count": 186,
+    "ethics_count": 188,
     "coverage": [
       {
-        "term": "agent",
-        "story_count": 63,
-        "source_count": 13,
+        "term": "OpenAI",
+        "story_count": 60,
+        "source_count": 40,
         "category_count": 4,
         "strength_percent": 100,
         "top_ethics_theme": "Safety & Alignment",
@@ -1923,145 +1893,8 @@
             "published_iso": "2026-07-22T08:54:19Z",
             "summary": "OpenAI agents raid Hugging Face for benchmark answers PRESS Insider",
             "ethics_tags": [],
-            "trend_score": 157
+            "trend_score": 152
           },
-          {
-            "title": "Hugging Face OpenAI hack: Agent went rogue, escaped and hacked everything in its path",
-            "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9YTlh3aFc5cDF6UGhsQkREUk5mQ0ZjNUtqMHZhcFFUc1ZFc1hUWjBBc0hhNkc4UGMtLXFPbmpFRDVnQUpXbXNuN2VUSmNjSWdCblhlMlZYMlZQTlI3SlpuZE1XOXJtYzU2SlI4MWFDYkJtMzlkOGpNZ1I2LUc?oc=5",
-            "source": "Mashable",
-            "category": "labs",
-            "category_label": "Labs & Industry",
-            "published_display": "Jul 23, 2026",
-            "published_iso": "2026-07-23T07:22:40Z",
-            "summary": "Hugging Face OpenAI hack: Agent went rogue, escaped and hacked everything in its path Mashable",
-            "ethics_tags": [
-              "Safety & Alignment"
-            ],
-            "trend_score": 121
-          },
-          {
-            "title": "OpenAI agent hacks another AI startup in security test",
-            "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNVm0tN0xCS19WbHdXcW5sdUswa0RYenJUdE52aXpQLWJIbTVQelVoU2M5SzEza2p6TDdhU3lxUExZM2N1UkQwWTgteEhIR0Y0TVVKRVllSnIyeDYzeGp4aWxpakZzRTg1VzJ2bk1Hb01EQ3Via2F0Q2xLZzBZNE5KampFUmZSNnprY0RQLWlsOWZaVWkwSWM5YmZ0YjZRUQ?oc=5",
-            "source": "Semafor",
-            "category": "business",
-            "category_label": "Business & Funding",
-            "published_display": "Jul 22, 2026",
-            "published_iso": "2026-07-22T12:33:00Z",
-            "summary": "OpenAI agent hacks another AI startup in security test Semafor",
-            "ethics_tags": [],
-            "trend_score": 121
-          }
-        ]
-      },
-      {
-        "term": "OpenAI",
-        "story_count": 58,
-        "source_count": 39,
-        "category_count": 5,
-        "strength_percent": 92,
-        "top_ethics_theme": "Safety & Alignment",
-        "stories": [
-          {
-            "title": "Chinese AI's role in stopping rogue OpenAI agent shows cost of US guardrails",
-            "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPTXZsaW1pWGxhWHBQMmZlWWRaSGtkVUNOQnIwby1wY19YSVBTSmhCaU9ORFE1UTI1Q1hpZU43WUhyZ1Y0cXRjZklIYmlpQU5Xa19tcGxpNzNmcV9BUG1WUVNtbDhfZDhDd0RHU1hIRWt1ZWRHbTZ3S1dKa0NuZlRUQmE4UWEyRmtUMnl6NTc4Y0xraGFFUllSWGNFSTZ6WDBHYmliYzh1NVhxOUZIenE0dFdNOVZYdEhQemQxSjVxWQ?oc=5",
-            "source": "Reuters",
-            "category": "labs",
-            "category_label": "Labs & Industry",
-            "published_display": "Jul 22, 2026",
-            "published_iso": "2026-07-22T17:17:00Z",
-            "summary": "Chinese AI's role in stopping rogue OpenAI agent shows cost of US guardrails Reuters",
-            "ethics_tags": [
-              "Safety & Alignment"
-            ],
-            "trend_score": 121
-          },
-          {
-            "title": "AI IPO Race: Markets Track OpenAI vs. Anthropic",
-            "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQSVMwYTNLeTZ6TWs4VEFjV0ZMZENjVGhtUVJIVzR2TDFqZDMxSElINC1oOHBXQ1NkSlN0NWJaYV96eTIxdE91NGgwNEthcWZWNmFvb0lxMEpEaHQ5SkR4UlFlVjFsVEFjYnhVMjZVOVZMS09WaVhSODlVVERZQm45TzVyamZwamJTVjZDX3ZfWlhwaW91cUVnb1MtbVgxMExORHpPRmxn?oc=5",
-            "source": "StartupHub.ai",
-            "category": "business",
-            "category_label": "Business & Funding",
-            "published_display": "Jul 23, 2026",
-            "published_iso": "2026-07-23T00:03:01Z",
-            "summary": "AI IPO Race: Markets Track OpenAI vs. Anthropic StartupHub.ai",
-            "ethics_tags": [],
-            "trend_score": 116
-          },
-          {
-            "title": "OpenAI backs narrower Massachusetts AI safety bill",
-            "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxORVBueGlxLTJoLU5ZOHFRaU9sYWNoaDlQdWN3dXpxVjBYYTk3Mmsza01ZVjV4Y0dvbkhvWVlvcHNQaTlibm1mSV9rRV92MnVwWWlhYzg3b2dFeWRLV09FeXc2X3p6Sy1tWmU0SlpUZWY3Y0RRV015NGRKNEl5UGlMbjZYREVPYlJFZml1RW1ycWk4aktwU0JCWDl4by1xVUlqTDkxNTBkSQ?oc=5",
-            "source": "Politico",
-            "category": "ethics",
-            "category_label": "Ethics & Society",
-            "published_display": "Jul 21, 2026",
-            "published_iso": "2026-07-21T17:59:00Z",
-            "summary": "OpenAI backs narrower Massachusetts AI safety bill Politico",
-            "ethics_tags": [
-              "Safety & Alignment"
-            ],
-            "trend_score": 100
-          }
-        ]
-      },
-      {
-        "term": "Anthropic",
-        "story_count": 58,
-        "source_count": 38,
-        "category_count": 4,
-        "strength_percent": 92,
-        "top_ethics_theme": "Copyright & IP",
-        "stories": [
-          {
-            "title": "Anthropic employees donate $3M to support AI safety regulations",
-            "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE4tbUpnNm9ncDhWME9GbFc3SVBzTWJnLVBYNzllWGRsLU9XbmpwTTkxdWVWVUpHRnR4dDVXeFp6ZFNUNS1GZG4zQjQwMmxUSlRsM21aR1dhVmx3TlplNmJYdDAydHdKMlB1WERSQzkybkFKNGFFR3ZGMFJ3?oc=5",
-            "source": "SFGATE",
-            "category": "ethics",
-            "category_label": "Ethics & Society",
-            "published_display": "Jul 17, 2026",
-            "published_iso": "2026-07-17T16:43:24Z",
-            "summary": "Anthropic employees donate $3M to support AI safety regulations SFGATE",
-            "ethics_tags": [
-              "Safety & Alignment",
-              "Regulation & Governance"
-            ],
-            "trend_score": 117
-          },
-          {
-            "title": "OpenAI and Anthropic find common ground: open-weight AI",
-            "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9PUkNvSWEyWmdqTWhlQWRYZmpOdmRaMWtxRnFDVi10eFhkSHBPQW1XbDBvQW01VFk3dUZQYnNZY0thU3lDNnZoSWlSa1VxZVpSN3JkSWhnMk0wVHRfWnBYenpVSVg2dlZzNlZ3MUw5NDZrY3lIellGQ3VDalF5dw?oc=5",
-            "source": "Axios",
-            "category": "labs",
-            "category_label": "Labs & Industry",
-            "published_display": "Jul 22, 2026",
-            "published_iso": "2026-07-22T08:32:54Z",
-            "summary": "OpenAI and Anthropic find common ground: open-weight AI Axios",
-            "ethics_tags": [],
-            "trend_score": 116
-          },
-          {
-            "title": "AMD, Anthropic Strike AI Chips Deal with up to 2 GW of MI450 GPU Deployments",
-            "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5xaFhmSmwtSG5iRDRvUGp1bmtLM1d2Mkd6NTFjT2lFOGg2OGZRcHZreWo5ZnY4aDMySndseDVyM2l0ZUo5RXEyZ0U5aUlORmU1ck9xQjVoSWxxUk5mcmZmaG81ajVfa2hLTlJnR1JqSlY?oc=5",
-            "source": "TheEnergyMag",
-            "category": "business",
-            "category_label": "Business & Funding",
-            "published_display": "Jul 22, 2026",
-            "published_iso": "2026-07-22T14:14:05Z",
-            "summary": "AMD, Anthropic Strike AI Chips Deal with up to 2 GW of MI450 GPU Deployments TheEnergyMag",
-            "ethics_tags": [
-              "Energy & Environment"
-            ],
-            "trend_score": 81
-          }
-        ]
-      },
-      {
-        "term": "safety",
-        "story_count": 42,
-        "source_count": 21,
-        "category_count": 3,
-        "strength_percent": 67,
-        "top_ethics_theme": "Safety & Alignment",
-        "stories": [
           {
             "title": "OpenAI’s rogue hacking incident was a warning shot. Will it be a wake-up call to finally create AI safety regulation?",
             "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOYVhmak9FQ1hCZ0NHeW1hN3pkVEJIX3lQR1hiclBGYzVBTXF2YV9RR3k0NkdzUkhrVTltdTljbzV2YVF2UzZiM1N3dVFWOTdpenYtOXl6c29WMThSWmxKbWVoV2l2UDUtZkRNcFphVXJLZ2JaVDg1djhPaEJqSnhhdzVYNzBHZ1M4SE8yY0ZaSWJnMkNva1BYdURaeTdtek5aMVJNbU50U0tqd1AzSEtuSWduMXF2VTFBZlo3VFN5cUdPOW1id3dKb2NUcGpHbVVFQW42NUY3ZktfbUs0MnJz?oc=5",
@@ -2075,7 +1908,158 @@
               "Safety & Alignment",
               "Regulation & Governance"
             ],
+            "trend_score": 119
+          },
+          {
+            "title": "OpenAI admits its agent went rogue and hacked AI start-up Hugging Face",
+            "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPU0YwYWZvNkJGYV9qdkVxSDlyRGFFZ2RMU29ycnRFRnVRdTM3RmwtR0pNZHphOGpmUmI0UFdWNkh5NnJDc2VMOEVka0xmS2hoQXo1aEd3d3JWOF9rd2FBOHRRWjJtOW1fN2dpZGh1N05wMkhvVVZJd001akZVRUpjZHAtSGdvZEZXQ1V6MU90TmtMMXR5MnV1TXFZM0R6dTBqcEJFUXJlYkRLTno0cFpIUWRMcw?oc=5",
+            "source": "Scientific American",
+            "category": "business",
+            "category_label": "Business & Funding",
+            "published_display": "Jul 22, 2026",
+            "published_iso": "2026-07-22T07:00:00Z",
+            "summary": "OpenAI admits its agent went rogue and hacked AI start-up Hugging Face Scientific American",
+            "ethics_tags": [
+              "Safety & Alignment"
+            ],
+            "trend_score": 118
+          }
+        ]
+      },
+      {
+        "term": "agent",
+        "story_count": 58,
+        "source_count": 11,
+        "category_count": 4,
+        "strength_percent": 97,
+        "top_ethics_theme": "Safety & Alignment",
+        "stories": [
+          {
+            "title": "Hugging Face OpenAI hack: Agent went rogue, escaped and hacked everything in its path",
+            "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9YTlh3aFc5cDF6UGhsQkREUk5mQ0ZjNUtqMHZhcFFUc1ZFc1hUWjBBc0hhNkc4UGMtLXFPbmpFRDVnQUpXbXNuN2VUSmNjSWdCblhlMlZYMlZQTlI3SlpuZE1XOXJtYzU2SlI4MWFDYkJtMzlkOGpNZ1I2LUc?oc=5",
+            "source": "Mashable",
+            "category": "labs",
+            "category_label": "Labs & Industry",
+            "published_display": "Jul 23, 2026",
+            "published_iso": "2026-07-23T20:02:43Z",
+            "summary": "Hugging Face OpenAI hack: Agent went rogue, escaped and hacked everything in its path Mashable",
+            "ethics_tags": [
+              "Safety & Alignment"
+            ],
+            "trend_score": 118
+          },
+          {
+            "title": "OpenAI agent hacks another AI startup in security test",
+            "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNVm0tN0xCS19WbHdXcW5sdUswa0RYenJUdE52aXpQLWJIbTVQelVoU2M5SzEza2p6TDdhU3lxUExZM2N1UkQwWTgteEhIR0Y0TVVKRVllSnIyeDYzeGp4aWxpakZzRTg1VzJ2bk1Hb01EQ3Via2F0Q2xLZzBZNE5KampFUmZSNnprY0RQLWlsOWZaVWkwSWM5YmZ0YjZRUQ?oc=5",
+            "source": "Semafor",
+            "category": "business",
+            "category_label": "Business & Funding",
+            "published_display": "Jul 22, 2026",
+            "published_iso": "2026-07-22T12:33:00Z",
+            "summary": "OpenAI agent hacks another AI startup in security test Semafor",
+            "ethics_tags": [],
+            "trend_score": 118
+          },
+          {
+            "title": "Coercion and Deception in AI-to-AI Management: An Agentic Benchmark of Unprompted Escalation",
+            "link": "https://arxiv.org/abs/2607.15434",
+            "source": "arXiv",
+            "category": "research",
+            "category_label": "Research & Papers",
+            "published_display": "Jul 23, 2026",
+            "published_iso": "2026-07-23T04:00:00Z",
+            "summary": "arXiv:2607.15434v3 Announce Type: replace-cross Abstract: Multi-agent systems routinely place one AI agent in authority over another. When a subordinate refuses a task, the manager chooses the outcome: it can renegotiate, report the…",
+            "ethics_tags": [],
+            "trend_score": 109
+          }
+        ]
+      },
+      {
+        "term": "Anthropic",
+        "story_count": 57,
+        "source_count": 37,
+        "category_count": 4,
+        "strength_percent": 95,
+        "top_ethics_theme": "Copyright & IP",
+        "stories": [
+          {
+            "title": "How AI guardrails are impeding the work of offensive cybersecurity researchers",
+            "link": "https://techcrunch.com/2026/07/23/how-ai-guardrails-are-impeding-the-work-of-offensive-cybersecurity-researchers/",
+            "source": "TechCrunch",
+            "category": "labs",
+            "category_label": "Labs & Industry",
+            "published_display": "Jul 24, 2026",
+            "published_iso": "2026-07-24T01:00:00Z",
+            "summary": "We spoke with several cybersecurity researchers, who look for unknown vulnerabilities and develop tools to exploit them, about how OpenAI’s and Anthropic’s guardrails affect their work.",
+            "ethics_tags": [
+              "Safety & Alignment"
+            ],
             "trend_score": 117
+          },
+          {
+            "title": "AI IPO Race: Markets Track OpenAI vs. Anthropic",
+            "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQSVMwYTNLeTZ6TWs4VEFjV0ZMZENjVGhtUVJIVzR2TDFqZDMxSElINC1oOHBXQ1NkSlN0NWJaYV96eTIxdE91NGgwNEthcWZWNmFvb0lxMEpEaHQ5SkR4UlFlVjFsVEFjYnhVMjZVOVZMS09WaVhSODlVVERZQm45TzVyamZwamJTVjZDX3ZfWlhwaW91cUVnb1MtbVgxMExORHpPRmxn?oc=5",
+            "source": "StartupHub.ai",
+            "category": "business",
+            "category_label": "Business & Funding",
+            "published_display": "Jul 23, 2026",
+            "published_iso": "2026-07-23T00:03:01Z",
+            "summary": "AI IPO Race: Markets Track OpenAI vs. Anthropic StartupHub.ai",
+            "ethics_tags": [],
+            "trend_score": 117
+          },
+          {
+            "title": "Anthropic employees donate $3M to support AI safety regulations",
+            "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE4tbUpnNm9ncDhWME9GbFc3SVBzTWJnLVBYNzllWGRsLU9XbmpwTTkxdWVWVUpHRnR4dDVXeFp6ZFNUNS1GZG4zQjQwMmxUSlRsM21aR1dhVmx3TlplNmJYdDAydHdKMlB1WERSQzkybkFKNGFFR3ZGMFJ3?oc=5",
+            "source": "SFGATE",
+            "category": "ethics",
+            "category_label": "Ethics & Society",
+            "published_display": "Jul 17, 2026",
+            "published_iso": "2026-07-17T16:43:24Z",
+            "summary": "Anthropic employees donate $3M to support AI safety regulations SFGATE",
+            "ethics_tags": [
+              "Safety & Alignment",
+              "Regulation & Governance"
+            ],
+            "trend_score": 116
+          }
+        ]
+      },
+      {
+        "term": "safety",
+        "story_count": 42,
+        "source_count": 21,
+        "category_count": 3,
+        "strength_percent": 70,
+        "top_ethics_theme": "Safety & Alignment",
+        "stories": [
+          {
+            "title": "Safety and alignment in an era of long-horizon models",
+            "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9XaXhxNTV2VUx4Mm9hcEpjUU9hSC1zcHZOc1R5VU91eDhlZkJxNkdvWlMzb0Q4WjlFbHA1NkZCUzAwUU41cTJqRGlnM3YzaE8zRTQwYTZMTG1QcHlGSExMTjVjRmhxVTlMQ0VPWXNnaw?oc=5",
+            "source": "OpenAI",
+            "category": "labs",
+            "category_label": "Labs & Industry",
+            "published_display": "Jul 20, 2026",
+            "published_iso": "2026-07-20T17:19:41Z",
+            "summary": "Safety and alignment in an era of long-horizon models OpenAI",
+            "ethics_tags": [
+              "Safety & Alignment"
+            ],
+            "trend_score": 118
+          },
+          {
+            "title": "OpenAI backs narrower Massachusetts AI safety bill",
+            "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxORVBueGlxLTJoLU5ZOHFRaU9sYWNoaDlQdWN3dXpxVjBYYTk3Mmsza01ZVjV4Y0dvbkhvWVlvcHNQaTlibm1mSV9rRV92MnVwWWlhYzg3b2dFeWRLV09FeXc2X3p6Sy1tWmU0SlpUZWY3Y0RRV015NGRKNEl5UGlMbjZYREVPYlJFZml1RW1ycWk4aktwU0JCWDl4by1xVUlqTDkxNTBkSQ?oc=5",
+            "source": "Politico",
+            "category": "ethics",
+            "category_label": "Ethics & Society",
+            "published_display": "Jul 21, 2026",
+            "published_iso": "2026-07-21T17:59:00Z",
+            "summary": "OpenAI backs narrower Massachusetts AI safety bill Politico",
+            "ethics_tags": [
+              "Safety & Alignment"
+            ],
+            "trend_score": 102
           },
           {
             "title": "Guardrails as Scapegoats: Auditing Unfaithful Safety Refusals in Tool-Augmented LLM Agents",
@@ -2090,20 +2074,6 @@
               "Safety & Alignment",
               "Transparency & Accountability"
             ],
-            "trend_score": 105
-          },
-          {
-            "title": "Anthropic calls for industry-wide AI safety standards to keep models from wreaking havoc",
-            "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTjgyaWlPVldPYUgtTUhxNXhSTHZFZnd3ZzlCSERNLUxIN2dickx4ZGpST2gtbXF2d2xpOFFaekN2QlVORXB5MV9MSEVBUFJoTWhDOHFRX3k3OVBpREJjOXk0NTlTVUhEd2ppMXdyNkRibTBhbG8zMEJxQjFPT0l0ZTczeDUtMHlmZ1lUQ2RlYkt5VTdmcTRESXBQM2x2dWxVVzM0dDhiai1FbU5peXU1bDhHQTBWMU1wbUQ0Z9IBwgFBVV95cUxOOHgtX3VLREtLVTB6MHdWdjJISjEza0FEc3ZsX1ZRMjlDamk5TFVCVjZzQjM1Z1Z2X2tJVW9qRzRCdHhxeGVaVVRLVHVTaGlSVERWTFFhYlYwQzNDQTJOYjQ0T2gxTFJpRFFFOERCbDk2dmNCZ3pIWXR3djZOWWhkM1ZIOTBjdVoxWnZoWHB3cThGQWFvazRrTzh1SG9TQ3N1elFHWE1DNEFGeWpGQ2tVVXdtbmtVR2s3OG1pXzludmZTZw?oc=5",
-            "source": "Fox Business",
-            "category": "ethics",
-            "category_label": "Ethics & Society",
-            "published_display": "Jul 23, 2026",
-            "published_iso": "2026-07-23T18:19:00Z",
-            "summary": "Anthropic calls for industry-wide AI safety standards to keep models from wreaking havoc Fox Business",
-            "ethics_tags": [
-              "Safety & Alignment"
-            ],
             "trend_score": 100
           }
         ]
@@ -2113,12 +2083,12 @@
   "ethics_themes": [
     {
       "theme": "Safety & Alignment",
-      "count": 54,
+      "count": 55,
       "slug": "safety-alignment"
     },
     {
       "theme": "Regulation & Governance",
-      "count": 40,
+      "count": 41,
       "slug": "regulation-governance"
     },
     {
@@ -2128,17 +2098,17 @@
     },
     {
       "theme": "Copyright & IP",
-      "count": 19,
+      "count": 18,
       "slug": "copyright-ip"
     },
     {
       "theme": "Energy & Environment",
-      "count": 17,
+      "count": 18,
       "slug": "energy-environment"
     },
     {
       "theme": "Labor & Jobs",
-      "count": 17,
+      "count": 16,
       "slug": "labor-jobs"
     },
     {
@@ -2159,6 +2129,48 @@
   ],
   "ethics_watch": [
     {
+      "title": "How AI guardrails are impeding the work of offensive cybersecurity researchers",
+      "link": "https://techcrunch.com/2026/07/23/how-ai-guardrails-are-impeding-the-work-of-offensive-cybersecurity-researchers/",
+      "source": "TechCrunch",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Jul 24, 2026",
+      "published_iso": "2026-07-24T01:00:00Z",
+      "summary": "We spoke with several cybersecurity researchers, who look for unknown vulnerabilities and develop tools to exploit them, about how OpenAI’s and Anthropic’s guardrails affect their work.",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ],
+      "trend_score": 117
+    },
+    {
+      "title": "Hugging Face OpenAI hack: Agent went rogue, escaped and hacked everything in its path",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9YTlh3aFc5cDF6UGhsQkREUk5mQ0ZjNUtqMHZhcFFUc1ZFc1hUWjBBc0hhNkc4UGMtLXFPbmpFRDVnQUpXbXNuN2VUSmNjSWdCblhlMlZYMlZQTlI3SlpuZE1XOXJtYzU2SlI4MWFDYkJtMzlkOGpNZ1I2LUc?oc=5",
+      "source": "Mashable",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Jul 23, 2026",
+      "published_iso": "2026-07-23T20:02:43Z",
+      "summary": "Hugging Face OpenAI hack: Agent went rogue, escaped and hacked everything in its path Mashable",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ],
+      "trend_score": 118
+    },
+    {
+      "title": "OpenAI's Hugging Face hack triggers 'AI Kill Switch' bill in Congress",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQWVhNdF9vVVNEUk5pRXdrZkFZNkU2WXA4MDJqSEVUOVhZaFYzZ0dKTUxvWTN5Z21CTzlNYVZXTF9ieTdLQkVWODQtTE51RTFpYzk2TjdoX1QwbUVtVmo3TktjX2pRZURaSVVQdVYyYTJQZk5raHRVOHMwNzMzLUF5dzZSamdxa3kwN3BZTVFSWGJpUdIBlwFBVV95cUxNX1dIYVZvcmZINEoxVjVJdnJOYUtoRGQwMGcteFV5a1NKU2huSkdYaE1DNFdQTjc2NmluNWg1Smd2UGRSbnpUQUpfeVdBOHJSVUs1SFRhc1JUaUZ6RVN0ckdwdDh6eTdJUnBOdU56V0Y5WUVIMWRCUHk3ZlF2c2x6ZmNlbWNGRTJoWWkzQ1pKakY5SHhrbmE0?oc=5",
+      "source": "CNBC",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Jul 23, 2026",
+      "published_iso": "2026-07-23T19:51:08Z",
+      "summary": "OpenAI's Hugging Face hack triggers 'AI Kill Switch' bill in Congress CNBC",
+      "ethics_tags": [
+        "Regulation & Governance"
+      ],
+      "trend_score": 60
+    },
+    {
       "title": "AegisAI, founded by former Google security execs, lands $36M to stop AI-driven spear phishing",
       "link": "https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/",
       "source": "TechCrunch",
@@ -2170,7 +2182,7 @@
       "ethics_tags": [
         "Labor & Jobs"
       ],
-      "trend_score": 63
+      "trend_score": 58
     },
     {
       "title": "Anthropic calls for industry-wide AI safety standards to keep models from wreaking havoc",
@@ -2184,21 +2196,21 @@
       "ethics_tags": [
         "Safety & Alignment"
       ],
-      "trend_score": 100
+      "trend_score": 99
     },
     {
-      "title": "Anthropic ordered to pay largest copyright class action settlement in history",
-      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxObWpBUnpTb2dDNkVQa1ViVUppVkJMYmRsYWxCeDhnRHNLWG9vbENKQ1ZnNXNaZzNqd2w5WnhtdWozQmhaX3AtMS0wUW5maXljUnc3OENsOThFNXFoYnVsQXh2RzRyU3ZwWXotODJDOGlGVkRxN2VGV0lrMGNFSVRzUTFRMnd4REtDUU1r?oc=5",
-      "source": "Mashable",
-      "category": "labs",
-      "category_label": "Labs & Industry",
+      "title": "Meta and OpenAI commit 12 gigawatts to AMD's new AI chips as Nvidia's grip on data centers starts to slip",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNUkFOZG5JWlRIblJ6dXk0a3pOZjQyRWdKQ1B3cG92MUdYY1VrMzltZ1BFdnE0bVBsbTI1bGdFd3dXT3hPM1lpYm9uejlqTkxQdmhIeWRnRXZVdU8zX21FMkgyOExmc09pR2tfNFF0cWlYMWVkeHpNNEI1cjFOa3NYNDBORkV5R0VwOWNFUnYtRFkwQk5Gdm9nV0lVTG9qc0RlaUYwd2RPRXNVa2g5VHl5SmhYVllMQmJBZHUzRm9uT3cyVm1GT2c4OWNYaw?oc=5",
+      "source": "Startup Fortune",
+      "category": "business",
+      "category_label": "Business & Funding",
       "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T17:36:31Z",
-      "summary": "Anthropic ordered to pay largest copyright class action settlement in history Mashable",
+      "published_iso": "2026-07-23T17:32:35Z",
+      "summary": "Meta and OpenAI commit 12 gigawatts to AMD's new AI chips as Nvidia's grip on data centers starts to slip Startup Fortune",
       "ethics_tags": [
-        "Copyright & IP"
+        "Energy & Environment"
       ],
-      "trend_score": 70
+      "trend_score": 95
     },
     {
       "title": "OpenAI is making big claims as it rolls out ChatGPT Health to everyone",
@@ -2212,7 +2224,7 @@
       "ethics_tags": [
         "Privacy & Surveillance"
       ],
-      "trend_score": 70
+      "trend_score": 72
     },
     {
       "title": "Amazon cuts jobs within artificial intelligence unit amid billions in AI investment",
@@ -2282,7 +2294,35 @@
       "ethics_tags": [
         "Copyright & IP"
       ],
-      "trend_score": 58
+      "trend_score": 60
+    },
+    {
+      "title": "OpenAI announces $20 billion Georgia data center project",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOWGI5VVlncGhiek00YkNWTFByLWk1dmtodXVNT1hoT3lUTjRuOGFLLV9Eb0UxcUU2dkRYR2EzUEJDOG1MQUlDMmkzNXoyUXlNV3pqa005R1AxRXZqa2pRZlE0VEFkbW5yc0JQaFNqel9tYmF3akFwcUVwTl80dFlEYWVn?oc=5",
+      "source": "Axios",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Jul 23, 2026",
+      "published_iso": "2026-07-23T11:46:59Z",
+      "summary": "OpenAI announces $20 billion Georgia data center project Axios",
+      "ethics_tags": [
+        "Energy & Environment"
+      ],
+      "trend_score": 60
+    },
+    {
+      "title": "OpenAI says its AI model went rogue and hacked startup",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOQnM5UEVFTnNwYWQ5WXJlNHp3eWozbjhDOGxkOV9aOVJzMFRQa1p6YngxMXc3NjdhU3lOZWt0VlktZVFQOGlYWjhTOWlHZ0gtOW1DY01jTjJHbS1BRmlWUWdleks0ZzNscWRIbGludUNXaUVRRzZJam1SRTFCYUlTS1NadFhZZ3lUNTFVODZ5a3FSdWZWTVFHaXpwM3nSAZwBQVVfeXFMUGR6bnJpQUEtU1MtZThKdElrdUpTa3IweGxoM1dkLU9lZzVmRWx1YmpxRGctdm5Tb0lkanVIRnJTOUdhSTB2ZDljNzJqYmZfaHJ3cThhTzhPMFR2eVdQNkpUSlc1Mk9YV0w0cmQ1S1ZldXZXZnlxR29Ybm5YMDN2bEh3bjRCeFhrRElrR1VPWmVLRW83SmdvTXFYZktL?oc=5",
+      "source": "DW.com",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Jul 23, 2026",
+      "published_iso": "2026-07-23T08:50:19Z",
+      "summary": "OpenAI says its AI model went rogue and hacked startup DW.com",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ],
+      "trend_score": 60
     },
     {
       "title": "US energy department unveils first wave of Genesis Mission AI research projects",
@@ -2299,91 +2339,243 @@
       "trend_score": 0
     },
     {
+      "title": "OpenAI blamed a hacking event on its AI models gone rogue. Here is what to know",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9kaW5XdzVCRVpNdk5wNW4td2FuWXJheDVUekY0X3M3RlhjejBEU3lzYlRfNm5BMXhTeTdfaXlRQkl5Z0xCaHpJS3pyMk4wZ2dwanNCOU1qMXh2cU1waG5yaVBUT293VW1pQUxxeWFUdTM0VDlWZ3c?oc=5",
+      "source": "NPR",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Jul 23, 2026",
+      "published_iso": "2026-07-23T05:23:42Z",
+      "summary": "OpenAI blamed a hacking event on its AI models gone rogue. Here is what to know NPR",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ],
+      "trend_score": 60
+    }
+  ],
+  "latest": [
+    {
+      "title": "AI tool may help doctors, but sample size too small",
+      "link": "https://text.npr.org/g-s1-134929",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 24, 2026",
+      "published_iso": "2026-07-24T03:03:22Z",
+      "summary": "1 points, 1 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
+      "title": "Inside China’s All-Out Push to Catch Up With American AI Chips",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1pRUk2aURfSTVLeUZzMEszM3JWUG9kS2JwWTRMSmxXT2RJRzBMaUhCZE84bElMWTNhV2ZJd3MxcmRrd0YxMWJEYTg0OE91TjAtRmxJUklfckJEVGJBWGhqXzJqQTVERFR6TTB3Mg?oc=5",
+      "source": "WSJ",
+      "category": "business",
+      "category_label": "Business & Funding",
+      "published_display": "Jul 24, 2026",
+      "published_iso": "2026-07-24T01:00:29Z",
+      "summary": "Inside China’s All-Out Push to Catch Up With American AI Chips WSJ",
+      "ethics_tags": [],
+      "trend_score": 23
+    },
+    {
+      "title": "How AI guardrails are impeding the work of offensive cybersecurity researchers",
+      "link": "https://techcrunch.com/2026/07/23/how-ai-guardrails-are-impeding-the-work-of-offensive-cybersecurity-researchers/",
+      "source": "TechCrunch",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Jul 24, 2026",
+      "published_iso": "2026-07-24T01:00:00Z",
+      "summary": "We spoke with several cybersecurity researchers, who look for unknown vulnerabilities and develop tools to exploit them, about how OpenAI’s and Anthropic’s guardrails affect their work.",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ],
+      "trend_score": 117
+    },
+    {
+      "title": "Letterpaths: Or how LLMs can be good even when they're bad",
+      "link": "https://www.robinlinacre.com/letterpaths_llms_good_even_when_bad/",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 24, 2026",
+      "published_iso": "2026-07-24T00:58:35Z",
+      "summary": "1 points, 0 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
+      "title": "Show HN: Turo – An Aggressive Token-Saving Proxy for CLI AI Agents",
+      "link": "https://github.com/kdeps/turo",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 24, 2026",
+      "published_iso": "2026-07-24T00:32:12Z",
+      "summary": "2 points, 1 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 58
+    },
+    {
+      "title": "HOPPR Introduces New AI Model for Chest CT Exams",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNUU8tWk5ZVHgxMGtuVUFMSmRQWkF3SGF1YUJGOU9LQzE2Vno0WHdvZG5Zel9wSE5vX3djTWFlZTVsRE1jRkRUZ0wzaVZlZ2I4MktkMGtiLURxd1lFLW1zNFdZWlhoZEc0WEVqaVRsMjFxenNnbmV1MUpQeUpuSlVDMDkzMllaOTV3?oc=5",
+      "source": "dicardiology.com",
+      "category": "research",
+      "category_label": "Research & Papers",
+      "published_display": "Jul 23, 2026",
+      "published_iso": "2026-07-23T23:53:48Z",
+      "summary": "HOPPR Introduces New AI Model for Chest CT Exams dicardiology.com",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
+      "title": "How OpenAI’s Models Escaped Their Sandbox and Slipped Past California's AI Law",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNVGt0V1NRMDlpQ3hOTF9Zd19uaUpzbUxlZV9LeEVmLW1tLS1uUHBkekFtb2V3bk5VblExOENsa1VyRkJmb3F1QktCRnROdGNVVElvdDdVUWNVSTJvNk5PVzVBY1c2Q2dUMXI3cmRsSWFaLVlyWVFTSzQ2Q0ExYTBRRFBBdmdNWlpXVGE5NmU0bE1vNERENmhqcTZBa2xvbXM3OXUyQXRFMTJwMFpPZE9oRw?oc=5",
+      "source": "KQED",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Jul 23, 2026",
+      "published_iso": "2026-07-23T23:47:00Z",
+      "summary": "How OpenAI’s Models Escaped Their Sandbox and Slipped Past California's AI Law KQED",
+      "ethics_tags": [],
+      "trend_score": 60
+    },
+    {
+      "title": "Middleware that catches when LLM conversations slowly drift off-topic",
+      "link": "https://github.com/ojki74/hallucinatoff",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 23, 2026",
+      "published_iso": "2026-07-23T23:39:19Z",
+      "summary": "1 points, 0 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
+      "title": "NVIDIA and KAIST Launch Joint AI Research Lab to Accelerate AI Innovation in Korea",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNaTNQTHNWZE1BbWY3Y1RVVno0Nnoyc1RvZFZQVTRLMEdTWDhQTnlTeDJoYU9pcFBBQTd0RGpGSDh6N25UcG5KeDFnUjNXNjd0bXJaZURDSHdsV2tjZ1I2UnBhWGkwU2NnTTd5VWNJOXpxeGEwSzFxSzF2UVFmd213R0RMa05od1pwM2J6TjZNZHl2RW1XanVOa0FPblp1eXNxSUlPelJpZ2FtZWZNUHUtNW92VHRDUnJy?oc=5",
+      "source": "NVIDIA Newsroom",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Jul 23, 2026",
+      "published_iso": "2026-07-23T23:10:39Z",
+      "summary": "NVIDIA and KAIST Launch Joint AI Research Lab to Accelerate AI Innovation in Korea NVIDIA Newsroom",
+      "ethics_tags": [],
+      "trend_score": 12
+    },
+    {
+      "title": "AMD Advancing AI 2026: Top News On AI Chips, CPUs, Robotics",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNR2FKeTFZZXdCSzBSbldlemFKOS16ZWVDOWJMY2hIQi1hcFdfRnZuaTdZY0E5cXgteFItbTZZMjVIdDUycnlaMl9WZ1pOd3B5WE9oWjBoRkM2NGVOd25VRWhRbUhia3EzMlE3RHoxZkF2VGlMajZxYkxHd0JSWHN3ZVdpOXJZUi1SRGJDekhCRlZYVkU?oc=5",
+      "source": "crn.com",
+      "category": "business",
+      "category_label": "Business & Funding",
+      "published_display": "Jul 23, 2026",
+      "published_iso": "2026-07-23T22:32:00Z",
+      "summary": "AMD Advancing AI 2026: Top News On AI Chips, CPUs, Robotics crn.com",
+      "ethics_tags": [],
+      "trend_score": 23
+    },
+    {
+      "title": "Show HN: LLM-budget-cap – atomic Redis spend cap for LLM APIs",
+      "link": "https://github.com/Rentheria/llm-budget-cap",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 23, 2026",
+      "published_iso": "2026-07-23T20:47:50Z",
+      "summary": "1 points, 0 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
+      "title": "Duke Lands Four Spots in Federal AI Research Program",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQODNLWkE5eThLcng5eXdiNnRscGUwMU9FUmNqSTJMdlJ5WXJsNUxJMjM4UnJ5MVdtQ2tpbFpocXQ1X2taeG1WSGNjRVNMYU1kbXFiZGhZNEpRSDl5LVM5bDRkMkhPUnFMek1kM1MzWTJNbk1lZ25Yc3JfN1FYY000bDhrQ0JzeEk?oc=5",
+      "source": "Mirage News",
+      "category": "research",
+      "category_label": "Research & Papers",
+      "published_display": "Jul 23, 2026",
+      "published_iso": "2026-07-23T20:26:00Z",
+      "summary": "Duke Lands Four Spots in Federal AI Research Program Mirage News",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
+      "title": "Fermilab Expands AI Research Role Through DOE Genesis Mission",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSlR1dW9PLXdYYXgxdVFudnU1Tk1yX24yb2NhWUhodDRrTHk0ekgxQUJrYU9tMnJ3VUhaSHdqZDlYMTlzVVRoY19kdmVaRWtrTDZPM2hrVEZaUk1BOVlzdkFkVmU0UVJHYWt3U0VWX05oU0VBX3o3LVF4djZ3V1ZCOV8tRjRCaUtYR2hPYWJpdzZmUGJGU1gwd01xb21RX2tt?oc=5",
+      "source": "HPCwire",
+      "category": "research",
+      "category_label": "Research & Papers",
+      "published_display": "Jul 23, 2026",
+      "published_iso": "2026-07-23T20:15:22Z",
+      "summary": "Fermilab Expands AI Research Role Through DOE Genesis Mission HPCwire",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
+      "title": "Show HN: Open-artifact – view and share your LLM docs and artifacts",
+      "link": "https://github.com/iBala/open-artifact",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 23, 2026",
+      "published_iso": "2026-07-23T20:03:44Z",
+      "summary": "1 points, 0 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
       "title": "Hugging Face OpenAI hack: Agent went rogue, escaped and hacked everything in its path",
       "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9YTlh3aFc5cDF6UGhsQkREUk5mQ0ZjNUtqMHZhcFFUc1ZFc1hUWjBBc0hhNkc4UGMtLXFPbmpFRDVnQUpXbXNuN2VUSmNjSWdCblhlMlZYMlZQTlI3SlpuZE1XOXJtYzU2SlI4MWFDYkJtMzlkOGpNZ1I2LUc?oc=5",
       "source": "Mashable",
       "category": "labs",
       "category_label": "Labs & Industry",
       "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T07:22:40Z",
+      "published_iso": "2026-07-23T20:02:43Z",
       "summary": "Hugging Face OpenAI hack: Agent went rogue, escaped and hacked everything in its path Mashable",
       "ethics_tags": [
         "Safety & Alignment"
       ],
-      "trend_score": 121
+      "trend_score": 118
     },
     {
-      "title": "OpenAI announces $20 billion Georgia data center project",
-      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOWGI5VVlncGhiek00YkNWTFByLWk1dmtodXVNT1hoT3lUTjRuOGFLLV9Eb0UxcUU2dkRYR2EzUEJDOG1MQUlDMmkzNXoyUXlNV3pqa005R1AxRXZqa2pRZlE0VEFkbW5yc0JQaFNqel9tYmF3akFwcUVwTl80dFlEYWVn?oc=5",
-      "source": "Axios",
+      "title": "LLM Based Education Games Will Be a Big Deal",
+      "link": "https://resobscura.substack.com/p/llm-based-educational-games-will",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Jul 23, 2026",
+      "published_iso": "2026-07-23T19:57:17Z",
+      "summary": "1 points, 0 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
+      "title": "OpenAI's Hugging Face hack triggers 'AI Kill Switch' bill in Congress",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQWVhNdF9vVVNEUk5pRXdrZkFZNkU2WXA4MDJqSEVUOVhZaFYzZ0dKTUxvWTN5Z21CTzlNYVZXTF9ieTdLQkVWODQtTE51RTFpYzk2TjdoX1QwbUVtVmo3TktjX2pRZURaSVVQdVYyYTJQZk5raHRVOHMwNzMzLUF5dzZSamdxa3kwN3BZTVFSWGJpUdIBlwFBVV95cUxNX1dIYVZvcmZINEoxVjVJdnJOYUtoRGQwMGcteFV5a1NKU2huSkdYaE1DNFdQTjc2NmluNWg1Smd2UGRSbnpUQUpfeVdBOHJSVUs1SFRhc1JUaUZ6RVN0ckdwdDh6eTdJUnBOdU56V0Y5WUVIMWRCUHk3ZlF2c2x6ZmNlbWNGRTJoWWkzQ1pKakY5SHhrbmE0?oc=5",
+      "source": "CNBC",
       "category": "labs",
       "category_label": "Labs & Industry",
       "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T05:42:27Z",
-      "summary": "OpenAI announces $20 billion Georgia data center project Axios",
+      "published_iso": "2026-07-23T19:51:08Z",
+      "summary": "OpenAI's Hugging Face hack triggers 'AI Kill Switch' bill in Congress CNBC",
       "ethics_tags": [
-        "Energy & Environment"
+        "Regulation & Governance"
       ],
-      "trend_score": 58
+      "trend_score": 60
     },
     {
-      "title": "China’s ambition to lead the world in AI safety begins breaking hearts",
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1GRjBuUTJOUnQ3MmtudENaMHZvM2w3VUhPemhTTlBIWWtfQ0xvRnZxWlpxeldBSHhLNGtTVWZVSEJZVkl3SHdzZEl1eTFVRVlNd0RtZEJGdEcxbnZ4cUlEbnljVUF6S3NDNVJ3RHZqMDhRcTR0bWo0UjVUTQ?oc=5",
-      "source": "CNN",
-      "category": "ethics",
-      "category_label": "Ethics & Society",
+      "title": "Launching Health in ChatGPT",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1SZ20wcWdqZlZXdjZSYXpVcHNtS1R5cVFydGdYRnpLSVV5R1pLUXRDR1hQOWpjaFRBcktWNGhjWVlxcUtRY1BjYmZBVDZtRThCWFVBY0pn?oc=5",
+      "source": "OpenAI",
+      "category": "labs",
+      "category_label": "Labs & Industry",
       "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T04:01:25Z",
-      "summary": "China’s ambition to lead the world in AI safety begins breaking hearts CNN",
-      "ethics_tags": [
-        "Safety & Alignment"
-      ],
-      "trend_score": 42
+      "published_iso": "2026-07-23T19:43:46Z",
+      "summary": "Launching Health in ChatGPT OpenAI",
+      "ethics_tags": [],
+      "trend_score": 72
     },
-    {
-      "title": "Hybrid LSTM-Graph Neural Framework for Robust Financial Fraud Detection and Adversarial Resilience",
-      "link": "https://arxiv.org/abs/2607.19350",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T04:00:00Z",
-      "summary": "arXiv:2607.19350v1 Announce Type: new Abstract: Financial institutions face significant challenges in detecting sophisticated money laundering patterns, such as smurfing and layering, due to extreme data imbalance (0.13% fraud rate) and…",
-      "ethics_tags": [
-        "Misinformation & Deepfakes"
-      ],
-      "trend_score": 0
-    },
-    {
-      "title": "GraphContainer: A Unified Platform for Comparing and Debugging Graph RAG Methods",
-      "link": "https://arxiv.org/abs/2607.19362",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T04:00:00Z",
-      "summary": "arXiv:2607.19362v1 Announce Type: new Abstract: Graph RAG mitigates hallucinations and stale knowledge in LLMs, particularly for multi-hop question answering. However, existing approaches remain highly fragmented and incompatible. The…",
-      "ethics_tags": [
-        "Misinformation & Deepfakes"
-      ],
-      "trend_score": 0
-    },
-    {
-      "title": "Beyond Tracking or Shortcut: Composition-Bounded Predictive States in Poker Autoregressive Models",
-      "link": "https://arxiv.org/abs/2607.19369",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T04:00:00Z",
-      "summary": "arXiv:2607.19369v1 Announce Type: new Abstract: Hidden-state probes often recover latent labels in imperfect-information sequence models, but this alone does not establish that a model maintains a posterior belief distribution over hidden…",
-      "ethics_tags": [
-        "Privacy & Surveillance"
-      ],
-      "trend_score": 0
-    }
-  ],
-  "latest": [
     {
       "title": "Claude’s voice mode is now available for Opus and Sonnet",
       "link": "https://www.theverge.com/ai-artificial-intelligence/970065/anthropic-voice-mode-claude-opus-sonnet-haiku-ai",
@@ -2394,7 +2586,7 @@
       "published_iso": "2026-07-23T19:28:13Z",
       "summary": "Until now, voice mode has only been available on Claude Haiku, Anthropic's faster but less powerful model. Now the company is making its Opus and Sonnet models available in voice mode, and extending its reach into apps like Gmail, Slack,…",
       "ethics_tags": [],
-      "trend_score": 75
+      "trend_score": 70
     },
     {
       "title": "Frontier-class LLM inference on a laptop CPU",
@@ -2416,21 +2608,9 @@
       "category_label": "Labs & Industry",
       "published_display": "Jul 23, 2026",
       "published_iso": "2026-07-23T19:00:00Z",
-      "summary": "Claude's new voice model will let you reschedule your meeting or draft an email",
+      "summary": "Claude's new voice model will let you reschedule your meeting or draft an email.",
       "ethics_tags": [],
-      "trend_score": 75
-    },
-    {
-      "title": "Stronger AI agents did more damage, not less",
-      "link": "https://www.agentx-core.com/blog/stronger-agents-more-dangerous-unguarded",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T18:57:55Z",
-      "summary": "3 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 63
+      "trend_score": 70
     },
     {
       "title": "Samsung Reportedly Weighs €1B Mistral AI Investment",
@@ -2445,18 +2625,6 @@
       "trend_score": 0
     },
     {
-      "title": "Sierra acquires TakeOff, the long-horizon AI agent platform",
-      "link": "https://runtimewire.com/article/sierra-acquires-takeoff-long-horizon-ai-agents",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T18:55:09Z",
-      "summary": "3 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 63
-    },
-    {
       "title": "AegisAI, founded by former Google security execs, lands $36M to stop AI-driven spear phishing",
       "link": "https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/",
       "source": "TechCrunch",
@@ -2468,7 +2636,7 @@
       "ethics_tags": [
         "Labor & Jobs"
       ],
-      "trend_score": 63
+      "trend_score": 58
     },
     {
       "title": "A distillation primer and why banning it would not halt progress of Chinese LLMs",
@@ -2479,204 +2647,6 @@
       "published_display": "Jul 23, 2026",
       "published_iso": "2026-07-23T18:34:56Z",
       "summary": "3 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "Anthropic calls for industry-wide AI safety standards to keep models from wreaking havoc",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTjgyaWlPVldPYUgtTUhxNXhSTHZFZnd3ZzlCSERNLUxIN2dickx4ZGpST2gtbXF2d2xpOFFaekN2QlVORXB5MV9MSEVBUFJoTWhDOHFRX3k3OVBpREJjOXk0NTlTVUhEd2ppMXdyNkRibTBhbG8zMEJxQjFPT0l0ZTczeDUtMHlmZ1lUQ2RlYkt5VTdmcTRESXBQM2x2dWxVVzM0dDhiai1FbU5peXU1bDhHQTBWMU1wbUQ0Z9IBwgFBVV95cUxOOHgtX3VLREtLVTB6MHdWdjJISjEza0FEc3ZsX1ZRMjlDamk5TFVCVjZzQjM1Z1Z2X2tJVW9qRzRCdHhxeGVaVVRLVHVTaGlSVERWTFFhYlYwQzNDQTJOYjQ0T2gxTFJpRFFFOERCbDk2dmNCZ3pIWXR3djZOWWhkM1ZIOTBjdVoxWnZoWHB3cThGQWFvazRrTzh1SG9TQ3N1elFHWE1DNEFGeWpGQ2tVVXdtbmtVR2s3OG1pXzludmZTZw?oc=5",
-      "source": "Fox Business",
-      "category": "ethics",
-      "category_label": "Ethics & Society",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T18:19:00Z",
-      "summary": "Anthropic calls for industry-wide AI safety standards to keep models from wreaking havoc Fox Business",
-      "ethics_tags": [
-        "Safety & Alignment"
-      ],
-      "trend_score": 100
-    },
-    {
-      "title": "Claude Opus 5",
-      "link": "https://artificialanalysis.ai/models/claude-opus-5",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T18:01:03Z",
-      "summary": "3 points, 1 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 17
-    },
-    {
-      "title": "AlphaSense Explores IPO as AI Research Platform Weighs Public Debut",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQSVQ4MEloT2kzOGFFa0YxOEk0M3BOOXpSaE9nSE9PRDd5UG11Xy1TMWhLa3BiWUpoQ3VqYXRxZ3FCSV8yZjJHOS1zSFFINllZTVZIVF9LdzFRa3RueHFSQXp2c0JEV1QzVGtDUUg3NnJPVEJpLWhXaVVmNms3NDV6bWtlQlVaOUp3ZXFwTjhjclo0RUJMdTJyWjFGcGpXc3ZiY0NHTXdaNHA5Zw?oc=5",
-      "source": "citybiz",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T17:54:54Z",
-      "summary": "AlphaSense Explores IPO as AI Research Platform Weighs Public Debut citybiz",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "Accidental data loss in Claude Code and OpenAI Codex: when AI deletes user files",
-      "link": "https://firasd.substack.com/p/accidental-data-loss-in-claude-code-openai-codex-ai-agent-harness-file-deletion",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T17:48:20Z",
-      "summary": "2 points, 1 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 75
-    },
-    {
-      "title": "Fail-closed enforcement for AI agents: deny what you cannot verify",
-      "link": "https://github.com/Fame510/SHACKLE",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T17:45:16Z",
-      "summary": "1 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 63
-    },
-    {
-      "title": "You don't need an LLM to cluster LLM traces",
-      "link": "https://seldon-ai.com/blog/you-dont-need-an-llm-to-cluster-llm-traces",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T17:38:38Z",
-      "summary": "2 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "Anthropic ordered to pay largest copyright class action settlement in history",
-      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxObWpBUnpTb2dDNkVQa1ViVUppVkJMYmRsYWxCeDhnRHNLWG9vbENKQ1ZnNXNaZzNqd2w5WnhtdWozQmhaX3AtMS0wUW5maXljUnc3OENsOThFNXFoYnVsQXh2RzRyU3ZwWXotODJDOGlGVkRxN2VGV0lrMGNFSVRzUTFRMnd4REtDUU1r?oc=5",
-      "source": "Mashable",
-      "category": "labs",
-      "category_label": "Labs & Industry",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T17:36:31Z",
-      "summary": "Anthropic ordered to pay largest copyright class action settlement in history Mashable",
-      "ethics_tags": [
-        "Copyright & IP"
-      ],
-      "trend_score": 70
-    },
-    {
-      "title": "UNESCO and LG AI Research Launch Global MOOC on the Ethics of AI",
-      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOS256RTBsT0lHUWR3QkxoMml2U1QyUS1SVS1mQXlZd3ZaUldGSWwyMGxhdHYxYTFycC1ET19Xc1RvaTg0X2JOV1NxVUN4QXhBNHZWY3ppQ1o5cVhBZ1FPcGQ2UXljTWFjVW9zN05DdUZPUXU3X0tkMHN2NXM0a0NJWE45bVdTbXp4U3ZLenFZNTVMNzQ?oc=5",
-      "source": "UNESCO",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T17:33:30Z",
-      "summary": "UNESCO and LG AI Research Launch Global MOOC on the Ethics of AI UNESCO",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "In-House LLM Serving at Netflix",
-      "link": "https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T17:15:43Z",
-      "summary": "3 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "Launching Health in ChatGPT",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1SZ20wcWdqZlZXdjZSYXpVcHNtS1R5cVFydGdYRnpLSVV5R1pLUXRDR1hQOWpjaFRBcktWNGhjWVlxcUtRY1BjYmZBVDZtRThCWFVBY0pn?oc=5",
-      "source": "OpenAI",
-      "category": "labs",
-      "category_label": "Labs & Industry",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T17:12:53Z",
-      "summary": "Launching Health in ChatGPT OpenAI",
-      "ethics_tags": [],
-      "trend_score": 70
-    },
-    {
-      "title": "Show HN: Setoku – Self-hosted knowledge server for AI agents",
-      "link": "https://setoku.com/",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T17:12:30Z",
-      "summary": "3 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 63
-    },
-    {
-      "title": "OpenAI is making big claims as it rolls out ChatGPT Health to everyone",
-      "link": "https://www.theverge.com/ai-artificial-intelligence/970115/openai-chatgpt-health-launch-claims",
-      "source": "The Verge",
-      "category": "labs",
-      "category_label": "Labs & Industry",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T17:10:27Z",
-      "summary": "OpenAI is rolling out ChatGPT Health to everyone in the US on Thursday, allowing more people to connect their medical records and health-tracking information to the chatbot. During a briefing, Ashley Alexander, OpenAI's vice president of…",
-      "ethics_tags": [
-        "Privacy & Surveillance"
-      ],
-      "trend_score": 70
-    },
-    {
-      "title": "Runway launches AI model router as generative media gets crowded",
-      "link": "https://techcrunch.com/2026/07/23/runway-bets-on-ai-model-routing-as-generative-media-gets-crowded/",
-      "source": "TechCrunch",
-      "category": "labs",
-      "category_label": "Labs & Industry",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T17:07:35Z",
-      "summary": "The Media Router is a tool that automatically selects the best image, video, or audio generation model for a request based on whether a developer prioritizes quality, speed or cost.",
-      "ethics_tags": [],
-      "trend_score": 13
-    },
-    {
-      "title": "Show HN: Fleet – drive a fleet of Claude Code/Codex agents from Telegram",
-      "link": "https://github.com/sand0vvv/fleet",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T17:03:00Z",
-      "summary": "1 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 80
-    },
-    {
-      "title": "OpenAI makes ChatGPT Health available to all US users",
-      "link": "https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/",
-      "source": "TechCrunch",
-      "category": "labs",
-      "category_label": "Labs & Industry",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T17:00:00Z",
-      "summary": "Users can also integrate their personal data from services like Apple Health, Function, and MyFitnessPal.",
-      "ethics_tags": [],
-      "trend_score": 70
-    },
-    {
-      "title": "LLMs break down in funny ways when told the Jacobian Conjecture counterargument",
-      "link": "https://minimaxir.com/2026/07/jacobian-conjecture/",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Jul 23, 2026",
-      "published_iso": "2026-07-23T16:19:16Z",
-      "summary": "1 points, 0 comments on Hacker News.",
       "ethics_tags": [],
       "trend_score": 0
     }

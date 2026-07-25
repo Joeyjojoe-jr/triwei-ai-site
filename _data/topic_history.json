@@ -57,9 +57,10 @@
     },
     {
       "date": "2026-07-23",
-      "story_count": 9,
+      "story_count": 15,
       "topics": {
         "Anthropic": 1,
+        "Mistral": 1,
         "Nvidia": 1,
         "OpenAI": 1,
         "regulation": 1,
@@ -68,29 +69,34 @@
     },
     {
       "date": "2026-07-24",
-      "story_count": 46,
+      "story_count": 30,
       "topics": {
-        "agent": 3,
-        "agentic": 1,
+        "agent": 1,
         "Anthropic": 4,
-        "benchmark": 2,
-        "ChatGPT": 2,
+        "benchmark": 1,
+        "ChatGPT": 1,
         "chip": 1,
-        "Claude": 4,
+        "Claude": 3,
+        "Microsoft": 2,
+        "Mistral": 1,
         "Nvidia": 4,
-        "OpenAI": 3,
-        "regulation": 2,
-        "safety": 1,
+        "OpenAI": 4,
+        "regulation": 1,
+        "safety": 2,
         "video": 1
       }
     },
     {
       "date": "2026-07-25",
-      "story_count": 8,
+      "story_count": 18,
       "topics": {
-        "agent": 1,
+        "agent": 2,
+        "benchmark": 1,
+        "chip": 1,
+        "Claude": 2,
+        "Microsoft": 1,
         "Nvidia": 1,
-        "OpenAI": 5
+        "OpenAI": 4
       }
     }
   ]

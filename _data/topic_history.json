@@ -46,41 +46,51 @@
     },
     {
       "date": "2026-07-22",
-      "story_count": 9,
+      "story_count": 7,
       "topics": {
-        "Anthropic": 3,
-        "copyright": 2,
-        "OpenAI": 2,
-        "regulation": 4,
+        "Anthropic": 2,
+        "copyright": 1,
+        "OpenAI": 1,
+        "regulation": 3,
         "safety": 4
       }
     },
     {
       "date": "2026-07-23",
-      "story_count": 12,
+      "story_count": 9,
       "topics": {
-        "Anthropic": 2,
+        "Anthropic": 1,
         "Nvidia": 1,
-        "OpenAI": 2,
+        "OpenAI": 1,
         "regulation": 1,
         "safety": 2
       }
     },
     {
       "date": "2026-07-24",
-      "story_count": 49,
+      "story_count": 46,
       "topics": {
-        "agent": 2,
+        "agent": 3,
         "agentic": 1,
         "Anthropic": 4,
-        "benchmark": 1,
+        "benchmark": 2,
         "ChatGPT": 2,
-        "Claude": 3,
-        "Nvidia": 3,
-        "OpenAI": 7,
-        "regulation": 1,
-        "safety": 2,
+        "chip": 1,
+        "Claude": 4,
+        "Nvidia": 4,
+        "OpenAI": 3,
+        "regulation": 2,
+        "safety": 1,
         "video": 1
+      }
+    },
+    {
+      "date": "2026-07-25",
+      "story_count": 8,
+      "topics": {
+        "agent": 1,
+        "Nvidia": 1,
+        "OpenAI": 5
       }
     }
   ]

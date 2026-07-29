@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-07-28T19:44:46.280594Z",
-  "generated_display": "Jul 28, 2026",
-  "coverage_generated_display": "July 28, 2026 at 2:44 PM CDT",
+  "generated_utc": "2026-07-29T03:22:21.888408Z",
+  "generated_display": "Jul 29, 2026",
+  "coverage_generated_display": "July 28, 2026 at 10:22 PM CDT",
   "diffusion_watch": {
     "coverage": {
       "story_count": 0,
@@ -156,7 +156,7 @@
   "supply_chain": {
     "verified_on": "2026-07-20",
     "verified_display": "Jul 20, 2026",
-    "age_days": 8,
+    "age_days": 9,
     "freshness": "current",
     "stages": [
       {
@@ -508,11 +508,11 @@
   },
   "topic_lifecycle": {
     "window_days": 90,
-    "observed_days": 13,
+    "observed_days": 14,
     "series": [
       {
         "term": "safety",
-        "total": 16,
+        "total": 15,
         "points": [
           {
             "date": "2026-07-16",
@@ -571,90 +571,24 @@
           },
           {
             "date": "2026-07-27",
-            "count": 3,
-            "share": 27.3
+            "count": 1,
+            "share": 12.5
           },
           {
             "date": "2026-07-28",
-            "count": 7,
-            "share": 13.5
-          }
-        ]
-      },
-      {
-        "term": "Anthropic",
-        "total": 12,
-        "points": [
+            "count": 8,
+            "share": 15.7
+          },
           {
-            "date": "2026-07-16",
+            "date": "2026-07-29",
             "count": 0,
             "share": 0.0
-          },
-          {
-            "date": "2026-07-17",
-            "count": 2,
-            "share": 50.0
-          },
-          {
-            "date": "2026-07-18",
-            "count": 1,
-            "share": 50.0
-          },
-          {
-            "date": "2026-07-19",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-20",
-            "count": 1,
-            "share": 20.0
-          },
-          {
-            "date": "2026-07-21",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-22",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-23",
-            "count": 1,
-            "share": 50.0
-          },
-          {
-            "date": "2026-07-24",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-25",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-26",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-27",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-28",
-            "count": 7,
-            "share": 13.5
           }
         ]
       },
       {
         "term": "OpenAI",
-        "total": 10,
+        "total": 12,
         "points": [
           {
             "date": "2026-07-16",
@@ -714,18 +648,99 @@
           {
             "date": "2026-07-27",
             "count": 2,
-            "share": 18.2
+            "share": 25.0
           },
           {
             "date": "2026-07-28",
             "count": 6,
-            "share": 11.5
+            "share": 11.8
+          },
+          {
+            "date": "2026-07-29",
+            "count": 2,
+            "share": 33.3
+          }
+        ]
+      },
+      {
+        "term": "Anthropic",
+        "total": 11,
+        "points": [
+          {
+            "date": "2026-07-16",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-17",
+            "count": 2,
+            "share": 50.0
+          },
+          {
+            "date": "2026-07-18",
+            "count": 1,
+            "share": 50.0
+          },
+          {
+            "date": "2026-07-19",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-20",
+            "count": 1,
+            "share": 20.0
+          },
+          {
+            "date": "2026-07-21",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-22",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-23",
+            "count": 1,
+            "share": 50.0
+          },
+          {
+            "date": "2026-07-24",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-25",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-26",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-27",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-28",
+            "count": 6,
+            "share": 11.8
+          },
+          {
+            "date": "2026-07-29",
+            "count": 0,
+            "share": 0.0
           }
         ]
       },
       {
         "term": "Nvidia",
-        "total": 10,
+        "total": 9,
         "points": [
           {
             "date": "2026-07-16",
@@ -785,12 +800,17 @@
           {
             "date": "2026-07-27",
             "count": 2,
-            "share": 18.2
+            "share": 25.0
           },
           {
             "date": "2026-07-28",
-            "count": 6,
-            "share": 11.5
+            "count": 5,
+            "share": 9.8
+          },
+          {
+            "date": "2026-07-29",
+            "count": 0,
+            "share": 0.0
           }
         ]
       },
@@ -861,13 +881,18 @@
           {
             "date": "2026-07-28",
             "count": 3,
-            "share": 5.8
+            "share": 5.9
+          },
+          {
+            "date": "2026-07-29",
+            "count": 0,
+            "share": 0.0
           }
         ]
       },
       {
-        "term": "chip",
-        "total": 3,
+        "term": "regulation",
+        "total": 4,
         "points": [
           {
             "date": "2026-07-16",
@@ -911,8 +936,8 @@
           },
           {
             "date": "2026-07-24",
-            "count": 1,
-            "share": 16.7
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-07-25",
@@ -926,13 +951,18 @@
           },
           {
             "date": "2026-07-27",
-            "count": 0,
-            "share": 0.0
+            "count": 2,
+            "share": 25.0
           },
           {
             "date": "2026-07-28",
             "count": 2,
-            "share": 3.8
+            "share": 3.9
+          },
+          {
+            "date": "2026-07-29",
+            "count": 0,
+            "share": 0.0
           }
         ]
       }
@@ -981,12 +1011,12 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 1
+            "count": 2
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 2
+            "count": 5
           },
           {
             "key": "society",
@@ -996,8 +1026,39 @@
         ]
       },
       {
+        "name": "Anthropic",
+        "story_count": 7,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 2
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 1
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 1
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 1
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 2
+          }
+        ]
+      },
+      {
         "name": "Nvidia",
-        "story_count": 9,
+        "story_count": 7,
         "cells": [
           {
             "key": "hardware",
@@ -1012,7 +1073,7 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 1
+            "count": 0
           },
           {
             "key": "apps",
@@ -1022,69 +1083,7 @@
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 2
-          }
-        ]
-      },
-      {
-        "name": "Anthropic",
-        "story_count": 8,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 2
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 2
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 2
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
             "count": 1
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "name": "Moonshot",
-        "story_count": 4,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 1
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 2
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 3
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 0
           }
         ]
       },
@@ -1146,7 +1145,7 @@
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 0
+            "count": 1
           }
         ]
       },
@@ -1180,9 +1179,71 @@
             "count": 0
           }
         ]
+      },
+      {
+        "name": "Mistral",
+        "story_count": 1,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 0
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Moonshot",
+        "story_count": 1,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 0
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
       }
     ],
-    "max_count": 4,
+    "max_count": 5,
     "metric": "Distinct stories mentioning both the company and layer",
     "source": "coverage"
   },
@@ -1190,7 +1251,7 @@
     "status": "available",
     "verified_on": "2026-07-20",
     "verified_display": "Jul 20, 2026",
-    "age_days": 8,
+    "age_days": 9,
     "max_current_age_days": 30,
     "freshness": "current",
     "models": [
@@ -1654,7 +1715,7 @@
     "metric": "Share of U.S. employer businesses reporting AI use",
     "method_note": "Current means used AI in any business function in the prior two weeks; expected means plans to use AI in the next six months.",
     "source": "census",
-    "status": "fresh"
+    "status": "retained"
   },
   "company_economics": {
     "companies": [

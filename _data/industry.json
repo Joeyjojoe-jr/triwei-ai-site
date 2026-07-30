@@ -1,15 +1,38 @@
 {
-  "generated_utc": "2026-07-30T08:40:21.365708Z",
+  "generated_utc": "2026-07-30T14:22:14.235006Z",
   "generated_display": "Jul 30, 2026",
-  "coverage_generated_display": "July 30, 2026 at 3:40 AM CDT",
+  "coverage_generated_display": "July 30, 2026 at 9:22 AM CDT",
   "diffusion_watch": {
     "coverage": {
-      "story_count": 0,
-      "lab_count": 0,
-      "labs": [],
-      "signals": [],
-      "stories": [],
-      "observed_days": 6,
+      "story_count": 1,
+      "lab_count": 1,
+      "labs": [
+        {
+          "name": "Moonshot / Kimi",
+          "count": 1
+        }
+      ],
+      "signals": [
+        {
+          "name": "Open weights",
+          "count": 1
+        }
+      ],
+      "stories": [
+        {
+          "title": "Anthropic's new MCP spec, Kimi K3 open weights on Ollama, GPT Transcribe, plus",
+          "link": "https://ddsboston.com/blogs/vibe-code-academy/ai-news-for-vibe-coders-daily-2026-07-30",
+          "source": "Web",
+          "published_display": "Jul 30, 2026",
+          "labs": [
+            "Moonshot / Kimi"
+          ],
+          "signals": [
+            "Open weights"
+          ]
+        }
+      ],
+      "observed_days": 7,
       "window_days": 365,
       "daily": [
         {
@@ -65,6 +88,16 @@
         },
         {
           "date": "2026-07-27",
+          "story_count": 1,
+          "labs": {
+            "Moonshot / Kimi": 1
+          },
+          "signals": {
+            "Open weights": 1
+          }
+        },
+        {
+          "date": "2026-07-30",
           "story_count": 1,
           "labs": {
             "Moonshot / Kimi": 1
@@ -512,7 +545,7 @@
     "series": [
       {
         "term": "safety",
-        "total": 16,
+        "total": 17,
         "points": [
           {
             "date": "2026-07-16",
@@ -576,24 +609,24 @@
           },
           {
             "date": "2026-07-28",
-            "count": 10,
-            "share": 58.8
+            "count": 9,
+            "share": 56.2
           },
           {
             "date": "2026-07-29",
             "count": 2,
-            "share": 8.0
+            "share": 11.1
           },
           {
             "date": "2026-07-30",
-            "count": 0,
-            "share": 0.0
+            "count": 2,
+            "share": 6.5
           }
         ]
       },
       {
         "term": "OpenAI",
-        "total": 15,
+        "total": 12,
         "points": [
           {
             "date": "2026-07-16",
@@ -658,23 +691,23 @@
           {
             "date": "2026-07-28",
             "count": 2,
-            "share": 11.8
+            "share": 12.5
           },
           {
             "date": "2026-07-29",
-            "count": 9,
-            "share": 36.0
+            "count": 7,
+            "share": 38.9
           },
           {
             "date": "2026-07-30",
-            "count": 2,
-            "share": 9.1
+            "count": 1,
+            "share": 3.2
           }
         ]
       },
       {
         "term": "Anthropic",
-        "total": 7,
+        "total": 10,
         "points": [
           {
             "date": "2026-07-16",
@@ -739,23 +772,23 @@
           {
             "date": "2026-07-28",
             "count": 1,
-            "share": 5.9
+            "share": 6.2
           },
           {
             "date": "2026-07-29",
-            "count": 1,
-            "share": 4.0
+            "count": 3,
+            "share": 16.7
           },
           {
             "date": "2026-07-30",
-            "count": 1,
-            "share": 4.5
+            "count": 2,
+            "share": 6.5
           }
         ]
       },
       {
         "term": "Nvidia",
-        "total": 7,
+        "total": 8,
         "points": [
           {
             "date": "2026-07-16",
@@ -819,8 +852,8 @@
           },
           {
             "date": "2026-07-28",
-            "count": 4,
-            "share": 23.5
+            "count": 5,
+            "share": 31.2
           },
           {
             "date": "2026-07-29",
@@ -831,93 +864,12 @@
             "date": "2026-07-30",
             "count": 0,
             "share": 0.0
-          }
-        ]
-      },
-      {
-        "term": "agent",
-        "total": 5,
-        "points": [
-          {
-            "date": "2026-07-16",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-17",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-18",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-19",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-20",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-21",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-22",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-23",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-24",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-25",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-26",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-27",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-28",
-            "count": 1,
-            "share": 5.9
-          },
-          {
-            "date": "2026-07-29",
-            "count": 1,
-            "share": 4.0
-          },
-          {
-            "date": "2026-07-30",
-            "count": 3,
-            "share": 13.6
           }
         ]
       },
       {
         "term": "Microsoft",
-        "total": 5,
+        "total": 4,
         "points": [
           {
             "date": "2026-07-16",
@@ -982,17 +934,98 @@
           {
             "date": "2026-07-28",
             "count": 2,
-            "share": 11.8
+            "share": 12.5
           },
           {
             "date": "2026-07-29",
-            "count": 2,
-            "share": 8.0
+            "count": 1,
+            "share": 5.6
           },
           {
             "date": "2026-07-30",
             "count": 1,
-            "share": 4.5
+            "share": 3.2
+          }
+        ]
+      },
+      {
+        "term": "Apple",
+        "total": 3,
+        "points": [
+          {
+            "date": "2026-07-16",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-17",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-18",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-19",
+            "count": 1,
+            "share": 50.0
+          },
+          {
+            "date": "2026-07-20",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-21",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-22",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-23",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-24",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-25",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-26",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-27",
+            "count": 1,
+            "share": 33.3
+          },
+          {
+            "date": "2026-07-28",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-29",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-30",
+            "count": 1,
+            "share": 3.2
           }
         ]
       }
@@ -1026,12 +1059,12 @@
     "companies": [
       {
         "name": "OpenAI",
-        "story_count": 14,
+        "story_count": 11,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 1
+            "count": 0
           },
           {
             "key": "cloud",
@@ -1041,85 +1074,23 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 5
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
             "count": 4
           },
           {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 2
+          },
+          {
             "key": "society",
             "label": "Policy & society",
             "count": 3
-          }
-        ]
-      },
-      {
-        "name": "Microsoft",
-        "story_count": 5,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 1
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 2
-          }
-        ]
-      },
-      {
-        "name": "Nvidia",
-        "story_count": 5,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 3
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 0
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 2
           }
         ]
       },
       {
         "name": "Anthropic",
-        "story_count": 4,
+        "story_count": 7,
         "cells": [
           {
             "key": "hardware",
@@ -1149,8 +1120,39 @@
         ]
       },
       {
+        "name": "Nvidia",
+        "story_count": 6,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 4
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 0
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 2
+          }
+        ]
+      },
+      {
         "name": "Meta",
-        "story_count": 3,
+        "story_count": 4,
         "cells": [
           {
             "key": "hardware",
@@ -1171,6 +1173,68 @@
             "key": "apps",
             "label": "Tools & applications",
             "count": 3
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "Microsoft",
+        "story_count": 4,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 1
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Moonshot",
+        "story_count": 2,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 1
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
           },
           {
             "key": "society",
@@ -1180,7 +1244,7 @@
         ]
       }
     ],
-    "max_count": 5,
+    "max_count": 4,
     "metric": "Distinct stories mentioning both the company and layer",
     "source": "coverage"
   },
@@ -1520,133 +1584,133 @@
     "status": "fresh"
   },
   "adoption": {
-    "period": "Reference period ending Jun 28, 2026",
+    "period": "Reference period ending Jul 12, 2026",
     "sectors": [
       {
         "code": "51",
         "name": "Information",
-        "current": 43.7,
-        "expected": 46.8,
-        "gap": 3.1
+        "current": 41.9,
+        "expected": 44.1,
+        "gap": 2.2
       },
       {
         "code": "54",
         "name": "Professional & technical services",
-        "current": 37.6,
-        "expected": 41.8,
-        "gap": 4.2
-      },
-      {
-        "code": "52",
-        "name": "Finance & insurance",
-        "current": 36.0,
-        "expected": 41.7,
-        "gap": 5.7
+        "current": 40.0,
+        "expected": 42.9,
+        "gap": 2.9
       },
       {
         "code": "61",
         "name": "Education",
-        "current": 30.9,
-        "expected": 33.1,
-        "gap": 2.2
+        "current": 36.2,
+        "expected": 37.7,
+        "gap": 1.5
       },
       {
-        "code": "53",
-        "name": "Real estate",
-        "current": 29.0,
-        "expected": 32.1,
-        "gap": 3.1
+        "code": "52",
+        "name": "Finance & insurance",
+        "current": 35.5,
+        "expected": 42.8,
+        "gap": 7.3
       },
       {
         "code": "55",
         "name": "Company management",
-        "current": 27.3,
-        "expected": 38.4,
-        "gap": 11.1
+        "current": 33.5,
+        "expected": 33.5,
+        "gap": 0.0
+      },
+      {
+        "code": "53",
+        "name": "Real estate",
+        "current": 25.6,
+        "expected": 29.3,
+        "gap": 3.7
       },
       {
         "code": "62",
         "name": "Health care",
-        "current": 24.7,
-        "expected": 28.5,
-        "gap": 3.8
+        "current": 22.0,
+        "expected": 26.0,
+        "gap": 4.0
       },
       {
         "code": "56",
         "name": "Administrative services",
-        "current": 20.2,
-        "expected": 21.8,
-        "gap": 1.6
+        "current": 20.9,
+        "expected": 24.0,
+        "gap": 3.1
       },
       {
         "code": "31",
         "name": "Manufacturing",
-        "current": 19.7,
-        "expected": 21.3,
-        "gap": 1.6
+        "current": 20.3,
+        "expected": 23.1,
+        "gap": 2.8
       },
       {
         "code": "42",
         "name": "Wholesale trade",
-        "current": 18.6,
-        "expected": 22.0,
-        "gap": 3.4
+        "current": 19.3,
+        "expected": 22.3,
+        "gap": 3.0
       },
       {
         "code": "71",
         "name": "Arts & recreation",
-        "current": 18.3,
-        "expected": 21.8,
-        "gap": 3.5
-      },
-      {
-        "code": "44",
-        "name": "Retail trade",
-        "current": 17.4,
-        "expected": 18.6,
-        "gap": 1.2
-      },
-      {
-        "code": "23",
-        "name": "Construction",
-        "current": 13.9,
-        "expected": 15.7,
-        "gap": 1.8
+        "current": 18.2,
+        "expected": 21.6,
+        "gap": 3.4
       },
       {
         "code": "22",
         "name": "Utilities",
-        "current": 13.4,
-        "expected": 12.5,
-        "gap": -0.9
+        "current": 17.1,
+        "expected": 19.7,
+        "gap": 2.6
+      },
+      {
+        "code": "44",
+        "name": "Retail trade",
+        "current": 15.5,
+        "expected": 18.8,
+        "gap": 3.3
+      },
+      {
+        "code": "23",
+        "name": "Construction",
+        "current": 13.6,
+        "expected": 14.8,
+        "gap": 1.2
       },
       {
         "code": "81",
         "name": "Other services",
-        "current": 11.5,
-        "expected": 13.3,
-        "gap": 1.8
-      },
-      {
-        "code": "21",
-        "name": "Mining & extraction",
-        "current": 9.8,
-        "expected": 7.2,
-        "gap": -2.6
-      },
-      {
-        "code": "72",
-        "name": "Accommodation & food",
-        "current": 9.7,
-        "expected": 11.8,
-        "gap": 2.1
+        "current": 11.6,
+        "expected": 13.1,
+        "gap": 1.5
       },
       {
         "code": "48",
         "name": "Transportation & warehousing",
-        "current": 9.3,
-        "expected": 13.8,
-        "gap": 4.5
+        "current": 10.7,
+        "expected": 12.7,
+        "gap": 2.0
+      },
+      {
+        "code": "72",
+        "name": "Accommodation & food",
+        "current": 10.0,
+        "expected": 11.6,
+        "gap": 1.6
+      },
+      {
+        "code": "21",
+        "name": "Mining & extraction",
+        "current": 7.9,
+        "expected": 7.9,
+        "gap": 0.0
       }
     ],
     "metric": "Share of U.S. employer businesses reporting AI use",

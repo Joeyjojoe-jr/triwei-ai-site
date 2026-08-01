@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-08-01T13:42:32.781881Z",
+  "generated_utc": "2026-08-01T19:19:15.407381Z",
   "generated_display": "Aug 01, 2026",
-  "coverage_generated_display": "August 1, 2026 at 8:42 AM CDT",
+  "coverage_generated_display": "August 1, 2026 at 2:19 PM CDT",
   "diffusion_watch": {
     "coverage": {
       "story_count": 1,
@@ -630,23 +630,23 @@
           {
             "date": "2026-07-30",
             "count": 1,
-            "share": 20.0
+            "share": 25.0
           },
           {
             "date": "2026-07-31",
-            "count": 9,
-            "share": 31.0
+            "count": 6,
+            "share": 23.1
           },
           {
             "date": "2026-08-01",
-            "count": 3,
-            "share": 12.5
+            "count": 6,
+            "share": 21.4
           }
         ]
       },
       {
         "term": "safety",
-        "total": 14,
+        "total": 15,
         "points": [
           {
             "date": "2026-07-16",
@@ -726,12 +726,12 @@
           {
             "date": "2026-07-31",
             "count": 8,
-            "share": 27.6
+            "share": 30.8
           },
           {
             "date": "2026-08-01",
-            "count": 2,
-            "share": 8.3
+            "count": 3,
+            "share": 10.7
           }
         ]
       },
@@ -816,19 +816,19 @@
           },
           {
             "date": "2026-07-31",
-            "count": 5,
-            "share": 17.2
+            "count": 4,
+            "share": 15.4
           },
           {
             "date": "2026-08-01",
-            "count": 2,
-            "share": 8.3
+            "count": 3,
+            "share": 10.7
           }
         ]
       },
       {
         "term": "Claude",
-        "total": 5,
+        "total": 6,
         "points": [
           {
             "date": "2026-07-16",
@@ -908,12 +908,12 @@
           {
             "date": "2026-07-31",
             "count": 1,
-            "share": 3.4
+            "share": 3.8
           },
           {
             "date": "2026-08-01",
-            "count": 3,
-            "share": 12.5
+            "count": 4,
+            "share": 14.3
           }
         ]
       },
@@ -994,7 +994,7 @@
           {
             "date": "2026-07-30",
             "count": 1,
-            "share": 20.0
+            "share": 25.0
           },
           {
             "date": "2026-07-31",
@@ -1009,7 +1009,7 @@
         ]
       },
       {
-        "term": "DeepSeek",
+        "term": "benchmark",
         "total": 5,
         "points": [
           {
@@ -1084,18 +1084,18 @@
           },
           {
             "date": "2026-07-30",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 25.0
           },
           {
             "date": "2026-07-31",
             "count": 2,
-            "share": 6.9
+            "share": 7.7
           },
           {
             "date": "2026-08-01",
-            "count": 3,
-            "share": 12.5
+            "count": 2,
+            "share": 7.1
           }
         ]
       }
@@ -1144,12 +1144,12 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 6
+            "count": 5
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 5
+            "count": 4
           },
           {
             "key": "society",
@@ -1160,7 +1160,7 @@
       },
       {
         "name": "Anthropic",
-        "story_count": 10,
+        "story_count": 11,
         "cells": [
           {
             "key": "hardware",
@@ -1170,17 +1170,17 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 1
+            "count": 2
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 3
+            "count": 2
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 1
+            "count": 2
           },
           {
             "key": "society",
@@ -1190,8 +1190,8 @@
         ]
       },
       {
-        "name": "DeepSeek",
-        "story_count": 5,
+        "name": "Google",
+        "story_count": 3,
         "cells": [
           {
             "key": "hardware",
@@ -1201,17 +1201,17 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 0
+            "count": 1
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 3
+            "count": 0
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 1
+            "count": 0
           },
           {
             "key": "society",
@@ -1283,8 +1283,8 @@
         ]
       },
       {
-        "name": "Google",
-        "story_count": 1,
+        "name": "DeepSeek",
+        "story_count": 2,
         "cells": [
           {
             "key": "hardware",
@@ -1299,12 +1299,12 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 0
+            "count": 2
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 0
+            "count": 1
           },
           {
             "key": "society",
@@ -1345,7 +1345,7 @@
         ]
       }
     ],
-    "max_count": 6,
+    "max_count": 5,
     "metric": "Distinct stories mentioning both the company and layer",
     "source": "coverage"
   },

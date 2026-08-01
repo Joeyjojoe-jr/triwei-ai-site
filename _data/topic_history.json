@@ -84,11 +84,10 @@
     },
     {
       "date": "2026-07-28",
-      "story_count": 4,
+      "story_count": 3,
       "topics": {
         "agent": 1,
-        "chip": 1,
-        "Nvidia": 3,
+        "Nvidia": 2,
         "OpenAI": 1
       }
     },
@@ -99,43 +98,41 @@
     },
     {
       "date": "2026-07-30",
-      "story_count": 9,
+      "story_count": 5,
       "topics": {
-        "agent": 1,
-        "benchmark": 2,
-        "Claude": 1,
+        "benchmark": 1,
         "Nvidia": 1,
-        "OpenAI": 3,
-        "safety": 2
+        "OpenAI": 1
       }
     },
     {
       "date": "2026-07-31",
-      "story_count": 37,
+      "story_count": 29,
       "topics": {
-        "agent": 4,
-        "Anthropic": 7,
+        "agent": 3,
+        "Anthropic": 5,
         "benchmark": 2,
-        "Claude": 2,
+        "Claude": 1,
         "DeepSeek": 2,
         "GPT": 1,
         "GPT-5": 1,
         "Microsoft": 1,
-        "OpenAI": 11,
+        "OpenAI": 9,
         "regulation": 4,
-        "safety": 9
+        "safety": 8
       }
     },
     {
       "date": "2026-08-01",
-      "story_count": 12,
+      "story_count": 24,
       "topics": {
-        "agent": 1,
-        "ChatGPT": 1,
-        "Claude": 1,
-        "data center": 1,
-        "OpenAI": 2,
-        "video": 2
+        "Anthropic": 2,
+        "benchmark": 1,
+        "Claude": 3,
+        "DeepSeek": 3,
+        "OpenAI": 3,
+        "safety": 2,
+        "video": 1
       }
     }
   ]

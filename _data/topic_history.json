@@ -113,19 +113,15 @@
     },
     {
       "date": "2026-08-01",
-      "story_count": 4,
-      "topics": {
-        "Claude": 1,
-        "Google": 1,
-        "safety": 2
-      }
+      "story_count": 1,
+      "topics": {}
     },
     {
       "date": "2026-08-02",
-      "story_count": 4,
+      "story_count": 1,
       "topics": {
-        "OpenAI": 2,
-        "regulation": 3
+        "OpenAI": 1,
+        "regulation": 1
       }
     },
     {
@@ -134,14 +130,21 @@
       "topics": {
         "agent": 2,
         "agentic": 2,
-        "Anthropic": 9,
-        "ChatGPT": 2,
+        "Anthropic": 6,
+        "ChatGPT": 1,
         "DeepSeek": 8,
-        "Google": 1,
+        "Google": 2,
         "Nvidia": 1,
         "OpenAI": 6,
-        "regulation": 1,
-        "safety": 6
+        "regulation": 3,
+        "safety": 9
+      }
+    },
+    {
+      "date": "2026-08-04",
+      "story_count": 6,
+      "topics": {
+        "agent": 1
       }
     }
   ]

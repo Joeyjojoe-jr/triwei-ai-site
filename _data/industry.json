@@ -1,19 +1,19 @@
 {
-  "generated_utc": "2026-08-03T19:47:39.361340Z",
-  "generated_display": "Aug 03, 2026",
-  "coverage_generated_display": "August 3, 2026 at 2:47 PM CDT",
+  "generated_utc": "2026-08-04T03:20:30.413893Z",
+  "generated_display": "Aug 04, 2026",
+  "coverage_generated_display": "August 3, 2026 at 10:20 PM CDT",
   "diffusion_watch": {
     "coverage": {
-      "story_count": 5,
+      "story_count": 6,
       "lab_count": 3,
       "labs": [
         {
-          "name": "Alibaba / Qwen",
-          "count": 4
+          "name": "DeepSeek",
+          "count": 3
         },
         {
-          "name": "DeepSeek",
-          "count": 2
+          "name": "Alibaba / Qwen",
+          "count": 3
         },
         {
           "name": "Moonshot / Kimi",
@@ -24,9 +24,25 @@
         {
           "name": "Capability convergence",
           "count": 5
+        },
+        {
+          "name": "Open weights",
+          "count": 1
         }
       ],
       "stories": [
+        {
+          "title": "Open-weight AI model Kimi K3 completes simulated network attack",
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQYlBiaXZRbHQ0VDMtZzRjWnZhVTFfVnJaTG1wakQ2RW1xUVItbTljdS0wZVBQSGRKeWVsWTZnaF9mRzNGZWZGVmlQRHQ4bTBfamdpWlZDWGVKRTctdDVlNG5XNm8tWnJJNTFzTkRGcEkwYVZoMG12VkRZZUdHbXZMV0ZWUVNKQWJWYmlxMVp5OGV6NDA?oc=5",
+          "source": "TechInformed",
+          "published_display": "Aug 3, 2026",
+          "labs": [
+            "Moonshot / Kimi"
+          ],
+          "signals": [
+            "Open weights"
+          ]
+        },
         {
           "title": "Alibaba unveils Qwen 3.8 Max as DeepSeek undercuts AI rivals with ultra-low-cost model",
           "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPeG82R0ZocG9VbGdIdHFPMUJMU0RZeEhfRW1XOHlEdGxLSG14T2ZFeDM0aTF4RE1DNUthOExEa1NoMkZ6bXpQci16RTk1RVJpc1RuMmNnUU1rX0xEb285djdTbk9xbFJsRWZaMHJfV2ZEcV9mQVBYTlY3YkMxMGlCaE81UXhXQTlqanBPRXdhMnpDcFE1bGtYYkFzbHQ5YVVIOXRFSHVxazdpam9BY3dLak1rNWRvNnNpeGR0MEFwUnk4Z0tnZVJVclhHMNIB0AFBVV95cUxNOUtKV2hPaWY2U1JPVjNudktKOEh6aENMSk5ZX2F6U2lEU0hSMTNxeWZHdmxuZERKbWMyMkdKTnlEazdneHg5ZS1hMGx5YUxuNGpzWVFEWThSX1plRlo4Q0w3X1k2YlhINk91QVdhQ3diTGpiQWVMSXFEN1pLNDhtYl82OXJ6UzVaenlxaWRteV9ReS1ReDNQSkZYaTdrOG50X1B0YU9ndUVRV2RyLXRXT19aN2QtemJGNVZKWV82OHBYM2xGNnlLLWN1SEJIekNq?oc=5",
@@ -35,6 +51,18 @@
           "labs": [
             "DeepSeek",
             "Alibaba / Qwen"
+          ],
+          "signals": [
+            "Capability convergence"
+          ]
+        },
+        {
+          "title": "DeepSeek’s smaller model just outperformed its own flagship",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9uWWtPZDlLLW1zS3FublF5VVZ5QkEtcTZmdFZZYU9nd2t3SW9JSl9hSGtGUHlydWFLZXpEY2xxRFJ0X3IyT29LSDA5THlobkRtd3A5ZVBnZ2NHNXFjZjFGVGM3ejA?oc=5",
+          "source": "The New Stack",
+          "published_display": "Aug 3, 2026",
+          "labs": [
+            "DeepSeek"
           ],
           "signals": [
             "Capability convergence"
@@ -59,19 +87,6 @@
           "published_display": "Aug 3, 2026",
           "labs": [
             "DeepSeek"
-          ],
-          "signals": [
-            "Capability convergence"
-          ]
-        },
-        {
-          "title": "China’s Alibaba takes another swipe at America’s AI supremacy",
-          "link": "https://www.theverge.com/ai-artificial-intelligence/974342/alibaba-qwen-max-open-weight-ai",
-          "source": "The Verge",
-          "published_display": "Aug 3, 2026",
-          "labs": [
-            "Moonshot / Kimi",
-            "Alibaba / Qwen"
           ],
           "signals": [
             "Capability convergence"
@@ -186,14 +201,15 @@
         },
         {
           "date": "2026-08-03",
-          "story_count": 5,
+          "story_count": 6,
           "labs": {
-            "Alibaba / Qwen": 4,
-            "DeepSeek": 2,
+            "Alibaba / Qwen": 3,
+            "DeepSeek": 3,
             "Moonshot / Kimi": 1
           },
           "signals": {
-            "Capability convergence": 5
+            "Capability convergence": 5,
+            "Open weights": 1
           }
         }
       ],
@@ -279,7 +295,7 @@
   "supply_chain": {
     "verified_on": "2026-07-20",
     "verified_display": "Jul 20, 2026",
-    "age_days": 14,
+    "age_days": 15,
     "freshness": "current",
     "stages": [
       {
@@ -631,11 +647,117 @@
   },
   "topic_lifecycle": {
     "window_days": 90,
-    "observed_days": 19,
+    "observed_days": 20,
     "series": [
       {
-        "term": "Anthropic",
+        "term": "safety",
         "total": 13,
+        "points": [
+          {
+            "date": "2026-07-16",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-17",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-18",
+            "count": 2,
+            "share": 100.0
+          },
+          {
+            "date": "2026-07-19",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-20",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-21",
+            "count": 1,
+            "share": 100.0
+          },
+          {
+            "date": "2026-07-22",
+            "count": 1,
+            "share": 100.0
+          },
+          {
+            "date": "2026-07-23",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-24",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-25",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-26",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-27",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-28",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-29",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-30",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-31",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-01",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-02",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-03",
+            "count": 9,
+            "share": 17.3
+          },
+          {
+            "date": "2026-08-04",
+            "count": 0,
+            "share": 0.0
+          }
+        ]
+      },
+      {
+        "term": "Anthropic",
+        "total": 10,
         "points": [
           {
             "date": "2026-07-16",
@@ -729,115 +851,19 @@
           },
           {
             "date": "2026-08-03",
-            "count": 9,
-            "share": 17.3
-          }
-        ]
-      },
-      {
-        "term": "safety",
-        "total": 12,
-        "points": [
-          {
-            "date": "2026-07-16",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-17",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-18",
-            "count": 2,
-            "share": 100.0
-          },
-          {
-            "date": "2026-07-19",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-20",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-21",
-            "count": 1,
-            "share": 100.0
-          },
-          {
-            "date": "2026-07-22",
-            "count": 1,
-            "share": 100.0
-          },
-          {
-            "date": "2026-07-23",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-24",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-25",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-26",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-27",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-28",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-29",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-30",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-31",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-01",
-            "count": 2,
-            "share": 50.0
-          },
-          {
-            "date": "2026-08-02",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-03",
             "count": 6,
             "share": 11.5
+          },
+          {
+            "date": "2026-08-04",
+            "count": 0,
+            "share": 0.0
           }
         ]
       },
       {
         "term": "OpenAI",
-        "total": 11,
+        "total": 10,
         "points": [
           {
             "date": "2026-07-16",
@@ -926,13 +952,18 @@
           },
           {
             "date": "2026-08-02",
-            "count": 2,
-            "share": 50.0
+            "count": 1,
+            "share": 100.0
           },
           {
             "date": "2026-08-03",
             "count": 6,
             "share": 11.5
+          },
+          {
+            "date": "2026-08-04",
+            "count": 0,
+            "share": 0.0
           }
         ]
       },
@@ -1034,6 +1065,11 @@
             "date": "2026-08-03",
             "count": 8,
             "share": 15.4
+          },
+          {
+            "date": "2026-08-04",
+            "count": 0,
+            "share": 0.0
           }
         ]
       },
@@ -1135,11 +1171,16 @@
             "date": "2026-08-03",
             "count": 1,
             "share": 1.9
+          },
+          {
+            "date": "2026-08-04",
+            "count": 0,
+            "share": 0.0
           }
         ]
       },
       {
-        "term": "regulation",
+        "term": "agent",
         "total": 4,
         "points": [
           {
@@ -1204,8 +1245,8 @@
           },
           {
             "date": "2026-07-28",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 50.0
           },
           {
             "date": "2026-07-29",
@@ -1229,13 +1270,18 @@
           },
           {
             "date": "2026-08-02",
-            "count": 3,
-            "share": 75.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-08-03",
+            "count": 2,
+            "share": 3.8
+          },
+          {
+            "date": "2026-08-04",
             "count": 1,
-            "share": 1.9
+            "share": 16.7
           }
         ]
       }
@@ -1268,68 +1314,6 @@
     ],
     "companies": [
       {
-        "name": "Anthropic",
-        "story_count": 10,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 1
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 4
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 5
-          }
-        ]
-      },
-      {
-        "name": "OpenAI",
-        "story_count": 10,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 2
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 3
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 3
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 3
-          }
-        ]
-      },
-      {
         "name": "DeepSeek",
         "story_count": 9,
         "cells": [
@@ -1361,6 +1345,68 @@
         ]
       },
       {
+        "name": "OpenAI",
+        "story_count": 8,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 1
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 2
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "name": "Anthropic",
+        "story_count": 6,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 3
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 3
+          }
+        ]
+      },
+      {
         "name": "Google",
         "story_count": 3,
         "cells": [
@@ -1387,7 +1433,7 @@
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 1
+            "count": 2
           }
         ]
       },
@@ -1424,7 +1470,7 @@
       },
       {
         "name": "Meta",
-        "story_count": 2,
+        "story_count": 1,
         "cells": [
           {
             "key": "hardware",
@@ -1444,7 +1490,7 @@
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 2
+            "count": 1
           },
           {
             "key": "society",
@@ -1465,7 +1511,7 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 1
+            "count": 0
           },
           {
             "key": "models",
@@ -1493,7 +1539,7 @@
     "status": "available",
     "verified_on": "2026-07-20",
     "verified_display": "Jul 20, 2026",
-    "age_days": 14,
+    "age_days": 15,
     "max_current_age_days": 30,
     "freshness": "current",
     "models": [

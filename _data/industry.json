@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-08-08T13:01:57.231546Z",
+  "generated_utc": "2026-08-08T18:48:35.781499Z",
   "generated_display": "Aug 08, 2026",
-  "coverage_generated_display": "August 8, 2026 at 8:01 AM CDT",
+  "coverage_generated_display": "August 8, 2026 at 1:48 PM CDT",
   "diffusion_watch": {
     "coverage": {
       "story_count": 0,
@@ -583,7 +583,7 @@
     "series": [
       {
         "term": "OpenAI",
-        "total": 17,
+        "total": 18,
         "points": [
           {
             "date": "2026-07-16",
@@ -693,23 +693,23 @@
           {
             "date": "2026-08-06",
             "count": 2,
-            "share": 14.3
+            "share": 15.4
           },
           {
             "date": "2026-08-07",
             "count": 10,
-            "share": 40.0
+            "share": 41.7
           },
           {
             "date": "2026-08-08",
-            "count": 1,
-            "share": 3.2
+            "count": 2,
+            "share": 6.2
           }
         ]
       },
       {
         "term": "safety",
-        "total": 13,
+        "total": 11,
         "points": [
           {
             "date": "2026-07-16",
@@ -813,18 +813,18 @@
           },
           {
             "date": "2026-08-05",
-            "count": 2,
-            "share": 50.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-08-06",
-            "count": 4,
-            "share": 28.6
+            "count": 3,
+            "share": 23.1
           },
           {
             "date": "2026-08-07",
-            "count": 3,
-            "share": 12.0
+            "count": 4,
+            "share": 16.7
           },
           {
             "date": "2026-08-08",
@@ -835,7 +835,7 @@
       },
       {
         "term": "Anthropic",
-        "total": 9,
+        "total": 7,
         "points": [
           {
             "date": "2026-07-16",
@@ -939,13 +939,13 @@
           },
           {
             "date": "2026-08-05",
-            "count": 2,
-            "share": 50.0
+            "count": 1,
+            "share": 100.0
           },
           {
             "date": "2026-08-06",
             "count": 2,
-            "share": 14.3
+            "share": 15.4
           },
           {
             "date": "2026-08-07",
@@ -954,8 +954,8 @@
           },
           {
             "date": "2026-08-08",
-            "count": 1,
-            "share": 3.2
+            "count": 0,
+            "share": 0.0
           }
         ]
       },
@@ -1071,12 +1071,12 @@
           {
             "date": "2026-08-06",
             "count": 1,
-            "share": 7.1
+            "share": 7.7
           },
           {
             "date": "2026-08-07",
             "count": 1,
-            "share": 4.0
+            "share": 4.2
           },
           {
             "date": "2026-08-08",
@@ -1197,23 +1197,23 @@
           {
             "date": "2026-08-06",
             "count": 2,
-            "share": 14.3
+            "share": 15.4
           },
           {
             "date": "2026-08-07",
             "count": 2,
-            "share": 8.0
+            "share": 8.3
           },
           {
             "date": "2026-08-08",
             "count": 1,
-            "share": 3.2
+            "share": 3.1
           }
         ]
       },
       {
-        "term": "Claude",
-        "total": 4,
+        "term": "Google",
+        "total": 3,
         "points": [
           {
             "date": "2026-07-16",
@@ -1227,8 +1227,8 @@
           },
           {
             "date": "2026-07-18",
-            "count": 1,
-            "share": 50.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-07-19",
@@ -1317,23 +1317,23 @@
           },
           {
             "date": "2026-08-05",
-            "count": 2,
-            "share": 50.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-08-06",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 7.7
           },
           {
             "date": "2026-08-07",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 4.2
           },
           {
             "date": "2026-08-08",
             "count": 1,
-            "share": 3.2
+            "share": 3.1
           }
         ]
       }
@@ -1367,7 +1367,7 @@
     "companies": [
       {
         "name": "OpenAI",
-        "story_count": 13,
+        "story_count": 14,
         "cells": [
           {
             "key": "hardware",
@@ -1377,12 +1377,12 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 0
+            "count": 1
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 5
+            "count": 6
           },
           {
             "key": "apps",
@@ -1392,23 +1392,23 @@
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 4
+            "count": 5
           }
         ]
       },
       {
-        "name": "Google",
-        "story_count": 5,
+        "name": "Moonshot",
+        "story_count": 4,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 1
+            "count": 0
           },
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 1
+            "count": 0
           },
           {
             "key": "models",
@@ -1429,12 +1429,12 @@
       },
       {
         "name": "Anthropic",
-        "story_count": 4,
+        "story_count": 3,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 1
+            "count": 2
           },
           {
             "key": "cloud",
@@ -1444,7 +1444,7 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 1
+            "count": 0
           },
           {
             "key": "apps",
@@ -1459,18 +1459,18 @@
         ]
       },
       {
-        "name": "Moonshot",
+        "name": "Google",
         "story_count": 3,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 0
+            "count": 1
           },
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 0
+            "count": 1
           },
           {
             "key": "models",
@@ -1485,7 +1485,7 @@
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 0
+            "count": 1
           }
         ]
       },
@@ -1614,7 +1614,7 @@
         ]
       }
     ],
-    "max_count": 5,
+    "max_count": 6,
     "metric": "Distinct stories mentioning both the company and layer",
     "source": "coverage"
   },

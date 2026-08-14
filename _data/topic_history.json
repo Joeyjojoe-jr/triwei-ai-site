@@ -181,50 +181,55 @@
     },
     {
       "date": "2026-08-11",
-      "story_count": 1,
+      "story_count": 2,
       "topics": {
         "Google": 1,
-        "Meta": 1,
-        "OpenAI": 1
+        "Meta": 2,
+        "OpenAI": 1,
+        "safety": 1
       }
     },
     {
       "date": "2026-08-12",
-      "story_count": 14,
+      "story_count": 13,
       "topics": {
         "chip": 1,
         "Meta": 1,
         "Nvidia": 2,
-        "OpenAI": 1,
         "regulation": 4,
         "safety": 2
       }
     },
     {
       "date": "2026-08-13",
-      "story_count": 44,
+      "story_count": 16,
       "topics": {
-        "agent": 3,
+        "agent": 1,
         "agentic": 1,
-        "Anthropic": 4,
-        "benchmark": 3,
-        "Claude": 2,
-        "DeepSeek": 4,
+        "Anthropic": 3,
+        "benchmark": 1,
+        "Claude": 1,
         "Google": 1,
-        "Nvidia": 2,
-        "OpenAI": 2,
         "regulation": 2,
         "safety": 4
       }
     },
     {
       "date": "2026-08-14",
-      "story_count": 11,
+      "story_count": 39,
       "topics": {
-        "agent": 1,
+        "agent": 6,
+        "agentic": 2,
+        "alignment": 4,
+        "Anthropic": 3,
+        "Apple": 2,
         "benchmark": 1,
-        "DeepSeek": 5,
-        "OpenAI": 2
+        "Claude": 3,
+        "DeepSeek": 10,
+        "Meta": 1,
+        "Nvidia": 1,
+        "OpenAI": 2,
+        "safety": 3
       }
     }
   ]

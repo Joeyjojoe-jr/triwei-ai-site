@@ -196,10 +196,9 @@
     },
     {
       "date": "2026-08-13",
-      "story_count": 5,
+      "story_count": 1,
       "topics": {
-        "agentic": 1,
-        "Anthropic": 3
+        "Anthropic": 1
       }
     },
     {
@@ -211,9 +210,9 @@
     },
     {
       "date": "2026-08-15",
-      "story_count": 3,
+      "story_count": 2,
       "topics": {
-        "regulation": 2
+        "regulation": 1
       }
     },
     {
@@ -227,35 +226,34 @@
     },
     {
       "date": "2026-08-17",
-      "story_count": 28,
+      "story_count": 16,
       "topics": {
-        "agent": 1,
-        "Anthropic": 4,
-        "benchmark": 1,
-        "Claude": 2,
-        "DeepSeek": 1,
-        "Meta": 2,
+        "Anthropic": 2,
+        "ChatGPT": 1,
+        "Meta": 1,
         "Microsoft": 1,
-        "Nvidia": 4,
+        "Nvidia": 2,
         "OpenAI": 3,
         "regulation": 4
       }
     },
     {
       "date": "2026-08-18",
-      "story_count": 25,
+      "story_count": 42,
       "topics": {
         "agent": 2,
         "alignment": 1,
-        "Anthropic": 2,
+        "Anthropic": 5,
         "benchmark": 1,
+        "ChatGPT": 1,
         "Claude": 1,
-        "DeepSeek": 1,
+        "DeepSeek": 3,
         "energy": 1,
         "multimodal": 1,
-        "OpenAI": 1,
+        "Nvidia": 1,
+        "OpenAI": 4,
         "regulation": 2,
-        "safety": 2
+        "safety": 4
       }
     }
   ]

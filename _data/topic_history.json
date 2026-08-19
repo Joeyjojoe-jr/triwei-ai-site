@@ -226,18 +226,18 @@
       "date": "2026-08-17",
       "story_count": 5,
       "topics": {
-        "regulation": 4
+        "regulation": 3,
+        "safety": 1
       }
     },
     {
       "date": "2026-08-18",
-      "story_count": 31,
+      "story_count": 25,
       "topics": {
         "agent": 1,
-        "alignment": 1,
-        "Anthropic": 4,
-        "ChatGPT": 3,
-        "Claude": 2,
+        "alignment": 2,
+        "Anthropic": 3,
+        "ChatGPT": 2,
         "Google": 2,
         "Meta": 1,
         "Nvidia": 4,
@@ -248,15 +248,15 @@
     },
     {
       "date": "2026-08-19",
-      "story_count": 33,
+      "story_count": 40,
       "topics": {
         "agent": 6,
         "agentic": 2,
-        "ChatGPT": 1,
-        "Claude": 3,
+        "ChatGPT": 3,
+        "Claude": 2,
         "Microsoft": 1,
-        "OpenAI": 1,
-        "safety": 2
+        "OpenAI": 2,
+        "safety": 3
       }
     }
   ]

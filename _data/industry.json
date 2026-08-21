@@ -1,27 +1,71 @@
 {
-  "generated_utc": "2026-08-21T13:00:50.355854Z",
+  "generated_utc": "2026-08-21T18:46:53.474190Z",
   "generated_display": "Aug 21, 2026",
-  "coverage_generated_display": "August 21, 2026 at 8:00 AM CDT",
+  "coverage_generated_display": "August 21, 2026 at 1:46 PM CDT",
   "diffusion_watch": {
     "coverage": {
-      "story_count": 1,
-      "lab_count": 1,
+      "story_count": 4,
+      "lab_count": 2,
       "labs": [
         {
           "name": "DeepSeek",
+          "count": 3
+        },
+        {
+          "name": "Moonshot / Kimi",
           "count": 1
         }
       ],
       "signals": [
         {
           "name": "Capability convergence",
+          "count": 3
+        },
+        {
+          "name": "Open weights",
           "count": 1
         }
       ],
       "stories": [
         {
+          "title": "Breaking: China's DeepSeek Reveals New AI Model To Rival Anthropic Amid $86B IPO Buzz",
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOSWFoSk8yNTl2ZUhlTWF5WVBiYlo0d1VMRElZZlQwbkFVZnpLT0RCcWp1MEx2V28wWUl0ZC11OEhha1lxRVpSQlNSeFZLMUZBTk5XM2g0R1l6X1pmNUpfM1R2WXFpT2VsSUhpRnJTQUVYX2U1ZzVZODFDWGw5UHJ4V1pXcklMLTF6ZVhJN2UwejVKSWFNQVpMQndn?oc=5",
+          "source": "CoinGape",
+          "published_display": "Aug 21, 2026",
+          "labs": [
+            "DeepSeek"
+          ],
+          "signals": [
+            "Capability convergence"
+          ]
+        },
+        {
+          "title": "OpenAI-backed legal tech firm pivots to Chinese Kimi K3 open-weight model",
+          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQQ3V2NUpuTnpmZndzZFE0LTF3Y1dzM05ZLW1SM1I0UTVpV0dsYktwWHNldFZaZ1NMa3otTGE4SkJWLVpJZmx1dkhyU1NZM2tMV1dCcUl2RFhDRGpuemhYdUlVS184ZHloTmtMTk1BV0tYRUs2VEc4RDJFSWhNbmZvWFVVMUZ6YXVCajRsbUVfZjNUaVE5Skg1VnZJaGFINE04MzJ1NEhvdUViaWRoU2ZTSHkwakoxTUVLSURBeEExaGRBZ9IBwgFBVV95cUxPemJYVXlXZ3R5TUJYbkRkV2NmaWN2cUJ5SGxtaHlsSTV1UFJwdVd5R3hKck9hZkY5aXgySVczWldwM1dpS0taOW03OHAxaDE2clF5ZEJ3LXJEX3ljUzhKQ2lOUExNclVSbG5FQ3VmMndsWTE3anpnaG9fX3IyRFlaRms3VXkzS21mb3JjMXFaTE5rQ1h1Z3VzNC02cTNOSFhabTdiQkg0R0Q1RUNUTmNUZEhRcmprTl9MNmEyUHUzTkVfdw?oc=5",
+          "source": "South China Morning Post",
+          "published_display": "Aug 21, 2026",
+          "labs": [
+            "Moonshot / Kimi"
+          ],
+          "signals": [
+            "Open weights"
+          ]
+        },
+        {
+          "title": "DeepSeek unveils multimodal model to rival Anthropic By Investing.com",
+          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNaVRkMklQMGRSdUp2d3NiQVVQdTdzYlN2Nk9CMG9XYnpnY182c0ptSUhzaml0RmdZM3FPVElmU2VYTXNBbVRIWXpLcjZhNG9xLWY5QmVEMFJDbWFMbDNDSW9zdkU4eWNTVFVSdXhsSWhWSmRLOV82eXB2MHljMHlqcF9fS21rUFI2N21qWHltM3J5VEk3R2Zod1o4NnFFa1ZXTXZkV0U1NVNqTmdBTXJ1SHJRb0V5SGV4WHhXbFZyVTRQVGs?oc=5",
+          "source": "Investing.com South Africa",
+          "published_display": "Aug 21, 2026",
+          "labs": [
+            "DeepSeek"
+          ],
+          "signals": [
+            "Capability convergence"
+          ]
+        },
+        {
           "title": "DeepSeek Unveils Test Model to Rival Anthropic’s Opus 4.8",
-          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNR3dGaDI3T2lNQ3pHUExzeUpvYkN1a1ZLaXpQY0xSeXBBOFZFalR1RHI0VGg1R2ZuODRmaDZkc01PS0dENHNDSmQ5SXlnY3ZIWV95MFl5OGh4bi1NcEw1WWJQVzlxbWEwbC1JQldZY0NlaHpjTGUwajJzdGVXc3dvdjl5d1N3Mkl2Z09qM0VLRG4zd0ZHN21fc0piZTZPMGY1WFhHeUI3b28zYm1P?oc=5",
+          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNV0RHUURsZGRJRnVmR1VXRHJZMEZmLVQ2M251V1k1RlJ0M0Y1R1paT1pTS05KQ2UzcWVTYmF2TnFfcThQR0JMTFhtYTlKOWNreWdDVU1mT2dyRVY2WlJxeW8wUnROQ3Q3UE5FVVgteGVqblY2dDViMlUtS3VBRF9zU2pVUFA3X29JaVhuZnVYdHl4X3pfeW51RkVPTHFBRnp1RXBFSUNEWkJYT1BIdGdnUmVhaEZlTVFLckp6bXY0N0pBZ2U4Y1ZXLQ?oc=5",
           "source": "Bloomberg.com",
           "published_display": "Aug 21, 2026",
           "labs": [
@@ -222,12 +266,14 @@
         },
         {
           "date": "2026-08-21",
-          "story_count": 1,
+          "story_count": 4,
           "labs": {
-            "DeepSeek": 1
+            "DeepSeek": 3,
+            "Moonshot / Kimi": 1
           },
           "signals": {
-            "Capability convergence": 1
+            "Capability convergence": 3,
+            "Open weights": 1
           }
         }
       ],
@@ -848,19 +894,19 @@
           },
           {
             "date": "2026-08-20",
-            "count": 7,
-            "share": 30.4
+            "count": 8,
+            "share": 66.7
           },
           {
             "date": "2026-08-21",
-            "count": 5,
-            "share": 11.6
+            "count": 4,
+            "share": 6.9
           }
         ]
       },
       {
         "term": "Anthropic",
-        "total": 17,
+        "total": 20,
         "points": [
           {
             "date": "2026-07-16",
@@ -1039,19 +1085,19 @@
           },
           {
             "date": "2026-08-20",
-            "count": 6,
-            "share": 26.1
+            "count": 3,
+            "share": 25.0
           },
           {
             "date": "2026-08-21",
-            "count": 4,
-            "share": 9.3
+            "count": 10,
+            "share": 17.2
           }
         ]
       },
       {
         "term": "OpenAI",
-        "total": 16,
+        "total": 18,
         "points": [
           {
             "date": "2026-07-16",
@@ -1230,19 +1276,19 @@
           },
           {
             "date": "2026-08-20",
-            "count": 5,
-            "share": 21.7
+            "count": 3,
+            "share": 25.0
           },
           {
             "date": "2026-08-21",
-            "count": 2,
-            "share": 4.7
+            "count": 6,
+            "share": 10.3
           }
         ]
       },
       {
         "term": "Nvidia",
-        "total": 11,
+        "total": 12,
         "points": [
           {
             "date": "2026-07-16",
@@ -1421,19 +1467,19 @@
           },
           {
             "date": "2026-08-20",
-            "count": 2,
-            "share": 8.7
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-08-21",
-            "count": 2,
-            "share": 4.7
+            "count": 5,
+            "share": 8.6
           }
         ]
       },
       {
         "term": "DeepSeek",
-        "total": 7,
+        "total": 12,
         "points": [
           {
             "date": "2026-07-16",
@@ -1617,14 +1663,14 @@
           },
           {
             "date": "2026-08-21",
-            "count": 6,
-            "share": 14.0
+            "count": 11,
+            "share": 19.0
           }
         ]
       },
       {
         "term": "agent",
-        "total": 6,
+        "total": 7,
         "points": [
           {
             "date": "2026-07-16",
@@ -1808,8 +1854,8 @@
           },
           {
             "date": "2026-08-21",
-            "count": 4,
-            "share": 9.3
+            "count": 5,
+            "share": 8.6
           }
         ]
       }
@@ -1842,54 +1888,23 @@
     ],
     "companies": [
       {
-        "name": "OpenAI",
-        "story_count": 12,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 4
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 2
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 4
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 6
-          }
-        ]
-      },
-      {
         "name": "Anthropic",
-        "story_count": 11,
+        "story_count": 16,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 2
+            "count": 3
           },
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 1
+            "count": 2
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 2
+            "count": 7
           },
           {
             "key": "apps",
@@ -1905,7 +1920,7 @@
       },
       {
         "name": "DeepSeek",
-        "story_count": 6,
+        "story_count": 11,
         "cells": [
           {
             "key": "hardware",
@@ -1915,12 +1930,12 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 0
+            "count": 1
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 3
+            "count": 7
           },
           {
             "key": "apps",
@@ -1935,23 +1950,54 @@
         ]
       },
       {
-        "name": "Nvidia",
-        "story_count": 4,
+        "name": "OpenAI",
+        "story_count": 11,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 4
+            "count": 0
           },
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 1
+            "count": 2
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 0
+            "count": 4
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 3
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 5
+          }
+        ]
+      },
+      {
+        "name": "Nvidia",
+        "story_count": 5,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 5
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 2
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 1
           },
           {
             "key": "apps",
@@ -1967,7 +2013,7 @@
       },
       {
         "name": "Google",
-        "story_count": 3,
+        "story_count": 4,
         "cells": [
           {
             "key": "hardware",
@@ -1977,12 +2023,43 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
+            "count": 1
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 3
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Moonshot",
+        "story_count": 1,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
             "count": 0
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 2
+            "count": 1
           },
           {
             "key": "apps",
@@ -1997,7 +2074,7 @@
         ]
       },
       {
-        "name": "Meta",
+        "name": "xAI",
         "story_count": 1,
         "cells": [
           {
@@ -2028,7 +2105,7 @@
         ]
       }
     ],
-    "max_count": 6,
+    "max_count": 7,
     "metric": "Distinct stories mentioning both the company and layer",
     "source": "coverage"
   },

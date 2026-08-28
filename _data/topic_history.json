@@ -291,37 +291,44 @@
     },
     {
       "date": "2026-08-26",
-      "story_count": 17,
+      "story_count": 13,
       "topics": {
         "Apple": 1,
         "Google": 2,
         "Meta": 1,
         "Nvidia": 5,
         "OpenAI": 1,
-        "regulation": 2,
-        "safety": 4,
+        "regulation": 1,
+        "safety": 2,
         "video": 1
       }
     },
     {
       "date": "2026-08-27",
-      "story_count": 52,
+      "story_count": 20,
       "topics": {
-        "agent": 2,
-        "Anthropic": 6,
-        "Apple": 1,
-        "benchmark": 3,
-        "ChatGPT": 1,
-        "Claude": 2,
+        "Anthropic": 2,
         "coding": 1,
-        "DeepSeek": 1,
-        "Google": 5,
-        "Meta": 2,
-        "multimodal": 1,
-        "Nvidia": 1,
-        "OpenAI": 9,
+        "DeepSeek": 2,
+        "Google": 4,
+        "Nvidia": 2,
+        "OpenAI": 5,
         "regulation": 1,
         "safety": 5
+      }
+    },
+    {
+      "date": "2026-08-28",
+      "story_count": 37,
+      "topics": {
+        "agent": 4,
+        "agentic": 1,
+        "Anthropic": 7,
+        "benchmark": 1,
+        "Claude": 1,
+        "Google": 1,
+        "regulation": 1,
+        "safety": 4
       }
     }
   ]

@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-08-28T11:00:00.593563Z",
-  "generated_display": "August 28, 2026 at 6:00 AM CDT",
-  "item_count": 828,
+  "generated_utc": "2026-08-28T22:07:44.226907Z",
+  "generated_display": "August 28, 2026 at 5:07 PM CDT",
+  "item_count": 822,
   "category_order": [
     "labs",
     "research",
@@ -13,6 +13,106 @@
     "labs": {
       "label": "Labs & Industry",
       "items": [
+        {
+          "title": "Neocloud Lambda secures $1B in debt to buy more chips",
+          "link": "https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/",
+          "source": "TechCrunch",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T20:24:11Z",
+          "summary": "Neocloud Lambda has raised $1B in private debt to buy Nvidia AI chips and lease them to Microsoft. It's the latest in a string of loans, underscoring the high cost of the AI boom.",
+          "ethics_tags": [],
+          "trend_score": 50
+        },
+        {
+          "title": "An Anthropic researcher just gave us a peek at self-improving AI",
+          "link": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
+          "source": "TechCrunch",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T19:30:38Z",
+          "summary": "Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall performance.",
+          "ethics_tags": [],
+          "trend_score": 76
+        },
+        {
+          "title": "US judge blocks Pentagon's Anthropic blacklisting",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPakdSUWs3QWRxY0paamF6djJFWGY3Z3YxUWVtWTlTdVBvcmxmU0Z4cDNtTU9ZVFdBUHhCOW9qSEptOHBYU3YxWGNKMjJ3VS1SbEU2aEwxTy1vRkNIS3gxXzVnOC16eDdjUWdkMmxFNENxR2hjRWYzaGVjdVV0M2o4SkhxdzNyNDdVa0FNSHhxN3Bid1JISkxfel9PUndsQWRGUGE4?oc=5",
+          "source": "Reuters",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T17:08:15Z",
+          "summary": "US judge blocks Pentagon's Anthropic blacklisting Reuters",
+          "ethics_tags": [],
+          "trend_score": 37
+        },
+        {
+          "title": "Google’s AI note-taking app now allows you to interact with books",
+          "link": "https://www.theverge.com/tech/985567/google-gemini-notebook-expert-sources-books",
+          "source": "The Verge",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T14:11:14Z",
+          "summary": "Google's AI note-taking app, Gemini Notebook, can now pull information from the books you've purchased. The new \"Expert Intelligence\" feature allows you to bring titles from Google Play Books directly into Gemini Notebook, which means you…",
+          "ethics_tags": [],
+          "trend_score": 16
+        },
+        {
+          "title": "Anthropic gets its first court win over the Pentagon’s supply-chain risk label",
+          "link": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/",
+          "source": "TechCrunch",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T12:46:12Z",
+          "summary": "A federal judge ruled the Trump administration illegally labeled Anthropic a supply-chain risk, handing the AI company a victory as its second Pentagon lawsuit continues in Washington.",
+          "ethics_tags": [
+            "Copyright & IP"
+          ],
+          "trend_score": 37
+        },
+        {
+          "title": "Meta executive leaves for OpenAI as the social media giant faces growing scrutiny in India",
+          "link": "https://techcrunch.com/2026/08/28/meta-executive-leaves-for-openai-as-the-social-media-giant-faces-growing-scrutiny-in-india/",
+          "source": "TechCrunch",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T12:21:06Z",
+          "summary": "Sandhya Devanathan will oversee some OpenAI operations across Southeast Asia and Australia in her new role.",
+          "ethics_tags": [],
+          "trend_score": 50
+        },
+        {
+          "title": "Anthropic was illegally blacklisted by the Trump administration, court rules",
+          "link": "https://www.theverge.com/ai-artificial-intelligence/985947/anthropic-supply-chain-risk-lawsuit-judge-ruling",
+          "source": "The Verge",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T11:18:29Z",
+          "summary": "On Thursday, a judge ruled that the Pentagon's blacklisting of Anthropic earlier this year was unconstitutional, delivering the AI lab a win in a monthslong rollercoaster of a battle with the Trump administration. The lawsuit, filed in…",
+          "ethics_tags": [
+            "Copyright & IP"
+          ],
+          "trend_score": 37
+        },
+        {
+          "title": "OpenAI and Anthropic are ruining San Francisco",
+          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPQm1IVndUSE5RT09KZDJTY1hSbzhDbG1ZN1FCVXVtcllTaEljNTUzZlY4SVFMQXV5SjVEMWxxbWtNTVNWY2hYR00xZ0RRZldHSmhzNkVSa3hpbFpwbVE2YWE2Y3FXUTZpeTZ2ZUNYNVVFd0tVb19STTJlRE14dnhqMUx4enI?oc=5",
+          "source": "sfgate.com",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T11:04:07Z",
+          "summary": "OpenAI and Anthropic are ruining San Francisco sfgate.com",
+          "ethics_tags": [],
+          "trend_score": 87
+        },
         {
           "title": "Tencent Touts New AI Model It Claims Outperforms Z.AI, Moonshot",
           "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNYm4zcmV5dkRHT2UxekNnbnVWbEREMFJrYkxJeWlTM3BNVkMyQXpjZFpnNHJ1MF8tZ2VBYXlrQXdUQ1JuQXZDWTR0SnFmODFWdWtwZ0xSVGRVcHJxNTQ3ZmdxN3dyTFdvbWhQOE5uQ005RlN6bW1uYnRrUmlzNWRxTlF4dEFFbFVRQ3hmemJoZDFIeS1YclBIRkozN1pQVVZMa1RzOE4yRFBwbVpFZ25waDVBQQ?oc=5",
@@ -35,33 +135,19 @@
           "published_iso": "2026-08-28T04:25:08Z",
           "summary": "Judge says Pentagon's measures against Anthropic were 'illegal and baseless' NPR",
           "ethics_tags": [],
-          "trend_score": 35
+          "trend_score": 37
         },
         {
-          "title": "Pentagon’s blacklisting of Anthropic was unlawful, US judge rules",
-          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPSlJhNzBFNUxUMW8xOWpySlkza2EyMENZSjBEQmJGc1Rrc2wtaXg0c0E0dGhqN092LXNqVHRRX0tyWUdHYi1rWmE5eGo2bWUtMS1KRmx0TUhxZ2JWdkUxNEVEaFdwUnJWN19hWkY1dmUzX0xsTm1CcjdvT2U5VGFmY3JJVUFGX2JEcHdNTVhMbnB0NVhEaEJRaEotaVBtQzJvbTJqa3lvcTVucGpjX1BQaGJ3?oc=5",
-          "source": "The Guardian",
+          "title": "Trump administration illegally retaliated against Anthropic, judge rules",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAtSEtpbWFrLThEbVNOQk15R05rUk5ZR1QyRG5PWWtYOUdEUkNsUUlQel9fWFljbm1XbWY4ZXBCY2ZoS3hnXzdjSm5oT3BmZVRGX0hzQlJiRlN3UQ?oc=5",
+          "source": "BBC",
           "category": "labs",
           "category_label": "Labs & Industry",
           "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T03:34:00Z",
-          "summary": "Pentagon’s blacklisting of Anthropic was unlawful, US judge rules The Guardian",
+          "published_iso": "2026-08-28T03:41:59Z",
+          "summary": "Trump administration illegally retaliated against Anthropic, judge rules BBC",
           "ethics_tags": [],
-          "trend_score": 35
-        },
-        {
-          "title": "Anthropic was illegally blacklisted by the Trump administration, court rules",
-          "link": "https://www.theverge.com/ai-artificial-intelligence/985947/anthropic-supply-chain-risk-lawsuit-judge-ruling",
-          "source": "The Verge",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T03:14:06Z",
-          "summary": "On Thursday, a judge ruled that the Pentagon's blacklisting of Anthropic earlier this year was unconstitutional, delivering the AI lab a win in a monthslong rollercoaster of a battle with the Trump administration. The lawsuit, filed in…",
-          "ethics_tags": [
-            "Copyright & IP"
-          ],
-          "trend_score": 35
+          "trend_score": 37
         },
         {
           "title": "Judge rules Trump administration illegally punished AI firm Anthropic",
@@ -73,19 +159,7 @@
           "published_iso": "2026-08-28T03:09:00Z",
           "summary": "Judge rules Trump administration illegally punished AI firm Anthropic CBS News",
           "ethics_tags": [],
-          "trend_score": 35
-        },
-        {
-          "title": "Trump Administration’s Blacklisting of Anthropic Was Illegal, Judge Rules",
-          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOcVhPSzYwTnE2cG5lMWR6SlBYc3RJdTFSaC0tNGc2Z3pXdHNGcTg3b0pVa1NDWklER3UzelN3NllaZ0s4a3JfN1NxQ29CbmxYXzR0eEEyZ05FNjdnc0JHNnE3WHNITHpKQVI1RW9MaGszaUx6VnByYTlPOTNKQnpCNlUyREJac0FSdm9RY21kczZ5WnBKeFE?oc=5",
-          "source": "The New York Times",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T02:28:13Z",
-          "summary": "Trump Administration’s Blacklisting of Anthropic Was Illegal, Judge Rules The New York Times",
-          "ethics_tags": [],
-          "trend_score": 35
+          "trend_score": 37
         },
         {
           "title": "Judge blocks Pentagon blacklist of Anthropic as supply chain risk",
@@ -97,137 +171,98 @@
           "published_iso": "2026-08-28T01:51:00Z",
           "summary": "Judge blocks Pentagon blacklist of Anthropic as supply chain risk CNBC",
           "ethics_tags": [],
-          "trend_score": 35
+          "trend_score": 37
         },
         {
-          "title": "Anthropic and OpenAI are joining the AI stage at TechCrunch Disrupt 2026",
-          "link": "https://techcrunch.com/2026/08/27/anthropic-and-openai-are-joining-the-ai-stage-at-techcrunch-disrupt-2026/",
-          "source": "TechCrunch",
+          "title": "Trump Administration’s Blacklisting of Anthropic Was Illegal, Judge Rules",
+          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOcVhPSzYwTnE2cG5lMWR6SlBYc3RJdTFSaC0tNGc2Z3pXdHNGcTg3b0pVa1NDWklER3UzelN3NllaZ0s4a3JfN1NxQ29CbmxYXzR0eEEyZ05FNjdnc0JHNnE3WHNITHpKQVI1RW9MaGszaUx6VnByYTlPOTNKQnpCNlUyREJac0FSdm9RY21kczZ5WnBKeFE?oc=5",
+          "source": "The New York Times",
           "category": "labs",
           "category_label": "Labs & Industry",
-          "published_display": "Aug 27, 2026",
-          "published_iso": "2026-08-27T23:16:45Z",
-          "summary": "At TechCrunch Disrupt 2026, the AI Stage is back to dig into the single hottest topic in the community for the past few years, presented by Google for Startups.",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T01:43:36Z",
+          "summary": "Trump Administration’s Blacklisting of Anthropic Was Illegal, Judge Rules The New York Times",
           "ethics_tags": [],
-          "trend_score": 101
-        },
-        {
-          "title": "Silicon Valley Sensation Ox Alpha Unveiled as Chinese AI Model",
-          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNbHdMWTRZa1FPTW11aGNfeUEyZlVYb0JlWndBRWNIdWw3R0tHOUVKWjE4MWxyRmpNamRKRFlwY3dOVmctckNSVVZvNkNJd0Z1Nk9wVGlhRFRZMmxEM2xMbkFqSW43ZDdhclFibThTbl9CdDBzb3FFQk5EcXlPaU1YVGdiRHdILXAx?oc=5",
-          "source": "조선일보",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Aug 27, 2026",
-          "published_iso": "2026-08-27T22:03:37Z",
-          "summary": "Silicon Valley Sensation Ox Alpha Unveiled as Chinese AI Model 조선일보",
-          "ethics_tags": [],
-          "trend_score": 0
-        },
-        {
-          "title": "Qwen3.8-Flash Matches DeepSeek V4 Pro on Coding Benchmarks at a Quarter of the Price",
-          "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5qSGQ4ZE12YmxNQVR2MjBQYmN4S0NHUjhPeUU1VVNSdFd0TFNUUGJTZmd2N2VranNrc3c3UHZEdnZadWNtbE81YXRONEtfVDJCbG5kSzUzeU1KOG5GTTV6WUlTM1JfUTB4OEhhMWJVSmFoeFN5R0JwM1Jn?oc=5",
-          "source": "Intelligent Living",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Aug 27, 2026",
-          "published_iso": "2026-08-27T20:50:08Z",
-          "summary": "Qwen3.8-Flash Matches DeepSeek V4 Pro on Coding Benchmarks at a Quarter of the Price Intelligent Living",
-          "ethics_tags": [],
-          "trend_score": 55
-        },
-        {
-          "title": "OpenAI, Anthropic, tech leaders warn of \"limited window\" to defend against AI cyber threats",
-          "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFA1ZW5yWlE0YV9EU2xVM0NmOG1sQzlOUVFQTXY1Z19iTmpNTFBEZkN4NzVqTVJNdWRUeHl5d3hfT2QwLXpqTjJpTkNaMHFwOUFlRmNmUVYzSExCWmctVGZiUDRTa2VNVk5oS0x2M2M2SVRFdmtqdmQ0ZmRn?oc=5",
-          "source": "CBS News",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Aug 27, 2026",
-          "published_iso": "2026-08-27T19:58:09Z",
-          "summary": "OpenAI, Anthropic, tech leaders warn of \"limited window\" to defend against AI cyber threats CBS News",
-          "ethics_tags": [],
-          "trend_score": 87
-        },
-        {
-          "title": "Barret Zoph, the Thinking Machines co-founder ousted before joining OpenAI, is now at Google",
-          "link": "https://techcrunch.com/2026/08/27/barret-zoph-the-thinking-machines-co-founder-who-defected-to-openai-is-now-at-google/",
-          "source": "TechCrunch",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Aug 27, 2026",
-          "published_iso": "2026-08-27T19:52:52Z",
-          "summary": "Zoph, who co-founded Thinking Machines Lab alongside Mira Murati and also served as the startup's CTO, led a brief stint at OpenAI and is now at Google.",
-          "ethics_tags": [],
-          "trend_score": 66
-        },
-        {
-          "title": "Google’s AI note-taking app now allows you to interact with books",
-          "link": "https://www.theverge.com/tech/985567/google-gemini-notebook-expert-sources-books",
-          "source": "The Verge",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Aug 27, 2026",
-          "published_iso": "2026-08-27T19:43:17Z",
-          "summary": "Google's AI note-taking app, Gemini Notebook, can now pull information from the books you've purchased. The new \"Expert Intelligence\" feature allows you to bring titles from Google Play Books directly into Gemini Notebook, which means you…",
-          "ethics_tags": [],
-          "trend_score": 14
-        },
-        {
-          "title": "OpenAI’s executive exodus has one big winner",
-          "link": "https://www.theverge.com/podcast/985332/openai-greg-brockman-sam-altman-leader-executive-exodus",
-          "source": "The Verge",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Aug 27, 2026",
-          "published_iso": "2026-08-27T19:32:53Z",
-          "summary": "Today on Decoder, I’m talking to Verge senior AI reporter Hayden Field about some pure Decoder bait: the seemingly-endless org chart changes at OpenAI, and how all of them seem to consolidate power under cofounder Greg Brockman, the…",
-          "ethics_tags": [],
-          "trend_score": 52
+          "trend_score": 37
         }
       ],
       "folder_items": [
         {
-          "title": "Anthropic and OpenAI are joining the AI stage at TechCrunch Disrupt 2026",
-          "link": "https://techcrunch.com/2026/08/27/anthropic-and-openai-are-joining-the-ai-stage-at-techcrunch-disrupt-2026/",
-          "source": "TechCrunch",
+          "title": "OpenAI and Anthropic are ruining San Francisco",
+          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPQm1IVndUSE5RT09KZDJTY1hSbzhDbG1ZN1FCVXVtcllTaEljNTUzZlY4SVFMQXV5SjVEMWxxbWtNTVNWY2hYR00xZ0RRZldHSmhzNkVSa3hpbFpwbVE2YWE2Y3FXUTZpeTZ2ZUNYNVVFd0tVb19STTJlRE14dnhqMUx4enI?oc=5",
+          "source": "sfgate.com",
           "category": "labs",
           "category_label": "Labs & Industry",
-          "published_display": "Aug 27, 2026",
-          "published_iso": "2026-08-27T23:16:45Z",
-          "summary": "At TechCrunch Disrupt 2026, the AI Stage is back to dig into the single hottest topic in the community for the past few years, presented by Google for Startups.",
-          "ethics_tags": [],
-          "trend_score": 101
-        },
-        {
-          "title": "OpenAI, Anthropic, tech leaders warn of \"limited window\" to defend against AI cyber threats",
-          "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFA1ZW5yWlE0YV9EU2xVM0NmOG1sQzlOUVFQTXY1Z19iTmpNTFBEZkN4NzVqTVJNdWRUeHl5d3hfT2QwLXpqTjJpTkNaMHFwOUFlRmNmUVYzSExCWmctVGZiUDRTa2VNVk5oS0x2M2M2SVRFdmtqdmQ0ZmRn?oc=5",
-          "source": "CBS News",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Aug 27, 2026",
-          "published_iso": "2026-08-27T19:58:09Z",
-          "summary": "OpenAI, Anthropic, tech leaders warn of \"limited window\" to defend against AI cyber threats CBS News",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T11:04:07Z",
+          "summary": "OpenAI and Anthropic are ruining San Francisco sfgate.com",
           "ethics_tags": [],
           "trend_score": 87
         },
         {
-          "title": "Barret Zoph, the Thinking Machines co-founder ousted before joining OpenAI, is now at Google",
-          "link": "https://techcrunch.com/2026/08/27/barret-zoph-the-thinking-machines-co-founder-who-defected-to-openai-is-now-at-google/",
+          "title": "An Anthropic researcher just gave us a peek at self-improving AI",
+          "link": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
           "source": "TechCrunch",
           "category": "labs",
           "category_label": "Labs & Industry",
-          "published_display": "Aug 27, 2026",
-          "published_iso": "2026-08-27T19:52:52Z",
-          "summary": "Zoph, who co-founded Thinking Machines Lab alongside Mira Murati and also served as the startup's CTO, led a brief stint at OpenAI and is now at Google.",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T19:30:38Z",
+          "summary": "Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall performance.",
           "ethics_tags": [],
-          "trend_score": 66
+          "trend_score": 76
+        },
+        {
+          "title": "Neocloud Lambda secures $1B in debt to buy more chips",
+          "link": "https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/",
+          "source": "TechCrunch",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T20:24:11Z",
+          "summary": "Neocloud Lambda has raised $1B in private debt to buy Nvidia AI chips and lease them to Microsoft. It's the latest in a string of loans, underscoring the high cost of the AI boom.",
+          "ethics_tags": [],
+          "trend_score": 50
         }
       ],
       "subcategories": [
         {
-          "key": "governance",
-          "label": "Lab Safety & Policy",
+          "key": "hardware",
+          "label": "Chips, Robots & Devices",
           "count": 1,
           "folder_items": [
+            {
+              "title": "Neocloud Lambda secures $1B in debt to buy more chips",
+              "link": "https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/",
+              "source": "TechCrunch",
+              "category": "labs",
+              "category_label": "Labs & Industry",
+              "published_display": "Aug 28, 2026",
+              "published_iso": "2026-08-28T20:24:11Z",
+              "summary": "Neocloud Lambda has raised $1B in private debt to buy Nvidia AI chips and lease them to Microsoft. It's the latest in a string of loans, underscoring the high cost of the AI boom.",
+              "ethics_tags": [],
+              "trend_score": 50
+            }
+          ]
+        },
+        {
+          "key": "governance",
+          "label": "Lab Safety & Policy",
+          "count": 2,
+          "folder_items": [
+            {
+              "title": "Anthropic gets its first court win over the Pentagon’s supply-chain risk label",
+              "link": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/",
+              "source": "TechCrunch",
+              "category": "labs",
+              "category_label": "Labs & Industry",
+              "published_display": "Aug 28, 2026",
+              "published_iso": "2026-08-28T12:46:12Z",
+              "summary": "A federal judge ruled the Trump administration illegally labeled Anthropic a supply-chain risk, handing the AI company a victory as its second Pentagon lawsuit continues in Washington.",
+              "ethics_tags": [
+                "Copyright & IP"
+              ],
+              "trend_score": 37
+            },
             {
               "title": "Anthropic was illegally blacklisted by the Trump administration, court rules",
               "link": "https://www.theverge.com/ai-artificial-intelligence/985947/anthropic-supply-chain-risk-lawsuit-judge-ruling",
@@ -235,38 +270,19 @@
               "category": "labs",
               "category_label": "Labs & Industry",
               "published_display": "Aug 28, 2026",
-              "published_iso": "2026-08-28T03:14:06Z",
+              "published_iso": "2026-08-28T11:18:29Z",
               "summary": "On Thursday, a judge ruled that the Pentagon's blacklisting of Anthropic earlier this year was unconstitutional, delivering the AI lab a win in a monthslong rollercoaster of a battle with the Trump administration. The lawsuit, filed in…",
               "ethics_tags": [
                 "Copyright & IP"
               ],
-              "trend_score": 35
-            }
-          ]
-        },
-        {
-          "key": "enterprise",
-          "label": "Enterprise AI",
-          "count": 1,
-          "folder_items": [
-            {
-              "title": "Qwen3.8-Flash Matches DeepSeek V4 Pro on Coding Benchmarks at a Quarter of the Price",
-              "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5qSGQ4ZE12YmxNQVR2MjBQYmN4S0NHUjhPeUU1VVNSdFd0TFNUUGJTZmd2N2VranNrc3c3UHZEdnZadWNtbE81YXRONEtfVDJCbG5kSzUzeU1KOG5GTTV6WUlTM1JfUTB4OEhhMWJVSmFoeFN5R0JwM1Jn?oc=5",
-              "source": "Intelligent Living",
-              "category": "labs",
-              "category_label": "Labs & Industry",
-              "published_display": "Aug 27, 2026",
-              "published_iso": "2026-08-27T20:50:08Z",
-              "summary": "Qwen3.8-Flash Matches DeepSeek V4 Pro on Coding Benchmarks at a Quarter of the Price Intelligent Living",
-              "ethics_tags": [],
-              "trend_score": 55
+              "trend_score": 37
             }
           ]
         },
         {
           "key": "models",
           "label": "Models & Releases",
-          "count": 3,
+          "count": 2,
           "folder_items": [
             {
               "title": "Google’s AI note-taking app now allows you to interact with books",
@@ -274,11 +290,11 @@
               "source": "The Verge",
               "category": "labs",
               "category_label": "Labs & Industry",
-              "published_display": "Aug 27, 2026",
-              "published_iso": "2026-08-27T19:43:17Z",
+              "published_display": "Aug 28, 2026",
+              "published_iso": "2026-08-28T14:11:14Z",
               "summary": "Google's AI note-taking app, Gemini Notebook, can now pull information from the books you've purchased. The new \"Expert Intelligence\" feature allows you to bring titles from Google Play Books directly into Gemini Notebook, which means you…",
               "ethics_tags": [],
-              "trend_score": 14
+              "trend_score": 16
             },
             {
               "title": "Tencent Touts New AI Model It Claims Outperforms Z.AI, Moonshot",
@@ -291,18 +307,6 @@
               "summary": "Tencent Touts New AI Model It Claims Outperforms Z.AI, Moonshot Bloomberg.com",
               "ethics_tags": [],
               "trend_score": 0
-            },
-            {
-              "title": "Silicon Valley Sensation Ox Alpha Unveiled as Chinese AI Model",
-              "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNbHdMWTRZa1FPTW11aGNfeUEyZlVYb0JlWndBRWNIdWw3R0tHOUVKWjE4MWxyRmpNamRKRFlwY3dOVmctckNSVVZvNkNJd0Z1Nk9wVGlhRFRZMmxEM2xMbkFqSW43ZDdhclFibThTbl9CdDBzb3FFQk5EcXlPaU1YVGdiRHdILXAx?oc=5",
-              "source": "조선일보",
-              "category": "labs",
-              "category_label": "Labs & Industry",
-              "published_display": "Aug 27, 2026",
-              "published_iso": "2026-08-27T22:03:37Z",
-              "summary": "Silicon Valley Sensation Ox Alpha Unveiled as Chinese AI Model 조선일보",
-              "ethics_tags": [],
-              "trend_score": 0
             }
           ]
         },
@@ -312,40 +316,40 @@
           "count": 9,
           "folder_items": [
             {
-              "title": "Anthropic and OpenAI are joining the AI stage at TechCrunch Disrupt 2026",
-              "link": "https://techcrunch.com/2026/08/27/anthropic-and-openai-are-joining-the-ai-stage-at-techcrunch-disrupt-2026/",
-              "source": "TechCrunch",
+              "title": "OpenAI and Anthropic are ruining San Francisco",
+              "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPQm1IVndUSE5RT09KZDJTY1hSbzhDbG1ZN1FCVXVtcllTaEljNTUzZlY4SVFMQXV5SjVEMWxxbWtNTVNWY2hYR00xZ0RRZldHSmhzNkVSa3hpbFpwbVE2YWE2Y3FXUTZpeTZ2ZUNYNVVFd0tVb19STTJlRE14dnhqMUx4enI?oc=5",
+              "source": "sfgate.com",
               "category": "labs",
               "category_label": "Labs & Industry",
-              "published_display": "Aug 27, 2026",
-              "published_iso": "2026-08-27T23:16:45Z",
-              "summary": "At TechCrunch Disrupt 2026, the AI Stage is back to dig into the single hottest topic in the community for the past few years, presented by Google for Startups.",
-              "ethics_tags": [],
-              "trend_score": 101
-            },
-            {
-              "title": "OpenAI, Anthropic, tech leaders warn of \"limited window\" to defend against AI cyber threats",
-              "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFA1ZW5yWlE0YV9EU2xVM0NmOG1sQzlOUVFQTXY1Z19iTmpNTFBEZkN4NzVqTVJNdWRUeHl5d3hfT2QwLXpqTjJpTkNaMHFwOUFlRmNmUVYzSExCWmctVGZiUDRTa2VNVk5oS0x2M2M2SVRFdmtqdmQ0ZmRn?oc=5",
-              "source": "CBS News",
-              "category": "labs",
-              "category_label": "Labs & Industry",
-              "published_display": "Aug 27, 2026",
-              "published_iso": "2026-08-27T19:58:09Z",
-              "summary": "OpenAI, Anthropic, tech leaders warn of \"limited window\" to defend against AI cyber threats CBS News",
+              "published_display": "Aug 28, 2026",
+              "published_iso": "2026-08-28T11:04:07Z",
+              "summary": "OpenAI and Anthropic are ruining San Francisco sfgate.com",
               "ethics_tags": [],
               "trend_score": 87
             },
             {
-              "title": "Barret Zoph, the Thinking Machines co-founder ousted before joining OpenAI, is now at Google",
-              "link": "https://techcrunch.com/2026/08/27/barret-zoph-the-thinking-machines-co-founder-who-defected-to-openai-is-now-at-google/",
+              "title": "An Anthropic researcher just gave us a peek at self-improving AI",
+              "link": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
               "source": "TechCrunch",
               "category": "labs",
               "category_label": "Labs & Industry",
-              "published_display": "Aug 27, 2026",
-              "published_iso": "2026-08-27T19:52:52Z",
-              "summary": "Zoph, who co-founded Thinking Machines Lab alongside Mira Murati and also served as the startup's CTO, led a brief stint at OpenAI and is now at Google.",
+              "published_display": "Aug 28, 2026",
+              "published_iso": "2026-08-28T19:30:38Z",
+              "summary": "Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall performance.",
               "ethics_tags": [],
-              "trend_score": 66
+              "trend_score": 76
+            },
+            {
+              "title": "Meta executive leaves for OpenAI as the social media giant faces growing scrutiny in India",
+              "link": "https://techcrunch.com/2026/08/28/meta-executive-leaves-for-openai-as-the-social-media-giant-faces-growing-scrutiny-in-india/",
+              "source": "TechCrunch",
+              "category": "labs",
+              "category_label": "Labs & Industry",
+              "published_display": "Aug 28, 2026",
+              "published_iso": "2026-08-28T12:21:06Z",
+              "summary": "Sandhya Devanathan will oversee some OpenAI operations across Southeast Asia and Australia in her new role.",
+              "ethics_tags": [],
+              "trend_score": 50
             }
           ]
         }
@@ -355,16 +359,64 @@
       "label": "Research & Papers",
       "items": [
         {
-          "title": "Kimi K3 Tops New Benchmark of AI Models for Geological Reasoning",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPUGlRS19VXy10QmFwTk1ucUNpWW0zYUZPN2FXdVF1QlNuZ0tHcUVOaFF4MTJPamJKSzg5dlU0M2pXT0xFSW5XNjQwQnBkaG1MdkRyTXNOUnM2ek5GN0J5eTl0LU5JUTdFd3drTzJqa2NUcHJOTlp6bEpNQlh0SGRsRWhUVElLaEtLX3JMS2o5OEdDcEhXZFJxTnRHcHlzQQ?oc=5",
-          "source": "The National Law Review",
+          "title": "MTSU’s QRISE lands $2M federal grant for quantum, AI research",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPYWttYmtzX2JGZGQzVWtjVXh5WlRoRlF2d1MycWhXdzdiZEM0TkY3Yjd2ZE1aa0NGdl9IOGFUTHRqVTFmWTI4aTdBTzFZeFkydWRwTlEzLTdIQUJuZmoxcnFvNGxURlVSN21YNE9sUjlNa1F1emM3V1c0RWItRVRIS2xCUDlqT1Y5OXdMQlV2aHkzTlZIMG9hSXBqQUk2TndIeFJfTm5mV29SYmdfUFMyZ0g2NTNlZTBs?oc=5",
+          "source": "MTSU News",
           "category": "research",
           "category_label": "Research & Papers",
           "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T08:13:18Z",
-          "summary": "Kimi K3 Tops New Benchmark of AI Models for Geological Reasoning The National Law Review",
+          "published_iso": "2026-08-28T19:27:52Z",
+          "summary": "MTSU’s QRISE lands $2M federal grant for quantum, AI research MTSU News",
           "ethics_tags": [],
-          "trend_score": 37
+          "trend_score": 0
+        },
+        {
+          "title": "Google DeepMind Ran History's First AI Benchmark Evaluation Where Neither Side Could Cheat",
+          "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNcERRQ09CTEpNOVltRFdOUmVPcWJFT2xyQk9wemVGVl9HdzdabGo1d21Qc2hfS2EwUUZOeHM3YnVsRHp2VDNfQngtM1J6RWZzd2QxNGFFbEVTMTBkRTJsNDdpcWJLSHFaYnEzQ09fN21fcnh3VzJFMEExNnJkTUZ2TmhxSXlOX3hzUnlERE43UnExZWx6NFpEczlGTjdad3Juc2VUcUZSUTlFd095cTZQRXQ5SDcyVGV4dm1WNFA2N2Y2bVBrcm4wWkx2Rm9XRUFEN1lDZmdUSU8xcTNW?oc=5",
+          "source": "Tech Times",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T15:55:15Z",
+          "summary": "Google DeepMind Ran History's First AI Benchmark Evaluation Where Neither Side Could Cheat Tech Times",
+          "ethics_tags": [],
+          "trend_score": 55
+        },
+        {
+          "title": "Trump praises Micron’s $10 billion investment in US for AI research",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUWRKa3pxTEFJSkRIUG1KUXpuZjZWLVdocm1BRFExRWIxa1BlR19qNUpKS2ZWMXVGam1MdTF0MEpNU0xMVmpLUU0yZGNSYzREM2s3UDZORlVPZHlPY3NiU1REVXR4TUJPT0lkWmlsRzNyOVhrWko4MlluV191T0JfUUhVTm44cG9qeTFCWTAwSm1hZHpzOFFrSTZ6ZFlVRURLS2dfcjJSOExVZnRVM3lzRXROZUZKRzBB?oc=5",
+          "source": "The American Bazaar",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T15:51:57Z",
+          "summary": "Trump praises Micron’s $10 billion investment in US for AI research The American Bazaar",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "Baidu launches DuMateBench benchmark for real-world AI agent delivery",
+          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOT05KeTZCdXVBd3ZvVWNXUm11eG9tR3U2T0FyTkoyWDRYOGNVX3VRQUNJYW5XV3JNalRyUDhHSk5jdDlTNGVFZFI4WElZUmZTQk9IWldnUk53bU5fQkpQdjduVG5zMkhpMmxYNW5sY2JhMlN1SXYzRUhVYVctZ1FkdWdBQkktM3BKTEQ2eGdUeFc3MzdCUF9oZTFvUUpHdTBaNVZ4bg?oc=5",
+          "source": "TechNode",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T13:45:13Z",
+          "summary": "Baidu launches DuMateBench benchmark for real-world AI agent delivery TechNode",
+          "ethics_tags": [],
+          "trend_score": 145
+        },
+        {
+          "title": "Kimi K3 Tops New Benchmark of AI Models for Geological Reasoning",
+          "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPSXZxTHc0VFQ3RHMzSjFTMWIybmFmZjdZRE1tQ2x0UTloU0c0aDVLTWNNTGFTQWpzYzh6SUZFRjBCM2hobWNqRU9UM3ozcmlTOEF5ZlFsdUZFRkl4UVdZaWFHLVpYQ0JKMGtrU0pUdHBCdGhGSW92SFpabTJMQlREblRROTVIcTk4SmRibmRQaFNYZDloSnlBMVZiVmZuRzRjOXZUbWhBN21DZmtna1VRU3M4S0h3RlhFQU15QTEtdmRhYnp6THJzMnNvamEwWmpiTzIyaG9odnNkeGNLZmtoR29GU3paZnNJUmJDaTg1VUZyM01HTTA3NA?oc=5",
+          "source": "The Killeen Daily Herald",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T06:23:14Z",
+          "summary": "Kimi K3 Tops New Benchmark of AI Models for Geological Reasoning The Killeen Daily Herald",
+          "ethics_tags": [],
+          "trend_score": 39
         },
         {
           "title": "EduRiskX: A Neuro-Symbolic Framework with F-Logic Reasoning for Early Academic Risk Prediction",
@@ -424,7 +476,7 @@
           "published_iso": "2026-08-28T04:00:00Z",
           "summary": "arXiv:2608.26114v1 Announce Type: new Abstract: Calculation-intensive financial question answering requires exact reasoning over structured rates, temporal conditions, numerical formulas, and rule-based constraints. Although Large Language…",
           "ethics_tags": [],
-          "trend_score": 109
+          "trend_score": 106
         },
         {
           "title": "The Artificial Experimentalist: Discovery and Control of Self-Organizing Phenomena with Autotelic Reinforcement Learning",
@@ -475,61 +527,21 @@
           "summary": "arXiv:2608.26149v1 Announce Type: new Abstract: Multi-table learning remains a major challenge in machine learning for healthcare and other complex information systems. Relational data combine several sources of complexity, including large…",
           "ethics_tags": [],
           "trend_score": 0
-        },
-        {
-          "title": "Leveraging Large Language Models for Systematic Literature Review of Disease Spread Models",
-          "link": "https://arxiv.org/abs/2608.26150",
-          "source": "arXiv",
-          "category": "research",
-          "category_label": "Research & Papers",
-          "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T04:00:00Z",
-          "summary": "arXiv:2608.26150v1 Announce Type: new Abstract: Recent advancements in Large Language Models (LLMs) have created new opportunities to streamline and potentially automate many research processes, including systematic literature reviews…",
-          "ethics_tags": [],
-          "trend_score": 0
-        },
-        {
-          "title": "Explainable Artificial Intelligence for Customer Churn Prediction in Telecommunications: A Framework for CRM Integration",
-          "link": "https://arxiv.org/abs/2608.26151",
-          "source": "arXiv",
-          "category": "research",
-          "category_label": "Research & Papers",
-          "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T04:00:00Z",
-          "summary": "arXiv:2608.26151v1 Announce Type: new Abstract: Subscriber attrition is a costly, persistent challenge for telecommunications providers, with monthly churn of roughly 1.9% in mature markets eroding billions in revenue annually. Predictive…",
-          "ethics_tags": [
-            "Transparency & Accountability"
-          ],
-          "trend_score": 0
-        },
-        {
-          "title": "EEG-to-Report: An Annotation and Feature-Text Framework for Training Language Models on Clinical EEG",
-          "link": "https://arxiv.org/abs/2608.26153",
-          "source": "arXiv",
-          "category": "research",
-          "category_label": "Research & Papers",
-          "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T04:00:00Z",
-          "summary": "arXiv:2608.26153v1 Announce Type: new Abstract: Clinical electroencephalography (EEG) reporting remains largely manual and time-consuming, and current EEG software ecosystems do not produce the structured EEG-text supervision needed for…",
-          "ethics_tags": [],
-          "trend_score": 0
-        },
-        {
-          "title": "Selection Bias Correction in Retail Intelligence",
-          "link": "https://arxiv.org/abs/2608.26156",
-          "source": "arXiv",
-          "category": "research",
-          "category_label": "Research & Papers",
-          "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T04:00:00Z",
-          "summary": "arXiv:2608.26156v1 Announce Type: new Abstract: Retail intelligence often relies on monitoring popular, high-velocity products, potentially biasing economic indicators by ignoring the \"long tail\" of niche items. This simulation study…",
-          "ethics_tags": [
-            "Bias & Fairness"
-          ],
-          "trend_score": 0
         }
       ],
       "folder_items": [
+        {
+          "title": "Baidu launches DuMateBench benchmark for real-world AI agent delivery",
+          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOT05KeTZCdXVBd3ZvVWNXUm11eG9tR3U2T0FyTkoyWDRYOGNVX3VRQUNJYW5XV3JNalRyUDhHSk5jdDlTNGVFZFI4WElZUmZTQk9IWldnUk53bU5fQkpQdjduVG5zMkhpMmxYNW5sY2JhMlN1SXYzRUhVYVctZ1FkdWdBQkktM3BKTEQ2eGdUeFc3MzdCUF9oZTFvUUpHdTBaNVZ4bg?oc=5",
+          "source": "TechNode",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T13:45:13Z",
+          "summary": "Baidu launches DuMateBench benchmark for real-world AI agent delivery TechNode",
+          "ethics_tags": [],
+          "trend_score": 145
+        },
         {
           "title": "CIFQA: A Deterministic Tool-Grounded Multi-Agent LLM Framework for Financial Query Answering",
           "link": "https://arxiv.org/abs/2608.26114",
@@ -540,69 +552,69 @@
           "published_iso": "2026-08-28T04:00:00Z",
           "summary": "arXiv:2608.26114v1 Announce Type: new Abstract: Calculation-intensive financial question answering requires exact reasoning over structured rates, temporal conditions, numerical formulas, and rule-based constraints. Although Large Language…",
           "ethics_tags": [],
-          "trend_score": 109
+          "trend_score": 106
         },
         {
-          "title": "Kimi K3 Tops New Benchmark of AI Models for Geological Reasoning",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPUGlRS19VXy10QmFwTk1ucUNpWW0zYUZPN2FXdVF1QlNuZ0tHcUVOaFF4MTJPamJKSzg5dlU0M2pXT0xFSW5XNjQwQnBkaG1MdkRyTXNOUnM2ek5GN0J5eTl0LU5JUTdFd3drTzJqa2NUcHJOTlp6bEpNQlh0SGRsRWhUVElLaEtLX3JMS2o5OEdDcEhXZFJxTnRHcHlzQQ?oc=5",
-          "source": "The National Law Review",
+          "title": "Google DeepMind Ran History's First AI Benchmark Evaluation Where Neither Side Could Cheat",
+          "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNcERRQ09CTEpNOVltRFdOUmVPcWJFT2xyQk9wemVGVl9HdzdabGo1d21Qc2hfS2EwUUZOeHM3YnVsRHp2VDNfQngtM1J6RWZzd2QxNGFFbEVTMTBkRTJsNDdpcWJLSHFaYnEzQ09fN21fcnh3VzJFMEExNnJkTUZ2TmhxSXlOX3hzUnlERE43UnExZWx6NFpEczlGTjdad3Juc2VUcUZSUTlFd095cTZQRXQ5SDcyVGV4dm1WNFA2N2Y2bVBrcm4wWkx2Rm9XRUFEN1lDZmdUSU8xcTNW?oc=5",
+          "source": "Tech Times",
           "category": "research",
           "category_label": "Research & Papers",
           "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T08:13:18Z",
-          "summary": "Kimi K3 Tops New Benchmark of AI Models for Geological Reasoning The National Law Review",
+          "published_iso": "2026-08-28T15:55:15Z",
+          "summary": "Google DeepMind Ran History's First AI Benchmark Evaluation Where Neither Side Could Cheat Tech Times",
           "ethics_tags": [],
-          "trend_score": 37
-        },
-        {
-          "title": "Standalone LLM and a Pre-specified Agentic Pipeline for Explaining ICU Mortality Predictions: a Feasibility Study on the eICU Demo Dataset",
-          "link": "https://arxiv.org/abs/2608.26109",
-          "source": "arXiv",
-          "category": "research",
-          "category_label": "Research & Papers",
-          "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T04:00:00Z",
-          "summary": "arXiv:2608.26109v1 Announce Type: new Abstract: Machine-learning models can predict ICU mortality accurately, but feature-attribution methods alone rarely provide the clinical narrative needed for bedside use. Large language models (LLMs)…",
-          "ethics_tags": [],
-          "trend_score": 22
+          "trend_score": 55
         }
       ],
       "subcategories": [
         {
           "key": "evaluation",
           "label": "Evaluation & Safety",
-          "count": 2,
+          "count": 4,
           "folder_items": [
             {
-              "title": "Kimi K3 Tops New Benchmark of AI Models for Geological Reasoning",
-              "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPUGlRS19VXy10QmFwTk1ucUNpWW0zYUZPN2FXdVF1QlNuZ0tHcUVOaFF4MTJPamJKSzg5dlU0M2pXT0xFSW5XNjQwQnBkaG1MdkRyTXNOUnM2ek5GN0J5eTl0LU5JUTdFd3drTzJqa2NUcHJOTlp6bEpNQlh0SGRsRWhUVElLaEtLX3JMS2o5OEdDcEhXZFJxTnRHcHlzQQ?oc=5",
-              "source": "The National Law Review",
+              "title": "Baidu launches DuMateBench benchmark for real-world AI agent delivery",
+              "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOT05KeTZCdXVBd3ZvVWNXUm11eG9tR3U2T0FyTkoyWDRYOGNVX3VRQUNJYW5XV3JNalRyUDhHSk5jdDlTNGVFZFI4WElZUmZTQk9IWldnUk53bU5fQkpQdjduVG5zMkhpMmxYNW5sY2JhMlN1SXYzRUhVYVctZ1FkdWdBQkktM3BKTEQ2eGdUeFc3MzdCUF9oZTFvUUpHdTBaNVZ4bg?oc=5",
+              "source": "TechNode",
               "category": "research",
               "category_label": "Research & Papers",
               "published_display": "Aug 28, 2026",
-              "published_iso": "2026-08-28T08:13:18Z",
-              "summary": "Kimi K3 Tops New Benchmark of AI Models for Geological Reasoning The National Law Review",
+              "published_iso": "2026-08-28T13:45:13Z",
+              "summary": "Baidu launches DuMateBench benchmark for real-world AI agent delivery TechNode",
               "ethics_tags": [],
-              "trend_score": 37
+              "trend_score": 145
             },
             {
-              "title": "LLMs for Academic Workflows: An Evaluation of Literature Reviews Generated with Short and Long Context Windows of LLMs",
-              "link": "https://arxiv.org/abs/2608.26145",
-              "source": "arXiv",
+              "title": "Google DeepMind Ran History's First AI Benchmark Evaluation Where Neither Side Could Cheat",
+              "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNcERRQ09CTEpNOVltRFdOUmVPcWJFT2xyQk9wemVGVl9HdzdabGo1d21Qc2hfS2EwUUZOeHM3YnVsRHp2VDNfQngtM1J6RWZzd2QxNGFFbEVTMTBkRTJsNDdpcWJLSHFaYnEzQ09fN21fcnh3VzJFMEExNnJkTUZ2TmhxSXlOX3hzUnlERE43UnExZWx6NFpEczlGTjdad3Juc2VUcUZSUTlFd095cTZQRXQ5SDcyVGV4dm1WNFA2N2Y2bVBrcm4wWkx2Rm9XRUFEN1lDZmdUSU8xcTNW?oc=5",
+              "source": "Tech Times",
               "category": "research",
               "category_label": "Research & Papers",
               "published_display": "Aug 28, 2026",
-              "published_iso": "2026-08-28T04:00:00Z",
-              "summary": "arXiv:2608.26145v1 Announce Type: new Abstract: Our research focuses on evaluating literature reviews generated in short and long context settings of large language models (LLMs) to investigate the impact of context window on the quality…",
+              "published_iso": "2026-08-28T15:55:15Z",
+              "summary": "Google DeepMind Ran History's First AI Benchmark Evaluation Where Neither Side Could Cheat Tech Times",
               "ethics_tags": [],
-              "trend_score": 0
+              "trend_score": 55
+            },
+            {
+              "title": "Kimi K3 Tops New Benchmark of AI Models for Geological Reasoning",
+              "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPSXZxTHc0VFQ3RHMzSjFTMWIybmFmZjdZRE1tQ2x0UTloU0c0aDVLTWNNTGFTQWpzYzh6SUZFRjBCM2hobWNqRU9UM3ozcmlTOEF5ZlFsdUZFRkl4UVdZaWFHLVpYQ0JKMGtrU0pUdHBCdGhGSW92SFpabTJMQlREblRROTVIcTk4SmRibmRQaFNYZDloSnlBMVZiVmZuRzRjOXZUbWhBN21DZmtna1VRU3M4S0h3RlhFQU15QTEtdmRhYnp6THJzMnNvamEwWmpiTzIyaG9odnNkeGNLZmtoR29GU3paZnNJUmJDaTg1VUZyM01HTTA3NA?oc=5",
+              "source": "The Killeen Daily Herald",
+              "category": "research",
+              "category_label": "Research & Papers",
+              "published_display": "Aug 28, 2026",
+              "published_iso": "2026-08-28T06:23:14Z",
+              "summary": "Kimi K3 Tops New Benchmark of AI Models for Geological Reasoning The Killeen Daily Herald",
+              "ethics_tags": [],
+              "trend_score": 39
             }
           ]
         },
         {
           "key": "language",
           "label": "Language Models",
-          "count": 4,
+          "count": 2,
           "folder_items": [
             {
               "title": "CIFQA: A Deterministic Tool-Grounded Multi-Agent LLM Framework for Financial Query Answering",
@@ -614,7 +626,7 @@
               "published_iso": "2026-08-28T04:00:00Z",
               "summary": "arXiv:2608.26114v1 Announce Type: new Abstract: Calculation-intensive financial question answering requires exact reasoning over structured rates, temporal conditions, numerical formulas, and rule-based constraints. Although Large Language…",
               "ethics_tags": [],
-              "trend_score": 109
+              "trend_score": 106
             },
             {
               "title": "Standalone LLM and a Pre-specified Agentic Pipeline for Explaining ICU Mortality Predictions: a Feasibility Study on the eICU Demo Dataset",
@@ -627,18 +639,6 @@
               "summary": "arXiv:2608.26109v1 Announce Type: new Abstract: Machine-learning models can predict ICU mortality accurately, but feature-attribution methods alone rarely provide the clinical narrative needed for bedside use. Large language models (LLMs)…",
               "ethics_tags": [],
               "trend_score": 22
-            },
-            {
-              "title": "Leveraging Large Language Models for Systematic Literature Review of Disease Spread Models",
-              "link": "https://arxiv.org/abs/2608.26150",
-              "source": "arXiv",
-              "category": "research",
-              "category_label": "Research & Papers",
-              "published_display": "Aug 28, 2026",
-              "published_iso": "2026-08-28T04:00:00Z",
-              "summary": "arXiv:2608.26150v1 Announce Type: new Abstract: Recent advancements in Large Language Models (LLMs) have created new opportunities to streamline and potentially automate many research processes, including systematic literature reviews…",
-              "ethics_tags": [],
-              "trend_score": 0
             }
           ]
         },
@@ -679,6 +679,30 @@
           "count": 6,
           "folder_items": [
             {
+              "title": "MTSU’s QRISE lands $2M federal grant for quantum, AI research",
+              "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPYWttYmtzX2JGZGQzVWtjVXh5WlRoRlF2d1MycWhXdzdiZEM0TkY3Yjd2ZE1aa0NGdl9IOGFUTHRqVTFmWTI4aTdBTzFZeFkydWRwTlEzLTdIQUJuZmoxcnFvNGxURlVSN21YNE9sUjlNa1F1emM3V1c0RWItRVRIS2xCUDlqT1Y5OXdMQlV2aHkzTlZIMG9hSXBqQUk2TndIeFJfTm5mV29SYmdfUFMyZ0g2NTNlZTBs?oc=5",
+              "source": "MTSU News",
+              "category": "research",
+              "category_label": "Research & Papers",
+              "published_display": "Aug 28, 2026",
+              "published_iso": "2026-08-28T19:27:52Z",
+              "summary": "MTSU’s QRISE lands $2M federal grant for quantum, AI research MTSU News",
+              "ethics_tags": [],
+              "trend_score": 0
+            },
+            {
+              "title": "Trump praises Micron’s $10 billion investment in US for AI research",
+              "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUWRKa3pxTEFJSkRIUG1KUXpuZjZWLVdocm1BRFExRWIxa1BlR19qNUpKS2ZWMXVGam1MdTF0MEpNU0xMVmpLUU0yZGNSYzREM2s3UDZORlVPZHlPY3NiU1REVXR4TUJPT0lkWmlsRzNyOVhrWko4MlluV191T0JfUUhVTm44cG9qeTFCWTAwSm1hZHpzOFFrSTZ6ZFlVRURLS2dfcjJSOExVZnRVM3lzRXROZUZKRzBB?oc=5",
+              "source": "The American Bazaar",
+              "category": "research",
+              "category_label": "Research & Papers",
+              "published_display": "Aug 28, 2026",
+              "published_iso": "2026-08-28T15:51:57Z",
+              "summary": "Trump praises Micron’s $10 billion investment in US for AI research The American Bazaar",
+              "ethics_tags": [],
+              "trend_score": 0
+            },
+            {
               "title": "Large Models for Battery Prognostics and Health Management: A Review and Future Roadmap",
               "link": "https://arxiv.org/abs/2608.26111",
               "source": "arXiv",
@@ -689,32 +713,6 @@
               "summary": "arXiv:2608.26111v1 Announce Type: new Abstract: Battery Prognostics and Health Management (BPHM) is critical for ensuring the safe, reliable, and cost-effective operation of batteries across electric vehicles, grid storage, and consumer…",
               "ethics_tags": [],
               "trend_score": 0
-            },
-            {
-              "title": "PICasso: An AI-Enabled Design Framework for Autonomous Optimization of Silicon Photonic Devices",
-              "link": "https://arxiv.org/abs/2608.26113",
-              "source": "arXiv",
-              "category": "research",
-              "category_label": "Research & Papers",
-              "published_display": "Aug 28, 2026",
-              "published_iso": "2026-08-28T04:00:00Z",
-              "summary": "arXiv:2608.26113v1 Announce Type: new Abstract: We present PICasso, an AI-assisted framework for automated synthesis, verification, and optimization of photonic integrated circuits (PICs) from natural-language specifications. PICasso…",
-              "ethics_tags": [],
-              "trend_score": 0
-            },
-            {
-              "title": "The Accuracy-Efficiency Paradox Quantifying Net Energy Loss in on-Device Energy Forecasting",
-              "link": "https://arxiv.org/abs/2608.26134",
-              "source": "arXiv",
-              "category": "research",
-              "category_label": "Research & Papers",
-              "published_display": "Aug 28, 2026",
-              "published_iso": "2026-08-28T04:00:00Z",
-              "summary": "arXiv:2608.26134v1 Announce Type: new Abstract: Energy forecasting aims to maximize accuracy to ensure energy efficiency by reducing energy waste, an objective that applies equally to on-device forecasting for mission-critical edge…",
-              "ethics_tags": [
-                "Energy & Environment"
-              ],
-              "trend_score": 0
             }
           ]
         }
@@ -724,216 +722,214 @@
       "label": "Community & Discussion",
       "items": [
         {
-          "title": "LLM Cliché Highlighter",
-          "link": "https://tools.simonwillison.net/llm-cliche-highlighter",
+          "title": "How to Critically Read LLM Texts [video]",
+          "link": "https://www.youtube.com/watch?v=BBmNOxQWcAc",
           "source": "Web",
           "category": "community",
           "category_label": "Community & Discussion",
           "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T10:44:42Z",
-          "summary": "2 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 0
-        },
-        {
-          "title": "LLMs are multi-layered user interfaces",
-          "link": "https://www.gtothesquare.com/llms-the-multi-layered-user-interface",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T10:28:50Z",
+          "published_iso": "2026-08-28T21:47:00Z",
           "summary": "1 points, 0 comments on Hacker News.",
           "ethics_tags": [],
-          "trend_score": 0
+          "trend_score": 17
         },
         {
-          "title": "IBM's new Granite 4.2 models ride the wave of interest in local LLMs",
-          "link": "https://arstechnica.com/ai/2026/08/ibms-new-granite-4-2-models-ride-the-wave-of-interest-in-local-llms/",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T10:08:27Z",
-          "summary": "1 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 0
-        },
-        {
-          "title": "Lost in translation: What I learned trying to speedrun subtitles with LLMs",
-          "link": "https://blog.burkert.me/posts/listers/",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T10:03:14Z",
-          "summary": "1 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 0
-        },
-        {
-          "title": "Trana – an iOS wellbeing companion with safety-first AI tools",
-          "link": "https://trana.live",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T09:56:05Z",
-          "summary": "3 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 45
-        },
-        {
-          "title": "One LLM agent per trade over construction site photos",
-          "link": "https://trpevski.com/blog/ai-construction-inspection-contractors-cannot-argue-with/",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T09:51:04Z",
-          "summary": "1 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 109
-        },
-        {
-          "title": "Where to submit stat/prob ML [D]",
-          "link": "https://www.reddit.com/r/MachineLearning/comments/1w0kipf/where_to_submit_statprob_ml_d/",
+          "title": "Bored with Python, should I learn C++? [D]",
+          "link": "https://www.reddit.com/r/MachineLearning/comments/1w12ojy/bored_with_python_should_i_learn_c_d/",
           "source": "r/MachineLearning",
           "category": "community",
           "category_label": "Community & Discussion",
           "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T08:16:25Z",
-          "summary": "I'm a researcher in statistical and probabilistic ML, I have a steady record of top ML publications and really used to enjoy going to conferences. Over the last few years LLM based works have completely taken over the top conferences. At…",
+          "published_iso": "2026-08-28T20:59:44Z",
+          "summary": "I'm getting pretty bored with Python for ML. With GenAI tools now being able to write very good code, I feel like writing in a high-level language is becoming less interesting to me. Also, it seems like a lot of the focus in ML is shifting…",
           "ethics_tags": [],
           "trend_score": 0
         },
         {
-          "title": "Show HN: Scheduled Claude Code agents that cost nothing on a quiet day",
-          "link": "https://github.com/shadok-ai/shadok-ai",
+          "title": "Is \"An agent with tools\" the only valid LLM application?",
+          "link": "https://news.ycombinator.com/item?id=49484000",
           "source": "Web",
           "category": "community",
           "category_label": "Community & Discussion",
           "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T07:53:07Z",
+          "published_iso": "2026-08-28T20:41:23Z",
           "summary": "3 points, 1 comments on Hacker News.",
           "ethics_tags": [],
-          "trend_score": 109
+          "trend_score": 106
         },
         {
-          "title": "New Studio M5 Ultra ready for local home AI lab? Compared to OpenRouter prices",
-          "link": "https://twitter.com/gherget/status/2092293494446420010",
+          "title": "Tencent Hy4 Preview LLM",
+          "link": "https://github.com/Tencent-Hunyuan/Hy4-preview",
           "source": "Web",
           "category": "community",
           "category_label": "Community & Discussion",
           "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T07:31:46Z",
-          "summary": "2 points, 2 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 0
-        },
-        {
-          "title": "Anchoring Bias in LLM-as-a-Judge Systems: Prior Scores Compromise Evaluation",
-          "link": "https://arxiv.org/abs/2608.25869",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T06:07:07Z",
-          "summary": "1 points, 0 comments on Hacker News.",
-          "ethics_tags": [
-            "Bias & Fairness"
-          ],
-          "trend_score": 0
-        },
-        {
-          "title": "GenRec: An LLM-Backed Recommendation Ranker at Netflix",
-          "link": "https://arxiv.org/abs/2608.10257",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T05:00:59Z",
+          "published_iso": "2026-08-28T20:40:21Z",
           "summary": "2 points, 0 comments on Hacker News.",
           "ethics_tags": [],
           "trend_score": 0
         },
         {
-          "title": "Group size effects and collective misalignment in LLM multi-agent systems – PNAS",
-          "link": "https://www.pnas.org/doi/10.1073/pnas.2531697123",
+          "title": "We’re rolling out ads in ChatGPT",
+          "link": "https://news.ycombinator.com/item?id=49483929",
           "source": "Web",
           "category": "community",
           "category_label": "Community & Discussion",
           "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T03:17:02Z",
+          "published_iso": "2026-08-28T20:36:01Z",
+          "summary": "1 points, 3 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "NSA wants access to 'all' AI models, top official says",
+          "link": "https://www.nextgov.com/artificial-intelligence/2026/08/nsa-wants-access-all-ai-models-top-official-says/415672/",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T20:33:09Z",
+          "summary": "6 points, 0 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "LLMs Don't Replace Classical ML – They Feed It",
+          "link": "https://bilanc.co/blog/llms-as-feature-extractors-for-classical-ml",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T20:32:27Z",
+          "summary": "2 points, 0 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "Why LLM infrastructure chokes: ternary and pentary logic matrix replacement",
+          "link": "https://github.com/Zavodiuk/Technology_constructor/blob/main/README.md",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T20:27:02Z",
           "summary": "1 points, 0 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "Running Llama 3.1 405B",
+          "link": "https://a11ce.com/llama-3.1-405b.html",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T20:01:27Z",
+          "summary": "1 points, 0 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "Show HN: Conduct, open-source guardrails for LLM and MCP tool calls",
+          "link": "https://github.com/sseshachala/conductai",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T19:29:20Z",
+          "summary": "19 points, 3 comments on Hacker News.",
           "ethics_tags": [
             "Safety & Alignment"
           ],
-          "trend_score": 109
+          "trend_score": 0
         },
         {
-          "title": "How to handle sensitive data in LLM agent workflows without breaking tool calls",
-          "link": "https://leoy.blog/posts/how-to-wear-model-armor-3/",
+          "title": "Moonshot and Nvidia Talks Show Chinese AI Models Moving into the Enterprise",
+          "link": "https://techstrong.ai/articles/moonshot-and-nvidia-talks-show-chinese-ai-models-moving-into-the-enterprise/",
           "source": "Web",
           "category": "community",
           "category_label": "Community & Discussion",
           "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T00:03:29Z",
-          "summary": "4 points, 0 comments on Hacker News.",
+          "published_iso": "2026-08-28T19:25:04Z",
+          "summary": "3 points, 0 comments on Hacker News.",
           "ethics_tags": [],
-          "trend_score": 109
+          "trend_score": 20
         },
         {
-          "title": "Using LLMs to Make the Emacs Web Browser Great Again",
-          "link": "https://www.sammystraus.com/#using-llms-to-make-the-emacs-web-browser-great-again",
+          "title": "PhoneLLM Alpha 1: Open-weight LLM for voice agent use cases",
+          "link": "https://www.daily.co/blog/announcing-pipecat-phonellm-alpha-1/",
           "source": "Web",
           "category": "community",
           "category_label": "Community & Discussion",
-          "published_display": "Aug 27, 2026",
-          "published_iso": "2026-08-27T22:15:20Z",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T18:41:30Z",
           "summary": "1 points, 0 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 106
+        },
+        {
+          "title": "For self-learning LLMs, governance needs to improve",
+          "link": "https://rakuensoftware.com/blog/aimee-recursive-self-learning",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T18:14:06Z",
+          "summary": "2 points, 1 comments on Hacker News.",
+          "ethics_tags": [
+            "Regulation & Governance"
+          ],
+          "trend_score": 0
+        },
+        {
+          "title": "cats.txt showed llms.txt evidence is GEO astrology",
+          "link": "https://markwilliamscook.substack.com/p/how-catstxt-showed-llmstxt-evidence",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T18:10:15Z",
+          "summary": "3 points, 0 comments on Hacker News.",
           "ethics_tags": [],
           "trend_score": 0
         }
       ],
       "folder_items": [
         {
-          "title": "One LLM agent per trade over construction site photos",
-          "link": "https://trpevski.com/blog/ai-construction-inspection-contractors-cannot-argue-with/",
+          "title": "Is \"An agent with tools\" the only valid LLM application?",
+          "link": "https://news.ycombinator.com/item?id=49484000",
           "source": "Web",
           "category": "community",
           "category_label": "Community & Discussion",
           "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T09:51:04Z",
-          "summary": "1 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 109
-        },
-        {
-          "title": "Show HN: Scheduled Claude Code agents that cost nothing on a quiet day",
-          "link": "https://github.com/shadok-ai/shadok-ai",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T07:53:07Z",
+          "published_iso": "2026-08-28T20:41:23Z",
           "summary": "3 points, 1 comments on Hacker News.",
           "ethics_tags": [],
-          "trend_score": 109
+          "trend_score": 106
         },
         {
-          "title": "Group size effects and collective misalignment in LLM multi-agent systems – PNAS",
-          "link": "https://www.pnas.org/doi/10.1073/pnas.2531697123",
+          "title": "PhoneLLM Alpha 1: Open-weight LLM for voice agent use cases",
+          "link": "https://www.daily.co/blog/announcing-pipecat-phonellm-alpha-1/",
           "source": "Web",
           "category": "community",
           "category_label": "Community & Discussion",
           "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T03:17:02Z",
+          "published_iso": "2026-08-28T18:41:30Z",
           "summary": "1 points, 0 comments on Hacker News.",
-          "ethics_tags": [
-            "Safety & Alignment"
-          ],
-          "trend_score": 109
+          "ethics_tags": [],
+          "trend_score": 106
+        },
+        {
+          "title": "Moonshot and Nvidia Talks Show Chinese AI Models Moving into the Enterprise",
+          "link": "https://techstrong.ai/articles/moonshot-and-nvidia-talks-show-chinese-ai-models-moving-into-the-enterprise/",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T19:25:04Z",
+          "summary": "3 points, 0 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 20
         }
       ],
       "subcategories": [
@@ -943,15 +939,17 @@
           "count": 1,
           "folder_items": [
             {
-              "title": "IBM's new Granite 4.2 models ride the wave of interest in local LLMs",
-              "link": "https://arstechnica.com/ai/2026/08/ibms-new-granite-4-2-models-ride-the-wave-of-interest-in-local-llms/",
+              "title": "Show HN: Conduct, open-source guardrails for LLM and MCP tool calls",
+              "link": "https://github.com/sseshachala/conductai",
               "source": "Web",
               "category": "community",
               "category_label": "Community & Discussion",
               "published_display": "Aug 28, 2026",
-              "published_iso": "2026-08-28T10:08:27Z",
-              "summary": "1 points, 0 comments on Hacker News.",
-              "ethics_tags": [],
+              "published_iso": "2026-08-28T19:29:20Z",
+              "summary": "19 points, 3 comments on Hacker News.",
+              "ethics_tags": [
+                "Safety & Alignment"
+              ],
               "trend_score": 0
             }
           ]
@@ -959,43 +957,50 @@
         {
           "key": "tools",
           "label": "Tools & Projects",
-          "count": 3,
+          "count": 2,
           "folder_items": [
             {
-              "title": "Show HN: Scheduled Claude Code agents that cost nothing on a quiet day",
-              "link": "https://github.com/shadok-ai/shadok-ai",
+              "title": "Is \"An agent with tools\" the only valid LLM application?",
+              "link": "https://news.ycombinator.com/item?id=49484000",
               "source": "Web",
               "category": "community",
               "category_label": "Community & Discussion",
               "published_display": "Aug 28, 2026",
-              "published_iso": "2026-08-28T07:53:07Z",
+              "published_iso": "2026-08-28T20:41:23Z",
               "summary": "3 points, 1 comments on Hacker News.",
               "ethics_tags": [],
-              "trend_score": 109
+              "trend_score": 106
             },
             {
-              "title": "How to handle sensitive data in LLM agent workflows without breaking tool calls",
-              "link": "https://leoy.blog/posts/how-to-wear-model-armor-3/",
-              "source": "Web",
+              "title": "Bored with Python, should I learn C++? [D]",
+              "link": "https://www.reddit.com/r/MachineLearning/comments/1w12ojy/bored_with_python_should_i_learn_c_d/",
+              "source": "r/MachineLearning",
               "category": "community",
               "category_label": "Community & Discussion",
               "published_display": "Aug 28, 2026",
-              "published_iso": "2026-08-28T00:03:29Z",
-              "summary": "4 points, 0 comments on Hacker News.",
+              "published_iso": "2026-08-28T20:59:44Z",
+              "summary": "I'm getting pretty bored with Python for ML. With GenAI tools now being able to write very good code, I feel like writing in a high-level language is becoming less interesting to me. Also, it seems like a lot of the focus in ML is shifting…",
               "ethics_tags": [],
-              "trend_score": 109
-            },
+              "trend_score": 0
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "Industry Debate",
+          "count": 1,
+          "folder_items": [
             {
-              "title": "Trana – an iOS wellbeing companion with safety-first AI tools",
-              "link": "https://trana.live",
+              "title": "Moonshot and Nvidia Talks Show Chinese AI Models Moving into the Enterprise",
+              "link": "https://techstrong.ai/articles/moonshot-and-nvidia-talks-show-chinese-ai-models-moving-into-the-enterprise/",
               "source": "Web",
               "category": "community",
               "category_label": "Community & Discussion",
               "published_display": "Aug 28, 2026",
-              "published_iso": "2026-08-28T09:56:05Z",
+              "published_iso": "2026-08-28T19:25:04Z",
               "summary": "3 points, 0 comments on Hacker News.",
               "ethics_tags": [],
-              "trend_score": 45
+              "trend_score": 20
             }
           ]
         },
@@ -1005,39 +1010,37 @@
           "count": 10,
           "folder_items": [
             {
-              "title": "One LLM agent per trade over construction site photos",
-              "link": "https://trpevski.com/blog/ai-construction-inspection-contractors-cannot-argue-with/",
+              "title": "PhoneLLM Alpha 1: Open-weight LLM for voice agent use cases",
+              "link": "https://www.daily.co/blog/announcing-pipecat-phonellm-alpha-1/",
               "source": "Web",
               "category": "community",
               "category_label": "Community & Discussion",
               "published_display": "Aug 28, 2026",
-              "published_iso": "2026-08-28T09:51:04Z",
+              "published_iso": "2026-08-28T18:41:30Z",
               "summary": "1 points, 0 comments on Hacker News.",
               "ethics_tags": [],
-              "trend_score": 109
+              "trend_score": 106
             },
             {
-              "title": "Group size effects and collective misalignment in LLM multi-agent systems – PNAS",
-              "link": "https://www.pnas.org/doi/10.1073/pnas.2531697123",
+              "title": "How to Critically Read LLM Texts [video]",
+              "link": "https://www.youtube.com/watch?v=BBmNOxQWcAc",
               "source": "Web",
               "category": "community",
               "category_label": "Community & Discussion",
               "published_display": "Aug 28, 2026",
-              "published_iso": "2026-08-28T03:17:02Z",
+              "published_iso": "2026-08-28T21:47:00Z",
               "summary": "1 points, 0 comments on Hacker News.",
-              "ethics_tags": [
-                "Safety & Alignment"
-              ],
-              "trend_score": 109
+              "ethics_tags": [],
+              "trend_score": 17
             },
             {
-              "title": "LLM Cliché Highlighter",
-              "link": "https://tools.simonwillison.net/llm-cliche-highlighter",
+              "title": "Tencent Hy4 Preview LLM",
+              "link": "https://github.com/Tencent-Hunyuan/Hy4-preview",
               "source": "Web",
               "category": "community",
               "category_label": "Community & Discussion",
               "published_display": "Aug 28, 2026",
-              "published_iso": "2026-08-28T10:44:42Z",
+              "published_iso": "2026-08-28T20:40:21Z",
               "summary": "2 points, 0 comments on Hacker News.",
               "ethics_tags": [],
               "trend_score": 0
@@ -1050,16 +1053,66 @@
       "label": "Business & Funding",
       "items": [
         {
+          "title": "Broadcom is our top pick for the next evolution in custom AI chips, says BakerAvenue's King Lip",
+          "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQdGFBNHlxT3prX0h1ZUtsX0RPMVVPZThmMHo2V3VVQmpCRUhsaVV5d1lhUlBRZ2ZyQUlJblBmc3BreUJ4dzV0UnlVbVphY3BheVNVcEZWN19QQ092bVhTOGtTeE9DYko1cEpvbGtTY2FYZnZjcjUxVy0wMHF6X1psZ2ZxUFFHZWw4STNnUU9rcFZwWWtLdy1NR0NudnN6QlFKdWw0QVFZb3VDTFBxVEtYNTBFamtZOFRaVml2N29ZRU8yZWQ3R1ctUUZtd2RKVGhjVHc?oc=5",
+          "source": "CNBC",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T20:27:56Z",
+          "summary": "Broadcom is our top pick for the next evolution in custom AI chips, says BakerAvenue's King Lip CNBC",
+          "ethics_tags": [],
+          "trend_score": 30
+        },
+        {
+          "title": "America Wants More AI Chips Made At Home. SK Hynix’s Has Broken Ground In Indiana.",
+          "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaDEweU9EYXhOZUY5U0p1cDJ6OTZublBaY0lWRDVidnFkRUhwZFRfMDhvZnNpdlAxRDhxZU93WWVFb09VVVd4RUhaT1BkSmo5RG82Y3BucnBZTFVDMkRkbjRUT0tZRHAwbm9iSnZsbENrZWxlZ1Y0SFpOSy1GUUJ5RnVGczVwRkNpdE95LXphcURkWHVUMDdiWkJHUFlWWmlUUmZkdUlmXzQ?oc=5",
+          "source": "International Business Times",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T16:07:11Z",
+          "summary": "America Wants More AI Chips Made At Home. SK Hynix’s Has Broken Ground In Indiana. International Business Times",
+          "ethics_tags": [],
+          "trend_score": 30
+        },
+        {
+          "title": "New Jobs for Old AI Chips",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBZTDBxUUQ3cER5YjdDQjdGZ0ZQd1BXbFFKNDFIZG13SDdVT0RYWE9vakNUWlZHVlphS0FiLWdYTHZCSDNLSEpBbFBTNEtrbW9WYXFfUUtldXZSVXotckpQLWY2akdXTDY2djl5TnNlaw?oc=5",
+          "source": "WSJ",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T15:03:49Z",
+          "summary": "New Jobs for Old AI Chips WSJ",
+          "ethics_tags": [
+            "Labor & Jobs"
+          ],
+          "trend_score": 30
+        },
+        {
+          "title": "AI Chips Today - AI and 5G Transforming the Semiconductor Industry",
+          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQeVM2eGkwZ0syQVlUbGFLWjEtWGNackgwd0cyMWZyZTJJMnBfb3lBS1FTOG90UVR2UzI1dUpMRjNjVlVxdjZ6bXhselNEU1lXVkRaTXVxdlFnV1hERGNmMjM2Mjl0TktFYXdud21KekxPTlZUTHhRZVgyNTRFTVNlR1RGbDdYMzktNUFSVQ?oc=5",
+          "source": "Yahoo Finance",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T11:37:45Z",
+          "summary": "AI Chips Today - AI and 5G Transforming the Semiconductor Industry Yahoo Finance",
+          "ethics_tags": [],
+          "trend_score": 30
+        },
+        {
           "title": "Are AI chips the new crypto trade?",
           "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1OTDZFc3VUd0dhTnJSNHJNOVYxQ2d4WXk5WWJyY28yN2lwOU0xVDlwb0VubDh4Y0ltV3pLVUZITkl5VmZpMl9ZZU1kd3lBTkpld0VmN2YxdWIydG5NV2M1c1BRUWVyb3diME5sQllxU1FfQQ?oc=5",
           "source": "CoinDesk",
           "category": "business",
           "category_label": "Business & Funding",
           "published_display": "Aug 27, 2026",
-          "published_iso": "2026-08-27T18:06:54Z",
+          "published_iso": "2026-08-27T18:10:09Z",
           "summary": "Are AI chips the new crypto trade? CoinDesk",
           "ethics_tags": [],
-          "trend_score": 27
+          "trend_score": 30
         },
         {
           "title": "Custom AI Chips Are Coming for Nvidia. OpenAI's Jalapeño Could Be the Biggest Warning Yet.",
@@ -1071,7 +1124,7 @@
           "published_iso": "2026-08-27T15:11:57Z",
           "summary": "Custom AI Chips Are Coming for Nvidia. OpenAI's Jalapeño Could Be the Biggest Warning Yet. International Business Times",
           "ethics_tags": [],
-          "trend_score": 104
+          "trend_score": 100
         },
         {
           "title": "AI Startup DeepSeek Poised to Reach $74 Billion Valuation",
@@ -1083,7 +1136,7 @@
           "published_iso": "2026-08-27T05:18:00Z",
           "summary": "AI Startup DeepSeek Poised to Reach $74 Billion Valuation WSJ",
           "ethics_tags": [],
-          "trend_score": 18
+          "trend_score": 16
         },
         {
           "title": "Powertech eyes world's first panel-level packaging for AI chips in 2027",
@@ -1095,7 +1148,7 @@
           "published_iso": "2026-08-27T02:08:00Z",
           "summary": "Powertech eyes world's first panel-level packaging for AI chips in 2027 Nikkei Asia",
           "ethics_tags": [],
-          "trend_score": 27
+          "trend_score": 30
         },
         {
           "title": "Tesla doubles down on custom AI chips as Musk claims AI5 can beat NVIDIA on efficiency and cost",
@@ -1107,7 +1160,7 @@
           "published_iso": "2026-08-27T00:00:25Z",
           "summary": "Tesla doubles down on custom AI chips as Musk claims AI5 can beat NVIDIA on efficiency and cost digitimes",
           "ethics_tags": [],
-          "trend_score": 52
+          "trend_score": 50
         },
         {
           "title": "Nvidia doubles its revenue as demand for AI chips accelerate, but bubble fears persist",
@@ -1119,7 +1172,7 @@
           "published_iso": "2026-08-26T23:50:00Z",
           "summary": "Nvidia doubles its revenue as demand for AI chips accelerate, but bubble fears persist SiliconANGLE",
           "ethics_tags": [],
-          "trend_score": 52
+          "trend_score": 50
         },
         {
           "title": "Nvidia Reports Blowout Quarter, Says Demand for AI Chips Is Getting Even Hotter",
@@ -1131,7 +1184,7 @@
           "published_iso": "2026-08-26T23:27:00Z",
           "summary": "Nvidia Reports Blowout Quarter, Says Demand for AI Chips Is Getting Even Hotter WSJ",
           "ethics_tags": [],
-          "trend_score": 52
+          "trend_score": 50
         },
         {
           "title": "Nvidia revenue soars 106%, beats expectations as AI chips stay in high demand",
@@ -1143,19 +1196,7 @@
           "published_iso": "2026-08-26T22:35:00Z",
           "summary": "Nvidia revenue soars 106%, beats expectations as AI chips stay in high demand Rural Radio Network",
           "ethics_tags": [],
-          "trend_score": 52
-        },
-        {
-          "title": "Nvidia sales soar 106%, beat expectations as AI chips stay in high demand",
-          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOREtLZE9idWdfTG1qeDRPQ0pQRTdrWG5rc2VPZDU5RnYyWVNsclNiMUFpUElEdVpkS0gxUGRPRFl0cTgwc0Zmd0g3NWI4SkhCNFlhU3JPOExiX1VGOTBvTmdNVlN3M2FZOXdGbjJYeEczRUdhNHN6ai1KMThYVm5HWTh2a1ZUSGo4UktwSmZrNEtGOUlOYjhHdA?oc=5",
-          "source": "Yahoo Finance",
-          "category": "business",
-          "category_label": "Business & Funding",
-          "published_display": "Aug 26, 2026",
-          "published_iso": "2026-08-26T20:30:27Z",
-          "summary": "Nvidia sales soar 106%, beat expectations as AI chips stay in high demand Yahoo Finance",
-          "ethics_tags": [],
-          "trend_score": 52
+          "trend_score": 50
         },
         {
           "title": "Video: Sticky Inflation, AI Chips and Apple’s Foldable",
@@ -1167,7 +1208,7 @@
           "published_iso": "2026-08-26T18:25:00Z",
           "summary": "Video: Sticky Inflation, AI Chips and Apple’s Foldable TheStreet Pro",
           "ethics_tags": [],
-          "trend_score": 44
+          "trend_score": 47
         },
         {
           "title": "NVIDIA Corporation (NVDA) & Blackstone (BX): Nvidia Wants Wall Street to Lend Against AI Chips Like They’re Mortgages",
@@ -1179,43 +1220,7 @@
           "published_iso": "2026-08-26T17:49:58Z",
           "summary": "NVIDIA Corporation (NVDA) & Blackstone (BX): Nvidia Wants Wall Street to Lend Against AI Chips Like They’re Mortgages Yahoo Finance",
           "ethics_tags": [],
-          "trend_score": 52
-        },
-        {
-          "title": "What’s Hot Now: Custom AI Chips",
-          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1UMzNUcXNqLVhZMmtCeFNhbHM2TTZoTV9PRE50Y1IyMVAwbUZDdE5CdjJTT2pxSHRFd0QtTnFYak1XT0ZHWUoweGJraWNjanVtTlF0RzBza21uRzV4d1VwcG5ELTdGeDVGbFJPekdjdnpSN1RiQWRkZ2FxaWs?oc=5",
-          "source": "HPCwire",
-          "category": "business",
-          "category_label": "Business & Funding",
-          "published_display": "Aug 26, 2026",
-          "published_iso": "2026-08-26T14:46:43Z",
-          "summary": "What’s Hot Now: Custom AI Chips HPCwire",
-          "ethics_tags": [],
-          "trend_score": 27
-        },
-        {
-          "title": "AI Chips Update - AI Semiconductor Market Poised for Major Growth by 2035",
-          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQci10OXR0NnVNeHdDbHZtdGlpcXZOclJtMk1za2JxRExuYVozZ3dmNnhiSE1BaDFudkk1RUVJamNEcXN3c09wcF91bXp2bjBjbnVMMDVVeU1Scmo2MmpuNUVwRW5aZktwWjgyRE5NclNuTDFCLTk0anVCYkVZMGdycFJkNm5ZdV9KemNRNjRiQTU3d2VUYlpIb3ZaNGI?oc=5",
-          "source": "Yahoo Finance",
-          "category": "business",
-          "category_label": "Business & Funding",
-          "published_display": "Aug 26, 2026",
-          "published_iso": "2026-08-26T11:37:23Z",
-          "summary": "AI Chips Update - AI Semiconductor Market Poised for Major Growth by 2035 Yahoo Finance",
-          "ethics_tags": [],
-          "trend_score": 27
-        },
-        {
-          "title": "Semiconductor Test Industry Pushes Standardization for AI Chips",
-          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBfT19NLXlnRzdGVjJYVTAzOUtPLXlwN3VnSEJMWVoycTYxZV8xdVhmNEtQazZuMGV0aDNDSExXQTUxRjFkaDFoLVRfSDYzbjVCaTF0bFBGRGY2VnZTczUyWDJvR3FBWDg?oc=5",
-          "source": "thelec.net",
-          "category": "business",
-          "category_label": "Business & Funding",
-          "published_display": "Aug 26, 2026",
-          "published_iso": "2026-08-26T09:01:40Z",
-          "summary": "Semiconductor Test Industry Pushes Standardization for AI Chips thelec.net",
-          "ethics_tags": [],
-          "trend_score": 27
+          "trend_score": 50
         }
       ],
       "folder_items": [
@@ -1229,7 +1234,7 @@
           "published_iso": "2026-08-27T15:11:57Z",
           "summary": "Custom AI Chips Are Coming for Nvidia. OpenAI's Jalapeño Could Be the Biggest Warning Yet. International Business Times",
           "ethics_tags": [],
-          "trend_score": 104
+          "trend_score": 100
         },
         {
           "title": "Tesla doubles down on custom AI chips as Musk claims AI5 can beat NVIDIA on efficiency and cost",
@@ -1241,7 +1246,7 @@
           "published_iso": "2026-08-27T00:00:25Z",
           "summary": "Tesla doubles down on custom AI chips as Musk claims AI5 can beat NVIDIA on efficiency and cost digitimes",
           "ethics_tags": [],
-          "trend_score": 52
+          "trend_score": 50
         },
         {
           "title": "Nvidia doubles its revenue as demand for AI chips accelerate, but bubble fears persist",
@@ -1253,7 +1258,7 @@
           "published_iso": "2026-08-26T23:50:00Z",
           "summary": "Nvidia doubles its revenue as demand for AI chips accelerate, but bubble fears persist SiliconANGLE",
           "ethics_tags": [],
-          "trend_score": 52
+          "trend_score": 50
         }
       ],
       "subcategories": [
@@ -1272,7 +1277,7 @@
               "published_iso": "2026-08-27T05:18:00Z",
               "summary": "AI Startup DeepSeek Poised to Reach $74 Billion Valuation WSJ",
               "ethics_tags": [],
-              "trend_score": 18
+              "trend_score": 16
             }
           ]
         },
@@ -1291,7 +1296,7 @@
               "published_iso": "2026-08-27T15:11:57Z",
               "summary": "Custom AI Chips Are Coming for Nvidia. OpenAI's Jalapeño Could Be the Biggest Warning Yet. International Business Times",
               "ethics_tags": [],
-              "trend_score": 104
+              "trend_score": 100
             },
             {
               "title": "Tesla doubles down on custom AI chips as Musk claims AI5 can beat NVIDIA on efficiency and cost",
@@ -1303,7 +1308,7 @@
               "published_iso": "2026-08-27T00:00:25Z",
               "summary": "Tesla doubles down on custom AI chips as Musk claims AI5 can beat NVIDIA on efficiency and cost digitimes",
               "ethics_tags": [],
-              "trend_score": 52
+              "trend_score": 50
             },
             {
               "title": "Nvidia doubles its revenue as demand for AI chips accelerate, but bubble fears persist",
@@ -1315,7 +1320,7 @@
               "published_iso": "2026-08-26T23:50:00Z",
               "summary": "Nvidia doubles its revenue as demand for AI chips accelerate, but bubble fears persist SiliconANGLE",
               "ethics_tags": [],
-              "trend_score": 52
+              "trend_score": 50
             }
           ]
         }
@@ -1324,6 +1329,88 @@
     "ethics": {
       "label": "Ethics & Society",
       "items": [
+        {
+          "title": "Anthropic Wins as Judge Bars Pentagon From Punishing AI Ethics Policies",
+          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQVmxhSGZ5MElHYXlwQ1ZmX2c2Uzg2QzJ1Rm9oa1VCN0lVVDlmZkFoWlpCV2NaaWlRcHJDd1RKLU9fWUlzc3FOSElIZEszdWIwaW5LRFV1RVFiaW5ZUFFXZHRfazFSZ0xRZGJOMmhtUDFCdVBBZHFaZlRfaXQ2aGtDbVMwR1ExOHNEaWZwNmxZQ2VLN3FZcG4wY01aLUdjX2djVXF5SXNPcDlFbWgxRHgwMXpOUmZaWmMwQnc?oc=5",
+          "source": "Tech Times",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T20:40:20Z",
+          "summary": "Anthropic Wins as Judge Bars Pentagon From Punishing AI Ethics Policies Tech Times",
+          "ethics_tags": [],
+          "trend_score": 37
+        },
+        {
+          "title": "OpenAI, Google and other companies sign AI safety letter",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1ROW80YS1LbkN0WFpMTVFnQVZVYkpnNWRFVDhIcjU4X293bXhxRUlzRlVIRW1HNzlnREhnQ0hzODh5dWdWY3d2ZE1aSlRMWVotWVpnNw?oc=5",
+          "source": "AzerNews",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T17:57:00Z",
+          "summary": "OpenAI, Google and other companies sign AI safety letter AzerNews",
+          "ethics_tags": [
+            "Safety & Alignment"
+          ],
+          "trend_score": 113
+        },
+        {
+          "title": "Google Moved Its Gemini AI Safety Team Into Lobbying, Blocking Researchers From Staying",
+          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPZFJDTzU1Q3hCVE9PZlVsZ3dPSXk3YmRSTk4yRHRVaU5XSnlpVHVZcTRDMnhNSDZFZHl6Nm84VDhaY0o1RmxWUTlQZW9ldk1lMDZUX2F4ZU9wcERSeDRPTG4yOVN2WnF6VU5SWnE2TVF0SHNTT0FkVUNLQ2d2RzMxeWtZUUJjRUJDVHBRM3lwWFYxc1FRNFk0LVVtOUk2RnppdmRKdjBOZ3lsdXVWQjluRGlBT0VfaDk1My0zX2huc1JIYWduZjFMS3ZEbw?oc=5",
+          "source": "Tech Times",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T13:48:34Z",
+          "summary": "Google Moved Its Gemini AI Safety Team Into Lobbying, Blocking Researchers From Staying Tech Times",
+          "ethics_tags": [
+            "Safety & Alignment"
+          ],
+          "trend_score": 63
+        },
+        {
+          "title": "Norwalk Schools Chosen As 1 Of Just 10 Districts Nationwide For Ai Safety Initiative",
+          "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxORGJMOFNmbXc2bXltOThwc1BWbHF1dlRmdVZlME5hX1FTZGFUMDZNd2hSeEFLX3ZveUhMSjFCY1d2bTI5elRhN2xxbTlWUUJsSHF3d1pxcS1rMjgxclhRQmk3Q1JZRTVCNWFjSWJPb0NtVVhyT3JETjVsNXlybUdaVWJjMjVhMGJFR0x0R2VqWm9FRldUZUp5Z0diaERWMVcwRThQTWtiSzVfeGhEd0dQTUtCSGlXWFJiUFNoV2Y5QlBWdHNIV1VQUG4xaVBjUkNId2VEQUNFSUxCSmpac01wZWNCRQ?oc=5",
+          "source": "News12 | Connecticut",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T11:16:32Z",
+          "summary": "Norwalk Schools Chosen As 1 Of Just 10 Districts Nationwide For Ai Safety Initiative News12 | Connecticut",
+          "ethics_tags": [
+            "Safety & Alignment"
+          ],
+          "trend_score": 47
+        },
+        {
+          "title": "Bill Gates warns AI safety checks are ‘completely missing’",
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQN014OUtzTjdydFhNVlhDalVkMFB6ZF9CQ2dydG41eFo4T2pyNHJ3c3lVTF9tcWJMa2xGQk9rUXRLdzlnUFFPQllVZzN2X2FUdzZ3ZzRPdXkwLVRHNzc4cEFpelc3ZUpPV2QxVnR6TENNOHEwZzZtYUdBbzN1MzhvdHAzRzgzSlkwaDkza0lNbEw2WWM?oc=5",
+          "source": "capacityglobal.com",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T10:03:12Z",
+          "summary": "Bill Gates warns AI safety checks are ‘completely missing’ capacityglobal.com",
+          "ethics_tags": [
+            "Safety & Alignment"
+          ],
+          "trend_score": 47
+        },
+        {
+          "title": "Humans need AI safety measures to avoid ‘the singularity,’ says nonprofit founder",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOblhqV294aV96NnFVbHNvZzQ5SWgzRjdOaHZxQlAxb0kzZktTcHk0Ri00Y1pYdzltc2F4SUZERU15c245NW42MGRKcHRGQ1IyRUhDeTN4OEQzMkNyVDRRZnNibXczWnlJdlNEbTM1dUNLREZsTVMtU3dKNzZYdkhrYUxsU1FESTlSNmZEc1Z30gGTAUFVX3lxTFAyX0EzWHFKbGstNmhMbEVYUy1IbkhMMTY1RjV6X2tXTUQ5WXBnRWw3QW92aGRYVG9YZl9XeG5Ma3UtX2RjVzFISWRJTTA3dkVzeERBb1l2VkROcy1LZDZFS1R1TWpnNDFCNE5MV2lrbkgwQ0dJdzZyS1BKNlhtZ1BycDlWNDhwakZTTVZtaEwtNWk5aw?oc=5",
+          "source": "NewsNation",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T09:36:24Z",
+          "summary": "Humans need AI safety measures to avoid ‘the singularity,’ says nonprofit founder NewsNation",
+          "ethics_tags": [
+            "Safety & Alignment"
+          ],
+          "trend_score": 47
+        },
         {
           "title": "Gates Reverses on AI Regulation: Industry Crossed Safety Lines, Stays Mum",
           "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQVHVvUi01TjlUV0VDcUdrd21TTVlEc2VSQ1YzNzhjeFNpUlFraTEzbTVGZXhtN0dwNlJmWDF4NlhacXVoVEo1RV93a1I1Q2FFbWtRNVFGYmw5Um5IQl83RFhNZ3dvRFQwb1E1UmFiS1EtNEJTa1p2S1lpRUpkNUpNbFVMb2FwZlhzdDZ4Sk1oeXV2MXQ4aHBINTc4ckRfVzFoQVEyR2NSY2ZkZFladDhmbllJUHkzOEFGVjF3NVhBc0E?oc=5",
@@ -1336,7 +1423,7 @@
           "ethics_tags": [
             "Regulation & Governance"
           ],
-          "trend_score": 58
+          "trend_score": 59
         },
         {
           "title": "Anthropic gets legal shield against Pentagon blacklisting in AI safety fight",
@@ -1350,7 +1437,7 @@
           "ethics_tags": [
             "Safety & Alignment"
           ],
-          "trend_score": 80
+          "trend_score": 84
         },
         {
           "title": "Google moves AI safety team into global affairs in DeepMind overhaul",
@@ -1364,7 +1451,7 @@
           "ethics_tags": [
             "Safety & Alignment"
           ],
-          "trend_score": 59
+          "trend_score": 63
         },
         {
           "title": "London AI Safety Research (LASR) Labs Winter 2027 (£15,000 stipend)",
@@ -1378,7 +1465,7 @@
           "ethics_tags": [
             "Safety & Alignment"
           ],
-          "trend_score": 45
+          "trend_score": 47
         },
         {
           "title": "Americans Are Worried About AI Safety. The State of Corporate Disclosure Isn’t Helping.",
@@ -1393,7 +1480,7 @@
             "Safety & Alignment",
             "Transparency & Accountability"
           ],
-          "trend_score": 45
+          "trend_score": 47
         },
         {
           "title": "Google moves AI responsibility team out of DeepMind",
@@ -1405,21 +1492,7 @@
           "published_iso": "2026-08-27T13:42:03Z",
           "summary": "Google moves AI responsibility team out of DeepMind qz.com",
           "ethics_tags": [],
-          "trend_score": 14
-        },
-        {
-          "title": "Bill Gates warns AI safety checks are ‘completely missing’",
-          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQN014OUtzTjdydFhNVlhDalVkMFB6ZF9CQ2dydG41eFo4T2pyNHJ3c3lVTF9tcWJMa2xGQk9rUXRLdzlnUFFPQllVZzN2X2FUdzZ3ZzRPdXkwLVRHNzc4cEFpelc3ZUpPV2QxVnR6TENNOHEwZzZtYUdBbzN1MzhvdHAzRzgzSlkwaDkza0lNbEw2WWM?oc=5",
-          "source": "capacityglobal.com",
-          "category": "ethics",
-          "category_label": "Ethics & Society",
-          "published_display": "Aug 27, 2026",
-          "published_iso": "2026-08-27T13:04:17Z",
-          "summary": "Bill Gates warns AI safety checks are ‘completely missing’ capacityglobal.com",
-          "ethics_tags": [
-            "Safety & Alignment"
-          ],
-          "trend_score": 45
+          "trend_score": 16
         },
         {
           "title": "AI regulation risk will outlast the midterm elections: Raymond James",
@@ -1433,7 +1506,7 @@
           "ethics_tags": [
             "Regulation & Governance"
           ],
-          "trend_score": 13
+          "trend_score": 12
         },
         {
           "title": "BlackBerry Stock And Two AI Safety Plays For A Changing Cybersecurity Market",
@@ -1447,82 +1520,24 @@
           "ethics_tags": [
             "Safety & Alignment"
           ],
-          "trend_score": 45
-        },
-        {
-          "title": "AI safety and security company Alice raises $140 million.",
-          "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1hcUZJWEdYZGF1S196azM4czZITFcwSktIRS1JQ3Z0OWw1cTdJZ2JFbXgtdFMxcHhtXzd0ODROOXBkSnVaV0pDTHBlN2VEUFhOdUtVQ2VBbW1vRzBBZUx3dkY2a0J2VERBNmtz?oc=5",
-          "source": "CyberWire",
-          "category": "ethics",
-          "category_label": "Ethics & Society",
-          "published_display": "Aug 27, 2026",
-          "published_iso": "2026-08-27T01:45:39Z",
-          "summary": "AI safety and security company Alice raises $140 million. CyberWire",
-          "ethics_tags": [
-            "Safety & Alignment"
-          ],
-          "trend_score": 45
-        },
-        {
-          "title": "Google Shifts AI Safety Unit Out of DeepMind Lab to Global Affairs",
-          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQcGd3Yld0Z1IzZUVZazNlZF93MWxzSTVTRkk0MGs0em9kQ3dmMHdieFg3NUQ3QnA2aU5FRnBBRHluYVNNcnNwb1dONUtEMWVZWnBRalBTSnA0UjJBTDRxZlczVzZadGtmODVNOWI0Qll3V25hRWtrVnNvNm05SWNDWTdvUkxzR3Zva0lodm80S1J2QkU1WExkcTZtS0xFaVRTc0ZMaQ?oc=5",
-          "source": "PYMNTS.com",
-          "category": "ethics",
-          "category_label": "Ethics & Society",
-          "published_display": "Aug 26, 2026",
-          "published_iso": "2026-08-26T23:51:53Z",
-          "summary": "Google Shifts AI Safety Unit Out of DeepMind Lab to Global Affairs PYMNTS.com",
-          "ethics_tags": [
-            "Safety & Alignment"
-          ],
-          "trend_score": 59
-        },
-        {
-          "title": "Democrats in key House, Senate races sign AI regulation pledge amid data center scrutiny",
-          "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE43U0VxVWxreEtoSTI5UEZ1U1I3VTdMZnRvYzRtNElFVGR4dDVsb2RBSDVtMzJ4bmxsQ2ZWZVg5eXR5TFZzR1NoV0lPVkpBSTRFbVIwSjNGZ2NWcWY5V3NSRzk3ZXk5OW1zYlpXWmpGUXhoQmo0alM3RUVB0gF_QVVfeXFMUEprWWF3aXVPWk5vYVQwLS1keTFQaEFCdWcwd2NIZHU0d0hFV18xYTJ2N21KRGppd2JaQlRURC1YZDlob25aaTV2SXYyUG1ZYzE1MktyTDE1UmxiNlY3Z0Nqem11bkNfWjZmMWhJVGQwQktyU3JkeDRDT2hQTWtkWQ?oc=5",
-          "source": "The Hill",
-          "category": "ethics",
-          "category_label": "Ethics & Society",
-          "published_display": "Aug 26, 2026",
-          "published_iso": "2026-08-26T22:00:00Z",
-          "summary": "Democrats in key House, Senate races sign AI regulation pledge amid data center scrutiny The Hill",
-          "ethics_tags": [
-            "Energy & Environment",
-            "Regulation & Governance"
-          ],
-          "trend_score": 13
-        },
-        {
-          "title": "OpenAI, Google, Meta and Amazon to share AI jobs data with Trump administration: Report",
-          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQQnFYRmZlZ0NsdkVERkNtODlvRWdiemNQU3JIaGl5MHN1WS1INzEzekY4WnFDblZkYkUwWmd6aEpQLXc5WjFvQl9pNkVKOTVkNHUyZUN0TG5Fc3QySlkxQlhVOVRPY1puak1HOTB6VEd1MXIzQmVVU2tWckZnMVhNYldKR2JibWtySGNhTnZ1ZVVIekNKcG9BcURzWm1SNVJ1WWY5aGVMN1poNTBlakxHTmxWLXhuOXpVcS1CR3laSmN6a00wRVA3ZdIBzgFBVV95cUxORmlaSTdLc1VkLUtpZ3JTODJOQkQzeUJKR3dkMUwzNmdsQW41NHBIaTVvTEFZZ1E1U0VIS3ZXQmtBODBYYm1mV3lMWHp2RGZ6SXJFMG5qNkZ0Z0c4dG9obTZJVWNQd2JtVHVNM0VrdHpqejFKTUdpUVk3WkEwU0VmUWZLcWxKeEhVNkQ5Q2pnbmJNZVBHellndWlMMTluamtKOU93ZUFTZDFQOEFia2JsN2hkMEE0WnlVczhRdUVLd1BCa3ZpZVlEeWZXc05aZw?oc=5",
-          "source": "Firstpost",
-          "category": "ethics",
-          "category_label": "Ethics & Society",
-          "published_display": "Aug 26, 2026",
-          "published_iso": "2026-08-26T18:43:30Z",
-          "summary": "OpenAI, Google, Meta and Amazon to share AI jobs data with Trump administration: Report Firstpost",
-          "ethics_tags": [
-            "Labor & Jobs"
-          ],
-          "trend_score": 66
-        },
-        {
-          "title": "Candidates Are Signing a Pact Promising Action on Data Centers and AI Safety",
-          "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOeTlfMHJ2b3gtX2NYY3VWb2FmYmFwemlfNURuUUZvSHBwNWZDU0lxVlBxWW1CQkcwMjJ2Yk81WkdBNTYzalc1RHV2THpRcVlCUG1oQWo1eDBxSlUxYUhYTkxFSUpxY3RmVmFjLUpEd3BVZlYwRlBaMWhOVldUNHZiLTZTR0U0U19UNF9ZZ3RhZ21ESU1kQlpPM1k1Uk41WUl2ZmZ6LW9Tb1c?oc=5",
-          "source": "WIRED",
-          "category": "ethics",
-          "category_label": "Ethics & Society",
-          "published_display": "Aug 26, 2026",
-          "published_iso": "2026-08-26T17:13:00Z",
-          "summary": "Candidates Are Signing a Pact Promising Action on Data Centers and AI Safety WIRED",
-          "ethics_tags": [
-            "Safety & Alignment",
-            "Energy & Environment"
-          ],
-          "trend_score": 45
+          "trend_score": 47
         }
       ],
       "folder_items": [
+        {
+          "title": "OpenAI, Google and other companies sign AI safety letter",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1ROW80YS1LbkN0WFpMTVFnQVZVYkpnNWRFVDhIcjU4X293bXhxRUlzRlVIRW1HNzlnREhnQ0hzODh5dWdWY3d2ZE1aSlRMWVotWVpnNw?oc=5",
+          "source": "AzerNews",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Aug 28, 2026",
+          "published_iso": "2026-08-28T17:57:00Z",
+          "summary": "OpenAI, Google and other companies sign AI safety letter AzerNews",
+          "ethics_tags": [
+            "Safety & Alignment"
+          ],
+          "trend_score": 113
+        },
         {
           "title": "Anthropic gets legal shield against Pentagon blacklisting in AI safety fight",
           "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQYXFUajdlaGVLVmRFckxfTVpDZG9GTjVROUp4dldoZDZmTUJwR0ZNcERib0RZQjBILWxmMUZrbDVKSzRBVWZucVBEQjdvbFUzcnFZeTFBYUhGU2J4cS1ha3czUDJEdHlwMlJKRF82R0ZPM0F0SGhNeWhQRHhzTWk4MzVwQXVYQXl5emJ4enB4OGc4eXk1YWFDaUZmai1QOTF5OEhjaUs4S2RrdGZ1TWlHM0UyUkJNWDBVOTRZMG1seHVzQ1gxcnFJbWZZSUhOVjBZb3ZzaDJxMGo4UdIB3wFBVV95cUxPRGtvU2Q2ZW5mbTQtRjg5ckNXeGljMjdDVDdLQ0xPbzN5ZEZsclpCQWdPSVJhRnJjMjJfdDdVQThiMUtTTXo5aEFTNmFyV2VjN0N6TVBZSmtQOTRVeHBscnc5NmU3ajlPNEVnRFFHVUNFZVFfSUJncFh0V2ptOURHbENYSlR3WFlhVnQyUWF4T3hqcFB4Wk44ckgzcXNDUzUyaHc1WWpCYTlUOE1OQlhqUGpzSFFNbFpOb1ZoSkR4cTFjYUlnWTJ6bGQzTmJMaXhMMnl1WlphUWNDNVFEU0M0?oc=5",
@@ -1535,43 +1550,43 @@
           "ethics_tags": [
             "Safety & Alignment"
           ],
-          "trend_score": 80
+          "trend_score": 84
         },
         {
-          "title": "OpenAI, Google, Meta and Amazon to share AI jobs data with Trump administration: Report",
-          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQQnFYRmZlZ0NsdkVERkNtODlvRWdiemNQU3JIaGl5MHN1WS1INzEzekY4WnFDblZkYkUwWmd6aEpQLXc5WjFvQl9pNkVKOTVkNHUyZUN0TG5Fc3QySlkxQlhVOVRPY1puak1HOTB6VEd1MXIzQmVVU2tWckZnMVhNYldKR2JibWtySGNhTnZ1ZVVIekNKcG9BcURzWm1SNVJ1WWY5aGVMN1poNTBlakxHTmxWLXhuOXpVcS1CR3laSmN6a00wRVA3ZdIBzgFBVV95cUxORmlaSTdLc1VkLUtpZ3JTODJOQkQzeUJKR3dkMUwzNmdsQW41NHBIaTVvTEFZZ1E1U0VIS3ZXQmtBODBYYm1mV3lMWHp2RGZ6SXJFMG5qNkZ0Z0c4dG9obTZJVWNQd2JtVHVNM0VrdHpqejFKTUdpUVk3WkEwU0VmUWZLcWxKeEhVNkQ5Q2pnbmJNZVBHellndWlMMTluamtKOU93ZUFTZDFQOEFia2JsN2hkMEE0WnlVczhRdUVLd1BCa3ZpZVlEeWZXc05aZw?oc=5",
-          "source": "Firstpost",
-          "category": "ethics",
-          "category_label": "Ethics & Society",
-          "published_display": "Aug 26, 2026",
-          "published_iso": "2026-08-26T18:43:30Z",
-          "summary": "OpenAI, Google, Meta and Amazon to share AI jobs data with Trump administration: Report Firstpost",
-          "ethics_tags": [
-            "Labor & Jobs"
-          ],
-          "trend_score": 66
-        },
-        {
-          "title": "Google moves AI safety team into global affairs in DeepMind overhaul",
-          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPdEVlX0ZjSWltcG5Pc2xrbHR5LXlrUkY5a3dxUVNBQzdZTS1tOUFXaGR5VnFMRl93SldhR19hT2haSHVnWE9udHRhdXc4M1U5eURqaWJ3YTBUcDVMWTFBeVBqbXNsa2hPN0g5Qi1NQ3VpWlA2dXdJR0RISFdaUkZZdEZ0TTNGNlpiRXpzMms5Z3kzWlREbVl4WW9TekF3YTg?oc=5",
-          "source": "digitimes",
+          "title": "Google Moved Its Gemini AI Safety Team Into Lobbying, Blocking Researchers From Staying",
+          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPZFJDTzU1Q3hCVE9PZlVsZ3dPSXk3YmRSTk4yRHRVaU5XSnlpVHVZcTRDMnhNSDZFZHl6Nm84VDhaY0o1RmxWUTlQZW9ldk1lMDZUX2F4ZU9wcERSeDRPTG4yOVN2WnF6VU5SWnE2TVF0SHNTT0FkVUNLQ2d2RzMxeWtZUUJjRUJDVHBRM3lwWFYxc1FRNFk0LVVtOUk2RnppdmRKdjBOZ3lsdXVWQjluRGlBT0VfaDk1My0zX2huc1JIYWduZjFMS3ZEbw?oc=5",
+          "source": "Tech Times",
           "category": "ethics",
           "category_label": "Ethics & Society",
           "published_display": "Aug 28, 2026",
-          "published_iso": "2026-08-28T01:45:00Z",
-          "summary": "Google moves AI safety team into global affairs in DeepMind overhaul digitimes",
+          "published_iso": "2026-08-28T13:48:34Z",
+          "summary": "Google Moved Its Gemini AI Safety Team Into Lobbying, Blocking Researchers From Staying Tech Times",
           "ethics_tags": [
             "Safety & Alignment"
           ],
-          "trend_score": 59
+          "trend_score": 63
         }
       ],
       "subcategories": [
         {
           "key": "safety",
           "label": "Safety & Alignment",
-          "count": 10,
+          "count": 11,
           "folder_items": [
+            {
+              "title": "OpenAI, Google and other companies sign AI safety letter",
+              "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1ROW80YS1LbkN0WFpMTVFnQVZVYkpnNWRFVDhIcjU4X293bXhxRUlzRlVIRW1HNzlnREhnQ0hzODh5dWdWY3d2ZE1aSlRMWVotWVpnNw?oc=5",
+              "source": "AzerNews",
+              "category": "ethics",
+              "category_label": "Ethics & Society",
+              "published_display": "Aug 28, 2026",
+              "published_iso": "2026-08-28T17:57:00Z",
+              "summary": "OpenAI, Google and other companies sign AI safety letter AzerNews",
+              "ethics_tags": [
+                "Safety & Alignment"
+              ],
+              "trend_score": 113
+            },
             {
               "title": "Anthropic gets legal shield against Pentagon blacklisting in AI safety fight",
               "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQYXFUajdlaGVLVmRFckxfTVpDZG9GTjVROUp4dldoZDZmTUJwR0ZNcERib0RZQjBILWxmMUZrbDVKSzRBVWZucVBEQjdvbFUzcnFZeTFBYUhGU2J4cS1ha3czUDJEdHlwMlJKRF82R0ZPM0F0SGhNeWhQRHhzTWk4MzVwQXVYQXl5emJ4enB4OGc4eXk1YWFDaUZmai1QOTF5OEhjaUs4S2RrdGZ1TWlHM0UyUkJNWDBVOTRZMG1seHVzQ1gxcnFJbWZZSUhOVjBZb3ZzaDJxMGo4UdIB3wFBVV95cUxPRGtvU2Q2ZW5mbTQtRjg5ckNXeGljMjdDVDdLQ0xPbzN5ZEZsclpCQWdPSVJhRnJjMjJfdDdVQThiMUtTTXo5aEFTNmFyV2VjN0N6TVBZSmtQOTRVeHBscnc5NmU3ajlPNEVnRFFHVUNFZVFfSUJncFh0V2ptOURHbENYSlR3WFlhVnQyUWF4T3hqcFB4Wk44ckgzcXNDUzUyaHc1WWpCYTlUOE1OQlhqUGpzSFFNbFpOb1ZoSkR4cTFjYUlnWTJ6bGQzTmJMaXhMMnl1WlphUWNDNVFEU0M0?oc=5",
@@ -1584,56 +1599,21 @@
               "ethics_tags": [
                 "Safety & Alignment"
               ],
-              "trend_score": 80
+              "trend_score": 84
             },
             {
-              "title": "Google moves AI safety team into global affairs in DeepMind overhaul",
-              "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPdEVlX0ZjSWltcG5Pc2xrbHR5LXlrUkY5a3dxUVNBQzdZTS1tOUFXaGR5VnFMRl93SldhR19hT2haSHVnWE9udHRhdXc4M1U5eURqaWJ3YTBUcDVMWTFBeVBqbXNsa2hPN0g5Qi1NQ3VpWlA2dXdJR0RISFdaUkZZdEZ0TTNGNlpiRXpzMms5Z3kzWlREbVl4WW9TekF3YTg?oc=5",
-              "source": "digitimes",
+              "title": "Google Moved Its Gemini AI Safety Team Into Lobbying, Blocking Researchers From Staying",
+              "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPZFJDTzU1Q3hCVE9PZlVsZ3dPSXk3YmRSTk4yRHRVaU5XSnlpVHVZcTRDMnhNSDZFZHl6Nm84VDhaY0o1RmxWUTlQZW9ldk1lMDZUX2F4ZU9wcERSeDRPTG4yOVN2WnF6VU5SWnE2TVF0SHNTT0FkVUNLQ2d2RzMxeWtZUUJjRUJDVHBRM3lwWFYxc1FRNFk0LVVtOUk2RnppdmRKdjBOZ3lsdXVWQjluRGlBT0VfaDk1My0zX2huc1JIYWduZjFMS3ZEbw?oc=5",
+              "source": "Tech Times",
               "category": "ethics",
               "category_label": "Ethics & Society",
               "published_display": "Aug 28, 2026",
-              "published_iso": "2026-08-28T01:45:00Z",
-              "summary": "Google moves AI safety team into global affairs in DeepMind overhaul digitimes",
+              "published_iso": "2026-08-28T13:48:34Z",
+              "summary": "Google Moved Its Gemini AI Safety Team Into Lobbying, Blocking Researchers From Staying Tech Times",
               "ethics_tags": [
                 "Safety & Alignment"
               ],
-              "trend_score": 59
-            },
-            {
-              "title": "Google Shifts AI Safety Unit Out of DeepMind Lab to Global Affairs",
-              "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQcGd3Yld0Z1IzZUVZazNlZF93MWxzSTVTRkk0MGs0em9kQ3dmMHdieFg3NUQ3QnA2aU5FRnBBRHluYVNNcnNwb1dONUtEMWVZWnBRalBTSnA0UjJBTDRxZlczVzZadGtmODVNOWI0Qll3V25hRWtrVnNvNm05SWNDWTdvUkxzR3Zva0lodm80S1J2QkU1WExkcTZtS0xFaVRTc0ZMaQ?oc=5",
-              "source": "PYMNTS.com",
-              "category": "ethics",
-              "category_label": "Ethics & Society",
-              "published_display": "Aug 26, 2026",
-              "published_iso": "2026-08-26T23:51:53Z",
-              "summary": "Google Shifts AI Safety Unit Out of DeepMind Lab to Global Affairs PYMNTS.com",
-              "ethics_tags": [
-                "Safety & Alignment"
-              ],
-              "trend_score": 59
-            }
-          ]
-        },
-        {
-          "key": "rights",
-          "label": "Copyright, Labor & Rights",
-          "count": 1,
-          "folder_items": [
-            {
-              "title": "OpenAI, Google, Meta and Amazon to share AI jobs data with Trump administration: Report",
-              "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQQnFYRmZlZ0NsdkVERkNtODlvRWdiemNQU3JIaGl5MHN1WS1INzEzekY4WnFDblZkYkUwWmd6aEpQLXc5WjFvQl9pNkVKOTVkNHUyZUN0TG5Fc3QySlkxQlhVOVRPY1puak1HOTB6VEd1MXIzQmVVU2tWckZnMVhNYldKR2JibWtySGNhTnZ1ZVVIekNKcG9BcURzWm1SNVJ1WWY5aGVMN1poNTBlakxHTmxWLXhuOXpVcS1CR3laSmN6a00wRVA3ZdIBzgFBVV95cUxORmlaSTdLc1VkLUtpZ3JTODJOQkQzeUJKR3dkMUwzNmdsQW41NHBIaTVvTEFZZ1E1U0VIS3ZXQmtBODBYYm1mV3lMWHp2RGZ6SXJFMG5qNkZ0Z0c4dG9obTZJVWNQd2JtVHVNM0VrdHpqejFKTUdpUVk3WkEwU0VmUWZLcWxKeEhVNkQ5Q2pnbmJNZVBHellndWlMMTluamtKOU93ZUFTZDFQOEFia2JsN2hkMEE0WnlVczhRdUVLd1BCa3ZpZVlEeWZXc05aZw?oc=5",
-              "source": "Firstpost",
-              "category": "ethics",
-              "category_label": "Ethics & Society",
-              "published_display": "Aug 26, 2026",
-              "published_iso": "2026-08-26T18:43:30Z",
-              "summary": "OpenAI, Google, Meta and Amazon to share AI jobs data with Trump administration: Report Firstpost",
-              "ethics_tags": [
-                "Labor & Jobs"
-              ],
-              "trend_score": 66
+              "trend_score": 63
             }
           ]
         },
@@ -1642,6 +1622,18 @@
           "label": "Governance & Society",
           "count": 3,
           "folder_items": [
+            {
+              "title": "Anthropic Wins as Judge Bars Pentagon From Punishing AI Ethics Policies",
+              "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQVmxhSGZ5MElHYXlwQ1ZmX2c2Uzg2QzJ1Rm9oa1VCN0lVVDlmZkFoWlpCV2NaaWlRcHJDd1RKLU9fWUlzc3FOSElIZEszdWIwaW5LRFV1RVFiaW5ZUFFXZHRfazFSZ0xRZGJOMmhtUDFCdVBBZHFaZlRfaXQ2aGtDbVMwR1ExOHNEaWZwNmxZQ2VLN3FZcG4wY01aLUdjX2djVXF5SXNPcDlFbWgxRHgwMXpOUmZaWmMwQnc?oc=5",
+              "source": "Tech Times",
+              "category": "ethics",
+              "category_label": "Ethics & Society",
+              "published_display": "Aug 28, 2026",
+              "published_iso": "2026-08-28T20:40:20Z",
+              "summary": "Anthropic Wins as Judge Bars Pentagon From Punishing AI Ethics Policies Tech Times",
+              "ethics_tags": [],
+              "trend_score": 37
+            },
             {
               "title": "Google moves AI responsibility team out of DeepMind",
               "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOU0M3ZGdrcDFkdFFpQmxSRTJ1dHZ4Q0ZJTC03aGpkekkyZjloZ21BMzlPOUdCWU5xQlJ1Uk1BbEM1b2RZTjdMaVFSNFd6SnVlamhhN1l0VWN0cS1TNGZOU2p6eHhmR0k5OTFhQ1duOG9YV1U1bXVJLWcyRy1Kd09KUA?oc=5",
@@ -1652,7 +1644,7 @@
               "published_iso": "2026-08-27T13:42:03Z",
               "summary": "Google moves AI responsibility team out of DeepMind qz.com",
               "ethics_tags": [],
-              "trend_score": 14
+              "trend_score": 16
             },
             {
               "title": "AI regulation risk will outlast the midterm elections: Raymond James",
@@ -1666,22 +1658,7 @@
               "ethics_tags": [
                 "Regulation & Governance"
               ],
-              "trend_score": 13
-            },
-            {
-              "title": "Democrats in key House, Senate races sign AI regulation pledge amid data center scrutiny",
-              "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE43U0VxVWxreEtoSTI5UEZ1U1I3VTdMZnRvYzRtNElFVGR4dDVsb2RBSDVtMzJ4bmxsQ2ZWZVg5eXR5TFZzR1NoV0lPVkpBSTRFbVIwSjNGZ2NWcWY5V3NSRzk3ZXk5OW1zYlpXWmpGUXhoQmo0alM3RUVB0gF_QVVfeXFMUEprWWF3aXVPWk5vYVQwLS1keTFQaEFCdWcwd2NIZHU0d0hFV18xYTJ2N21KRGppd2JaQlRURC1YZDlob25aaTV2SXYyUG1ZYzE1MktyTDE1UmxiNlY3Z0Nqem11bkNfWjZmMWhJVGQwQktyU3JkeDRDT2hQTWtkWQ?oc=5",
-              "source": "The Hill",
-              "category": "ethics",
-              "category_label": "Ethics & Society",
-              "published_display": "Aug 26, 2026",
-              "published_iso": "2026-08-26T22:00:00Z",
-              "summary": "Democrats in key House, Senate races sign AI regulation pledge amid data center scrutiny The Hill",
-              "ethics_tags": [
-                "Energy & Environment",
-                "Regulation & Governance"
-              ],
-              "trend_score": 13
+              "trend_score": 12
             }
           ]
         }
@@ -1691,43 +1668,39 @@
   "trending": [
     {
       "term": "agent",
-      "count": 109
+      "count": 106
     },
     {
       "term": "OpenAI",
-      "count": 52
+      "count": 50
     },
     {
       "term": "safety",
-      "count": 45
+      "count": 47
     },
     {
       "term": "multimodal",
-      "count": 43
+      "count": 42
     },
     {
       "term": "benchmark",
-      "count": 37
+      "count": 39
     },
     {
       "term": "Anthropic",
-      "count": 35
+      "count": 37
     },
     {
       "term": "chip",
-      "count": 27
-    },
-    {
-      "term": "Nvidia",
-      "count": 25
+      "count": 30
     },
     {
       "term": "agentic",
       "count": 22
     },
     {
-      "term": "DeepSeek",
-      "count": 18
+      "term": "Nvidia",
+      "count": 20
     },
     {
       "term": "video",
@@ -1735,27 +1708,31 @@
     },
     {
       "term": "Google",
-      "count": 14
+      "count": 16
     },
     {
-      "term": "regulation",
-      "count": 13
+      "term": "DeepSeek",
+      "count": 16
     },
     {
       "term": "alignment",
       "count": 13
+    },
+    {
+      "term": "regulation",
+      "count": 12
     }
   ],
   "ai_pulse": {
-    "story_count": 828,
-    "source_count": 127,
+    "story_count": 822,
+    "source_count": 122,
     "topic_count": 14,
-    "ethics_count": 187,
+    "ethics_count": 189,
     "coverage": [
       {
         "term": "agent",
-        "story_count": 109,
-        "source_count": 22,
+        "story_count": 106,
+        "source_count": 19,
         "category_count": 3,
         "strength_percent": 100,
         "top_ethics_theme": "Safety & Alignment",
@@ -1770,7 +1747,7 @@
             "published_iso": "2026-08-28T04:00:00Z",
             "summary": "arXiv:2606.02357v2 Announce Type: replace-cross Abstract: Tool-augmented multimodal agents show strong benchmark gains, often taken as evidence that agents have learned to use tools. We argue that this interpretation can be premature: a…",
             "ethics_tags": [],
-            "trend_score": 189
+            "trend_score": 187
           },
           {
             "title": "DeepSeek V4 Pro Safety Depends on the Agent Harness",
@@ -1782,7 +1759,7 @@
             "published_iso": "2026-08-26T07:00:00Z",
             "summary": "DeepSeek V4 Pro Safety Depends on the Agent Harness quasa.io",
             "ethics_tags": [],
-            "trend_score": 172
+            "trend_score": 169
           },
           {
             "title": "I built an open-source roguelike specifically for training game-playing agents [P]",
@@ -1796,16 +1773,16 @@
             "ethics_tags": [
               "Safety & Alignment"
             ],
-            "trend_score": 161
+            "trend_score": 156
           }
         ]
       },
       {
         "term": "OpenAI",
-        "story_count": 52,
-        "source_count": 32,
+        "story_count": 50,
+        "source_count": 29,
         "category_count": 5,
-        "strength_percent": 48,
+        "strength_percent": 47,
         "top_ethics_theme": "Safety & Alignment",
         "stories": [
           {
@@ -1820,7 +1797,7 @@
             "ethics_tags": [
               "Safety & Alignment"
             ],
-            "trend_score": 161
+            "trend_score": 156
           },
           {
             "title": "Agents Don't Paginate: First-Chunk Selection for LLM Tool Responses",
@@ -1832,28 +1809,30 @@
             "published_iso": "2026-08-28T04:00:00Z",
             "summary": "arXiv:2608.26130v1 Announce Type: new Abstract: Coding agents built on large language models (LLMs), such as Claude Code, Cursor, OpenAI Codex, GitHub Copilot, and Aider, receive tool responses that routinely exceed the agent's per-turn…",
             "ethics_tags": [],
-            "trend_score": 161
+            "trend_score": 156
           },
           {
-            "title": "Custom AI Chips Are Coming for Nvidia. OpenAI's Jalapeño Could Be the Biggest Warning Yet.",
-            "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQSjBkUVdtSnpwVFFFSWJWTnE2eFdFd29WYkVxMDdjZmdQcWQyNkRBZkRhRnM0Ymc5S3cwRmJGR09YaXVKajQ3ZDd2T3F6c2QzcWVObVEwMzNudlZNZEc3akNuWFYxTlpadGZoTkRIRWIwOGowVFJRTFFkeC1GSTRJQ1kyS0dhRExuMFJHOEI2d29EQlp6eXg0LWYtR1I1eS1CNHFTR0JzZ0Zrc1NF?oc=5",
-            "source": "International Business Times",
-            "category": "business",
-            "category_label": "Business & Funding",
-            "published_display": "Aug 27, 2026",
-            "published_iso": "2026-08-27T15:11:57Z",
-            "summary": "Custom AI Chips Are Coming for Nvidia. OpenAI's Jalapeño Could Be the Biggest Warning Yet. International Business Times",
-            "ethics_tags": [],
-            "trend_score": 104
+            "title": "OpenAI, Google and other companies sign AI safety letter",
+            "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1ROW80YS1LbkN0WFpMTVFnQVZVYkpnNWRFVDhIcjU4X293bXhxRUlzRlVIRW1HNzlnREhnQ0hzODh5dWdWY3d2ZE1aSlRMWVotWVpnNw?oc=5",
+            "source": "AzerNews",
+            "category": "ethics",
+            "category_label": "Ethics & Society",
+            "published_display": "Aug 28, 2026",
+            "published_iso": "2026-08-28T17:57:00Z",
+            "summary": "OpenAI, Google and other companies sign AI safety letter AzerNews",
+            "ethics_tags": [
+              "Safety & Alignment"
+            ],
+            "trend_score": 113
           }
         ]
       },
       {
         "term": "safety",
-        "story_count": 45,
-        "source_count": 29,
-        "category_count": 4,
-        "strength_percent": 41,
+        "story_count": 47,
+        "source_count": 30,
+        "category_count": 3,
+        "strength_percent": 44,
         "top_ethics_theme": "Safety & Alignment",
         "stories": [
           {
@@ -1868,7 +1847,7 @@
             "ethics_tags": [
               "Safety & Alignment"
             ],
-            "trend_score": 176
+            "trend_score": 175
           },
           {
             "title": "OpenAI wants California to strengthen its newly passed AI safety law",
@@ -1885,25 +1864,27 @@
             "trend_score": 97
           },
           {
-            "title": "Trana – an iOS wellbeing companion with safety-first AI tools",
-            "link": "https://trana.live",
-            "source": "Web",
-            "category": "community",
-            "category_label": "Community & Discussion",
-            "published_display": "Aug 28, 2026",
-            "published_iso": "2026-08-28T09:56:05Z",
-            "summary": "3 points, 0 comments on Hacker News.",
-            "ethics_tags": [],
-            "trend_score": 45
+            "title": "OpenAI Calls For California To Strengthen Its AI Safety Laws",
+            "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPUktSRUZlaXlGY0cxeHZJT0ltazNHUV8wTlpBQVJfckQyZW9yOVpKeHgwenNvdXlydEZhSzBOSXJPcHJQRzc2dTRaS05lRU9ZXy1pRTJRc2pZdlhKVWZpZFpqVzVrdVhUN0FlLUpyUlc3S291Y19ndGVEY3prWV8zMXN6NjlzUVhyRkMzc1NYLWZIRDBJ?oc=5",
+            "source": "Engadget",
+            "category": "ethics",
+            "category_label": "Ethics & Society",
+            "published_display": "Aug 22, 2026",
+            "published_iso": "2026-08-22T19:27:04Z",
+            "summary": "OpenAI Calls For California To Strengthen Its AI Safety Laws Engadget",
+            "ethics_tags": [
+              "Safety & Alignment"
+            ],
+            "trend_score": 97
           }
         ]
       },
       {
         "term": "multimodal",
-        "story_count": 43,
-        "source_count": 2,
-        "category_count": 2,
-        "strength_percent": 39,
+        "story_count": 42,
+        "source_count": 1,
+        "category_count": 1,
+        "strength_percent": 40,
         "top_ethics_theme": "Regulation & Governance",
         "stories": [
           {
@@ -1916,19 +1897,7 @@
             "published_iso": "2026-08-28T04:00:00Z",
             "summary": "arXiv:2608.26983v1 Announce Type: new Abstract: Organizing long-term memory for multimodal agents remains challenging because existing methods either suffer from expensive question-agnostic offline summaries or naive embedding similarity…",
             "ethics_tags": [],
-            "trend_score": 152
-          },
-          {
-            "title": "DeepSeek debuts multimodal language model competitive with Opus 4.8",
-            "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNdjh2ZHRjbTBkRkxvTWRFbW5ZaU5NWXlpOGlzOFduOFZ6ZjJubTVhd05Za1FPUVRIQ1g4UVJzX3FOc3dvUUwwN1BURmZydXpwSVdGUmw0LVhsQTBXM3QzYkY0cHlndWpzcFpUWnVEcnpaQTY2LUN6U1RPaEt3OUZnWldVd2I0eUp2d3NlME5nQlRwZXc3a0FlNDY5bnZsWnoyeUpGMHBfWQ?oc=5",
-            "source": "SiliconANGLE",
-            "category": "labs",
-            "category_label": "Labs & Industry",
-            "published_display": "Aug 21, 2026",
-            "published_iso": "2026-08-21T20:18:00Z",
-            "summary": "DeepSeek debuts multimodal language model competitive with Opus 4.8 SiliconANGLE",
-            "ethics_tags": [],
-            "trend_score": 61
+            "trend_score": 148
           },
           {
             "title": "TransMeme: A Multi-Agent Framework for Cross-Cultural Meme Transcreation",
@@ -1940,7 +1909,19 @@
             "published_iso": "2026-08-28T04:00:00Z",
             "summary": "arXiv:2608.27127v1 Announce Type: new Abstract: Internet memes are a pervasive form of multimodal online communication; however, such communication often involves users from diverse linguistic and cultural backgrounds. Therefore, adapting…",
             "ethics_tags": [],
-            "trend_score": 152
+            "trend_score": 148
+          },
+          {
+            "title": "Buried in Textual Debt: Context Pruning with Visual Evidence Preservation for MLLM Agents",
+            "link": "https://arxiv.org/abs/2608.22963",
+            "source": "arXiv",
+            "category": "research",
+            "category_label": "Research & Papers",
+            "published_display": "Aug 28, 2026",
+            "published_iso": "2026-08-28T04:00:00Z",
+            "summary": "arXiv:2608.22963v2 Announce Type: replace Abstract: Multimodal Large Language Models (MLLMs) are increasingly deployed as multi-step agents, where explicit reasoning supports task decomposition and tool coordination but also accumulates…",
+            "ethics_tags": [],
+            "trend_score": 148
           }
         ]
       }
@@ -1949,7 +1930,7 @@
   "ethics_themes": [
     {
       "theme": "Safety & Alignment",
-      "count": 55,
+      "count": 58,
       "slug": "safety-alignment"
     },
     {
@@ -1963,19 +1944,19 @@
       "slug": "transparency-accountability"
     },
     {
+      "theme": "Misinformation & Deepfakes",
+      "count": 18,
+      "slug": "misinformation-deepfakes"
+    },
+    {
       "theme": "Bias & Fairness",
-      "count": 19,
+      "count": 18,
       "slug": "bias-fairness"
     },
     {
       "theme": "Labor & Jobs",
-      "count": 18,
-      "slug": "labor-jobs"
-    },
-    {
-      "theme": "Misinformation & Deepfakes",
       "count": 17,
-      "slug": "misinformation-deepfakes"
+      "slug": "labor-jobs"
     },
     {
       "theme": "Privacy & Surveillance",
@@ -1995,6 +1976,160 @@
   ],
   "ethics_watch": [
     {
+      "title": "Show HN: Conduct, open-source guardrails for LLM and MCP tool calls",
+      "link": "https://github.com/sseshachala/conductai",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T19:29:20Z",
+      "summary": "19 points, 3 comments on Hacker News.",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ],
+      "trend_score": 0
+    },
+    {
+      "title": "For self-learning LLMs, governance needs to improve",
+      "link": "https://rakuensoftware.com/blog/aimee-recursive-self-learning",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T18:14:06Z",
+      "summary": "2 points, 1 comments on Hacker News.",
+      "ethics_tags": [
+        "Regulation & Governance"
+      ],
+      "trend_score": 0
+    },
+    {
+      "title": "OpenAI, Google and other companies sign AI safety letter",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1ROW80YS1LbkN0WFpMTVFnQVZVYkpnNWRFVDhIcjU4X293bXhxRUlzRlVIRW1HNzlnREhnQ0hzODh5dWdWY3d2ZE1aSlRMWVotWVpnNw?oc=5",
+      "source": "AzerNews",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T17:57:00Z",
+      "summary": "OpenAI, Google and other companies sign AI safety letter AzerNews",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ],
+      "trend_score": 113
+    },
+    {
+      "title": "Show HN: Watermarks Remover: Clean LLM watermarks from text and files",
+      "link": "https://github.com/guillaumemeyer/watermarks-remover",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T17:10:00Z",
+      "summary": "2 points, 0 comments on Hacker News.",
+      "ethics_tags": [
+        "Transparency & Accountability"
+      ],
+      "trend_score": 0
+    },
+    {
+      "title": "New Jobs for Old AI Chips",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBZTDBxUUQ3cER5YjdDQjdGZ0ZQd1BXbFFKNDFIZG13SDdVT0RYWE9vakNUWlZHVlphS0FiLWdYTHZCSDNLSEpBbFBTNEtrbW9WYXFfUUtldXZSVXotckpQLWY2akdXTDY2djl5TnNlaw?oc=5",
+      "source": "WSJ",
+      "category": "business",
+      "category_label": "Business & Funding",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T15:03:49Z",
+      "summary": "New Jobs for Old AI Chips WSJ",
+      "ethics_tags": [
+        "Labor & Jobs"
+      ],
+      "trend_score": 30
+    },
+    {
+      "title": "Google Moved Its Gemini AI Safety Team Into Lobbying, Blocking Researchers From Staying",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPZFJDTzU1Q3hCVE9PZlVsZ3dPSXk3YmRSTk4yRHRVaU5XSnlpVHVZcTRDMnhNSDZFZHl6Nm84VDhaY0o1RmxWUTlQZW9ldk1lMDZUX2F4ZU9wcERSeDRPTG4yOVN2WnF6VU5SWnE2TVF0SHNTT0FkVUNLQ2d2RzMxeWtZUUJjRUJDVHBRM3lwWFYxc1FRNFk0LVVtOUk2RnppdmRKdjBOZ3lsdXVWQjluRGlBT0VfaDk1My0zX2huc1JIYWduZjFMS3ZEbw?oc=5",
+      "source": "Tech Times",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T13:48:34Z",
+      "summary": "Google Moved Its Gemini AI Safety Team Into Lobbying, Blocking Researchers From Staying Tech Times",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ],
+      "trend_score": 63
+    },
+    {
+      "title": "Anthropic gets its first court win over the Pentagon’s supply-chain risk label",
+      "link": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/",
+      "source": "TechCrunch",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T12:46:12Z",
+      "summary": "A federal judge ruled the Trump administration illegally labeled Anthropic a supply-chain risk, handing the AI company a victory as its second Pentagon lawsuit continues in Washington.",
+      "ethics_tags": [
+        "Copyright & IP"
+      ],
+      "trend_score": 37
+    },
+    {
+      "title": "Anthropic was illegally blacklisted by the Trump administration, court rules",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/985947/anthropic-supply-chain-risk-lawsuit-judge-ruling",
+      "source": "The Verge",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T11:18:29Z",
+      "summary": "On Thursday, a judge ruled that the Pentagon's blacklisting of Anthropic earlier this year was unconstitutional, delivering the AI lab a win in a monthslong rollercoaster of a battle with the Trump administration. The lawsuit, filed in…",
+      "ethics_tags": [
+        "Copyright & IP"
+      ],
+      "trend_score": 37
+    },
+    {
+      "title": "Norwalk Schools Chosen As 1 Of Just 10 Districts Nationwide For Ai Safety Initiative",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxORGJMOFNmbXc2bXltOThwc1BWbHF1dlRmdVZlME5hX1FTZGFUMDZNd2hSeEFLX3ZveUhMSjFCY1d2bTI5elRhN2xxbTlWUUJsSHF3d1pxcS1rMjgxclhRQmk3Q1JZRTVCNWFjSWJPb0NtVVhyT3JETjVsNXlybUdaVWJjMjVhMGJFR0x0R2VqWm9FRldUZUp5Z0diaERWMVcwRThQTWtiSzVfeGhEd0dQTUtCSGlXWFJiUFNoV2Y5QlBWdHNIV1VQUG4xaVBjUkNId2VEQUNFSUxCSmpac01wZWNCRQ?oc=5",
+      "source": "News12 | Connecticut",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T11:16:32Z",
+      "summary": "Norwalk Schools Chosen As 1 Of Just 10 Districts Nationwide For Ai Safety Initiative News12 | Connecticut",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ],
+      "trend_score": 47
+    },
+    {
+      "title": "Bill Gates warns AI safety checks are ‘completely missing’",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQN014OUtzTjdydFhNVlhDalVkMFB6ZF9CQ2dydG41eFo4T2pyNHJ3c3lVTF9tcWJMa2xGQk9rUXRLdzlnUFFPQllVZzN2X2FUdzZ3ZzRPdXkwLVRHNzc4cEFpelc3ZUpPV2QxVnR6TENNOHEwZzZtYUdBbzN1MzhvdHAzRzgzSlkwaDkza0lNbEw2WWM?oc=5",
+      "source": "capacityglobal.com",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T10:03:12Z",
+      "summary": "Bill Gates warns AI safety checks are ‘completely missing’ capacityglobal.com",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ],
+      "trend_score": 47
+    },
+    {
+      "title": "Humans need AI safety measures to avoid ‘the singularity,’ says nonprofit founder",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOblhqV294aV96NnFVbHNvZzQ5SWgzRjdOaHZxQlAxb0kzZktTcHk0Ri00Y1pYdzltc2F4SUZERU15c245NW42MGRKcHRGQ1IyRUhDeTN4OEQzMkNyVDRRZnNibXczWnlJdlNEbTM1dUNLREZsTVMtU3dKNzZYdkhrYUxsU1FESTlSNmZEc1Z30gGTAUFVX3lxTFAyX0EzWHFKbGstNmhMbEVYUy1IbkhMMTY1RjV6X2tXTUQ5WXBnRWw3QW92aGRYVG9YZl9XeG5Ma3UtX2RjVzFISWRJTTA3dkVzeERBb1l2VkROcy1LZDZFS1R1TWpnNDFCNE5MV2lrbkgwQ0dJdzZyS1BKNlhtZ1BycDlWNDhwakZTTVZtaEwtNWk5aw?oc=5",
+      "source": "NewsNation",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T09:36:24Z",
+      "summary": "Humans need AI safety measures to avoid ‘the singularity,’ says nonprofit founder NewsNation",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ],
+      "trend_score": 47
+    },
+    {
       "title": "Gates Reverses on AI Regulation: Industry Crossed Safety Lines, Stays Mum",
       "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQVHVvUi01TjlUV0VDcUdrd21TTVlEc2VSQ1YzNzhjeFNpUlFraTEzbTVGZXhtN0dwNlJmWDF4NlhacXVoVEo1RV93a1I1Q2FFbWtRNVFGYmw5Um5IQl83RFhNZ3dvRFQwb1E1UmFiS1EtNEJTa1p2S1lpRUpkNUpNbFVMb2FwZlhzdDZ4Sk1oeXV2MXQ4aHBINTc4ckRfVzFoQVEyR2NSY2ZkZFladDhmbllJUHkzOEFGVjF3NVhBc0E?oc=5",
       "source": "Tech Times",
@@ -2006,21 +2141,7 @@
       "ethics_tags": [
         "Regulation & Governance"
       ],
-      "trend_score": 58
-    },
-    {
-      "title": "Anchoring Bias in LLM-as-a-Judge Systems: Prior Scores Compromise Evaluation",
-      "link": "https://arxiv.org/abs/2608.25869",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T06:07:07Z",
-      "summary": "1 points, 0 comments on Hacker News.",
-      "ethics_tags": [
-        "Bias & Fairness"
-      ],
-      "trend_score": 0
+      "trend_score": 59
     },
     {
       "title": "Anthropic gets legal shield against Pentagon blacklisting in AI safety fight",
@@ -2034,7 +2155,7 @@
       "ethics_tags": [
         "Safety & Alignment"
       ],
-      "trend_score": 80
+      "trend_score": 84
     },
     {
       "title": "The Accuracy-Efficiency Paradox Quantifying Net Energy Loss in on-Device Energy Forecasting",
@@ -2077,446 +2198,304 @@
         "Bias & Fairness"
       ],
       "trend_score": 0
-    },
-    {
-      "title": "GROUND: Reducing Hallucinations in LLM-Based Enterprise Analytics Through Governed Semantic Definitions",
-      "link": "https://arxiv.org/abs/2608.26157",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T04:00:00Z",
-      "summary": "arXiv:2608.26157v1 Announce Type: new Abstract: Natural-language analytics over enterprise data warehouses is increasingly important, but production use is limited by hallucinated metrics, invalid joins, wrong grain, unsafe data access,…",
-      "ethics_tags": [
-        "Misinformation & Deepfakes"
-      ],
-      "trend_score": 0
-    },
-    {
-      "title": "Refusal Is Not Robustness: Auditing Confident Fabrication in Large Language Models on a Provably Uninformative Clinical Pain Speech Transcript",
-      "link": "https://arxiv.org/abs/2608.26167",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T04:00:00Z",
-      "summary": "arXiv:2608.26167v1 Announce Type: new Abstract: Hallucination and abstention benchmarks rarely establish that a model could not have known the correct answer, making it difficult to distinguish appropriate abstention from an unsupported…",
-      "ethics_tags": [
-        "Misinformation & Deepfakes",
-        "Transparency & Accountability"
-      ],
-      "trend_score": 37
-    },
-    {
-      "title": "Can You Say This for Me? Speaking Up by Proxy in Co-Located Discussion",
-      "link": "https://arxiv.org/abs/2608.26185",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T04:00:00Z",
-      "summary": "arXiv:2608.26185v1 Announce Type: new Abstract: Equal participation in co-located discussion is important for effective collaboration, yet people often hold back when they anticipate negative interpersonal or professional consequences,…",
-      "ethics_tags": [
-        "Labor & Jobs"
-      ],
-      "trend_score": 0
-    },
-    {
-      "title": "Is Your Neighborhood Safe? Place-based Stigma in Large Language Models' Urban Safety Judgments",
-      "link": "https://arxiv.org/abs/2608.26188",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T04:00:00Z",
-      "summary": "arXiv:2608.26188v1 Announce Type: new Abstract: Large language models are increasingly used to inform safety decisions in cities, such as where it is safe to walk, rent, or travel. We ask whether such judgments track measured risk or the…",
-      "ethics_tags": [
-        "Regulation & Governance"
-      ],
-      "trend_score": 45
-    },
-    {
-      "title": "6.5% of the Neuro-Symbolic Literature Can Be Reproduced from Its Published Artifacts, a Six-Stage Audit Framework and First Instantiation",
-      "link": "https://arxiv.org/abs/2608.26236",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T04:00:00Z",
-      "summary": "arXiv:2608.26236v1 Announce Type: new Abstract: We present a six-stage framework for auditing the reproducibility of scientific claims across a research literature within the computer science domain, and instantiate our framework for the…",
-      "ethics_tags": [
-        "Transparency & Accountability"
-      ],
-      "trend_score": 0
-    },
-    {
-      "title": "Approved Too Late: Verdict Staleness in LLM-Guarded Self-Adaptive Systems",
-      "link": "https://arxiv.org/abs/2608.26306",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T04:00:00Z",
-      "summary": "arXiv:2608.26306v1 Announce Type: new Abstract: A large language model (LLM) guardrail for a self-adaptive system (SAS) may issue an approval that is correct at check time but stale by actuation. This creates an Execute-stage time-of-check…",
-      "ethics_tags": [
-        "Safety & Alignment"
-      ],
-      "trend_score": 0
-    },
-    {
-      "title": "Style as a Confound: False Positives in AI Detection of Non-Native Academic Writing",
-      "link": "https://arxiv.org/abs/2608.26710",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T04:00:00Z",
-      "summary": "arXiv:2608.26710v1 Announce Type: new Abstract: AI text detectors are increasingly employed in academic settings, but it remains unclear whether their outputs reflect AI authorship itself or broader linguistic features associated with…",
-      "ethics_tags": [
-        "Copyright & IP"
-      ],
-      "trend_score": 0
-    },
-    {
-      "title": "Graph-Guided Selective Unlearning for Language Models: Controlling Support Routes Beyond Forget Seeds",
-      "link": "https://arxiv.org/abs/2608.26743",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T04:00:00Z",
-      "summary": "arXiv:2608.26743v1 Announce Type: new Abstract: Enterprises fine-tune language models on proprietary data that may later require removal due to privacy, contractual, or compliance obligations. Selective unlearning removes requested…",
-      "ethics_tags": [
-        "Privacy & Surveillance",
-        "Regulation & Governance"
-      ],
-      "trend_score": 0
-    },
-    {
-      "title": "AI Control Scientist: LLM-driven Agentic System for Automated Control Design",
-      "link": "https://arxiv.org/abs/2608.26780",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T04:00:00Z",
-      "summary": "arXiv:2608.26780v1 Announce Type: new Abstract: Control system design is critical for modern industry, such as chemical process temperature regulation and aero-engine control. However,traditional control design workflows rely heavily on…",
-      "ethics_tags": [
-        "Regulation & Governance"
-      ],
-      "trend_score": 35
-    },
-    {
-      "title": "Learning-Augmented Online Allocation under Unreliable Advice: Robustness, Exposure Fairness, and Distribution Shift",
-      "link": "https://arxiv.org/abs/2608.26889",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T04:00:00Z",
-      "summary": "arXiv:2608.26889v1 Announce Type: new Abstract: Learning-augmented algorithms improve online decisions using predictions, but unreliable advice may harm efficiency and fairness. We study an online allocation problem with finite candidate…",
-      "ethics_tags": [
-        "Bias & Fairness"
-      ],
-      "trend_score": 0
     }
   ],
   "latest": [
     {
-      "title": "LLM Cliché Highlighter",
-      "link": "https://tools.simonwillison.net/llm-cliche-highlighter",
+      "title": "How to Critically Read LLM Texts [video]",
+      "link": "https://www.youtube.com/watch?v=BBmNOxQWcAc",
       "source": "Web",
       "category": "community",
       "category_label": "Community & Discussion",
       "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T10:44:42Z",
-      "summary": "2 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "LLMs are multi-layered user interfaces",
-      "link": "https://www.gtothesquare.com/llms-the-multi-layered-user-interface",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T10:28:50Z",
+      "published_iso": "2026-08-28T21:47:00Z",
       "summary": "1 points, 0 comments on Hacker News.",
       "ethics_tags": [],
-      "trend_score": 0
+      "trend_score": 17
     },
     {
-      "title": "IBM's new Granite 4.2 models ride the wave of interest in local LLMs",
-      "link": "https://arstechnica.com/ai/2026/08/ibms-new-granite-4-2-models-ride-the-wave-of-interest-in-local-llms/",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T10:08:27Z",
-      "summary": "1 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "Lost in translation: What I learned trying to speedrun subtitles with LLMs",
-      "link": "https://blog.burkert.me/posts/listers/",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T10:03:14Z",
-      "summary": "1 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "Trana – an iOS wellbeing companion with safety-first AI tools",
-      "link": "https://trana.live",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T09:56:05Z",
-      "summary": "3 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 45
-    },
-    {
-      "title": "One LLM agent per trade over construction site photos",
-      "link": "https://trpevski.com/blog/ai-construction-inspection-contractors-cannot-argue-with/",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T09:51:04Z",
-      "summary": "1 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 109
-    },
-    {
-      "title": "Where to submit stat/prob ML [D]",
-      "link": "https://www.reddit.com/r/MachineLearning/comments/1w0kipf/where_to_submit_statprob_ml_d/",
+      "title": "Bored with Python, should I learn C++? [D]",
+      "link": "https://www.reddit.com/r/MachineLearning/comments/1w12ojy/bored_with_python_should_i_learn_c_d/",
       "source": "r/MachineLearning",
       "category": "community",
       "category_label": "Community & Discussion",
       "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T08:16:25Z",
-      "summary": "I'm a researcher in statistical and probabilistic ML, I have a steady record of top ML publications and really used to enjoy going to conferences. Over the last few years LLM based works have completely taken over the top conferences. At…",
+      "published_iso": "2026-08-28T20:59:44Z",
+      "summary": "I'm getting pretty bored with Python for ML. With GenAI tools now being able to write very good code, I feel like writing in a high-level language is becoming less interesting to me. Also, it seems like a lot of the focus in ML is shifting…",
       "ethics_tags": [],
       "trend_score": 0
     },
     {
-      "title": "Kimi K3 Tops New Benchmark of AI Models for Geological Reasoning",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPUGlRS19VXy10QmFwTk1ucUNpWW0zYUZPN2FXdVF1QlNuZ0tHcUVOaFF4MTJPamJKSzg5dlU0M2pXT0xFSW5XNjQwQnBkaG1MdkRyTXNOUnM2ek5GN0J5eTl0LU5JUTdFd3drTzJqa2NUcHJOTlp6bEpNQlh0SGRsRWhUVElLaEtLX3JMS2o5OEdDcEhXZFJxTnRHcHlzQQ?oc=5",
-      "source": "The National Law Review",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T08:13:18Z",
-      "summary": "Kimi K3 Tops New Benchmark of AI Models for Geological Reasoning The National Law Review",
-      "ethics_tags": [],
-      "trend_score": 37
-    },
-    {
-      "title": "Gates Reverses on AI Regulation: Industry Crossed Safety Lines, Stays Mum",
-      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQVHVvUi01TjlUV0VDcUdrd21TTVlEc2VSQ1YzNzhjeFNpUlFraTEzbTVGZXhtN0dwNlJmWDF4NlhacXVoVEo1RV93a1I1Q2FFbWtRNVFGYmw5Um5IQl83RFhNZ3dvRFQwb1E1UmFiS1EtNEJTa1p2S1lpRUpkNUpNbFVMb2FwZlhzdDZ4Sk1oeXV2MXQ4aHBINTc4ckRfVzFoQVEyR2NSY2ZkZFladDhmbllJUHkzOEFGVjF3NVhBc0E?oc=5",
-      "source": "Tech Times",
-      "category": "ethics",
-      "category_label": "Ethics & Society",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T08:12:27Z",
-      "summary": "Gates Reverses on AI Regulation: Industry Crossed Safety Lines, Stays Mum Tech Times",
-      "ethics_tags": [
-        "Regulation & Governance"
-      ],
-      "trend_score": 58
-    },
-    {
-      "title": "Tencent Touts New AI Model It Claims Outperforms Z.AI, Moonshot",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNYm4zcmV5dkRHT2UxekNnbnVWbEREMFJrYkxJeWlTM3BNVkMyQXpjZFpnNHJ1MF8tZ2VBYXlrQXdUQ1JuQXZDWTR0SnFmODFWdWtwZ0xSVGRVcHJxNTQ3ZmdxN3dyTFdvbWhQOE5uQ005RlN6bW1uYnRrUmlzNWRxTlF4dEFFbFVRQ3hmemJoZDFIeS1YclBIRkozN1pQVVZMa1RzOE4yRFBwbVpFZ25waDVBQQ?oc=5",
-      "source": "Bloomberg.com",
-      "category": "labs",
-      "category_label": "Labs & Industry",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T07:58:57Z",
-      "summary": "Tencent Touts New AI Model It Claims Outperforms Z.AI, Moonshot Bloomberg.com",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "Show HN: Scheduled Claude Code agents that cost nothing on a quiet day",
-      "link": "https://github.com/shadok-ai/shadok-ai",
+      "title": "Is \"An agent with tools\" the only valid LLM application?",
+      "link": "https://news.ycombinator.com/item?id=49484000",
       "source": "Web",
       "category": "community",
       "category_label": "Community & Discussion",
       "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T07:53:07Z",
+      "published_iso": "2026-08-28T20:41:23Z",
       "summary": "3 points, 1 comments on Hacker News.",
       "ethics_tags": [],
-      "trend_score": 109
+      "trend_score": 106
     },
     {
-      "title": "New Studio M5 Ultra ready for local home AI lab? Compared to OpenRouter prices",
-      "link": "https://twitter.com/gherget/status/2092293494446420010",
+      "title": "Tencent Hy4 Preview LLM",
+      "link": "https://github.com/Tencent-Hunyuan/Hy4-preview",
       "source": "Web",
       "category": "community",
       "category_label": "Community & Discussion",
       "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T07:31:46Z",
-      "summary": "2 points, 2 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "Anchoring Bias in LLM-as-a-Judge Systems: Prior Scores Compromise Evaluation",
-      "link": "https://arxiv.org/abs/2608.25869",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T06:07:07Z",
-      "summary": "1 points, 0 comments on Hacker News.",
-      "ethics_tags": [
-        "Bias & Fairness"
-      ],
-      "trend_score": 0
-    },
-    {
-      "title": "GenRec: An LLM-Backed Recommendation Ranker at Netflix",
-      "link": "https://arxiv.org/abs/2608.10257",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T05:00:59Z",
+      "published_iso": "2026-08-28T20:40:21Z",
       "summary": "2 points, 0 comments on Hacker News.",
       "ethics_tags": [],
       "trend_score": 0
     },
     {
-      "title": "Anthropic gets legal shield against Pentagon blacklisting in AI safety fight",
-      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQYXFUajdlaGVLVmRFckxfTVpDZG9GTjVROUp4dldoZDZmTUJwR0ZNcERib0RZQjBILWxmMUZrbDVKSzRBVWZucVBEQjdvbFUzcnFZeTFBYUhGU2J4cS1ha3czUDJEdHlwMlJKRF82R0ZPM0F0SGhNeWhQRHhzTWk4MzVwQXVYQXl5emJ4enB4OGc4eXk1YWFDaUZmai1QOTF5OEhjaUs4S2RrdGZ1TWlHM0UyUkJNWDBVOTRZMG1seHVzQ1gxcnFJbWZZSUhOVjBZb3ZzaDJxMGo4UdIB3wFBVV95cUxPRGtvU2Q2ZW5mbTQtRjg5ckNXeGljMjdDVDdLQ0xPbzN5ZEZsclpCQWdPSVJhRnJjMjJfdDdVQThiMUtTTXo5aEFTNmFyV2VjN0N6TVBZSmtQOTRVeHBscnc5NmU3ajlPNEVnRFFHVUNFZVFfSUJncFh0V2ptOURHbENYSlR3WFlhVnQyUWF4T3hqcFB4Wk44ckgzcXNDUzUyaHc1WWpCYTlUOE1OQlhqUGpzSFFNbFpOb1ZoSkR4cTFjYUlnWTJ6bGQzTmJMaXhMMnl1WlphUWNDNVFEU0M0?oc=5",
-      "source": "The Times of India",
+      "title": "Anthropic Wins as Judge Bars Pentagon From Punishing AI Ethics Policies",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQVmxhSGZ5MElHYXlwQ1ZmX2c2Uzg2QzJ1Rm9oa1VCN0lVVDlmZkFoWlpCV2NaaWlRcHJDd1RKLU9fWUlzc3FOSElIZEszdWIwaW5LRFV1RVFiaW5ZUFFXZHRfazFSZ0xRZGJOMmhtUDFCdVBBZHFaZlRfaXQ2aGtDbVMwR1ExOHNEaWZwNmxZQ2VLN3FZcG4wY01aLUdjX2djVXF5SXNPcDlFbWgxRHgwMXpOUmZaWmMwQnc?oc=5",
+      "source": "Tech Times",
       "category": "ethics",
       "category_label": "Ethics & Society",
       "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T04:55:00Z",
-      "summary": "Anthropic gets legal shield against Pentagon blacklisting in AI safety fight The Times of India",
-      "ethics_tags": [
-        "Safety & Alignment"
-      ],
-      "trend_score": 80
+      "published_iso": "2026-08-28T20:40:20Z",
+      "summary": "Anthropic Wins as Judge Bars Pentagon From Punishing AI Ethics Policies Tech Times",
+      "ethics_tags": [],
+      "trend_score": 37
     },
     {
-      "title": "Judge says Pentagon's measures against Anthropic were 'illegal and baseless'",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNUlh6R3Nsbzh2REVKQVNJSlR4SUtxb0lVYzZQM0p5SUdTS3lCNVBXOWp1blBxSHdyWXhNcEVTbGQ3RGNOeHdkZzhXOXNDV2R2cHBHT2dGTEtZcUppZy1ZVHR4dHpUaWNjdEpCTWN2TUpIUkEzR0x6TWJZSjBBa2VMLUt1UQ?oc=5",
-      "source": "NPR",
+      "title": "We’re rolling out ads in ChatGPT",
+      "link": "https://news.ycombinator.com/item?id=49483929",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T20:36:01Z",
+      "summary": "1 points, 3 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
+      "title": "NSA wants access to 'all' AI models, top official says",
+      "link": "https://www.nextgov.com/artificial-intelligence/2026/08/nsa-wants-access-all-ai-models-top-official-says/415672/",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T20:33:09Z",
+      "summary": "6 points, 0 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
+      "title": "LLMs Don't Replace Classical ML – They Feed It",
+      "link": "https://bilanc.co/blog/llms-as-feature-extractors-for-classical-ml",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T20:32:27Z",
+      "summary": "2 points, 0 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
+      "title": "Broadcom is our top pick for the next evolution in custom AI chips, says BakerAvenue's King Lip",
+      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQdGFBNHlxT3prX0h1ZUtsX0RPMVVPZThmMHo2V3VVQmpCRUhsaVV5d1lhUlBRZ2ZyQUlJblBmc3BreUJ4dzV0UnlVbVphY3BheVNVcEZWN19QQ092bVhTOGtTeE9DYko1cEpvbGtTY2FYZnZjcjUxVy0wMHF6X1psZ2ZxUFFHZWw4STNnUU9rcFZwWWtLdy1NR0NudnN6QlFKdWw0QVFZb3VDTFBxVEtYNTBFamtZOFRaVml2N29ZRU8yZWQ3R1ctUUZtd2RKVGhjVHc?oc=5",
+      "source": "CNBC",
+      "category": "business",
+      "category_label": "Business & Funding",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T20:27:56Z",
+      "summary": "Broadcom is our top pick for the next evolution in custom AI chips, says BakerAvenue's King Lip CNBC",
+      "ethics_tags": [],
+      "trend_score": 30
+    },
+    {
+      "title": "Why LLM infrastructure chokes: ternary and pentary logic matrix replacement",
+      "link": "https://github.com/Zavodiuk/Technology_constructor/blob/main/README.md",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T20:27:02Z",
+      "summary": "1 points, 0 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
+      "title": "Neocloud Lambda secures $1B in debt to buy more chips",
+      "link": "https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/",
+      "source": "TechCrunch",
       "category": "labs",
       "category_label": "Labs & Industry",
       "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T04:25:08Z",
-      "summary": "Judge says Pentagon's measures against Anthropic were 'illegal and baseless' NPR",
+      "published_iso": "2026-08-28T20:24:11Z",
+      "summary": "Neocloud Lambda has raised $1B in private debt to buy Nvidia AI chips and lease them to Microsoft. It's the latest in a string of loans, underscoring the high cost of the AI boom.",
       "ethics_tags": [],
-      "trend_score": 35
+      "trend_score": 50
     },
     {
-      "title": "EduRiskX: A Neuro-Symbolic Framework with F-Logic Reasoning for Early Academic Risk Prediction",
-      "link": "https://arxiv.org/abs/2608.26107",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
+      "title": "Running Llama 3.1 405B",
+      "link": "https://a11ce.com/llama-3.1-405b.html",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
       "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T04:00:00Z",
-      "summary": "arXiv:2608.26107v1 Announce Type: new Abstract: Predicting students' academic risk in online education is crucial for enabling timely interventions that can improve retention and learning outcomes. However, existing models often suffer…",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "Standalone LLM and a Pre-specified Agentic Pipeline for Explaining ICU Mortality Predictions: a Feasibility Study on the eICU Demo Dataset",
-      "link": "https://arxiv.org/abs/2608.26109",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T04:00:00Z",
-      "summary": "arXiv:2608.26109v1 Announce Type: new Abstract: Machine-learning models can predict ICU mortality accurately, but feature-attribution methods alone rarely provide the clinical narrative needed for bedside use. Large language models (LLMs)…",
-      "ethics_tags": [],
-      "trend_score": 22
-    },
-    {
-      "title": "Large Models for Battery Prognostics and Health Management: A Review and Future Roadmap",
-      "link": "https://arxiv.org/abs/2608.26111",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T04:00:00Z",
-      "summary": "arXiv:2608.26111v1 Announce Type: new Abstract: Battery Prognostics and Health Management (BPHM) is critical for ensuring the safe, reliable, and cost-effective operation of batteries across electric vehicles, grid storage, and consumer…",
+      "published_iso": "2026-08-28T20:01:27Z",
+      "summary": "1 points, 0 comments on Hacker News.",
       "ethics_tags": [],
       "trend_score": 0
     },
     {
-      "title": "PICasso: An AI-Enabled Design Framework for Autonomous Optimization of Silicon Photonic Devices",
-      "link": "https://arxiv.org/abs/2608.26113",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
+      "title": "An Anthropic researcher just gave us a peek at self-improving AI",
+      "link": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
+      "source": "TechCrunch",
+      "category": "labs",
+      "category_label": "Labs & Industry",
       "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T04:00:00Z",
-      "summary": "arXiv:2608.26113v1 Announce Type: new Abstract: We present PICasso, an AI-assisted framework for automated synthesis, verification, and optimization of photonic integrated circuits (PICs) from natural-language specifications. PICasso…",
+      "published_iso": "2026-08-28T19:30:38Z",
+      "summary": "Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall performance.",
       "ethics_tags": [],
-      "trend_score": 0
+      "trend_score": 76
     },
     {
-      "title": "CIFQA: A Deterministic Tool-Grounded Multi-Agent LLM Framework for Financial Query Answering",
-      "link": "https://arxiv.org/abs/2608.26114",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
+      "title": "Show HN: Conduct, open-source guardrails for LLM and MCP tool calls",
+      "link": "https://github.com/sseshachala/conductai",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
       "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T04:00:00Z",
-      "summary": "arXiv:2608.26114v1 Announce Type: new Abstract: Calculation-intensive financial question answering requires exact reasoning over structured rates, temporal conditions, numerical formulas, and rule-based constraints. Although Large Language…",
-      "ethics_tags": [],
-      "trend_score": 109
-    },
-    {
-      "title": "The Artificial Experimentalist: Discovery and Control of Self-Organizing Phenomena with Autotelic Reinforcement Learning",
-      "link": "https://arxiv.org/abs/2608.26116",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T04:00:00Z",
-      "summary": "arXiv:2608.26116v1 Announce Type: new Abstract: Existing methods for exploring cellular automata and other complex systems mostly operate in open loop: they set initial conditions, execute a full simulation, and observe the outcome,…",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "The Accuracy-Efficiency Paradox Quantifying Net Energy Loss in on-Device Energy Forecasting",
-      "link": "https://arxiv.org/abs/2608.26134",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T04:00:00Z",
-      "summary": "arXiv:2608.26134v1 Announce Type: new Abstract: Energy forecasting aims to maximize accuracy to ensure energy efficiency by reducing energy waste, an objective that applies equally to on-device forecasting for mission-critical edge…",
+      "published_iso": "2026-08-28T19:29:20Z",
+      "summary": "19 points, 3 comments on Hacker News.",
       "ethics_tags": [
-        "Energy & Environment"
+        "Safety & Alignment"
       ],
       "trend_score": 0
     },
     {
-      "title": "LLMs for Academic Workflows: An Evaluation of Literature Reviews Generated with Short and Long Context Windows of LLMs",
-      "link": "https://arxiv.org/abs/2608.26145",
-      "source": "arXiv",
+      "title": "MTSU’s QRISE lands $2M federal grant for quantum, AI research",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPYWttYmtzX2JGZGQzVWtjVXh5WlRoRlF2d1MycWhXdzdiZEM0TkY3Yjd2ZE1aa0NGdl9IOGFUTHRqVTFmWTI4aTdBTzFZeFkydWRwTlEzLTdIQUJuZmoxcnFvNGxURlVSN21YNE9sUjlNa1F1emM3V1c0RWItRVRIS2xCUDlqT1Y5OXdMQlV2aHkzTlZIMG9hSXBqQUk2TndIeFJfTm5mV29SYmdfUFMyZ0g2NTNlZTBs?oc=5",
+      "source": "MTSU News",
       "category": "research",
       "category_label": "Research & Papers",
       "published_display": "Aug 28, 2026",
-      "published_iso": "2026-08-28T04:00:00Z",
-      "summary": "arXiv:2608.26145v1 Announce Type: new Abstract: Our research focuses on evaluating literature reviews generated in short and long context settings of large language models (LLMs) to investigate the impact of context window on the quality…",
+      "published_iso": "2026-08-28T19:27:52Z",
+      "summary": "MTSU’s QRISE lands $2M federal grant for quantum, AI research MTSU News",
       "ethics_tags": [],
       "trend_score": 0
+    },
+    {
+      "title": "Moonshot and Nvidia Talks Show Chinese AI Models Moving into the Enterprise",
+      "link": "https://techstrong.ai/articles/moonshot-and-nvidia-talks-show-chinese-ai-models-moving-into-the-enterprise/",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T19:25:04Z",
+      "summary": "3 points, 0 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 20
+    },
+    {
+      "title": "PhoneLLM Alpha 1: Open-weight LLM for voice agent use cases",
+      "link": "https://www.daily.co/blog/announcing-pipecat-phonellm-alpha-1/",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T18:41:30Z",
+      "summary": "1 points, 0 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 106
+    },
+    {
+      "title": "For self-learning LLMs, governance needs to improve",
+      "link": "https://rakuensoftware.com/blog/aimee-recursive-self-learning",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T18:14:06Z",
+      "summary": "2 points, 1 comments on Hacker News.",
+      "ethics_tags": [
+        "Regulation & Governance"
+      ],
+      "trend_score": 0
+    },
+    {
+      "title": "cats.txt showed llms.txt evidence is GEO astrology",
+      "link": "https://markwilliamscook.substack.com/p/how-catstxt-showed-llmstxt-evidence",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T18:10:15Z",
+      "summary": "3 points, 0 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
+      "title": "OpenAI, Google and other companies sign AI safety letter",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1ROW80YS1LbkN0WFpMTVFnQVZVYkpnNWRFVDhIcjU4X293bXhxRUlzRlVIRW1HNzlnREhnQ0hzODh5dWdWY3d2ZE1aSlRMWVotWVpnNw?oc=5",
+      "source": "AzerNews",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T17:57:00Z",
+      "summary": "OpenAI, Google and other companies sign AI safety letter AzerNews",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ],
+      "trend_score": 113
+    },
+    {
+      "title": "Show HN: Watermarks Remover: Clean LLM watermarks from text and files",
+      "link": "https://github.com/guillaumemeyer/watermarks-remover",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T17:10:00Z",
+      "summary": "2 points, 0 comments on Hacker News.",
+      "ethics_tags": [
+        "Transparency & Accountability"
+      ],
+      "trend_score": 0
+    },
+    {
+      "title": "US judge blocks Pentagon's Anthropic blacklisting",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPakdSUWs3QWRxY0paamF6djJFWGY3Z3YxUWVtWTlTdVBvcmxmU0Z4cDNtTU9ZVFdBUHhCOW9qSEptOHBYU3YxWGNKMjJ3VS1SbEU2aEwxTy1vRkNIS3gxXzVnOC16eDdjUWdkMmxFNENxR2hjRWYzaGVjdVV0M2o4SkhxdzNyNDdVa0FNSHhxN3Bid1JISkxfel9PUndsQWRGUGE4?oc=5",
+      "source": "Reuters",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T17:08:15Z",
+      "summary": "US judge blocks Pentagon's Anthropic blacklisting Reuters",
+      "ethics_tags": [],
+      "trend_score": 37
+    },
+    {
+      "title": "Show HN: ContextSwitch – Make your LLM chats provider agnostic",
+      "link": "https://contextswitch-blue.vercel.app/",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T16:57:34Z",
+      "summary": "1 points, 0 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
+      "title": "Show HN: Open tool for testing your AI Agents (No LLM)",
+      "link": "https://github.com/IdoGol24/weir",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Aug 28, 2026",
+      "published_iso": "2026-08-28T16:31:56Z",
+      "summary": "4 points, 4 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 106
     }
   ]
 }

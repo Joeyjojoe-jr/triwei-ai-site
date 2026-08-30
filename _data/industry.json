@@ -1,18 +1,18 @@
 {
-  "generated_utc": "2026-08-30T11:43:00.801008Z",
+  "generated_utc": "2026-08-30T16:30:35.570672Z",
   "generated_display": "Aug 30, 2026",
-  "coverage_generated_display": "August 30, 2026 at 6:43 AM CDT",
+  "coverage_generated_display": "August 30, 2026 at 11:30 AM CDT",
   "diffusion_watch": {
     "coverage": {
-      "story_count": 3,
+      "story_count": 2,
       "lab_count": 2,
       "labs": [
         {
-          "name": "Moonshot / Kimi",
-          "count": 2
+          "name": "Z.ai / GLM",
+          "count": 1
         },
         {
-          "name": "Z.ai / GLM",
+          "name": "Moonshot / Kimi",
           "count": 1
         }
       ],
@@ -20,10 +20,6 @@
         {
           "name": "Capability convergence",
           "count": 2
-        },
-        {
-          "name": "Open weights",
-          "count": 1
         }
       ],
       "stories": [
@@ -37,18 +33,6 @@
           ],
           "signals": [
             "Capability convergence"
-          ]
-        },
-        {
-          "title": "OpenAI-backed legal tech firm pivots to Chinese Kimi K3 open-weight model",
-          "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPSkk3QVo0cVJKbmpvbW0yR2VoZGtCOXJRaGdaSzh4TExkQ1l5Ym5rcUNuQUJXczdVcXpzTmVlTkhYOFhUQzFqRUNrcmJ3TGkzMDZ2VEpVU2xDTWNLU3BqQU5vTGJZcGlWeE1PVUVqZG5jbE1UeFh4MEE3SXFQaldzM1dPNUxWTHNMdFE0R0doU3JjeUxyaHk3MFkyMW02T21HRktOUG9NbmFSXzBzZGVaeng4a05lME9kek53UmtWUXI5dXlKaDRXODR6b2VxNC02TUE?oc=5",
-          "source": "The Star",
-          "published_display": "Aug 29, 2026",
-          "labs": [
-            "Moonshot / Kimi"
-          ],
-          "signals": [
-            "Open weights"
           ]
         },
         {
@@ -783,7 +767,7 @@
     "series": [
       {
         "term": "safety",
-        "total": 25,
+        "total": 24,
         "points": [
           {
             "date": "2026-07-16",
@@ -997,13 +981,13 @@
           },
           {
             "date": "2026-08-27",
-            "count": 2,
-            "share": 18.2
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-08-28",
-            "count": 9,
-            "share": 37.5
+            "count": 10,
+            "share": 38.5
           },
           {
             "date": "2026-08-29",
@@ -1013,13 +997,13 @@
           {
             "date": "2026-08-30",
             "count": 2,
-            "share": 13.3
+            "share": 10.5
           }
         ]
       },
       {
         "term": "Anthropic",
-        "total": 16,
+        "total": 18,
         "points": [
           {
             "date": "2026-07-16",
@@ -1238,18 +1222,18 @@
           },
           {
             "date": "2026-08-28",
-            "count": 4,
-            "share": 16.7
-          },
-          {
-            "date": "2026-08-29",
-            "count": 3,
+            "count": 6,
             "share": 23.1
           },
           {
+            "date": "2026-08-29",
+            "count": 2,
+            "share": 22.2
+          },
+          {
             "date": "2026-08-30",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 5.3
           }
         ]
       },
@@ -1470,17 +1454,17 @@
           {
             "date": "2026-08-27",
             "count": 1,
-            "share": 9.1
+            "share": 11.1
           },
           {
             "date": "2026-08-28",
             "count": 1,
-            "share": 4.2
+            "share": 3.8
           },
           {
             "date": "2026-08-29",
             "count": 1,
-            "share": 7.7
+            "share": 11.1
           },
           {
             "date": "2026-08-30",
@@ -1491,7 +1475,7 @@
       },
       {
         "term": "OpenAI",
-        "total": 14,
+        "total": 13,
         "points": [
           {
             "date": "2026-07-16",
@@ -1706,22 +1690,22 @@
           {
             "date": "2026-08-27",
             "count": 1,
-            "share": 9.1
+            "share": 11.1
           },
           {
             "date": "2026-08-28",
             "count": 1,
-            "share": 4.2
+            "share": 3.8
           },
           {
             "date": "2026-08-29",
-            "count": 3,
-            "share": 23.1
+            "count": 2,
+            "share": 22.2
           },
           {
             "date": "2026-08-30",
             "count": 2,
-            "share": 13.3
+            "share": 10.5
           }
         ]
       },
@@ -1947,7 +1931,7 @@
           {
             "date": "2026-08-28",
             "count": 1,
-            "share": 4.2
+            "share": 3.8
           },
           {
             "date": "2026-08-29",
@@ -1963,7 +1947,7 @@
       },
       {
         "term": "Google",
-        "total": 8,
+        "total": 7,
         "points": [
           {
             "date": "2026-07-16",
@@ -2178,12 +2162,12 @@
           {
             "date": "2026-08-27",
             "count": 1,
-            "share": 9.1
+            "share": 11.1
           },
           {
             "date": "2026-08-28",
             "count": 5,
-            "share": 20.8
+            "share": 19.2
           },
           {
             "date": "2026-08-29",
@@ -2192,8 +2176,8 @@
           },
           {
             "date": "2026-08-30",
-            "count": 1,
-            "share": 6.7
+            "count": 0,
+            "share": 0.0
           }
         ]
       }
@@ -2226,8 +2210,8 @@
     ],
     "companies": [
       {
-        "name": "Google",
-        "story_count": 8,
+        "name": "Anthropic",
+        "story_count": 11,
         "cells": [
           {
             "key": "hardware",
@@ -2237,7 +2221,7 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 0
+            "count": 2
           },
           {
             "key": "models",
@@ -2252,12 +2236,12 @@
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 4
+            "count": 7
           }
         ]
       },
       {
-        "name": "Anthropic",
+        "name": "Google",
         "story_count": 7,
         "cells": [
           {
@@ -2268,7 +2252,7 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 1
+            "count": 0
           },
           {
             "key": "models",
@@ -2283,7 +2267,7 @@
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 5
+            "count": 4
           }
         ]
       },
@@ -2320,7 +2304,7 @@
       },
       {
         "name": "OpenAI",
-        "story_count": 7,
+        "story_count": 6,
         "cells": [
           {
             "key": "hardware",
@@ -2335,7 +2319,7 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 2
+            "count": 1
           },
           {
             "key": "apps",
@@ -2382,7 +2366,7 @@
       },
       {
         "name": "Moonshot",
-        "story_count": 3,
+        "story_count": 2,
         "cells": [
           {
             "key": "hardware",
@@ -2397,7 +2381,38 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 3
+            "count": 2
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "Meta",
+        "story_count": 1,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 1
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 0
           },
           {
             "key": "apps",

@@ -300,20 +300,16 @@
       "date": "2026-08-27",
       "story_count": 3,
       "topics": {
-        "DeepSeek": 1,
-        "Nvidia": 1
+        "Google": 1,
+        "Meta": 1,
+        "Nvidia": 3,
+        "OpenAI": 1
       }
     },
     {
       "date": "2026-08-28",
-      "story_count": 7,
-      "topics": {
-        "Anthropic": 1,
-        "Gemini": 1,
-        "Google": 2,
-        "OpenAI": 1,
-        "safety": 3
-      }
+      "story_count": 5,
+      "topics": {}
     },
     {
       "date": "2026-08-29",
@@ -331,35 +327,37 @@
     },
     {
       "date": "2026-08-31",
-      "story_count": 36,
+      "story_count": 28,
       "topics": {
         "alignment": 1,
         "Anthropic": 9,
         "Apple": 1,
-        "benchmark": 1,
-        "ChatGPT": 3,
-        "chip": 1,
-        "Claude": 3,
+        "ChatGPT": 2,
+        "Claude": 1,
         "Gemini": 1,
         "Google": 1,
-        "Nvidia": 4,
-        "OpenAI": 6,
-        "regulation": 2,
+        "Nvidia": 3,
+        "OpenAI": 5,
         "safety": 7
       }
     },
     {
       "date": "2026-09-01",
-      "story_count": 19,
+      "story_count": 33,
       "topics": {
         "agent": 2,
         "agentic": 1,
         "alignment": 1,
-        "Anthropic": 1,
+        "Anthropic": 3,
         "Apple": 1,
-        "DeepSeek": 1,
-        "multimodal": 2,
-        "OpenAI": 2
+        "chip": 1,
+        "Claude": 1,
+        "DeepSeek": 2,
+        "multimodal": 3,
+        "Nvidia": 1,
+        "OpenAI": 2,
+        "regulation": 3,
+        "safety": 2
       }
     }
   ]

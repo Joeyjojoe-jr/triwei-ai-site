@@ -345,31 +345,44 @@
     },
     {
       "date": "2026-09-03",
-      "story_count": 7,
+      "story_count": 12,
       "topics": {
         "Apple": 1,
+        "Gemini": 1,
+        "Google": 1,
+        "Meta": 1,
         "Nvidia": 3,
-        "OpenAI": 2,
-        "safety": 2
+        "OpenAI": 3,
+        "privacy": 1,
+        "safety": 3
       }
     },
     {
       "date": "2026-09-04",
-      "story_count": 58,
+      "story_count": 52,
       "topics": {
         "agent": 5,
         "Anthropic": 1,
-        "benchmark": 1,
-        "Claude": 3,
-        "DeepSeek": 2,
+        "benchmark": 2,
+        "Claude": 4,
+        "DeepSeek": 1,
+        "Gemini": 2,
         "Google": 1,
-        "GPT": 5,
+        "GPT": 4,
+        "Llama": 2,
         "Meta": 1,
         "Nvidia": 2,
-        "OpenAI": 10,
+        "OpenAI": 8,
         "privacy": 1,
         "regulation": 3,
-        "safety": 9
+        "safety": 10
+      }
+    },
+    {
+      "date": "2026-09-05",
+      "story_count": 1,
+      "topics": {
+        "ChatGPT": 1
       }
     }
   ]

@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-09-06T15:18:59.366727Z",
+  "generated_utc": "2026-09-06T20:16:51.033662Z",
   "generated_display": "Sep 06, 2026",
-  "coverage_generated_display": "September 6, 2026 at 10:18 AM CDT",
+  "coverage_generated_display": "September 6, 2026 at 3:16 PM CDT",
   "diffusion_watch": {
     "coverage": {
       "story_count": 1,
@@ -791,7 +791,7 @@
     "series": [
       {
         "term": "OpenAI",
-        "total": 25,
+        "total": 26,
         "points": [
           {
             "date": "2026-07-16",
@@ -1040,29 +1040,29 @@
           },
           {
             "date": "2026-09-03",
-            "count": 2,
-            "share": 28.6
+            "count": 1,
+            "share": 16.7
           },
           {
             "date": "2026-09-04",
-            "count": 5,
-            "share": 18.5
+            "count": 4,
+            "share": 16.0
           },
           {
             "date": "2026-09-05",
-            "count": 7,
-            "share": 53.8
+            "count": 6,
+            "share": 50.0
           },
           {
             "date": "2026-09-06",
-            "count": 2,
-            "share": 8.7
+            "count": 6,
+            "share": 22.2
           }
         ]
       },
       {
         "term": "safety",
-        "total": 25,
+        "total": 23,
         "points": [
           {
             "date": "2026-07-16",
@@ -1316,13 +1316,13 @@
           },
           {
             "date": "2026-09-04",
-            "count": 10,
-            "share": 37.0
+            "count": 8,
+            "share": 32.0
           },
           {
             "date": "2026-09-05",
             "count": 2,
-            "share": 15.4
+            "share": 16.7
           },
           {
             "date": "2026-09-06",
@@ -1583,12 +1583,12 @@
           {
             "date": "2026-09-03",
             "count": 3,
-            "share": 42.9
+            "share": 50.0
           },
           {
             "date": "2026-09-04",
             "count": 1,
-            "share": 3.7
+            "share": 4.0
           },
           {
             "date": "2026-09-05",
@@ -1598,7 +1598,7 @@
           {
             "date": "2026-09-06",
             "count": 1,
-            "share": 4.3
+            "share": 3.7
           }
         ]
       },
@@ -1869,7 +1869,7 @@
           {
             "date": "2026-09-06",
             "count": 1,
-            "share": 4.3
+            "share": 3.7
           }
         ]
       },
@@ -2130,7 +2130,7 @@
           {
             "date": "2026-09-04",
             "count": 3,
-            "share": 11.1
+            "share": 12.0
           },
           {
             "date": "2026-09-05",
@@ -2145,8 +2145,8 @@
         ]
       },
       {
-        "term": "Microsoft",
-        "total": 6,
+        "term": "Claude",
+        "total": 8,
         "points": [
           {
             "date": "2026-07-16",
@@ -2160,8 +2160,8 @@
           },
           {
             "date": "2026-07-18",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 50.0
           },
           {
             "date": "2026-07-19",
@@ -2250,8 +2250,8 @@
           },
           {
             "date": "2026-08-05",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 100.0
           },
           {
             "date": "2026-08-06",
@@ -2260,8 +2260,8 @@
           },
           {
             "date": "2026-08-07",
-            "count": 1,
-            "share": 50.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-08-08",
@@ -2275,8 +2275,8 @@
           },
           {
             "date": "2026-08-10",
-            "count": 3,
-            "share": 100.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-08-11",
@@ -2400,18 +2400,18 @@
           },
           {
             "date": "2026-09-04",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 4.0
           },
           {
             "date": "2026-09-05",
             "count": 2,
-            "share": 15.4
+            "share": 16.7
           },
           {
             "date": "2026-09-06",
-            "count": 0,
-            "share": 0.0
+            "count": 3,
+            "share": 11.1
           }
         ]
       }
@@ -2445,7 +2445,7 @@
     "companies": [
       {
         "name": "OpenAI",
-        "story_count": 18,
+        "story_count": 19,
         "cells": [
           {
             "key": "hardware",
@@ -2465,12 +2465,43 @@
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 5
+            "count": 4
           },
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 2
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Anthropic",
+        "story_count": 7,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 3
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 3
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
           }
         ]
       },
@@ -2497,37 +2528,6 @@
             "key": "apps",
             "label": "Tools & applications",
             "count": 2
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 0
-          }
-        ]
-      },
-      {
-        "name": "Anthropic",
-        "story_count": 4,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 3
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
           },
           {
             "key": "society",

@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-09-07T04:07:29.729719Z",
+  "generated_utc": "2026-09-07T12:11:31.503135Z",
   "generated_display": "Sep 07, 2026",
-  "coverage_generated_display": "September 6, 2026 at 11:07 PM CDT",
+  "coverage_generated_display": "September 7, 2026 at 7:11 AM CDT",
   "diffusion_watch": {
     "coverage": {
       "story_count": 1,
@@ -791,7 +791,7 @@
     "series": [
       {
         "term": "safety",
-        "total": 25,
+        "total": 23,
         "points": [
           {
             "date": "2026-07-16",
@@ -1045,29 +1045,29 @@
           },
           {
             "date": "2026-09-04",
-            "count": 9,
-            "share": 52.9
+            "count": 7,
+            "share": 46.7
           },
           {
             "date": "2026-09-05",
-            "count": 1,
-            "share": 14.3
+            "count": 2,
+            "share": 28.6
           },
           {
             "date": "2026-09-06",
-            "count": 2,
-            "share": 9.1
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-09-07",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 3.2
           }
         ]
       },
       {
         "term": "OpenAI",
-        "total": 20,
+        "total": 19,
         "points": [
           {
             "date": "2026-07-16",
@@ -1317,27 +1317,27 @@
           {
             "date": "2026-09-03",
             "count": 1,
-            "share": 25.0
+            "share": 33.3
           },
           {
             "date": "2026-09-04",
-            "count": 1,
-            "share": 5.9
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-09-05",
-            "count": 3,
-            "share": 42.9
+            "count": 1,
+            "share": 14.3
           },
           {
             "date": "2026-09-06",
             "count": 5,
-            "share": 22.7
+            "share": 35.7
           },
           {
             "date": "2026-09-07",
-            "count": 1,
-            "share": 5.0
+            "count": 3,
+            "share": 9.7
           }
         ]
       },
@@ -1593,12 +1593,12 @@
           {
             "date": "2026-09-03",
             "count": 1,
-            "share": 25.0
+            "share": 33.3
           },
           {
             "date": "2026-09-04",
-            "count": 1,
-            "share": 5.9
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-09-05",
@@ -1612,14 +1612,14 @@
           },
           {
             "date": "2026-09-07",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 3.2
           }
         ]
       },
       {
         "term": "Anthropic",
-        "total": 12,
+        "total": 13,
         "points": [
           {
             "date": "2026-07-16",
@@ -1884,12 +1884,12 @@
           {
             "date": "2026-09-06",
             "count": 2,
-            "share": 9.1
+            "share": 14.3
           },
           {
             "date": "2026-09-07",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 3.2
           }
         ]
       },
@@ -2150,7 +2150,7 @@
           {
             "date": "2026-09-04",
             "count": 3,
-            "share": 17.6
+            "share": 20.0
           },
           {
             "date": "2026-09-05",
@@ -2170,8 +2170,8 @@
         ]
       },
       {
-        "term": "agent",
-        "total": 6,
+        "term": "Claude",
+        "total": 8,
         "points": [
           {
             "date": "2026-07-16",
@@ -2185,8 +2185,8 @@
           },
           {
             "date": "2026-07-18",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 50.0
           },
           {
             "date": "2026-07-19",
@@ -2235,8 +2235,8 @@
           },
           {
             "date": "2026-07-28",
-            "count": 1,
-            "share": 50.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-07-29",
@@ -2275,8 +2275,8 @@
           },
           {
             "date": "2026-08-05",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 100.0
           },
           {
             "date": "2026-08-06",
@@ -2290,8 +2290,8 @@
           },
           {
             "date": "2026-08-08",
-            "count": 1,
-            "share": 50.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-08-09",
@@ -2430,18 +2430,18 @@
           },
           {
             "date": "2026-09-05",
+            "count": 1,
+            "share": 14.3
+          },
+          {
+            "date": "2026-09-06",
             "count": 0,
             "share": 0.0
           },
           {
-            "date": "2026-09-06",
-            "count": 1,
-            "share": 4.5
-          },
-          {
             "date": "2026-09-07",
-            "count": 3,
-            "share": 15.0
+            "count": 5,
+            "share": 16.1
           }
         ]
       }
@@ -2475,7 +2475,7 @@
     "companies": [
       {
         "name": "OpenAI",
-        "story_count": 11,
+        "story_count": 10,
         "cells": [
           {
             "key": "hardware",
@@ -2490,12 +2490,12 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 2
+            "count": 4
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 2
+            "count": 1
           },
           {
             "key": "society",
@@ -2506,7 +2506,7 @@
       },
       {
         "name": "Anthropic",
-        "story_count": 5,
+        "story_count": 8,
         "cells": [
           {
             "key": "hardware",
@@ -2526,7 +2526,7 @@
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 3
+            "count": 2
           },
           {
             "key": "society",
@@ -2537,7 +2537,7 @@
       },
       {
         "name": "DeepSeek",
-        "story_count": 3,
+        "story_count": 4,
         "cells": [
           {
             "key": "hardware",
@@ -2645,7 +2645,7 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 0
+            "count": 1
           },
           {
             "key": "apps",
@@ -2691,7 +2691,7 @@
         ]
       }
     ],
-    "max_count": 3,
+    "max_count": 4,
     "metric": "Distinct stories mentioning both the company and layer",
     "source": "coverage"
   },

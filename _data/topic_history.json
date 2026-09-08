@@ -351,10 +351,10 @@
     },
     {
       "date": "2026-09-04",
-      "story_count": 4,
+      "story_count": 2,
       "topics": {
-        "regulation": 2,
-        "safety": 2
+        "regulation": 1,
+        "safety": 1
       }
     },
     {
@@ -366,42 +366,45 @@
     },
     {
       "date": "2026-09-06",
-      "story_count": 3,
+      "story_count": 1,
       "topics": {
-        "benchmark": 1,
         "copyright": 1,
         "Microsoft": 1,
-        "OpenAI": 3
+        "OpenAI": 1
       }
     },
     {
       "date": "2026-09-07",
-      "story_count": 20,
+      "story_count": 13,
       "topics": {
         "Anthropic": 1,
         "benchmark": 1,
-        "DeepSeek": 1,
+        "funding": 1,
         "Google": 1,
-        "GPT": 2,
-        "OpenAI": 8,
+        "GPT": 1,
+        "OpenAI": 7,
         "regulation": 2,
-        "safety": 3
+        "safety": 2
       }
     },
     {
       "date": "2026-09-08",
-      "story_count": 41,
+      "story_count": 52,
       "topics": {
-        "Anthropic": 11,
+        "agent": 1,
+        "Anthropic": 6,
         "ChatGPT": 1,
-        "Claude": 2,
+        "Claude": 3,
         "DeepSeek": 3,
+        "funding": 15,
+        "Google": 2,
         "GPT": 1,
-        "Mistral": 8,
-        "Nvidia": 2,
-        "OpenAI": 5,
-        "regulation": 1,
-        "safety": 1
+        "Mistral": 9,
+        "multimodal": 1,
+        "Nvidia": 4,
+        "OpenAI": 7,
+        "regulation": 2,
+        "safety": 3
       }
     }
   ]

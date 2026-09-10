@@ -396,39 +396,38 @@
     },
     {
       "date": "2026-09-09",
-      "story_count": 32,
+      "story_count": 7,
       "topics": {
-        "agent": 2,
-        "alignment": 1,
         "Amazon": 1,
-        "Anthropic": 4,
+        "Anthropic": 1,
         "chip": 1,
         "funding": 5,
-        "Meta": 1,
-        "Microsoft": 2,
         "Nvidia": 1,
-        "OpenAI": 11,
+        "OpenAI": 3,
         "regulation": 1,
-        "safety": 13
+        "safety": 1
       }
     },
     {
       "date": "2026-09-10",
-      "story_count": 29,
+      "story_count": 54,
       "topics": {
-        "agent": 2,
+        "agent": 3,
         "agentic": 1,
         "alignment": 1,
-        "Anthropic": 6,
+        "Anthropic": 4,
+        "Apple": 1,
         "benchmark": 1,
-        "DeepSeek": 1,
+        "Claude": 3,
+        "copyright": 1,
+        "DeepSeek": 11,
         "energy": 1,
-        "funding": 1,
-        "GPT": 1,
+        "GPT": 2,
         "Mistral": 1,
-        "Nvidia": 1,
-        "OpenAI": 4,
-        "safety": 2
+        "multimodal": 1,
+        "OpenAI": 6,
+        "regulation": 3,
+        "safety": 9
       }
     }
   ]

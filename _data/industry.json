@@ -1,54 +1,14 @@
 {
-  "generated_utc": "2026-09-09T20:49:09.009463Z",
-  "generated_display": "Sep 09, 2026",
-  "coverage_generated_display": "September 9, 2026 at 3:49 PM CDT",
+  "generated_utc": "2026-09-10T04:17:28.054494Z",
+  "generated_display": "Sep 10, 2026",
+  "coverage_generated_display": "September 9, 2026 at 11:17 PM CDT",
   "diffusion_watch": {
     "coverage": {
-      "story_count": 2,
-      "lab_count": 2,
-      "labs": [
-        {
-          "name": "DeepSeek",
-          "count": 2
-        },
-        {
-          "name": "Alibaba / Qwen",
-          "count": 1
-        }
-      ],
-      "signals": [
-        {
-          "name": "Distillation / extraction",
-          "count": 2
-        }
-      ],
-      "stories": [
-        {
-          "title": "DeepSeek Used Distillation To Train Its R1 And V3 Models",
-          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9xZGNpZ2d1bGNkb3ZUb1dCS2xoRXl1Q2Iyc0hHcUlVU0Y5XzdGSUZEbkpfYjdwNkNEUDFHMXI1R1BrQ19fV0FRVXA3ZDd1NkhYYVNOZEFyNTUyeTgzQ0N4c201Z1pYdGZ2aHJ3NVRHRjhueFp4RkRrUUtYXzY5dw?oc=5",
-          "source": "Quantum Zeitgeist",
-          "published_display": "Sep 9, 2026",
-          "labs": [
-            "DeepSeek"
-          ],
-          "signals": [
-            "Distillation / extraction"
-          ]
-        },
-        {
-          "title": "FBI, NSA warn Chinese AI companies like DeepSeek and Alibaba are reportedly carrying out 'industrial-scale' distillation campaigns to boost their models",
-          "link": "https://news.google.com/rss/articles/CBMilwJBVV95cUxQV2NMN2Y4WExFNjFqdUhPN3AzZFlwbVFnRldBdTZlaHZYRG1LT0FkTVIwWlNleE9HT2FZT2M3SnlyVWNVSDlTLUdBZTE3eU9xNmpuZXBKWWs0UFotNVVRZ2FZZGZXMGg4RnM3ZkxBSjU2TE00Wk5sU25Rc0wwcEctbE01SUR5ZGJjODdxaHpTRmx2R09HSDVxcDQxUUFLNWlRMVhiU1B3OXA0amRzb041M0tPei1pUi1MUkdoUHFPWXpLV29LRFNOd1NaS18yNUhKZktDYmNjc1BCbEtmZmlSTkhYVDNiM1RMVmp6VmUxN19rZFV5VTQ5OFF2LUgzWVk1ZHZ6WjZvb2VydjhaMVFwX3cyRjlqZWs?oc=5",
-          "source": "TechRadar",
-          "published_display": "Sep 9, 2026",
-          "labs": [
-            "DeepSeek",
-            "Alibaba / Qwen"
-          ],
-          "signals": [
-            "Distillation / extraction"
-          ]
-        }
-      ],
+      "story_count": 0,
+      "lab_count": 0,
+      "labs": [],
+      "signals": [],
+      "stories": [],
       "observed_days": 32,
       "window_days": 365,
       "daily": [
@@ -463,7 +423,7 @@
   "supply_chain": {
     "verified_on": "2026-07-20",
     "verified_display": "Jul 20, 2026",
-    "age_days": 51,
+    "age_days": 52,
     "freshness": "current",
     "stages": [
       {
@@ -815,11 +775,11 @@
   },
   "topic_lifecycle": {
     "window_days": 90,
-    "observed_days": 56,
+    "observed_days": 57,
     "series": [
       {
         "term": "safety",
-        "total": 34,
+        "total": 32,
         "points": [
           {
             "date": "2026-07-16",
@@ -1098,14 +1058,19 @@
           },
           {
             "date": "2026-09-09",
-            "count": 17,
-            "share": 29.3
+            "count": 13,
+            "share": 40.6
+          },
+          {
+            "date": "2026-09-10",
+            "count": 2,
+            "share": 6.9
           }
         ]
       },
       {
         "term": "OpenAI",
-        "total": 24,
+        "total": 27,
         "points": [
           {
             "date": "2026-07-16",
@@ -1379,19 +1344,24 @@
           },
           {
             "date": "2026-09-08",
-            "count": 1,
-            "share": 8.3
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-09-09",
             "count": 11,
-            "share": 19.0
+            "share": 34.4
+          },
+          {
+            "date": "2026-09-10",
+            "count": 4,
+            "share": 13.8
           }
         ]
       },
       {
         "term": "Anthropic",
-        "total": 21,
+        "total": 22,
         "points": [
           {
             "date": "2026-07-16",
@@ -1666,18 +1636,23 @@
           {
             "date": "2026-09-08",
             "count": 1,
-            "share": 8.3
+            "share": 11.1
           },
           {
             "date": "2026-09-09",
-            "count": 9,
-            "share": 15.5
+            "count": 4,
+            "share": 12.5
+          },
+          {
+            "date": "2026-09-10",
+            "count": 6,
+            "share": 20.7
           }
         ]
       },
       {
         "term": "Nvidia",
-        "total": 14,
+        "total": 16,
         "points": [
           {
             "date": "2026-07-16",
@@ -1952,18 +1927,23 @@
           {
             "date": "2026-09-08",
             "count": 1,
-            "share": 8.3
+            "share": 11.1
           },
           {
             "date": "2026-09-09",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 3.1
+          },
+          {
+            "date": "2026-09-10",
+            "count": 1,
+            "share": 3.4
           }
         ]
       },
       {
         "term": "funding",
-        "total": 14,
+        "total": 15,
         "points": [
           {
             "date": "2026-07-16",
@@ -2237,19 +2217,24 @@
           },
           {
             "date": "2026-09-08",
-            "count": 8,
-            "share": 66.7
+            "count": 9,
+            "share": 100.0
           },
           {
             "date": "2026-09-09",
-            "count": 6,
-            "share": 10.3
+            "count": 5,
+            "share": 15.6
+          },
+          {
+            "date": "2026-09-10",
+            "count": 1,
+            "share": 3.4
           }
         ]
       },
       {
         "term": "regulation",
-        "total": 12,
+        "total": 10,
         "points": [
           {
             "date": "2026-07-16",
@@ -2528,8 +2513,13 @@
           },
           {
             "date": "2026-09-09",
-            "count": 3,
-            "share": 5.2
+            "count": 1,
+            "share": 3.1
+          },
+          {
+            "date": "2026-09-10",
+            "count": 0,
+            "share": 0.0
           }
         ]
       }
@@ -2562,44 +2552,75 @@
     ],
     "companies": [
       {
-        "name": "Anthropic",
-        "story_count": 12,
+        "name": "OpenAI",
+        "story_count": 15,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 0
+            "count": 2
           },
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 0
+            "count": 1
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 9
+            "count": 1
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 2
+            "count": 3
           },
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 3
+            "count": 7
           }
         ]
       },
       {
-        "name": "OpenAI",
-        "story_count": 12,
+        "name": "Anthropic",
+        "story_count": 11,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 1
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 5
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
             "count": 4
+          }
+        ]
+      },
+      {
+        "name": "Nvidia",
+        "story_count": 3,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 2
           },
           {
             "key": "cloud",
@@ -2609,84 +2630,22 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 3
+            "count": 1
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 2
+            "count": 0
           },
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 4
+            "count": 0
           }
         ]
       },
       {
         "name": "Microsoft",
-        "story_count": 5,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 0
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 5
-          }
-        ]
-      },
-      {
-        "name": "DeepSeek",
-        "story_count": 4,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 1
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 3
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 0
-          }
-        ]
-      },
-      {
-        "name": "Mistral",
         "story_count": 2,
         "cells": [
           {
@@ -2702,6 +2661,37 @@
           {
             "key": "models",
             "label": "Models & research",
+            "count": 0
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "DeepSeek",
+        "story_count": 1,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
             "count": 1
           },
           {
@@ -2717,13 +2707,44 @@
         ]
       },
       {
-        "name": "Nvidia",
+        "name": "Meta",
         "story_count": 1,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 0
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
             "count": 1
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "Mistral",
+        "story_count": 1,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
           },
           {
             "key": "cloud",
@@ -2748,7 +2769,7 @@
         ]
       }
     ],
-    "max_count": 9,
+    "max_count": 7,
     "metric": "Distinct stories mentioning both the company and layer",
     "source": "coverage"
   },
@@ -2756,7 +2777,7 @@
     "status": "available",
     "verified_on": "2026-07-20",
     "verified_display": "Jul 20, 2026",
-    "age_days": 51,
+    "age_days": 52,
     "max_current_age_days": 30,
     "freshness": "expired",
     "models": [

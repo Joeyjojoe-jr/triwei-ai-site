@@ -330,9 +330,23 @@
     },
     {
       "date": "2026-09-10",
+      "story_count": 2,
+      "labs": {
+        "Alibaba / Qwen": 1,
+        "DeepSeek": 2,
+        "Moonshot / Kimi": 1
+      },
+      "signals": {
+        "Capability convergence": 1,
+        "Distillation / extraction": 1
+      }
+    },
+    {
+      "date": "2026-09-11",
       "story_count": 1,
       "labs": {
-        "DeepSeek": 1
+        "DeepSeek": 1,
+        "Z.ai / GLM": 1
       },
       "signals": {
         "Capability convergence": 1

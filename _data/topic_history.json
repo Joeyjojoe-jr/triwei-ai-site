@@ -467,30 +467,40 @@
     },
     {
       "date": "2026-09-18",
-      "story_count": 27,
+      "story_count": 20,
       "topics": {
-        "Anthropic": 6,
+        "Anthropic": 4,
         "benchmark": 1,
-        "Claude": 2,
         "funding": 7,
+        "Gemini": 1,
         "Google": 2,
         "Nvidia": 1,
-        "regulation": 5,
-        "safety": 9
+        "regulation": 3,
+        "safety": 8
       }
     },
     {
       "date": "2026-09-19",
       "story_count": 36,
       "topics": {
-        "Anthropic": 14,
-        "benchmark": 2,
-        "Claude": 3,
-        "Google": 4,
+        "Anthropic": 13,
+        "benchmark": 3,
+        "Claude": 2,
+        "Gemini": 3,
+        "Google": 6,
         "GPT": 3,
         "Microsoft": 1,
-        "OpenAI": 8,
-        "safety": 6
+        "OpenAI": 6,
+        "regulation": 1,
+        "safety": 5
+      }
+    },
+    {
+      "date": "2026-09-20",
+      "story_count": 7,
+      "topics": {
+        "Anthropic": 2,
+        "OpenAI": 1
       }
     }
   ]

@@ -456,23 +456,21 @@
     },
     {
       "date": "2026-09-17",
-      "story_count": 6,
+      "story_count": 5,
       "topics": {
         "chip": 1,
-        "funding": 6,
-        "Google": 1,
+        "funding": 5,
         "Meta": 1,
         "Nvidia": 2
       }
     },
     {
       "date": "2026-09-18",
-      "story_count": 16,
+      "story_count": 15,
       "topics": {
         "Anthropic": 2,
         "funding": 7,
-        "Gemini": 1,
-        "Google": 2,
+        "Google": 1,
         "Nvidia": 1,
         "regulation": 2,
         "safety": 7
@@ -480,32 +478,38 @@
     },
     {
       "date": "2026-09-19",
-      "story_count": 27,
+      "story_count": 14,
       "topics": {
-        "Anthropic": 11,
-        "benchmark": 3,
-        "Claude": 2,
+        "Anthropic": 4,
         "Gemini": 2,
-        "Google": 4,
-        "GPT": 3,
+        "Google": 3,
         "Microsoft": 1,
-        "OpenAI": 4,
+        "OpenAI": 2,
         "regulation": 1,
-        "safety": 6
+        "safety": 5
       }
     },
     {
       "date": "2026-09-20",
-      "story_count": 21,
+      "story_count": 16,
+      "topics": {
+        "Anthropic": 3,
+        "chip": 1,
+        "Claude": 1,
+        "funding": 2,
+        "Nvidia": 2,
+        "regulation": 2,
+        "safety": 2
+      }
+    },
+    {
+      "date": "2026-09-21",
+      "story_count": 20,
       "topics": {
         "agent": 1,
-        "Anthropic": 3,
-        "ChatGPT": 1,
-        "Claude": 1,
-        "funding": 1,
-        "Nvidia": 2,
-        "regulation": 1,
-        "safety": 3
+        "agentic": 2,
+        "Anthropic": 2,
+        "chip": 1
       }
     }
   ]

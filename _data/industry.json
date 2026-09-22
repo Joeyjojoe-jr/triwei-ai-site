@@ -1,15 +1,38 @@
 {
-  "generated_utc": "2026-09-21T21:54:42.197139Z",
-  "generated_display": "Sep 21, 2026",
-  "coverage_generated_display": "September 21, 2026 at 4:54 PM CDT",
+  "generated_utc": "2026-09-22T04:28:04.068000Z",
+  "generated_display": "Sep 22, 2026",
+  "coverage_generated_display": "September 21, 2026 at 11:28 PM CDT",
   "diffusion_watch": {
     "coverage": {
-      "story_count": 0,
-      "lab_count": 0,
-      "labs": [],
-      "signals": [],
-      "stories": [],
-      "observed_days": 34,
+      "story_count": 1,
+      "lab_count": 1,
+      "labs": [
+        {
+          "name": "DeepSeek",
+          "count": 1
+        }
+      ],
+      "signals": [
+        {
+          "name": "Open weights",
+          "count": 1
+        }
+      ],
+      "stories": [
+        {
+          "title": "'Better than DeepSeek': Xiaomi's MiMo-V2.6-Pro debuts as the top open weights model in the world alongside cheaper V2.6-Flash",
+          "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPbk5wYXNlUU0zTGZIT3J4XzdCWVdna29yZ1FiNFpWcm5yemZ0S2ExQlBCVm1TUzZpRHo4anVHNXFWajlSbWxEeWhGWlIzV0gwbUhqQWtfTldSMU40RkFzUDRtVTRocDc1WVZORUVEbXlvV2FxR2JuQkN5Yi16OS1mbG85c0VEb0lEdEQtLWYyTWhERUVhQkozUkF5Q1hBS0tkR0xtbGJWenhKUGFkNWxlRjQ2SmYwTTFKSWphOUw5WFNzVG1WVEwtdUNELUw1NlJvTjdDbmZHNkZ0SVZJWGFQUUxRclFyaXlla2ZIMw?oc=5",
+          "source": "VentureBeat",
+          "published_display": "Sep 22, 2026",
+          "labs": [
+            "DeepSeek"
+          ],
+          "signals": [
+            "Open weights"
+          ]
+        }
+      ],
+      "observed_days": 35,
       "window_days": 365,
       "daily": [
         {
@@ -362,6 +385,16 @@
           "signals": {
             "Capability convergence": 1
           }
+        },
+        {
+          "date": "2026-09-22",
+          "story_count": 1,
+          "labs": {
+            "DeepSeek": 1
+          },
+          "signals": {
+            "Open weights": 1
+          }
         }
       ],
       "metric": "Distinct TriWei stories connecting a tracked China-based lab to distillation, model extraction, open weights, or frontier-capability convergence",
@@ -446,7 +479,7 @@
   "supply_chain": {
     "verified_on": "2026-07-20",
     "verified_display": "Jul 20, 2026",
-    "age_days": 63,
+    "age_days": 64,
     "freshness": "current",
     "stages": [
       {
@@ -798,7 +831,7 @@
   },
   "topic_lifecycle": {
     "window_days": 90,
-    "observed_days": 68,
+    "observed_days": 69,
     "series": [
       {
         "term": "funding",
@@ -1142,7 +1175,12 @@
           {
             "date": "2026-09-21",
             "count": 4,
-            "share": 6.7
+            "share": 12.1
+          },
+          {
+            "date": "2026-09-22",
+            "count": 0,
+            "share": 0.0
           }
         ]
       },
@@ -1487,14 +1525,19 @@
           },
           {
             "date": "2026-09-21",
-            "count": 12,
-            "share": 20.0
+            "count": 10,
+            "share": 30.3
+          },
+          {
+            "date": "2026-09-22",
+            "count": 2,
+            "share": 7.4
           }
         ]
       },
       {
         "term": "OpenAI",
-        "total": 23,
+        "total": 22,
         "points": [
           {
             "date": "2026-07-16",
@@ -1833,8 +1876,13 @@
           },
           {
             "date": "2026-09-21",
-            "count": 10,
-            "share": 16.7
+            "count": 8,
+            "share": 24.2
+          },
+          {
+            "date": "2026-09-22",
+            "count": 1,
+            "share": 3.7
           }
         ]
       },
@@ -2180,13 +2228,18 @@
           {
             "date": "2026-09-21",
             "count": 2,
-            "share": 3.3
+            "share": 6.1
+          },
+          {
+            "date": "2026-09-22",
+            "count": 0,
+            "share": 0.0
           }
         ]
       },
       {
         "term": "Anthropic",
-        "total": 14,
+        "total": 13,
         "points": [
           {
             "date": "2026-07-16",
@@ -2525,14 +2578,19 @@
           },
           {
             "date": "2026-09-21",
-            "count": 3,
-            "share": 5.0
+            "count": 1,
+            "share": 3.0
+          },
+          {
+            "date": "2026-09-22",
+            "count": 1,
+            "share": 3.7
           }
         ]
       },
       {
         "term": "regulation",
-        "total": 10,
+        "total": 12,
         "points": [
           {
             "date": "2026-07-16",
@@ -2871,8 +2929,13 @@
           },
           {
             "date": "2026-09-21",
-            "count": 2,
-            "share": 3.3
+            "count": 4,
+            "share": 12.1
+          },
+          {
+            "date": "2026-09-22",
+            "count": 0,
+            "share": 0.0
           }
         ]
       }
@@ -2906,12 +2969,12 @@
     "companies": [
       {
         "name": "OpenAI",
-        "story_count": 11,
+        "story_count": 10,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 1
+            "count": 0
           },
           {
             "key": "cloud",
@@ -2921,17 +2984,17 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 2
+            "count": 1
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 3
+            "count": 2
           },
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 4
+            "count": 3
           }
         ]
       },
@@ -2983,7 +3046,38 @@
           {
             "key": "models",
             "label": "Models & research",
+            "count": 0
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
             "count": 1
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "DeepSeek",
+        "story_count": 3,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 3
           },
           {
             "key": "apps",
@@ -2999,105 +3093,12 @@
       },
       {
         "name": "Google",
-        "story_count": 3,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 1
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 0
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 1
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 0
-          }
-        ]
-      },
-      {
-        "name": "DeepSeek",
         "story_count": 1,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
             "count": 1
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 0
-          }
-        ]
-      },
-      {
-        "name": "Meta",
-        "story_count": 1,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 0
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 1
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 0
-          }
-        ]
-      },
-      {
-        "name": "Mistral",
-        "story_count": 1,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
           },
           {
             "key": "cloud",
@@ -3161,7 +3162,7 @@
     "status": "available",
     "verified_on": "2026-07-20",
     "verified_display": "Jul 20, 2026",
-    "age_days": 63,
+    "age_days": 64,
     "max_current_age_days": 30,
     "freshness": "expired",
     "models": [

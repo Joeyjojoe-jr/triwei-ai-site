@@ -490,23 +490,33 @@
     },
     {
       "date": "2026-09-21",
-      "story_count": 60,
+      "story_count": 33,
       "topics": {
-        "agent": 5,
-        "Amazon": 2,
-        "Anthropic": 3,
-        "benchmark": 3,
+        "agent": 2,
+        "alignment": 1,
+        "Amazon": 1,
+        "Anthropic": 1,
         "ChatGPT": 1,
         "DeepSeek": 1,
         "funding": 4,
-        "Gemini": 1,
-        "Google": 2,
-        "Meta": 3,
-        "Mistral": 1,
+        "Meta": 2,
         "Nvidia": 2,
-        "OpenAI": 10,
-        "regulation": 2,
-        "safety": 12
+        "OpenAI": 8,
+        "regulation": 4,
+        "safety": 10
+      }
+    },
+    {
+      "date": "2026-09-22",
+      "story_count": 27,
+      "topics": {
+        "agentic": 2,
+        "Anthropic": 1,
+        "chip": 2,
+        "Claude": 1,
+        "DeepSeek": 2,
+        "OpenAI": 1,
+        "safety": 2
       }
     }
   ]

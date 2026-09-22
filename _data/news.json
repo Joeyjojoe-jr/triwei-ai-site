@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-09-22T16:45:44.451050Z",
-  "generated_display": "September 22, 2026 at 11:45 AM CDT",
-  "item_count": 1384,
+  "generated_utc": "2026-09-22T21:11:43.937568Z",
+  "generated_display": "September 22, 2026 at 4:11 PM CDT",
+  "item_count": 1393,
   "category_order": [
     "labs",
     "research",
@@ -14,18 +14,140 @@
       "label": "Labs & Industry",
       "items": [
         {
+          "title": "Rabbit’s new AI agent doesn’t need an R1 to run",
+          "link": "https://www.theverge.com/ai-artificial-intelligence/999094/rabbit-ai-agent-os3",
+          "source": "The Verge",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T20:52:40Z",
+          "summary": "Rabbit, the company behind the underwhelming R1 device, is rolling out a standalone AI agent that you don't need its hardware to use, as reported earlier by Wired. The startup says its new OS3 \"agentic operating system\" runs in the cloud…",
+          "ethics_tags": [],
+          "trend_score": 163
+        },
+        {
+          "title": "Introducing Claude Opus 5.5",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
+          "source": "Anthropic",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T20:03:34Z",
+          "summary": "Introducing Claude Opus 5.5 Anthropic",
+          "ethics_tags": [],
+          "trend_score": 84
+        },
+        {
+          "title": "ZenMux Launches DeepSeek V4.1 Flash for High-Throughput Reasoning",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPQ0NoQzQtUGFmV0xMdTRMQTBLWTJ2OG02NEdicUVnajJpeXI1bEVTV0hSMWdTSHlJOV9lSm1wNk5ZZ0lCWUhaTm5CTFZYTXNSWHhaYWtDMUdzcm9mOTJJV2lxbEQwWFNROXJ3Q2FER1d6bGlYQ3paSkJhbkc2VUx4bmlvb1V4YkdrV0dPVlN3ajlMVkJPeExKU3pyNUw2YkdIRzBsdHZxOGUxUXpvZGJackVMWVJIT2Nf?oc=5",
+          "source": "usatoday.com",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T18:54:01Z",
+          "summary": "ZenMux Launches DeepSeek V4.1 Flash for High-Throughput Reasoning usatoday.com",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "China Probes DeepSeek, Moonshot AI Over Anthropic's Claims They Route Requests to Claude",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNalNQRnNqazhhNmxmWWVWcm11dDR5NU1xMmpWTi1jNmVxWVNCMnBKQjJvNzJCcVkxMDBkMzlQQ3V2RllHLS1abE9DUmJDRTVLZ2tJYjdOM0dhLWhqRV9rSGpWWW5pWlJwOExpTWJJb200aUVfNGhTR29ucW5CVlNxWFBFOUNsblJwdnQ2QnE3LWJnV0FSY2xkZkJlSUZsdVBqS2VubThFOHdOVkwwZTZlYXNLRENpNVBs?oc=5",
+          "source": "Gizmodo",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T18:45:38Z",
+          "summary": "China Probes DeepSeek, Moonshot AI Over Anthropic's Claims They Route Requests to Claude Gizmodo",
+          "ethics_tags": [],
+          "trend_score": 84
+        },
+        {
+          "title": "Measurements for understanding the pace of AI development inside frontier labs",
+          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1hSlNaZU5CMXdjOERiMTltcEVxMXduUXVrT1UtSExlUGlUUHFCc2huOVM0NEY0cmhCMVF6X0o2QjMwUUZOQkhuSGlHVjFlaWdKelR3ZTEzUV9SRzRIdkxhV3RfQ0N2OUI5U214a0RqZjh3c2MxUktr?oc=5",
+          "source": "Anthropic",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T18:36:16Z",
+          "summary": "Measurements for understanding the pace of AI development inside frontier labs Anthropic",
+          "ethics_tags": [],
+          "trend_score": 64
+        },
+        {
+          "title": "Microsoft AI boss calls out Anthropic for chasing AI consciousness, reigniting old debate",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOWTdvZ3ZjQVR2bVg4ZmpfYU9Rc2MtYXZLQVM1Z2xRWWI2SUdFYldlNTdfTndxeFRIOXgyRnVadG12RGJFV09iLV9peGVRRFVRLXkwQUhsckdhcFNIbDRaZGxmS3dJWUVpSXkxd1BidDdWQTBFQmxTaERoNmZLWm12SnpMZENlRjkzQmFkMzln?oc=5",
+          "source": "Mashable",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T18:33:01Z",
+          "summary": "Microsoft AI boss calls out Anthropic for chasing AI consciousness, reigniting old debate Mashable",
+          "ethics_tags": [],
+          "trend_score": 64
+        },
+        {
+          "title": "Anthropic and OpenAI roll out cheaper models in first release since call for slowdown",
+          "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1sZVdROFlLTUpZMmZPb0lWNWUtenNWaDhjX2JqeVZQM19lM2JVMmNYSHllQXczQWN5VVFHejNVOGFVU2NpVXdHQnJiWEU0eENSTmxaZGFBaTNQNXd3Vi1WM25wTVg3bjI1TEFsX2x3VlVHYzZWLWRvVW5vUdIBgAFBVV95cUxNWlZ6cE5mOEo5cUFESnpnbEFnU3h6OEhFU2hRWVFUNVVMR1FTUXk4cnR0b2Vjb3V2LVRUQXR3dl9sZDRKamNnYkhpQ3hMM3ZsckdaTlk5a2p2NDRud25uMWtUV1E0Ny1NblVMWTlGNTdYdTF6Q0JsZ3l5V3hOaHQ1cA?oc=5",
+          "source": "CNBC",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T18:23:57Z",
+          "summary": "Anthropic and OpenAI roll out cheaper models in first release since call for slowdown CNBC",
+          "ethics_tags": [],
+          "trend_score": 130
+        },
+        {
+          "title": "Introducing GPT-6 Sol and Luna",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB4SldKWWgzNDExSThTZW9MRTQ5WHE3VFRZMl9oSjIzaVhuZEZaY1ZSUTFxZTJFaFpUanlncTQySUg5SlRGVnNkQXZ0S3IxLWJScXNkLXY2Z3Jzbk5WR0UwSFp0NmUxN3c?oc=5",
+          "source": "OpenAI",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T18:07:05Z",
+          "summary": "Introducing GPT-6 Sol and Luna OpenAI",
+          "ethics_tags": [],
+          "trend_score": 66
+        },
+        {
+          "title": "OpenAI launches GPT-6 Sol and Luna, boasting lower cost and fewer mistakes",
+          "link": "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/",
+          "source": "TechCrunch",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T18:00:00Z",
+          "summary": "OpenAI is launching two new models, which it says are cut from the same cloth as Astra.",
+          "ethics_tags": [],
+          "trend_score": 66
+        },
+        {
+          "title": "Trump says the US is officially renaming AI to ‘super intelligence’",
+          "link": "https://www.theverge.com/ai-artificial-intelligence/998816/donald-trump-ai-super-intelligence",
+          "source": "The Verge",
+          "category": "labs",
+          "category_label": "Labs & Industry",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T17:46:40Z",
+          "summary": "In a speech Tuesday morning at the UN General Assembly, Donald Trump railed against Iran, \"globalists,\" climate change, and transgender people while also claiming that the US is now \"officially\" renaming artificial intelligence to \"super…",
+          "ethics_tags": [
+            "Energy & Environment"
+          ],
+          "trend_score": 0
+        },
+        {
           "title": "Anthropic launches Claude Opus 5.5 with stricter safeguards for cybersecurity",
           "link": "https://www.theverge.com/ai-artificial-intelligence/998868/anthropic-claude-opus-5-5-cybersecurity",
           "source": "The Verge",
           "category": "labs",
           "category_label": "Labs & Industry",
           "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T16:32:59Z",
+          "published_iso": "2026-09-22T17:15:49Z",
           "summary": "Anthropic says its new Claude Opus 5.5 model comes with stronger safeguards in the wake of recent rogue AI hacking incidents. In an announcement on Tuesday, Anthropic says Opus 5.5 comes with improvements to certain risky behaviors,…",
           "ethics_tags": [
             "Safety & Alignment"
           ],
-          "trend_score": 85
+          "trend_score": 84
         },
         {
           "title": "Anthropic releases Opus 5.5 with lower prices and Fable-level performance",
@@ -37,47 +159,7 @@
           "published_iso": "2026-09-22T16:30:07Z",
           "summary": "Anthropic called it \"the strongest-performing model we've tested to date.\"",
           "ethics_tags": [],
-          "trend_score": 66
-        },
-        {
-          "title": "Trump says the US is officially renaming AI to ‘super intelligence’",
-          "link": "https://www.theverge.com/ai-artificial-intelligence/998816/donald-trump-ai-super-intelligence",
-          "source": "The Verge",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T16:25:16Z",
-          "summary": "In a speech Tuesday morning at the UN General Assembly, Donald Trump railed against Iran, \"globalists,\" climate change, and transgender people while also claiming that the US is now \"officially\" renaming artificial intelligence to \"super…",
-          "ethics_tags": [
-            "Energy & Environment"
-          ],
-          "trend_score": 0
-        },
-        {
-          "title": "Measurements for understanding the pace of AI development inside frontier labs",
-          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1hSlNaZU5CMXdjOERiMTltcEVxMXduUXVrT1UtSExlUGlUUHFCc2huOVM0NEY0cmhCMVF6X0o2QjMwUUZOQkhuSGlHVjFlaWdKelR3ZTEzUV9SRzRIdkxhV3RfQ0N2OUI5U214a0RqZjh3c2MxUktr?oc=5",
-          "source": "Anthropic",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T15:32:34Z",
-          "summary": "Measurements for understanding the pace of AI development inside frontier labs Anthropic",
-          "ethics_tags": [],
-          "trend_score": 66
-        },
-        {
-          "title": "Five AI safety sessions every founder should have on their TechCrunch Disrupt 2026 agenda",
-          "link": "https://techcrunch.com/2026/09/22/five-ai-safety-sessions-every-founder-should-have-on-their-techcrunch-disrupt-2026-agenda/",
-          "source": "TechCrunch",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T15:00:00Z",
-          "summary": "At TechCrunch Disrupt 2026, five sessions across the AI Stage and Real World AI Stage cover AI safety, featuring leaders from Anthropic, NVIDIA, AWS, Waabi, and more. Register now to save up to $200 before Sept 25.",
-          "ethics_tags": [
-            "Safety & Alignment"
-          ],
-          "trend_score": 184
+          "trend_score": 64
         },
         {
           "title": "AstroForge is putting AI in command of its next spacecraft",
@@ -92,102 +174,18 @@
           "trend_score": 0
         },
         {
-          "title": "China's AI Model Startups Pivot to Monetization: Moonshot AI Races Toward IPO, MiniMax Awaits New Models",
-          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5IN3lOMnlxUHhiOXVaMFp4M0Nmby1JVGUyaHcySGYxdU5VdWc3b0RrVld3a1FHOVFBdXFmcGFWSXRQMWRyWXlKcUZRcXRjQ1U5MnhoSUE5SlEwZjh3NTJnTlE4ZnkyeWxTUnctMVlSUV81RUtiUHc?oc=5",
-          "source": "finance.biggo.com",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T14:05:00Z",
-          "summary": "China's AI Model Startups Pivot to Monetization: Moonshot AI Races Toward IPO, MiniMax Awaits New Models finance.biggo.com",
-          "ethics_tags": [],
-          "trend_score": 0
-        },
-        {
-          "title": "Anthropic's CEO urges the industry to slow down, and Sam Altman agrees",
-          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOV1B1cmVxVWc5Nkl5NHFmOWtuaHZHejN6TzBYb2QtRHlva1hUcGRpc2lPVmZIeDc1T1ppcHg0dF9raWcxcGpEVExjS1RhLU9OdmZUWlFwWGVtYzZoWTZBS1VyTTI3d3RIS0dtbDdSS3RQMEtNQlVocUVfNVlsLVhPODdtTQ?oc=5",
-          "source": "Mashable",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T12:50:34Z",
-          "summary": "Anthropic's CEO urges the industry to slow down, and Sam Altman agrees Mashable",
-          "ethics_tags": [],
-          "trend_score": 66
-        },
-        {
-          "title": "Nscale’s IPO will test Wall Street’s appetite for concentrated AI bets once again",
-          "link": "https://techcrunch.com/2026/09/22/nscales-ipo-will-test-wall-streets-appetite-for-concentrated-ai-bets-once-again/",
+          "title": "Five AI safety sessions every founder should have on their TechCrunch Disrupt 2026 agenda",
+          "link": "https://techcrunch.com/2026/09/22/five-ai-safety-sessions-every-founder-should-have-on-their-techcrunch-disrupt-2026-agenda/",
           "source": "TechCrunch",
           "category": "labs",
           "category_label": "Labs & Industry",
           "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T12:23:05Z",
-          "summary": "The British AI data center developer depends on tech giants Microsoft and Anthropic for most of its revenue.",
+          "published_iso": "2026-09-22T15:00:00Z",
+          "summary": "At TechCrunch Disrupt 2026, five sessions across the AI Stage and Real World AI Stage cover AI safety, featuring leaders from Anthropic, Nvidia, AWS, Waabi, and more. Register before September 25 to save up to $200.",
           "ethics_tags": [
-            "Energy & Environment"
+            "Safety & Alignment"
           ],
-          "trend_score": 66
-        },
-        {
-          "title": "Meta patches Muse exploit that let attackers control the AI agent",
-          "link": "https://www.theverge.com/tech/998679/meta-muse-patch-zero-day-exploit-ai-agent",
-          "source": "The Verge",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T11:53:58Z",
-          "summary": "Meta has issued a patch for its Muse macOS app following the discovery of a zero-day vulnerability that could allow someone to take control of the AI agent. The bug found by security researcher Patrick Wardle utilized an undocumented Muse…",
-          "ethics_tags": [],
-          "trend_score": 128
-        },
-        {
-          "title": "Alibaba Unveils Zhenwu V900 AI Chip as Qwen Models Target 10 Trillion Parameters",
-          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQUWJyOFp1bk1oSTRROE5JamVlLS04NnpuaXJ1UU9ubGhZZ1FvLXdzT2NDVmJFcHFnQlZCdC13cWdIellDY0xNMk02LVdhTWNfTjg4U3FHbi1QTm9idTU0djVEZWRvaDR5aDlvY2VKcHBOdmg5R1F2a1V2MXJIMVZRSmx1R0Nfc0t5WmhfX0tGcGw4dklSbnJFajVDMVU5eDlqM2JaZDlvOEhXQmN6bXk0ZHFEb0FQZw?oc=5",
-          "source": "konsulteer.com",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T10:41:27Z",
-          "summary": "Alibaba Unveils Zhenwu V900 AI Chip as Qwen Models Target 10 Trillion Parameters konsulteer.com",
-          "ethics_tags": [],
-          "trend_score": 40
-        },
-        {
-          "title": "Alibaba Unveils Zhenwu V900 AI Chip and Plans a 10-Trillion-Parameter Qwen Model",
-          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOaXpwTWlfaEVNZmJEOEVwTTVqS01XT29pbzk4QkFmM1RFVU1nbFVZbl9fLXpVWHJnYWRRM1Zla2ltOXZ1ZmE5by1TcXkyX1FzcE1aWjNfVW1iUFdPVm0zN0ZSWnZ0UUk0MDFka0xhVk5odFU0M3ZvMzFVS21BMjRVeVl6azRtVy1LLUJR?oc=5",
-          "source": "Technology Org",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T10:35:46Z",
-          "summary": "Alibaba Unveils Zhenwu V900 AI Chip and Plans a 10-Trillion-Parameter Qwen Model Technology Org",
-          "ethics_tags": [],
-          "trend_score": 40
-        },
-        {
-          "title": "Context Bombs Trick Autonomous Qwen AI Agents Into Stopping Cyberattacks",
-          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1CcGtlUmRvcmpVOGx6UDFGaW5TU04zcDZRV2JhQmk0bG85WmplYmdXVW05R2t0dEY4aFVMZG92QUR5SFRpaHdqQzlZNGZJbzYzOWxObFY5VdIBXEFVX3lxTE8zak80bmZuVGQtQUFHOTlPS19GaWQxVUNEbGNJZkM4amo1NXh0ODdoRS1NUmo0eTVBWHJyYVZfbnVmaGRDOGxVV0k0ZFliVDVzRklISzNfRUlqWFRP?oc=5",
-          "source": "CyberSecurityNews",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T10:25:25Z",
-          "summary": "Context Bombs Trick Autonomous Qwen AI Agents Into Stopping Cyberattacks CyberSecurityNews",
-          "ethics_tags": [],
-          "trend_score": 128
-        },
-        {
-          "title": "Alibaba Unveils New AI Chip as Shares Rise 5.1% | FM",
-          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOUjVRNEoweXhUUTVXV0oyXzRuMjZaWWt4QXJsU3pVd0Y1RTZ3SmxmTGp5SmpsbWFDQjl0R09SNlp5Z2FYY2NGLWRveWJXYzRPOC1oV2kzMWtoNGpkZDI2UFNqZ0RnYXdyODU5a0kyQkgwTVZaMWlUbUNYNHgxWjJacktvTHdkVmVzRDBfTERoR096aExOWE11M0JlZHg?oc=5",
-          "source": "Finance Monthly",
-          "category": "labs",
-          "category_label": "Labs & Industry",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T09:31:27Z",
-          "summary": "Alibaba Unveils New AI Chip as Shares Rise 5.1% | FM Finance Monthly",
-          "ethics_tags": [],
-          "trend_score": 40
+          "trend_score": 179
         }
       ],
       "folder_items": [
@@ -199,42 +197,42 @@
           "category_label": "Labs & Industry",
           "published_display": "Sep 22, 2026",
           "published_iso": "2026-09-22T15:00:00Z",
-          "summary": "At TechCrunch Disrupt 2026, five sessions across the AI Stage and Real World AI Stage cover AI safety, featuring leaders from Anthropic, NVIDIA, AWS, Waabi, and more. Register now to save up to $200 before Sept 25.",
+          "summary": "At TechCrunch Disrupt 2026, five sessions across the AI Stage and Real World AI Stage cover AI safety, featuring leaders from Anthropic, Nvidia, AWS, Waabi, and more. Register before September 25 to save up to $200.",
           "ethics_tags": [
             "Safety & Alignment"
           ],
-          "trend_score": 184
+          "trend_score": 179
         },
         {
-          "title": "Meta patches Muse exploit that let attackers control the AI agent",
-          "link": "https://www.theverge.com/tech/998679/meta-muse-patch-zero-day-exploit-ai-agent",
+          "title": "Rabbit’s new AI agent doesn’t need an R1 to run",
+          "link": "https://www.theverge.com/ai-artificial-intelligence/999094/rabbit-ai-agent-os3",
           "source": "The Verge",
           "category": "labs",
           "category_label": "Labs & Industry",
           "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T11:53:58Z",
-          "summary": "Meta has issued a patch for its Muse macOS app following the discovery of a zero-day vulnerability that could allow someone to take control of the AI agent. The bug found by security researcher Patrick Wardle utilized an undocumented Muse…",
+          "published_iso": "2026-09-22T20:52:40Z",
+          "summary": "Rabbit, the company behind the underwhelming R1 device, is rolling out a standalone AI agent that you don't need its hardware to use, as reported earlier by Wired. The startup says its new OS3 \"agentic operating system\" runs in the cloud…",
           "ethics_tags": [],
-          "trend_score": 128
+          "trend_score": 163
         },
         {
-          "title": "Context Bombs Trick Autonomous Qwen AI Agents Into Stopping Cyberattacks",
-          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1CcGtlUmRvcmpVOGx6UDFGaW5TU04zcDZRV2JhQmk0bG85WmplYmdXVW05R2t0dEY4aFVMZG92QUR5SFRpaHdqQzlZNGZJbzYzOWxObFY5VdIBXEFVX3lxTE8zak80bmZuVGQtQUFHOTlPS19GaWQxVUNEbGNJZkM4amo1NXh0ODdoRS1NUmo0eTVBWHJyYVZfbnVmaGRDOGxVV0k0ZFliVDVzRklISzNfRUlqWFRP?oc=5",
-          "source": "CyberSecurityNews",
+          "title": "Anthropic and OpenAI roll out cheaper models in first release since call for slowdown",
+          "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1sZVdROFlLTUpZMmZPb0lWNWUtenNWaDhjX2JqeVZQM19lM2JVMmNYSHllQXczQWN5VVFHejNVOGFVU2NpVXdHQnJiWEU0eENSTmxaZGFBaTNQNXd3Vi1WM25wTVg3bjI1TEFsX2x3VlVHYzZWLWRvVW5vUdIBgAFBVV95cUxNWlZ6cE5mOEo5cUFESnpnbEFnU3h6OEhFU2hRWVFUNVVMR1FTUXk4cnR0b2Vjb3V2LVRUQXR3dl9sZDRKamNnYkhpQ3hMM3ZsckdaTlk5a2p2NDRud25uMWtUV1E0Ny1NblVMWTlGNTdYdTF6Q0JsZ3l5V3hOaHQ1cA?oc=5",
+          "source": "CNBC",
           "category": "labs",
           "category_label": "Labs & Industry",
           "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T10:25:25Z",
-          "summary": "Context Bombs Trick Autonomous Qwen AI Agents Into Stopping Cyberattacks CyberSecurityNews",
+          "published_iso": "2026-09-22T18:23:57Z",
+          "summary": "Anthropic and OpenAI roll out cheaper models in first release since call for slowdown CNBC",
           "ethics_tags": [],
-          "trend_score": 128
+          "trend_score": 130
         }
       ],
       "subcategories": [
         {
           "key": "hardware",
           "label": "Chips, Robots & Devices",
-          "count": 4,
+          "count": 2,
           "folder_items": [
             {
               "title": "Five AI safety sessions every founder should have on their TechCrunch Disrupt 2026 agenda",
@@ -244,35 +242,23 @@
               "category_label": "Labs & Industry",
               "published_display": "Sep 22, 2026",
               "published_iso": "2026-09-22T15:00:00Z",
-              "summary": "At TechCrunch Disrupt 2026, five sessions across the AI Stage and Real World AI Stage cover AI safety, featuring leaders from Anthropic, NVIDIA, AWS, Waabi, and more. Register now to save up to $200 before Sept 25.",
+              "summary": "At TechCrunch Disrupt 2026, five sessions across the AI Stage and Real World AI Stage cover AI safety, featuring leaders from Anthropic, Nvidia, AWS, Waabi, and more. Register before September 25 to save up to $200.",
               "ethics_tags": [
                 "Safety & Alignment"
               ],
-              "trend_score": 184
+              "trend_score": 179
             },
             {
-              "title": "Alibaba Unveils Zhenwu V900 AI Chip as Qwen Models Target 10 Trillion Parameters",
-              "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQUWJyOFp1bk1oSTRROE5JamVlLS04NnpuaXJ1UU9ubGhZZ1FvLXdzT2NDVmJFcHFnQlZCdC13cWdIellDY0xNMk02LVdhTWNfTjg4U3FHbi1QTm9idTU0djVEZWRvaDR5aDlvY2VKcHBOdmg5R1F2a1V2MXJIMVZRSmx1R0Nfc0t5WmhfX0tGcGw4dklSbnJFajVDMVU5eDlqM2JaZDlvOEhXQmN6bXk0ZHFEb0FQZw?oc=5",
-              "source": "konsulteer.com",
+              "title": "Rabbit’s new AI agent doesn’t need an R1 to run",
+              "link": "https://www.theverge.com/ai-artificial-intelligence/999094/rabbit-ai-agent-os3",
+              "source": "The Verge",
               "category": "labs",
               "category_label": "Labs & Industry",
               "published_display": "Sep 22, 2026",
-              "published_iso": "2026-09-22T10:41:27Z",
-              "summary": "Alibaba Unveils Zhenwu V900 AI Chip as Qwen Models Target 10 Trillion Parameters konsulteer.com",
+              "published_iso": "2026-09-22T20:52:40Z",
+              "summary": "Rabbit, the company behind the underwhelming R1 device, is rolling out a standalone AI agent that you don't need its hardware to use, as reported earlier by Wired. The startup says its new OS3 \"agentic operating system\" runs in the cloud…",
               "ethics_tags": [],
-              "trend_score": 40
-            },
-            {
-              "title": "Alibaba Unveils Zhenwu V900 AI Chip and Plans a 10-Trillion-Parameter Qwen Model",
-              "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOaXpwTWlfaEVNZmJEOEVwTTVqS01XT29pbzk4QkFmM1RFVU1nbFVZbl9fLXpVWHJnYWRRM1Zla2ltOXZ1ZmE5by1TcXkyX1FzcE1aWjNfVW1iUFdPVm0zN0ZSWnZ0UUk0MDFka0xhVk5odFU0M3ZvMzFVS21BMjRVeVl6azRtVy1LLUJR?oc=5",
-              "source": "Technology Org",
-              "category": "labs",
-              "category_label": "Labs & Industry",
-              "published_display": "Sep 22, 2026",
-              "published_iso": "2026-09-22T10:35:46Z",
-              "summary": "Alibaba Unveils Zhenwu V900 AI Chip and Plans a 10-Trillion-Parameter Qwen Model Technology Org",
-              "ethics_tags": [],
-              "trend_score": 40
+              "trend_score": 163
             }
           ]
         },
@@ -288,108 +274,63 @@
               "category": "labs",
               "category_label": "Labs & Industry",
               "published_display": "Sep 22, 2026",
-              "published_iso": "2026-09-22T16:32:59Z",
+              "published_iso": "2026-09-22T17:15:49Z",
               "summary": "Anthropic says its new Claude Opus 5.5 model comes with stronger safeguards in the wake of recent rogue AI hacking incidents. In an announcement on Tuesday, Anthropic says Opus 5.5 comes with improvements to certain risky behaviors,…",
               "ethics_tags": [
                 "Safety & Alignment"
               ],
-              "trend_score": 85
-            }
-          ]
-        },
-        {
-          "key": "enterprise",
-          "label": "Enterprise AI",
-          "count": 1,
-          "folder_items": [
-            {
-              "title": "Nscale’s IPO will test Wall Street’s appetite for concentrated AI bets once again",
-              "link": "https://techcrunch.com/2026/09/22/nscales-ipo-will-test-wall-streets-appetite-for-concentrated-ai-bets-once-again/",
-              "source": "TechCrunch",
-              "category": "labs",
-              "category_label": "Labs & Industry",
-              "published_display": "Sep 22, 2026",
-              "published_iso": "2026-09-22T12:23:05Z",
-              "summary": "The British AI data center developer depends on tech giants Microsoft and Anthropic for most of its revenue.",
-              "ethics_tags": [
-                "Energy & Environment"
-              ],
-              "trend_score": 66
+              "trend_score": 84
             }
           ]
         },
         {
           "key": "models",
           "label": "Models & Releases",
-          "count": 3,
+          "count": 8,
           "folder_items": [
             {
-              "title": "Anthropic releases Opus 5.5 with lower prices and Fable-level performance",
-              "link": "https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/",
-              "source": "TechCrunch",
+              "title": "Anthropic and OpenAI roll out cheaper models in first release since call for slowdown",
+              "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1sZVdROFlLTUpZMmZPb0lWNWUtenNWaDhjX2JqeVZQM19lM2JVMmNYSHllQXczQWN5VVFHejNVOGFVU2NpVXdHQnJiWEU0eENSTmxaZGFBaTNQNXd3Vi1WM25wTVg3bjI1TEFsX2x3VlVHYzZWLWRvVW5vUdIBgAFBVV95cUxNWlZ6cE5mOEo5cUFESnpnbEFnU3h6OEhFU2hRWVFUNVVMR1FTUXk4cnR0b2Vjb3V2LVRUQXR3dl9sZDRKamNnYkhpQ3hMM3ZsckdaTlk5a2p2NDRud25uMWtUV1E0Ny1NblVMWTlGNTdYdTF6Q0JsZ3l5V3hOaHQ1cA?oc=5",
+              "source": "CNBC",
               "category": "labs",
               "category_label": "Labs & Industry",
               "published_display": "Sep 22, 2026",
-              "published_iso": "2026-09-22T16:30:07Z",
-              "summary": "Anthropic called it \"the strongest-performing model we've tested to date.\"",
+              "published_iso": "2026-09-22T18:23:57Z",
+              "summary": "Anthropic and OpenAI roll out cheaper models in first release since call for slowdown CNBC",
               "ethics_tags": [],
-              "trend_score": 66
+              "trend_score": 130
             },
             {
-              "title": "AstroForge is putting AI in command of its next spacecraft",
-              "link": "https://techcrunch.com/2026/09/22/astroforge-is-putting-ai-in-command-of-its-next-spacecraft/",
-              "source": "TechCrunch",
+              "title": "Introducing Claude Opus 5.5",
+              "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
+              "source": "Anthropic",
               "category": "labs",
               "category_label": "Labs & Industry",
               "published_display": "Sep 22, 2026",
-              "published_iso": "2026-09-22T15:00:00Z",
-              "summary": "Autonomy-1 will have a small, transformer-based AI model taking charge of a space probe.",
+              "published_iso": "2026-09-22T20:03:34Z",
+              "summary": "Introducing Claude Opus 5.5 Anthropic",
               "ethics_tags": [],
-              "trend_score": 0
+              "trend_score": 84
             },
             {
-              "title": "China's AI Model Startups Pivot to Monetization: Moonshot AI Races Toward IPO, MiniMax Awaits New Models",
-              "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5IN3lOMnlxUHhiOXVaMFp4M0Nmby1JVGUyaHcySGYxdU5VdWc3b0RrVld3a1FHOVFBdXFmcGFWSXRQMWRyWXlKcUZRcXRjQ1U5MnhoSUE5SlEwZjh3NTJnTlE4ZnkyeWxTUnctMVlSUV81RUtiUHc?oc=5",
-              "source": "finance.biggo.com",
+              "title": "China Probes DeepSeek, Moonshot AI Over Anthropic's Claims They Route Requests to Claude",
+              "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNalNQRnNqazhhNmxmWWVWcm11dDR5NU1xMmpWTi1jNmVxWVNCMnBKQjJvNzJCcVkxMDBkMzlQQ3V2RllHLS1abE9DUmJDRTVLZ2tJYjdOM0dhLWhqRV9rSGpWWW5pWlJwOExpTWJJb200aUVfNGhTR29ucW5CVlNxWFBFOUNsblJwdnQ2QnE3LWJnV0FSY2xkZkJlSUZsdVBqS2VubThFOHdOVkwwZTZlYXNLRENpNVBs?oc=5",
+              "source": "Gizmodo",
               "category": "labs",
               "category_label": "Labs & Industry",
               "published_display": "Sep 22, 2026",
-              "published_iso": "2026-09-22T14:05:00Z",
-              "summary": "China's AI Model Startups Pivot to Monetization: Moonshot AI Races Toward IPO, MiniMax Awaits New Models finance.biggo.com",
+              "published_iso": "2026-09-22T18:45:38Z",
+              "summary": "China Probes DeepSeek, Moonshot AI Over Anthropic's Claims They Route Requests to Claude Gizmodo",
               "ethics_tags": [],
-              "trend_score": 0
+              "trend_score": 84
             }
           ]
         },
         {
           "key": "frontier",
           "label": "Frontier Labs",
-          "count": 5,
+          "count": 3,
           "folder_items": [
-            {
-              "title": "Meta patches Muse exploit that let attackers control the AI agent",
-              "link": "https://www.theverge.com/tech/998679/meta-muse-patch-zero-day-exploit-ai-agent",
-              "source": "The Verge",
-              "category": "labs",
-              "category_label": "Labs & Industry",
-              "published_display": "Sep 22, 2026",
-              "published_iso": "2026-09-22T11:53:58Z",
-              "summary": "Meta has issued a patch for its Muse macOS app following the discovery of a zero-day vulnerability that could allow someone to take control of the AI agent. The bug found by security researcher Patrick Wardle utilized an undocumented Muse…",
-              "ethics_tags": [],
-              "trend_score": 128
-            },
-            {
-              "title": "Context Bombs Trick Autonomous Qwen AI Agents Into Stopping Cyberattacks",
-              "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1CcGtlUmRvcmpVOGx6UDFGaW5TU04zcDZRV2JhQmk0bG85WmplYmdXVW05R2t0dEY4aFVMZG92QUR5SFRpaHdqQzlZNGZJbzYzOWxObFY5VdIBXEFVX3lxTE8zak80bmZuVGQtQUFHOTlPS19GaWQxVUNEbGNJZkM4amo1NXh0ODdoRS1NUmo0eTVBWHJyYVZfbnVmaGRDOGxVV0k0ZFliVDVzRklISzNfRUlqWFRP?oc=5",
-              "source": "CyberSecurityNews",
-              "category": "labs",
-              "category_label": "Labs & Industry",
-              "published_display": "Sep 22, 2026",
-              "published_iso": "2026-09-22T10:25:25Z",
-              "summary": "Context Bombs Trick Autonomous Qwen AI Agents Into Stopping Cyberattacks CyberSecurityNews",
-              "ethics_tags": [],
-              "trend_score": 128
-            },
             {
               "title": "Measurements for understanding the pace of AI development inside frontier labs",
               "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1hSlNaZU5CMXdjOERiMTltcEVxMXduUXVrT1UtSExlUGlUUHFCc2huOVM0NEY0cmhCMVF6X0o2QjMwUUZOQkhuSGlHVjFlaWdKelR3ZTEzUV9SRzRIdkxhV3RfQ0N2OUI5U214a0RqZjh3c2MxUktr?oc=5",
@@ -397,10 +338,36 @@
               "category": "labs",
               "category_label": "Labs & Industry",
               "published_display": "Sep 22, 2026",
-              "published_iso": "2026-09-22T15:32:34Z",
+              "published_iso": "2026-09-22T18:36:16Z",
               "summary": "Measurements for understanding the pace of AI development inside frontier labs Anthropic",
               "ethics_tags": [],
-              "trend_score": 66
+              "trend_score": 64
+            },
+            {
+              "title": "Microsoft AI boss calls out Anthropic for chasing AI consciousness, reigniting old debate",
+              "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOWTdvZ3ZjQVR2bVg4ZmpfYU9Rc2MtYXZLQVM1Z2xRWWI2SUdFYldlNTdfTndxeFRIOXgyRnVadG12RGJFV09iLV9peGVRRFVRLXkwQUhsckdhcFNIbDRaZGxmS3dJWUVpSXkxd1BidDdWQTBFQmxTaERoNmZLWm12SnpMZENlRjkzQmFkMzln?oc=5",
+              "source": "Mashable",
+              "category": "labs",
+              "category_label": "Labs & Industry",
+              "published_display": "Sep 22, 2026",
+              "published_iso": "2026-09-22T18:33:01Z",
+              "summary": "Microsoft AI boss calls out Anthropic for chasing AI consciousness, reigniting old debate Mashable",
+              "ethics_tags": [],
+              "trend_score": 64
+            },
+            {
+              "title": "Trump says the US is officially renaming AI to ‘super intelligence’",
+              "link": "https://www.theverge.com/ai-artificial-intelligence/998816/donald-trump-ai-super-intelligence",
+              "source": "The Verge",
+              "category": "labs",
+              "category_label": "Labs & Industry",
+              "published_display": "Sep 22, 2026",
+              "published_iso": "2026-09-22T17:46:40Z",
+              "summary": "In a speech Tuesday morning at the UN General Assembly, Donald Trump railed against Iran, \"globalists,\" climate change, and transgender people while also claiming that the US is now \"officially\" renaming artificial intelligence to \"super…",
+              "ethics_tags": [
+                "Energy & Environment"
+              ],
+              "trend_score": 0
             }
           ]
         }
@@ -409,6 +376,30 @@
     "research": {
       "label": "Research & Papers",
       "items": [
+        {
+          "title": "Anthropic Releases a New A.I. Model, Opus 5.5, Amid Safety Debate",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNYl82VnlnNDZ1ZElxSE9RMmlPZ29FSjVleTBLZG9SYzRxc0FXRXpWWmRqekhENWtKdXdNX2ZGOFdCcGZjZVFHMWc1a3hLcGRtZUNmaU5DMmlHbzZIX3hWbTlTWklXU3c5LXpuMjB6YUtNY1Z4RTBDTlZON1BlejZ3RUFR?oc=5",
+          "source": "The New York Times",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T18:06:39Z",
+          "summary": "Anthropic Releases a New A.I. Model, Opus 5.5, Amid Safety Debate The New York Times",
+          "ethics_tags": [],
+          "trend_score": 157
+        },
+        {
+          "title": "AI research focuses on optimizing herd growth",
+          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPUlNpaUQyNEVOVDhLWE9pTlRXOTd5ekQ1QUFvR21qd2haT1pVWjBUY1QyQ1NjQlQ5TGVuYUJhUE9VWVh0M1ZDWFhHVnVXOTl1WTJSVGMzMWcwZDVhMnIzNGVMUDdwMzRmTDhsZ1Y2ZTZMSXpVZDZiMGVTUXhpeTk5QkRlbFU?oc=5",
+          "source": "IANR News",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T16:55:35Z",
+          "summary": "AI research focuses on optimizing herd growth IANR News",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
         {
           "title": "Tencent Stock Jumps After New AI Model Takes on Alibaba",
           "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOdzRtWFJHYUdRaVUtVUxwc1EtZy1GLWRvb253MzF5UVUxcmpGQXlwSS1lU3ZoR2hYOGpaaUg2cnB4VzZObXVDX0RHRzhtbXJyc3N4SnpmQzRlb1FCTUpteXRqWF85U1dyTmZLbzRWdmh2NUlVc1lHS28yREFTcGhjMElOZ28xd0toOWJZd2wxRzlFam1EYkx1d1RjVEh3TlRoeWZJT2N0bVZEbkJvS05aRkxwdVFMZw?oc=5",
@@ -424,12 +415,12 @@
         {
           "title": "Closing the Gap Between Advanced Robotics and AI Research for Real-World Deployment",
           "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQY1g5QmdkWWJ6YTl0dE1vak0zSFA4LXVzd2JXRXZRWW9mQTZ5elpZVW1xcHF4SnpJMVkwb29LNEdjZjEzajBIclpKMHdtekxJc3Jzc2VHOHl3OWJEdS04OW84a19XR0o1Z1RZQnlBNUZiekhrLUc5RHFXWnJOUVQyWjJJT3dEYklyTEsxOEhtVms5SnpaUkdDWnQ0elY1YUJWbk5TVlkxckRQYjVud3BDZy0wNnNmamVKSXU4NWlWOW5xMllUTVlZWDNFS2VFSzRVLTh3dw?oc=5",
-          "source": "Robotics Tomorrow",
+          "source": "roboticstomorrow.com",
           "category": "research",
           "category_label": "Research & Papers",
           "published_display": "Sep 22, 2026",
           "published_iso": "2026-09-22T12:39:38Z",
-          "summary": "Closing the Gap Between Advanced Robotics and AI Research for Real-World Deployment Robotics Tomorrow",
+          "summary": "Closing the Gap Between Advanced Robotics and AI Research for Real-World Deployment roboticstomorrow.com",
           "ethics_tags": [],
           "trend_score": 0
         },
@@ -442,6 +433,18 @@
           "published_display": "Sep 22, 2026",
           "published_iso": "2026-09-22T12:02:47Z",
           "summary": "Marist University and IBM Launch Innovation Incubator with IBM z17, Expanding 50-Year Partnership to Advance AI Research and Student Career Readiness IBM Newsroom",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "Jev: A New AI Model That Refuses to Write Text Has Developers Hooked",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPandhb2xKWHh6SzdFY3lXcVVmMGIyWUxsNWE3UG8wbmkzRm14R2RqNzFxTmlQWHFUWW5veUZMZHdNLVRtak5vT01IbHpqc2dUcUtKREx5OEhSeEc3UUdJcS1uUlJnYWR4RDM4WHpGdGtDLTZ5UGZ2cjBYVnBrX3llRzRTTm9ZN1pOMDhtMWNoVm1fSFM3T3dvTEs2bUxOdmc?oc=5",
+          "source": "trendingtopics.eu",
+          "category": "research",
+          "category_label": "Research & Papers",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T08:32:06Z",
+          "summary": "Jev: A New AI Model That Refuses to Write Text Has Developers Hooked trendingtopics.eu",
           "ethics_tags": [],
           "trend_score": 0
         },
@@ -542,80 +545,44 @@
           "summary": "arXiv:2609.21149v1 Announce Type: new Abstract: Before patients can use AI-assisted psychiatric intake systems, health systems need practical ways to routinely evaluate these tools against their clinical standards for quality assurance.…",
           "ethics_tags": [],
           "trend_score": 0
-        },
-        {
-          "title": "Can Agents Design Better Chips with a Higher Level Abstraction?",
-          "link": "https://arxiv.org/abs/2609.21157",
-          "source": "arXiv",
-          "category": "research",
-          "category_label": "Research & Papers",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T04:00:00Z",
-          "summary": "arXiv:2609.21157v1 Announce Type: new Abstract: Large Language Model (LLM) agents are increasingly being explored for chip design, but most existing approaches operate directly at RTL. We ask whether agents can design better chips by…",
-          "ethics_tags": [],
-          "trend_score": 168
-        },
-        {
-          "title": "SpecOpt: Contact-Diff Reasoning for Agentic Molecule Optimization Toward Binding Specificity",
-          "link": "https://arxiv.org/abs/2609.21165",
-          "source": "arXiv",
-          "category": "research",
-          "category_label": "Research & Papers",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T04:00:00Z",
-          "summary": "arXiv:2609.21165v1 Announce Type: new Abstract: Off-target protein binding is a major source of adverse effects for small-molecule drugs, yet most structure-based molecular design methods focus on generating selective compounds de novo…",
-          "ethics_tags": [],
-          "trend_score": 32
-        },
-        {
-          "title": "Implicit Rule Induction with Test-Time Task Embeddings in ARC-like Tasks",
-          "link": "https://arxiv.org/abs/2609.21181",
-          "source": "arXiv",
-          "category": "research",
-          "category_label": "Research & Papers",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T04:00:00Z",
-          "summary": "arXiv:2609.21181v1 Announce Type: new Abstract: The Abstraction and Reasoning Corpus and related benchmarks evaluate whether AI models can solve novel reasoning tasks, but often leave unclear whether success reflects inference of the…",
-          "ethics_tags": [],
-          "trend_score": 63
         }
       ],
       "folder_items": [
         {
-          "title": "Can Agents Design Better Chips with a Higher Level Abstraction?",
-          "link": "https://arxiv.org/abs/2609.21157",
-          "source": "arXiv",
+          "title": "Anthropic Releases a New A.I. Model, Opus 5.5, Amid Safety Debate",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNYl82VnlnNDZ1ZElxSE9RMmlPZ29FSjVleTBLZG9SYzRxc0FXRXpWWmRqekhENWtKdXdNX2ZGOFdCcGZjZVFHMWc1a3hLcGRtZUNmaU5DMmlHbzZIX3hWbTlTWklXU3c5LXpuMjB6YUtNY1Z4RTBDTlZON1BlejZ3RUFR?oc=5",
+          "source": "The New York Times",
           "category": "research",
           "category_label": "Research & Papers",
           "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T04:00:00Z",
-          "summary": "arXiv:2609.21157v1 Announce Type: new Abstract: Large Language Model (LLM) agents are increasingly being explored for chip design, but most existing approaches operate directly at RTL. We ask whether agents can design better chips by…",
+          "published_iso": "2026-09-22T18:06:39Z",
+          "summary": "Anthropic Releases a New A.I. Model, Opus 5.5, Amid Safety Debate The New York Times",
           "ethics_tags": [],
-          "trend_score": 168
+          "trend_score": 157
         },
         {
-          "title": "Implicit Rule Induction with Test-Time Task Embeddings in ARC-like Tasks",
-          "link": "https://arxiv.org/abs/2609.21181",
-          "source": "arXiv",
+          "title": "AI research focuses on optimizing herd growth",
+          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPUlNpaUQyNEVOVDhLWE9pTlRXOTd5ekQ1QUFvR21qd2haT1pVWjBUY1QyQ1NjQlQ5TGVuYUJhUE9VWVh0M1ZDWFhHVnVXOTl1WTJSVGMzMWcwZDVhMnIzNGVMUDdwMzRmTDhsZ1Y2ZTZMSXpVZDZiMGVTUXhpeTk5QkRlbFU?oc=5",
+          "source": "IANR News",
           "category": "research",
           "category_label": "Research & Papers",
           "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T04:00:00Z",
-          "summary": "arXiv:2609.21181v1 Announce Type: new Abstract: The Abstraction and Reasoning Corpus and related benchmarks evaluate whether AI models can solve novel reasoning tasks, but often leave unclear whether success reflects inference of the…",
+          "published_iso": "2026-09-22T16:55:35Z",
+          "summary": "AI research focuses on optimizing herd growth IANR News",
           "ethics_tags": [],
-          "trend_score": 63
+          "trend_score": 0
         },
         {
-          "title": "SpecOpt: Contact-Diff Reasoning for Agentic Molecule Optimization Toward Binding Specificity",
-          "link": "https://arxiv.org/abs/2609.21165",
-          "source": "arXiv",
+          "title": "Tencent Stock Jumps After New AI Model Takes on Alibaba",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOdzRtWFJHYUdRaVUtVUxwc1EtZy1GLWRvb253MzF5UVUxcmpGQXlwSS1lU3ZoR2hYOGpaaUg2cnB4VzZObXVDX0RHRzhtbXJyc3N4SnpmQzRlb1FCTUpteXRqWF85U1dyTmZLbzRWdmh2NUlVc1lHS28yREFTcGhjMElOZ28xd0toOWJZd2wxRzlFam1EYkx1d1RjVEh3TlRoeWZJT2N0bVZEbkJvS05aRkxwdVFMZw?oc=5",
+          "source": "TradingView",
           "category": "research",
           "category_label": "Research & Papers",
           "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T04:00:00Z",
-          "summary": "arXiv:2609.21165v1 Announce Type: new Abstract: Off-target protein binding is a major source of adverse effects for small-molecule drugs, yet most structure-based molecular design methods focus on generating selective compounds de novo…",
+          "published_iso": "2026-09-22T12:43:41Z",
+          "summary": "Tencent Stock Jumps After New AI Model Takes on Alibaba TradingView",
           "ethics_tags": [],
-          "trend_score": 32
+          "trend_score": 0
         }
       ],
       "subcategories": [
@@ -625,16 +592,16 @@
           "count": 3,
           "folder_items": [
             {
-              "title": "Implicit Rule Induction with Test-Time Task Embeddings in ARC-like Tasks",
-              "link": "https://arxiv.org/abs/2609.21181",
-              "source": "arXiv",
+              "title": "Anthropic Releases a New A.I. Model, Opus 5.5, Amid Safety Debate",
+              "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNYl82VnlnNDZ1ZElxSE9RMmlPZ29FSjVleTBLZG9SYzRxc0FXRXpWWmRqekhENWtKdXdNX2ZGOFdCcGZjZVFHMWc1a3hLcGRtZUNmaU5DMmlHbzZIX3hWbTlTWklXU3c5LXpuMjB6YUtNY1Z4RTBDTlZON1BlejZ3RUFR?oc=5",
+              "source": "The New York Times",
               "category": "research",
               "category_label": "Research & Papers",
               "published_display": "Sep 22, 2026",
-              "published_iso": "2026-09-22T04:00:00Z",
-              "summary": "arXiv:2609.21181v1 Announce Type: new Abstract: The Abstraction and Reasoning Corpus and related benchmarks evaluate whether AI models can solve novel reasoning tasks, but often leave unclear whether success reflects inference of the…",
+              "published_iso": "2026-09-22T18:06:39Z",
+              "summary": "Anthropic Releases a New A.I. Model, Opus 5.5, Amid Safety Debate The New York Times",
               "ethics_tags": [],
-              "trend_score": 63
+              "trend_score": 157
             },
             {
               "title": "CaLR: Causal Latent Revision for Robust Diffusion Reasoning",
@@ -665,20 +632,8 @@
         {
           "key": "language",
           "label": "Language Models",
-          "count": 7,
+          "count": 6,
           "folder_items": [
-            {
-              "title": "Can Agents Design Better Chips with a Higher Level Abstraction?",
-              "link": "https://arxiv.org/abs/2609.21157",
-              "source": "arXiv",
-              "category": "research",
-              "category_label": "Research & Papers",
-              "published_display": "Sep 22, 2026",
-              "published_iso": "2026-09-22T04:00:00Z",
-              "summary": "arXiv:2609.21157v1 Announce Type: new Abstract: Large Language Model (LLM) agents are increasingly being explored for chip design, but most existing approaches operate directly at RTL. We ask whether agents can design better chips by…",
-              "ethics_tags": [],
-              "trend_score": 168
-            },
             {
               "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
               "link": "https://arxiv.org/abs/2609.20971",
@@ -702,33 +657,38 @@
               "summary": "arXiv:2609.20974v1 Announce Type: new Abstract: In Mixture-of-Experts language models, the router typically selects and weights experts based on the token's hidden state, utilizing limited contextual information. We propose Attention-Aware…",
               "ethics_tags": [],
               "trend_score": 0
-            }
-          ]
-        },
-        {
-          "key": "agents",
-          "label": "Agents & Reasoning",
-          "count": 1,
-          "folder_items": [
+            },
             {
-              "title": "SpecOpt: Contact-Diff Reasoning for Agentic Molecule Optimization Toward Binding Specificity",
-              "link": "https://arxiv.org/abs/2609.21165",
+              "title": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers",
+              "link": "https://arxiv.org/abs/2609.21061",
               "source": "arXiv",
               "category": "research",
               "category_label": "Research & Papers",
               "published_display": "Sep 22, 2026",
               "published_iso": "2026-09-22T04:00:00Z",
-              "summary": "arXiv:2609.21165v1 Announce Type: new Abstract: Off-target protein binding is a major source of adverse effects for small-molecule drugs, yet most structure-based molecular design methods focus on generating selective compounds de novo…",
+              "summary": "arXiv:2609.21061v1 Announce Type: new Abstract: Automatic target recognition (ATR) with synthetic aperture sonar (SAS) supports advanced naval capabilities, but deep learning is constrained by scarce target imagery, background clutter, and…",
               "ethics_tags": [],
-              "trend_score": 32
+              "trend_score": 0
             }
           ]
         },
         {
           "key": "applied",
           "label": "Applied AI",
-          "count": 3,
+          "count": 5,
           "folder_items": [
+            {
+              "title": "AI research focuses on optimizing herd growth",
+              "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPUlNpaUQyNEVOVDhLWE9pTlRXOTd5ekQ1QUFvR21qd2haT1pVWjBUY1QyQ1NjQlQ5TGVuYUJhUE9VWVh0M1ZDWFhHVnVXOTl1WTJSVGMzMWcwZDVhMnIzNGVMUDdwMzRmTDhsZ1Y2ZTZMSXpVZDZiMGVTUXhpeTk5QkRlbFU?oc=5",
+              "source": "IANR News",
+              "category": "research",
+              "category_label": "Research & Papers",
+              "published_display": "Sep 22, 2026",
+              "published_iso": "2026-09-22T16:55:35Z",
+              "summary": "AI research focuses on optimizing herd growth IANR News",
+              "ethics_tags": [],
+              "trend_score": 0
+            },
             {
               "title": "Tencent Stock Jumps After New AI Model Takes on Alibaba",
               "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOdzRtWFJHYUdRaVUtVUxwc1EtZy1GLWRvb253MzF5UVUxcmpGQXlwSS1lU3ZoR2hYOGpaaUg2cnB4VzZObXVDX0RHRzhtbXJyc3N4SnpmQzRlb1FCTUpteXRqWF85U1dyTmZLbzRWdmh2NUlVc1lHS28yREFTcGhjMElOZ28xd0toOWJZd2wxRzlFam1EYkx1d1RjVEh3TlRoeWZJT2N0bVZEbkJvS05aRkxwdVFMZw?oc=5",
@@ -744,24 +704,12 @@
             {
               "title": "Closing the Gap Between Advanced Robotics and AI Research for Real-World Deployment",
               "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQY1g5QmdkWWJ6YTl0dE1vak0zSFA4LXVzd2JXRXZRWW9mQTZ5elpZVW1xcHF4SnpJMVkwb29LNEdjZjEzajBIclpKMHdtekxJc3Jzc2VHOHl3OWJEdS04OW84a19XR0o1Z1RZQnlBNUZiekhrLUc5RHFXWnJOUVQyWjJJT3dEYklyTEsxOEhtVms5SnpaUkdDWnQ0elY1YUJWbk5TVlkxckRQYjVud3BDZy0wNnNmamVKSXU4NWlWOW5xMllUTVlZWDNFS2VFSzRVLTh3dw?oc=5",
-              "source": "Robotics Tomorrow",
+              "source": "roboticstomorrow.com",
               "category": "research",
               "category_label": "Research & Papers",
               "published_display": "Sep 22, 2026",
               "published_iso": "2026-09-22T12:39:38Z",
-              "summary": "Closing the Gap Between Advanced Robotics and AI Research for Real-World Deployment Robotics Tomorrow",
-              "ethics_tags": [],
-              "trend_score": 0
-            },
-            {
-              "title": "Marist University and IBM Launch Innovation Incubator with IBM z17, Expanding 50-Year Partnership to Advance AI Research and Student Career Readiness",
-              "link": "https://news.google.com/rss/articles/CBMikwJBVV95cUxQcFVGLWd5VVkzdThjY2FobmlxUm1zclhXVWZpM3NIcHpFS2tfdHJjYm5raGdHNEVzYk1oNkEyWlhFTGlieENENUo0UmRyNHRFdzRCS3d3enY2TG1FY3N5UmJrOU4wQlJoZWRid3N5SHJBWVRjZHhjX2gycWhVeFRndWNjZXFRMXBfQjZzeS1yUkw4eFdHX0V2eFVXV0JBY0x0TUQzNTg3b1ljV2Exelp4Y2xqWHZUM2xFOXlESnN1cFJudS1ucmJQWDdnS0R4bDFrR2N3YlJ1Wjd1SXZudGV5bTFOTXUzcmNEbU4zNVd6YWVGUGxIMkZtblczaXFGRmZ6MTlrU2tIbF9iNU00ZE1hSlZLYw?oc=5",
-              "source": "IBM Newsroom",
-              "category": "research",
-              "category_label": "Research & Papers",
-              "published_display": "Sep 22, 2026",
-              "published_iso": "2026-09-22T12:02:47Z",
-              "summary": "Marist University and IBM Launch Innovation Incubator with IBM z17, Expanding 50-Year Partnership to Advance AI Research and Student Career Readiness IBM Newsroom",
+              "summary": "Closing the Gap Between Advanced Robotics and AI Research for Real-World Deployment roboticstomorrow.com",
               "ethics_tags": [],
               "trend_score": 0
             }
@@ -773,16 +721,139 @@
       "label": "Community & Discussion",
       "items": [
         {
-          "title": "RetentionVolt MCP – Giving AI agents video editing references",
-          "link": "https://retentionvolt.com",
+          "title": "Open-Weight AI Models Seize Token Lead, but Proprietary Still Make the Money",
+          "link": "https://techstrong.ai/generative-ai/open-weight-ai-models-seize-token-lead-but-proprietary-systems-still-make-the-money/",
           "source": "Web",
           "category": "community",
           "category_label": "Community & Discussion",
           "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T16:37:47Z",
-          "summary": "1 points, 0 comments on Hacker News.",
+          "published_iso": "2026-09-22T20:55:18Z",
+          "summary": "2 points, 0 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "Enough Reason to Act: AI safety needs policy not dismissal",
+          "link": "https://substack.norabble.com/p/enough-reason-to-act",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T20:52:42Z",
+          "summary": "2 points, 0 comments on Hacker News.",
+          "ethics_tags": [
+            "Safety & Alignment",
+            "Regulation & Governance"
+          ],
+          "trend_score": 93
+        },
+        {
+          "title": "LLM Ass Bench",
+          "link": "https://www.assbench.com/",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T20:34:19Z",
+          "summary": "5 points, 4 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "Ask HN: When is fine-tuning a small LLM worth it?",
+          "link": "https://news.ycombinator.com/item?id=49807413",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T20:11:30Z",
+          "summary": "4 points, 3 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "Show HN: Shrewd – what I learned distilling LLM labels into local classifiers",
+          "link": "https://github.com/sshah03/shrewd",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T20:00:46Z",
+          "summary": "3 points, 0 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "Meta testing a 'human concierge' for its new personal AI agent, Muse",
+          "link": "https://www.reuters.com/business/meta-testing-human-concierge-its-new-personal-ai-agent-muse-2026-09-22/",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T19:35:04Z",
+          "summary": "3 points, 0 comments on Hacker News.",
           "ethics_tags": [],
           "trend_score": 146
+        },
+        {
+          "title": "Show HN: junkDrawer.ai – Browse eBay with AI Agent and Dynamic Filtering",
+          "link": "https://www.junkdrawer.ai",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T19:29:14Z",
+          "summary": "1 points, 0 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 129
+        },
+        {
+          "title": "Show HN: Lightdrift / Image search for AI agents through API and MCP",
+          "link": "https://lightdrift.ai",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T18:50:54Z",
+          "summary": "1 points, 0 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 129
+        },
+        {
+          "title": "Joint statement by international leaders on control of frontier AI models",
+          "link": "https://www.government.nl/documents/2026/09/22/a-call-for-control-of-frontier-ai-models",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T18:43:17Z",
+          "summary": "2 points, 0 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "Reviewing Your Blog Post with an LLM",
+          "link": "https://writethatblog.substack.com/p/reviewing-your-blog-post-llm",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T17:50:48Z",
+          "summary": "2 points, 1 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 0
+        },
+        {
+          "title": "Anthropic now offering limit resets like Codex",
+          "link": "https://twitter.com/ClaudeDevs/status/2102438803013333469",
+          "source": "Web",
+          "category": "community",
+          "category_label": "Community & Discussion",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T17:02:14Z",
+          "summary": "2 points, 0 comments on Hacker News.",
+          "ethics_tags": [],
+          "trend_score": 64
         },
         {
           "title": "Show HN: What's Next – end a Claude Code turn with a choice, not prose",
@@ -792,21 +863,9 @@
           "category_label": "Community & Discussion",
           "published_display": "Sep 22, 2026",
           "published_iso": "2026-09-22T16:35:49Z",
-          "summary": "1 points, 0 comments on Hacker News.",
+          "summary": "2 points, 1 comments on Hacker News.",
           "ethics_tags": [],
-          "trend_score": 19
-        },
-        {
-          "title": "How we share, review, and update AI agent skills",
-          "link": "https://medium.com/@ali.raza_25708/how-do-you-distribute-and-collaborate-on-agent-skills-in-enterprise-settings-bdb7097dff60",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T16:20:25Z",
-          "summary": "1 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 128
+          "trend_score": 20
         },
         {
           "title": "Are LLMs still surprisingly bad at some simple tasks?",
@@ -831,154 +890,44 @@
           "summary": "2 points, 0 comments on Hacker News.",
           "ethics_tags": [],
           "trend_score": 0
-        },
-        {
-          "title": "Rpi – a composable LLM agent SDK in Rust",
-          "link": "https://github.com/bigfish1913/pi-rust",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T15:50:19Z",
-          "summary": "1 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 128
-        },
-        {
-          "title": "I deleted slow, expensive LLM turns in coding agents with Jev",
-          "link": "https://tawfeks.github.io/decisionkit/",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T15:44:48Z",
-          "summary": "1 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 128
-        },
-        {
-          "title": "Show HN: CircuitPilot – We built a physics engine to auto-route PCBs using LLMs",
-          "link": "https://news.ycombinator.com/item?id=49802378",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T14:55:08Z",
-          "summary": "3 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 0
-        },
-        {
-          "title": "Show HN: DrivingBench – Frontier LLMs Driving a Real Toyota Corolla",
-          "link": "https://drivingbench.com/",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T14:29:43Z",
-          "summary": "3 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 0
-        },
-        {
-          "title": "LLM Time Travel Visualization Proposal",
-          "link": "https://gwern.net/blog/2026/llm-timetravel",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T14:22:59Z",
-          "summary": "1 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 0
-        },
-        {
-          "title": "I am embarassed by how good is ChatGPT, and I have never paid one penny",
-          "link": "https://news.ycombinator.com/item?id=49801793",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T14:22:51Z",
-          "summary": "1 points, 3 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 0
-        },
-        {
-          "title": "Xiaomi MiMo v2.6 Pro: New best open-weight LLM with simple design",
-          "link": "https://sebastianraschka.com/blog/2026/mimo-v2-6-pro-architecture-training-notes.html",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T14:21:34Z",
-          "summary": "3 points, 1 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 0
-        },
-        {
-          "title": "Physics in the Age of LLMs",
-          "link": "https://ozamram.substack.com/p/physics-in-the-age-of-llms",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T14:11:56Z",
-          "summary": "1 points, 0 comments on Hacker News.",
-          "ethics_tags": [],
-          "trend_score": 0
-        },
-        {
-          "title": "Jevlang: Policy Engine for LLM Decisions",
-          "link": "https://jevlang.sh/",
-          "source": "Web",
-          "category": "community",
-          "category_label": "Community & Discussion",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T14:00:28Z",
-          "summary": "1 points, 0 comments on Hacker News.",
-          "ethics_tags": [
-            "Regulation & Governance"
-          ],
-          "trend_score": 0
         }
       ],
       "folder_items": [
         {
-          "title": "RetentionVolt MCP – Giving AI agents video editing references",
-          "link": "https://retentionvolt.com",
+          "title": "Meta testing a 'human concierge' for its new personal AI agent, Muse",
+          "link": "https://www.reuters.com/business/meta-testing-human-concierge-its-new-personal-ai-agent-muse-2026-09-22/",
           "source": "Web",
           "category": "community",
           "category_label": "Community & Discussion",
           "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T16:37:47Z",
-          "summary": "1 points, 0 comments on Hacker News.",
+          "published_iso": "2026-09-22T19:35:04Z",
+          "summary": "3 points, 0 comments on Hacker News.",
           "ethics_tags": [],
           "trend_score": 146
         },
         {
-          "title": "How we share, review, and update AI agent skills",
-          "link": "https://medium.com/@ali.raza_25708/how-do-you-distribute-and-collaborate-on-agent-skills-in-enterprise-settings-bdb7097dff60",
+          "title": "Show HN: junkDrawer.ai – Browse eBay with AI Agent and Dynamic Filtering",
+          "link": "https://www.junkdrawer.ai",
           "source": "Web",
           "category": "community",
           "category_label": "Community & Discussion",
           "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T16:20:25Z",
+          "published_iso": "2026-09-22T19:29:14Z",
           "summary": "1 points, 0 comments on Hacker News.",
           "ethics_tags": [],
-          "trend_score": 128
+          "trend_score": 129
         },
         {
-          "title": "Rpi – a composable LLM agent SDK in Rust",
-          "link": "https://github.com/bigfish1913/pi-rust",
+          "title": "Show HN: Lightdrift / Image search for AI agents through API and MCP",
+          "link": "https://lightdrift.ai",
           "source": "Web",
           "category": "community",
           "category_label": "Community & Discussion",
           "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T15:50:19Z",
+          "published_iso": "2026-09-22T18:50:54Z",
           "summary": "1 points, 0 comments on Hacker News.",
           "ethics_tags": [],
-          "trend_score": 128
+          "trend_score": 129
         }
       ],
       "subcategories": [
@@ -988,16 +937,28 @@
           "count": 4,
           "folder_items": [
             {
-              "title": "I deleted slow, expensive LLM turns in coding agents with Jev",
-              "link": "https://tawfeks.github.io/decisionkit/",
+              "title": "Show HN: junkDrawer.ai – Browse eBay with AI Agent and Dynamic Filtering",
+              "link": "https://www.junkdrawer.ai",
               "source": "Web",
               "category": "community",
               "category_label": "Community & Discussion",
               "published_display": "Sep 22, 2026",
-              "published_iso": "2026-09-22T15:44:48Z",
+              "published_iso": "2026-09-22T19:29:14Z",
               "summary": "1 points, 0 comments on Hacker News.",
               "ethics_tags": [],
-              "trend_score": 128
+              "trend_score": 129
+            },
+            {
+              "title": "Show HN: Lightdrift / Image search for AI agents through API and MCP",
+              "link": "https://lightdrift.ai",
+              "source": "Web",
+              "category": "community",
+              "category_label": "Community & Discussion",
+              "published_display": "Sep 22, 2026",
+              "published_iso": "2026-09-22T18:50:54Z",
+              "summary": "1 points, 0 comments on Hacker News.",
+              "ethics_tags": [],
+              "trend_score": 129
             },
             {
               "title": "Show HN: What's Next – end a Claude Code turn with a choice, not prose",
@@ -1007,64 +968,86 @@
               "category_label": "Community & Discussion",
               "published_display": "Sep 22, 2026",
               "published_iso": "2026-09-22T16:35:49Z",
-              "summary": "1 points, 0 comments on Hacker News.",
+              "summary": "2 points, 1 comments on Hacker News.",
               "ethics_tags": [],
-              "trend_score": 19
-            },
+              "trend_score": 20
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "Industry Debate",
+          "count": 2,
+          "folder_items": [
             {
-              "title": "Show HN: CircuitPilot – We built a physics engine to auto-route PCBs using LLMs",
-              "link": "https://news.ycombinator.com/item?id=49802378",
+              "title": "Meta testing a 'human concierge' for its new personal AI agent, Muse",
+              "link": "https://www.reuters.com/business/meta-testing-human-concierge-its-new-personal-ai-agent-muse-2026-09-22/",
               "source": "Web",
               "category": "community",
               "category_label": "Community & Discussion",
               "published_display": "Sep 22, 2026",
-              "published_iso": "2026-09-22T14:55:08Z",
+              "published_iso": "2026-09-22T19:35:04Z",
               "summary": "3 points, 0 comments on Hacker News.",
               "ethics_tags": [],
-              "trend_score": 0
+              "trend_score": 146
+            },
+            {
+              "title": "Anthropic now offering limit resets like Codex",
+              "link": "https://twitter.com/ClaudeDevs/status/2102438803013333469",
+              "source": "Web",
+              "category": "community",
+              "category_label": "Community & Discussion",
+              "published_display": "Sep 22, 2026",
+              "published_iso": "2026-09-22T17:02:14Z",
+              "summary": "2 points, 0 comments on Hacker News.",
+              "ethics_tags": [],
+              "trend_score": 64
             }
           ]
         },
         {
           "key": "pulse",
           "label": "Community Pulse",
-          "count": 10,
+          "count": 8,
           "folder_items": [
             {
-              "title": "RetentionVolt MCP – Giving AI agents video editing references",
-              "link": "https://retentionvolt.com",
+              "title": "Enough Reason to Act: AI safety needs policy not dismissal",
+              "link": "https://substack.norabble.com/p/enough-reason-to-act",
               "source": "Web",
               "category": "community",
               "category_label": "Community & Discussion",
               "published_display": "Sep 22, 2026",
-              "published_iso": "2026-09-22T16:37:47Z",
-              "summary": "1 points, 0 comments on Hacker News.",
-              "ethics_tags": [],
-              "trend_score": 146
+              "published_iso": "2026-09-22T20:52:42Z",
+              "summary": "2 points, 0 comments on Hacker News.",
+              "ethics_tags": [
+                "Safety & Alignment",
+                "Regulation & Governance"
+              ],
+              "trend_score": 93
             },
             {
-              "title": "How we share, review, and update AI agent skills",
-              "link": "https://medium.com/@ali.raza_25708/how-do-you-distribute-and-collaborate-on-agent-skills-in-enterprise-settings-bdb7097dff60",
+              "title": "Open-Weight AI Models Seize Token Lead, but Proprietary Still Make the Money",
+              "link": "https://techstrong.ai/generative-ai/open-weight-ai-models-seize-token-lead-but-proprietary-systems-still-make-the-money/",
               "source": "Web",
               "category": "community",
               "category_label": "Community & Discussion",
               "published_display": "Sep 22, 2026",
-              "published_iso": "2026-09-22T16:20:25Z",
-              "summary": "1 points, 0 comments on Hacker News.",
+              "published_iso": "2026-09-22T20:55:18Z",
+              "summary": "2 points, 0 comments on Hacker News.",
               "ethics_tags": [],
-              "trend_score": 128
+              "trend_score": 0
             },
             {
-              "title": "Rpi – a composable LLM agent SDK in Rust",
-              "link": "https://github.com/bigfish1913/pi-rust",
+              "title": "LLM Ass Bench",
+              "link": "https://www.assbench.com/",
               "source": "Web",
               "category": "community",
               "category_label": "Community & Discussion",
               "published_display": "Sep 22, 2026",
-              "published_iso": "2026-09-22T15:50:19Z",
-              "summary": "1 points, 0 comments on Hacker News.",
+              "published_iso": "2026-09-22T20:34:19Z",
+              "summary": "5 points, 4 comments on Hacker News.",
               "ethics_tags": [],
-              "trend_score": 128
+              "trend_score": 0
             }
           ]
         }
@@ -1075,7 +1058,7 @@
       "items": [
         {
           "title": "Ex-Anthropic Staffers’ Self-Improving AI Startup in Talks to Raise at $5 Billion Value",
-          "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNcnpCRGt2bnpramtmWnRNZlhUZC1ueVBjSUNpZGZ2al9sbGlPNUhZbWR2bDNGUWk4eUtGN1ZJdU5CUVNxdjRGSE44Wi1vM1ZrYlZzb0YwRlNaWklQV0JqOXdYdVpmQkF4VlhOeWtDWHJQNzZYTlFlbzlYOFpLNXQwVHRCY3IwZ3VHT1BpZi14bkh3SmVRaFlsVy1hWGt0UzVVelFZM080bmhWSFB2VzZVMS1PRExsMV9fbUJXaUw2dzA3TlZDNF9hbHF0ZFg0d1lYLU44elB4REpKVHc?oc=5",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQNEttTkpIMmxhV3RwcFQ5R2pMTUV0NUpPNmhBbUx6bWpNZFpkMmJhWE9ka29ObnNZLW1MTS1ETHZITmNJVjBzR2tNVWd6bndyYndPTTA0MXB0Y2hCNzhQbFZNQU5HM1FnZkx2MFAzQ3h1LW9CM0xGUW0zVkI2MU9QYm1GRGhtb2xPU1hFVDU4OWlVeXlzeG44VkU0RFM0RWJ6OEF2LVhzeW5CS3hBY0dId3pUXzJFbG92cHNYeA?oc=5",
           "source": "Bloomberg.com",
           "category": "business",
           "category_label": "Business & Funding",
@@ -1083,7 +1066,19 @@
           "published_iso": "2026-09-22T16:16:48Z",
           "summary": "Ex-Anthropic Staffers’ Self-Improving AI Startup in Talks to Raise at $5 Billion Value Bloomberg.com",
           "ethics_tags": [],
-          "trend_score": 66
+          "trend_score": 64
+        },
+        {
+          "title": "Too many AI chips, too few customers",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1rM2lHYmNlX2tKS1QxWW81S2N4VG9GQ1RDbHpvQ3Vtb0syRDJ6U2xtZGZ0dUpwX2trT1NyaTFoZmZwUUtENlN1VGlFQi0zNThJejdxM0Z4V2hIcEl2cG9HY1VBdFJVeXpKWlBZbEpUM0dSRHhBNkE?oc=5",
+          "source": "Jon Peddie Research",
+          "category": "business",
+          "category_label": "Business & Funding",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T14:02:53Z",
+          "summary": "Too many AI chips, too few customers Jon Peddie Research",
+          "ethics_tags": [],
+          "trend_score": 37
         },
         {
           "title": "Apple May Return to Servers With Its Own AI Chips. Nvidia Could Still Get Paid",
@@ -1095,7 +1090,7 @@
           "published_iso": "2026-09-22T12:44:20Z",
           "summary": "Apple May Return to Servers With Its Own AI Chips. Nvidia Could Still Get Paid Yahoo Finance",
           "ethics_tags": [],
-          "trend_score": 64
+          "trend_score": 59
         },
         {
           "title": "Nvidia and AMD Can't Make AI Chips Without This Growth Stock. Here's Why It Could Soar.",
@@ -1107,7 +1102,7 @@
           "published_iso": "2026-09-22T12:35:00Z",
           "summary": "Nvidia and AMD Can't Make AI Chips Without This Growth Stock. Here's Why It Could Soar. Yahoo Finance",
           "ethics_tags": [],
-          "trend_score": 64
+          "trend_score": 59
         },
         {
           "title": "How More Pieces Are Falling Into Place For Google's Nvidia AI Chip Challenge",
@@ -1119,7 +1114,7 @@
           "published_iso": "2026-09-22T12:00:00Z",
           "summary": "How More Pieces Are Falling Into Place For Google's Nvidia AI Chip Challenge Investor's Business Daily",
           "ethics_tags": [],
-          "trend_score": 64
+          "trend_score": 59
         },
         {
           "title": "Broadcom Edges Higher as AI Chips Target $21.7 Billion",
@@ -1131,7 +1126,7 @@
           "published_iso": "2026-09-21T18:48:12Z",
           "summary": "Broadcom Edges Higher as AI Chips Target $21.7 Billion Yahoo Finance",
           "ethics_tags": [],
-          "trend_score": 40
+          "trend_score": 37
         },
         {
           "title": "AI Chips Today - Einride NVIDIA Team Up for Autonomous Truck Expansion",
@@ -1143,7 +1138,7 @@
           "published_iso": "2026-09-21T11:37:17Z",
           "summary": "AI Chips Today - Einride NVIDIA Team Up for Autonomous Truck Expansion Yahoo Finance",
           "ethics_tags": [],
-          "trend_score": 64
+          "trend_score": 59
         },
         {
           "title": "Nvidia Stock: Are Trump Talks With China's Xi the AI Chips Catalyst It Needs?",
@@ -1155,7 +1150,7 @@
           "published_iso": "2026-09-21T10:21:00Z",
           "summary": "Nvidia Stock: Are Trump Talks With China's Xi the AI Chips Catalyst It Needs? Barron's",
           "ethics_tags": [],
-          "trend_score": 64
+          "trend_score": 59
         },
         {
           "title": "J&TC to invest $250M in South Korea glass substrate plant for AI chips",
@@ -1167,7 +1162,7 @@
           "published_iso": "2026-09-21T05:44:17Z",
           "summary": "J&TC to invest $250M in South Korea glass substrate plant for AI chips Dealroom",
           "ethics_tags": [],
-          "trend_score": 40
+          "trend_score": 37
         },
         {
           "title": "ASML (ASML) and Chip Giants like TSMC Plot a Bigger Canvas for Building AI Chips",
@@ -1179,7 +1174,7 @@
           "published_iso": "2026-09-20T21:41:29Z",
           "summary": "ASML (ASML) and Chip Giants like TSMC Plot a Bigger Canvas for Building AI Chips Yahoo Finance",
           "ethics_tags": [],
-          "trend_score": 40
+          "trend_score": 37
         },
         {
           "title": "Musk Says NVIDIA (NVDA) AI Chips Are Headed to Space With SpaceX (SPCX) Next Year",
@@ -1191,7 +1186,7 @@
           "published_iso": "2026-09-20T16:20:08Z",
           "summary": "Musk Says NVIDIA (NVDA) AI Chips Are Headed to Space With SpaceX (SPCX) Next Year Yahoo Finance",
           "ethics_tags": [],
-          "trend_score": 64
+          "trend_score": 59
         },
         {
           "title": "Huawei moves up its Ascend 960 AI chips to overtake Nvidia in China",
@@ -1203,7 +1198,7 @@
           "published_iso": "2026-09-19T16:20:38Z",
           "summary": "Huawei moves up its Ascend 960 AI chips to overtake Nvidia in China Korben",
           "ethics_tags": [],
-          "trend_score": 64
+          "trend_score": 59
         },
         {
           "title": "Samsung joins $231 million bet on Dutch AI chips",
@@ -1215,7 +1210,7 @@
           "published_iso": "2026-09-19T04:19:01Z",
           "summary": "Samsung joins $231 million bet on Dutch AI chips Aju Press",
           "ethics_tags": [],
-          "trend_score": 40
+          "trend_score": 37
         },
         {
           "title": "Huawei launches next-gen AI chips at Shanghai conference",
@@ -1227,25 +1222,13 @@
           "published_iso": "2026-09-19T00:11:49Z",
           "summary": "Huawei launches next-gen AI chips at Shanghai conference Türkiye Today",
           "ethics_tags": [],
-          "trend_score": 40
-        },
-        {
-          "title": "2 Stocks to Buy as Google Starts Selling Its AI Chips",
-          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQT1JKWGZJcXZpcHpXUE1QWU9qcFlkVGlWbDNEYkQ5SGZSLXRTaTRLbXpKOXpwNW1ZR2RyZU9nZl9VdmRFYXZTdFVmeTM0alprMDJ5b2tIeV80SWk0UElDb0w5TGdDcVB2dzFscVNDSmx1ZGR6ckRHWm5iNi1iMGtXZG0wR1ZZZkVDV29Zd1ZpN25fc2ZibHBzbXRtdUg?oc=5",
-          "source": "The Motley Fool",
-          "category": "business",
-          "category_label": "Business & Funding",
-          "published_display": "Sep 18, 2026",
-          "published_iso": "2026-09-18T20:22:00Z",
-          "summary": "2 Stocks to Buy as Google Starts Selling Its AI Chips The Motley Fool",
-          "ethics_tags": [],
-          "trend_score": 40
+          "trend_score": 37
         }
       ],
       "folder_items": [
         {
           "title": "Ex-Anthropic Staffers’ Self-Improving AI Startup in Talks to Raise at $5 Billion Value",
-          "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNcnpCRGt2bnpramtmWnRNZlhUZC1ueVBjSUNpZGZ2al9sbGlPNUhZbWR2bDNGUWk4eUtGN1ZJdU5CUVNxdjRGSE44Wi1vM1ZrYlZzb0YwRlNaWklQV0JqOXdYdVpmQkF4VlhOeWtDWHJQNzZYTlFlbzlYOFpLNXQwVHRCY3IwZ3VHT1BpZi14bkh3SmVRaFlsVy1hWGt0UzVVelFZM080bmhWSFB2VzZVMS1PRExsMV9fbUJXaUw2dzA3TlZDNF9hbHF0ZFg0d1lYLU44elB4REpKVHc?oc=5",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQNEttTkpIMmxhV3RwcFQ5R2pMTUV0NUpPNmhBbUx6bWpNZFpkMmJhWE9ka29ObnNZLW1MTS1ETHZITmNJVjBzR2tNVWd6bndyYndPTTA0MXB0Y2hCNzhQbFZNQU5HM1FnZkx2MFAzQ3h1LW9CM0xGUW0zVkI2MU9QYm1GRGhtb2xPU1hFVDU4OWlVeXlzeG44VkU0RFM0RWJ6OEF2LVhzeW5CS3hBY0dId3pUXzJFbG92cHNYeA?oc=5",
           "source": "Bloomberg.com",
           "category": "business",
           "category_label": "Business & Funding",
@@ -1253,7 +1236,7 @@
           "published_iso": "2026-09-22T16:16:48Z",
           "summary": "Ex-Anthropic Staffers’ Self-Improving AI Startup in Talks to Raise at $5 Billion Value Bloomberg.com",
           "ethics_tags": [],
-          "trend_score": 66
+          "trend_score": 64
         },
         {
           "title": "Apple May Return to Servers With Its Own AI Chips. Nvidia Could Still Get Paid",
@@ -1265,7 +1248,7 @@
           "published_iso": "2026-09-22T12:44:20Z",
           "summary": "Apple May Return to Servers With Its Own AI Chips. Nvidia Could Still Get Paid Yahoo Finance",
           "ethics_tags": [],
-          "trend_score": 64
+          "trend_score": 59
         },
         {
           "title": "Nvidia and AMD Can't Make AI Chips Without This Growth Stock. Here's Why It Could Soar.",
@@ -1277,7 +1260,7 @@
           "published_iso": "2026-09-22T12:35:00Z",
           "summary": "Nvidia and AMD Can't Make AI Chips Without This Growth Stock. Here's Why It Could Soar. Yahoo Finance",
           "ethics_tags": [],
-          "trend_score": 64
+          "trend_score": 59
         }
       ],
       "subcategories": [
@@ -1296,7 +1279,7 @@
               "published_iso": "2026-09-22T12:00:00Z",
               "summary": "How More Pieces Are Falling Into Place For Google's Nvidia AI Chip Challenge Investor's Business Daily",
               "ethics_tags": [],
-              "trend_score": 64
+              "trend_score": 59
             },
             {
               "title": "J&TC to invest $250M in South Korea glass substrate plant for AI chips",
@@ -1308,7 +1291,7 @@
               "published_iso": "2026-09-21T05:44:17Z",
               "summary": "J&TC to invest $250M in South Korea glass substrate plant for AI chips Dealroom",
               "ethics_tags": [],
-              "trend_score": 40
+              "trend_score": 37
             }
           ]
         },
@@ -1319,7 +1302,7 @@
           "folder_items": [
             {
               "title": "Ex-Anthropic Staffers’ Self-Improving AI Startup in Talks to Raise at $5 Billion Value",
-              "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNcnpCRGt2bnpramtmWnRNZlhUZC1ueVBjSUNpZGZ2al9sbGlPNUhZbWR2bDNGUWk4eUtGN1ZJdU5CUVNxdjRGSE44Wi1vM1ZrYlZzb0YwRlNaWklQV0JqOXdYdVpmQkF4VlhOeWtDWHJQNzZYTlFlbzlYOFpLNXQwVHRCY3IwZ3VHT1BpZi14bkh3SmVRaFlsVy1hWGt0UzVVelFZM080bmhWSFB2VzZVMS1PRExsMV9fbUJXaUw2dzA3TlZDNF9hbHF0ZFg0d1lYLU44elB4REpKVHc?oc=5",
+              "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQNEttTkpIMmxhV3RwcFQ5R2pMTUV0NUpPNmhBbUx6bWpNZFpkMmJhWE9ka29ObnNZLW1MTS1ETHZITmNJVjBzR2tNVWd6bndyYndPTTA0MXB0Y2hCNzhQbFZNQU5HM1FnZkx2MFAzQ3h1LW9CM0xGUW0zVkI2MU9QYm1GRGhtb2xPU1hFVDU4OWlVeXlzeG44VkU0RFM0RWJ6OEF2LVhzeW5CS3hBY0dId3pUXzJFbG92cHNYeA?oc=5",
               "source": "Bloomberg.com",
               "category": "business",
               "category_label": "Business & Funding",
@@ -1327,7 +1310,7 @@
               "published_iso": "2026-09-22T16:16:48Z",
               "summary": "Ex-Anthropic Staffers’ Self-Improving AI Startup in Talks to Raise at $5 Billion Value Bloomberg.com",
               "ethics_tags": [],
-              "trend_score": 66
+              "trend_score": 64
             },
             {
               "title": "Huawei launches next-gen AI chips at Shanghai conference",
@@ -1339,7 +1322,7 @@
               "published_iso": "2026-09-19T00:11:49Z",
               "summary": "Huawei launches next-gen AI chips at Shanghai conference Türkiye Today",
               "ethics_tags": [],
-              "trend_score": 40
+              "trend_score": 37
             }
           ]
         },
@@ -1358,7 +1341,7 @@
               "published_iso": "2026-09-22T12:44:20Z",
               "summary": "Apple May Return to Servers With Its Own AI Chips. Nvidia Could Still Get Paid Yahoo Finance",
               "ethics_tags": [],
-              "trend_score": 64
+              "trend_score": 59
             },
             {
               "title": "Nvidia and AMD Can't Make AI Chips Without This Growth Stock. Here's Why It Could Soar.",
@@ -1370,7 +1353,7 @@
               "published_iso": "2026-09-22T12:35:00Z",
               "summary": "Nvidia and AMD Can't Make AI Chips Without This Growth Stock. Here's Why It Could Soar. Yahoo Finance",
               "ethics_tags": [],
-              "trend_score": 64
+              "trend_score": 59
             },
             {
               "title": "AI Chips Today - Einride NVIDIA Team Up for Autonomous Truck Expansion",
@@ -1382,7 +1365,7 @@
               "published_iso": "2026-09-21T11:37:17Z",
               "summary": "AI Chips Today - Einride NVIDIA Team Up for Autonomous Truck Expansion Yahoo Finance",
               "ethics_tags": [],
-              "trend_score": 64
+              "trend_score": 59
             }
           ]
         }
@@ -1392,19 +1375,106 @@
       "label": "Ethics & Society",
       "items": [
         {
-          "title": "Trump rejects AI regulation, citing parallels with climate change in UN address",
+          "title": "OpenAI calls for international AI safety standards",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9HM0NiaFZEd3RzSmVOSG04WkU5SGU3aUZ6eTNRZTBaaE1nT0F4UUc4bmt4eUEwdDBrZEliN0YzN091c0xrMkdZaUQzTmktSkcxSklnYlJzbkl2TUhoZmR3VDhzTlI5X3BIQl9wenotdXZVZHNIX0xMOE52eFZ5QQ?oc=5",
+          "source": "CIO Dive",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T20:42:31Z",
+          "summary": "OpenAI calls for international AI safety standards CIO Dive",
+          "ethics_tags": [
+            "Safety & Alignment"
+          ],
+          "trend_score": 159
+        },
+        {
+          "title": "New Poll: Voters Don’t Buy That AI Safety Is a “Hoax”",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFB2bXEwb054OUNUZVFHN1FKSENYQlZpQ2RMTElBTHU3b0FIS3lISFNFX2g4bzNxb0RtUmZYMmVMWVl0ZWotVWpxcEkyWkhzSzVVYWYtOF9OMGRHZmZMM3pzS0wwSHlQbWh2cGQwMnZpajl3bnc?oc=5",
+          "source": "Americans for Responsible Innovation",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T19:28:39Z",
+          "summary": "New Poll: Voters Don’t Buy That AI Safety Is a “Hoax” Americans for Responsible Innovation",
+          "ethics_tags": [
+            "Safety & Alignment"
+          ],
+          "trend_score": 93
+        },
+        {
+          "title": "Illinois, California governors fast-track AI safety measures with executive orders",
+          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPUDl2NC1fQTEwOUlEazVtaVhmRDFaUU9sYTRlUmpYb0FQQnpseWVoQk8xTHlFeTlVRVVKTmVGX3F0Uy1WV3hyUmpBQUUtNy1SdEFIS2lHNnA0UnRzMEZKV2llaE9OX2syeUVfUC1qdmtyYXE4a1VxdVNFcVcyN3Vqb3BhTnVwWF81QVNPSlhfXzAtR0xPUk9rYXBxbUZLRGprY2RNQW5PRzZueGlWUG4ycUVMLWl6QTFMSnRENzR0WnI?oc=5",
+          "source": "Transparency Coalition",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T17:53:17Z",
+          "summary": "Illinois, California governors fast-track AI safety measures with executive orders Transparency Coalition",
+          "ethics_tags": [
+            "Safety & Alignment",
+            "Regulation & Governance",
+            "Transparency & Accountability"
+          ],
+          "trend_score": 93
+        },
+        {
+          "title": "‘Scorpions in a Bottle’: What the U.N. Can Do About AI Safety",
+          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPOVMyYWV1SURRY3A0aWdWMXpIOWFONmRQZnNwUXQ4emFDVzhJaXIyT0JpS1V1R0o4Si1kRUJ5NUNxLUtfTmRYMkxRZ1dxZkNTd1kxbmlFUXZYQ1ZUdGtVblU3UnZraXUxY0lWNEE2SDc5ZkhBOHJGQ2RzcVdXYnpPM0pmaGt0UWd1WElrUUhjNzJOU1dmUG90Nm54UE5USmlLZlE?oc=5",
+          "source": "Foreign Policy",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T16:03:29Z",
+          "summary": "‘Scorpions in a Bottle’: What the U.N. Can Do About AI Safety Foreign Policy",
+          "ethics_tags": [
+            "Safety & Alignment",
+            "Regulation & Governance"
+          ],
+          "trend_score": 93
+        },
+        {
+          "title": "Trump rejects AI regulation, citing parallels with climate change, in U.N. address",
           "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQOWZfbEItUmtMUWM5bklpRDBsQ0dPdTQxcDR0dnZaaDF1V0VoVFE1Tm1UWm1GWjVFVFl5aHJCZTlSckVMa3dYUFl6c3Bka1VHYlJHR1pZRHc1LWY1YmRlekV1aFNFbkM0THh4S2lYMXlwMGQ1MkZ6bmRpNnJrTU9ndnB5NjhUOFN1ZDNKUWZQd19aTFRjZGd5U2FLTVBtY3NHaUdFdUVIV1E3YWhLaTJVLTYybGVxOFJiR21TcjZ2WQ?oc=5",
           "source": "Scientific American",
           "category": "ethics",
           "category_label": "Ethics & Society",
           "published_display": "Sep 22, 2026",
           "published_iso": "2026-09-22T16:00:00Z",
-          "summary": "Trump rejects AI regulation, citing parallels with climate change in UN address Scientific American",
+          "summary": "Trump rejects AI regulation, citing parallels with climate change, in U.N. address Scientific American",
           "ethics_tags": [
             "Energy & Environment",
             "Regulation & Governance"
           ],
-          "trend_score": 26
+          "trend_score": 25
+        },
+        {
+          "title": "Citing China, President Trump doubles down on hands-off approach to AI regulation",
+          "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBzQ2JMWlJtWWhVcnFJS1daUGhpbkpybE9OZ2FyUVdfU2FLVXdfNEh2NGdEVmpUVERaZXQ5WXlSa090dGdLb1FqS0hNUDlxYkpSX0lxMGVTcjRhRU5UT1RmcEZWVWRYQkE4U0FPbEp3Uk4wQQ?oc=5",
+          "source": "CyberScoop",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T15:18:41Z",
+          "summary": "Citing China, President Trump doubles down on hands-off approach to AI regulation CyberScoop",
+          "ethics_tags": [
+            "Regulation & Governance"
+          ],
+          "trend_score": 25
+        },
+        {
+          "title": "America’s AI Safety Dilemma and the Trump-Xi Summit - The Diplomat – Asia-Pacific Current Affairs Magazine",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPeGE5TW5xcm1DVFFTcWhHTVBsc0ZUSWpVU3lrY2MtWVVDejhLZmpOWkFwLVR1bnJQOUFUeFN4b2pqRW5QcVBBVmg4RFlwcXBqZzBYS05hNG52UE5uQTFDVTdudmI5bG1aNThFV3VQeTN3OW4zd25Xb1otaEtsdDlzU2MtclRTMExNN1BVUENUQQ?oc=5",
+          "source": "Google News",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T14:55:48Z",
+          "summary": "America’s AI Safety Dilemma and the Trump-Xi Summit The Diplomat – Asia-Pacific Current Affairs Magazine",
+          "ethics_tags": [
+            "Safety & Alignment"
+          ],
+          "trend_score": 93
         },
         {
           "title": "‘Lowkey Confused? HSS Explains’ series explores AI regulation",
@@ -1418,21 +1488,7 @@
           "ethics_tags": [
             "Regulation & Governance"
           ],
-          "trend_score": 26
-        },
-        {
-          "title": "Professor advocates for diversity in AI regulation",
-          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOdEdhUDBzSTFIQUdhdmFhRENpMmVEb0VEOWY4VmQyYmZyTVJrRHhJNmUwcVVYb1dkRHZzajRYZmdWUnBGXzEtLVNqbFVBV0pDQnQ2ZG5HX1pWVnV4ZldpUHdick1ONE9UeE1NcE9OTkdZY3dYUXJoYXgyWlNqcnVTRWRWQXVucUJ6MmFUeVp6TlNLZG96ZUVDSG56YmV2eFZNOXc?oc=5",
-          "source": "NBC News",
-          "category": "ethics",
-          "category_label": "Ethics & Society",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T12:17:27Z",
-          "summary": "Professor advocates for diversity in AI regulation NBC News",
-          "ethics_tags": [
-            "Regulation & Governance"
-          ],
-          "trend_score": 26
+          "trend_score": 25
         },
         {
           "title": "Nvidia Stock Rises as Meta’s Zuckerberg Weighs In on AI Safety After Trump",
@@ -1446,21 +1502,35 @@
           "ethics_tags": [
             "Safety & Alignment"
           ],
-          "trend_score": 118
+          "trend_score": 132
+        },
+        {
+          "title": "OpenAI says U.S. should lead efforts to set global AI safety standards",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNdl80UEFGYUpnVHNIV2RqZWJBN29yZ3RPb0hTTE5GOWJkcndQNE5OOFVWcnZMajBGTHlUeTJvbWZRMnNuZVB0VXBlM0R4bEhLUVFOSlVSa1Z4cGRNelF6V09qQmpXaGZXM29uYUt0RTBFVlJUNXM5SVdtZE9zNHpiVjNCU1NCT284MW8yM3NSZDM0cTlMX3RUN3kzdE9oRkxu?oc=5",
+          "source": "CBS News",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T11:21:00Z",
+          "summary": "OpenAI says U.S. should lead efforts to set global AI safety standards CBS News",
+          "ethics_tags": [
+            "Safety & Alignment"
+          ],
+          "trend_score": 159
         },
         {
           "title": "With $7 trillion on the line, AI safety may always take a backseat to market domination",
           "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9LM0N5RVkyT0xSZHhrR0lkUmhBcDdBbHJPMGNkQmRwVlNPNl9tRE50Z0g1bGJOZGRyR1RQLTZwbjdZZWo4aDE1eG8wcDBnVlVEWmI2UXNNQldrMGlqUFhmSzR0Wjk?oc=5",
-          "source": "axios.com",
+          "source": "Axios",
           "category": "ethics",
           "category_label": "Ethics & Society",
           "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T09:49:46Z",
-          "summary": "With $7 trillion on the line, AI safety may always take a backseat to market domination axios.com",
+          "published_iso": "2026-09-22T09:01:35Z",
+          "summary": "With $7 trillion on the line, AI safety may always take a backseat to market domination Axios",
           "ethics_tags": [
             "Safety & Alignment"
           ],
-          "trend_score": 94
+          "trend_score": 93
         },
         {
           "title": "OpenAI is reversing course and pushing Congress for binding AI safety rules",
@@ -1475,21 +1545,7 @@
             "Safety & Alignment",
             "Regulation & Governance"
           ],
-          "trend_score": 156
-        },
-        {
-          "title": "Scott Bessent meets with Chinese official on AI safety",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQMXNFSVJWM0NBUExUYTdybGFhQnl1NEdIV0xkcXlVb2EyUkt3bEh2WHg5QWZVbUJ1T2NhUzR1OGVZcHloTVBvblpUUUpCTTNfWTVnUnd4OXFCemNFNk5VLVBqUGRYY211cVJNeHVoU2hvQnpVMnNKSUxEaWZiWDB3ZjQwRnRUdnNyb2d4TmRIQzExeVlhRDBYdnRLWWhjQQ?oc=5",
-          "source": "NBC News",
-          "category": "ethics",
-          "category_label": "Ethics & Society",
-          "published_display": "Sep 22, 2026",
-          "published_iso": "2026-09-22T01:23:22Z",
-          "summary": "Scott Bessent meets with Chinese official on AI safety NBC News",
-          "ethics_tags": [
-            "Safety & Alignment"
-          ],
-          "trend_score": 94
+          "trend_score": 159
         },
         {
           "title": "Gov. Hochul expands AI safety laws in New York",
@@ -1503,7 +1559,7 @@
           "ethics_tags": [
             "Safety & Alignment"
           ],
-          "trend_score": 94
+          "trend_score": 93
         },
         {
           "title": "AI safety debate grows as experts and lawmakers call for guardrails",
@@ -1517,93 +1573,37 @@
           "ethics_tags": [
             "Safety & Alignment"
           ],
-          "trend_score": 94
-        },
-        {
-          "title": "OpenAI calls for global US-led coalition on AI safety",
-          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPVmZPdUlwTno3UDFGbWJWYjNBc29RWW4xa1g3dHI1bzlHMEl0ajRiMHZMeU9mZk5ld2loRXJwX2MtclhFclh6aDdKTEw3aGxmR0czUC1HZ3FQRGVKdVZuV2p3SjlNV0pKamZ1Q2hYeE9RX3d5Y2NDMEhWSWhmYjIySWNETmpNZmhBZ0FQYWNvUVJLdG9jV0RPVTFEYnc?oc=5",
-          "source": "Semafor",
-          "category": "ethics",
-          "category_label": "Ethics & Society",
-          "published_display": "Sep 21, 2026",
-          "published_iso": "2026-09-21T22:26:00Z",
-          "summary": "OpenAI calls for global US-led coalition on AI safety Semafor",
-          "ethics_tags": [
-            "Safety & Alignment"
-          ],
-          "trend_score": 156
-        },
-        {
-          "title": "AI regulation debate heats up",
-          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBfSHp3aHg5bk14YXlSWWdCX25OS1RIUXJjSFBjUUx6MG9ITHoxNnp4aFo5UlBaWV9ycWJlSFd6dExKVlhYelVKY19Cckk5bW1WQTE5SlB2eTZDUlNIYWZZbDI4TkJmNXN4alNsVEFTOXFhQWVTWEdCTzFYTnI?oc=5",
-          "source": "CNBC",
-          "category": "ethics",
-          "category_label": "Ethics & Society",
-          "published_display": "Sep 21, 2026",
-          "published_iso": "2026-09-21T21:53:00Z",
-          "summary": "AI regulation debate heats up CNBC",
-          "ethics_tags": [
-            "Regulation & Governance"
-          ],
-          "trend_score": 26
-        },
-        {
-          "title": "US, China to meet again on AI safety in two months in Shenzhen, Bessent says",
-          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPaE0zM1lEOGFEZFo4SGVMNU9xc1BHWE1xYmtES0ZjcE5uanRwZlRGbzJxOWY5VHBtd2xUNjVrM2tFV3N5dnh4MjA2NHNsSFppN1pCNHg3UVg0d3F5WmlCWFkwM1BaalhBNUhKQUhTNmxWaVY4cWMycjQ0YkpQM1lsQjBiNTh5UjRKR2l1aFVaUEVhd0RDM2NWX2xSc1UxY3ZkRWJhek9NOXJkQ01WdzNzY0NSMWtscEJM?oc=5",
-          "source": "Reuters",
-          "category": "ethics",
-          "category_label": "Ethics & Society",
-          "published_display": "Sep 21, 2026",
-          "published_iso": "2026-09-21T21:21:09Z",
-          "summary": "US, China to meet again on AI safety in two months in Shenzhen, Bessent says Reuters",
-          "ethics_tags": [
-            "Safety & Alignment"
-          ],
-          "trend_score": 94
-        },
-        {
-          "title": "OpenAI Calls for New AI Safety Rules After Agents Evaded Controls",
-          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNWVRXcko0MTZhVWVqRWNSRUtuU0pudWNqeThVckp6aEEyQjVxcElSYmJCVEdPNWtIaDlEQkFJRmo0ZW9zdERJQV9QNTl3M082dGkzdUhoVmJXX05OeG1LbkxoY2ZHbzlwbFpNT01sMUNvdXoxV1pwbWFrcVRHWGMzXzRNRjlsVTZjVkhQcg?oc=5",
-          "source": "Law Commentary",
-          "category": "ethics",
-          "category_label": "Ethics & Society",
-          "published_display": "Sep 21, 2026",
-          "published_iso": "2026-09-21T21:12:34Z",
-          "summary": "OpenAI Calls for New AI Safety Rules After Agents Evaded Controls Law Commentary",
-          "ethics_tags": [
-            "Safety & Alignment"
-          ],
-          "trend_score": 284
-        },
-        {
-          "title": "New York Begins Implementing RAISE Act as Hochul Signals More AI Regulation Ahead",
-          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOcWxqUFZ2VG9XTHo5R1l2amNjQ0NUNEJ6RC1ITklJRF90TGtOM1IwUjlDU2hkbWdjYXExMEZxMkd1ZTA4QU5GbEFacFZxMnJCVU9YWkZKT1B4WTM2Mm03NDNLazlrX19USlNEeVNzb0c5SHJ6elpYRTctZmFwZTJUX0M4TVBaZWNfaExOWF9JUXMzeG8wSXpwM3ctUnhwZjNjUGUtUUI4d1hESF9Da2NpX25fVTJSNENEMU1LQU9VNkV4ME5WS3NqbW5iaw?oc=5",
-          "source": "Law.com",
-          "category": "ethics",
-          "category_label": "Ethics & Society",
-          "published_display": "Sep 21, 2026",
-          "published_iso": "2026-09-21T18:56:06Z",
-          "summary": "New York Begins Implementing RAISE Act as Hochul Signals More AI Regulation Ahead Law.com",
-          "ethics_tags": [
-            "Regulation & Governance"
-          ],
-          "trend_score": 26
+          "trend_score": 93
         }
       ],
       "folder_items": [
         {
-          "title": "OpenAI Calls for New AI Safety Rules After Agents Evaded Controls",
-          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNWVRXcko0MTZhVWVqRWNSRUtuU0pudWNqeThVckp6aEEyQjVxcElSYmJCVEdPNWtIaDlEQkFJRmo0ZW9zdERJQV9QNTl3M082dGkzdUhoVmJXX05OeG1LbkxoY2ZHbzlwbFpNT01sMUNvdXoxV1pwbWFrcVRHWGMzXzRNRjlsVTZjVkhQcg?oc=5",
-          "source": "Law Commentary",
+          "title": "OpenAI calls for international AI safety standards",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9HM0NiaFZEd3RzSmVOSG04WkU5SGU3aUZ6eTNRZTBaaE1nT0F4UUc4bmt4eUEwdDBrZEliN0YzN091c0xrMkdZaUQzTmktSkcxSklnYlJzbkl2TUhoZmR3VDhzTlI5X3BIQl9wenotdXZVZHNIX0xMOE52eFZ5QQ?oc=5",
+          "source": "CIO Dive",
           "category": "ethics",
           "category_label": "Ethics & Society",
-          "published_display": "Sep 21, 2026",
-          "published_iso": "2026-09-21T21:12:34Z",
-          "summary": "OpenAI Calls for New AI Safety Rules After Agents Evaded Controls Law Commentary",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T20:42:31Z",
+          "summary": "OpenAI calls for international AI safety standards CIO Dive",
           "ethics_tags": [
             "Safety & Alignment"
           ],
-          "trend_score": 284
+          "trend_score": 159
+        },
+        {
+          "title": "OpenAI says U.S. should lead efforts to set global AI safety standards",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNdl80UEFGYUpnVHNIV2RqZWJBN29yZ3RPb0hTTE5GOWJkcndQNE5OOFVWcnZMajBGTHlUeTJvbWZRMnNuZVB0VXBlM0R4bEhLUVFOSlVSa1Z4cGRNelF6V09qQmpXaGZXM29uYUt0RTBFVlJUNXM5SVdtZE9zNHpiVjNCU1NCT284MW8yM3NSZDM0cTlMX3RUN3kzdE9oRkxu?oc=5",
+          "source": "CBS News",
+          "category": "ethics",
+          "category_label": "Ethics & Society",
+          "published_display": "Sep 22, 2026",
+          "published_iso": "2026-09-22T11:21:00Z",
+          "summary": "OpenAI says U.S. should lead efforts to set global AI safety standards CBS News",
+          "ethics_tags": [
+            "Safety & Alignment"
+          ],
+          "trend_score": 159
         },
         {
           "title": "OpenAI is reversing course and pushing Congress for binding AI safety rules",
@@ -1618,42 +1618,42 @@
             "Safety & Alignment",
             "Regulation & Governance"
           ],
-          "trend_score": 156
-        },
-        {
-          "title": "OpenAI calls for global US-led coalition on AI safety",
-          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPVmZPdUlwTno3UDFGbWJWYjNBc29RWW4xa1g3dHI1bzlHMEl0ajRiMHZMeU9mZk5ld2loRXJwX2MtclhFclh6aDdKTEw3aGxmR0czUC1HZ3FQRGVKdVZuV2p3SjlNV0pKamZ1Q2hYeE9RX3d5Y2NDMEhWSWhmYjIySWNETmpNZmhBZ0FQYWNvUVJLdG9jV0RPVTFEYnc?oc=5",
-          "source": "Semafor",
-          "category": "ethics",
-          "category_label": "Ethics & Society",
-          "published_display": "Sep 21, 2026",
-          "published_iso": "2026-09-21T22:26:00Z",
-          "summary": "OpenAI calls for global US-led coalition on AI safety Semafor",
-          "ethics_tags": [
-            "Safety & Alignment"
-          ],
-          "trend_score": 156
+          "trend_score": 159
         }
       ],
       "subcategories": [
         {
           "key": "safety",
           "label": "Safety & Alignment",
-          "count": 9,
+          "count": 11,
           "folder_items": [
             {
-              "title": "OpenAI Calls for New AI Safety Rules After Agents Evaded Controls",
-              "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNWVRXcko0MTZhVWVqRWNSRUtuU0pudWNqeThVckp6aEEyQjVxcElSYmJCVEdPNWtIaDlEQkFJRmo0ZW9zdERJQV9QNTl3M082dGkzdUhoVmJXX05OeG1LbkxoY2ZHbzlwbFpNT01sMUNvdXoxV1pwbWFrcVRHWGMzXzRNRjlsVTZjVkhQcg?oc=5",
-              "source": "Law Commentary",
+              "title": "OpenAI calls for international AI safety standards",
+              "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9HM0NiaFZEd3RzSmVOSG04WkU5SGU3aUZ6eTNRZTBaaE1nT0F4UUc4bmt4eUEwdDBrZEliN0YzN091c0xrMkdZaUQzTmktSkcxSklnYlJzbkl2TUhoZmR3VDhzTlI5X3BIQl9wenotdXZVZHNIX0xMOE52eFZ5QQ?oc=5",
+              "source": "CIO Dive",
               "category": "ethics",
               "category_label": "Ethics & Society",
-              "published_display": "Sep 21, 2026",
-              "published_iso": "2026-09-21T21:12:34Z",
-              "summary": "OpenAI Calls for New AI Safety Rules After Agents Evaded Controls Law Commentary",
+              "published_display": "Sep 22, 2026",
+              "published_iso": "2026-09-22T20:42:31Z",
+              "summary": "OpenAI calls for international AI safety standards CIO Dive",
               "ethics_tags": [
                 "Safety & Alignment"
               ],
-              "trend_score": 284
+              "trend_score": 159
+            },
+            {
+              "title": "OpenAI says U.S. should lead efforts to set global AI safety standards",
+              "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNdl80UEFGYUpnVHNIV2RqZWJBN29yZ3RPb0hTTE5GOWJkcndQNE5OOFVWcnZMajBGTHlUeTJvbWZRMnNuZVB0VXBlM0R4bEhLUVFOSlVSa1Z4cGRNelF6V09qQmpXaGZXM29uYUt0RTBFVlJUNXM5SVdtZE9zNHpiVjNCU1NCT284MW8yM3NSZDM0cTlMX3RUN3kzdE9oRkxu?oc=5",
+              "source": "CBS News",
+              "category": "ethics",
+              "category_label": "Ethics & Society",
+              "published_display": "Sep 22, 2026",
+              "published_iso": "2026-09-22T11:21:00Z",
+              "summary": "OpenAI says U.S. should lead efforts to set global AI safety standards CBS News",
+              "ethics_tags": [
+                "Safety & Alignment"
+              ],
+              "trend_score": 159
             },
             {
               "title": "OpenAI is reversing course and pushing Congress for binding AI safety rules",
@@ -1668,43 +1668,43 @@
                 "Safety & Alignment",
                 "Regulation & Governance"
               ],
-              "trend_score": 156
-            },
-            {
-              "title": "OpenAI calls for global US-led coalition on AI safety",
-              "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPVmZPdUlwTno3UDFGbWJWYjNBc29RWW4xa1g3dHI1bzlHMEl0ajRiMHZMeU9mZk5ld2loRXJwX2MtclhFclh6aDdKTEw3aGxmR0czUC1HZ3FQRGVKdVZuV2p3SjlNV0pKamZ1Q2hYeE9RX3d5Y2NDMEhWSWhmYjIySWNETmpNZmhBZ0FQYWNvUVJLdG9jV0RPVTFEYnc?oc=5",
-              "source": "Semafor",
-              "category": "ethics",
-              "category_label": "Ethics & Society",
-              "published_display": "Sep 21, 2026",
-              "published_iso": "2026-09-21T22:26:00Z",
-              "summary": "OpenAI calls for global US-led coalition on AI safety Semafor",
-              "ethics_tags": [
-                "Safety & Alignment"
-              ],
-              "trend_score": 156
+              "trend_score": 159
             }
           ]
         },
         {
           "key": "governance",
           "label": "Governance & Society",
-          "count": 5,
+          "count": 3,
           "folder_items": [
             {
-              "title": "Trump rejects AI regulation, citing parallels with climate change in UN address",
+              "title": "Trump rejects AI regulation, citing parallels with climate change, in U.N. address",
               "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQOWZfbEItUmtMUWM5bklpRDBsQ0dPdTQxcDR0dnZaaDF1V0VoVFE1Tm1UWm1GWjVFVFl5aHJCZTlSckVMa3dYUFl6c3Bka1VHYlJHR1pZRHc1LWY1YmRlekV1aFNFbkM0THh4S2lYMXlwMGQ1MkZ6bmRpNnJrTU9ndnB5NjhUOFN1ZDNKUWZQd19aTFRjZGd5U2FLTVBtY3NHaUdFdUVIV1E3YWhLaTJVLTYybGVxOFJiR21TcjZ2WQ?oc=5",
               "source": "Scientific American",
               "category": "ethics",
               "category_label": "Ethics & Society",
               "published_display": "Sep 22, 2026",
               "published_iso": "2026-09-22T16:00:00Z",
-              "summary": "Trump rejects AI regulation, citing parallels with climate change in UN address Scientific American",
+              "summary": "Trump rejects AI regulation, citing parallels with climate change, in U.N. address Scientific American",
               "ethics_tags": [
                 "Energy & Environment",
                 "Regulation & Governance"
               ],
-              "trend_score": 26
+              "trend_score": 25
+            },
+            {
+              "title": "Citing China, President Trump doubles down on hands-off approach to AI regulation",
+              "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBzQ2JMWlJtWWhVcnFJS1daUGhpbkpybE9OZ2FyUVdfU2FLVXdfNEh2NGdEVmpUVERaZXQ5WXlSa090dGdLb1FqS0hNUDlxYkpSX0lxMGVTcjRhRU5UT1RmcEZWVWRYQkE4U0FPbEp3Uk4wQQ?oc=5",
+              "source": "CyberScoop",
+              "category": "ethics",
+              "category_label": "Ethics & Society",
+              "published_display": "Sep 22, 2026",
+              "published_iso": "2026-09-22T15:18:41Z",
+              "summary": "Citing China, President Trump doubles down on hands-off approach to AI regulation CyberScoop",
+              "ethics_tags": [
+                "Regulation & Governance"
+              ],
+              "trend_score": 25
             },
             {
               "title": "‘Lowkey Confused? HSS Explains’ series explores AI regulation",
@@ -1718,21 +1718,7 @@
               "ethics_tags": [
                 "Regulation & Governance"
               ],
-              "trend_score": 26
-            },
-            {
-              "title": "Professor advocates for diversity in AI regulation",
-              "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOdEdhUDBzSTFIQUdhdmFhRENpMmVEb0VEOWY4VmQyYmZyTVJrRHhJNmUwcVVYb1dkRHZzajRYZmdWUnBGXzEtLVNqbFVBV0pDQnQ2ZG5HX1pWVnV4ZldpUHdick1ONE9UeE1NcE9OTkdZY3dYUXJoYXgyWlNqcnVTRWRWQXVucUJ6MmFUeVp6TlNLZG96ZUVDSG56YmV2eFZNOXc?oc=5",
-              "source": "NBC News",
-              "category": "ethics",
-              "category_label": "Ethics & Society",
-              "published_display": "Sep 22, 2026",
-              "published_iso": "2026-09-22T12:17:27Z",
-              "summary": "Professor advocates for diversity in AI regulation NBC News",
-              "ethics_tags": [
-                "Regulation & Governance"
-              ],
-              "trend_score": 26
+              "trend_score": 25
             }
           ]
         }
@@ -1742,43 +1728,39 @@
   "trending": [
     {
       "term": "agent",
-      "count": 128
+      "count": 129
     },
     {
       "term": "safety",
-      "count": 94
-    },
-    {
-      "term": "Anthropic",
-      "count": 66
-    },
-    {
-      "term": "benchmark",
-      "count": 63
+      "count": 93
     },
     {
       "term": "OpenAI",
-      "count": 62
+      "count": 66
+    },
+    {
+      "term": "Anthropic",
+      "count": 64
+    },
+    {
+      "term": "benchmark",
+      "count": 64
     },
     {
       "term": "chip",
-      "count": 40
+      "count": 37
+    },
+    {
+      "term": "agentic",
+      "count": 34
     },
     {
       "term": "multimodal",
       "count": 34
     },
     {
-      "term": "agentic",
-      "count": 32
-    },
-    {
       "term": "regulation",
-      "count": 26
-    },
-    {
-      "term": "Nvidia",
-      "count": 24
+      "count": 25
     },
     {
       "term": "robot",
@@ -1789,23 +1771,27 @@
       "count": 23
     },
     {
-      "term": "Claude",
-      "count": 19
+      "term": "Nvidia",
+      "count": 22
     },
     {
-      "term": "video",
-      "count": 18
+      "term": "Claude",
+      "count": 20
+    },
+    {
+      "term": "Meta",
+      "count": 17
     }
   ],
   "ai_pulse": {
-    "story_count": 1384,
-    "source_count": 147,
+    "story_count": 1393,
+    "source_count": 154,
     "topic_count": 14,
-    "ethics_count": 341,
+    "ethics_count": 343,
     "coverage": [
       {
         "term": "agent",
-        "story_count": 128,
+        "story_count": 129,
         "source_count": 15,
         "category_count": 4,
         "strength_percent": 100,
@@ -1823,7 +1809,7 @@
             "ethics_tags": [
               "Safety & Alignment"
             ],
-            "trend_score": 284
+            "trend_score": 288
           },
           {
             "title": "AgentVidBench: A Multi-Hop Video Question Answering Benchmark for Evaluating MLLM Agents",
@@ -1835,7 +1821,7 @@
             "published_iso": "2026-09-22T04:00:00Z",
             "summary": "arXiv:2609.21386v1 Announce Type: cross Abstract: Comprehensive video understanding is crucial for advancing artificial intelligence toward the intricate dynamics of the physical world. While recent advances in Multimodal Large Language…",
             "ethics_tags": [],
-            "trend_score": 243
+            "trend_score": 227
           },
           {
             "title": "An OpenAI Agent Tried to Jailbreak Itself",
@@ -1849,16 +1835,16 @@
             "ethics_tags": [
               "Safety & Alignment"
             ],
-            "trend_score": 190
+            "trend_score": 195
           }
         ]
       },
       {
         "term": "safety",
-        "story_count": 94,
-        "source_count": 43,
-        "category_count": 3,
-        "strength_percent": 73,
+        "story_count": 93,
+        "source_count": 46,
+        "category_count": 4,
+        "strength_percent": 72,
         "top_ethics_theme": "Safety & Alignment",
         "stories": [
           {
@@ -1873,7 +1859,21 @@
             "ethics_tags": [
               "Safety & Alignment"
             ],
-            "trend_score": 246
+            "trend_score": 245
+          },
+          {
+            "title": "OpenAI Says It’s Working With Anthropic, Google on AI Safety",
+            "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQU2hNbVd5RVh6MTNQU3RjMVBLdnZmbzhRTVhHSnJ0dko1ZnVNeUw2Tm1xLXk3VE5xa3phZTB3TmFHYjJ2emlUZHgyc0NSbEV1RFpGY3JCODFCNW52WjJfdFhVNzFFbExIY1lDS3BwalhUUllSWEtYNm1KM1ZJRHdVVTc4QnlhcFRiX2NnWUZmSlRwdmc4Z0FvQnNucW9GTXlqZW5PREhzWVlWTllxTHlJ?oc=5",
+            "source": "Bloomberg.com",
+            "category": "labs",
+            "category_label": "Labs & Industry",
+            "published_display": "Sep 15, 2026",
+            "published_iso": "2026-09-15T21:15:03Z",
+            "summary": "OpenAI Says It’s Working With Anthropic, Google on AI Safety Bloomberg.com",
+            "ethics_tags": [
+              "Safety & Alignment"
+            ],
+            "trend_score": 223
           },
           {
             "title": "TRACES: Proactive Safety Auditing for Multi-Turn LLM Agents via Trajectory-State Modeling",
@@ -1888,57 +1888,43 @@
               "Transparency & Accountability"
             ],
             "trend_score": 222
-          },
-          {
-            "title": "Anthropic and OpenAI want to embed safety evaluators. Will they really be independent?",
-            "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPbm1iamlFNE1JMVJMQS14TTdGSGRLcFN3U3dhcXQzdkVYOVFGZkRta0VZTjVfVDVjdzdaWmdUbjE1QlloVjhuYVh1QjFidkFTcVlodFlJejhHTHQ3VVhXZE5WNERuaGxkN2RnTWdRcnNNekxzM3R4eDRjblpDMHFWXzlIb1VXM2RCZU5kcUMtNmJvLUdqdDJNTE5ORGNfTFhqUnNFeC1kRWNBRDZFUHZ6eWxxUDlQdnBwcVFz?oc=5",
-            "source": "TechCrunch",
-            "category": "labs",
-            "category_label": "Labs & Industry",
-            "published_display": "Sep 16, 2026",
-            "published_iso": "2026-09-16T21:07:24Z",
-            "summary": "Anthropic and OpenAI want to embed safety evaluators. Will they really be independent? TechCrunch",
-            "ethics_tags": [],
-            "trend_score": 222
           }
         ]
       },
       {
-        "term": "Anthropic",
+        "term": "OpenAI",
         "story_count": 66,
-        "source_count": 34,
-        "category_count": 4,
-        "strength_percent": 52,
+        "source_count": 32,
+        "category_count": 3,
+        "strength_percent": 51,
         "top_ethics_theme": "Safety & Alignment",
         "stories": [
           {
-            "title": "Nvidia's Huang diverges with CEOs of Anthropic, OpenAI on AI safety at Dreamforce",
-            "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNamhBSWgtcmZwTVRVOXlnbGZMN2R1bDFlMWEtV21wUXFmUGVoWW5vQWNVbU55OEE0T0lWMUFlMXFZVGdvNmN0TElFUGNkQUlwQ01hU09aUEZIZlBjd0lMbGJMOVJHbmhOSTNRaHU0cXBnNmRVQ2lTb21odDUzOGlRQ1phSTRDUDVucThHQjNncjI1Q1pMOVV0WlotdDVpUdIBowFBVV95cUxNQW5ST21vbGJyUWYzcHVFZFJOZUgzTEJ3TWFkS3Y4Nm9fQ2w3c3puMnJqaFBpbl9CVG5Gd1RSZUVGQmJqLVZaN0dBZ0dOWEZNb3IxMDBtaGhWNGllb29aZERqeGxibHhnakZJRDgxeF9oa1NDSGV2YzYwa3plQ0dhZU43aHJNb1MyUlZRRm1hb1BZRVpZRVF4LUd1OWNQXzJpZFpr?oc=5",
+            "title": "Anthropic and OpenAI need truly independent safety evaluators, experts say in public letter",
+            "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQYmhJTWt5YWF1TnBPX05jNWFGRWVQVFc0N2hQc1c5VC1fMnl5T05VSnRPc0NabzFrem1QMEN1WHY5TEVVWGU1N2RjUmphdDdiZWZjNUhHQWUxNzRnclU0bWRUaG5idnJYMExYYWtJWWFaY1hJY2YwNEI4YW0xUl9QWWRvY0xPbENXaWJYZHJCUVdJUmo10gGaAUFVX3lxTE1NRTNYQ2pSa1BiOFVtenM2UENJVkQ3SHdjZ0VvME9GVmwtV0ZpUGZrRnpDbWRPRXNCckVmWkpYQkREY20wNTBKb25SeFZQYzVEc2k5c2dFeDlhRmZRRzctYXNXLTRwUi1MN0ZHWkNTUTV2MTNhY1VHdGUtTW9EdFZJNldCRFpkVHM5Wkt5MkFjX25zOEVkcUdEMFE?oc=5",
             "source": "CNBC",
             "category": "labs",
             "category_label": "Labs & Industry",
-            "published_display": "Sep 15, 2026",
-            "published_iso": "2026-09-15T20:00:16Z",
-            "summary": "Nvidia's Huang diverges with CEOs of Anthropic, OpenAI on AI safety at Dreamforce CNBC",
-            "ethics_tags": [
-              "Safety & Alignment"
-            ],
-            "trend_score": 246
+            "published_display": "Sep 18, 2026",
+            "published_iso": "2026-09-18T13:00:01Z",
+            "summary": "Anthropic and OpenAI need truly independent safety evaluators, experts say in public letter CNBC",
+            "ethics_tags": [],
+            "trend_score": 223
           },
           {
-            "title": "OpenAI, Anthropic and Google secretly joined forces to collaborate on AI safety",
-            "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOZWVrV3ZseTFWNnBPUXRoUEx3YXNlYW5GQ1RUNENlc0taSzRfc0tSY3p2TFpWYTB4MDJXcDFJdWRCbFluaVBxeEVQSnlnNFV6dzk2Y01LMEpmSE05RENNbDNzZWNWdHFya3p2WkFSUW5oUmxCQVNOUVVLZF9rU2RVQVMyRWYxYzNjRWxnMkhFX3ZsYVhwbWNGMmNubVdrd2FqQkwyV0YycFkwd3o1OUNmSi04ZHE0dw?oc=5",
-            "source": "SiliconANGLE",
+            "title": "OpenAI is reversing course and pushing Congress for binding AI safety rules",
+            "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1PaUR6Nzl0aEh2YTZTUExwZ1NadFFjZ0VQTVM5N2IwVTBIS2ZtREs4bmJwZnBzQ3BmS0w3YWV4VkhGQS03aFdVTVVDRFY2WktMMkVwRmJGUlpONjdBMFAwbXQ5NlhhSEhDT09vYnBR?oc=5",
+            "source": "qz.com",
             "category": "ethics",
             "category_label": "Ethics & Society",
-            "published_display": "Sep 16, 2026",
-            "published_iso": "2026-09-16T01:38:00Z",
-            "summary": "OpenAI, Anthropic and Google secretly joined forces to collaborate on AI safety SiliconANGLE",
+            "published_display": "Sep 22, 2026",
+            "published_iso": "2026-09-22T03:58:46Z",
+            "summary": "OpenAI is reversing course and pushing Congress for binding AI safety rules qz.com",
             "ethics_tags": [
               "Safety & Alignment",
-              "Labor & Jobs"
+              "Regulation & Governance"
             ],
-            "trend_score": 222
+            "trend_score": 159
           },
           {
             "title": "Anthropic weighs new AI model launch as OpenAI gains ground - Reuters",
@@ -1950,55 +1936,55 @@
             "published_iso": "2026-09-19T01:20:17Z",
             "summary": "Anthropic weighs new AI model launch as OpenAI gains ground - Reuters Investing.com",
             "ethics_tags": [],
-            "trend_score": 128
+            "trend_score": 130
           }
         ]
       },
       {
-        "term": "benchmark",
-        "story_count": 63,
-        "source_count": 7,
-        "category_count": 1,
-        "strength_percent": 49,
-        "top_ethics_theme": "Transparency & Accountability",
+        "term": "Anthropic",
+        "story_count": 64,
+        "source_count": 32,
+        "category_count": 5,
+        "strength_percent": 50,
+        "top_ethics_theme": "Safety & Alignment",
         "stories": [
           {
-            "title": "Open-source benchmark tests whether AI agents can engineer working robots",
-            "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9EUmQxWTRXX25mdHcwS0dyUE1LUEZoYjBMVHNBVndTaV9jcVdyQVRFQ0VhM1c5Y2RqWUFfbThlTkhvLWt4NWFtdEdNTFBnUEw1S3BzZmthekdUb19VN09OYmVMMGR1bWpScVQ3T0J6UnJVcUFpSHo4RW9WU3VDdnc?oc=5",
-            "source": "Tech Xplore",
-            "category": "research",
-            "category_label": "Research & Papers",
-            "published_display": "Sep 18, 2026",
-            "published_iso": "2026-09-18T14:40:13Z",
-            "summary": "Open-source benchmark tests whether AI agents can engineer working robots Tech Xplore",
+            "title": "Anthropic and OpenAI want to embed safety evaluators. Will they really be independent?",
+            "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPbm1iamlFNE1JMVJMQS14TTdGSGRLcFN3U3dhcXQzdkVYOVFGZkRta0VZTjVfVDVjdzdaWmdUbjE1QlloVjhuYVh1QjFidkFTcVlodFlJejhHTHQ3VVhXZE5WNERuaGxkN2RnTWdRcnNNekxzM3R4eDRjblpDMHFWXzlIb1VXM2RCZU5kcUMtNmJvLUdqdDJNTE5ORGNfTFhqUnNFeC1kRWNBRDZFUHZ6eWxxUDlQdnBwcVFz?oc=5",
+            "source": "TechCrunch",
+            "category": "labs",
+            "category_label": "Labs & Industry",
+            "published_display": "Sep 16, 2026",
+            "published_iso": "2026-09-16T21:07:24Z",
+            "summary": "Anthropic and OpenAI want to embed safety evaluators. Will they really be independent? TechCrunch",
             "ethics_tags": [],
-            "trend_score": 214
+            "trend_score": 223
           },
           {
-            "title": "Recognition, Simulation, and Refusal: A Contamination-Aware Study of Classic Psychological Effects in LLM Agents",
-            "link": "https://arxiv.org/abs/2609.22090",
-            "source": "arXiv",
+            "title": "Accenture Stock Gains After AI Safety Deal With Anthropic",
+            "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOQkxudExSWUJ0Ujg2R2F5VUw0WlFwMzJRbUFqSkFyeXR2aXJiMDBjNy1MNTVVRnVSWGZyZlctOEVOV2xmNkthQUViOFpfY3hfaFBNMnZ5R2JmY0pORWRKdmZua2RmdGNWQlV4azhsdTBCNWN5ZU1MdkxUbm4tV214aGlVQTZVa1F4eGhTUzFpY3lWNUlPTDVMbU5RNHM0d2F3V3BNdUpidlR5VkZXWnNfb2ZQaw?oc=5",
+            "source": "Investopedia",
+            "category": "ethics",
+            "category_label": "Ethics & Society",
+            "published_display": "Sep 21, 2026",
+            "published_iso": "2026-09-21T16:45:58Z",
+            "summary": "Accenture Stock Gains After AI Safety Deal With Anthropic Investopedia",
+            "ethics_tags": [
+              "Safety & Alignment"
+            ],
+            "trend_score": 157
+          },
+          {
+            "title": "Anthropic Releases a New A.I. Model, Opus 5.5, Amid Safety Debate",
+            "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNYl82VnlnNDZ1ZElxSE9RMmlPZ29FSjVleTBLZG9SYzRxc0FXRXpWWmRqekhENWtKdXdNX2ZGOFdCcGZjZVFHMWc1a3hLcGRtZUNmaU5DMmlHbzZIX3hWbTlTWklXU3c5LXpuMjB6YUtNY1Z4RTBDTlZON1BlejZ3RUFR?oc=5",
+            "source": "The New York Times",
             "category": "research",
             "category_label": "Research & Papers",
             "published_display": "Sep 22, 2026",
-            "published_iso": "2026-09-22T04:00:00Z",
-            "summary": "arXiv:2609.22090v1 Announce Type: new Abstract: An LLM producing the response pattern associated with a human psychological effect is not the same claim as the LLM possessing that bias. We present PsyAgentBench, a benchmark that re-runs…",
-            "ethics_tags": [
-              "Bias & Fairness"
-            ],
-            "trend_score": 191
-          },
-          {
-            "title": "TensorRT Edge-LLM Completes the MLPerf Edge Agentic Benchmark 6.4x Faster on Jetson AGX Thor",
-            "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNRHI0WHhmMlRfRGN5ZGNSclJiUlJjUFBCbTFxeHQ2SFBubDhLUEZnaW4tNFBIVlZYeElrYWZVVW9tS1RhY0hTWTlvcHY0ajAzREJRMjZDVFNYNzhxZXdMZ3JvUzNYNmlOMV92Z3hRZGlfbHh0UVNPNDhtaUFvNldPcWQxanNoR2h1VWZvMk9KVDg4RmtEQzZ0dFpWMVZibmdHSWFfMmFianliSG1RcW54Zlg5RTFmMURjNVdHVlA4VG9uMU9helE?oc=5",
-            "source": "developer.nvidia.com",
-            "category": "research",
-            "category_label": "Research & Papers",
-            "published_display": "Sep 16, 2026",
-            "published_iso": "2026-09-16T20:46:40Z",
-            "summary": "TensorRT Edge-LLM Completes the MLPerf Edge Agentic Benchmark 6.4x Faster on Jetson AGX Thor developer.nvidia.com",
+            "published_iso": "2026-09-22T18:06:39Z",
+            "summary": "Anthropic Releases a New A.I. Model, Opus 5.5, Amid Safety Debate The New York Times",
             "ethics_tags": [],
-            "trend_score": 119
+            "trend_score": 157
           }
         ]
       }
@@ -2007,12 +1993,12 @@
   "ethics_themes": [
     {
       "theme": "Safety & Alignment",
-      "count": 101,
+      "count": 100,
       "slug": "safety-alignment"
     },
     {
       "theme": "Regulation & Governance",
-      "count": 86,
+      "count": 88,
       "slug": "regulation-governance"
     },
     {
@@ -2026,14 +2012,14 @@
       "slug": "transparency-accountability"
     },
     {
-      "theme": "Labor & Jobs",
-      "count": 30,
-      "slug": "labor-jobs"
-    },
-    {
       "theme": "Energy & Environment",
       "count": 30,
       "slug": "energy-environment"
+    },
+    {
+      "theme": "Labor & Jobs",
+      "count": 29,
+      "slug": "labor-jobs"
     },
     {
       "theme": "Bias & Fairness",
@@ -2042,7 +2028,7 @@
     },
     {
       "theme": "Copyright & IP",
-      "count": 19,
+      "count": 20,
       "slug": "copyright-ip"
     },
     {
@@ -2058,18 +2044,63 @@
   ],
   "ethics_watch": [
     {
-      "title": "Anthropic launches Claude Opus 5.5 with stricter safeguards for cybersecurity",
-      "link": "https://www.theverge.com/ai-artificial-intelligence/998868/anthropic-claude-opus-5-5-cybersecurity",
-      "source": "The Verge",
-      "category": "labs",
-      "category_label": "Labs & Industry",
+      "title": "Enough Reason to Act: AI safety needs policy not dismissal",
+      "link": "https://substack.norabble.com/p/enough-reason-to-act",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
       "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T16:32:59Z",
-      "summary": "Anthropic says its new Claude Opus 5.5 model comes with stronger safeguards in the wake of recent rogue AI hacking incidents. In an announcement on Tuesday, Anthropic says Opus 5.5 comes with improvements to certain risky behaviors,…",
+      "published_iso": "2026-09-22T20:52:42Z",
+      "summary": "2 points, 0 comments on Hacker News.",
+      "ethics_tags": [
+        "Safety & Alignment",
+        "Regulation & Governance"
+      ],
+      "trend_score": 93
+    },
+    {
+      "title": "OpenAI calls for international AI safety standards",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9HM0NiaFZEd3RzSmVOSG04WkU5SGU3aUZ6eTNRZTBaaE1nT0F4UUc4bmt4eUEwdDBrZEliN0YzN091c0xrMkdZaUQzTmktSkcxSklnYlJzbkl2TUhoZmR3VDhzTlI5X3BIQl9wenotdXZVZHNIX0xMOE52eFZ5QQ?oc=5",
+      "source": "CIO Dive",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T20:42:31Z",
+      "summary": "OpenAI calls for international AI safety standards CIO Dive",
       "ethics_tags": [
         "Safety & Alignment"
       ],
-      "trend_score": 85
+      "trend_score": 159
+    },
+    {
+      "title": "New Poll: Voters Don’t Buy That AI Safety Is a “Hoax”",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFB2bXEwb054OUNUZVFHN1FKSENYQlZpQ2RMTElBTHU3b0FIS3lISFNFX2g4bzNxb0RtUmZYMmVMWVl0ZWotVWpxcEkyWkhzSzVVYWYtOF9OMGRHZmZMM3pzS0wwSHlQbWh2cGQwMnZpajl3bnc?oc=5",
+      "source": "Americans for Responsible Innovation",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T19:28:39Z",
+      "summary": "New Poll: Voters Don’t Buy That AI Safety Is a “Hoax” Americans for Responsible Innovation",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ],
+      "trend_score": 93
+    },
+    {
+      "title": "Illinois, California governors fast-track AI safety measures with executive orders",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPUDl2NC1fQTEwOUlEazVtaVhmRDFaUU9sYTRlUmpYb0FQQnpseWVoQk8xTHlFeTlVRVVKTmVGX3F0Uy1WV3hyUmpBQUUtNy1SdEFIS2lHNnA0UnRzMEZKV2llaE9OX2syeUVfUC1qdmtyYXE4a1VxdVNFcVcyN3Vqb3BhTnVwWF81QVNPSlhfXzAtR0xPUk9rYXBxbUZLRGprY2RNQW5PRzZueGlWUG4ycUVMLWl6QTFMSnRENzR0WnI?oc=5",
+      "source": "Transparency Coalition",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T17:53:17Z",
+      "summary": "Illinois, California governors fast-track AI safety measures with executive orders Transparency Coalition",
+      "ethics_tags": [
+        "Safety & Alignment",
+        "Regulation & Governance",
+        "Transparency & Accountability"
+      ],
+      "trend_score": 93
     },
     {
       "title": "Trump says the US is officially renaming AI to ‘super intelligence’",
@@ -2078,7 +2109,7 @@
       "category": "labs",
       "category_label": "Labs & Industry",
       "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T16:25:16Z",
+      "published_iso": "2026-09-22T17:46:40Z",
       "summary": "In a speech Tuesday morning at the UN General Assembly, Donald Trump railed against Iran, \"globalists,\" climate change, and transgender people while also claiming that the US is now \"officially\" renaming artificial intelligence to \"super…",
       "ethics_tags": [
         "Energy & Environment"
@@ -2086,19 +2117,62 @@
       "trend_score": 0
     },
     {
-      "title": "Trump rejects AI regulation, citing parallels with climate change in UN address",
+      "title": "Anthropic launches Claude Opus 5.5 with stricter safeguards for cybersecurity",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/998868/anthropic-claude-opus-5-5-cybersecurity",
+      "source": "The Verge",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T17:15:49Z",
+      "summary": "Anthropic says its new Claude Opus 5.5 model comes with stronger safeguards in the wake of recent rogue AI hacking incidents. In an announcement on Tuesday, Anthropic says Opus 5.5 comes with improvements to certain risky behaviors,…",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ],
+      "trend_score": 84
+    },
+    {
+      "title": "‘Scorpions in a Bottle’: What the U.N. Can Do About AI Safety",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPOVMyYWV1SURRY3A0aWdWMXpIOWFONmRQZnNwUXQ4emFDVzhJaXIyT0JpS1V1R0o4Si1kRUJ5NUNxLUtfTmRYMkxRZ1dxZkNTd1kxbmlFUXZYQ1ZUdGtVblU3UnZraXUxY0lWNEE2SDc5ZkhBOHJGQ2RzcVdXYnpPM0pmaGt0UWd1WElrUUhjNzJOU1dmUG90Nm54UE5USmlLZlE?oc=5",
+      "source": "Foreign Policy",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T16:03:29Z",
+      "summary": "‘Scorpions in a Bottle’: What the U.N. Can Do About AI Safety Foreign Policy",
+      "ethics_tags": [
+        "Safety & Alignment",
+        "Regulation & Governance"
+      ],
+      "trend_score": 93
+    },
+    {
+      "title": "Trump rejects AI regulation, citing parallels with climate change, in U.N. address",
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQOWZfbEItUmtMUWM5bklpRDBsQ0dPdTQxcDR0dnZaaDF1V0VoVFE1Tm1UWm1GWjVFVFl5aHJCZTlSckVMa3dYUFl6c3Bka1VHYlJHR1pZRHc1LWY1YmRlekV1aFNFbkM0THh4S2lYMXlwMGQ1MkZ6bmRpNnJrTU9ndnB5NjhUOFN1ZDNKUWZQd19aTFRjZGd5U2FLTVBtY3NHaUdFdUVIV1E3YWhLaTJVLTYybGVxOFJiR21TcjZ2WQ?oc=5",
       "source": "Scientific American",
       "category": "ethics",
       "category_label": "Ethics & Society",
       "published_display": "Sep 22, 2026",
       "published_iso": "2026-09-22T16:00:00Z",
-      "summary": "Trump rejects AI regulation, citing parallels with climate change in UN address Scientific American",
+      "summary": "Trump rejects AI regulation, citing parallels with climate change, in U.N. address Scientific American",
       "ethics_tags": [
         "Energy & Environment",
         "Regulation & Governance"
       ],
-      "trend_score": 26
+      "trend_score": 25
+    },
+    {
+      "title": "Citing China, President Trump doubles down on hands-off approach to AI regulation",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBzQ2JMWlJtWWhVcnFJS1daUGhpbkpybE9OZ2FyUVdfU2FLVXdfNEh2NGdEVmpUVERaZXQ5WXlSa090dGdLb1FqS0hNUDlxYkpSX0lxMGVTcjRhRU5UT1RmcEZWVWRYQkE4U0FPbEp3Uk4wQQ?oc=5",
+      "source": "CyberScoop",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T15:18:41Z",
+      "summary": "Citing China, President Trump doubles down on hands-off approach to AI regulation CyberScoop",
+      "ethics_tags": [
+        "Regulation & Governance"
+      ],
+      "trend_score": 25
     },
     {
       "title": "Five AI safety sessions every founder should have on their TechCrunch Disrupt 2026 agenda",
@@ -2108,11 +2182,25 @@
       "category_label": "Labs & Industry",
       "published_display": "Sep 22, 2026",
       "published_iso": "2026-09-22T15:00:00Z",
-      "summary": "At TechCrunch Disrupt 2026, five sessions across the AI Stage and Real World AI Stage cover AI safety, featuring leaders from Anthropic, NVIDIA, AWS, Waabi, and more. Register now to save up to $200 before Sept 25.",
+      "summary": "At TechCrunch Disrupt 2026, five sessions across the AI Stage and Real World AI Stage cover AI safety, featuring leaders from Anthropic, Nvidia, AWS, Waabi, and more. Register before September 25 to save up to $200.",
       "ethics_tags": [
         "Safety & Alignment"
       ],
-      "trend_score": 184
+      "trend_score": 179
+    },
+    {
+      "title": "America’s AI Safety Dilemma and the Trump-Xi Summit - The Diplomat – Asia-Pacific Current Affairs Magazine",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPeGE5TW5xcm1DVFFTcWhHTVBsc0ZUSWpVU3lrY2MtWVVDejhLZmpOWkFwLVR1bnJQOUFUeFN4b2pqRW5QcVBBVmg4RFlwcXBqZzBYS05hNG52UE5uQTFDVTdudmI5bG1aNThFV3VQeTN3OW4zd25Xb1otaEtsdDlzU2MtclRTMExNN1BVUENUQQ?oc=5",
+      "source": "Google News",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T14:55:48Z",
+      "summary": "America’s AI Safety Dilemma and the Trump-Xi Summit The Diplomat – Asia-Pacific Current Affairs Magazine",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ],
+      "trend_score": 93
     },
     {
       "title": "Jevlang: Policy Engine for LLM Decisions",
@@ -2140,7 +2228,7 @@
       "ethics_tags": [
         "Regulation & Governance"
       ],
-      "trend_score": 26
+      "trend_score": 25
     },
     {
       "title": "Nscale’s IPO will test Wall Street’s appetite for concentrated AI bets once again",
@@ -2154,21 +2242,7 @@
       "ethics_tags": [
         "Energy & Environment"
       ],
-      "trend_score": 66
-    },
-    {
-      "title": "Professor advocates for diversity in AI regulation",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOdEdhUDBzSTFIQUdhdmFhRENpMmVEb0VEOWY4VmQyYmZyTVJrRHhJNmUwcVVYb1dkRHZzajRYZmdWUnBGXzEtLVNqbFVBV0pDQnQ2ZG5HX1pWVnV4ZldpUHdick1ONE9UeE1NcE9OTkdZY3dYUXJoYXgyWlNqcnVTRWRWQXVucUJ6MmFUeVp6TlNLZG96ZUVDSG56YmV2eFZNOXc?oc=5",
-      "source": "NBC News",
-      "category": "ethics",
-      "category_label": "Ethics & Society",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T12:17:27Z",
-      "summary": "Professor advocates for diversity in AI regulation NBC News",
-      "ethics_tags": [
-        "Regulation & Governance"
-      ],
-      "trend_score": 26
+      "trend_score": 64
     },
     {
       "title": "Nvidia Stock Rises as Meta’s Zuckerberg Weighs In on AI Safety After Trump",
@@ -2182,259 +2256,210 @@
       "ethics_tags": [
         "Safety & Alignment"
       ],
-      "trend_score": 118
+      "trend_score": 132
     },
     {
-      "title": "With $7 trillion on the line, AI safety may always take a backseat to market domination",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9LM0N5RVkyT0xSZHhrR0lkUmhBcDdBbHJPMGNkQmRwVlNPNl9tRE50Z0g1bGJOZGRyR1RQLTZwbjdZZWo4aDE1eG8wcDBnVlVEWmI2UXNNQldrMGlqUFhmSzR0Wjk?oc=5",
-      "source": "axios.com",
+      "title": "OpenAI says U.S. should lead efforts to set global AI safety standards",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNdl80UEFGYUpnVHNIV2RqZWJBN29yZ3RPb0hTTE5GOWJkcndQNE5OOFVWcnZMajBGTHlUeTJvbWZRMnNuZVB0VXBlM0R4bEhLUVFOSlVSa1Z4cGRNelF6V09qQmpXaGZXM29uYUt0RTBFVlJUNXM5SVdtZE9zNHpiVjNCU1NCT284MW8yM3NSZDM0cTlMX3RUN3kzdE9oRkxu?oc=5",
+      "source": "CBS News",
       "category": "ethics",
       "category_label": "Ethics & Society",
       "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T09:49:46Z",
-      "summary": "With $7 trillion on the line, AI safety may always take a backseat to market domination axios.com",
+      "published_iso": "2026-09-22T11:21:00Z",
+      "summary": "OpenAI says U.S. should lead efforts to set global AI safety standards CBS News",
       "ethics_tags": [
         "Safety & Alignment"
       ],
-      "trend_score": 94
-    },
-    {
-      "title": "Detecting Hallucination in LLMs: Tracing the Topological Signatures of Impaired Context Sharing",
-      "link": "https://arxiv.org/abs/2609.21096",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T04:00:00Z",
-      "summary": "arXiv:2609.21096v1 Announce Type: new Abstract: In this work, we examine the topology of information flow patterns within attention graphs to effectively distinguish hallucinated from non-hallucinated responses. We analyze the Forman-Ricci…",
-      "ethics_tags": [
-        "Misinformation & Deepfakes"
-      ],
-      "trend_score": 0
-    },
-    {
-      "title": "GVPO++: Group Variance Policy Optimization for LLM Post-Training and On-Policy Distillation",
-      "link": "https://arxiv.org/abs/2609.21432",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T04:00:00Z",
-      "summary": "arXiv:2609.21432v1 Announce Type: new Abstract: Post-training plays a pivotal role in enhancing the reasoning capabilities and task-specific expertise of large language models (LLMs). Despite recent advances in post-training methods, such…",
-      "ethics_tags": [
-        "Regulation & Governance"
-      ],
-      "trend_score": 0
-    },
-    {
-      "title": "LogicTrack: Auditing Reasoning Trajectories of Large Language Models with Formal Logic Solvers",
-      "link": "https://arxiv.org/abs/2609.21492",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T04:00:00Z",
-      "summary": "arXiv:2609.21492v1 Announce Type: new Abstract: Chain-of-Thought (CoT) reasoning has been shown to improve the performance of large language models (LLMs), yet existing optimization methods largely rely on outcome-based feedback, leaving…",
-      "ethics_tags": [
-        "Transparency & Accountability"
-      ],
-      "trend_score": 0
-    },
-    {
-      "title": "Beyond Accuracy: Centroid-Guided Contrastive Loss for Structured Fraudulent Job Posting Detection",
-      "link": "https://arxiv.org/abs/2609.21599",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T04:00:00Z",
-      "summary": "arXiv:2609.21599v1 Announce Type: new Abstract: Fraudulent job posting detection aims to identify job advertisements that are corrupted either through fake content, misleading information, or negative intent, disrupting the online…",
-      "ethics_tags": [
-        "Misinformation & Deepfakes",
-        "Labor & Jobs"
-      ],
-      "trend_score": 0
-    },
-    {
-      "title": "Calibrating Teacher--Student Discrepancy for On-Policy Distillation",
-      "link": "https://arxiv.org/abs/2609.21619",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T04:00:00Z",
-      "summary": "arXiv:2609.21619v1 Announce Type: new Abstract: On-policy distillation (OPD) improves reasoning models by learning the token-level discrepancy between a stronger teacher and an on-policy student. However, this discrepancy does not purely…",
-      "ethics_tags": [
-        "Regulation & Governance"
-      ],
-      "trend_score": 0
-    },
-    {
-      "title": "ECG Mirage: Revealing and Mitigating the Underutilisation of ECGs in Vision-Language Models for Clinical Prediction",
-      "link": "https://arxiv.org/abs/2609.21755",
-      "source": "arXiv",
-      "category": "research",
-      "category_label": "Research & Papers",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T04:00:00Z",
-      "summary": "arXiv:2609.21755v1 Announce Type: new Abstract: Emergency department (ED) decision-making relies on heterogeneous clinical information, including patient history, vital signs, laboratory results, and electrocardiograms (ECGs).…",
-      "ethics_tags": [
-        "Labor & Jobs"
-      ],
-      "trend_score": 0
+      "trend_score": 159
     }
   ],
   "latest": [
     {
-      "title": "RetentionVolt MCP – Giving AI agents video editing references",
-      "link": "https://retentionvolt.com",
+      "title": "Open-Weight AI Models Seize Token Lead, but Proprietary Still Make the Money",
+      "link": "https://techstrong.ai/generative-ai/open-weight-ai-models-seize-token-lead-but-proprietary-systems-still-make-the-money/",
       "source": "Web",
       "category": "community",
       "category_label": "Community & Discussion",
       "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T16:37:47Z",
-      "summary": "1 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 146
-    },
-    {
-      "title": "Show HN: What's Next – end a Claude Code turn with a choice, not prose",
-      "link": "https://github.com/kvitapp/kvit-plugins",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T16:35:49Z",
-      "summary": "1 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 19
-    },
-    {
-      "title": "Anthropic launches Claude Opus 5.5 with stricter safeguards for cybersecurity",
-      "link": "https://www.theverge.com/ai-artificial-intelligence/998868/anthropic-claude-opus-5-5-cybersecurity",
-      "source": "The Verge",
-      "category": "labs",
-      "category_label": "Labs & Industry",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T16:32:59Z",
-      "summary": "Anthropic says its new Claude Opus 5.5 model comes with stronger safeguards in the wake of recent rogue AI hacking incidents. In an announcement on Tuesday, Anthropic says Opus 5.5 comes with improvements to certain risky behaviors,…",
-      "ethics_tags": [
-        "Safety & Alignment"
-      ],
-      "trend_score": 85
-    },
-    {
-      "title": "Anthropic releases Opus 5.5 with lower prices and Fable-level performance",
-      "link": "https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/",
-      "source": "TechCrunch",
-      "category": "labs",
-      "category_label": "Labs & Industry",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T16:30:07Z",
-      "summary": "Anthropic called it \"the strongest-performing model we've tested to date.\"",
-      "ethics_tags": [],
-      "trend_score": 66
-    },
-    {
-      "title": "Trump says the US is officially renaming AI to ‘super intelligence’",
-      "link": "https://www.theverge.com/ai-artificial-intelligence/998816/donald-trump-ai-super-intelligence",
-      "source": "The Verge",
-      "category": "labs",
-      "category_label": "Labs & Industry",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T16:25:16Z",
-      "summary": "In a speech Tuesday morning at the UN General Assembly, Donald Trump railed against Iran, \"globalists,\" climate change, and transgender people while also claiming that the US is now \"officially\" renaming artificial intelligence to \"super…",
-      "ethics_tags": [
-        "Energy & Environment"
-      ],
-      "trend_score": 0
-    },
-    {
-      "title": "How we share, review, and update AI agent skills",
-      "link": "https://medium.com/@ali.raza_25708/how-do-you-distribute-and-collaborate-on-agent-skills-in-enterprise-settings-bdb7097dff60",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T16:20:25Z",
-      "summary": "1 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 128
-    },
-    {
-      "title": "Ex-Anthropic Staffers’ Self-Improving AI Startup in Talks to Raise at $5 Billion Value",
-      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNcnpCRGt2bnpramtmWnRNZlhUZC1ueVBjSUNpZGZ2al9sbGlPNUhZbWR2bDNGUWk4eUtGN1ZJdU5CUVNxdjRGSE44Wi1vM1ZrYlZzb0YwRlNaWklQV0JqOXdYdVpmQkF4VlhOeWtDWHJQNzZYTlFlbzlYOFpLNXQwVHRCY3IwZ3VHT1BpZi14bkh3SmVRaFlsVy1hWGt0UzVVelFZM080bmhWSFB2VzZVMS1PRExsMV9fbUJXaUw2dzA3TlZDNF9hbHF0ZFg0d1lYLU44elB4REpKVHc?oc=5",
-      "source": "Bloomberg.com",
-      "category": "business",
-      "category_label": "Business & Funding",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T16:16:48Z",
-      "summary": "Ex-Anthropic Staffers’ Self-Improving AI Startup in Talks to Raise at $5 Billion Value Bloomberg.com",
-      "ethics_tags": [],
-      "trend_score": 66
-    },
-    {
-      "title": "Trump rejects AI regulation, citing parallels with climate change in UN address",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQOWZfbEItUmtMUWM5bklpRDBsQ0dPdTQxcDR0dnZaaDF1V0VoVFE1Tm1UWm1GWjVFVFl5aHJCZTlSckVMa3dYUFl6c3Bka1VHYlJHR1pZRHc1LWY1YmRlekV1aFNFbkM0THh4S2lYMXlwMGQ1MkZ6bmRpNnJrTU9ndnB5NjhUOFN1ZDNKUWZQd19aTFRjZGd5U2FLTVBtY3NHaUdFdUVIV1E3YWhLaTJVLTYybGVxOFJiR21TcjZ2WQ?oc=5",
-      "source": "Scientific American",
-      "category": "ethics",
-      "category_label": "Ethics & Society",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T16:00:00Z",
-      "summary": "Trump rejects AI regulation, citing parallels with climate change in UN address Scientific American",
-      "ethics_tags": [
-        "Energy & Environment",
-        "Regulation & Governance"
-      ],
-      "trend_score": 26
-    },
-    {
-      "title": "Are LLMs still surprisingly bad at some simple tasks?",
-      "link": "https://shkspr.mobi/blog/2026/09/are-llms-still-surprisingly-bad-at-some-simple-tasks/",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T15:53:52Z",
-      "summary": "4 points, 1 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "Pruning LLMs Like a Physicist: Block Removal as an Ising Optimization Problem",
-      "link": "https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T15:53:37Z",
+      "published_iso": "2026-09-22T20:55:18Z",
       "summary": "2 points, 0 comments on Hacker News.",
       "ethics_tags": [],
       "trend_score": 0
     },
     {
-      "title": "Rpi – a composable LLM agent SDK in Rust",
-      "link": "https://github.com/bigfish1913/pi-rust",
+      "title": "Enough Reason to Act: AI safety needs policy not dismissal",
+      "link": "https://substack.norabble.com/p/enough-reason-to-act",
       "source": "Web",
       "category": "community",
       "category_label": "Community & Discussion",
       "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T15:50:19Z",
-      "summary": "1 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 128
+      "published_iso": "2026-09-22T20:52:42Z",
+      "summary": "2 points, 0 comments on Hacker News.",
+      "ethics_tags": [
+        "Safety & Alignment",
+        "Regulation & Governance"
+      ],
+      "trend_score": 93
     },
     {
-      "title": "I deleted slow, expensive LLM turns in coding agents with Jev",
-      "link": "https://tawfeks.github.io/decisionkit/",
+      "title": "Rabbit’s new AI agent doesn’t need an R1 to run",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/999094/rabbit-ai-agent-os3",
+      "source": "The Verge",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T20:52:40Z",
+      "summary": "Rabbit, the company behind the underwhelming R1 device, is rolling out a standalone AI agent that you don't need its hardware to use, as reported earlier by Wired. The startup says its new OS3 \"agentic operating system\" runs in the cloud…",
+      "ethics_tags": [],
+      "trend_score": 163
+    },
+    {
+      "title": "OpenAI calls for international AI safety standards",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9HM0NiaFZEd3RzSmVOSG04WkU5SGU3aUZ6eTNRZTBaaE1nT0F4UUc4bmt4eUEwdDBrZEliN0YzN091c0xrMkdZaUQzTmktSkcxSklnYlJzbkl2TUhoZmR3VDhzTlI5X3BIQl9wenotdXZVZHNIX0xMOE52eFZ5QQ?oc=5",
+      "source": "CIO Dive",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T20:42:31Z",
+      "summary": "OpenAI calls for international AI safety standards CIO Dive",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ],
+      "trend_score": 159
+    },
+    {
+      "title": "LLM Ass Bench",
+      "link": "https://www.assbench.com/",
       "source": "Web",
       "category": "community",
       "category_label": "Community & Discussion",
       "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T15:44:48Z",
+      "published_iso": "2026-09-22T20:34:19Z",
+      "summary": "5 points, 4 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
+      "title": "Ask HN: When is fine-tuning a small LLM worth it?",
+      "link": "https://news.ycombinator.com/item?id=49807413",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T20:11:30Z",
+      "summary": "4 points, 3 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
+      "title": "Introducing Claude Opus 5.5",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
+      "source": "Anthropic",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T20:03:34Z",
+      "summary": "Introducing Claude Opus 5.5 Anthropic",
+      "ethics_tags": [],
+      "trend_score": 84
+    },
+    {
+      "title": "Show HN: Shrewd – what I learned distilling LLM labels into local classifiers",
+      "link": "https://github.com/sshah03/shrewd",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T20:00:46Z",
+      "summary": "3 points, 0 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
+      "title": "Meta testing a 'human concierge' for its new personal AI agent, Muse",
+      "link": "https://www.reuters.com/business/meta-testing-human-concierge-its-new-personal-ai-agent-muse-2026-09-22/",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T19:35:04Z",
+      "summary": "3 points, 0 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 146
+    },
+    {
+      "title": "Show HN: junkDrawer.ai – Browse eBay with AI Agent and Dynamic Filtering",
+      "link": "https://www.junkdrawer.ai",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T19:29:14Z",
       "summary": "1 points, 0 comments on Hacker News.",
       "ethics_tags": [],
-      "trend_score": 128
+      "trend_score": 129
+    },
+    {
+      "title": "New Poll: Voters Don’t Buy That AI Safety Is a “Hoax”",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFB2bXEwb054OUNUZVFHN1FKSENYQlZpQ2RMTElBTHU3b0FIS3lISFNFX2g4bzNxb0RtUmZYMmVMWVl0ZWotVWpxcEkyWkhzSzVVYWYtOF9OMGRHZmZMM3pzS0wwSHlQbWh2cGQwMnZpajl3bnc?oc=5",
+      "source": "Americans for Responsible Innovation",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T19:28:39Z",
+      "summary": "New Poll: Voters Don’t Buy That AI Safety Is a “Hoax” Americans for Responsible Innovation",
+      "ethics_tags": [
+        "Safety & Alignment"
+      ],
+      "trend_score": 93
+    },
+    {
+      "title": "ZenMux Launches DeepSeek V4.1 Flash for High-Throughput Reasoning",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPQ0NoQzQtUGFmV0xMdTRMQTBLWTJ2OG02NEdicUVnajJpeXI1bEVTV0hSMWdTSHlJOV9lSm1wNk5ZZ0lCWUhaTm5CTFZYTXNSWHhaYWtDMUdzcm9mOTJJV2lxbEQwWFNROXJ3Q2FER1d6bGlYQ3paSkJhbkc2VUx4bmlvb1V4YkdrV0dPVlN3ajlMVkJPeExKU3pyNUw2YkdIRzBsdHZxOGUxUXpvZGJackVMWVJIT2Nf?oc=5",
+      "source": "usatoday.com",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T18:54:01Z",
+      "summary": "ZenMux Launches DeepSeek V4.1 Flash for High-Throughput Reasoning usatoday.com",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
+      "title": "Show HN: Lightdrift / Image search for AI agents through API and MCP",
+      "link": "https://lightdrift.ai",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T18:50:54Z",
+      "summary": "1 points, 0 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 129
+    },
+    {
+      "title": "China Probes DeepSeek, Moonshot AI Over Anthropic's Claims They Route Requests to Claude",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNalNQRnNqazhhNmxmWWVWcm11dDR5NU1xMmpWTi1jNmVxWVNCMnBKQjJvNzJCcVkxMDBkMzlQQ3V2RllHLS1abE9DUmJDRTVLZ2tJYjdOM0dhLWhqRV9rSGpWWW5pWlJwOExpTWJJb200aUVfNGhTR29ucW5CVlNxWFBFOUNsblJwdnQ2QnE3LWJnV0FSY2xkZkJlSUZsdVBqS2VubThFOHdOVkwwZTZlYXNLRENpNVBs?oc=5",
+      "source": "Gizmodo",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T18:45:38Z",
+      "summary": "China Probes DeepSeek, Moonshot AI Over Anthropic's Claims They Route Requests to Claude Gizmodo",
+      "ethics_tags": [],
+      "trend_score": 84
+    },
+    {
+      "title": "Joint statement by international leaders on control of frontier AI models",
+      "link": "https://www.government.nl/documents/2026/09/22/a-call-for-control-of-frontier-ai-models",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T18:43:17Z",
+      "summary": "2 points, 0 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 0
     },
     {
       "title": "Measurements for understanding the pace of AI development inside frontier labs",
@@ -2443,146 +2468,112 @@
       "category": "labs",
       "category_label": "Labs & Industry",
       "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T15:32:34Z",
+      "published_iso": "2026-09-22T18:36:16Z",
       "summary": "Measurements for understanding the pace of AI development inside frontier labs Anthropic",
+      "ethics_tags": [],
+      "trend_score": 64
+    },
+    {
+      "title": "Microsoft AI boss calls out Anthropic for chasing AI consciousness, reigniting old debate",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOWTdvZ3ZjQVR2bVg4ZmpfYU9Rc2MtYXZLQVM1Z2xRWWI2SUdFYldlNTdfTndxeFRIOXgyRnVadG12RGJFV09iLV9peGVRRFVRLXkwQUhsckdhcFNIbDRaZGxmS3dJWUVpSXkxd1BidDdWQTBFQmxTaERoNmZLWm12SnpMZENlRjkzQmFkMzln?oc=5",
+      "source": "Mashable",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T18:33:01Z",
+      "summary": "Microsoft AI boss calls out Anthropic for chasing AI consciousness, reigniting old debate Mashable",
+      "ethics_tags": [],
+      "trend_score": 64
+    },
+    {
+      "title": "Anthropic and OpenAI roll out cheaper models in first release since call for slowdown",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1sZVdROFlLTUpZMmZPb0lWNWUtenNWaDhjX2JqeVZQM19lM2JVMmNYSHllQXczQWN5VVFHejNVOGFVU2NpVXdHQnJiWEU0eENSTmxaZGFBaTNQNXd3Vi1WM25wTVg3bjI1TEFsX2x3VlVHYzZWLWRvVW5vUdIBgAFBVV95cUxNWlZ6cE5mOEo5cUFESnpnbEFnU3h6OEhFU2hRWVFUNVVMR1FTUXk4cnR0b2Vjb3V2LVRUQXR3dl9sZDRKamNnYkhpQ3hMM3ZsckdaTlk5a2p2NDRud25uMWtUV1E0Ny1NblVMWTlGNTdYdTF6Q0JsZ3l5V3hOaHQ1cA?oc=5",
+      "source": "CNBC",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T18:23:57Z",
+      "summary": "Anthropic and OpenAI roll out cheaper models in first release since call for slowdown CNBC",
+      "ethics_tags": [],
+      "trend_score": 130
+    },
+    {
+      "title": "Introducing GPT-6 Sol and Luna",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB4SldKWWgzNDExSThTZW9MRTQ5WHE3VFRZMl9oSjIzaVhuZEZaY1ZSUTFxZTJFaFpUanlncTQySUg5SlRGVnNkQXZ0S3IxLWJScXNkLXY2Z3Jzbk5WR0UwSFp0NmUxN3c?oc=5",
+      "source": "OpenAI",
+      "category": "labs",
+      "category_label": "Labs & Industry",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T18:07:05Z",
+      "summary": "Introducing GPT-6 Sol and Luna OpenAI",
       "ethics_tags": [],
       "trend_score": 66
     },
     {
-      "title": "Five AI safety sessions every founder should have on their TechCrunch Disrupt 2026 agenda",
-      "link": "https://techcrunch.com/2026/09/22/five-ai-safety-sessions-every-founder-should-have-on-their-techcrunch-disrupt-2026-agenda/",
+      "title": "Anthropic Releases a New A.I. Model, Opus 5.5, Amid Safety Debate",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNYl82VnlnNDZ1ZElxSE9RMmlPZ29FSjVleTBLZG9SYzRxc0FXRXpWWmRqekhENWtKdXdNX2ZGOFdCcGZjZVFHMWc1a3hLcGRtZUNmaU5DMmlHbzZIX3hWbTlTWklXU3c5LXpuMjB6YUtNY1Z4RTBDTlZON1BlejZ3RUFR?oc=5",
+      "source": "The New York Times",
+      "category": "research",
+      "category_label": "Research & Papers",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T18:06:39Z",
+      "summary": "Anthropic Releases a New A.I. Model, Opus 5.5, Amid Safety Debate The New York Times",
+      "ethics_tags": [],
+      "trend_score": 157
+    },
+    {
+      "title": "OpenAI launches GPT-6 Sol and Luna, boasting lower cost and fewer mistakes",
+      "link": "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/",
       "source": "TechCrunch",
       "category": "labs",
       "category_label": "Labs & Industry",
       "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T15:00:00Z",
-      "summary": "At TechCrunch Disrupt 2026, five sessions across the AI Stage and Real World AI Stage cover AI safety, featuring leaders from Anthropic, NVIDIA, AWS, Waabi, and more. Register now to save up to $200 before Sept 25.",
-      "ethics_tags": [
-        "Safety & Alignment"
-      ],
-      "trend_score": 184
+      "published_iso": "2026-09-22T18:00:00Z",
+      "summary": "OpenAI is launching two new models, which it says are cut from the same cloth as Astra.",
+      "ethics_tags": [],
+      "trend_score": 66
     },
     {
-      "title": "AstroForge is putting AI in command of its next spacecraft",
-      "link": "https://techcrunch.com/2026/09/22/astroforge-is-putting-ai-in-command-of-its-next-spacecraft/",
-      "source": "TechCrunch",
+      "title": "Illinois, California governors fast-track AI safety measures with executive orders",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPUDl2NC1fQTEwOUlEazVtaVhmRDFaUU9sYTRlUmpYb0FQQnpseWVoQk8xTHlFeTlVRVVKTmVGX3F0Uy1WV3hyUmpBQUUtNy1SdEFIS2lHNnA0UnRzMEZKV2llaE9OX2syeUVfUC1qdmtyYXE4a1VxdVNFcVcyN3Vqb3BhTnVwWF81QVNPSlhfXzAtR0xPUk9rYXBxbUZLRGprY2RNQW5PRzZueGlWUG4ycUVMLWl6QTFMSnRENzR0WnI?oc=5",
+      "source": "Transparency Coalition",
+      "category": "ethics",
+      "category_label": "Ethics & Society",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T17:53:17Z",
+      "summary": "Illinois, California governors fast-track AI safety measures with executive orders Transparency Coalition",
+      "ethics_tags": [
+        "Safety & Alignment",
+        "Regulation & Governance",
+        "Transparency & Accountability"
+      ],
+      "trend_score": 93
+    },
+    {
+      "title": "Reviewing Your Blog Post with an LLM",
+      "link": "https://writethatblog.substack.com/p/reviewing-your-blog-post-llm",
+      "source": "Web",
+      "category": "community",
+      "category_label": "Community & Discussion",
+      "published_display": "Sep 22, 2026",
+      "published_iso": "2026-09-22T17:50:48Z",
+      "summary": "2 points, 1 comments on Hacker News.",
+      "ethics_tags": [],
+      "trend_score": 0
+    },
+    {
+      "title": "Trump says the US is officially renaming AI to ‘super intelligence’",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/998816/donald-trump-ai-super-intelligence",
+      "source": "The Verge",
       "category": "labs",
       "category_label": "Labs & Industry",
       "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T15:00:00Z",
-      "summary": "Autonomy-1 will have a small, transformer-based AI model taking charge of a space probe.",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "Show HN: CircuitPilot – We built a physics engine to auto-route PCBs using LLMs",
-      "link": "https://news.ycombinator.com/item?id=49802378",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T14:55:08Z",
-      "summary": "3 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "Show HN: DrivingBench – Frontier LLMs Driving a Real Toyota Corolla",
-      "link": "https://drivingbench.com/",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T14:29:43Z",
-      "summary": "3 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "LLM Time Travel Visualization Proposal",
-      "link": "https://gwern.net/blog/2026/llm-timetravel",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T14:22:59Z",
-      "summary": "1 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "I am embarassed by how good is ChatGPT, and I have never paid one penny",
-      "link": "https://news.ycombinator.com/item?id=49801793",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T14:22:51Z",
-      "summary": "1 points, 3 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "Xiaomi MiMo v2.6 Pro: New best open-weight LLM with simple design",
-      "link": "https://sebastianraschka.com/blog/2026/mimo-v2-6-pro-architecture-training-notes.html",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T14:21:34Z",
-      "summary": "3 points, 1 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "Physics in the Age of LLMs",
-      "link": "https://ozamram.substack.com/p/physics-in-the-age-of-llms",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T14:11:56Z",
-      "summary": "1 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "China's AI Model Startups Pivot to Monetization: Moonshot AI Races Toward IPO, MiniMax Awaits New Models",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5IN3lOMnlxUHhiOXVaMFp4M0Nmby1JVGUyaHcySGYxdU5VdWc3b0RrVld3a1FHOVFBdXFmcGFWSXRQMWRyWXlKcUZRcXRjQ1U5MnhoSUE5SlEwZjh3NTJnTlE4ZnkyeWxTUnctMVlSUV81RUtiUHc?oc=5",
-      "source": "finance.biggo.com",
-      "category": "labs",
-      "category_label": "Labs & Industry",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T14:05:00Z",
-      "summary": "China's AI Model Startups Pivot to Monetization: Moonshot AI Races Toward IPO, MiniMax Awaits New Models finance.biggo.com",
-      "ethics_tags": [],
-      "trend_score": 0
-    },
-    {
-      "title": "Jevlang: Policy Engine for LLM Decisions",
-      "link": "https://jevlang.sh/",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T14:00:28Z",
-      "summary": "1 points, 0 comments on Hacker News.",
+      "published_iso": "2026-09-22T17:46:40Z",
+      "summary": "In a speech Tuesday morning at the UN General Assembly, Donald Trump railed against Iran, \"globalists,\" climate change, and transgender people while also claiming that the US is now \"officially\" renaming artificial intelligence to \"super…",
       "ethics_tags": [
-        "Regulation & Governance"
+        "Energy & Environment"
       ],
       "trend_score": 0
-    },
-    {
-      "title": "Show HN: Venya lets AI agents use secrets without seeing them",
-      "link": "https://github.com/tabith-llc/venya",
-      "source": "Web",
-      "category": "community",
-      "category_label": "Community & Discussion",
-      "published_display": "Sep 22, 2026",
-      "published_iso": "2026-09-22T13:56:28Z",
-      "summary": "2 points, 0 comments on Hacker News.",
-      "ethics_tags": [],
-      "trend_score": 128
     }
   ]
 }

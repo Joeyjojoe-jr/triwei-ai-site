@@ -1,15 +1,43 @@
 {
-  "generated_utc": "2026-09-23T11:18:55.004137Z",
+  "generated_utc": "2026-09-23T16:40:11.723936Z",
   "generated_display": "Sep 23, 2026",
-  "coverage_generated_display": "September 23, 2026 at 6:18 AM CDT",
+  "coverage_generated_display": "September 23, 2026 at 11:40 AM CDT",
   "diffusion_watch": {
     "coverage": {
-      "story_count": 0,
-      "lab_count": 0,
-      "labs": [],
-      "signals": [],
-      "stories": [],
-      "observed_days": 35,
+      "story_count": 1,
+      "lab_count": 1,
+      "labs": [
+        {
+          "name": "Alibaba / Qwen",
+          "count": 1
+        }
+      ],
+      "signals": [
+        {
+          "name": "Open weights",
+          "count": 1
+        },
+        {
+          "name": "Capability convergence",
+          "count": 1
+        }
+      ],
+      "stories": [
+        {
+          "title": "Alibaba claims new Qwen Image 2.1 AI model beats Google Nano Banana 2.0 with minuscule 7B parameter model — benchmarks show open-weight contender is competitive with OpenAI and Meta image models",
+          "link": "https://news.google.com/rss/articles/CBMi9gJBVV95cUxQYmZsbFl0SWdUX2Ytb1NjZ2tHV3NYSmZEb1pzUkozSUktWFhwSzAwUlY2a0c2VGVSY2dtNVJvYTFHV1FNOGpzYTVjTjRpS085SU9qQlk4UzRWdnYxX2Q3Ul9jMU54bVROOG9KLVZobW5xeWZNUVVHa1BMUkxTVTBubUtqSHF6Xzdrek5Mamtjd2xFelVNYUpjY1NtWUtyM0hubC12QTZrYmVuTnZidHM2cTYwSE1hMVZaZkhDYWYwNUhPTXJDa25EelZYSjNBX1JhYWRteERZSU9wR1htQ3RZWGIydVl2SnVlLWpKZ2M2V21SY1RVUDBfMm91dTZqRVRLemJLZzNTZDE3eVp5MVJvSzdObDNud0NHbXNva1lyTUhsY2k1X3Y0OVlhSHBWelZsbFpqOGRUd2FDeTNMalhwUjVBR2NRVHJGSG41WDdQUV9hRzVuRlJaclpvNEZnancwMGhnZlQyVy14X1lMcGJVOFpBeW5OUQ?oc=5",
+          "source": "Tom's Hardware",
+          "published_display": "Sep 23, 2026",
+          "labs": [
+            "Alibaba / Qwen"
+          ],
+          "signals": [
+            "Open weights",
+            "Capability convergence"
+          ]
+        }
+      ],
+      "observed_days": 36,
       "window_days": 365,
       "daily": [
         {
@@ -370,6 +398,17 @@
             "DeepSeek": 1
           },
           "signals": {
+            "Open weights": 1
+          }
+        },
+        {
+          "date": "2026-09-23",
+          "story_count": 1,
+          "labs": {
+            "Alibaba / Qwen": 1
+          },
+          "signals": {
+            "Capability convergence": 1,
             "Open weights": 1
           }
         }
@@ -812,7 +851,7 @@
     "series": [
       {
         "term": "funding",
-        "total": 31,
+        "total": 34,
         "points": [
           {
             "date": "2026-07-16",
@@ -1157,12 +1196,12 @@
           {
             "date": "2026-09-22",
             "count": 7,
-            "share": 28.0
+            "share": 53.8
           },
           {
             "date": "2026-09-23",
-            "count": 0,
-            "share": 0.0
+            "count": 3,
+            "share": 5.7
           }
         ]
       },
@@ -1512,13 +1551,13 @@
           },
           {
             "date": "2026-09-22",
-            "count": 8,
-            "share": 32.0
+            "count": 6,
+            "share": 46.2
           },
           {
             "date": "2026-09-23",
-            "count": 3,
-            "share": 7.9
+            "count": 5,
+            "share": 9.4
           }
         ]
       },
@@ -1869,7 +1908,7 @@
           {
             "date": "2026-09-22",
             "count": 4,
-            "share": 16.0
+            "share": 30.8
           },
           {
             "date": "2026-09-23",
@@ -1880,7 +1919,7 @@
       },
       {
         "term": "Anthropic",
-        "total": 18,
+        "total": 19,
         "points": [
           {
             "date": "2026-07-16",
@@ -2224,19 +2263,19 @@
           },
           {
             "date": "2026-09-22",
-            "count": 6,
-            "share": 24.0
+            "count": 2,
+            "share": 15.4
           },
           {
             "date": "2026-09-23",
-            "count": 1,
-            "share": 2.6
+            "count": 6,
+            "share": 11.3
           }
         ]
       },
       {
         "term": "OpenAI",
-        "total": 18,
+        "total": 19,
         "points": [
           {
             "date": "2026-07-16",
@@ -2580,19 +2619,19 @@
           },
           {
             "date": "2026-09-22",
-            "count": 3,
-            "share": 12.0
+            "count": 1,
+            "share": 7.7
           },
           {
             "date": "2026-09-23",
-            "count": 2,
-            "share": 5.3
+            "count": 5,
+            "share": 9.4
           }
         ]
       },
       {
         "term": "regulation",
-        "total": 11,
+        "total": 10,
         "points": [
           {
             "date": "2026-07-16",
@@ -2936,13 +2975,13 @@
           },
           {
             "date": "2026-09-22",
-            "count": 2,
-            "share": 8.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-09-23",
-            "count": 1,
-            "share": 2.6
+            "count": 2,
+            "share": 3.8
           }
         ]
       }
@@ -2976,7 +3015,7 @@
     "companies": [
       {
         "name": "Anthropic",
-        "story_count": 11,
+        "story_count": 10,
         "cells": [
           {
             "key": "hardware",
@@ -2986,53 +3025,22 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 0
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 0
-          }
-        ]
-      },
-      {
-        "name": "Nvidia",
-        "story_count": 7,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 7
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 2
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 0
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
             "count": 1
           },
           {
+            "key": "models",
+            "label": "Models & research",
+            "count": 0
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 2
+          },
+          {
             "key": "society",
             "label": "Policy & society",
-            "count": 0
+            "count": 1
           }
         ]
       },
@@ -3043,7 +3051,7 @@
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 0
+            "count": 1
           },
           {
             "key": "cloud",
@@ -3053,12 +3061,12 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 1
+            "count": 2
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 2
+            "count": 1
           },
           {
             "key": "society",
@@ -3068,28 +3076,28 @@
         ]
       },
       {
-        "name": "DeepSeek",
-        "story_count": 5,
+        "name": "Nvidia",
+        "story_count": 6,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 0
+            "count": 6
           },
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 0
+            "count": 2
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 2
+            "count": 0
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 0
+            "count": 1
           },
           {
             "key": "society",
@@ -3100,7 +3108,7 @@
       },
       {
         "name": "Google",
-        "story_count": 4,
+        "story_count": 5,
         "cells": [
           {
             "key": "hardware",
@@ -3111,6 +3119,68 @@
             "key": "cloud",
             "label": "Cloud & compute",
             "count": 1
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 1
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "DeepSeek",
+        "story_count": 3,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 1
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "Moonshot",
+        "story_count": 3,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 1
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
           },
           {
             "key": "models",
@@ -3131,12 +3201,12 @@
       },
       {
         "name": "Meta",
-        "story_count": 3,
+        "story_count": 2,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 0
+            "count": 1
           },
           {
             "key": "cloud",
@@ -3146,7 +3216,7 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 0
+            "count": 1
           },
           {
             "key": "apps",
@@ -3161,8 +3231,8 @@
         ]
       },
       {
-        "name": "Moonshot",
-        "story_count": 3,
+        "name": "Microsoft",
+        "story_count": 1,
         "cells": [
           {
             "key": "hardware",
@@ -3182,7 +3252,7 @@
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 1
+            "count": 0
           },
           {
             "key": "society",
@@ -3192,7 +3262,7 @@
         ]
       }
     ],
-    "max_count": 7,
+    "max_count": 6,
     "metric": "Distinct stories mentioning both the company and layer",
     "source": "coverage"
   },

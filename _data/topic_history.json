@@ -508,49 +508,48 @@
     },
     {
       "date": "2026-09-23",
-      "story_count": 3,
-      "topics": {}
+      "story_count": 4,
+      "topics": {
+        "Meta": 1
+      }
     },
     {
       "date": "2026-09-24",
-      "story_count": 10,
+      "story_count": 8,
       "topics": {
         "benchmark": 1,
         "data center": 2,
-        "funding": 7,
-        "Google": 6
+        "funding": 5,
+        "Google": 4
       }
     },
     {
       "date": "2026-09-25",
-      "story_count": 35,
+      "story_count": 24,
       "topics": {
-        "agent": 1,
-        "Anthropic": 6,
+        "Anthropic": 4,
         "ChatGPT": 1,
         "Claude": 1,
         "data center": 2,
-        "funding": 7,
-        "Google": 4,
-        "Meta": 1,
+        "funding": 9,
+        "Google": 6,
         "Nvidia": 2,
-        "OpenAI": 10,
-        "regulation": 4,
-        "safety": 5
+        "OpenAI": 6,
+        "regulation": 1,
+        "safety": 1
       }
     },
     {
       "date": "2026-09-26",
-      "story_count": 22,
+      "story_count": 34,
       "topics": {
         "agent": 2,
+        "Anthropic": 2,
         "ChatGPT": 1,
-        "copyright": 1,
-        "funding": 1,
-        "Mistral": 1,
-        "OpenAI": 6,
-        "regulation": 2,
-        "safety": 3
+        "Google": 1,
+        "OpenAI": 10,
+        "regulation": 3,
+        "safety": 9
       }
     }
   ]

@@ -563,42 +563,47 @@
     },
     {
       "date": "2026-09-30",
-      "story_count": 2,
+      "story_count": 8,
       "topics": {
+        "agent": 2,
+        "coding": 1,
         "DeepSeek": 1,
         "funding": 2,
-        "OpenAI": 1
+        "Google": 2,
+        "Meta": 1,
+        "OpenAI": 2
       }
     },
     {
       "date": "2026-10-01",
-      "story_count": 39,
+      "story_count": 33,
       "topics": {
         "agent": 4,
-        "Anthropic": 3,
+        "Anthropic": 1,
         "ChatGPT": 1,
         "data center": 2,
         "funding": 10,
         "Google": 6,
         "Meta": 2,
         "Nvidia": 1,
-        "OpenAI": 13,
+        "OpenAI": 7,
         "regulation": 1,
-        "safety": 13
+        "safety": 12
       }
     },
     {
       "date": "2026-10-02",
-      "story_count": 29,
+      "story_count": 28,
       "topics": {
-        "agent": 7,
+        "agent": 3,
         "benchmark": 2,
         "ChatGPT": 1,
         "funding": 2,
         "Google": 1,
         "Nvidia": 1,
+        "OpenAI": 2,
         "robot": 1,
-        "safety": 1,
+        "safety": 2,
         "video": 1
       }
     }

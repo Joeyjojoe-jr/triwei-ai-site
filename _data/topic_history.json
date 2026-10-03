@@ -576,31 +576,40 @@
     },
     {
       "date": "2026-10-01",
-      "story_count": 7,
+      "story_count": 3,
       "topics": {
-        "Nvidia": 1,
-        "OpenAI": 2,
-        "regulation": 1,
-        "safety": 5
+        "OpenAI": 1,
+        "safety": 3
       }
     },
     {
       "date": "2026-10-02",
-      "story_count": 63,
+      "story_count": 49,
       "topics": {
-        "agent": 4,
+        "agent": 2,
         "Amazon": 4,
-        "Anthropic": 5,
-        "Apple": 3,
-        "benchmark": 2,
+        "Anthropic": 6,
+        "Apple": 2,
         "Claude": 1,
+        "data center": 1,
         "funding": 14,
         "Google": 1,
+        "GPT": 1,
         "Meta": 2,
         "Nvidia": 7,
-        "OpenAI": 2,
+        "OpenAI": 3,
         "regulation": 3,
-        "safety": 7
+        "safety": 10
+      }
+    },
+    {
+      "date": "2026-10-03",
+      "story_count": 18,
+      "topics": {
+        "agent": 1,
+        "benchmark": 1,
+        "Claude": 1,
+        "DeepSeek": 1
       }
     }
   ]

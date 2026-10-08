@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-10-07T23:00:18.576975Z",
-  "generated_display": "Oct 07, 2026",
-  "coverage_generated_display": "October 7, 2026 at 6:00 PM CDT",
+  "generated_utc": "2026-10-08T05:40:53.574784Z",
+  "generated_display": "Oct 08, 2026",
+  "coverage_generated_display": "October 8, 2026 at 12:40 AM CDT",
   "diffusion_watch": {
     "coverage": {
       "story_count": 1,
@@ -553,7 +553,7 @@
   "supply_chain": {
     "verified_on": "2026-07-20",
     "verified_display": "Jul 20, 2026",
-    "age_days": 79,
+    "age_days": 80,
     "freshness": "current",
     "stages": [
       {
@@ -905,7 +905,7 @@
   },
   "topic_lifecycle": {
     "window_days": 90,
-    "observed_days": 84,
+    "observed_days": 85,
     "series": [
       {
         "term": "funding",
@@ -1329,13 +1329,18 @@
           {
             "date": "2026-10-07",
             "count": 14,
-            "share": 21.5
+            "share": 29.8
+          },
+          {
+            "date": "2026-10-08",
+            "count": 0,
+            "share": 0.0
           }
         ]
       },
       {
         "term": "Nvidia",
-        "total": 36,
+        "total": 35,
         "points": [
           {
             "date": "2026-07-16",
@@ -1754,8 +1759,13 @@
           },
           {
             "date": "2026-10-07",
-            "count": 12,
-            "share": 18.5
+            "count": 11,
+            "share": 23.4
+          },
+          {
+            "date": "2026-10-08",
+            "count": 0,
+            "share": 0.0
           }
         ]
       },
@@ -2175,19 +2185,24 @@
           },
           {
             "date": "2026-10-06",
-            "count": 2,
-            "share": 40.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-10-07",
-            "count": 6,
-            "share": 9.2
+            "count": 7,
+            "share": 14.9
+          },
+          {
+            "date": "2026-10-08",
+            "count": 1,
+            "share": 4.5
           }
         ]
       },
       {
         "term": "OpenAI",
-        "total": 20,
+        "total": 22,
         "points": [
           {
             "date": "2026-07-16",
@@ -2606,14 +2621,19 @@
           },
           {
             "date": "2026-10-07",
-            "count": 5,
-            "share": 7.7
+            "count": 4,
+            "share": 8.5
+          },
+          {
+            "date": "2026-10-08",
+            "count": 3,
+            "share": 13.6
           }
         ]
       },
       {
         "term": "Anthropic",
-        "total": 19,
+        "total": 18,
         "points": [
           {
             "date": "2026-07-16",
@@ -3027,19 +3047,24 @@
           },
           {
             "date": "2026-10-06",
-            "count": 1,
-            "share": 20.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-10-07",
-            "count": 4,
-            "share": 6.2
+            "count": 3,
+            "share": 6.4
+          },
+          {
+            "date": "2026-10-08",
+            "count": 1,
+            "share": 4.5
           }
         ]
       },
       {
         "term": "Google",
-        "total": 17,
+        "total": 16,
         "points": [
           {
             "date": "2026-07-16",
@@ -3458,8 +3483,13 @@
           },
           {
             "date": "2026-10-07",
-            "count": 1,
-            "share": 1.5
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-08",
+            "count": 0,
+            "share": 0.0
           }
         ]
       }
@@ -3493,12 +3523,12 @@
     "companies": [
       {
         "name": "Nvidia",
-        "story_count": 12,
+        "story_count": 11,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 10
+            "count": 9
           },
           {
             "key": "cloud",
@@ -3539,7 +3569,7 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 2
+            "count": 1
           },
           {
             "key": "apps",
@@ -3555,7 +3585,7 @@
       },
       {
         "name": "Anthropic",
-        "story_count": 7,
+        "story_count": 5,
         "cells": [
           {
             "key": "hardware",
@@ -3570,7 +3600,7 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 1
+            "count": 0
           },
           {
             "key": "apps",
@@ -3580,7 +3610,7 @@
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 2
+            "count": 1
           }
         ]
       },
@@ -3616,39 +3646,8 @@
         ]
       },
       {
-        "name": "Meta",
-        "story_count": 3,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 0
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 1
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 0
-          }
-        ]
-      },
-      {
         "name": "DeepSeek",
-        "story_count": 2,
+        "story_count": 1,
         "cells": [
           {
             "key": "hardware",
@@ -3678,7 +3677,7 @@
         ]
       },
       {
-        "name": "Google",
+        "name": "Meta",
         "story_count": 1,
         "cells": [
           {
@@ -3709,7 +3708,7 @@
         ]
       }
     ],
-    "max_count": 10,
+    "max_count": 9,
     "metric": "Distinct stories mentioning both the company and layer",
     "source": "coverage"
   },
@@ -3717,7 +3716,7 @@
     "status": "available",
     "verified_on": "2026-07-20",
     "verified_display": "Jul 20, 2026",
-    "age_days": 79,
+    "age_days": 80,
     "max_current_age_days": 30,
     "freshness": "expired",
     "models": [

@@ -627,7 +627,7 @@
     },
     {
       "date": "2026-10-07",
-      "story_count": 3,
+      "story_count": 2,
       "topics": {
         "benchmark": 1,
         "ChatGPT": 1
@@ -635,43 +635,49 @@
     },
     {
       "date": "2026-10-08",
-      "story_count": 12,
+      "story_count": 8,
       "topics": {
         "chip": 1,
-        "funding": 7,
+        "funding": 5,
         "Gemini": 1,
         "Google": 1,
         "Meta": 1,
         "Nvidia": 1,
-        "OpenAI": 2,
-        "safety": 1
+        "OpenAI": 2
       }
     },
     {
       "date": "2026-10-09",
-      "story_count": 35,
+      "story_count": 30,
       "topics": {
-        "Anthropic": 4,
+        "agent": 1,
+        "Anthropic": 1,
         "benchmark": 1,
-        "funding": 7,
+        "funding": 8,
         "Google": 2,
-        "Nvidia": 5,
-        "OpenAI": 7,
-        "regulation": 3,
-        "safety": 10,
-        "video": 1
+        "Meta": 1,
+        "Microsoft": 1,
+        "Nvidia": 6,
+        "OpenAI": 5,
+        "regulation": 2,
+        "safety": 8
       }
     },
     {
       "date": "2026-10-10",
-      "story_count": 20,
+      "story_count": 30,
       "topics": {
         "agent": 2,
         "agentic": 1,
-        "Anthropic": 7,
+        "Anthropic": 10,
+        "Claude": 2,
+        "coding": 1,
+        "funding": 1,
+        "Google": 1,
         "Microsoft": 1,
-        "regulation": 1,
-        "video": 1
+        "OpenAI": 1,
+        "regulation": 3,
+        "safety": 1
       }
     }
   ]

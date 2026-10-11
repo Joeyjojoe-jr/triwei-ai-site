@@ -635,52 +635,55 @@
     },
     {
       "date": "2026-10-08",
-      "story_count": 8,
+      "story_count": 9,
       "topics": {
         "chip": 1,
         "funding": 5,
         "Meta": 1,
-        "Nvidia": 1,
-        "OpenAI": 1
+        "Nvidia": 2,
+        "OpenAI": 2
       }
     },
     {
       "date": "2026-10-09",
-      "story_count": 29,
+      "story_count": 27,
       "topics": {
-        "Anthropic": 2,
+        "Anthropic": 3,
         "benchmark": 1,
         "funding": 8,
         "Google": 2,
         "Microsoft": 1,
-        "Nvidia": 7,
+        "Nvidia": 6,
         "OpenAI": 4,
-        "regulation": 2,
+        "regulation": 1,
         "safety": 7
       }
     },
     {
       "date": "2026-10-10",
-      "story_count": 20,
+      "story_count": 24,
       "topics": {
-        "Anthropic": 7,
+        "agentic": 1,
+        "Anthropic": 6,
         "benchmark": 1,
         "Claude": 1,
+        "coding": 1,
         "funding": 1,
         "Microsoft": 3,
+        "Nvidia": 1,
         "OpenAI": 1,
         "regulation": 3,
-        "safety": 2
+        "safety": 1
       }
     },
     {
       "date": "2026-10-11",
-      "story_count": 13,
+      "story_count": 10,
       "topics": {
-        "agent": 2,
         "Anthropic": 2,
-        "Claude": 2,
-        "Gemini": 1
+        "Claude": 3,
+        "regulation": 1,
+        "safety": 1
       }
     }
   ]

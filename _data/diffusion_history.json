@@ -447,15 +447,22 @@
     },
     {
       "date": "2026-10-13",
-      "story_count": 2,
+      "story_count": 1,
       "labs": {
-        "DeepSeek": 1,
-        "Moonshot / Kimi": 1,
-        "Z.ai / GLM": 1
+        "DeepSeek": 1
       },
       "signals": {
-        "Distillation / extraction": 1,
         "Open weights": 1
+      }
+    },
+    {
+      "date": "2026-10-14",
+      "story_count": 1,
+      "labs": {
+        "DeepSeek": 1
+      },
+      "signals": {
+        "Distillation / extraction": 1
       }
     }
   ]

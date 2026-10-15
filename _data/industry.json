@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-10-15T11:21:21.401634Z",
+  "generated_utc": "2026-10-15T16:52:07.060663Z",
   "generated_display": "Oct 15, 2026",
-  "coverage_generated_display": "October 15, 2026 at 6:21 AM CDT",
+  "coverage_generated_display": "October 15, 2026 at 11:52 AM CDT",
   "diffusion_watch": {
     "coverage": {
       "story_count": 0,
@@ -1355,18 +1355,18 @@
           },
           {
             "date": "2026-10-13",
-            "count": 6,
+            "count": 3,
             "share": 100.0
           },
           {
             "date": "2026-10-14",
             "count": 7,
-            "share": 25.9
+            "share": 63.6
           },
           {
             "date": "2026-10-15",
-            "count": 1,
-            "share": 2.7
+            "count": 4,
+            "share": 7.1
           }
         ]
       },
@@ -1816,13 +1816,13 @@
           },
           {
             "date": "2026-10-14",
-            "count": 11,
-            "share": 40.7
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-10-15",
-            "count": 4,
-            "share": 10.8
+            "count": 15,
+            "share": 26.8
           }
         ]
       },
@@ -2272,13 +2272,13 @@
           },
           {
             "date": "2026-10-14",
-            "count": 2,
-            "share": 7.4
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-10-15",
-            "count": 1,
-            "share": 2.7
+            "count": 3,
+            "share": 5.4
           }
         ]
       },
@@ -2728,13 +2728,13 @@
           },
           {
             "date": "2026-10-14",
-            "count": 6,
-            "share": 22.2
+            "count": 3,
+            "share": 27.3
           },
           {
             "date": "2026-10-15",
-            "count": 5,
-            "share": 13.5
+            "count": 8,
+            "share": 14.3
           }
         ]
       },
@@ -3184,19 +3184,19 @@
           },
           {
             "date": "2026-10-14",
-            "count": 4,
-            "share": 14.8
+            "count": 1,
+            "share": 9.1
           },
           {
             "date": "2026-10-15",
-            "count": 1,
-            "share": 2.7
+            "count": 4,
+            "share": 7.1
           }
         ]
       },
       {
         "term": "Google",
-        "total": 18,
+        "total": 21,
         "points": [
           {
             "date": "2026-07-18",
@@ -3645,8 +3645,8 @@
           },
           {
             "date": "2026-10-15",
-            "count": 1,
-            "share": 2.7
+            "count": 4,
+            "share": 7.1
           }
         ]
       }
@@ -3680,7 +3680,7 @@
     "companies": [
       {
         "name": "Anthropic",
-        "story_count": 12,
+        "story_count": 11,
         "cells": [
           {
             "key": "hardware",
@@ -3700,12 +3700,12 @@
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 1
+            "count": 0
           },
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 0
+            "count": 3
           }
         ]
       },
@@ -3721,12 +3721,43 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 2
+            "count": 0
           },
           {
             "key": "models",
             "label": "Models & research",
+            "count": 2
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
             "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Google",
+        "story_count": 4,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 3
           },
           {
             "key": "apps",
@@ -3736,7 +3767,7 @@
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 3
+            "count": 0
           }
         ]
       },
@@ -3762,7 +3793,7 @@
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 1
+            "count": 0
           },
           {
             "key": "society",
@@ -3772,7 +3803,7 @@
         ]
       },
       {
-        "name": "Google",
+        "name": "DeepSeek",
         "story_count": 1,
         "cells": [
           {
@@ -3820,6 +3851,68 @@
             "key": "models",
             "label": "Models & research",
             "count": 0
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "Mistral",
+        "story_count": 1,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 1
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "Moonshot",
+        "story_count": 1,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 1
           },
           {
             "key": "apps",

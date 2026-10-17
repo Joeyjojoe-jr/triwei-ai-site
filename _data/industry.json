@@ -1,24 +1,36 @@
 {
-  "generated_utc": "2026-10-17T10:27:57.572218Z",
+  "generated_utc": "2026-10-17T15:21:42.136088Z",
   "generated_display": "Oct 17, 2026",
-  "coverage_generated_display": "October 17, 2026 at 5:27 AM CDT",
+  "coverage_generated_display": "October 17, 2026 at 10:21 AM CDT",
   "diffusion_watch": {
     "coverage": {
-      "story_count": 1,
+      "story_count": 2,
       "lab_count": 1,
       "labs": [
         {
           "name": "DeepSeek",
-          "count": 1
+          "count": 2
         }
       ],
       "signals": [
         {
           "name": "Capability convergence",
-          "count": 1
+          "count": 2
         }
       ],
       "stories": [
+        {
+          "title": "Deepseek V4.1 Flash 1017 beats larger rivals in agentic tasks while once again massively cutting per-task costs",
+          "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQMjBtNG5jOGtJNDMtWHYtVXo1RU44LWJlNTZrNkhxajRYd0JOMkdXLXV3ZlZwQTVidkoyWjJKbUNvS0U2UXdRdjZmNE9KWHhlTUR0Y2xmWWhTRm9MbFpuQm5NUEtyejJqWXZhYmRjWmdVTFZ0RFlVR2JwMTNqOUgtb3NxeHU2dUJVcHpTaUN5WFFCQkIzWXZhZGJVVXpUV0RfQUNxNjNLSngteWVuaVVEckhkWmNVbjF1QVQ4b2FoTHYxVmh0eko4T0ZKSG91c3ZWTlE?oc=5",
+          "source": "The Decoder",
+          "published_display": "Oct 17, 2026",
+          "labs": [
+            "DeepSeek"
+          ],
+          "signals": [
+            "Capability convergence"
+          ]
+        },
         {
           "title": "DeepSeek Launches V4.1-Flash-1017, Beats Claude Opus 5 On Some Benchmarks",
           "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1kcVFMNjV2NFZ4c3k3VkdkYk1NdjVQWEJFYVlFOV96RHZoVWcta1NnMDRHenZjbHVKMWM3VnBoanZBTklBVEUzUVcxWHAyLTFvRGpfdDlKNWtQNFZESkNtVS1vbzEyY3J1aVh1MUJoZmd1T3ZfREE?oc=5",
@@ -502,12 +514,12 @@
         },
         {
           "date": "2026-10-17",
-          "story_count": 1,
+          "story_count": 2,
           "labs": {
-            "DeepSeek": 1
+            "DeepSeek": 2
           },
           "signals": {
-            "Capability convergence": 1
+            "Capability convergence": 2
           }
         }
       ],
@@ -949,7 +961,7 @@
     "series": [
       {
         "term": "funding",
-        "total": 78,
+        "total": 79,
         "points": [
           {
             "date": "2026-07-20",
@@ -1384,17 +1396,17 @@
           {
             "date": "2026-10-14",
             "count": 5,
-            "share": 71.4
+            "share": 100.0
           },
           {
             "date": "2026-10-15",
-            "count": 4,
-            "share": 33.3
+            "count": 5,
+            "share": 35.7
           },
           {
             "date": "2026-10-16",
             "count": 5,
-            "share": 14.3
+            "share": 21.7
           },
           {
             "date": "2026-10-17",
@@ -1405,7 +1417,7 @@
       },
       {
         "term": "safety",
-        "total": 31,
+        "total": 28,
         "points": [
           {
             "date": "2026-07-20",
@@ -1849,19 +1861,19 @@
           },
           {
             "date": "2026-10-16",
-            "count": 13,
-            "share": 37.1
+            "count": 10,
+            "share": 43.5
           },
           {
             "date": "2026-10-17",
             "count": 3,
-            "share": 20.0
+            "share": 10.7
           }
         ]
       },
       {
         "term": "Nvidia",
-        "total": 26,
+        "total": 25,
         "points": [
           {
             "date": "2026-07-20",
@@ -2305,8 +2317,8 @@
           },
           {
             "date": "2026-10-16",
-            "count": 1,
-            "share": 2.9
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-10-17",
@@ -2317,7 +2329,7 @@
       },
       {
         "term": "Anthropic",
-        "total": 25,
+        "total": 21,
         "points": [
           {
             "date": "2026-07-20",
@@ -2751,8 +2763,8 @@
           },
           {
             "date": "2026-10-14",
-            "count": 1,
-            "share": 14.3
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-10-15",
@@ -2761,19 +2773,19 @@
           },
           {
             "date": "2026-10-16",
-            "count": 10,
-            "share": 28.6
+            "count": 7,
+            "share": 30.4
           },
           {
             "date": "2026-10-17",
             "count": 3,
-            "share": 20.0
+            "share": 10.7
           }
         ]
       },
       {
         "term": "OpenAI",
-        "total": 20,
+        "total": 21,
         "points": [
           {
             "date": "2026-07-20",
@@ -3218,18 +3230,18 @@
           {
             "date": "2026-10-16",
             "count": 3,
-            "share": 8.6
+            "share": 13.0
           },
           {
             "date": "2026-10-17",
-            "count": 1,
-            "share": 6.7
+            "count": 2,
+            "share": 7.1
           }
         ]
       },
       {
         "term": "Google",
-        "total": 20,
+        "total": 21,
         "points": [
           {
             "date": "2026-07-20",
@@ -3663,18 +3675,18 @@
           },
           {
             "date": "2026-10-14",
-            "count": 1,
-            "share": 14.3
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-10-15",
-            "count": 1,
-            "share": 8.3
+            "count": 2,
+            "share": 14.3
           },
           {
             "date": "2026-10-16",
-            "count": 1,
-            "share": 2.9
+            "count": 2,
+            "share": 8.7
           },
           {
             "date": "2026-10-17",
@@ -3713,7 +3725,7 @@
     "companies": [
       {
         "name": "Anthropic",
-        "story_count": 16,
+        "story_count": 11,
         "cells": [
           {
             "key": "hardware",
@@ -3723,12 +3735,12 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 0
+            "count": 1
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 4
+            "count": 2
           },
           {
             "key": "apps",
@@ -3743,70 +3755,70 @@
         ]
       },
       {
+        "name": "DeepSeek",
+        "story_count": 9,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 1
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 6
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 1
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      },
+      {
         "name": "OpenAI",
         "story_count": 5,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
             "count": 1
           },
           {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
             "key": "models",
             "label": "Models & research",
-            "count": 2
+            "count": 3
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 2
+            "count": 1
           },
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 2
-          }
-        ]
-      },
-      {
-        "name": "DeepSeek",
-        "story_count": 3,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 2
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 2
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 0
+            "count": 1
           }
         ]
       },
       {
         "name": "Google",
-        "story_count": 3,
+        "story_count": 4,
         "cells": [
           {
             "key": "hardware",
@@ -3816,7 +3828,7 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 1
+            "count": 2
           },
           {
             "key": "models",
@@ -3826,7 +3838,7 @@
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 0
+            "count": 1
           },
           {
             "key": "society",
@@ -3867,33 +3879,33 @@
         ]
       },
       {
-        "name": "Nvidia",
+        "name": "Microsoft",
         "story_count": 1,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 1
+            "count": 0
           },
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 0
+            "count": 1
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 0
+            "count": 1
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 1
+            "count": 0
           },
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 1
+            "count": 0
           }
         ]
       }

@@ -1,14 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-07-20",
-      "story_count": 5,
-      "topics": {
-        "Anthropic": 1,
-        "Nvidia": 1
-      }
-    },
-    {
       "date": "2026-07-21",
       "story_count": 1,
       "topics": {
@@ -662,7 +654,7 @@
     },
     {
       "date": "2026-10-15",
-      "story_count": 14,
+      "story_count": 13,
       "topics": {
         "Apple": 1,
         "benchmark": 1,
@@ -682,25 +674,33 @@
         "Google": 1,
         "Meta": 1,
         "OpenAI": 1,
-        "regulation": 1,
-        "safety": 7
+        "safety": 8
       }
     },
     {
       "date": "2026-10-17",
-      "story_count": 36,
+      "story_count": 34,
       "topics": {
         "agent": 3,
-        "agentic": 1,
         "Anthropic": 6,
         "Apple": 1,
         "Claude": 1,
-        "coding": 1,
+        "coding": 2,
         "DeepSeek": 12,
         "funding": 1,
-        "OpenAI": 2,
+        "GPT": 1,
+        "Nvidia": 1,
+        "OpenAI": 3,
         "regulation": 1,
         "safety": 5
+      }
+    },
+    {
+      "date": "2026-10-18",
+      "story_count": 3,
+      "topics": {
+        "Anthropic": 1,
+        "OpenAI": 1
       }
     }
   ]

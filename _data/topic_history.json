@@ -647,27 +647,26 @@
     },
     {
       "date": "2026-10-14",
-      "story_count": 4,
+      "story_count": 3,
       "topics": {
-        "funding": 4
+        "funding": 3
       }
     },
     {
       "date": "2026-10-15",
-      "story_count": 11,
+      "story_count": 12,
       "topics": {
         "Apple": 1,
         "benchmark": 1,
-        "data center": 1,
-        "funding": 4,
+        "data center": 2,
+        "funding": 5,
         "Gemini": 1,
-        "Google": 2,
-        "Mistral": 1
+        "Google": 2
       }
     },
     {
       "date": "2026-10-16",
-      "story_count": 17,
+      "story_count": 16,
       "topics": {
         "Anthropic": 4,
         "Apple": 1,
@@ -675,33 +674,36 @@
         "Google": 1,
         "Meta": 1,
         "OpenAI": 1,
-        "safety": 8
+        "safety": 7
       }
     },
     {
       "date": "2026-10-17",
-      "story_count": 17,
+      "story_count": 15,
       "topics": {
-        "Anthropic": 5,
-        "Claude": 2,
+        "Anthropic": 4,
+        "Claude": 1,
         "coding": 1,
-        "DeepSeek": 5,
+        "DeepSeek": 4,
+        "funding": 1,
         "GPT": 1,
-        "OpenAI": 2,
+        "Nvidia": 1,
+        "OpenAI": 1,
         "regulation": 1,
         "safety": 5
       }
     },
     {
       "date": "2026-10-18",
-      "story_count": 20,
+      "story_count": 24,
       "topics": {
-        "Anthropic": 2,
-        "benchmark": 1,
-        "chip": 1,
+        "agent": 2,
+        "Anthropic": 1,
+        "benchmark": 2,
         "coding": 2,
-        "DeepSeek": 7,
-        "OpenAI": 1
+        "DeepSeek": 9,
+        "regulation": 1,
+        "safety": 1
       }
     }
   ]

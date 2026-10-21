@@ -1,37 +1,14 @@
 {
-  "generated_utc": "2026-10-21T17:02:16.599759Z",
+  "generated_utc": "2026-10-21T21:31:57.381048Z",
   "generated_display": "Oct 21, 2026",
-  "coverage_generated_display": "October 21, 2026 at 12:02 PM CDT",
+  "coverage_generated_display": "October 21, 2026 at 4:31 PM CDT",
   "diffusion_watch": {
     "coverage": {
-      "story_count": 1,
-      "lab_count": 1,
-      "labs": [
-        {
-          "name": "DeepSeek",
-          "count": 1
-        }
-      ],
-      "signals": [
-        {
-          "name": "Capability convergence",
-          "count": 1
-        }
-      ],
-      "stories": [
-        {
-          "title": "DeepSeek's Latest Update Scores Lower on Accounting Work as Open Models Trail on Consistency, DualEntry Benchmark Finds.",
-          "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQazhsMFRCaGMzUXQxVHJveEE1czFlMGxqYXhQcTlTS1ZaRzBsMW5BVy0wMUZJNURNOHFtc2xTNUR3ckU5N2FPcHluaHk3S1ZZclFqb2FlTS1oMlJYdWhrRnVqaUdIY2JNbExLeGFKenFCMnJKdnluMWtFZmlLVEJVd09SbDJHdkpRZ3FjTG9MMkhhNVl1UDBKbkZhT0Z5WUdrZXlXNW5XWWdMbDE2MkFSZW5HNVd1SUM4NmlIcFZuNnJSMGxDeFZUQXJMLXppWmxSNC1SVWNfQ2d0NFh6dS1hWjlRdm5fLWNxVmtOZURQaXZFaV9DNmw3XzNQRW1mZlROd2stOEFn?oc=5",
-          "source": "Business Wire",
-          "published_display": "Oct 21, 2026",
-          "labs": [
-            "DeepSeek"
-          ],
-          "signals": [
-            "Capability convergence"
-          ]
-        }
-      ],
+      "story_count": 0,
+      "lab_count": 0,
+      "labs": [],
+      "signals": [],
+      "stories": [],
       "observed_days": 50,
       "window_days": 365,
       "daily": [
@@ -1435,13 +1412,13 @@
           },
           {
             "date": "2026-10-20",
-            "count": 5,
+            "count": 4,
             "share": 100.0
           },
           {
             "date": "2026-10-21",
-            "count": 9,
-            "share": 13.8
+            "count": 10,
+            "share": 15.2
           }
         ]
       },
@@ -1897,13 +1874,13 @@
           {
             "date": "2026-10-21",
             "count": 2,
-            "share": 3.1
+            "share": 3.0
           }
         ]
       },
       {
         "term": "OpenAI",
-        "total": 26,
+        "total": 27,
         "points": [
           {
             "date": "2026-07-24",
@@ -2352,14 +2329,14 @@
           },
           {
             "date": "2026-10-21",
-            "count": 10,
-            "share": 15.4
+            "count": 11,
+            "share": 16.7
           }
         ]
       },
       {
         "term": "safety",
-        "total": 23,
+        "total": 24,
         "points": [
           {
             "date": "2026-07-24",
@@ -2808,14 +2785,14 @@
           },
           {
             "date": "2026-10-21",
-            "count": 10,
-            "share": 15.4
+            "count": 11,
+            "share": 16.7
           }
         ]
       },
       {
         "term": "Google",
-        "total": 22,
+        "total": 21,
         "points": [
           {
             "date": "2026-07-24",
@@ -3264,14 +3241,14 @@
           },
           {
             "date": "2026-10-21",
-            "count": 5,
-            "share": 7.7
+            "count": 4,
+            "share": 6.1
           }
         ]
       },
       {
         "term": "Anthropic",
-        "total": 16,
+        "total": 18,
         "points": [
           {
             "date": "2026-07-24",
@@ -3715,13 +3692,13 @@
           },
           {
             "date": "2026-10-20",
-            "count": 1,
-            "share": 20.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-10-21",
-            "count": 5,
-            "share": 7.7
+            "count": 8,
+            "share": 12.1
           }
         ]
       }
@@ -3755,7 +3732,7 @@
     "companies": [
       {
         "name": "OpenAI",
-        "story_count": 10,
+        "story_count": 11,
         "cells": [
           {
             "key": "hardware",
@@ -3765,17 +3742,17 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 4
+            "count": 3
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 4
+            "count": 3
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 3
+            "count": 5
           },
           {
             "key": "society",
@@ -3796,45 +3773,14 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 1
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 0
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 1
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 3
-          }
-        ]
-      },
-      {
-        "name": "DeepSeek",
-        "story_count": 5,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
             "count": 2
           },
           {
+            "key": "models",
+            "label": "Models & research",
+            "count": 3
+          },
+          {
             "key": "apps",
             "label": "Tools & applications",
             "count": 1
@@ -3842,13 +3788,13 @@
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 0
+            "count": 6
           }
         ]
       },
       {
         "name": "Google",
-        "story_count": 5,
+        "story_count": 4,
         "cells": [
           {
             "key": "hardware",
@@ -3858,17 +3804,48 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 3
+            "count": 2
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 3
+            "count": 2
           },
           {
             "key": "apps",
             "label": "Tools & applications",
             "count": 2
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "Meta",
+        "story_count": 2,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 1
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 1
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 1
           },
           {
             "key": "society",
@@ -3884,37 +3861,6 @@
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 0
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 1
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "name": "Meta",
-        "story_count": 1,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
             "count": 1
           },
           {
@@ -3935,12 +3881,12 @@
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 0
+            "count": 1
           }
         ]
       },
       {
-        "name": "Microsoft",
+        "name": "DeepSeek",
         "story_count": 1,
         "cells": [
           {
@@ -3951,12 +3897,43 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 1
+            "count": 0
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 1
+            "count": 0
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "Mistral",
+        "story_count": 1,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 0
           },
           {
             "key": "apps",
@@ -3971,7 +3948,7 @@
         ]
       }
     ],
-    "max_count": 4,
+    "max_count": 6,
     "metric": "Distinct stories mentioning both the company and layer",
     "source": "coverage"
   },

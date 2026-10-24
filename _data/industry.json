@@ -1,21 +1,21 @@
 {
-  "generated_utc": "2026-10-24T04:11:32.250640Z",
+  "generated_utc": "2026-10-24T10:42:31.047760Z",
   "generated_display": "Oct 24, 2026",
-  "coverage_generated_display": "October 23, 2026 at 11:11 PM CDT",
+  "coverage_generated_display": "October 24, 2026 at 5:42 AM CDT",
   "diffusion_watch": {
     "coverage": {
-      "story_count": 1,
+      "story_count": 2,
       "lab_count": 1,
       "labs": [
         {
           "name": "Moonshot / Kimi",
-          "count": 1
+          "count": 2
         }
       ],
       "signals": [
         {
           "name": "Open weights",
-          "count": 1
+          "count": 2
         },
         {
           "name": "Capability convergence",
@@ -23,6 +23,18 @@
         }
       ],
       "stories": [
+        {
+          "title": "Kimi K3.1 Pro: China’s Open-Weight Model Beats GPT-6 and Gemini 4",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9HMTdYbTZPUEd2ei1UN1kzYUEwY3JNT3RyclVEYVc1VGxKYkl2V2RIVFpMWEN0b2ZZN3E3UlAyZENHclpHdnN4Z205U21MeFdUem9ZOXQtdVpXVU9mbDRUQWc5SlZfT0FlRHJrb2d2NA?oc=5",
+          "source": "www.trendingtopics.eu",
+          "published_display": "Oct 24, 2026",
+          "labs": [
+            "Moonshot / Kimi"
+          ],
+          "signals": [
+            "Open weights"
+          ]
+        },
         {
           "title": "Moonshot AI releases Kimi K3.1 Pro open weight model to rival Claude",
           "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPT3VwQndMemVCbVNzZFc2UmZkdGdySTJ3cGZwaTFwcUpsc3ZURW9VRW45QUtFVUxSS2RNZWdmYUR3bG1neUdmYWljOHJTaHpuaVRtaG11Y3dvSUdiZW9WbnI4cW9KakNNVnRPWXBVMm1OMEhDcUd6dUpuQU53TFdSbEt6RXdKaTR6VTN0Y09vWGdsTG1rZHU2b3dCSQ?oc=5",
@@ -37,7 +49,7 @@
           ]
         }
       ],
-      "observed_days": 52,
+      "observed_days": 53,
       "window_days": 365,
       "daily": [
         {
@@ -575,6 +587,16 @@
           },
           "signals": {
             "Capability convergence": 1,
+            "Open weights": 1
+          }
+        },
+        {
+          "date": "2026-10-24",
+          "story_count": 1,
+          "labs": {
+            "Moonshot / Kimi": 1
+          },
+          "signals": {
             "Open weights": 1
           }
         }
@@ -1451,7 +1473,7 @@
           },
           {
             "date": "2026-10-21",
-            "count": 3,
+            "count": 5,
             "share": 100.0
           },
           {
@@ -1461,8 +1483,8 @@
           },
           {
             "date": "2026-10-23",
-            "count": 3,
-            "share": 7.5
+            "count": 1,
+            "share": 3.1
           },
           {
             "date": "2026-10-24",
@@ -1473,7 +1495,7 @@
       },
       {
         "term": "Nvidia",
-        "total": 27,
+        "total": 26,
         "points": [
           {
             "date": "2026-07-27",
@@ -1917,8 +1939,8 @@
           },
           {
             "date": "2026-10-23",
-            "count": 2,
-            "share": 5.0
+            "count": 1,
+            "share": 3.1
           },
           {
             "date": "2026-10-24",
@@ -2373,13 +2395,13 @@
           },
           {
             "date": "2026-10-23",
-            "count": 6,
-            "share": 15.0
+            "count": 5,
+            "share": 15.6
           },
           {
             "date": "2026-10-24",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 9.1
           }
         ]
       },
@@ -2830,18 +2852,18 @@
           {
             "date": "2026-10-23",
             "count": 5,
-            "share": 12.5
+            "share": 15.6
           },
           {
             "date": "2026-10-24",
             "count": 1,
-            "share": 20.0
+            "share": 9.1
           }
         ]
       },
       {
         "term": "Anthropic",
-        "total": 19,
+        "total": 18,
         "points": [
           {
             "date": "2026-07-27",
@@ -3285,7 +3307,7 @@
           },
           {
             "date": "2026-10-23",
-            "count": 5,
+            "count": 4,
             "share": 12.5
           },
           {
@@ -3781,7 +3803,7 @@
     "companies": [
       {
         "name": "Anthropic",
-        "story_count": 13,
+        "story_count": 12,
         "cells": [
           {
             "key": "hardware",
@@ -3796,7 +3818,7 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 4
+            "count": 3
           },
           {
             "key": "apps",
@@ -3827,7 +3849,7 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 7
+            "count": 6
           },
           {
             "key": "apps",
@@ -3842,7 +3864,7 @@
         ]
       },
       {
-        "name": "DeepSeek",
+        "name": "Moonshot",
         "story_count": 5,
         "cells": [
           {
@@ -3853,17 +3875,17 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 0
+            "count": 1
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 0
+            "count": 3
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 1
+            "count": 0
           },
           {
             "key": "society",
@@ -3873,7 +3895,7 @@
         ]
       },
       {
-        "name": "Moonshot",
+        "name": "DeepSeek",
         "story_count": 4,
         "cells": [
           {
@@ -3884,17 +3906,17 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 1
+            "count": 0
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 2
+            "count": 0
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 0
+            "count": 1
           },
           {
             "key": "society",
@@ -3905,12 +3927,12 @@
       },
       {
         "name": "Nvidia",
-        "story_count": 4,
+        "story_count": 3,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 4
+            "count": 3
           },
           {
             "key": "cloud",
@@ -3920,7 +3942,7 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 1
+            "count": 0
           },
           {
             "key": "apps",
@@ -3966,7 +3988,7 @@
         ]
       }
     ],
-    "max_count": 7,
+    "max_count": 6,
     "metric": "Distinct stories mentioning both the company and layer",
     "source": "coverage"
   },

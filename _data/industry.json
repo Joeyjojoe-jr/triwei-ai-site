@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-10-25T11:07:22.143518Z",
+  "generated_utc": "2026-10-25T15:55:38.936710Z",
   "generated_display": "Oct 25, 2026",
-  "coverage_generated_display": "October 25, 2026 at 6:07 AM CDT",
+  "coverage_generated_display": "October 25, 2026 at 10:55 AM CDT",
   "diffusion_watch": {
     "coverage": {
       "story_count": 2,
@@ -1477,34 +1477,34 @@
           },
           {
             "date": "2026-10-21",
-            "count": 4,
+            "count": 1,
             "share": 100.0
           },
           {
             "date": "2026-10-22",
             "count": 7,
-            "share": 43.8
+            "share": 46.7
           },
           {
             "date": "2026-10-23",
-            "count": 2,
-            "share": 9.5
+            "count": 4,
+            "share": 19.0
           },
           {
             "date": "2026-10-24",
             "count": 1,
-            "share": 5.9
+            "share": 5.6
           },
           {
             "date": "2026-10-25",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 6.7
           }
         ]
       },
       {
         "term": "Nvidia",
-        "total": 25,
+        "total": 27,
         "points": [
           {
             "date": "2026-07-28",
@@ -1939,28 +1939,28 @@
           {
             "date": "2026-10-22",
             "count": 1,
-            "share": 6.2
+            "share": 6.7
           },
           {
             "date": "2026-10-23",
-            "count": 1,
-            "share": 4.8
+            "count": 2,
+            "share": 9.5
           },
           {
             "date": "2026-10-24",
             "count": 1,
-            "share": 5.9
+            "share": 5.6
           },
           {
             "date": "2026-10-25",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 6.7
           }
         ]
       },
       {
         "term": "safety",
-        "total": 24,
+        "total": 23,
         "points": [
           {
             "date": "2026-07-28",
@@ -2394,8 +2394,8 @@
           },
           {
             "date": "2026-10-22",
-            "count": 3,
-            "share": 18.8
+            "count": 2,
+            "share": 13.3
           },
           {
             "date": "2026-10-23",
@@ -2405,7 +2405,7 @@
           {
             "date": "2026-10-24",
             "count": 2,
-            "share": 11.8
+            "share": 11.1
           },
           {
             "date": "2026-10-25",
@@ -2861,12 +2861,12 @@
           {
             "date": "2026-10-24",
             "count": 2,
-            "share": 11.8
+            "share": 11.1
           },
           {
             "date": "2026-10-25",
             "count": 1,
-            "share": 9.1
+            "share": 6.7
           }
         ]
       },
@@ -3307,7 +3307,7 @@
           {
             "date": "2026-10-22",
             "count": 1,
-            "share": 6.2
+            "share": 6.7
           },
           {
             "date": "2026-10-23",
@@ -3322,13 +3322,13 @@
           {
             "date": "2026-10-25",
             "count": 1,
-            "share": 9.1
+            "share": 6.7
           }
         ]
       },
       {
         "term": "Anthropic",
-        "total": 18,
+        "total": 17,
         "points": [
           {
             "date": "2026-07-28",
@@ -3762,23 +3762,23 @@
           },
           {
             "date": "2026-10-22",
-            "count": 4,
-            "share": 25.0
+            "count": 5,
+            "share": 33.3
           },
           {
             "date": "2026-10-23",
-            "count": 1,
-            "share": 4.8
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-10-24",
-            "count": 1,
-            "share": 5.9
+            "count": 2,
+            "share": 11.1
           },
           {
             "date": "2026-10-25",
-            "count": 2,
-            "share": 18.2
+            "count": 0,
+            "share": 0.0
           }
         ]
       }
@@ -3812,7 +3812,7 @@
     "companies": [
       {
         "name": "Anthropic",
-        "story_count": 11,
+        "story_count": 10,
         "cells": [
           {
             "key": "hardware",
@@ -3874,7 +3874,7 @@
       },
       {
         "name": "DeepSeek",
-        "story_count": 7,
+        "story_count": 6,
         "cells": [
           {
             "key": "hardware",
@@ -3889,12 +3889,43 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 3
+            "count": 4
           },
           {
             "key": "apps",
             "label": "Tools & applications",
             "count": 1
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "Nvidia",
+        "story_count": 5,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 5
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 1
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 1
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
           },
           {
             "key": "society",
@@ -3921,37 +3952,6 @@
             "key": "models",
             "label": "Models & research",
             "count": 2
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 0
-          }
-        ]
-      },
-      {
-        "name": "Nvidia",
-        "story_count": 3,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 3
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 1
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 1
           },
           {
             "key": "apps",

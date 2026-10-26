@@ -1,37 +1,14 @@
 {
-  "generated_utc": "2026-10-26T04:18:44.086669Z",
+  "generated_utc": "2026-10-26T12:41:37.523382Z",
   "generated_display": "Oct 26, 2026",
-  "coverage_generated_display": "October 25, 2026 at 11:18 PM CDT",
+  "coverage_generated_display": "October 26, 2026 at 7:41 AM CDT",
   "diffusion_watch": {
     "coverage": {
-      "story_count": 1,
-      "lab_count": 1,
-      "labs": [
-        {
-          "name": "DeepSeek",
-          "count": 1
-        }
-      ],
-      "signals": [
-        {
-          "name": "Open weights",
-          "count": 1
-        }
-      ],
-      "stories": [
-        {
-          "title": "Open-weight DeepSeek beats Google's gated Gemini model at finding bugs",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQLXVGbzcwMzBBRHRVNVp0aGJzTU1ia1M3eGI2N0tubGs3VzNyeDdJdE8xZGh5Qm80S3REUHlwTDRXSjl1VlJXSUk2OXZUZnZYNFMzeFI5UGtoWDNrUGg1SUwzY0h4RV9EWkcteGZHb1BmdFdNMERJZ0xrM2Z5bEpwZUFXaUFzY3VOQzl5R3ZJOERNSjdqZWtBUlFNMGltQQ?oc=5",
-          "source": "Startup Fortune",
-          "published_display": "Oct 25, 2026",
-          "labs": [
-            "DeepSeek"
-          ],
-          "signals": [
-            "Open weights"
-          ]
-        }
-      ],
+      "story_count": 0,
+      "lab_count": 0,
+      "labs": [],
+      "signals": [],
+      "stories": [],
       "observed_days": 54,
       "window_days": 365,
       "daily": [
@@ -1461,13 +1438,13 @@
           },
           {
             "date": "2026-10-22",
-            "count": 8,
+            "count": 5,
             "share": 100.0
           },
           {
             "date": "2026-10-23",
             "count": 2,
-            "share": 18.2
+            "share": 28.6
           },
           {
             "date": "2026-10-24",
@@ -1476,469 +1453,13 @@
           },
           {
             "date": "2026-10-25",
-            "count": 2,
-            "share": 10.0
+            "count": 1,
+            "share": 50.0
           },
           {
             "date": "2026-10-26",
-            "count": 2,
-            "share": 8.3
-          }
-        ]
-      },
-      {
-        "term": "safety",
-        "total": 25,
-        "points": [
-          {
-            "date": "2026-07-29",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-30",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-31",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-01",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-02",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-03",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-04",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-05",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-06",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-07",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-08",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-09",
-            "count": 1,
-            "share": 50.0
-          },
-          {
-            "date": "2026-08-10",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-11",
-            "count": 1,
-            "share": 50.0
-          },
-          {
-            "date": "2026-08-12",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-13",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-14",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-15",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-16",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-17",
-            "count": 1,
-            "share": 50.0
-          },
-          {
-            "date": "2026-08-18",
-            "count": 1,
-            "share": 100.0
-          },
-          {
-            "date": "2026-08-19",
-            "count": 1,
-            "share": 100.0
-          },
-          {
-            "date": "2026-08-20",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-21",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-22",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-23",
-            "count": 2,
-            "share": 66.7
-          },
-          {
-            "date": "2026-08-24",
-            "count": 1,
-            "share": 20.0
-          },
-          {
-            "date": "2026-08-25",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-26",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-27",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-28",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-29",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-30",
-            "count": 1,
-            "share": 100.0
-          },
-          {
-            "date": "2026-08-31",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-01",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-02",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-03",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-04",
-            "count": 1,
-            "share": 50.0
-          },
-          {
-            "date": "2026-09-05",
-            "count": 2,
-            "share": 100.0
-          },
-          {
-            "date": "2026-09-06",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-07",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-08",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-09",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-10",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-11",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-12",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-13",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-14",
-            "count": 1,
-            "share": 33.3
-          },
-          {
-            "date": "2026-09-15",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-16",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-17",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-18",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-19",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-20",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-21",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-22",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-23",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-24",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-25",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-26",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-27",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-28",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-29",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-30",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-01",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-02",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-03",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-04",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-05",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-06",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-07",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-08",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-09",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-10",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-11",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-12",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-13",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-14",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-15",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-16",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-17",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-18",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-19",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-20",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-21",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-22",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-23",
-            "count": 7,
-            "share": 63.6
-          },
-          {
-            "date": "2026-10-24",
-            "count": 1,
-            "share": 14.3
-          },
-          {
-            "date": "2026-10-25",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-26",
-            "count": 4,
-            "share": 16.7
+            "count": 6,
+            "share": 11.1
           }
         ]
       },
@@ -2373,8 +1894,8 @@
           },
           {
             "date": "2026-10-22",
-            "count": 2,
-            "share": 25.0
+            "count": 1,
+            "share": 20.0
           },
           {
             "date": "2026-10-23",
@@ -2389,18 +1910,930 @@
           {
             "date": "2026-10-25",
             "count": 1,
-            "share": 5.0
+            "share": 50.0
           },
           {
             "date": "2026-10-26",
+            "count": 1,
+            "share": 1.9
+          }
+        ]
+      },
+      {
+        "term": "Anthropic",
+        "total": 23,
+        "points": [
+          {
+            "date": "2026-07-29",
             "count": 0,
             "share": 0.0
+          },
+          {
+            "date": "2026-07-30",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-31",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-01",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-02",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-03",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-04",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-05",
+            "count": 1,
+            "share": 100.0
+          },
+          {
+            "date": "2026-08-06",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-07",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-08",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-09",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-10",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-11",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-12",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-13",
+            "count": 1,
+            "share": 100.0
+          },
+          {
+            "date": "2026-08-14",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-15",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-16",
+            "count": 1,
+            "share": 100.0
+          },
+          {
+            "date": "2026-08-17",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-18",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-19",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-20",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-21",
+            "count": 1,
+            "share": 50.0
+          },
+          {
+            "date": "2026-08-22",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-23",
+            "count": 1,
+            "share": 33.3
+          },
+          {
+            "date": "2026-08-24",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-25",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-26",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-27",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-28",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-29",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-30",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-31",
+            "count": 1,
+            "share": 100.0
+          },
+          {
+            "date": "2026-09-01",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-02",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-03",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-04",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-05",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-06",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-07",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-08",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-09",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-10",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-11",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-12",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-13",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-14",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-15",
+            "count": 1,
+            "share": 50.0
+          },
+          {
+            "date": "2026-09-16",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-17",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-18",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-19",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-20",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-21",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-22",
+            "count": 2,
+            "share": 50.0
+          },
+          {
+            "date": "2026-09-23",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-24",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-25",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-26",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-27",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-28",
+            "count": 1,
+            "share": 100.0
+          },
+          {
+            "date": "2026-09-29",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-30",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-01",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-02",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-03",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-04",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-05",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-06",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-07",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-08",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-09",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-10",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-11",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-12",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-13",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-14",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-15",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-16",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-17",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-18",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-19",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-20",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-21",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-22",
+            "count": 3,
+            "share": 60.0
+          },
+          {
+            "date": "2026-10-23",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-24",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-25",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-26",
+            "count": 10,
+            "share": 18.5
+          }
+        ]
+      },
+      {
+        "term": "safety",
+        "total": 23,
+        "points": [
+          {
+            "date": "2026-07-29",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-30",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-07-31",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-01",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-02",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-03",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-04",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-05",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-06",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-07",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-08",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-09",
+            "count": 1,
+            "share": 50.0
+          },
+          {
+            "date": "2026-08-10",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-11",
+            "count": 1,
+            "share": 50.0
+          },
+          {
+            "date": "2026-08-12",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-13",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-14",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-15",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-16",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-17",
+            "count": 1,
+            "share": 50.0
+          },
+          {
+            "date": "2026-08-18",
+            "count": 1,
+            "share": 100.0
+          },
+          {
+            "date": "2026-08-19",
+            "count": 1,
+            "share": 100.0
+          },
+          {
+            "date": "2026-08-20",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-21",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-22",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-23",
+            "count": 2,
+            "share": 66.7
+          },
+          {
+            "date": "2026-08-24",
+            "count": 1,
+            "share": 20.0
+          },
+          {
+            "date": "2026-08-25",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-26",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-27",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-28",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-29",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-08-30",
+            "count": 1,
+            "share": 100.0
+          },
+          {
+            "date": "2026-08-31",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-01",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-02",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-03",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-04",
+            "count": 1,
+            "share": 50.0
+          },
+          {
+            "date": "2026-09-05",
+            "count": 2,
+            "share": 100.0
+          },
+          {
+            "date": "2026-09-06",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-07",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-08",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-09",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-10",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-11",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-12",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-13",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-14",
+            "count": 1,
+            "share": 33.3
+          },
+          {
+            "date": "2026-09-15",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-16",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-17",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-18",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-19",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-20",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-21",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-22",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-23",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-24",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-25",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-26",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-27",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-28",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-29",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-09-30",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-01",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-02",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-03",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-04",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-05",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-06",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-07",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-08",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-09",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-10",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-11",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-12",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-13",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-14",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-15",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-16",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-17",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-18",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-19",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-20",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-21",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-22",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-23",
+            "count": 4,
+            "share": 57.1
+          },
+          {
+            "date": "2026-10-24",
+            "count": 1,
+            "share": 50.0
+          },
+          {
+            "date": "2026-10-25",
+            "count": 0,
+            "share": 0.0
+          },
+          {
+            "date": "2026-10-26",
+            "count": 5,
+            "share": 9.3
           }
         ]
       },
       {
         "term": "OpenAI",
-        "total": 21,
+        "total": 18,
         "points": [
           {
             "date": "2026-07-29",
@@ -2834,485 +3267,29 @@
           },
           {
             "date": "2026-10-23",
-            "count": 3,
-            "share": 27.3
-          },
-          {
-            "date": "2026-10-24",
-            "count": 2,
-            "share": 28.6
-          },
-          {
-            "date": "2026-10-25",
-            "count": 2,
-            "share": 10.0
-          },
-          {
-            "date": "2026-10-26",
-            "count": 0,
-            "share": 0.0
-          }
-        ]
-      },
-      {
-        "term": "Anthropic",
-        "total": 19,
-        "points": [
-          {
-            "date": "2026-07-29",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-30",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-07-31",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-01",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-02",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-03",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-04",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-05",
-            "count": 1,
-            "share": 100.0
-          },
-          {
-            "date": "2026-08-06",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-07",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-08",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-09",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-10",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-11",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-12",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-13",
-            "count": 1,
-            "share": 100.0
-          },
-          {
-            "date": "2026-08-14",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-15",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-16",
-            "count": 1,
-            "share": 100.0
-          },
-          {
-            "date": "2026-08-17",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-18",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-19",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-20",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-21",
-            "count": 1,
-            "share": 50.0
-          },
-          {
-            "date": "2026-08-22",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-23",
-            "count": 1,
-            "share": 33.3
-          },
-          {
-            "date": "2026-08-24",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-25",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-26",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-27",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-28",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-29",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-30",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-08-31",
-            "count": 1,
-            "share": 100.0
-          },
-          {
-            "date": "2026-09-01",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-02",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-03",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-04",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-05",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-06",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-07",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-08",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-09",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-10",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-11",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-12",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-13",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-14",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-15",
-            "count": 1,
-            "share": 50.0
-          },
-          {
-            "date": "2026-09-16",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-17",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-18",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-19",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-20",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-21",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-22",
-            "count": 2,
-            "share": 50.0
-          },
-          {
-            "date": "2026-09-23",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-24",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-25",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-26",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-27",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-28",
-            "count": 1,
-            "share": 100.0
-          },
-          {
-            "date": "2026-09-29",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-09-30",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-01",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-02",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-03",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-04",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-05",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-06",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-07",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-08",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-09",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-10",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-11",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-12",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-13",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-14",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-15",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-16",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-17",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-18",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-19",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-20",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-21",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-22",
-            "count": 3,
-            "share": 37.5
-          },
-          {
-            "date": "2026-10-23",
-            "count": 0,
-            "share": 0.0
-          },
-          {
-            "date": "2026-10-24",
             "count": 1,
             "share": 14.3
           },
           {
+            "date": "2026-10-24",
+            "count": 0,
+            "share": 0.0
+          },
+          {
             "date": "2026-10-25",
-            "count": 3,
-            "share": 15.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-10-26",
-            "count": 2,
-            "share": 8.3
+            "count": 3,
+            "share": 5.6
           }
         ]
       },
       {
         "term": "Google",
-        "total": 19,
+        "total": 17,
         "points": [
           {
             "date": "2026-07-29",
@@ -3741,8 +3718,8 @@
           },
           {
             "date": "2026-10-22",
-            "count": 1,
-            "share": 12.5
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-10-23",
@@ -3756,8 +3733,8 @@
           },
           {
             "date": "2026-10-25",
-            "count": 1,
-            "share": 5.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-10-26",
@@ -3796,7 +3773,7 @@
     "companies": [
       {
         "name": "Anthropic",
-        "story_count": 12,
+        "story_count": 15,
         "cells": [
           {
             "key": "hardware",
@@ -3806,12 +3783,12 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 0
+            "count": 1
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 4
+            "count": 2
           },
           {
             "key": "apps",
@@ -3827,38 +3804,7 @@
       },
       {
         "name": "OpenAI",
-        "story_count": 7,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 4
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 2
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 3
-          }
-        ]
-      },
-      {
-        "name": "DeepSeek",
-        "story_count": 5,
+        "story_count": 4,
         "cells": [
           {
             "key": "hardware",
@@ -3868,12 +3814,43 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
+            "count": 1
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 0
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 1
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "DeepSeek",
+        "story_count": 3,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
             "count": 0
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 4
+            "count": 1
           },
           {
             "key": "apps",
@@ -3894,7 +3871,7 @@
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 3
+            "count": 2
           },
           {
             "key": "cloud",
@@ -3909,131 +3886,7 @@
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 0
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 0
-          }
-        ]
-      },
-      {
-        "name": "Google",
-        "story_count": 2,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
             "count": 1
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 1
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 0
-          }
-        ]
-      },
-      {
-        "name": "Microsoft",
-        "story_count": 1,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 1
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 0
-          }
-        ]
-      },
-      {
-        "name": "Moonshot",
-        "story_count": 1,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 1
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 0
-          }
-        ]
-      },
-      {
-        "name": "xAI",
-        "story_count": 1,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 1
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
           },
           {
             "key": "society",
@@ -4043,7 +3896,7 @@
         ]
       }
     ],
-    "max_count": 4,
+    "max_count": 3,
     "metric": "Distinct stories mentioning both the company and layer",
     "source": "coverage"
   },

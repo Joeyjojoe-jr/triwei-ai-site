@@ -1,15 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-07-28",
-      "story_count": 2,
-      "topics": {
-        "agent": 1,
-        "Nvidia": 1,
-        "OpenAI": 1
-      }
-    },
-    {
       "date": "2026-07-29",
       "story_count": 1,
       "topics": {}
@@ -654,64 +645,68 @@
     },
     {
       "date": "2026-10-22",
-      "story_count": 15,
+      "story_count": 8,
       "topics": {
-        "Anthropic": 4,
-        "data center": 2,
+        "Anthropic": 3,
         "DeepSeek": 1,
-        "funding": 7,
+        "funding": 8,
         "Google": 1,
-        "Nvidia": 1,
-        "regulation": 1,
-        "safety": 2
+        "Nvidia": 2
       }
     },
     {
       "date": "2026-10-23",
-      "story_count": 14,
+      "story_count": 11,
       "topics": {
-        "benchmark": 2,
-        "ChatGPT": 1,
-        "chip": 1,
         "funding": 2,
-        "Nvidia": 1,
-        "OpenAI": 2,
+        "OpenAI": 3,
         "regulation": 2,
-        "safety": 5
+        "safety": 7
       }
     },
     {
       "date": "2026-10-24",
-      "story_count": 17,
+      "story_count": 7,
       "topics": {
-        "agent": 1,
-        "Anthropic": 3,
+        "Anthropic": 1,
         "Apple": 1,
-        "Claude": 1,
-        "DeepSeek": 1,
-        "funding": 1,
-        "Gemini": 1,
-        "GPT": 2,
-        "Nvidia": 1,
+        "GPT": 1,
         "OpenAI": 2,
         "regulation": 1,
-        "safety": 2
+        "safety": 1,
+        "video": 1
       }
     },
     {
       "date": "2026-10-25",
-      "story_count": 21,
+      "story_count": 20,
       "topics": {
-        "agent": 2,
-        "Claude": 1,
+        "agent": 3,
+        "Anthropic": 3,
+        "Claude": 3,
         "DeepSeek": 4,
-        "funding": 1,
+        "funding": 2,
         "Gemini": 1,
         "Google": 1,
         "Microsoft": 1,
         "Nvidia": 1,
-        "OpenAI": 3,
+        "OpenAI": 2,
         "regulation": 1
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "story_count": 24,
+      "topics": {
+        "agent": 7,
+        "agentic": 2,
+        "Anthropic": 2,
+        "benchmark": 1,
+        "Claude": 1,
+        "coding": 1,
+        "funding": 2,
+        "robot": 1,
+        "safety": 4
       }
     }
   ]

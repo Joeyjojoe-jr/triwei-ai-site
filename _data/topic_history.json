@@ -1,11 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-07-29",
-      "story_count": 1,
-      "topics": {}
-    },
-    {
       "date": "2026-07-30",
       "story_count": 1,
       "topics": {}
@@ -680,23 +675,33 @@
     },
     {
       "date": "2026-10-26",
-      "story_count": 69,
+      "story_count": 45,
       "topics": {
-        "agent": 5,
-        "agentic": 3,
-        "Anthropic": 23,
-        "benchmark": 2,
-        "ChatGPT": 1,
-        "chip": 1,
-        "Claude": 4,
-        "coding": 1,
-        "copyright": 1,
+        "Anthropic": 17,
+        "chip": 2,
+        "Claude": 1,
         "data center": 2,
         "funding": 14,
-        "Nvidia": 3,
+        "Nvidia": 2,
         "OpenAI": 5,
         "regulation": 4,
-        "safety": 10
+        "robot": 1,
+        "safety": 9
+      }
+    },
+    {
+      "date": "2026-10-27",
+      "story_count": 25,
+      "topics": {
+        "agent": 1,
+        "alignment": 1,
+        "Anthropic": 3,
+        "benchmark": 2,
+        "coding": 3,
+        "Meta": 1,
+        "OpenAI": 1,
+        "regulation": 1,
+        "safety": 1
       }
     }
   ]

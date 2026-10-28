@@ -1,11 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-07-30",
-      "story_count": 1,
-      "topics": {}
-    },
-    {
       "date": "2026-07-31",
       "story_count": 1,
       "topics": {
@@ -675,31 +670,45 @@
     },
     {
       "date": "2026-10-26",
-      "story_count": 8,
+      "story_count": 10,
       "topics": {
-        "Anthropic": 3,
-        "funding": 8,
-        "Nvidia": 2
+        "Anthropic": 5,
+        "chip": 1,
+        "funding": 7,
+        "Nvidia": 2,
+        "safety": 3
       }
     },
     {
       "date": "2026-10-27",
-      "story_count": 62,
+      "story_count": 35,
       "topics": {
-        "Anthropic": 14,
-        "benchmark": 3,
-        "ChatGPT": 1,
-        "Claude": 2,
-        "coding": 2,
-        "DeepSeek": 2,
-        "funding": 6,
+        "Anthropic": 10,
+        "ChatGPT": 2,
+        "Claude": 1,
+        "funding": 7,
         "Google": 2,
-        "Meta": 1,
         "Nvidia": 1,
-        "OpenAI": 5,
-        "regulation": 4,
-        "robot": 1,
-        "safety": 11,
+        "OpenAI": 4,
+        "regulation": 3,
+        "safety": 8,
+        "video": 1
+      }
+    },
+    {
+      "date": "2026-10-28",
+      "story_count": 25,
+      "topics": {
+        "agent": 3,
+        "Amazon": 1,
+        "Anthropic": 2,
+        "benchmark": 1,
+        "Claude": 1,
+        "copyright": 1,
+        "DeepSeek": 1,
+        "Google": 1,
+        "multimodal": 1,
+        "OpenAI": 2,
         "video": 1
       }
     }

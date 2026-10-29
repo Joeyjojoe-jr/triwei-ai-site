@@ -570,12 +570,14 @@
     },
     {
       "date": "2026-10-29",
-      "story_count": 1,
+      "story_count": 2,
       "labs": {
-        "DeepSeek": 1
+        "DeepSeek": 2,
+        "Moonshot / Kimi": 1
       },
       "signals": {
-        "Open weights": 1
+        "Capability convergence": 1,
+        "Distillation / extraction": 1
       }
     }
   ]

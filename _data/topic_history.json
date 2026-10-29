@@ -1,13 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-07-31",
-      "story_count": 1,
-      "topics": {
-        "DeepSeek": 1
-      }
-    },
-    {
       "date": "2026-08-01",
       "story_count": 2,
       "topics": {}
@@ -688,24 +681,42 @@
     },
     {
       "date": "2026-10-28",
-      "story_count": 68,
+      "story_count": 49,
       "topics": {
-        "agent": 1,
-        "agentic": 1,
-        "Anthropic": 14,
+        "agentic": 2,
+        "Anthropic": 8,
         "benchmark": 2,
-        "Claude": 4,
+        "Claude": 2,
         "coding": 1,
         "data center": 1,
         "DeepSeek": 1,
-        "funding": 14,
-        "Gemini": 5,
-        "Google": 12,
+        "funding": 12,
+        "Gemini": 4,
+        "Google": 11,
+        "GPT": 1,
         "Microsoft": 1,
-        "Nvidia": 3,
-        "OpenAI": 6,
-        "regulation": 5,
-        "safety": 7
+        "Nvidia": 4,
+        "OpenAI": 5,
+        "regulation": 4,
+        "safety": 6
+      }
+    },
+    {
+      "date": "2026-10-29",
+      "story_count": 21,
+      "topics": {
+        "agent": 1,
+        "agentic": 1,
+        "Anthropic": 1,
+        "Claude": 1,
+        "DeepSeek": 4,
+        "funding": 2,
+        "Google": 1,
+        "GPT": 3,
+        "Meta": 1,
+        "OpenAI": 3,
+        "regulation": 2,
+        "safety": 2
       }
     }
   ]

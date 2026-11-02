@@ -1,11 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-08-04",
-      "story_count": 1,
-      "topics": {}
-    },
-    {
       "date": "2026-08-05",
       "story_count": 1,
       "topics": {
@@ -673,53 +668,69 @@
     },
     {
       "date": "2026-10-29",
-      "story_count": 18,
+      "story_count": 6,
       "topics": {
-        "agent": 1,
         "Anthropic": 1,
-        "benchmark": 2,
         "ChatGPT": 1,
-        "funding": 8,
-        "Gemini": 1,
-        "Google": 2,
-        "Meta": 1
+        "funding": 6,
+        "Google": 1
       }
     },
     {
       "date": "2026-10-30",
-      "story_count": 16,
+      "story_count": 11,
       "topics": {
         "Amazon": 2,
         "ChatGPT": 1,
         "funding": 3,
+        "OpenAI": 2,
         "regulation": 2,
-        "safety": 7
+        "safety": 5
       }
     },
     {
       "date": "2026-10-31",
-      "story_count": 13,
+      "story_count": 15,
       "topics": {
         "Anthropic": 2,
-        "Claude": 2,
-        "funding": 3,
-        "GPT": 1,
-        "Meta": 1,
-        "OpenAI": 5,
+        "ChatGPT": 1,
+        "Claude": 1,
+        "DeepSeek": 2,
+        "funding": 5,
+        "GPT": 2,
+        "OpenAI": 6,
         "regulation": 1,
         "safety": 3
       }
     },
     {
       "date": "2026-11-01",
+      "story_count": 15,
+      "topics": {
+        "agent": 1,
+        "Anthropic": 3,
+        "ChatGPT": 1,
+        "Claude": 3,
+        "coding": 1,
+        "data center": 1,
+        "DeepSeek": 1,
+        "funding": 1,
+        "Gemini": 1,
+        "Google": 2,
+        "OpenAI": 3,
+        "safety": 1
+      }
+    },
+    {
+      "date": "2026-11-02",
       "story_count": 23,
       "topics": {
-        "agent": 4,
-        "Anthropic": 6,
-        "Claude": 3,
-        "coding": 3,
-        "DeepSeek": 3,
-        "OpenAI": 3
+        "agent": 1,
+        "Anthropic": 1,
+        "Claude": 1,
+        "funding": 1,
+        "OpenAI": 1,
+        "safety": 1
       }
     }
   ]

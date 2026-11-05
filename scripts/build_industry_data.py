@@ -801,6 +801,11 @@ def build_adoption():
             }
         )
     sectors.sort(key=lambda row: (-row["current"], row["name"]))
+    if not sectors:
+        raise ValueError(
+            "Census workbook has no complete adoption-sector observations "
+            "for period %s" % latest_period
+        )
 
     period_label = latest_period
     date_rows = xlsx_rows(raw, "Collection and Reference Dates")
@@ -1062,6 +1067,12 @@ def preserve_or_build(previous, key, builder):
     except Exception as error:  # A stale chart is better than a broken page.
         print("Warning: %s refresh failed: %s" % (key, error), file=sys.stderr)
         retained = previous.get(key)
+        if key == "adoption" and (
+            not isinstance(retained, dict)
+            or not isinstance(retained.get("sectors"), list)
+            or not retained["sectors"]
+        ):
+            retained = None
         if retained:
             retained = dict(retained)
             retained["status"] = "retained"

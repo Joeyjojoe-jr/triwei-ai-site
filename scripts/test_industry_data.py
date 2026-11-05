@@ -1,5 +1,6 @@
 import datetime as dt
 import unittest
+from unittest import mock
 
 import build_industry_data
 import validate_industry_data
@@ -61,7 +62,7 @@ class IndustryDataTests(unittest.TestCase):
         self.assertEqual(1, cells["society"])
 
     def test_preserve_or_build_retains_last_good_section(self):
-        previous = {"adoption": {"period": "example", "sectors": []}}
+        previous = {"adoption": {"period": "example", "sectors": [{"current": 20, "expected": 25}]}}
 
         def fail():
             raise RuntimeError("temporary")
@@ -69,6 +70,53 @@ class IndustryDataTests(unittest.TestCase):
         result = build_industry_data.preserve_or_build(previous, "adoption", fail)
         self.assertEqual("retained", result["status"])
         self.assertEqual("example", result["period"])
+
+    def test_empty_census_period_fails_before_publication(self):
+        # The newest workbook column can exist before its sector estimates.
+        rows = [
+            {"F": "202611"},
+            {"A": "51", "B": "7", "E": "Yes", "F": "26.1"},
+            {"A": "51", "B": "24", "E": "Yes", "F": "S"},
+        ]
+        with (
+            mock.patch.object(build_industry_data, "fetch_bytes", return_value=b"fake"),
+            mock.patch.object(build_industry_data, "xlsx_rows", return_value=rows),
+        ):
+            with self.assertRaisesRegex(ValueError, "no complete adoption-sector"):
+                build_industry_data.build_adoption()
+
+    def test_empty_census_period_retains_previously_valid_data(self):
+        previous = {
+            "adoption": {
+                "period": "Reference period ending Oct 4, 2026",
+                "sectors": [{"current": 46.4, "expected": 51.1}],
+                "status": "fresh",
+            }
+        }
+        rows = [
+            {"F": "202611"},
+            {"A": "51", "B": "7", "E": "Yes", "F": "26.1"},
+        ]
+        with (
+            mock.patch.object(build_industry_data, "fetch_bytes", return_value=b"fake"),
+            mock.patch.object(build_industry_data, "xlsx_rows", return_value=rows),
+        ):
+            result = build_industry_data.preserve_or_build(
+                previous, "adoption", build_industry_data.build_adoption
+            )
+        self.assertEqual("retained", result["status"])
+        self.assertEqual(previous["adoption"]["period"], result["period"])
+        self.assertEqual(previous["adoption"]["sectors"], result["sectors"])
+        self.assertEqual("fresh", previous["adoption"]["status"])
+
+    def test_empty_adoption_cache_is_not_treated_as_valid(self):
+        previous = {"adoption": {"period": "empty", "sectors": []}}
+
+        def fail():
+            raise RuntimeError("temporary")
+
+        result = build_industry_data.preserve_or_build(previous, "adoption", fail)
+        self.assertEqual("unavailable", result["status"])
 
     def test_validator_accepts_minimal_complete_payload(self):
         payload = {

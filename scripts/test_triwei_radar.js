@@ -71,7 +71,7 @@ test('topic, query, local watch and time filters compose without granting verifi
   assert.equal(radar.matches(item, { ...filter, topic: 'labs' }, now), false);
   assert.equal(radar.matches(item, { ...filter, saved: new Set() }, now), false);
   assert.equal(radar.matches(item, { ...filter, query: 'impossible' }, now), false);
-  assert.equal(radar.matches({ ...item, published: '2026-11-01T20:00:00Z' }, filter, now), false);
+  assert.equal(radar.matches({ ...item, published: '2026-11-01T20:00:00Z' }, { ...filter, savedOnly: false }, now), false);
   assert.equal(radar.matches({ ...item, url: 'https://news.google.com/x' }, filter, now), false);
 });
 

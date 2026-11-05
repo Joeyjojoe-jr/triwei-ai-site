@@ -10,6 +10,7 @@
     "check:news": "python -m py_compile scripts/fetch_news.py && python -m unittest discover -s scripts -p \"test_*.py\"",
     "check:industry": "python -m py_compile scripts/build_industry_data.py scripts/validate_industry_data.py && node --check assets/js/industry-atlas.js && node --test scripts/test_industry_atlas.js && python scripts/validate_industry_data.py",
     "check:intelligence": "python -m py_compile scripts/validate_intelligence_data.py && node --check assets/js/signal-history.js && node --check assets/js/hardware-intelligence.js && node --test scripts/test_intelligence.js && python scripts/validate_intelligence_data.py",
+    "check:radar": "node --check assets/js/triwei-radar.js && node --test scripts/test_triwei_radar.js",
     "check:orbit": "node --check assets/js/orbit-navigation.js && node --test scripts/test_orbit_navigation.js",
     "check:evidence-home": "node --test scripts/test_evidence_home.js",
     "check:publication": "python -m py_compile scripts/audit_rendered_publication.py && node --test scripts/test_publication_ethics.js",

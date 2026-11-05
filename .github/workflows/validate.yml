@@ -33,6 +33,9 @@ jobs:
       - name: Test news pipeline
         run: npm run check:news
 
+      - name: Test TriWei Radar
+        run: npm run check:radar
+
       - name: Test orbit navigation
         run: npm run check:orbit
 

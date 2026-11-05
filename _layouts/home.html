@@ -18,6 +18,9 @@ layout: default
       </div>
       <span class="radar-clock">Feed updated {{ news.generated_display | escape }}</span>
     </header>
+    <div class="radar-intelligence-note">
+      <strong>Evidence lens:</strong> An organization can confirm what it announced, a paper confirms what its authors reported, and independent reporting may provide additional context. None alone proves a claim.
+    </div>
     <div class="radar-tools" aria-label="Radar filters">
       <label><span>Search headlines</span>
         <input data-radar-search type="search" placeholder="Company, model, idea..." autocomplete="off">
@@ -32,6 +35,15 @@ layout: default
           <option value="ethics">Ethics &amp; policy</option>
         </select>
       </label>
+      <label><span>Source type</span>
+        <select data-radar-channel>
+          <option value="all">All source types</option>
+          <option value="organization">Organization posts</option>
+          <option value="research">Research records</option>
+          <option value="reporting">News reporting</option>
+          <option value="community">Community discoveries</option>
+        </select>
+      </label>
       <div class="radar-quick-filter" role="group" aria-label="Publication window">
         <button type="button" data-radar-window="24" aria-pressed="true">24 hours</button>
         <button type="button" data-radar-window="168" aria-pressed="false">7 days</button>
@@ -44,19 +56,35 @@ layout: default
     </div>
     <p class="radar-stale" data-radar-stale hidden>Feed refresh may be delayed. Check the update timestamp before treating these reports as current.</p>
     <div class="radar-grid" data-radar-grid>
-      {% for key in news.category_order %}
-        {% assign group = news.categories[key] %}
-        {% for report in group.items %}
+      {% for report in news.radar_items %}
+          {% assign key = report.category %}
+          {% assign group = news.categories[key] %}
           {% if report.link contains 'https://' %}
           {% unless report.link contains 'news.google.com' %}
-          <article class="radar-card" data-radar-card data-radar-topic="{{ key | escape }}" data-radar-published="{{ report.published_iso | escape }}">
+          <article class="radar-card" data-radar-card data-radar-topic="{{ key | escape }}" data-radar-channel="{{ report.source_channel | escape }}" data-radar-published="{{ report.published_iso | escape }}">
             <div class="radar-card-top">
               <span class="radar-topic">{{ group.label | escape }}</span>
+              {% case report.source_channel %}
+                {% when 'organization' %}<span class="radar-channel">Organization post</span>
+                {% when 'research' %}<span class="radar-channel">Research record</span>
+                {% when 'reporting' %}<span class="radar-channel">News report</span>
+                {% when 'community' %}<span class="radar-channel">Community discovery</span>
+                {% else %}<span class="radar-channel">Source unclassified</span>
+              {% endcase %}
               <time class="radar-time" datetime="{{ report.published_iso | escape }}">{{ report.published_display | escape }}</time>
             </div>
             <h3><a data-radar-source href="{{ report.link | escape }}" target="_blank" rel="noopener noreferrer">{{ report.title | escape }}</a></h3>
             <p class="radar-publisher">Source: <span data-radar-publisher>{{ report.source | escape }}</span></p>
             <p class="radar-unreviewed">Evidence status: not independently assessed by TriWei</p>
+            <p class="radar-source-hint">
+              {% case report.source_channel %}
+                {% when 'organization' %}An organization describing its own work. Seek an external test before treating performance claims as established.
+                {% when 'research' %}A research publication or preprint. Check methods, limitations, and independent replication; listing does not establish peer review.
+                {% when 'reporting' %}A reporting outlet's account. Follow its original evidence and any independent confirmation.
+                {% when 'community' %}Discovered via community discussion. Inspect the original project, paper, or announcement yourself.
+                {% else %}Source provenance needs further inspection.
+              {% endcase %}
+            </p>
             <div class="radar-card-actions">
               <a href="{{ report.link | escape }}" target="_blank" rel="noopener noreferrer">Inspect source ↗</a>
               <button type="button" data-radar-watch aria-pressed="false">Save to watch</button>
@@ -72,7 +100,6 @@ layout: default
           </article>
           {% endunless %}
           {% endif %}
-        {% endfor %}
       {% endfor %}
     </div>
     <p class="radar-empty" data-radar-empty hidden>No matching direct-source reports in this window. Try seven days or another topic. A source gap is not evidence that nothing happened.</p>

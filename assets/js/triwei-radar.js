@@ -34,6 +34,7 @@
     if (!Number.isFinite(ageHours(item.published, now)) ||
         ageHours(item.published, now) > filter.hours) return false;
     if (filter.topic !== 'all' && item.topic !== filter.topic) return false;
+    if (filter.channel && filter.channel !== 'all' && item.channel !== filter.channel) return false;
     if (filter.savedOnly && !filter.saved.has(item.url)) return false;
     var needle = (filter.query || '').trim().toLowerCase();
     return !needle || (item.title + ' ' + item.source).toLowerCase().indexOf(needle) !== -1;
@@ -93,6 +94,7 @@
     var cards = Array.prototype.slice.call(root.querySelectorAll('[data-radar-card]'));
     var grid = root.querySelector('[data-radar-grid]');
     var select = root.querySelector('[data-radar-topic]');
+    var channelSelect = root.querySelector('[data-radar-channel]');
     var search = root.querySelector('[data-radar-search]');
     var more = root.querySelector('[data-radar-more]');
     var count = root.querySelector('[data-radar-count]');
@@ -100,10 +102,10 @@
     var stale = root.querySelector('[data-radar-stale]');
     var windows = Array.prototype.slice.call(root.querySelectorAll('[data-radar-window]'));
     var savedButton = root.querySelector('[data-radar-saved]');
-    if (!grid || !select || !search || !more || !count || !empty || !savedButton) return null;
+    if (!grid || !select || !channelSelect || !search || !more || !count || !empty || !savedButton) return null;
 
     var saved = readSaved(win);
-    var state = { hours: 24, topic: 'all', query: '', savedOnly: false, expanded: false };
+    var state = { hours: 24, topic: 'all', channel: 'all', query: '', savedOnly: false, expanded: false };
     var seen = new Set();
     var items = cards.map(function (card) {
       var link = card.querySelector('[data-radar-source]');
@@ -112,6 +114,7 @@
         card: card,
         url: url,
         topic: card.getAttribute('data-radar-topic') || '',
+        channel: card.getAttribute('data-radar-channel') || 'unknown',
         published: card.getAttribute('data-radar-published') || '',
         title: link ? link.textContent.trim() : '',
         source: (card.querySelector('[data-radar-publisher]') || {}).textContent || ''
@@ -130,6 +133,7 @@
       var filter = {
         hours: state.hours,
         topic: state.topic,
+        channel: state.channel,
         query: state.query,
         savedOnly: state.savedOnly,
         saved: saved
@@ -179,6 +183,11 @@
     });
     select.addEventListener('change', function () {
       state.topic = select.value;
+      state.expanded = false;
+      render();
+    });
+    channelSelect.addEventListener('change', function () {
+      state.channel = channelSelect.value;
       state.expanded = false;
       render();
     });

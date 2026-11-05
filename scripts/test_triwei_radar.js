@@ -27,6 +27,9 @@ test('Radar publishes original headlines, link attribution, and no inferred verd
   assert.match(home, /report\.link \| escape/);
   assert.match(home, /unless report\.link contains 'news\.google\.com'/);
   assert.match(home, /not independently assessed by TriWei/);
+  assert.match(home, /news\.radar_items/);
+  assert.match(home, /report\.source_channel/);
+  assert.match(home, /data-radar-channel/);
   assert.doesNotMatch(home, /report\.summary/);
   assert.doesNotMatch(home, /report\.ethics_tags/);
   assert.doesNotMatch(home, /report\.trend_score/);
@@ -59,6 +62,12 @@ test('topic, query, local watch and time filters compose without granting verifi
   const filter = { hours: 24, topic: 'research', query: 'BENCHMARK', savedOnly: true,
     saved: new Set([item.url]) };
   assert.equal(radar.matches(item, filter, now), true);
+  assert.equal(radar.matches(
+    { ...item, channel: 'organization' },
+    { ...filter, channel: 'reporting' }, now), false);
+  assert.equal(radar.matches(
+    { ...item, channel: 'organization' },
+    { ...filter, channel: 'organization' }, now), true);
   assert.equal(radar.matches(item, { ...filter, topic: 'labs' }, now), false);
   assert.equal(radar.matches(item, { ...filter, saved: new Set() }, now), false);
   assert.equal(radar.matches(item, { ...filter, query: 'impossible' }, now), false);

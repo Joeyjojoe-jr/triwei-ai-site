@@ -9,7 +9,7 @@ layout: default
 
 
   {% if news %}
-  <section class="radar-terminal" id="radar" data-radar data-radar-generated="{{ news.generated_utc | escape }}" aria-labelledby="radar-heading">
+  <div class="radar-terminal" role="region" id="radar" data-radar data-radar-generated="{{ news.generated_utc | escape }}" aria-labelledby="radar-heading">
     <header class="radar-header">
       <div>
         <p class="radar-kicker">◉ TriWei radar // Daily intelligence</p>
@@ -79,7 +79,7 @@ layout: default
     <button class="radar-more" type="button" data-radar-more hidden>Show more source reports</button>
     <p class="radar-note">A headline is a report, not a verified fact. TriWei does not automatically check the underlying claim. Saved links stay on this device and appear in Watched while they remain in the recent feed. For deeper reference material, visit the <a href="#source-register-title">original-source register</a>.</p>
     <noscript><p class="radar-note">JavaScript is off. All collected direct-source headlines remain listed below; filters and saving require JavaScript.</p></noscript>
-  </section>
+  </div>
   {% endif %}
 
   <div class="orbit" data-orbit-nav role="group" aria-label="Expandable category folders orbiting the TriWei AI logo">

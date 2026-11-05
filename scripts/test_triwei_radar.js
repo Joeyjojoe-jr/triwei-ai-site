@@ -85,6 +85,31 @@ test('balanced display alternates categories rather than ranking by frequency', 
   assert.deepEqual(radar.balancedOrder(items).map(x=>x.title),['L1','R1','C1','C2']);
 });
 
+test('Watched links bypass the current news window but remain filtered by source', () => {
+  const now = Date.parse('2026-11-05T21:00:00Z');
+  const item = {title:'Older research',source:'arXiv',topic:'research',channel:'research',
+    published:'2026-08-01T00:00:00Z',url:'https://arxiv.org/abs/2601.00001'};
+  const filter = {hours:24,topic:'all',channel:'all',query:'',savedOnly:true,
+    saved:new Set([item.url])};
+  assert.equal(radar.matches(item, filter, now), true);
+  assert.equal(radar.matches(item, {...filter,savedOnly:false}, now), false);
+  assert.equal(radar.matches(item, {...filter,saved:new Set()}, now), false);
+});
+
+test('archived link records reject unsafe URLs and malformed saved entries', () => {
+  const win = {localStorage:{getItem:()=>JSON.stringify([
+    {url:'javascript:alert(1)',title:'X'},
+    {url:'https://arxiv.org/abs/2601.00001',title:'Verified only as a saved link',
+      source:'arXiv',published:'2026-01-02T00:00:00Z',topic:'research',channel:'research'}
+  ])}};
+  const records = radar.readSavedRecords(win);
+  assert.equal(records.size, 1);
+  assert.equal(records.get('https://arxiv.org/abs/2601.00001').title,
+    'Verified only as a saved link');
+  assert.deepEqual(Array.from(radar.readSavedRecords(
+    {localStorage:{getItem:()=>'{invalid'}}).values()), []);
+});
+
 test('malformed device watch storage cannot break Radar', () => {
   assert.deepEqual(Array.from(radar.readSaved({localStorage:{getItem:()=>'{broken'}})),[]);
   const saved = radar.readSaved({localStorage:{getItem:()=>JSON.stringify([

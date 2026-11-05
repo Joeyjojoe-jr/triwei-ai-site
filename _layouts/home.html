@@ -56,7 +56,8 @@ layout: default
     </div>
     <p class="radar-stale" data-radar-stale hidden>Feed refresh may be delayed. Check the update timestamp before treating these reports as current.</p>
     <div class="radar-grid" data-radar-grid>
-      {% for report in news.radar_items %}
+      {% assign radar_feed = news.radar_items | default: news.latest %}
+      {% for report in radar_feed %}
           {% assign key = report.category %}
           {% assign group = news.categories[key] %}
           {% if report.link contains 'https://' %}

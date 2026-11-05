@@ -49,6 +49,11 @@ def gnews(query):
 
 FEEDS = {
     "labs": [
+        # First-party publication feeds: metadata reflects publisher claims,
+        # not independent confirmation of the reported outcome.
+        ("rss", "https://openai.com/news/rss.xml"),
+        ("rss", "https://deepmind.google/blog/rss.xml"),
+        ("rss", "https://huggingface.co/blog/feed.xml"),
         ("rss", gnews('(OpenAI OR Anthropic OR "Google DeepMind" OR "Meta AI" '
                       'OR Mistral OR xAI OR "Microsoft AI" OR Nvidia) when:7d')),
         ("rss", gnews('(DeepSeek OR Kimi OR "Moonshot AI" OR MiniMax OR Qwen '
@@ -58,6 +63,7 @@ FEEDS = {
         ("rss", "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"),
     ],
     "research": [
+        ("rss", "https://research.google/blog/rss/"),
         ("rss", "http://export.arxiv.org/rss/cs.AI"),
         ("rss", "http://export.arxiv.org/rss/cs.LG"),
         ("rss", "http://export.arxiv.org/rss/cs.CL"),
@@ -70,10 +76,13 @@ FEEDS = {
         ("rss", "https://www.reddit.com/r/MachineLearning/top/.rss?t=week"),
     ],
     "business": [
+        ("rss", "https://blogs.nvidia.com/feed/"),
+        ("rss", "https://venturebeat.com/feed/"),
         ("rss", gnews('("AI startup" OR "AI funding" OR "AI acquisition" '
                       'OR "AI investment" OR "AI IPO" OR "AI chips") when:7d')),
     ],
     "ethics": [
+        ("rss", "https://www.technologyreview.com/topic/artificial-intelligence/feed/"),
         ("rss", gnews('("AI ethics" OR "AI bias" OR "AI safety" OR "AI copyright" '
                       'OR "AI regulation" OR "AI surveillance" OR "AI privacy" '
                       'OR "AI jobs") when:7d')),
@@ -471,14 +480,62 @@ SOURCE_FALLBACK = {
     "techcrunch.com": "TechCrunch", "theverge.com": "The Verge",
     "arxiv.org": "arXiv", "reddit.com": "r/MachineLearning",
     "news.google.com": "Google News",
+    "openai.com": "OpenAI", "deepmind.google": "Google DeepMind",
+    "huggingface.co": "Hugging Face", "research.google": "Google Research",
+    "blogs.nvidia.com": "NVIDIA", "venturebeat.com": "VentureBeat",
+    "technologyreview.com": "MIT Technology Review",
 }
 
 
 def source_from_url(url):
+    host = (urlsplit(url).hostname or "").lower()
     for k, v in SOURCE_FALLBACK.items():
-        if k in url:
+        if host == k or host.endswith("." + k):
             return v
     return "Web"
+
+
+def source_channel_for_feed(kind, url):
+    """Identify publication provenance, never claim credibility or correctness."""
+    host = (urlsplit(url).hostname or "").lower()
+    if kind == "hn" or host == "reddit.com" or host.endswith(".reddit.com"):
+        return "community"
+    if host in {"export.arxiv.org", "rss.arxiv.org"}:
+        return "research"
+    if host == "news.google.com":
+        return "intermediary"
+    if host in {
+        "openai.com", "deepmind.google", "huggingface.co", "research.google",
+        "blogs.nvidia.com",
+    }:
+        return "organization"
+    return "reporting"
+
+
+def direct_radar_link(url):
+    """Only original destination URLs; never an intermediary or non-HTTPS link."""
+    parsed = urlsplit(url or "")
+    host = (parsed.hostname or "").lower()
+    return parsed.scheme == "https" and bool(host) and host not in {
+        "news.google.com", "www.news.google.com",
+    }
+
+
+def build_radar_items(items, per_category=12):
+    """Surface a bounded selection of recent direct links in every category.
+
+    This is source discovery, not a weighted significance/truthfulness ranking.
+    Keep the original category feeds unchanged for backwards compatibility.
+    """
+    output = []
+    for category in CATEGORY_ORDER:
+        candidates = [row for row in items
+                      if row.get("category") == category
+                      and row.get("published_iso")
+                      and direct_radar_link(row.get("link"))]
+        candidates.sort(key=lambda row: row.get("epoch", 0), reverse=True)
+        output.extend(display_item(row) for row in candidates[:per_category])
+    return output
 
 
 def safe_external_url(value):
@@ -513,7 +570,9 @@ def collect():
                 successful_feeds += 1
             fb = source_from_url(url)
             for r in rows:
-                title, src = split_source(r["title"], fb)
+                title, src = (split_source(r["title"], fb)
+                              if source_channel_for_feed(kind, url) == "intermediary"
+                              else (r["title"], fb))
                 summary = clean_text(r.get("desc"))
                 if not is_story_relevant(cat, title, summary, url):
                     continue
@@ -531,6 +590,7 @@ def collect():
                     "title": clean_text(title, None),
                     "link": link,
                     "source": src,
+                    "source_channel": source_channel_for_feed(kind, url),
                     "category": cat,
                     "published_iso": iso,
                     "epoch": epoch,
@@ -785,6 +845,7 @@ def display_item(i):
         "title": str(i.get("title") or ""),
         "link": safe_external_url(i.get("link")),
         "source": str(i.get("source") or ""),
+        "source_channel": i.get("source_channel") or "unknown",
         "category": i.get("category") or "",
         "category_label": CATEGORY_LABELS.get(i.get("category"), ""),
         "published_display": disp, "published_iso": iso,
@@ -850,6 +911,7 @@ def cached_story(item, category):
         "title": title,
         "link": link,
         "source": str(item.get("source") or "Web"),
+        "source_channel": item.get("source_channel") or "unknown",
         "category": category,
         "published_iso": published_iso,
         "epoch": epoch,
@@ -950,6 +1012,7 @@ def main():
         "ethics_themes": themes,
         "ethics_watch": [display_item(i) for i in watch[:16]],
         "latest": [display_item(i) for i in all_sorted[:24]],
+        "radar_items": build_radar_items(all_items),
     }
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)

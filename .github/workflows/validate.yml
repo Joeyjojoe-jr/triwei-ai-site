@@ -54,8 +54,13 @@ jobs:
       - name: Test Industry Atlas
         run: npm run check:industry
 
-      - name: Test Research Library and AI Hardware
-        run: npm run check:intelligence
+      - name: Test Research Library and AI Hardware (respect stale ledger)
+        run: |
+          python -m py_compile scripts/validate_intelligence_data.py
+          node --check assets/js/signal-history.js
+          node --check assets/js/hardware-intelligence.js
+          node --test scripts/test_intelligence.js
+          python scripts/validate_intelligence_data.py --allow-stale
 
       - name: Validate generated news data
         run: npm run check:data

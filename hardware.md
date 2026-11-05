@@ -13,6 +13,11 @@ publication_key: hardware
     <h1>Compare source-dated hardware specifications</h1>
     <p>Browse published memory, bandwidth, compute, power, and interconnect fields alongside the manufacturer or institutional source. The register preserves source terminology so readers can inspect the underlying product record rather than rely on a generated recommendation.</p>
     <p class="updated-stamp">Source fields checked {{ hardware.verified_display | escape }} · re-check by {{ hardware.reverify_by | date: "%b %d, %Y" }}</p>
+    {% assign hardware_review_due = hardware.reverify_by | date: "%s" | plus: 0 %}
+    {% assign hardware_rendered_at = site.time | date: "%s" | plus: 0 %}
+    {% if hardware_rendered_at > hardware_review_due %}
+    <p class="source-only-warning" data-hardware-review-overdue>Review overdue: these source-dated specifications have not been reverified after {{ hardware.reverify_by | date: "%b %d, %Y" }}. Check original manufacturer sources before relying on any value.</p>
+    {% endif %}
   </header>
 
   <section class="source-only-section card animate-in" aria-labelledby="hardware-spec-title">

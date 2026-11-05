@@ -7,6 +7,81 @@ layout: default
 <section class="hero card animate-in hero-orbit-wrap">
   <p class="eyebrow">AI News &amp; Trends · through an ethics lens</p>
 
+
+  {% if news %}
+  <div class="radar-terminal" role="region" id="radar" data-radar data-radar-generated="{{ news.generated_utc | escape }}" aria-labelledby="radar-heading">
+    <header class="radar-header">
+      <div>
+        <p class="radar-kicker">◉ TriWei radar // Daily intelligence</p>
+        <h2 id="radar-heading">What's new in AI?</h2>
+        <p>Fresh source headlines, emerging claims and open questions—without invented summaries or automated legitimacy verdicts. Start with six reports, then investigate what interests you.</p>
+      </div>
+      <span class="radar-clock">Feed updated {{ news.generated_display | escape }}</span>
+    </header>
+    <div class="radar-tools" aria-label="Radar filters">
+      <label><span>Search headlines</span>
+        <input data-radar-search type="search" placeholder="Company, model, idea..." autocomplete="off">
+      </label>
+      <label><span>Area of interest</span>
+        <select data-radar-topic>
+          <option value="all">All topics</option>
+          <option value="labs">Labs &amp; releases</option>
+          <option value="research">Research</option>
+          <option value="community">Community</option>
+          <option value="business">Business</option>
+          <option value="ethics">Ethics &amp; policy</option>
+        </select>
+      </label>
+      <div class="radar-quick-filter" role="group" aria-label="Publication window">
+        <button type="button" data-radar-window="24" aria-pressed="true">24 hours</button>
+        <button type="button" data-radar-window="168" aria-pressed="false">7 days</button>
+        <button type="button" data-radar-saved aria-pressed="false">Watched</button>
+      </div>
+    </div>
+    <div class="radar-line">
+      <strong data-radar-count>Recent direct-source reports</strong>
+      <span>Topic-balanced, newest within each folder. Not ranked by importance.</span>
+    </div>
+    <p class="radar-stale" data-radar-stale hidden>Feed refresh may be delayed. Check the update timestamp before treating these reports as current.</p>
+    <div class="radar-grid" data-radar-grid>
+      {% for key in news.category_order %}
+        {% assign group = news.categories[key] %}
+        {% for report in group.items %}
+          {% if report.link contains 'https://' %}
+          {% unless report.link contains 'news.google.com' %}
+          <article class="radar-card" data-radar-card data-radar-topic="{{ key | escape }}" data-radar-published="{{ report.published_iso | escape }}">
+            <div class="radar-card-top">
+              <span class="radar-topic">{{ group.label | escape }}</span>
+              <time class="radar-time" datetime="{{ report.published_iso | escape }}">{{ report.published_display | escape }}</time>
+            </div>
+            <h3><a data-radar-source href="{{ report.link | escape }}" target="_blank" rel="noopener noreferrer">{{ report.title | escape }}</a></h3>
+            <p class="radar-publisher">Source: <span data-radar-publisher>{{ report.source | escape }}</span></p>
+            <p class="radar-unreviewed">Evidence status: not independently assessed by TriWei</p>
+            <div class="radar-card-actions">
+              <a href="{{ report.link | escape }}" target="_blank" rel="noopener noreferrer">Inspect source ↗</a>
+              <button type="button" data-radar-watch aria-pressed="false">Save to watch</button>
+            </div>
+            <details class="radar-checks">
+              <summary>How would I verify this?</summary>
+              <ul>
+                <li>Find the original announcement, paper, data, or demonstration.</li>
+                <li>Inspect the test conditions, limitations, and who produced the evidence.</li>
+                <li>Look for independent replication or credible contrary results.</li>
+              </ul>
+            </details>
+          </article>
+          {% endunless %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </div>
+    <p class="radar-empty" data-radar-empty hidden>No matching direct-source reports in this window. Try seven days or another topic. A source gap is not evidence that nothing happened.</p>
+    <button class="radar-more" type="button" data-radar-more hidden>Show more source reports</button>
+    <p class="radar-note">A headline is a report, not a verified fact. TriWei does not automatically check the underlying claim. Saved links stay on this device and appear in Watched while they remain in the recent feed. For deeper reference material, visit the <a href="#source-register-title">original-source register</a>.</p>
+    <noscript><p class="radar-note">JavaScript is off. All collected direct-source headlines remain listed below; filters and saving require JavaScript.</p></noscript>
+  </div>
+  {% endif %}
+
   <div class="orbit" data-orbit-nav role="group" aria-label="Expandable category folders orbiting the TriWei AI logo">
     <button class="orbit-core orbit-core-button" type="button" data-orbit-back disabled aria-label="Main category folders">
       <img class="emblem" src="{{ '/assets/images/triwei-logo.png' | relative_url }}" alt="TriWei AI logo" width="250" height="250">
@@ -311,3 +386,4 @@ layout: default
 </section>
 <script src="{{ '/assets/js/orbit-navigation.js' | relative_url }}" defer></script>
 {% endif %}
+<script src="{{ '/assets/js/triwei-radar.js' | relative_url }}" defer></script>

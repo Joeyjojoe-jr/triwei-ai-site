@@ -1,13 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-08-13",
-      "story_count": 1,
-      "topics": {
-        "Anthropic": 1
-      }
-    },
-    {
       "date": "2026-08-14",
       "story_count": 2,
       "topics": {
@@ -695,26 +688,38 @@
     },
     {
       "date": "2026-11-10",
-      "story_count": 70,
+      "story_count": 38,
       "topics": {
-        "agent": 2,
-        "Anthropic": 17,
-        "benchmark": 5,
+        "Amazon": 1,
+        "Anthropic": 12,
         "ChatGPT": 1,
         "chip": 1,
-        "Claude": 5,
-        "copyright": 1,
-        "data center": 1,
-        "funding": 14,
-        "Gemini": 1,
-        "Google": 3,
-        "Meta": 1,
-        "Microsoft": 2,
-        "Mistral": 1,
-        "Nvidia": 9,
-        "OpenAI": 3,
+        "Claude": 1,
+        "funding": 13,
+        "Google": 2,
+        "Nvidia": 7,
+        "OpenAI": 4,
         "regulation": 2,
-        "safety": 13
+        "safety": 9
+      }
+    },
+    {
+      "date": "2026-11-11",
+      "story_count": 32,
+      "topics": {
+        "agent": 3,
+        "agentic": 3,
+        "Anthropic": 2,
+        "benchmark": 1,
+        "Claude": 5,
+        "coding": 1,
+        "funding": 1,
+        "Google": 1,
+        "Microsoft": 1,
+        "multimodal": 2,
+        "OpenAI": 1,
+        "robot": 1,
+        "safety": 4
       }
     }
   ]

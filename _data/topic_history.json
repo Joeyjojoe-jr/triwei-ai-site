@@ -1,14 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-08-21",
-      "story_count": 2,
-      "topics": {
-        "Anthropic": 1,
-        "Nvidia": 1
-      }
-    },
-    {
       "date": "2026-08-22",
       "story_count": 1,
       "topics": {
@@ -702,24 +694,32 @@
     },
     {
       "date": "2026-11-18",
-      "story_count": 65,
+      "story_count": 69,
       "topics": {
         "agent": 2,
-        "agentic": 1,
-        "alignment": 1,
+        "Amazon": 1,
         "Anthropic": 10,
-        "benchmark": 3,
-        "Claude": 3,
-        "DeepSeek": 3,
-        "funding": 10,
+        "benchmark": 2,
+        "ChatGPT": 3,
+        "chip": 1,
+        "Claude": 2,
+        "DeepSeek": 1,
+        "funding": 14,
         "Gemini": 2,
-        "GPT": 1,
-        "Meta": 2,
-        "Nvidia": 10,
-        "OpenAI": 4,
-        "regulation": 1,
-        "safety": 14,
+        "Google": 1,
+        "Microsoft": 2,
+        "Nvidia": 5,
+        "OpenAI": 7,
+        "regulation": 3,
+        "safety": 11,
         "video": 1
+      }
+    },
+    {
+      "date": "2026-11-19",
+      "story_count": 1,
+      "topics": {
+        "OpenAI": 1
       }
     }
   ]

@@ -1,37 +1,14 @@
 {
-  "generated_utc": "2026-11-19T00:09:32.078922Z",
+  "generated_utc": "2026-11-19T15:35:57.695321Z",
   "generated_display": "Nov 19, 2026",
-  "coverage_generated_display": "November 18, 2026 at 6:09 PM CST",
+  "coverage_generated_display": "November 19, 2026 at 9:35 AM CST",
   "diffusion_watch": {
     "coverage": {
-      "story_count": 1,
-      "lab_count": 1,
-      "labs": [
-        {
-          "name": "DeepSeek",
-          "count": 1
-        }
-      ],
-      "signals": [
-        {
-          "name": "Capability convergence",
-          "count": 1
-        }
-      ],
-      "stories": [
-        {
-          "title": "CoreWeave Reports 2.7x Speedup with Vera Rubin Over GB200 on MLPerf DeepSeek-V3 Benchmark",
-          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNUS1oa25kdERDNUVjb0tGck44SnNhZGM5eTlmOV9tbmRyRk4yLTZHQ1RlVk9raDJsS1ZsZkNRLVY0RXJGMDA4Ni1iVGRlVi1nN0xyZ3JmYjBJRTJFMmFkbHA0RzJIQVlPeGNMLWp6Rm02QkNGUjhoaG9ZV2hTXzhWTzVQSFN4NS1YTmxVOXdDNnNkdzItbnZQenFIZktBNHV0SEh6MFpOSWtfN1lmbVZoLW85Q2w4ZlBuSG8ydE0tbTFxcWVMOWtaMlZDT2o?oc=5",
-          "source": "HPCwire",
-          "published_display": "Nov 18, 2026",
-          "labs": [
-            "DeepSeek"
-          ],
-          "signals": [
-            "Capability convergence"
-          ]
-        }
-      ],
+      "story_count": 0,
+      "lab_count": 0,
+      "labs": [],
+      "signals": [],
+      "stories": [],
       "observed_days": 64,
       "window_days": 365,
       "daily": [
@@ -1583,19 +1560,19 @@
           },
           {
             "date": "2026-11-18",
-            "count": 14,
-            "share": 20.3
+            "count": 10,
+            "share": 100.0
           },
           {
             "date": "2026-11-19",
-            "count": 0,
-            "share": 0.0
+            "count": 4,
+            "share": 6.7
           }
         ]
       },
       {
         "term": "Anthropic",
-        "total": 37,
+        "total": 50,
         "points": [
           {
             "date": "2026-08-22",
@@ -2039,19 +2016,19 @@
           },
           {
             "date": "2026-11-18",
-            "count": 10,
-            "share": 14.5
+            "count": 1,
+            "share": 10.0
           },
           {
             "date": "2026-11-19",
-            "count": 0,
-            "share": 0.0
+            "count": 22,
+            "share": 36.7
           }
         ]
       },
       {
         "term": "safety",
-        "total": 36,
+        "total": 38,
         "points": [
           {
             "date": "2026-08-22",
@@ -2495,19 +2472,19 @@
           },
           {
             "date": "2026-11-18",
-            "count": 11,
-            "share": 15.9
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-11-19",
-            "count": 0,
-            "share": 0.0
+            "count": 13,
+            "share": 21.7
           }
         ]
       },
       {
         "term": "Nvidia",
-        "total": 35,
+        "total": 36,
         "points": [
           {
             "date": "2026-08-22",
@@ -2951,19 +2928,19 @@
           },
           {
             "date": "2026-11-18",
-            "count": 5,
-            "share": 7.2
+            "count": 3,
+            "share": 30.0
           },
           {
             "date": "2026-11-19",
-            "count": 0,
-            "share": 0.0
+            "count": 3,
+            "share": 5.0
           }
         ]
       },
       {
         "term": "Google",
-        "total": 24,
+        "total": 25,
         "points": [
           {
             "date": "2026-08-22",
@@ -3407,19 +3384,19 @@
           },
           {
             "date": "2026-11-18",
-            "count": 1,
-            "share": 1.4
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-11-19",
-            "count": 0,
-            "share": 0.0
+            "count": 2,
+            "share": 3.3
           }
         ]
       },
       {
-        "term": "OpenAI",
-        "total": 24,
+        "term": "regulation",
+        "total": 17,
         "points": [
           {
             "date": "2026-08-22",
@@ -3433,8 +3410,8 @@
           },
           {
             "date": "2026-08-24",
-            "count": 0,
-            "share": 0.0
+            "count": 2,
+            "share": 40.0
           },
           {
             "date": "2026-08-25",
@@ -3468,8 +3445,8 @@
           },
           {
             "date": "2026-08-31",
-            "count": 1,
-            "share": 100.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-09-01",
@@ -3478,8 +3455,8 @@
           },
           {
             "date": "2026-09-02",
-            "count": 1,
-            "share": 100.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-09-03",
@@ -3488,8 +3465,8 @@
           },
           {
             "date": "2026-09-04",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 50.0
           },
           {
             "date": "2026-09-05",
@@ -3498,8 +3475,8 @@
           },
           {
             "date": "2026-09-06",
-            "count": 1,
-            "share": 100.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-09-07",
@@ -3518,13 +3495,13 @@
           },
           {
             "date": "2026-09-10",
-            "count": 1,
-            "share": 100.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-09-11",
-            "count": 1,
-            "share": 25.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-09-12",
@@ -3538,8 +3515,8 @@
           },
           {
             "date": "2026-09-14",
-            "count": 1,
-            "share": 33.3
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-09-15",
@@ -3618,8 +3595,8 @@
           },
           {
             "date": "2026-09-30",
-            "count": 2,
-            "share": 25.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-10-01",
@@ -3648,8 +3625,8 @@
           },
           {
             "date": "2026-10-06",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 100.0
           },
           {
             "date": "2026-10-07",
@@ -3658,8 +3635,8 @@
           },
           {
             "date": "2026-10-08",
-            "count": 2,
-            "share": 40.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-10-09",
@@ -3738,13 +3715,13 @@
           },
           {
             "date": "2026-10-24",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 50.0
           },
           {
             "date": "2026-10-25",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 100.0
           },
           {
             "date": "2026-10-26",
@@ -3773,13 +3750,13 @@
           },
           {
             "date": "2026-10-31",
-            "count": 1,
-            "share": 50.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-11-01",
-            "count": 1,
-            "share": 100.0
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-11-02",
@@ -3823,8 +3800,8 @@
           },
           {
             "date": "2026-11-10",
-            "count": 3,
-            "share": 14.3
+            "count": 1,
+            "share": 4.8
           },
           {
             "date": "2026-11-11",
@@ -3843,13 +3820,13 @@
           },
           {
             "date": "2026-11-14",
-            "count": 0,
-            "share": 0.0
+            "count": 2,
+            "share": 40.0
           },
           {
             "date": "2026-11-15",
-            "count": 0,
-            "share": 0.0
+            "count": 1,
+            "share": 100.0
           },
           {
             "date": "2026-11-16",
@@ -3863,13 +3840,13 @@
           },
           {
             "date": "2026-11-18",
-            "count": 7,
-            "share": 10.1
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-11-19",
-            "count": 1,
-            "share": 100.0
+            "count": 6,
+            "share": 10.0
           }
         ]
       }
@@ -3903,38 +3880,7 @@
     "companies": [
       {
         "name": "Anthropic",
-        "story_count": 12,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 1
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 0
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 1
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 2
-          }
-        ]
-      },
-      {
-        "name": "OpenAI",
-        "story_count": 10,
+        "story_count": 24,
         "cells": [
           {
             "key": "hardware",
@@ -3944,38 +3890,38 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 2
+            "count": 1
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 4
+            "count": 1
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 2
+            "count": 1
           },
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 4
+            "count": 5
           }
         ]
       },
       {
         "name": "Nvidia",
-        "story_count": 5,
+        "story_count": 6,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 4
+            "count": 5
           },
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 1
+            "count": 0
           },
           {
             "key": "models",
@@ -3996,7 +3942,7 @@
       },
       {
         "name": "Google",
-        "story_count": 2,
+        "story_count": 3,
         "cells": [
           {
             "key": "hardware",
@@ -4006,43 +3952,12 @@
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 1
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
-            "count": 0
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "name": "Microsoft",
-        "story_count": 2,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 1
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
             "count": 1
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 1
+            "count": 0
           },
           {
             "key": "apps",
@@ -4073,7 +3988,7 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 1
+            "count": 0
           },
           {
             "key": "apps",
@@ -4088,7 +4003,69 @@
         ]
       },
       {
-        "name": "Moonshot",
+        "name": "Meta",
+        "story_count": 1,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 0
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 1
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "Microsoft",
+        "story_count": 1,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 1
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 1
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 0
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 0
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "OpenAI",
         "story_count": 1,
         "cells": [
           {
@@ -4140,17 +4117,17 @@
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 0
+            "count": 1
           },
           {
             "key": "society",
             "label": "Policy & society",
-            "count": 1
+            "count": 0
           }
         ]
       }
     ],
-    "max_count": 4,
+    "max_count": 5,
     "metric": "Distinct stories mentioning both the company and layer",
     "source": "coverage"
   },

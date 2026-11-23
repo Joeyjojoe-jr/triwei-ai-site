@@ -158,3 +158,28 @@
     scroll-behavior: auto; animation: none; transition: none;
   }
 }
+
+/* Explicit source provenance (not an automated credibility rating). */
+.radar-intelligence-note {
+  margin: 0.85rem 0 0;
+  padding: 0.7rem 0.85rem;
+  border-left: 3px solid var(--accent-2);
+  background: color-mix(in srgb, var(--accent) 7%, var(--surface));
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+.radar-intelligence-note strong { color: var(--accent); }
+.radar-channel {
+  padding: 0.13rem 0.4rem;
+  border: 1px solid color-mix(in srgb, var(--accent-2) 45%, var(--border));
+  border-radius: 3px;
+  color: var(--accent-2);
+  font: 700 0.6rem/1.6 var(--mono);
+}
+.radar-source-hint {
+  margin: 0.5rem 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}

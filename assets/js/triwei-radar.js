@@ -8,6 +8,7 @@
 })(function () {
   'use strict';
   var STORAGE_KEY = 'triwei-radar-watch-v1';
+  var RECORDS_KEY = 'triwei-radar-watch-records-v1';
   var TOPICS = ['labs', 'research', 'community', 'business', 'ethics'];
 
   function direct(url) {
@@ -31,9 +32,11 @@
 
   function matches(item, filter, now) {
     if (!direct(item.url)) return false;
-    if (!Number.isFinite(ageHours(item.published, now)) ||
-        ageHours(item.published, now) > filter.hours) return false;
+    if (!filter.savedOnly &&
+        (!Number.isFinite(ageHours(item.published, now)) ||
+         ageHours(item.published, now) > filter.hours)) return false;
     if (filter.topic !== 'all' && item.topic !== filter.topic) return false;
+    if (filter.channel && filter.channel !== 'all' && item.channel !== filter.channel) return false;
     if (filter.savedOnly && !filter.saved.has(item.url)) return false;
     var needle = (filter.query || '').trim().toLowerCase();
     return !needle || (item.title + ' ' + item.source).toLowerCase().indexOf(needle) !== -1;
@@ -87,12 +90,109 @@
     }
   }
 
+
+  function safeRecord(raw) {
+    if (!raw || typeof raw !== 'object' || !direct(raw.url) ||
+        typeof raw.title !== 'string' || !raw.title.trim()) return null;
+    return {
+      url: raw.url,
+      title: raw.title.trim().slice(0, 240),
+      source: typeof raw.source === 'string' ? raw.source.slice(0, 120) : '',
+      published: typeof raw.published === 'string' ? raw.published : '',
+      topic: TOPICS.indexOf(raw.topic) >= 0 ? raw.topic : 'community',
+      channel: ['organization', 'research', 'reporting', 'community'].indexOf(raw.channel) >= 0
+        ? raw.channel : 'unknown'
+    };
+  }
+
+  function readSavedRecords(win) {
+    try {
+      var raw = JSON.parse(win.localStorage.getItem(RECORDS_KEY) || '[]');
+      var entries = new Map();
+      if (!Array.isArray(raw)) return entries;
+      raw.slice(-100).forEach(function (value) {
+        var record = safeRecord(value);
+        if (record) entries.set(record.url, record);
+      });
+      return entries;
+    } catch (error) {
+      return new Map();
+    }
+  }
+
+  function writeSavedRecords(win, entries) {
+    try {
+      win.localStorage.setItem(RECORDS_KEY, JSON.stringify(
+        Array.from(entries.values()).slice(-100)
+      ));
+    } catch (error) {
+      // Device storage is optional; never block browsing.
+    }
+  }
+
+  function archivedCard(doc, record) {
+    // DOM-only construction ensures stored device data is never parsed as HTML.
+    var card = doc.createElement('article');
+    card.className = 'radar-card';
+    card.setAttribute('data-radar-card', '');
+    card.setAttribute('data-radar-topic', record.topic);
+    card.setAttribute('data-radar-channel', record.channel);
+    card.setAttribute('data-radar-published', record.published);
+
+    var label = doc.createElement('p');
+    label.className = 'radar-topic';
+    label.textContent = 'Saved from an earlier briefing';
+    card.appendChild(label);
+
+    var heading = doc.createElement('h3');
+    var link = doc.createElement('a');
+    link.setAttribute('data-radar-source', '');
+    link.href = record.url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = record.title;
+    heading.appendChild(link);
+    card.appendChild(heading);
+
+    var source = doc.createElement('p');
+    source.className = 'radar-publisher';
+    source.textContent = 'Source: ';
+    var publisher = doc.createElement('span');
+    publisher.setAttribute('data-radar-publisher', '');
+    publisher.textContent = record.source;
+    source.appendChild(publisher);
+    card.appendChild(source);
+
+    var caution = doc.createElement('p');
+    caution.className = 'radar-unreviewed';
+    caution.textContent = 'Archived link — claims not independently assessed';
+    card.appendChild(caution);
+
+    var actions = doc.createElement('div');
+    actions.className = 'radar-card-actions';
+    var inspect = doc.createElement('a');
+    inspect.href = record.url;
+    inspect.target = '_blank';
+    inspect.rel = 'noopener noreferrer';
+    inspect.textContent = 'Inspect source';
+    actions.appendChild(inspect);
+    var button = doc.createElement('button');
+    button.type = 'button';
+    button.setAttribute('data-radar-watch', '');
+    button.setAttribute('aria-pressed', 'true');
+    button.textContent = 'Saved to watch';
+    actions.appendChild(button);
+    card.appendChild(actions);
+    return card;
+  }
+
   function mount(doc, win) {
     var root = doc.querySelector('[data-radar]');
     if (!root) return null;
     var cards = Array.prototype.slice.call(root.querySelectorAll('[data-radar-card]'));
     var grid = root.querySelector('[data-radar-grid]');
     var select = root.querySelector('[data-radar-topic]');
+    var channelSelect = root.querySelector('[data-radar-channel]');
     var search = root.querySelector('[data-radar-search]');
     var more = root.querySelector('[data-radar-more]');
     var count = root.querySelector('[data-radar-count]');
@@ -100,10 +200,12 @@
     var stale = root.querySelector('[data-radar-stale]');
     var windows = Array.prototype.slice.call(root.querySelectorAll('[data-radar-window]'));
     var savedButton = root.querySelector('[data-radar-saved]');
-    if (!grid || !select || !search || !more || !count || !empty || !savedButton) return null;
+    if (!grid || !select || !channelSelect || !search || !more || !count || !empty || !savedButton) return null;
 
     var saved = readSaved(win);
-    var state = { hours: 24, topic: 'all', query: '', savedOnly: false, expanded: false };
+    var savedRecords = readSavedRecords(win);
+    savedRecords.forEach(function (record) { saved.add(record.url); });
+    var state = { hours: 24, topic: 'all', channel: 'all', query: '', savedOnly: false, expanded: false };
     var seen = new Set();
     var items = cards.map(function (card) {
       var link = card.querySelector('[data-radar-source]');
@@ -112,6 +214,7 @@
         card: card,
         url: url,
         topic: card.getAttribute('data-radar-topic') || '',
+        channel: card.getAttribute('data-radar-channel') || 'unknown',
         published: card.getAttribute('data-radar-published') || '',
         title: link ? link.textContent.trim() : '',
         source: (card.querySelector('[data-radar-publisher]') || {}).textContent || ''
@@ -120,6 +223,29 @@
       seen.add(url);
       return item;
     });
+    // Recover details for preexisting v1 saved links still present in the feed.
+    items.forEach(function (item) {
+      if (saved.has(item.url) && !savedRecords.has(item.url) && direct(item.url)) {
+        savedRecords.set(item.url, {
+          url: item.url, title: item.title, source: item.source.trim(),
+          published: item.published, topic: item.topic, channel: item.channel
+        });
+      }
+    });
+    // Restore older saved records, even when no longer in this feed.
+    savedRecords.forEach(function (record, url) {
+      if (seen.has(url)) return;
+      var card = archivedCard(doc, record);
+      grid.appendChild(card);
+      seen.add(url);
+      items.push({
+        card: card, url: record.url, topic: record.topic,
+        channel: record.channel, published: record.published,
+        title: record.title, source: record.source, duplicate: false
+      });
+    });
+    writeSavedRecords(win, savedRecords);
+
     // Sorting does not change the source, attribution, or original headline.
     balancedOrder(items.filter(function (item) { return !item.duplicate; })).forEach(function (item) {
       grid.appendChild(item.card);
@@ -130,6 +256,7 @@
       var filter = {
         hours: state.hours,
         topic: state.topic,
+        channel: state.channel,
         query: state.query,
         savedOnly: state.savedOnly,
         saved: saved
@@ -152,8 +279,9 @@
       });
       // Reorder visible cards consistently with the active filters.
       ordered.forEach(function (item) { grid.appendChild(item.card); });
-      count.textContent = qualifying.length + ' direct-source report' +
-        (qualifying.length === 1 ? '' : 's') + ' found';
+      count.textContent = qualifying.length + (state.savedOnly
+        ? ' saved source link' + (qualifying.length === 1 ? '' : 's')
+        : ' direct-source report' + (qualifying.length === 1 ? '' : 's')) + ' found';
       empty.hidden = qualifying.length > 0;
       more.hidden = state.expanded || qualifying.length <= 6;
       savedButton.setAttribute('aria-pressed', state.savedOnly ? 'true' : 'false');
@@ -172,13 +300,27 @@
       var card = button.closest('[data-radar-card]');
       var item = items.find(function (entry) { return entry.card === card; });
       if (!item || !direct(item.url)) return;
-      if (saved.has(item.url)) saved.delete(item.url);
-      else saved.add(item.url);
+      if (saved.has(item.url)) {
+        saved.delete(item.url);
+        savedRecords.delete(item.url);
+      } else {
+        saved.add(item.url);
+        savedRecords.set(item.url, {
+          url: item.url, title: item.title, source: item.source.trim(),
+          published: item.published, topic: item.topic, channel: item.channel
+        });
+      }
       writeSaved(win, saved);
+      writeSavedRecords(win, savedRecords);
       render();
     });
     select.addEventListener('change', function () {
       state.topic = select.value;
+      state.expanded = false;
+      render();
+    });
+    channelSelect.addEventListener('change', function () {
+      state.channel = channelSelect.value;
       state.expanded = false;
       render();
     });
@@ -213,6 +355,8 @@
     matches: matches,
     balancedOrder: balancedOrder,
     readSaved: readSaved,
+    readSavedRecords: readSavedRecords,
+    archivedCard: archivedCard,
     mount: mount
   };
 });

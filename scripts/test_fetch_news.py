@@ -244,6 +244,56 @@ class StoryDeduplicationTests(unittest.TestCase):
         self.assertEqual(fetch_news.clean_text(headline, None), headline)
 
 
+class RadarSourceClassificationTests(unittest.TestCase):
+    def test_source_channels_describe_provenance_not_verification(self):
+        self.assertEqual(
+            "organization", fetch_news.source_channel_for_feed(
+                "rss", "https://openai.com/news/rss.xml"))
+        self.assertEqual(
+            "research", fetch_news.source_channel_for_feed(
+                "rss", "http://export.arxiv.org/rss/cs.AI"))
+        self.assertEqual(
+            "reporting", fetch_news.source_channel_for_feed(
+                "rss", "https://www.technologyreview.com/topic/artificial-intelligence/feed/"))
+        self.assertEqual(
+            "community", fetch_news.source_channel_for_feed(
+                "hn", "https://hn.algolia.com/api/v1/search"))
+        self.assertEqual(
+            "intermediary", fetch_news.source_channel_for_feed(
+                "rss", "https://news.google.com/rss/search?q=ai"))
+
+    def test_direct_radar_feed_drops_intermediaries_and_tracks_source_type(self):
+        rows = [
+            {"title": "AI claim from official publisher",
+             "link": "https://openai.com/news/example",
+             "published_iso": "2026-11-05T15:00:00Z",
+             "epoch": 20, "category": "labs", "source": "OpenAI",
+             "source_channel": "organization"},
+            {"title": "Syndicated AI claim",
+             "link": "https://news.google.com/rss/articles/abc",
+             "published_iso": "2026-11-05T16:00:00Z",
+             "epoch": 30, "category": "labs", "source": "News",
+             "source_channel": "intermediary"},
+            {"title": "Older first party claim",
+             "link": "https://deepmind.google/blog/example",
+             "published_iso": "2026-11-04T15:00:00Z",
+             "epoch": 10, "category": "labs", "source": "DeepMind",
+             "source_channel": "organization"},
+        ]
+        output = fetch_news.build_radar_items(rows, per_category=1)
+        self.assertEqual(len(output), 1)
+        self.assertEqual(output[0]["source_channel"], "organization")
+        self.assertEqual(output[0]["link"], "https://openai.com/news/example")
+
+    def test_official_headline_keeps_dash_without_fabricating_a_publisher(self):
+        self.assertEqual(
+            fetch_news.source_from_url("https://deepmind.google/blog/rss.xml"),
+            "Google DeepMind")
+        self.assertFalse(fetch_news.direct_radar_link("http://arxiv.org/abs/x"))
+        self.assertFalse(fetch_news.direct_radar_link(
+            "https://news.google.com/rss/articles/x"))
+
+
 class FeedOutageFallbackTests(unittest.TestCase):
     def cached_item(self, category, title, link):
         return {

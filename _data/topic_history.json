@@ -1,11 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-08-25",
-      "story_count": 1,
-      "topics": {}
-    },
-    {
       "date": "2026-08-26",
       "story_count": 3,
       "topics": {
@@ -682,53 +677,71 @@
     },
     {
       "date": "2026-11-19",
-      "story_count": 2,
+      "story_count": 4,
       "topics": {
+        "agent": 3,
         "Anthropic": 1,
-        "safety": 2
+        "Gemini": 1,
+        "Google": 1,
+        "Meta": 1
       }
     },
     {
       "date": "2026-11-20",
-      "story_count": 13,
+      "story_count": 17,
       "topics": {
-        "Anthropic": 2,
-        "Claude": 2,
+        "agent": 1,
+        "agentic": 1,
+        "Anthropic": 4,
+        "Claude": 4,
         "data center": 1,
         "funding": 6,
+        "Gemini": 1,
+        "Meta": 1,
         "Nvidia": 1,
+        "OpenAI": 1,
+        "privacy": 1,
         "regulation": 1,
         "safety": 4
       }
     },
     {
       "date": "2026-11-21",
-      "story_count": 24,
+      "story_count": 9,
       "topics": {
-        "Anthropic": 6,
-        "benchmark": 1,
-        "Claude": 2,
-        "DeepSeek": 1,
+        "Anthropic": 1,
+        "Claude": 1,
         "funding": 4,
-        "Google": 4,
         "Nvidia": 2,
-        "OpenAI": 1,
         "regulation": 1,
-        "safety": 4
+        "safety": 3
       }
     },
     {
       "date": "2026-11-22",
-      "story_count": 30,
+      "story_count": 14,
       "topics": {
-        "Anthropic": 3,
-        "Claude": 2,
-        "funding": 5,
-        "Google": 3,
-        "Nvidia": 2,
+        "Anthropic": 1,
+        "Claude": 1,
+        "funding": 4,
+        "Nvidia": 1,
         "OpenAI": 1,
         "regulation": 1,
-        "safety": 4
+        "safety": 3
+      }
+    },
+    {
+      "date": "2026-11-23",
+      "story_count": 24,
+      "topics": {
+        "agent": 6,
+        "Anthropic": 1,
+        "benchmark": 1,
+        "Claude": 1,
+        "energy": 1,
+        "Gemini": 1,
+        "multimodal": 1,
+        "safety": 1
       }
     }
   ]

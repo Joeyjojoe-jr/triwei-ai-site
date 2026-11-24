@@ -1,13 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-08-26",
-      "story_count": 3,
-      "topics": {
-        "Nvidia": 3
-      }
-    },
-    {
       "date": "2026-08-27",
       "story_count": 2,
       "topics": {
@@ -707,38 +700,50 @@
     },
     {
       "date": "2026-11-21",
-      "story_count": 1,
+      "story_count": 5,
       "topics": {
-        "funding": 1
+        "funding": 5,
+        "Nvidia": 2
       }
     },
     {
       "date": "2026-11-22",
-      "story_count": 5,
+      "story_count": 3,
       "topics": {
-        "funding": 4,
-        "Nvidia": 2,
-        "OpenAI": 1
+        "funding": 3,
+        "Nvidia": 2
       }
     },
     {
       "date": "2026-11-23",
-      "story_count": 64,
+      "story_count": 45,
       "topics": {
         "agent": 1,
-        "Amazon": 2,
-        "Anthropic": 6,
-        "benchmark": 1,
-        "Claude": 5,
+        "agentic": 1,
+        "Amazon": 1,
+        "Anthropic": 7,
+        "Claude": 2,
         "DeepSeek": 1,
-        "energy": 1,
-        "funding": 9,
-        "Gemini": 2,
-        "Google": 3,
+        "funding": 6,
+        "Gemini": 1,
+        "Google": 1,
         "Nvidia": 2,
-        "OpenAI": 3,
+        "OpenAI": 2,
+        "privacy": 1,
         "regulation": 1,
-        "safety": 13
+        "safety": 8
+      }
+    },
+    {
+      "date": "2026-11-24",
+      "story_count": 17,
+      "topics": {
+        "agent": 3,
+        "Anthropic": 1,
+        "coding": 1,
+        "DeepSeek": 1,
+        "regulation": 1,
+        "safety": 4
       }
     }
   ]

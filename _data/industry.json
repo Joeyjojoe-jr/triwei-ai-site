@@ -1,15 +1,38 @@
 {
-  "generated_utc": "2026-11-24T22:13:45.115577Z",
-  "generated_display": "Nov 24, 2026",
-  "coverage_generated_display": "November 24, 2026 at 4:13 PM CST",
+  "generated_utc": "2026-11-25T07:59:36.383941Z",
+  "generated_display": "Nov 25, 2026",
+  "coverage_generated_display": "November 25, 2026 at 1:59 AM CST",
   "diffusion_watch": {
     "coverage": {
-      "story_count": 0,
-      "lab_count": 0,
-      "labs": [],
-      "signals": [],
-      "stories": [],
-      "observed_days": 66,
+      "story_count": 1,
+      "lab_count": 1,
+      "labs": [
+        {
+          "name": "Moonshot / Kimi",
+          "count": 1
+        }
+      ],
+      "signals": [
+        {
+          "name": "Open weights",
+          "count": 1
+        }
+      ],
+      "stories": [
+        {
+          "title": "Kimi K3.1 Pro vs Claude Mythos 5: Open Weights vs a Gated Model",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAyeEgxRUhoSmtSNk51b194UU82RktXR2pzOWRFbmhRdTZEaUpENWtaWURwRnpPRFkxdnBkYndjZWhGSmtoMTh0QW9WZkN6V0RGNjVEYldMOUx0OWl3dEhlbWczNUsxVkhwM25SaVktRDM?oc=5",
+          "source": "OrcaRouter",
+          "published_display": "Nov 25, 2026",
+          "labs": [
+            "Moonshot / Kimi"
+          ],
+          "signals": [
+            "Open weights"
+          ]
+        }
+      ],
+      "observed_days": 67,
       "window_days": 365,
       "daily": [
         {
@@ -696,6 +719,16 @@
           "signals": {
             "Capability convergence": 1
           }
+        },
+        {
+          "date": "2026-11-25",
+          "story_count": 1,
+          "labs": {
+            "Moonshot / Kimi": 1
+          },
+          "signals": {
+            "Open weights": 1
+          }
         }
       ],
       "metric": "Distinct TriWei stories connecting a tracked China-based lab to distillation, model extraction, open weights, or frontier-capability convergence",
@@ -780,7 +813,7 @@
   "supply_chain": {
     "verified_on": "2026-07-20",
     "verified_display": "Jul 20, 2026",
-    "age_days": 127,
+    "age_days": 128,
     "freshness": "review_due",
     "stages": [
       {
@@ -1138,11 +1171,6 @@
         "term": "funding",
         "total": 160,
         "points": [
-          {
-            "date": "2026-08-27",
-            "count": 0,
-            "share": 0.0
-          },
           {
             "date": "2026-08-28",
             "count": 0,
@@ -1575,30 +1603,30 @@
           },
           {
             "date": "2026-11-22",
-            "count": 4,
+            "count": 2,
             "share": 100.0
           },
           {
             "date": "2026-11-23",
             "count": 7,
-            "share": 50.0
+            "share": 53.8
           },
           {
             "date": "2026-11-24",
             "count": 3,
-            "share": 5.8
+            "share": 8.6
+          },
+          {
+            "date": "2026-11-25",
+            "count": 2,
+            "share": 10.0
           }
         ]
       },
       {
         "term": "Anthropic",
-        "total": 40,
+        "total": 37,
         "points": [
-          {
-            "date": "2026-08-27",
-            "count": 0,
-            "share": 0.0
-          },
           {
             "date": "2026-08-28",
             "count": 0,
@@ -2037,12 +2065,17 @@
           {
             "date": "2026-11-23",
             "count": 1,
-            "share": 7.1
+            "share": 7.7
           },
           {
             "date": "2026-11-24",
-            "count": 7,
-            "share": 13.5
+            "count": 3,
+            "share": 8.6
+          },
+          {
+            "date": "2026-11-25",
+            "count": 1,
+            "share": 5.0
           }
         ]
       },
@@ -2050,11 +2083,6 @@
         "term": "Nvidia",
         "total": 37,
         "points": [
-          {
-            "date": "2026-08-27",
-            "count": 1,
-            "share": 50.0
-          },
           {
             "date": "2026-08-28",
             "count": 0,
@@ -2488,29 +2516,29 @@
           {
             "date": "2026-11-22",
             "count": 2,
-            "share": 50.0
+            "share": 100.0
           },
           {
             "date": "2026-11-23",
-            "count": 2,
-            "share": 14.3
+            "count": 1,
+            "share": 7.7
           },
           {
             "date": "2026-11-24",
             "count": 1,
-            "share": 1.9
+            "share": 2.9
+          },
+          {
+            "date": "2026-11-25",
+            "count": 2,
+            "share": 10.0
           }
         ]
       },
       {
         "term": "safety",
-        "total": 37,
+        "total": 35,
         "points": [
-          {
-            "date": "2026-08-27",
-            "count": 0,
-            "share": 0.0
-          },
           {
             "date": "2026-08-28",
             "count": 0,
@@ -2948,13 +2976,18 @@
           },
           {
             "date": "2026-11-23",
-            "count": 1,
-            "share": 7.1
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-11-24",
-            "count": 10,
-            "share": 19.2
+            "count": 9,
+            "share": 25.7
+          },
+          {
+            "date": "2026-11-25",
+            "count": 0,
+            "share": 0.0
           }
         ]
       },
@@ -2962,11 +2995,6 @@
         "term": "Google",
         "total": 24,
         "points": [
-          {
-            "date": "2026-08-27",
-            "count": 1,
-            "share": 50.0
-          },
           {
             "date": "2026-08-28",
             "count": 0,
@@ -3411,18 +3439,18 @@
             "date": "2026-11-24",
             "count": 0,
             "share": 0.0
+          },
+          {
+            "date": "2026-11-25",
+            "count": 1,
+            "share": 5.0
           }
         ]
       },
       {
         "term": "OpenAI",
-        "total": 21,
+        "total": 23,
         "points": [
-          {
-            "date": "2026-08-27",
-            "count": 0,
-            "share": 0.0
-          },
           {
             "date": "2026-08-28",
             "count": 0,
@@ -3860,13 +3888,18 @@
           },
           {
             "date": "2026-11-23",
-            "count": 1,
-            "share": 7.1
+            "count": 0,
+            "share": 0.0
           },
           {
             "date": "2026-11-24",
-            "count": 3,
-            "share": 5.8
+            "count": 6,
+            "share": 17.1
+          },
+          {
+            "date": "2026-11-25",
+            "count": 0,
+            "share": 0.0
           }
         ]
       }
@@ -3900,7 +3933,7 @@
     "companies": [
       {
         "name": "Anthropic",
-        "story_count": 10,
+        "story_count": 6,
         "cells": [
           {
             "key": "hardware",
@@ -3931,7 +3964,7 @@
       },
       {
         "name": "Nvidia",
-        "story_count": 5,
+        "story_count": 6,
         "cells": [
           {
             "key": "hardware",
@@ -3962,27 +3995,27 @@
       },
       {
         "name": "OpenAI",
-        "story_count": 5,
+        "story_count": 6,
         "cells": [
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 1
+            "count": 0
           },
           {
             "key": "cloud",
             "label": "Cloud & compute",
-            "count": 0
+            "count": 1
           },
           {
             "key": "models",
             "label": "Models & research",
-            "count": 2
+            "count": 3
           },
           {
             "key": "apps",
             "label": "Tools & applications",
-            "count": 0
+            "count": 1
           },
           {
             "key": "society",
@@ -3992,7 +4025,7 @@
         ]
       },
       {
-        "name": "Meta",
+        "name": "DeepSeek",
         "story_count": 2,
         "cells": [
           {
@@ -4008,38 +4041,7 @@
           {
             "key": "models",
             "label": "Models & research",
-            "count": 0
-          },
-          {
-            "key": "apps",
-            "label": "Tools & applications",
             "count": 2
-          },
-          {
-            "key": "society",
-            "label": "Policy & society",
-            "count": 0
-          }
-        ]
-      },
-      {
-        "name": "DeepSeek",
-        "story_count": 1,
-        "cells": [
-          {
-            "key": "hardware",
-            "label": "Chips & hardware",
-            "count": 0
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud & compute",
-            "count": 0
-          },
-          {
-            "key": "models",
-            "label": "Models & research",
-            "count": 1
           },
           {
             "key": "apps",
@@ -4060,7 +4062,7 @@
           {
             "key": "hardware",
             "label": "Chips & hardware",
-            "count": 1
+            "count": 0
           },
           {
             "key": "cloud",
@@ -4071,6 +4073,68 @@
             "key": "models",
             "label": "Models & research",
             "count": 0
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 1
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "Meta",
+        "story_count": 1,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 0
+          },
+          {
+            "key": "apps",
+            "label": "Tools & applications",
+            "count": 1
+          },
+          {
+            "key": "society",
+            "label": "Policy & society",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "Moonshot",
+        "story_count": 1,
+        "cells": [
+          {
+            "key": "hardware",
+            "label": "Chips & hardware",
+            "count": 0
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud & compute",
+            "count": 0
+          },
+          {
+            "key": "models",
+            "label": "Models & research",
+            "count": 1
           },
           {
             "key": "apps",
@@ -4124,7 +4188,7 @@
     "status": "available",
     "verified_on": "2026-07-20",
     "verified_display": "Jul 20, 2026",
-    "age_days": 127,
+    "age_days": 128,
     "max_current_age_days": 30,
     "freshness": "expired",
     "models": [
